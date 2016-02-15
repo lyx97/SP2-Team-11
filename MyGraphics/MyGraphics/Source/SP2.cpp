@@ -143,17 +143,17 @@ void SP2::Init()
 	meshList[GEO_SWITCH]->textureID = LoadTGA("Image//switch.tga");
 
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0));
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//blood-valley_ft.tga");
+	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0));
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//blood-valley_bk.tga");
+	meshList[GEO_BACK]->textureID = LoadTGA("Image//planet1_bk.tga");
 	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("TOP", Color(0, 0, 0));
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//blood-valley_up.tga");
+	meshList[GEO_TOP]->textureID = LoadTGA("Image//planet1_up.tga");
 	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("BOTTOM", Color(0, 0, 0));
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//blood-valley_dn.tga");
+	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//planet1_dn.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("RIGHT", Color(0, 0, 0));
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//blood-valley_rt.tga");
+	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//planet1_rt.tga");
 	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0));
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//blood-valley_lf.tga");
+	meshList[GEO_LEFT]->textureID = LoadTGA("Image//planet1_lf.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//heh.tga");
