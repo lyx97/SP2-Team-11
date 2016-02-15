@@ -2,7 +2,6 @@
 *.slo
 *.lo
 *.o
-*.obj
 *.suo
 *.sdf
 
@@ -21,7 +20,7 @@
 *.lai
 *.la
 *.a
-*.lib
+
 
 # Executables
 *.exe
