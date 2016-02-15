@@ -1,0 +1,17 @@
+digraph "PackedVertex"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="PackedVertex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" normal" ,fontname="Helvetica"];
+  Node2 [label="Vector3",height=0.2,width=0.4,color="black",URL="$structVector3.html",tooltip="Defines a 3D vector and its methods. "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" x\ny\nz" ,fontname="Helvetica"];
+  Node3 [label="float",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" uv" ,fontname="Helvetica"];
+  Node4 [label="TexCoord",height=0.2,width=0.4,color="black",URL="$structTexCoord.html"];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" u\nv" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" position" ,fontname="Helvetica"];
+  Node5 [label="Position",height=0.2,width=0.4,color="black",URL="$structPosition.html"];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" x\ny\nz" ,fontname="Helvetica"];
+}

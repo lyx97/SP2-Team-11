@@ -1,0 +1,47 @@
+digraph "gvplugin_active_render_s"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="gvplugin_active_render_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type" ,fontname="Helvetica"];
+  Node2 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" features" ,fontname="Helvetica"];
+  Node3 [label="gvrender_features_t",height=0.2,width=0.4,color="black",URL="$structgvrender__features__t.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" knowncolors" ,fontname="Helvetica"];
+  Node4 [label="char **",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" color_type" ,fontname="Helvetica"];
+  Node5 [label="color_type_t",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" default_pad" ,fontname="Helvetica"];
+  Node6 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sz_knowncolors\nflags" ,fontname="Helvetica"];
+  Node7 [label="int",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" engine" ,fontname="Helvetica"];
+  Node8 [label="gvrender_engine_s",height=0.2,width=0.4,color="black",URL="$structgvrender__engine__s.html"];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" begin_label" ,fontname="Helvetica"];
+  Node9 [label="void(*)(GVJ_t *job,\l label_type type)",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" library_shape" ,fontname="Helvetica"];
+  Node10 [label="void(*)(GVJ_t *job,\l char *name, pointf\l *A, int n, int filled)",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" textspan" ,fontname="Helvetica"];
+  Node11 [label="void(*)(GVJ_t *job,\l pointf p, textspan\l_t *span)",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" begin_anchor" ,fontname="Helvetica"];
+  Node12 [label="void(*)(GVJ_t *job,\l char *href, char *tooltip,\l char *target, char *id)",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comment" ,fontname="Helvetica"];
+  Node13 [label="void(*)(GVJ_t *job,\l char *comment)",height=0.2,width=0.4,color="grey75"];
+  Node14 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" polyline" ,fontname="Helvetica"];
+  Node14 [label="void(*)(GVJ_t *job,\l pointf *A, int n)",height=0.2,width=0.4,color="grey75"];
+  Node15 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" resolve_color" ,fontname="Helvetica"];
+  Node15 [label="void(*)(GVJ_t *job,\l gvcolor_t *color)",height=0.2,width=0.4,color="grey75"];
+  Node16 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" beziercurve" ,fontname="Helvetica"];
+  Node16 [label="void(*)(GVJ_t *job,\l pointf *A, int n, int\l arrow_at_start, int arrow\l_at_end, int)",height=0.2,width=0.4,color="grey75"];
+  Node17 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" polygon" ,fontname="Helvetica"];
+  Node17 [label="void(*)(GVJ_t *job,\l pointf *A, int n, int\l filled)",height=0.2,width=0.4,color="grey75"];
+  Node18 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" begin_layer" ,fontname="Helvetica"];
+  Node18 [label="void(*)(GVJ_t *job,\l char *layername, int\l layerNum, int numLayers)",height=0.2,width=0.4,color="grey75"];
+  Node19 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ellipse" ,fontname="Helvetica"];
+  Node19 [label="void(*)(GVJ_t *job,\l pointf *A, int filled)",height=0.2,width=0.4,color="grey75"];
+  Node20 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" end_edges\nend_cluster\nbegin_node\nend_edge\nbegin_cluster\nend_label\nend_layer\nend_nodes\nbegin_nodes\nbegin_job\n..." ,fontname="Helvetica"];
+  Node20 [label="void(*)(GVJ_t *job)",height=0.2,width=0.4,color="grey75"];
+}

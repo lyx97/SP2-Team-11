@@ -1,0 +1,45 @@
+digraph "_dt_s"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="_dt_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" disc" ,fontname="Helvetica"];
+  Node2 [label="_dtdisc_s",height=0.2,width=0.4,color="black",URL="$struct__dtdisc__s.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" freef" ,fontname="Helvetica"];
+  Node3 [label="Dtfree_f",height=0.2,width=0.4,color="grey75"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" eventf" ,fontname="Helvetica"];
+  Node4 [label="Dtevent_f",height=0.2,width=0.4,color="grey75"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" makef" ,fontname="Helvetica"];
+  Node5 [label="Dtmake_f",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" comparf" ,fontname="Helvetica"];
+  Node6 [label="Dtcompar_f",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" size\nkey\nlink" ,fontname="Helvetica"];
+  Node7 [label="int",height=0.2,width=0.4,color="grey75"];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoryf" ,fontname="Helvetica"];
+  Node8 [label="Dtmemory_f",height=0.2,width=0.4,color="grey75"];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hashf" ,fontname="Helvetica"];
+  Node9 [label="Dthash_f",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="Helvetica"];
+  Node10 [label="_dtdata_s",height=0.2,width=0.4,color="black",URL="$struct__dtdata__s.html"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hh" ,fontname="Helvetica"];
+  Node11 [label="",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" here\n_htab\n_head" ,fontname="Helvetica"];
+  Node12 [label="_dtlink_s",height=0.2,width=0.4,color="black",URL="$struct__dtlink__s.html"];
+  Node12 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _left\nright" ,fontname="Helvetica"];
+  Node11 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hl" ,fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _hash" ,fontname="Helvetica"];
+  Node13 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" size\nloop\nntab\ntype\nminp" ,fontname="Helvetica"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" user" ,fontname="Helvetica"];
+  Node14 [label="Void_t *",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type\nnview" ,fontname="Helvetica"];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" view\nwalk" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoryf" ,fontname="Helvetica"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" searchf" ,fontname="Helvetica"];
+  Node15 [label="Dtsearch_f",height=0.2,width=0.4,color="grey75"];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" meth" ,fontname="Helvetica"];
+  Node16 [label="_dtmethod_s",height=0.2,width=0.4,color="black",URL="$struct__dtmethod__s.html"];
+  Node7 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type" ,fontname="Helvetica"];
+  Node15 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" searchf" ,fontname="Helvetica"];
+}

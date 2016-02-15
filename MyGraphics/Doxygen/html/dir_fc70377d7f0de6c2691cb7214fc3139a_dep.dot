@@ -1,0 +1,10 @@
+digraph "graphviz/release/bin" {
+  bgcolor=transparent;
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e85644315a154f93634e293902bffa37 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="release" fontname="Helvetica", fontsize="10", URL="dir_e85644315a154f93634e293902bffa37.html"]
+  dir_fc70377d7f0de6c2691cb7214fc3139a [shape=box, label="bin", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fc70377d7f0de6c2691cb7214fc3139a.html"];
+  }
+}

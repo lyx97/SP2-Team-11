@@ -1,0 +1,38 @@
+digraph "MyGraphics/Source/Assignment1.cpp"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="MyGraphics/Source/Assignment1.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Assignment1.h",height=0.2,width=0.4,color="black",URL="$Assignment1_8h.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Scene.h",height=0.2,width=0.4,color="black",URL="$Scene_8h.html"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GL\\glew.h",height=0.2,width=0.4,color="grey75"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shader.hpp",height=0.2,width=0.4,color="black",URL="$shader_8hpp.html"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Mtx44.h",height=0.2,width=0.4,color="black",URL="$Mtx44_8h.html",tooltip="Matrix 4 by 4 use for affine transformation. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MyMath.h",height=0.2,width=0.4,color="black",URL="$MyMath_8h.html",tooltip="Header file for math helper functions. "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="cmath",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="exception",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="ctime",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="cstdlib",height=0.2,width=0.4,color="grey75"];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Vector3.h",height=0.2,width=0.4,color="black",URL="$Vector3_8h.html",tooltip="Struct to define a 3D vector. "];
+  Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="iostream",height=0.2,width=0.4,color="grey75"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Application.h",height=0.2,width=0.4,color="black",URL="$Application_8h.html"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="timer.h",height=0.2,width=0.4,color="black",URL="$timer_8h.html"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="windows.h",height=0.2,width=0.4,color="grey75"];
+}
