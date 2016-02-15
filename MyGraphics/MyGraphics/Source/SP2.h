@@ -1,5 +1,5 @@
-#ifndef ASSIGNMENT3_H
-#define ASSIGNMENT3_H
+#ifndef SP2_H
+#define SP2_H
 
 #include "Scene.h"
 #include "Camera3.h"
@@ -7,7 +7,7 @@
 #include "MatrixStack.h"
 #include "Light.h"
 
-class Ass3 : public Scene
+class SP2 : public Scene
 {
 	enum GEOMETRY_TYPE
 	{
@@ -84,8 +84,8 @@ class Ass3 : public Scene
 		U_TOTAL,
 	};
 public:
-	Ass3();
-	~Ass3();
+	SP2();
+	~SP2();
 
 	virtual void Init();
 	virtual void Update(double dt);

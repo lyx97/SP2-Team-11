@@ -1,4 +1,4 @@
-#include "Assignment3.h"
+#include "SP2.h"
 #include "GL\glew.h"
 
 #include "shader.hpp"
@@ -11,18 +11,18 @@
 
 #include <sstream>
 
-Ass3::Ass3()
+SP2::SP2()
 {
 }
 
-Ass3::~Ass3()
+SP2::~SP2()
 {
 }
 
-void Ass3::Init()
+void SP2::Init()
 {
 	// Init VBO here
-	
+
 	armRotate = 60;
 	inputDelay = 9.0f;
 	upperJump = 35.5f;
@@ -307,7 +307,7 @@ static float LSPEED = 10.f;
 static float HOVER_SPEED = 10.f;
 std::string FPS;
 
-void Ass3::Update(double dt)
+void SP2::Update(double dt)
 {
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
@@ -399,7 +399,7 @@ void Ass3::Update(double dt)
 		inputDelay += (float)(8 * dt);
 	}
 
-	
+
 
 	if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true && inputDelay >= 10.f)
 	{
@@ -438,7 +438,7 @@ void Ass3::Update(double dt)
 
 }
 
-void Ass3::RenderMesh(Mesh *mesh, bool enableLight)
+void SP2::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
 
@@ -483,7 +483,7 @@ void Ass3::RenderMesh(Mesh *mesh, bool enableLight)
 	}
 }
 
-void Ass3::Render()
+void SP2::Render()
 {
 	// Render VBO here
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -1036,7 +1036,7 @@ void Ass3::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], ">0<", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
 }
 
-void Ass3::RenderSkybox()
+void SP2::RenderSkybox()
 {
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, 997.f);
@@ -1082,7 +1082,7 @@ void Ass3::RenderSkybox()
 	modelStack.PopMatrix();
 }
 
-void Ass3::RenderText(Mesh* mesh, std::string text, Color color)
+void SP2::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
 		return;
@@ -1109,7 +1109,7 @@ void Ass3::RenderText(Mesh* mesh, std::string text, Color color)
 	glEnable(GL_DEPTH_TEST);
 }
 
-void Ass3::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
+void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
 		return;
@@ -1149,7 +1149,7 @@ void Ass3::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float s
 	glEnable(GL_DEPTH_TEST);
 }
 
-void Ass3::Exit()
+void SP2::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);

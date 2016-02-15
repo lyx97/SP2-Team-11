@@ -24,8 +24,7 @@
 #include "SceneSkybox.h"
 #include "SceneModel.h"
 #include "SceneText.h"
-#include "Assignment3.h"
-
+#include "SP2.h"
 
 using std::cout;
 using std::endl;
@@ -164,7 +163,7 @@ void Application::Run()
 	//Scene *scene = new SceneSkybox();
 	//Scene *scene = new SceneModel();
 	//Scene *scene = new SceneText();
-	Scene *scene = new Ass3();
+	Scene *scene = new SP2();
 	scene->Init();
 
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this frame
