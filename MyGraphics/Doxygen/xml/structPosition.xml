@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structPosition" kind="struct" language="C++" prot="public">
+    <compoundname>Position</compoundname>
+    <includes refid="Vertex_8h" local="no">Vertex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPosition_1af684446cbf0f6d53386686283da6dcc6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="8" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="136">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="15">operator*</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">SceneLight::Render</referencedby>
+        <referencedby refid="classSceneLight2_1a83a2f8226d9ba88e310291f93675bd81" compoundref="SceneLight2_8cpp" startline="199" endline="259">SceneLight2::Render</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">SceneTexture::Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="214" endline="260">SceneSkybox::Render</referencedby>
+        <referencedby refid="classSceneModel_1a734826f585485bfdd6fa8d1391c55c07" compoundref="SceneModel_8cpp" startline="217" endline="268">SceneModel::Render</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">SceneText::Render</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Ass2::Render</referencedby>
+        <referencedby refid="classAss3_1afca828a847945203143e02c2f78f88a5" compoundref="Assignment3_8cpp" startline="486" endline="1037">Ass3::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structPosition_1a54a6182b5f7539295b32255808897d3f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="8" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="136">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="15">operator*</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">SceneLight::Render</referencedby>
+        <referencedby refid="classSceneLight2_1a83a2f8226d9ba88e310291f93675bd81" compoundref="SceneLight2_8cpp" startline="199" endline="259">SceneLight2::Render</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">SceneTexture::Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="214" endline="260">SceneSkybox::Render</referencedby>
+        <referencedby refid="classSceneModel_1a734826f585485bfdd6fa8d1391c55c07" compoundref="SceneModel_8cpp" startline="217" endline="268">SceneModel::Render</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">SceneText::Render</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Ass2::Render</referencedby>
+        <referencedby refid="classAss3_1afca828a847945203143e02c2f78f88a5" compoundref="Assignment3_8cpp" startline="486" endline="1037">Ass3::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="8" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="136">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="15">operator*</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">SceneLight::Render</referencedby>
+        <referencedby refid="classSceneLight2_1a83a2f8226d9ba88e310291f93675bd81" compoundref="SceneLight2_8cpp" startline="199" endline="259">SceneLight2::Render</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">SceneTexture::Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="214" endline="260">SceneSkybox::Render</referencedby>
+        <referencedby refid="classSceneModel_1a734826f585485bfdd6fa8d1391c55c07" compoundref="SceneModel_8cpp" startline="217" endline="268">SceneModel::Render</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">SceneText::Render</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Ass2::Render</referencedby>
+        <referencedby refid="classAss3_1afca828a847945203143e02c2f78f88a5" compoundref="Assignment3_8cpp" startline="486" endline="1037">Ass3::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</referencedby>
+        <referencedby refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7" compoundref="SceneLight_8cpp" startline="103" endline="130">SceneLight::Update</referencedby>
+        <referencedby refid="classSceneLight2_1ae16bbb986e282708b8d867af762f5503" compoundref="SceneLight2_8cpp" startline="131" endline="168">SceneLight2::Update</referencedby>
+        <referencedby refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" compoundref="SceneTexture_8cpp" startline="117" endline="154">SceneTexture::Update</referencedby>
+        <referencedby refid="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a" compoundref="SceneSkybox_8cpp" startline="130" endline="167">SceneSkybox::Update</referencedby>
+        <referencedby refid="classSceneModel_1a0b5a6526a56abb67d554990441dee4e7" compoundref="SceneModel_8cpp" startline="133" endline="170">SceneModel::Update</referencedby>
+        <referencedby refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" compoundref="SceneText_8cpp" startline="138" endline="175">SceneText::Update</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Ass2::Update</referencedby>
+        <referencedby refid="classAss3_1a28f626a2bf779594d4902bac37a39b13" compoundref="Assignment3_8cpp" startline="310" endline="439">Ass3::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Position::Position</definition>
+        <argsstring>(float x=0, float y=0, float z=0)</argsstring>
+        <name>Position</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="9" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="9" bodyend="9"/>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Position::Set</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="10" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="10" bodyend="10"/>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">z</references>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" compoundref="MeshBuilder_8cpp" startline="190" endline="229">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3d73313a182a699cf0c55a2855817dd" compoundref="MeshBuilder_8cpp" startline="460" endline="516">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1ae27b82decd63d0d0e51ecb778bbd20f6" compoundref="MeshBuilder_8cpp" startline="394" endline="458">MeshBuilder::GenerateCylin</referencedby>
+        <referencedby refid="classMeshBuilder_1a7f16aa9809e13f619862f7139c26d010" compoundref="MeshBuilder_8cpp" startline="620" endline="681">MeshBuilder::GenerateHalfHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1a5942fd14f58736054c6da3ee034cc2b5" compoundref="MeshBuilder_8cpp" startline="569" endline="618">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" compoundref="MeshBuilder_8cpp" startline="331" endline="392">MeshBuilder::GenerateHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" compoundref="MeshBuilder_8cpp" startline="231" endline="269">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="709" endline="749">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ad2e28967c0c772fa32df30a49944891f" compoundref="MeshBuilder_8cpp" startline="518" endline="567">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="164" endline="204">IndexVBO</referencedby>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">SceneTexture::Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="20" endline="124">SceneSkybox::Init</referencedby>
+        <referencedby refid="classSceneModel_1ad40b429986aa1429a308c20acdd26e0f" compoundref="SceneModel_8cpp" startline="20" endline="127">SceneModel::Init</referencedby>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">SceneText::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8h" startline="28" endline="34">Light::Light</referencedby>
+        <referencedby refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" compoundref="Vertex_8h" startline="9" endline="9">Position</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5648">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="5649" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5649">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Vertex.h" line="7" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="6" bodyend="11"/>
+    <listofallmembers>
+      <member refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" prot="public" virt="non-virtual"><scope>Position</scope><name>Position</name></member>
+      <member refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" prot="public" virt="non-virtual"><scope>Position</scope><name>Set</name></member>
+      <member refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" prot="public" virt="non-virtual"><scope>Position</scope><name>x</name></member>
+      <member refid="structPosition_1a54a6182b5f7539295b32255808897d3f" prot="public" virt="non-virtual"><scope>Position</scope><name>y</name></member>
+      <member refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" prot="public" virt="non-virtual"><scope>Position</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

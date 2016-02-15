@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SceneTexture_8h" kind="file" language="C++">
+    <compoundname>SceneTexture.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Camera2_8h" local="yes">Camera2.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includedby refid="Application_8cpp" local="yes">MyGraphics/Source/Application.cpp</includedby>
+    <includedby refid="SceneTexture_8cpp" local="yes">MyGraphics/Source/SceneTexture.cpp</includedby>
+    <incdepgraph>
+      <node id="3124">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="3117">
+        <label>cmath</label>
+      </node>
+      <node id="3123">
+        <label>string</label>
+      </node>
+      <node id="3115">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3116" relation="include">
+        </childnode>
+        <childnode refid="3121" relation="include">
+        </childnode>
+      </node>
+      <node id="3125">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="3126" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+      </node>
+      <node id="3118">
+        <label>exception</label>
+      </node>
+      <node id="3112">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="3119">
+        <label>ctime</label>
+      </node>
+      <node id="3126">
+        <label>stack</label>
+      </node>
+      <node id="3128">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="3129" relation="include">
+        </childnode>
+      </node>
+      <node id="3114">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="3115" relation="include">
+        </childnode>
+      </node>
+      <node id="3120">
+        <label>cstdlib</label>
+      </node>
+      <node id="3121">
+        <label>iostream</label>
+      </node>
+      <node id="3113">
+        <label>Camera2.h</label>
+        <link refid="Camera2_8h"/>
+        <childnode refid="3114" relation="include">
+        </childnode>
+      </node>
+      <node id="3127">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="3116" relation="include">
+        </childnode>
+        <childnode refid="3115" relation="include">
+        </childnode>
+      </node>
+      <node id="3122">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="3123" relation="include">
+        </childnode>
+        <childnode refid="3124" relation="include">
+        </childnode>
+      </node>
+      <node id="3111">
+        <label>MyGraphics/Source/SceneTexture.h</label>
+        <link refid="SceneTexture.h"/>
+        <childnode refid="3112" relation="include">
+        </childnode>
+        <childnode refid="3113" relation="include">
+        </childnode>
+        <childnode refid="3122" relation="include">
+        </childnode>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+      </node>
+      <node id="3116">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3117" relation="include">
+        </childnode>
+        <childnode refid="3118" relation="include">
+        </childnode>
+        <childnode refid="3119" relation="include">
+        </childnode>
+        <childnode refid="3120" relation="include">
+        </childnode>
+      </node>
+      <node id="3129">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="3127" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3132">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="3131">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3130">
+        <label>MyGraphics/Source/SceneTexture.h</label>
+        <link refid="SceneTexture.h"/>
+        <childnode refid="3131" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSceneTexture" prot="public">SceneTexture</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SCENETEXTURE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCENETEXTURE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera2_8h" kindref="compound">Camera2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classSceneTexture" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSceneTexture" kindref="compound">SceneTexture</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ab1930c8771093d66566db0e43a5aefbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ab1930c8771093d66566db0e43a5aefbb" kindref="member">GEO_CUBE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="15" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7002fbbc2e64d2ad021c9c956f7880d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7002fbbc2e64d2ad021c9c956f7880d4" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="16" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a73f2403eb72ec1a78650dc0a9e63b1f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a73f2403eb72ec1a78650dc0a9e63b1f2" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="17" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ac600953e1e6d7a338e22ceed97a03c1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ac600953e1e6d7a338e22ceed97a03c1d" kindref="member">GEO_CIRCLE</ref>,</highlight></codeline>
+<codeline lineno="18" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a9b458fa480bbd213727fc9f9f1c2682b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a9b458fa480bbd213727fc9f9f1c2682b" kindref="member">GEO_RING</ref>,</highlight></codeline>
+<codeline lineno="19" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7abbfe93022aef8693c72cdb6baf0318da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7abbfe93022aef8693c72cdb6baf0318da" kindref="member">GEO_SPHERE</ref>,</highlight></codeline>
+<codeline lineno="20" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acec02bc5c73fcb262f9d9d2e05bb5e6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acec02bc5c73fcb262f9d9d2e05bb5e6e" kindref="member">GEO_LIGHTBALL</ref>,</highlight></codeline>
+<codeline lineno="21" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ace918df0d46144dfb765b52cf9ff4684" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ace918df0d46144dfb765b52cf9ff4684" kindref="member">GEO_CONE</ref>,</highlight></codeline>
+<codeline lineno="22" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7fcf73f0ccc2d61c7f233851844f61a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7fcf73f0ccc2d61c7f233851844f61a3" kindref="member">GEO_CYLIN</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acb01b24131a2521a8ec208c182380c61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acb01b24131a2521a8ec208c182380c61" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecef" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa4cc8594ff7ebd35795ad8ceb22afc9a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa4cc8594ff7ebd35795ad8ceb22afc9a3" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="29" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae2c9186eccc09c5a32075628aa60dcce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae2c9186eccc09c5a32075628aa60dcce" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="30" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac37710010bfb4101aba03a1512de42eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac37710010bfb4101aba03a1512de42eb" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa221273a06b2cccf783d5083540b53078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa221273a06b2cccf783d5083540b53078" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="32" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa5ea5c5c6f31c21e8ce2642e4ea6744b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa5ea5c5c6f31c21e8ce2642e4ea6744b0" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="33" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa48c8c32daf94d0a01d22bc370121d433" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa48c8c32daf94d0a01d22bc370121d433" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="34" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa143941d10f905936cbe69fb39e1766ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa143941d10f905936cbe69fb39e1766ed" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="35" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2ea8f8180984850704af624463a6770e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2ea8f8180984850704af624463a6770e" kindref="member">U_LIGHT0_POSITION</ref>,</highlight></codeline>
+<codeline lineno="36" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefabca0d02a813f1394459a02f411821ca8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefabca0d02a813f1394459a02f411821ca8" kindref="member">U_LIGHT0_COLOR</ref>,</highlight></codeline>
+<codeline lineno="37" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa696599ba17cf6afa26534cc37e28ac05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa696599ba17cf6afa26534cc37e28ac05" kindref="member">U_LIGHT0_POWER</ref>,</highlight></codeline>
+<codeline lineno="38" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefab556889fc61a6103c239811e4548d3de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefab556889fc61a6103c239811e4548d3de" kindref="member">U_LIGHT0_KC</ref>,</highlight></codeline>
+<codeline lineno="39" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56535569d362f33b1e29fd9fb97df87c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56535569d362f33b1e29fd9fb97df87c" kindref="member">U_LIGHT0_KL</ref>,</highlight></codeline>
+<codeline lineno="40" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaa804caa82fcd3081bea52d1f8d18f629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaa804caa82fcd3081bea52d1f8d18f629" kindref="member">U_LIGHT0_KQ</ref>,</highlight></codeline>
+<codeline lineno="41" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa96251b5012aa48664a9be3b2af793068" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa96251b5012aa48664a9be3b2af793068" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="42" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaf630d5084850dd98a8d6726389dded8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaf630d5084850dd98a8d6726389dded8a" kindref="member">U_LIGHT0_TYPE</ref>,</highlight></codeline>
+<codeline lineno="43" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa1d4deb7274a137919ee9429ee772125b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa1d4deb7274a137919ee9429ee772125b" kindref="member">U_LIGHT0_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="44" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa3db563477593bbbe03413da006330380" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa3db563477593bbbe03413da006330380" kindref="member">U_LIGHT0_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="45" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56abec6818642e04f64726d4ea2939fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56abec6818642e04f64726d4ea2939fc" kindref="member">U_LIGHT0_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="46" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2124c2452245893acb5ecd58e9cf15fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2124c2452245893acb5ecd58e9cf15fc" kindref="member">U_LIGHT0_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="47" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa8cf8f413bc4c55f0ad47137a4f554c6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa8cf8f413bc4c55f0ad47137a4f554c6d" kindref="member">U_NUMLIGHTS</ref>,</highlight></codeline>
+<codeline lineno="48" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa74bf365387e4883a7bb0da1c5dd67ce7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa74bf365387e4883a7bb0da1c5dd67ce7" kindref="member">U_COLOR_TEXTURE_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="49" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac21bafc1edc20304c33a241157c915e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac21bafc1edc20304c33a241157c915e4" kindref="member">U_COLOR_TEXTURE</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae7fd51691de0f55477794a0d87ec2dcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae7fd51691de0f55477794a0d87ec2dcf" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1ae484bb2160a86922204010cfda100e85" kindref="member">SceneTexture</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneTexture_1ac1db22885db0932c06d39420eb694b75" kindref="member">~SceneTexture</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1aa4771e4c33cef692c7f8520553b680a6" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" kindref="member">RenderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classSceneTexture_1a7348ed8abd1af9665a653c0c4da57837" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a7348ed8abd1af9665a653c0c4da57837" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classSceneTexture_1a96f4295671a515d0bb6ce5432f80fdbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*<ref refid="classSceneTexture_1a96f4295671a515d0bb6ce5432f80fdbc" kindref="member">meshList</ref>[<ref refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acb01b24131a2521a8ec208c182380c61" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classSceneTexture_1a57b55d1da4596518ee59ccb1b299aa36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a57b55d1da4596518ee59ccb1b299aa36" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="68" refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" kindref="member">m_parameters</ref>[<ref refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae7fd51691de0f55477794a0d87ec2dcf" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classSceneTexture_1ace7db2b4916d444565edfef7c608e6c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneTexture_1ace7db2b4916d444565edfef7c608e6c6" kindref="member">rotateAngle</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera2" kindref="compound">Camera2</ref><sp/><ref refid="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight" kindref="compound">Light</ref><sp/><ref refid="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" kindref="member">light</ref>[10];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classSceneTexture_1afb0ac388a05cb8c639dc116c3b581ea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSceneTexture_1ad61422991adb1e6da0be048bc140b711" kindref="member">modelStack</ref>,<sp/><ref refid="classSceneTexture_1afb0ac388a05cb8c639dc116c3b581ea3" kindref="member">viewStack</ref>,<sp/><ref refid="classSceneTexture_1aeb17a8edc1c89996b2e723040fb8a03b" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/SceneTexture.h"/>
+  </compounddef>
+</doxygen>

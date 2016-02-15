@@ -1,0 +1,907 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classSceneTexture" kind="class" language="C++" prot="public">
+    <compoundname>SceneTexture</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="SceneTexture_8h" local="no">SceneTexture.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ab1930c8771093d66566db0e43a5aefbb" prot="private">
+          <name>GEO_CUBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7002fbbc2e64d2ad021c9c956f7880d4" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a73f2403eb72ec1a78650dc0a9e63b1f2" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ac600953e1e6d7a338e22ceed97a03c1d" prot="private">
+          <name>GEO_CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a9b458fa480bbd213727fc9f9f1c2682b" prot="private">
+          <name>GEO_RING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7abbfe93022aef8693c72cdb6baf0318da" prot="private">
+          <name>GEO_SPHERE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acec02bc5c73fcb262f9d9d2e05bb5e6e" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ace918df0d46144dfb765b52cf9ff4684" prot="private">
+          <name>GEO_CONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7fcf73f0ccc2d61c7f233851844f61a3" prot="private">
+          <name>GEO_CYLIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acb01b24131a2521a8ec208c182380c61" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="13" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="12" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecef" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa4cc8594ff7ebd35795ad8ceb22afc9a3" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae2c9186eccc09c5a32075628aa60dcce" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac37710010bfb4101aba03a1512de42eb" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa221273a06b2cccf783d5083540b53078" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa5ea5c5c6f31c21e8ce2642e4ea6744b0" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa48c8c32daf94d0a01d22bc370121d433" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa143941d10f905936cbe69fb39e1766ed" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2ea8f8180984850704af624463a6770e" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefabca0d02a813f1394459a02f411821ca8" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa696599ba17cf6afa26534cc37e28ac05" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefab556889fc61a6103c239811e4548d3de" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56535569d362f33b1e29fd9fb97df87c" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaa804caa82fcd3081bea52d1f8d18f629" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa96251b5012aa48664a9be3b2af793068" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaf630d5084850dd98a8d6726389dded8a" prot="private">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa1d4deb7274a137919ee9429ee772125b" prot="private">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa3db563477593bbbe03413da006330380" prot="private">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56abec6818642e04f64726d4ea2939fc" prot="private">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2124c2452245893acb5ecd58e9cf15fc" prot="private">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa8cf8f413bc4c55f0ad47137a4f554c6d" prot="private">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa74bf365387e4883a7bb0da1c5dd67ce7" prot="private">
+          <name>U_COLOR_TEXTURE_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac21bafc1edc20304c33a241157c915e4" prot="private">
+          <name>U_COLOR_TEXTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae7fd51691de0f55477794a0d87ec2dcf" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="27" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="26" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSceneTexture_1a7348ed8abd1af9665a653c0c4da57837" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneTexture::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="64" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1aa4771e4c33cef692c7f8520553b680a6" compoundref="SceneTexture_8cpp" startline="250" endline="254">Exit</referencedby>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1a96f4295671a515d0bb6ce5432f80fdbc" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* SceneTexture::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="65" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1a57b55d1da4596518ee59ccb1b299aa36" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneTexture::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="67" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1aa4771e4c33cef692c7f8520553b680a6" compoundref="SceneTexture_8cpp" startline="250" endline="254">Exit</referencedby>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneTexture::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="68" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">RenderMesh</referencedby>
+        <referencedby refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" compoundref="SceneTexture_8cpp" startline="117" endline="154">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1ace7db2b4916d444565edfef7c608e6c6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneTexture::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="70" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+        <referencedby refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" compoundref="SceneTexture_8cpp" startline="117" endline="154">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera2" kindref="compound">Camera2</ref></type>
+        <definition>Camera2 SceneTexture::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="72" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+        <referencedby refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" compoundref="SceneTexture_8cpp" startline="117" endline="154">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" prot="private" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light SceneTexture::light[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="73" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+        <referencedby refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" compoundref="SceneTexture_8cpp" startline="117" endline="154">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1ad61422991adb1e6da0be048bc140b711" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneTexture::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="75" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1afb0ac388a05cb8c639dc116c3b581ea3" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneTexture::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="75" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneTexture_1aeb17a8edc1c89996b2e723040fb8a03b" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneTexture::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="75" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">Init</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">RenderMesh</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSceneTexture_1ae484bb2160a86922204010cfda100e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneTexture::SceneTexture</definition>
+        <argsstring>()</argsstring>
+        <name>SceneTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="54" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneTexture_1ac1db22885db0932c06d39420eb694b75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneTexture::~SceneTexture</definition>
+        <argsstring>()</argsstring>
+        <name>~SceneTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="55" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneTexture::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="57" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="20" bodyend="111"/>
+        <references refid="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" compoundref="SceneTexture_8h" startline="72">camera</references>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="24">Light::color</references>
+        <references refid="structLight_1af4ce5bbfbf33af96db9b8a222d073298" compoundref="Light_8h" startline="19">Light::cosCutoff</references>
+        <references refid="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" compoundref="Light_8h" startline="20">Light::cosInner</references>
+        <references refid="namespaceMath_1ac04b987cc6c574a059e68cb58f58c09a" compoundref="MyMath_8h" startline="49" endline="52">Math::DegreeToRadian</references>
+        <references refid="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" compoundref="Light_8h" startline="21">Light::exponent</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</references>
+        <references refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</references>
+        <references refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7002fbbc2e64d2ad021c9c956f7880d4" compoundref="SceneTexture_8h" startline="15">GEO_AXES</references>
+        <references refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acec02bc5c73fcb262f9d9d2e05bb5e6e" compoundref="SceneTexture_8h" startline="20">GEO_LIGHTBALL</references>
+        <references refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a73f2403eb72ec1a78650dc0a9e63b1f2" compoundref="SceneTexture_8h" startline="16">GEO_QUAD</references>
+        <references refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="26">Light::kC</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="26">Light::kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="26">Light::kQ</references>
+        <references refid="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" compoundref="SceneTexture_8h" startline="73">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="LoadTGA_8cpp_1a459a80ca6de67a1e3493bfb66ae317e4" compoundref="LoadTGA_8cpp" startline="8" endline="67">LoadTGA</references>
+        <references refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" compoundref="SceneTexture_8h" startline="68">m_parameters</references>
+        <references refid="classSceneTexture_1a57b55d1da4596518ee59ccb1b299aa36" compoundref="SceneTexture_8h" startline="67">m_programID</references>
+        <references refid="classSceneTexture_1a7348ed8abd1af9665a653c0c4da57837" compoundref="SceneTexture_8h" startline="64">m_vertexArrayID</references>
+        <references refid="classSceneTexture_1a96f4295671a515d0bb6ce5432f80fdbc" compoundref="SceneTexture_8h" startline="65">meshList</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="25">Light::power</references>
+        <references refid="classSceneTexture_1aeb17a8edc1c89996b2e723040fb8a03b" compoundref="SceneTexture_8h" startline="75">projectionStack</references>
+        <references refid="classSceneTexture_1ace7db2b4916d444565edfef7c608e6c6" compoundref="SceneTexture_8h" startline="70">rotateAngle</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="16" endline="16">Color::Set</references>
+        <references refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Vector3::Set</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="18">Light::spotDirection</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="34">Mesh::textureID</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="17">Light::type</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac21bafc1edc20304c33a241157c915e4" compoundref="SceneTexture_8h" startline="49">U_COLOR_TEXTURE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa74bf365387e4883a7bb0da1c5dd67ce7" compoundref="SceneTexture_8h" startline="48">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefabca0d02a813f1394459a02f411821ca8" compoundref="SceneTexture_8h" startline="36">U_LIGHT0_COLOR</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa3db563477593bbbe03413da006330380" compoundref="SceneTexture_8h" startline="44">U_LIGHT0_COSCUTOFF</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56abec6818642e04f64726d4ea2939fc" compoundref="SceneTexture_8h" startline="45">U_LIGHT0_COSINNER</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2124c2452245893acb5ecd58e9cf15fc" compoundref="SceneTexture_8h" startline="46">U_LIGHT0_EXPONENT</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefab556889fc61a6103c239811e4548d3de" compoundref="SceneTexture_8h" startline="38">U_LIGHT0_KC</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56535569d362f33b1e29fd9fb97df87c" compoundref="SceneTexture_8h" startline="39">U_LIGHT0_KL</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaa804caa82fcd3081bea52d1f8d18f629" compoundref="SceneTexture_8h" startline="40">U_LIGHT0_KQ</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2ea8f8180984850704af624463a6770e" compoundref="SceneTexture_8h" startline="35">U_LIGHT0_POSITION</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa696599ba17cf6afa26534cc37e28ac05" compoundref="SceneTexture_8h" startline="37">U_LIGHT0_POWER</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa1d4deb7274a137919ee9429ee772125b" compoundref="SceneTexture_8h" startline="43">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaf630d5084850dd98a8d6726389dded8a" compoundref="SceneTexture_8h" startline="42">U_LIGHT0_TYPE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa96251b5012aa48664a9be3b2af793068" compoundref="SceneTexture_8h" startline="41">U_LIGHTENABLED</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa221273a06b2cccf783d5083540b53078" compoundref="SceneTexture_8h" startline="31">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa5ea5c5c6f31c21e8ce2642e4ea6744b0" compoundref="SceneTexture_8h" startline="32">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa143941d10f905936cbe69fb39e1766ed" compoundref="SceneTexture_8h" startline="34">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa48c8c32daf94d0a01d22bc370121d433" compoundref="SceneTexture_8h" startline="33">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae2c9186eccc09c5a32075628aa60dcce" compoundref="SceneTexture_8h" startline="29">U_MODELVIEW</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac37710010bfb4101aba03a1512de42eb" compoundref="SceneTexture_8h" startline="30">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa4cc8594ff7ebd35795ad8ceb22afc9a3" compoundref="SceneTexture_8h" startline="28">U_MVP</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa8cf8f413bc4c55f0ad47137a4f554c6d" compoundref="SceneTexture_8h" startline="47">U_NUMLIGHTS</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneTexture::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="58" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="117" bodyend="154"/>
+        <references refid="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" compoundref="SceneTexture_8h" startline="72">camera</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" compoundref="SceneTexture_8h" startline="73">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="11">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" compoundref="Light_8h" startline="10">Light::LIGHT_POINT</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="SceneTexture_8cpp_1a30bf7b0e79d3a8170fd7379307ede671" compoundref="SceneTexture_8cpp" startline="115">LSPEED</references>
+        <references refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" compoundref="SceneTexture_8h" startline="68">m_parameters</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classSceneTexture_1ace7db2b4916d444565edfef7c608e6c6" compoundref="SceneTexture_8h" startline="70">rotateAngle</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="17">Light::type</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaf630d5084850dd98a8d6726389dded8a" compoundref="SceneTexture_8h" startline="42">U_LIGHT0_TYPE</references>
+        <references refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="89">Camera2::Update</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneTexture::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="59" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="201" bodyend="248"/>
+        <references refid="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" compoundref="SceneTexture_8h" startline="72">camera</references>
+        <references refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7002fbbc2e64d2ad021c9c956f7880d4" compoundref="SceneTexture_8h" startline="15">GEO_AXES</references>
+        <references refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a73f2403eb72ec1a78650dc0a9e63b1f2" compoundref="SceneTexture_8h" startline="16">GEO_QUAD</references>
+        <references refid="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" compoundref="SceneTexture_8h" startline="73">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="11">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" compoundref="SceneTexture_8h" startline="68">m_parameters</references>
+        <references refid="classSceneTexture_1a96f4295671a515d0bb6ce5432f80fdbc" compoundref="SceneTexture_8h" startline="65">meshList</references>
+        <references refid="classSceneTexture_1ad61422991adb1e6da0be048bc140b711" compoundref="SceneTexture_8h" startline="75">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">RenderMesh</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="18">Light::spotDirection</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2ea8f8180984850704af624463a6770e" compoundref="SceneTexture_8h" startline="35">U_LIGHT0_POSITION</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa1d4deb7274a137919ee9429ee772125b" compoundref="SceneTexture_8h" startline="43">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classSceneTexture_1afb0ac388a05cb8c639dc116c3b581ea3" compoundref="SceneTexture_8h" startline="75">viewStack</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneTexture_1aa4771e4c33cef692c7f8520553b680a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneTexture::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="60" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="250" bodyend="254"/>
+        <references refid="classSceneTexture_1a57b55d1da4596518ee59ccb1b299aa36" compoundref="SceneTexture_8h" startline="67">m_programID</references>
+        <references refid="classSceneTexture_1a7348ed8abd1af9665a653c0c4da57837" compoundref="SceneTexture_8h" startline="64">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneTexture::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneTexture.h" line="62" column="1" bodyfile="MyGraphics/Source/SceneTexture.cpp" bodystart="156" bodyend="199"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</references>
+        <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="13">Material::kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="14">Material::kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="16">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="15">Material::kSpecular</references>
+        <references refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" compoundref="SceneTexture_8h" startline="68">m_parameters</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="35">Mesh::material</references>
+        <references refid="classSceneTexture_1ad61422991adb1e6da0be048bc140b711" compoundref="SceneTexture_8h" startline="75">modelStack</references>
+        <references refid="classSceneTexture_1aeb17a8edc1c89996b2e723040fb8a03b" compoundref="SceneTexture_8h" startline="75">projectionStack</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">Component::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="34">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac21bafc1edc20304c33a241157c915e4" compoundref="SceneTexture_8h" startline="49">U_COLOR_TEXTURE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa74bf365387e4883a7bb0da1c5dd67ce7" compoundref="SceneTexture_8h" startline="48">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa96251b5012aa48664a9be3b2af793068" compoundref="SceneTexture_8h" startline="41">U_LIGHTENABLED</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa221273a06b2cccf783d5083540b53078" compoundref="SceneTexture_8h" startline="31">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa5ea5c5c6f31c21e8ce2642e4ea6744b0" compoundref="SceneTexture_8h" startline="32">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa143941d10f905936cbe69fb39e1766ed" compoundref="SceneTexture_8h" startline="34">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa48c8c32daf94d0a01d22bc370121d433" compoundref="SceneTexture_8h" startline="33">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae2c9186eccc09c5a32075628aa60dcce" compoundref="SceneTexture_8h" startline="29">U_MODELVIEW</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac37710010bfb4101aba03a1512de42eb" compoundref="SceneTexture_8h" startline="30">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa4cc8594ff7ebd35795ad8ceb22afc9a3" compoundref="SceneTexture_8h" startline="28">U_MVP</references>
+        <references refid="classSceneTexture_1afb0ac388a05cb8c639dc116c3b581ea3" compoundref="SceneTexture_8h" startline="75">viewStack</references>
+        <referencedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" compoundref="SceneTexture_8cpp" startline="201" endline="248">Render</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5903">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5902">
+        <label>SceneTexture</label>
+        <link refid="classSceneTexture"/>
+        <childnode refid="5903" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5909">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5915">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="5918">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5908">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="5916">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="5917" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="5919" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="5920" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5921" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="5919">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="5913">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="5910" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="5920">
+        <label>string</label>
+      </node>
+      <node id="5917">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="5918" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="5907">
+        <label>float</label>
+      </node>
+      <node id="5914">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="5915" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="5905">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5906">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="5908" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5909" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="5910" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="5911" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="5912">
+        <label>Camera2</label>
+        <link refid="classCamera2"/>
+        <childnode refid="5913" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5910" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="5911">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5904">
+        <label>SceneTexture</label>
+        <link refid="classSceneTexture"/>
+        <childnode refid="5905" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5906" relation="usage">
+          <edgelabel>light</edgelabel>
+        </childnode>
+        <childnode refid="5912" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+        </childnode>
+        <childnode refid="5914" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="5916" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="5921" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5921">
+        <label>unsigned</label>
+      </node>
+      <node id="5910">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="5907" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/SceneTexture.h" line="11" column="1" bodyfile="MyGraphics/Source/SceneTexture.h" bodystart="10" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classSceneTexture_1a31657c251a1d5fc903ff969e318b9dc8" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>camera</name></member>
+      <member refid="classSceneTexture_1aa4771e4c33cef692c7f8520553b680a6" prot="public" virt="virtual"><scope>SceneTexture</scope><name>Exit</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7002fbbc2e64d2ad021c9c956f7880d4" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_AXES</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ac600953e1e6d7a338e22ceed97a03c1d" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_CIRCLE</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ace918df0d46144dfb765b52cf9ff4684" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_CONE</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7ab1930c8771093d66566db0e43a5aefbb" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_CUBE</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a7fcf73f0ccc2d61c7f233851844f61a3" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_CYLIN</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acec02bc5c73fcb262f9d9d2e05bb5e6e" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a73f2403eb72ec1a78650dc0a9e63b1f2" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_QUAD</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7a9b458fa480bbd213727fc9f9f1c2682b" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_RING</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7abbfe93022aef8693c72cdb6baf0318da" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEO_SPHERE</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" prot="public" virt="virtual"><scope>SceneTexture</scope><name>Init</name></member>
+      <member refid="classSceneTexture_1ab8b5c965f34bcf5e540c9ca48718c6dd" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>light</name></member>
+      <member refid="classSceneTexture_1a0f9bd1c51fd885b21d0b009f5d999478" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>m_parameters</name></member>
+      <member refid="classSceneTexture_1a57b55d1da4596518ee59ccb1b299aa36" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>m_programID</name></member>
+      <member refid="classSceneTexture_1a7348ed8abd1af9665a653c0c4da57837" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>m_vertexArrayID</name></member>
+      <member refid="classSceneTexture_1a96f4295671a515d0bb6ce5432f80fdbc" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>meshList</name></member>
+      <member refid="classSceneTexture_1ad61422991adb1e6da0be048bc140b711" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>modelStack</name></member>
+      <member refid="classSceneTexture_1a29023ee9e7173e76aa8c1a6b153e14e7acb01b24131a2521a8ec208c182380c61" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classSceneTexture_1aeb17a8edc1c89996b2e723040fb8a03b" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>projectionStack</name></member>
+      <member refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3" prot="public" virt="virtual"><scope>SceneTexture</scope><name>Render</name></member>
+      <member refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>RenderMesh</name></member>
+      <member refid="classSceneTexture_1ace7db2b4916d444565edfef7c608e6c6" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>SceneTexture</scope><name>Scene</name></member>
+      <member refid="classSceneTexture_1ae484bb2160a86922204010cfda100e85" prot="public" virt="non-virtual"><scope>SceneTexture</scope><name>SceneTexture</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac21bafc1edc20304c33a241157c915e4" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_COLOR_TEXTURE</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa74bf365387e4883a7bb0da1c5dd67ce7" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_COLOR_TEXTURE_ENABLED</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefabca0d02a813f1394459a02f411821ca8" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa3db563477593bbbe03413da006330380" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_COSCUTOFF</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56abec6818642e04f64726d4ea2939fc" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_COSINNER</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2124c2452245893acb5ecd58e9cf15fc" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_EXPONENT</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefab556889fc61a6103c239811e4548d3de" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa56535569d362f33b1e29fd9fb97df87c" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaa804caa82fcd3081bea52d1f8d18f629" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa2ea8f8180984850704af624463a6770e" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa696599ba17cf6afa26534cc37e28ac05" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa1d4deb7274a137919ee9429ee772125b" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_SPOTDIRECTION</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefaf630d5084850dd98a8d6726389dded8a" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHT0_TYPE</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa96251b5012aa48664a9be3b2af793068" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa221273a06b2cccf783d5083540b53078" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa5ea5c5c6f31c21e8ce2642e4ea6744b0" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa143941d10f905936cbe69fb39e1766ed" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa48c8c32daf94d0a01d22bc370121d433" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae2c9186eccc09c5a32075628aa60dcce" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MODELVIEW</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefac37710010bfb4101aba03a1512de42eb" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa4cc8594ff7ebd35795ad8ceb22afc9a3" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_MVP</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefa8cf8f413bc4c55f0ad47137a4f554c6d" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_NUMLIGHTS</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecefae7fd51691de0f55477794a0d87ec2dcf" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>U_TOTAL</name></member>
+      <member refid="classSceneTexture_1a35e8a95c6d9bdfe4bd055e1a7e14ecef" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253" prot="public" virt="virtual"><scope>SceneTexture</scope><name>Update</name></member>
+      <member refid="classSceneTexture_1afb0ac388a05cb8c639dc116c3b581ea3" prot="private" virt="non-virtual"><scope>SceneTexture</scope><name>viewStack</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>SceneTexture</scope><name>~Scene</name></member>
+      <member refid="classSceneTexture_1ac1db22885db0932c06d39420eb694b75" prot="public" virt="non-virtual"><scope>SceneTexture</scope><name>~SceneTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

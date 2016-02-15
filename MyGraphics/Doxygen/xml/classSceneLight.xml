@@ -1,0 +1,822 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classSceneLight" kind="class" language="C++" prot="public">
+    <compoundname>SceneLight</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="SceneLight_8h" local="no">SceneLight.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a95fc50050f9976a904bfdcfc8f661fb2" prot="private">
+          <name>GEO_CUBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a009f1e75bd8ba5d2006c1df7151ead09" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a50989f6e4c2994d4dc5e3edc8a32553f" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a4b9d56dfba4d977a8e2d1cf1f6a783ad" prot="private">
+          <name>GEO_CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a564fcc7f3816a473b8055e95b4218bf3" prot="private">
+          <name>GEO_RING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0acbe77757162451e061299fd56dc055dd" prot="private">
+          <name>GEO_SPHERE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2146b3647c14879a0222caec62772892" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a129feba049d327d28a6f8fc938a837a5" prot="private">
+          <name>GEO_CONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a9242cc3c7a412bf0f7da9562abaf3160" prot="private">
+          <name>GEO_CYLIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2f956110dd89d61c5bae653b133f17cd" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="13" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="12" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8aa286e4b14c9176be1c3579cc8c893400" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a2d4de7758cc543a59bc19d7f7c9885eb" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8af921ddacbb75374809cd5771ebb7d875" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a6dbf4d3dfeefbe284fe74675986a6fde" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a565b12d6319bbb2a73173fdc8df1413b" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a62d0b897abb74a78e48a3d7dd2b03a52" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a148d404d6bfb8710984bf6c1b69f393e" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a7f151bbfe1a4f66d61764c1b3864903a" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8afbad572814b9b524b1ab71d320eaacb3" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a83e679a211fc3aa54acbd759d166af66" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8ab1b9a4152fc837fbc173ed22de1c59f7" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a392500b2b7fbea13d4f79d2de7149fd7" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a4ec4fbe93314371f523eda273df6bd05" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a68cf74e372ac5879fe0ba1bb010709d3" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a239aa43ac86142ecdd24748da5a51ad9" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="27" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="26" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSceneLight_1af258066c9eaa58422a208084d91c775c" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneLight::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="56" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1afe406a984481b2bc235c445beb2165f9" compoundref="SceneLight_8cpp" startline="197" endline="201">Exit</referencedby>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1a769551d7547af54cadaccce8eec150c5" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* SceneLight::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="57" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1ad0bc48560f12a6d3f4231d64b1cff0cb" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneLight::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="59" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1afe406a984481b2bc235c445beb2165f9" compoundref="SceneLight_8cpp" startline="197" endline="201">Exit</referencedby>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneLight::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="60" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1a036f6ec2d54d2e9f5788974558f5a915" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneLight::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="62" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+        <referencedby refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7" compoundref="SceneLight_8cpp" startline="103" endline="130">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1a11dfab1563f852b78978481b698f4dde" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera2" kindref="compound">Camera2</ref></type>
+        <definition>Camera2 SceneLight::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="64" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+        <referencedby refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7" compoundref="SceneLight_8cpp" startline="103" endline="130">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" prot="private" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light SceneLight::light[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="65" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+        <referencedby refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7" compoundref="SceneLight_8cpp" startline="103" endline="130">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1aac6fd53c289409a7ff06c42c2a1329ec" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneLight::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="67" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1ae1147a8b1bc56bb49498e9792ec78574" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneLight::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="67" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneLight_1a27bb9951ca602fb1259f8c3760d33dca" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneLight::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="67" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">Init</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">RenderMesh</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSceneLight_1a2e637306a7bf3a15067e403c8ef5f89e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneLight::SceneLight</definition>
+        <argsstring>()</argsstring>
+        <name>SceneLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="46" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneLight_1a51e291c1be692276273992ca8aeac3be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneLight::~SceneLight</definition>
+        <argsstring>()</argsstring>
+        <name>~SceneLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="47" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneLight::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="49" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="19" bodyend="97"/>
+        <references refid="classSceneLight_1a11dfab1563f852b78978481b698f4dde" compoundref="SceneLight_8h" startline="64">camera</references>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="24">Light::color</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1ae27b82decd63d0d0e51ecb778bbd20f6" compoundref="MeshBuilder_8cpp" startline="394" endline="458">MeshBuilder::GenerateCylin</references>
+        <references refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</references>
+        <references refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a009f1e75bd8ba5d2006c1df7151ead09" compoundref="SceneLight_8h" startline="15">GEO_AXES</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a9242cc3c7a412bf0f7da9562abaf3160" compoundref="SceneLight_8h" startline="22">GEO_CYLIN</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2146b3647c14879a0222caec62772892" compoundref="SceneLight_8h" startline="20">GEO_LIGHTBALL</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a50989f6e4c2994d4dc5e3edc8a32553f" compoundref="SceneLight_8h" startline="16">GEO_QUAD</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0acbe77757162451e061299fd56dc055dd" compoundref="SceneLight_8h" startline="19">GEO_SPHERE</references>
+        <references refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="13">Material::kAmbient</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="26">Light::kC</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="14">Material::kDiffuse</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="26">Light::kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="26">Light::kQ</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="16">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="15">Material::kSpecular</references>
+        <references refid="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" compoundref="SceneLight_8h" startline="65">light</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" compoundref="SceneLight_8h" startline="60">m_parameters</references>
+        <references refid="classSceneLight_1ad0bc48560f12a6d3f4231d64b1cff0cb" compoundref="SceneLight_8h" startline="59">m_programID</references>
+        <references refid="classSceneLight_1af258066c9eaa58422a208084d91c775c" compoundref="SceneLight_8h" startline="56">m_vertexArrayID</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="35">Mesh::material</references>
+        <references refid="classSceneLight_1a769551d7547af54cadaccce8eec150c5" compoundref="SceneLight_8h" startline="57">meshList</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="25">Light::power</references>
+        <references refid="classSceneLight_1a27bb9951ca602fb1259f8c3760d33dca" compoundref="SceneLight_8h" startline="67">projectionStack</references>
+        <references refid="classSceneLight_1a036f6ec2d54d2e9f5788974558f5a915" compoundref="SceneLight_8h" startline="62">rotateAngle</references>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Component::Set</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="16" endline="16">Color::Set</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8afbad572814b9b524b1ab71d320eaacb3" compoundref="SceneLight_8h" startline="36">U_LIGHT0_COLOR</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8ab1b9a4152fc837fbc173ed22de1c59f7" compoundref="SceneLight_8h" startline="38">U_LIGHT0_KC</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a392500b2b7fbea13d4f79d2de7149fd7" compoundref="SceneLight_8h" startline="39">U_LIGHT0_KL</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a4ec4fbe93314371f523eda273df6bd05" compoundref="SceneLight_8h" startline="40">U_LIGHT0_KQ</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a7f151bbfe1a4f66d61764c1b3864903a" compoundref="SceneLight_8h" startline="35">U_LIGHT0_POSITION</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a83e679a211fc3aa54acbd759d166af66" compoundref="SceneLight_8h" startline="37">U_LIGHT0_POWER</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a68cf74e372ac5879fe0ba1bb010709d3" compoundref="SceneLight_8h" startline="41">U_LIGHTENABLED</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a6dbf4d3dfeefbe284fe74675986a6fde" compoundref="SceneLight_8h" startline="31">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a565b12d6319bbb2a73173fdc8df1413b" compoundref="SceneLight_8h" startline="32">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a148d404d6bfb8710984bf6c1b69f393e" compoundref="SceneLight_8h" startline="34">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a62d0b897abb74a78e48a3d7dd2b03a52" compoundref="SceneLight_8h" startline="33">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a2d4de7758cc543a59bc19d7f7c9885eb" compoundref="SceneLight_8h" startline="29">U_MODELVIEW</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8af921ddacbb75374809cd5771ebb7d875" compoundref="SceneLight_8h" startline="30">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8aa286e4b14c9176be1c3579cc8c893400" compoundref="SceneLight_8h" startline="28">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneLight_1a23681b3a667399752645d5763ddc72a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneLight::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="50" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="103" bodyend="130"/>
+        <references refid="classSceneLight_1a11dfab1563f852b78978481b698f4dde" compoundref="SceneLight_8h" startline="64">camera</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" compoundref="SceneLight_8h" startline="65">light</references>
+        <references refid="SceneLight_8cpp_1a30bf7b0e79d3a8170fd7379307ede671" compoundref="SceneLight_8cpp" startline="101">LSPEED</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classSceneLight_1a036f6ec2d54d2e9f5788974558f5a915" compoundref="SceneLight_8h" startline="62">rotateAngle</references>
+        <references refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="89">Camera2::Update</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneLight::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="51" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="161" bodyend="195"/>
+        <references refid="classSceneLight_1a11dfab1563f852b78978481b698f4dde" compoundref="SceneLight_8h" startline="64">camera</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a009f1e75bd8ba5d2006c1df7151ead09" compoundref="SceneLight_8h" startline="15">GEO_AXES</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a9242cc3c7a412bf0f7da9562abaf3160" compoundref="SceneLight_8h" startline="22">GEO_CYLIN</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2146b3647c14879a0222caec62772892" compoundref="SceneLight_8h" startline="20">GEO_LIGHTBALL</references>
+        <references refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a50989f6e4c2994d4dc5e3edc8a32553f" compoundref="SceneLight_8h" startline="16">GEO_QUAD</references>
+        <references refid="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" compoundref="SceneLight_8h" startline="65">light</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" compoundref="SceneLight_8h" startline="60">m_parameters</references>
+        <references refid="classSceneLight_1a769551d7547af54cadaccce8eec150c5" compoundref="SceneLight_8h" startline="57">meshList</references>
+        <references refid="classSceneLight_1aac6fd53c289409a7ff06c42c2a1329ec" compoundref="SceneLight_8h" startline="67">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">RenderMesh</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a7f151bbfe1a4f66d61764c1b3864903a" compoundref="SceneLight_8h" startline="35">U_LIGHT0_POSITION</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classSceneLight_1ae1147a8b1bc56bb49498e9792ec78574" compoundref="SceneLight_8h" startline="67">viewStack</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneLight_1afe406a984481b2bc235c445beb2165f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneLight::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="52" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="197" bodyend="201"/>
+        <references refid="classSceneLight_1ad0bc48560f12a6d3f4231d64b1cff0cb" compoundref="SceneLight_8h" startline="59">m_programID</references>
+        <references refid="classSceneLight_1af258066c9eaa58422a208084d91c775c" compoundref="SceneLight_8h" startline="56">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneLight::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneLight.h" line="54" column="1" bodyfile="MyGraphics/Source/SceneLight.cpp" bodystart="132" bodyend="159"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</references>
+        <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="13">Material::kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="14">Material::kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="16">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="15">Material::kSpecular</references>
+        <references refid="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" compoundref="SceneLight_8h" startline="60">m_parameters</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="35">Mesh::material</references>
+        <references refid="classSceneLight_1aac6fd53c289409a7ff06c42c2a1329ec" compoundref="SceneLight_8h" startline="67">modelStack</references>
+        <references refid="classSceneLight_1a27bb9951ca602fb1259f8c3760d33dca" compoundref="SceneLight_8h" startline="67">projectionStack</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">Component::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a68cf74e372ac5879fe0ba1bb010709d3" compoundref="SceneLight_8h" startline="41">U_LIGHTENABLED</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a6dbf4d3dfeefbe284fe74675986a6fde" compoundref="SceneLight_8h" startline="31">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a565b12d6319bbb2a73173fdc8df1413b" compoundref="SceneLight_8h" startline="32">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a148d404d6bfb8710984bf6c1b69f393e" compoundref="SceneLight_8h" startline="34">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a62d0b897abb74a78e48a3d7dd2b03a52" compoundref="SceneLight_8h" startline="33">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a2d4de7758cc543a59bc19d7f7c9885eb" compoundref="SceneLight_8h" startline="29">U_MODELVIEW</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8af921ddacbb75374809cd5771ebb7d875" compoundref="SceneLight_8h" startline="30">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8aa286e4b14c9176be1c3579cc8c893400" compoundref="SceneLight_8h" startline="28">U_MVP</references>
+        <references refid="classSceneLight_1ae1147a8b1bc56bb49498e9792ec78574" compoundref="SceneLight_8h" startline="67">viewStack</references>
+        <referencedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" compoundref="SceneLight_8cpp" startline="161" endline="195">Render</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5801">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5800">
+        <label>SceneLight</label>
+        <link refid="classSceneLight"/>
+        <childnode refid="5801" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5807">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5813">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="5816">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5806">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="5814">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="5815" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="5817" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="5818" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5819" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="5817">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="5811">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="5808" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="5818">
+        <label>string</label>
+      </node>
+      <node id="5815">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="5816" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="5805">
+        <label>float</label>
+      </node>
+      <node id="5812">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="5813" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="5803">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5804">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="5806" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5807" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="5808" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="5809" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="5810">
+        <label>Camera2</label>
+        <link refid="classCamera2"/>
+        <childnode refid="5811" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5808" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="5802">
+        <label>SceneLight</label>
+        <link refid="classSceneLight"/>
+        <childnode refid="5803" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5804" relation="usage">
+          <edgelabel>light</edgelabel>
+        </childnode>
+        <childnode refid="5810" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+        </childnode>
+        <childnode refid="5812" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="5814" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="5819" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5809">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5819">
+        <label>unsigned</label>
+      </node>
+      <node id="5808">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="5805" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/SceneLight.h" line="11" column="1" bodyfile="MyGraphics/Source/SceneLight.h" bodystart="10" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classSceneLight_1a11dfab1563f852b78978481b698f4dde" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>camera</name></member>
+      <member refid="classSceneLight_1afe406a984481b2bc235c445beb2165f9" prot="public" virt="virtual"><scope>SceneLight</scope><name>Exit</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a009f1e75bd8ba5d2006c1df7151ead09" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_AXES</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a4b9d56dfba4d977a8e2d1cf1f6a783ad" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_CIRCLE</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a129feba049d327d28a6f8fc938a837a5" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_CONE</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a95fc50050f9976a904bfdcfc8f661fb2" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_CUBE</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a9242cc3c7a412bf0f7da9562abaf3160" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_CYLIN</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2146b3647c14879a0222caec62772892" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a50989f6e4c2994d4dc5e3edc8a32553f" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_QUAD</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a564fcc7f3816a473b8055e95b4218bf3" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_RING</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0acbe77757162451e061299fd56dc055dd" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEO_SPHERE</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" prot="public" virt="virtual"><scope>SceneLight</scope><name>Init</name></member>
+      <member refid="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>light</name></member>
+      <member refid="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>m_parameters</name></member>
+      <member refid="classSceneLight_1ad0bc48560f12a6d3f4231d64b1cff0cb" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>m_programID</name></member>
+      <member refid="classSceneLight_1af258066c9eaa58422a208084d91c775c" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>m_vertexArrayID</name></member>
+      <member refid="classSceneLight_1a769551d7547af54cadaccce8eec150c5" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>meshList</name></member>
+      <member refid="classSceneLight_1aac6fd53c289409a7ff06c42c2a1329ec" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>modelStack</name></member>
+      <member refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2f956110dd89d61c5bae653b133f17cd" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classSceneLight_1a27bb9951ca602fb1259f8c3760d33dca" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>projectionStack</name></member>
+      <member refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" prot="public" virt="virtual"><scope>SceneLight</scope><name>Render</name></member>
+      <member refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>RenderMesh</name></member>
+      <member refid="classSceneLight_1a036f6ec2d54d2e9f5788974558f5a915" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>SceneLight</scope><name>Scene</name></member>
+      <member refid="classSceneLight_1a2e637306a7bf3a15067e403c8ef5f89e" prot="public" virt="non-virtual"><scope>SceneLight</scope><name>SceneLight</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8afbad572814b9b524b1ab71d320eaacb3" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8ab1b9a4152fc837fbc173ed22de1c59f7" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a392500b2b7fbea13d4f79d2de7149fd7" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a4ec4fbe93314371f523eda273df6bd05" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a7f151bbfe1a4f66d61764c1b3864903a" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a83e679a211fc3aa54acbd759d166af66" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a68cf74e372ac5879fe0ba1bb010709d3" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a6dbf4d3dfeefbe284fe74675986a6fde" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a565b12d6319bbb2a73173fdc8df1413b" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a148d404d6bfb8710984bf6c1b69f393e" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a62d0b897abb74a78e48a3d7dd2b03a52" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a2d4de7758cc543a59bc19d7f7c9885eb" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MODELVIEW</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8af921ddacbb75374809cd5771ebb7d875" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8aa286e4b14c9176be1c3579cc8c893400" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_MVP</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a239aa43ac86142ecdd24748da5a51ad9" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>U_TOTAL</name></member>
+      <member refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7" prot="public" virt="virtual"><scope>SceneLight</scope><name>Update</name></member>
+      <member refid="classSceneLight_1ae1147a8b1bc56bb49498e9792ec78574" prot="private" virt="non-virtual"><scope>SceneLight</scope><name>viewStack</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>SceneLight</scope><name>~Scene</name></member>
+      <member refid="classSceneLight_1a51e291c1be692276273992ca8aeac3be" prot="public" virt="non-virtual"><scope>SceneLight</scope><name>~SceneLight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

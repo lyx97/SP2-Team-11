@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structpoint" kind="struct" language="C++" prot="public">
+    <compoundname>point</compoundname>
+    <includes refid="geom_8h" local="no">geom.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int point::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/geom.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpoint_1a9a82ca9504acabb1e30569f89c805471" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int point::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/geom.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5631">
+        <label>int</label>
+      </node>
+      <node id="5630">
+        <label>point</label>
+        <link refid="structpoint"/>
+        <childnode refid="5631" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/geom.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="28" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structpoint_1ad679b07fb69d55f5ad454d0f1f2891d5" prot="public" virt="non-virtual"><scope>point</scope><name>x</name></member>
+      <member refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" prot="public" virt="non-virtual"><scope>point</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

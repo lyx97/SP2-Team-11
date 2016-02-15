@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_e85644315a154f93634e293902bffa37" kind="dir">
+    <compoundname>graphviz/release</compoundname>
+    <innerdir refid="dir_fc70377d7f0de6c2691cb7214fc3139a">graphviz/release/bin</innerdir>
+    <innerdir refid="dir_81270d96de8404f802c2fb5a2b6465a2">graphviz/release/include</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="graphviz/release/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structpack__info" kind="struct" language="C++" prot="public">
+    <compoundname>pack_info</compoundname>
+    <includes refid="pack_8h" local="no">pack.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpack__info_1a07b6d2fc5d98620c409315133963dc5f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float pack_info::aspect</definition>
+        <argsstring></argsstring>
+        <name>aspect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="50" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1a53ddd56f6a9173e2e5a59d431d437bea" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pack_info::sz</definition>
+        <argsstring></argsstring>
+        <name>sz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="51" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1acf43e29db789271a7494e51864e25a46" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int pack_info::margin</definition>
+        <argsstring></argsstring>
+        <name>margin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="52" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1aa2e93b65eaf035364214aea6db8f1feb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pack_info::doSplines</definition>
+        <argsstring></argsstring>
+        <name>doSplines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="53" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1a421f5826aa51c41653402e9072a2f86d" prot="public" static="no" mutable="no">
+        <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+        <definition>pack_mode pack_info::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="54" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1aa29bf3db883b8e88021de27051ab7b48" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref> *</type>
+        <definition>boolean* pack_info::fixed</definition>
+        <argsstring></argsstring>
+        <name>fixed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="55" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1aaa63ae4b75c6a88465b0507b17083dd7" prot="public" static="no" mutable="no">
+        <type><ref refid="pack_8h_1a97c604e5f0df885172f770108f3df9cd" kindref="member">packval_t</ref> *</type>
+        <definition>packval_t* pack_info::vals</definition>
+        <argsstring></argsstring>
+        <name>vals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="56" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpack__info_1a1b713c8f5ae1329ec64129c5ada2a34d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pack_info::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="57" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5599">
+        <label>float</label>
+      </node>
+      <node id="5597">
+        <label>unsigned char</label>
+      </node>
+      <node id="5601">
+        <label>int</label>
+      </node>
+      <node id="5600">
+        <label>packval_t *</label>
+      </node>
+      <node id="5602">
+        <label>unsigned</label>
+      </node>
+      <node id="5598">
+        <label>pack_mode</label>
+      </node>
+      <node id="5596">
+        <label>pack_info</label>
+        <link refid="structpack__info"/>
+        <childnode refid="5597" relation="usage">
+          <edgelabel>fixed</edgelabel>
+        </childnode>
+        <childnode refid="5598" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="5599" relation="usage">
+          <edgelabel>aspect</edgelabel>
+        </childnode>
+        <childnode refid="5600" relation="usage">
+          <edgelabel>vals</edgelabel>
+        </childnode>
+        <childnode refid="5601" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>doSplines</edgelabel>
+          <edgelabel>sz</edgelabel>
+        </childnode>
+        <childnode refid="5602" relation="usage">
+          <edgelabel>margin</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/pack.h" line="49" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="49" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structpack__info_1a07b6d2fc5d98620c409315133963dc5f" prot="public" virt="non-virtual"><scope>pack_info</scope><name>aspect</name></member>
+      <member refid="structpack__info_1aa2e93b65eaf035364214aea6db8f1feb" prot="public" virt="non-virtual"><scope>pack_info</scope><name>doSplines</name></member>
+      <member refid="structpack__info_1aa29bf3db883b8e88021de27051ab7b48" prot="public" virt="non-virtual"><scope>pack_info</scope><name>fixed</name></member>
+      <member refid="structpack__info_1a1b713c8f5ae1329ec64129c5ada2a34d" prot="public" virt="non-virtual"><scope>pack_info</scope><name>flags</name></member>
+      <member refid="structpack__info_1acf43e29db789271a7494e51864e25a46" prot="public" virt="non-virtual"><scope>pack_info</scope><name>margin</name></member>
+      <member refid="structpack__info_1a421f5826aa51c41653402e9072a2f86d" prot="public" virt="non-virtual"><scope>pack_info</scope><name>mode</name></member>
+      <member refid="structpack__info_1a53ddd56f6a9173e2e5a59d431d437bea" prot="public" virt="non-virtual"><scope>pack_info</scope><name>sz</name></member>
+      <member refid="structpack__info_1aaa63ae4b75c6a88465b0507b17083dd7" prot="public" virt="non-virtual"><scope>pack_info</scope><name>vals</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

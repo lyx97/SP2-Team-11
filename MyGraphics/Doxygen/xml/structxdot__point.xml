@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot__point" kind="struct" language="C++" prot="public">
+    <compoundname>xdot_point</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot__point_1a950414404212366a66e1ed7a2cb4129f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_point::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="65" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__point_1ad1941032274de9923ef82d9bd2308923" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_point::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="65" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__point_1ace0bf9867293817bc3978ae9641f1ea8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_point::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="65" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6096">
+        <label>double</label>
+      </node>
+      <node id="6095">
+        <label>xdot_point</label>
+        <link refid="structxdot__point"/>
+        <childnode refid="6096" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="64" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="64" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structxdot__point_1a950414404212366a66e1ed7a2cb4129f" prot="public" virt="non-virtual"><scope>xdot_point</scope><name>x</name></member>
+      <member refid="structxdot__point_1ad1941032274de9923ef82d9bd2308923" prot="public" virt="non-virtual"><scope>xdot_point</scope><name>y</name></member>
+      <member refid="structxdot__point_1ace0bf9867293817bc3978ae9641f1ea8" prot="public" virt="non-virtual"><scope>xdot_point</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

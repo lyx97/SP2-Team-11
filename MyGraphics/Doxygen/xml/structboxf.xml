@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structboxf" kind="struct" language="C++" prot="public">
+    <compoundname>boxf</compoundname>
+    <includes refid="geom_8h" local="no">geom.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structboxf_1a537c5617ca905a0bff347f95463fdd53" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf boxf::LL</definition>
+        <argsstring></argsstring>
+        <name>LL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/geom.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboxf_1a46f87993847e4bcc58c598f17b14f505" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf boxf::UR</definition>
+        <argsstring></argsstring>
+        <name>UR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/geom.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4676">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="4677" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4677">
+        <label>double</label>
+      </node>
+      <node id="4675">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="4676" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/geom.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="37" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structboxf_1a537c5617ca905a0bff347f95463fdd53" prot="public" virt="non-virtual"><scope>boxf</scope><name>LL</name></member>
+      <member refid="structboxf_1a46f87993847e4bcc58c598f17b14f505" prot="public" virt="non-virtual"><scope>boxf</scope><name>UR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

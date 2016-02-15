@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structcolor__s" kind="struct" language="C++" prot="public">
+    <compoundname>color_s</compoundname>
+    <includes refid="color_8h" local="no">color.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcolor__s_1a2aa06fe8deb3b9aab722153c87dec0ac" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double color_s::RGBA[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>RGBA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="36" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1a5138284bed348fafa3c1a72f22094377" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double color_s::HSVA[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>HSVA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1acfe59dac196e02b0d63d58468ab6be9b" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char color_s::rgba[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>rgba</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="38" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1a6866a58347a03334aacd1b19cff6f1d0" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char color_s::cmyk[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>cmyk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1a3ba7369dd590b336d3c950d3d39af998" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int color_s::rrggbbaa[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>rrggbbaa</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="40" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1a236d63da02059b4df20358cf2eeecccd" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* color_s::string</definition>
+        <argsstring></argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="41" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1a01227ba12ab7210cfb839124b06e1779" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int color_s::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1a2f7db900f41d098ff4b19d5581e83eab" prot="public" static="no" mutable="no">
+        <type>union color_s::@4</type>
+        <definition>union color_s::@4  color_s::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor__s_1afff9b62d12e78b81a0d0939c1830011e" prot="public" static="no" mutable="no">
+        <type><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20" kindref="member">color_type_t</ref></type>
+        <definition>color_type_t color_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="44" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4705">
+        <label></label>
+      </node>
+      <node id="4702">
+        <label>color_s</label>
+        <link refid="structcolor__s"/>
+        <childnode refid="4703" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4704" relation="usage">
+          <edgelabel>RGBA</edgelabel>
+          <edgelabel>HSVA</edgelabel>
+        </childnode>
+        <childnode refid="4705" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4706" relation="usage">
+          <edgelabel>rrggbbaa</edgelabel>
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="4707" relation="usage">
+          <edgelabel>rgba</edgelabel>
+          <edgelabel>cmyk</edgelabel>
+        </childnode>
+        <childnode refid="4708" relation="usage">
+          <edgelabel>string</edgelabel>
+        </childnode>
+      </node>
+      <node id="4708">
+        <label>char *</label>
+      </node>
+      <node id="4706">
+        <label>int</label>
+      </node>
+      <node id="4704">
+        <label>double</label>
+      </node>
+      <node id="4707">
+        <label>unsigned</label>
+      </node>
+      <node id="4703">
+        <label>color_type_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/color.h" line="34" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="34" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structcolor__s_1a6866a58347a03334aacd1b19cff6f1d0" prot="public" virt="non-virtual"><scope>color_s</scope><name>cmyk</name></member>
+      <member refid="structcolor__s_1a5138284bed348fafa3c1a72f22094377" prot="public" virt="non-virtual"><scope>color_s</scope><name>HSVA</name></member>
+      <member refid="structcolor__s_1a01227ba12ab7210cfb839124b06e1779" prot="public" virt="non-virtual"><scope>color_s</scope><name>index</name></member>
+      <member refid="structcolor__s_1a2aa06fe8deb3b9aab722153c87dec0ac" prot="public" virt="non-virtual"><scope>color_s</scope><name>RGBA</name></member>
+      <member refid="structcolor__s_1acfe59dac196e02b0d63d58468ab6be9b" prot="public" virt="non-virtual"><scope>color_s</scope><name>rgba</name></member>
+      <member refid="structcolor__s_1a3ba7369dd590b336d3c950d3d39af998" prot="public" virt="non-virtual"><scope>color_s</scope><name>rrggbbaa</name></member>
+      <member refid="structcolor__s_1a236d63da02059b4df20358cf2eeecccd" prot="public" virt="non-virtual"><scope>color_s</scope><name>string</name></member>
+      <member refid="structcolor__s_1afff9b62d12e78b81a0d0939c1830011e" prot="public" virt="non-virtual"><scope>color_s</scope><name>type</name></member>
+      <member refid="structcolor__s_1a2f7db900f41d098ff4b19d5581e83eab" prot="public" virt="non-virtual"><scope>color_s</scope><name>u</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

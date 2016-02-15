@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structMaterial" kind="struct" language="C++" prot="public">
+    <compoundname>Material</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kAmbient</definition>
+        <argsstring></argsstring>
+        <name>kAmbient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="13" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">SceneLight::RenderMesh</referencedby>
+        <referencedby refid="classSceneLight2_1ad4101ae481deeb2fff1781d1b7bed804" compoundref="SceneLight2_8cpp" startline="170" endline="197">SceneLight2::RenderMesh</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">SceneTexture::RenderMesh</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="169" endline="212">SceneSkybox::RenderMesh</referencedby>
+        <referencedby refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" compoundref="SceneModel_8cpp" startline="172" endline="215">SceneModel::RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">SceneText::RenderMesh</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">Ass2::RenderMesh</referencedby>
+        <referencedby refid="classAss3_1ac16aa9c197e8e1119729f3ab9f0ad74e" compoundref="Assignment3_8cpp" startline="441" endline="484">Ass3::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kDiffuse</definition>
+        <argsstring></argsstring>
+        <name>kDiffuse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="14" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">SceneLight::RenderMesh</referencedby>
+        <referencedby refid="classSceneLight2_1ad4101ae481deeb2fff1781d1b7bed804" compoundref="SceneLight2_8cpp" startline="170" endline="197">SceneLight2::RenderMesh</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">SceneTexture::RenderMesh</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="169" endline="212">SceneSkybox::RenderMesh</referencedby>
+        <referencedby refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" compoundref="SceneModel_8cpp" startline="172" endline="215">SceneModel::RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">SceneText::RenderMesh</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">Ass2::RenderMesh</referencedby>
+        <referencedby refid="classAss3_1ac16aa9c197e8e1119729f3ab9f0ad74e" compoundref="Assignment3_8cpp" startline="441" endline="484">Ass3::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kSpecular</definition>
+        <argsstring></argsstring>
+        <name>kSpecular</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="15" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">SceneLight::RenderMesh</referencedby>
+        <referencedby refid="classSceneLight2_1ad4101ae481deeb2fff1781d1b7bed804" compoundref="SceneLight2_8cpp" startline="170" endline="197">SceneLight2::RenderMesh</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">SceneTexture::RenderMesh</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="169" endline="212">SceneSkybox::RenderMesh</referencedby>
+        <referencedby refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" compoundref="SceneModel_8cpp" startline="172" endline="215">SceneModel::RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">SceneText::RenderMesh</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">Ass2::RenderMesh</referencedby>
+        <referencedby refid="classAss3_1ac16aa9c197e8e1119729f3ab9f0ad74e" compoundref="Assignment3_8cpp" startline="441" endline="484">Ass3::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Material::kShininess</definition>
+        <argsstring></argsstring>
+        <name>kShininess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="16" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">SceneLight::RenderMesh</referencedby>
+        <referencedby refid="classSceneLight2_1ad4101ae481deeb2fff1781d1b7bed804" compoundref="SceneLight2_8cpp" startline="170" endline="197">SceneLight2::RenderMesh</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">SceneTexture::RenderMesh</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="169" endline="212">SceneSkybox::RenderMesh</referencedby>
+        <referencedby refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" compoundref="SceneModel_8cpp" startline="172" endline="215">SceneModel::RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">SceneText::RenderMesh</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">Ass2::RenderMesh</referencedby>
+        <referencedby refid="classAss3_1ac16aa9c197e8e1119729f3ab9f0ad74e" compoundref="Assignment3_8cpp" startline="441" endline="484">Ass3::RenderMesh</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Material::Material</definition>
+        <argsstring>()</argsstring>
+        <name>Material</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="18" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="18" bodyend="24"/>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Component::Set</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5304">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="5303" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5302">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="5303" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="5304" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="5303">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Material.h" line="12" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="11" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" virt="non-virtual"><scope>Material</scope><name>kAmbient</name></member>
+      <member refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" virt="non-virtual"><scope>Material</scope><name>kDiffuse</name></member>
+      <member refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" virt="non-virtual"><scope>Material</scope><name>kShininess</name></member>
+      <member refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" virt="non-virtual"><scope>Material</scope><name>kSpecular</name></member>
+      <member refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" prot="public" virt="non-virtual"><scope>Material</scope><name>Material</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

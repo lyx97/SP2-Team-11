@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_fc70377d7f0de6c2691cb7214fc3139a" kind="dir">
+    <compoundname>graphviz/release/bin</compoundname>
+    <innerfile refid="config_8h">config.h</innerfile>
+    <innerfile refid="exparse_8h">exparse.h</innerfile>
+    <innerfile refid="getopt_8h">getopt.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="graphviz/release/bin/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__dtmethod__s" kind="struct" language="C++" prot="public">
+    <compoundname>_dtmethod_s</compoundname>
+    <includes refid="cdt_8h" local="no">cdt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dtmethod__s_1a4e4c9583a7075e46b4a7d82a7e439d34" prot="public" static="no" mutable="no">
+        <type>Dtsearch_f</type>
+        <definition>Dtsearch_f _dtmethod_s::searchf</definition>
+        <argsstring></argsstring>
+        <name>searchf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="75" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtmethod__s_1a1341f1db39b9e430a09902e08d831a41" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtmethod_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="76" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3104">
+        <label>int</label>
+      </node>
+      <node id="3105">
+        <label>Dtsearch_f</label>
+      </node>
+      <node id="3103">
+        <label>_dtmethod_s</label>
+        <link refid="struct__dtmethod__s"/>
+        <childnode refid="3104" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="3105" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cdt.h" line="75" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="74" bodyend="77"/>
+    <listofallmembers>
+      <member refid="struct__dtmethod__s_1a4e4c9583a7075e46b4a7d82a7e439d34" prot="public" virt="non-virtual"><scope>_dtmethod_s</scope><name>searchf</name></member>
+      <member refid="struct__dtmethod__s_1a1341f1db39b9e430a09902e08d831a41" prot="public" virt="non-virtual"><scope>_dtmethod_s</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

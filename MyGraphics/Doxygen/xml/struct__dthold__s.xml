@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__dthold__s" kind="struct" language="C++" prot="public">
+    <compoundname>_dthold_s</compoundname>
+    <includes refid="cdt_8h" local="no">cdt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dthold__s_1a7ad1b3aefcb4c0930783c39da15f3da3" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref></type>
+        <definition>Dtlink_t _dthold_s::hdr</definition>
+        <argsstring></argsstring>
+        <name>hdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="69" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dthold__s_1a7d7b1e1a2521bf9c4b10374bafec08db" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *</type>
+        <definition>Void_t* _dthold_s::obj</definition>
+        <argsstring></argsstring>
+        <name>obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="70" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3095">
+        <label></label>
+      </node>
+      <node id="3097">
+        <label>Void_t *</label>
+      </node>
+      <node id="3093">
+        <label>_dthold_s</label>
+        <link refid="struct__dthold__s"/>
+        <childnode refid="3094" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="3097" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+      </node>
+      <node id="3094">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="3094" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="3095" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="3096" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3096">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cdt.h" line="69" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="68" bodyend="71"/>
+    <listofallmembers>
+      <member refid="struct__dthold__s_1a7ad1b3aefcb4c0930783c39da15f3da3" prot="public" virt="non-virtual"><scope>_dthold_s</scope><name>hdr</name></member>
+      <member refid="struct__dthold__s_1a7d7b1e1a2521bf9c4b10374bafec08db" prot="public" virt="non-virtual"><scope>_dthold_s</scope><name>obj</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

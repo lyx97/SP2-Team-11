@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classScene" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Scene</compoundname>
+    <derivedcompoundref refid="classAss1" prot="public" virt="non-virtual">Ass1</derivedcompoundref>
+    <derivedcompoundref refid="classAss2" prot="public" virt="non-virtual">Ass2</derivedcompoundref>
+    <derivedcompoundref refid="classAss3" prot="public" virt="non-virtual">Ass3</derivedcompoundref>
+    <derivedcompoundref refid="classScene1" prot="public" virt="non-virtual">Scene1</derivedcompoundref>
+    <derivedcompoundref refid="classScene2" prot="public" virt="non-virtual">Scene2</derivedcompoundref>
+    <derivedcompoundref refid="classScene3" prot="public" virt="non-virtual">Scene3</derivedcompoundref>
+    <derivedcompoundref refid="classScene4" prot="public" virt="non-virtual">Scene4</derivedcompoundref>
+    <derivedcompoundref refid="classSceneLight" prot="public" virt="non-virtual">SceneLight</derivedcompoundref>
+    <derivedcompoundref refid="classSceneLight2" prot="public" virt="non-virtual">SceneLight2</derivedcompoundref>
+    <derivedcompoundref refid="classSceneModel" prot="public" virt="non-virtual">SceneModel</derivedcompoundref>
+    <derivedcompoundref refid="classSceneSkybox" prot="public" virt="non-virtual">SceneSkybox</derivedcompoundref>
+    <derivedcompoundref refid="classSceneText" prot="public" virt="non-virtual">SceneText</derivedcompoundref>
+    <derivedcompoundref refid="classSceneTexture" prot="public" virt="non-virtual">SceneTexture</derivedcompoundref>
+    <includes refid="Scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene.h" line="7" column="1" bodyfile="MyGraphics/Source/Scene.h" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene.h" line="8" column="1" bodyfile="MyGraphics/Source/Scene.h" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Init</definition>
+        <argsstring>()=0</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1">Init</reimplementedby>
+        <reimplementedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12">Init</reimplementedby>
+        <reimplementedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a">Init</reimplementedby>
+        <reimplementedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb">Init</reimplementedby>
+        <reimplementedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9">Init</reimplementedby>
+        <reimplementedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9">Init</reimplementedby>
+        <reimplementedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd">Init</reimplementedby>
+        <reimplementedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58">Init</reimplementedby>
+        <reimplementedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81">Init</reimplementedby>
+        <reimplementedby refid="classSceneModel_1ad40b429986aa1429a308c20acdd26e0f">Init</reimplementedby>
+        <reimplementedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8">Init</reimplementedby>
+        <reimplementedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0">Init</reimplementedby>
+        <reimplementedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34">Init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene.h" line="10" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="152" endline="184">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Update</definition>
+        <argsstring>(double dt)=0</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="classScene1_1a569fefef6ee64f45979ea39b8f12b2b1">Update</reimplementedby>
+        <reimplementedby refid="classScene2_1a26d9fb1c36b04d8b3dac98740f7f77e6">Update</reimplementedby>
+        <reimplementedby refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21">Update</reimplementedby>
+        <reimplementedby refid="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1">Update</reimplementedby>
+        <reimplementedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394">Update</reimplementedby>
+        <reimplementedby refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7">Update</reimplementedby>
+        <reimplementedby refid="classSceneLight2_1ae16bbb986e282708b8d867af762f5503">Update</reimplementedby>
+        <reimplementedby refid="classSceneTexture_1ae7ca4466bb1a3db856c91d714b655253">Update</reimplementedby>
+        <reimplementedby refid="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a">Update</reimplementedby>
+        <reimplementedby refid="classSceneModel_1a0b5a6526a56abb67d554990441dee4e7">Update</reimplementedby>
+        <reimplementedby refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e">Update</reimplementedby>
+        <reimplementedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8">Update</reimplementedby>
+        <reimplementedby refid="classAss3_1a28f626a2bf779594d4902bac37a39b13">Update</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene.h" line="11" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="152" endline="184">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1ae24d21e12b34839994ad265662ea24d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Render</definition>
+        <argsstring>()=0</argsstring>
+        <name>Render</name>
+        <reimplementedby refid="classScene1_1aa99ede8a76f1d9dac4d491c5337d559e">Render</reimplementedby>
+        <reimplementedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4">Render</reimplementedby>
+        <reimplementedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da">Render</reimplementedby>
+        <reimplementedby refid="classScene3_1aca22983af978d16e380bf5ca4ceab143">Render</reimplementedby>
+        <reimplementedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d">Render</reimplementedby>
+        <reimplementedby refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf">Render</reimplementedby>
+        <reimplementedby refid="classSceneLight2_1a83a2f8226d9ba88e310291f93675bd81">Render</reimplementedby>
+        <reimplementedby refid="classSceneTexture_1ad9009aa06a8d335485a624089ef134f3">Render</reimplementedby>
+        <reimplementedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a">Render</reimplementedby>
+        <reimplementedby refid="classSceneModel_1a734826f585485bfdd6fa8d1391c55c07">Render</reimplementedby>
+        <reimplementedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174">Render</reimplementedby>
+        <reimplementedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1">Render</reimplementedby>
+        <reimplementedby refid="classAss3_1afca828a847945203143e02c2f78f88a5">Render</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene.h" line="12" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="152" endline="184">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1aae8e24654ef98c79961c2b804b12852c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Exit</definition>
+        <argsstring>()=0</argsstring>
+        <name>Exit</name>
+        <reimplementedby refid="classScene1_1a61e1db3a2a15af692807f28293e98eef">Exit</reimplementedby>
+        <reimplementedby refid="classScene2_1ae4c94dab85cfe1e734af4e288060dec4">Exit</reimplementedby>
+        <reimplementedby refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9">Exit</reimplementedby>
+        <reimplementedby refid="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9">Exit</reimplementedby>
+        <reimplementedby refid="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f">Exit</reimplementedby>
+        <reimplementedby refid="classSceneLight_1afe406a984481b2bc235c445beb2165f9">Exit</reimplementedby>
+        <reimplementedby refid="classSceneLight2_1a4ac35a541882e7c6a4fb58d377e5860d">Exit</reimplementedby>
+        <reimplementedby refid="classSceneTexture_1aa4771e4c33cef692c7f8520553b680a6">Exit</reimplementedby>
+        <reimplementedby refid="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa">Exit</reimplementedby>
+        <reimplementedby refid="classSceneModel_1a66cee6148ead001881dc31d2eb7a4340">Exit</reimplementedby>
+        <reimplementedby refid="classSceneText_1a342e3931c55500c0bd5b757d9bedb86e">Exit</reimplementedby>
+        <reimplementedby refid="classAss2_1aadd61b72d3dc83211ca49d5b09c6494a">Exit</reimplementedby>
+        <reimplementedby refid="classAss3_1a4e92fcc5a47991be8e67f7e6de4bc735">Exit</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene.h" line="13" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="152" endline="184">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5750">
+        <label>Scene1</label>
+        <link refid="classScene1"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5751">
+        <label>Scene2</label>
+        <link refid="classScene2"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5752">
+        <label>Scene3</label>
+        <link refid="classScene3"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5753">
+        <label>Scene4</label>
+        <link refid="classScene4"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5746">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5758">
+        <label>SceneText</label>
+        <link refid="classSceneText"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5754">
+        <label>SceneLight</label>
+        <link refid="classSceneLight"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5757">
+        <label>SceneSkybox</label>
+        <link refid="classSceneSkybox"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5756">
+        <label>SceneModel</label>
+        <link refid="classSceneModel"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5759">
+        <label>SceneTexture</label>
+        <link refid="classSceneTexture"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5747">
+        <label>Ass1</label>
+        <link refid="classAss1"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5748">
+        <label>Ass2</label>
+        <link refid="classAss2"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5749">
+        <label>Ass3</label>
+        <link refid="classAss3"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5755">
+        <label>SceneLight2</label>
+        <link refid="classSceneLight2"/>
+        <childnode refid="5746" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="MyGraphics/Source/Scene.h" line="5" column="1" bodyfile="MyGraphics/Source/Scene.h" bodystart="4" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classScene_1aae8e24654ef98c79961c2b804b12852c" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Exit</name></member>
+      <member refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Init</name></member>
+      <member refid="classScene_1ae24d21e12b34839994ad265662ea24d7" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Render</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene</scope><name>Scene</name></member>
+      <member refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Update</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

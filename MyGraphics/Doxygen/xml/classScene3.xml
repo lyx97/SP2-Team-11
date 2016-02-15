@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classScene3" kind="class" language="C++" prot="public">
+    <compoundname>Scene3</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Scene3_8h" local="no">Scene3.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bb" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba23f9b642b292fec2efefebccfffe5708" prot="private">
+          <name>GEO_CUBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba1033a9810449be531922ccb32c3eee3b" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba5e4f82a98b1e0afaeee96c388ef23697" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba232b28c90af8861134fc9d9dadfd0352" prot="private">
+          <name>GEO_CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bbaef83a54ae341ba2ded5526ccac4e0e33" prot="private">
+          <name>GEO_RING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba9d3d806d707927467b4b2b272ab53242" prot="private">
+          <name>GEO_SPHERE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba4073800412feeb3c781708c67a360f17" prot="private">
+          <name>GEO_HEMI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba589b459be3410e03ceba4308ee84afda" prot="private">
+          <name>GEO_CYLIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba1ad5cb92af0b709dbcfec51bd8288451" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="11" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="10" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="enum" id="classScene3_1a9b928ccb48c4d2f4ab587754e748d41e" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea593e45eaa1b10e3f8e427db73208ecb4" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea35e2f91483c3edc466aa61525a778fdc" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="24" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="23" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScene3_1afdf6706566755abff63b667e92e667d9" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene3::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="38" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9" compoundref="Scene3_8cpp" startline="171" endline="175">Exit</referencedby>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene3_1aafc9c3608926f6279fae71dfdf43603b" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* Scene3::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="39" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Init</referencedby>
+        <referencedby refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" compoundref="Scene3_8cpp" startline="80" endline="169">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene3_1afc538770801dee4754a816f42adf8021" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene3::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="41" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9" compoundref="Scene3_8cpp" startline="171" endline="175">Exit</referencedby>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene3_1aa32b078e76dc8d44853bba229e55771d" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene3::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="42" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Init</referencedby>
+        <referencedby refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" compoundref="Scene3_8cpp" startline="80" endline="169">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene3_1afadb208379e3e9de9df1332ccaf7501c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Scene3::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="44" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Init</referencedby>
+        <referencedby refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" compoundref="Scene3_8cpp" startline="80" endline="169">Render</referencedby>
+        <referencedby refid="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1" compoundref="Scene3_8cpp" startline="64" endline="78">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera" kindref="compound">Camera</ref></type>
+        <definition>Camera Scene3::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="46" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Init</referencedby>
+        <referencedby refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" compoundref="Scene3_8cpp" startline="80" endline="169">Render</referencedby>
+        <referencedby refid="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1" compoundref="Scene3_8cpp" startline="64" endline="78">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScene3_1abe028b4f887292044eb08a4e9b09060a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene3::Scene3</definition>
+        <argsstring>()</argsstring>
+        <name>Scene3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="30" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene3_1aaf3f902f03431df9fb6c0b15308d201a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene3::~Scene3</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="31" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene3::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="33" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="18" bodyend="59"/>
+        <references refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" compoundref="Scene3_8h" startline="46">camera</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" compoundref="MeshBuilder_8cpp" startline="190" endline="229">MeshBuilder::GenerateCircle</references>
+        <references refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</references>
+        <references refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" compoundref="MeshBuilder_8cpp" startline="331" endline="392">MeshBuilder::GenerateHemi</references>
+        <references refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</references>
+        <references refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" compoundref="MeshBuilder_8cpp" startline="231" endline="269">MeshBuilder::GenerateRing</references>
+        <references refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba5e4f82a98b1e0afaeee96c388ef23697" compoundref="Scene3_8h" startline="14">GEO_AXES</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba232b28c90af8861134fc9d9dadfd0352" compoundref="Scene3_8h" startline="15">GEO_CIRCLE</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba23f9b642b292fec2efefebccfffe5708" compoundref="Scene3_8h" startline="12">GEO_CUBE</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba4073800412feeb3c781708c67a360f17" compoundref="Scene3_8h" startline="18">GEO_HEMI</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba1033a9810449be531922ccb32c3eee3b" compoundref="Scene3_8h" startline="13">GEO_QUAD</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bbaef83a54ae341ba2ded5526ccac4e0e33" compoundref="Scene3_8h" startline="16">GEO_RING</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba9d3d806d707927467b4b2b272ab53242" compoundref="Scene3_8h" startline="17">GEO_SPHERE</references>
+        <references refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" compoundref="Camera_8cpp" startline="14" endline="19">Camera::Init</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" compoundref="Scene3_8h" startline="42">m_parameters</references>
+        <references refid="classScene3_1afc538770801dee4754a816f42adf8021" compoundref="Scene3_8h" startline="41">m_programID</references>
+        <references refid="classScene3_1afdf6706566755abff63b667e92e667d9" compoundref="Scene3_8h" startline="38">m_vertexArrayID</references>
+        <references refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" compoundref="Scene3_8h" startline="39">meshList</references>
+        <references refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" compoundref="Scene3_8h" startline="44">rotateAngle</references>
+        <references refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea593e45eaa1b10e3f8e427db73208ecb4" compoundref="Scene3_8h" startline="25">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene3::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="34" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="64" bodyend="78"/>
+        <references refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" compoundref="Scene3_8h" startline="46">camera</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" compoundref="Scene3_8h" startline="44">rotateAngle</references>
+        <references refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="28" endline="47">Camera::Update</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene3_1aca22983af978d16e380bf5ca4ceab143" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene3::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="35" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="80" bodyend="169"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" compoundref="Scene3_8h" startline="46">camera</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba5e4f82a98b1e0afaeee96c388ef23697" compoundref="Scene3_8h" startline="14">GEO_AXES</references>
+        <references refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba4073800412feeb3c781708c67a360f17" compoundref="Scene3_8h" startline="18">GEO_HEMI</references>
+        <references refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" compoundref="Scene3_8h" startline="42">m_parameters</references>
+        <references refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" compoundref="Scene3_8h" startline="39">meshList</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" compoundref="Scene3_8h" startline="44">rotateAngle</references>
+        <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">Mtx44::SetToIdentity</references>
+        <references refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</references>
+        <references refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">Mtx44::SetToScale</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea593e45eaa1b10e3f8e427db73208ecb4" compoundref="Scene3_8h" startline="25">U_MVP</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene3::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.h" line="36" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="171" bodyend="175"/>
+        <references refid="classScene3_1afc538770801dee4754a816f42adf8021" compoundref="Scene3_8h" startline="41">m_programID</references>
+        <references refid="classScene3_1afdf6706566755abff63b667e92e667d9" compoundref="Scene3_8h" startline="38">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5772">
+        <label>Scene3</label>
+        <link refid="classScene3"/>
+        <childnode refid="5773" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5773">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5781">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="5778" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5779">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="5780" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="5782" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="5783" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5784" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="5782">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="5776">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="5777" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="5774">
+        <label>Scene3</label>
+        <link refid="classScene3"/>
+        <childnode refid="5775" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5776" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="5778" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+        </childnode>
+        <childnode refid="5779" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="5784" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5783">
+        <label>string</label>
+      </node>
+      <node id="5780">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="5778" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="5781" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="5778">
+        <label>float</label>
+      </node>
+      <node id="5775">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5784">
+        <label>unsigned</label>
+      </node>
+      <node id="5777">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="5778" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Scene3.h" line="9" column="1" bodyfile="MyGraphics/Source/Scene3.h" bodystart="8" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" prot="private" virt="non-virtual"><scope>Scene3</scope><name>camera</name></member>
+      <member refid="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9" prot="public" virt="virtual"><scope>Scene3</scope><name>Exit</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba5e4f82a98b1e0afaeee96c388ef23697" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_AXES</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba232b28c90af8861134fc9d9dadfd0352" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_CIRCLE</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba23f9b642b292fec2efefebccfffe5708" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_CUBE</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba589b459be3410e03ceba4308ee84afda" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_CYLIN</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba4073800412feeb3c781708c67a360f17" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_HEMI</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba1033a9810449be531922ccb32c3eee3b" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_QUAD</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bbaef83a54ae341ba2ded5526ccac4e0e33" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_RING</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba9d3d806d707927467b4b2b272ab53242" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEO_SPHERE</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bb" prot="private" virt="non-virtual"><scope>Scene3</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" prot="public" virt="virtual"><scope>Scene3</scope><name>Init</name></member>
+      <member refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" prot="private" virt="non-virtual"><scope>Scene3</scope><name>m_parameters</name></member>
+      <member refid="classScene3_1afc538770801dee4754a816f42adf8021" prot="private" virt="non-virtual"><scope>Scene3</scope><name>m_programID</name></member>
+      <member refid="classScene3_1afdf6706566755abff63b667e92e667d9" prot="private" virt="non-virtual"><scope>Scene3</scope><name>m_vertexArrayID</name></member>
+      <member refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" prot="private" virt="non-virtual"><scope>Scene3</scope><name>meshList</name></member>
+      <member refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba1ad5cb92af0b709dbcfec51bd8288451" prot="private" virt="non-virtual"><scope>Scene3</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" prot="public" virt="virtual"><scope>Scene3</scope><name>Render</name></member>
+      <member refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" prot="private" virt="non-virtual"><scope>Scene3</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene3</scope><name>Scene</name></member>
+      <member refid="classScene3_1abe028b4f887292044eb08a4e9b09060a" prot="public" virt="non-virtual"><scope>Scene3</scope><name>Scene3</name></member>
+      <member refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea593e45eaa1b10e3f8e427db73208ecb4" prot="private" virt="non-virtual"><scope>Scene3</scope><name>U_MVP</name></member>
+      <member refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea35e2f91483c3edc466aa61525a778fdc" prot="private" virt="non-virtual"><scope>Scene3</scope><name>U_TOTAL</name></member>
+      <member refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41e" prot="private" virt="non-virtual"><scope>Scene3</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1" prot="public" virt="virtual"><scope>Scene3</scope><name>Update</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene3</scope><name>~Scene</name></member>
+      <member refid="classScene3_1aaf3f902f03431df9fb6c0b15308d201a" prot="public" virt="non-virtual"><scope>Scene3</scope><name>~Scene3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

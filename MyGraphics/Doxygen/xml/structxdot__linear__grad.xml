@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot__linear__grad" kind="struct" language="C++" prot="public">
+    <compoundname>xdot_linear_grad</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot__linear__grad_1a54b1bd9a7ca817ad569938a02f797697" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_linear_grad::x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="38" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__linear__grad_1a13fc1faa9cbf4fcaae2f2406639dd37b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_linear_grad::y0</definition>
+        <argsstring></argsstring>
+        <name>y0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="38" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__linear__grad_1adbc7f1c0e8c453ac4fe0f90b0aff26db" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_linear_grad::x1</definition>
+        <argsstring></argsstring>
+        <name>x1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__linear__grad_1a07409c5b9f85b660650b6ed52040b475" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_linear_grad::y1</definition>
+        <argsstring></argsstring>
+        <name>y1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__linear__grad_1a9974550beda483fd1245003bf72e1aa7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_linear_grad::n_stops</definition>
+        <argsstring></argsstring>
+        <name>n_stops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="40" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__linear__grad_1a12334410358a4c6a1b95b8c6774564da" prot="public" static="no" mutable="no">
+        <type><ref refid="structxdot__color__stop" kindref="compound">xdot_color_stop</ref> *</type>
+        <definition>xdot_color_stop* xdot_linear_grad::stops</definition>
+        <argsstring></argsstring>
+        <name>stops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="41" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6088">
+        <label>xdot_linear_grad</label>
+        <link refid="structxdot__linear__grad"/>
+        <childnode refid="6089" relation="usage">
+          <edgelabel>y0</edgelabel>
+          <edgelabel>y1</edgelabel>
+          <edgelabel>x0</edgelabel>
+          <edgelabel>x1</edgelabel>
+        </childnode>
+        <childnode refid="6090" relation="usage">
+          <edgelabel>n_stops</edgelabel>
+        </childnode>
+        <childnode refid="6091" relation="usage">
+          <edgelabel>stops</edgelabel>
+        </childnode>
+      </node>
+      <node id="6091">
+        <label>xdot_color_stop</label>
+        <link refid="structxdot__color__stop"/>
+        <childnode refid="6092" relation="usage">
+          <edgelabel>frac</edgelabel>
+        </childnode>
+        <childnode refid="6093" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="6093">
+        <label>char *</label>
+      </node>
+      <node id="6092">
+        <label>float</label>
+      </node>
+      <node id="6090">
+        <label>int</label>
+      </node>
+      <node id="6089">
+        <label>double</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="37" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structxdot__linear__grad_1a9974550beda483fd1245003bf72e1aa7" prot="public" virt="non-virtual"><scope>xdot_linear_grad</scope><name>n_stops</name></member>
+      <member refid="structxdot__linear__grad_1a12334410358a4c6a1b95b8c6774564da" prot="public" virt="non-virtual"><scope>xdot_linear_grad</scope><name>stops</name></member>
+      <member refid="structxdot__linear__grad_1a54b1bd9a7ca817ad569938a02f797697" prot="public" virt="non-virtual"><scope>xdot_linear_grad</scope><name>x0</name></member>
+      <member refid="structxdot__linear__grad_1adbc7f1c0e8c453ac4fe0f90b0aff26db" prot="public" virt="non-virtual"><scope>xdot_linear_grad</scope><name>x1</name></member>
+      <member refid="structxdot__linear__grad_1a13fc1faa9cbf4fcaae2f2406639dd37b" prot="public" virt="non-virtual"><scope>xdot_linear_grad</scope><name>y0</name></member>
+      <member refid="structxdot__linear__grad_1a07409c5b9f85b660650b6ed52040b475" prot="public" virt="non-virtual"><scope>xdot_linear_grad</scope><name>y1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

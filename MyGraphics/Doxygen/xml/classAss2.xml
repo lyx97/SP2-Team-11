@@ -1,0 +1,1258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classAss2" kind="class" language="C++" prot="public">
+    <compoundname>Ass2</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Assignment2_8h" local="no">Assignment2.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classAss2_1a02e5a1351c3667efe442e5b46be3a530" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4ed7578da4df336f8ee1af67bc33ba16" prot="private">
+          <name>GEO_CUBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530afd147b0d86bf976b1f99e29b026ce1e4" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4938aba427c7c5e5d450b09e584ad991" prot="private">
+          <name>GEO_GROUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530afa3e1da83a91c39dbe0f74c7406b4950" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a510e5d4ad301385d1a7612e8b09ceb78" prot="private">
+          <name>GEO_CAPE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9f65f2c974e65ae4dcd6ade6adeeb6b7" prot="private">
+          <name>GEO_CAPE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530aa170ec1c95e292eeb1439ae62b869915" prot="private">
+          <name>GEO_CAPE3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530ae7a73723433c2e571f1ad38a7442c2a3" prot="private">
+          <name>GEO_CAPE4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4626d1e96d7da4713db5b5baf848a65a" prot="private">
+          <name>GEO_NOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a07859a90241058c363c7b4408b5cdf21" prot="private">
+          <name>GEO_MOUTH1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530af685e5fadf2ee289e61391e0923f30eb" prot="private">
+          <name>GEO_MOUTH2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530afce0e14b36135176a408444aa11ca6bf" prot="private">
+          <name>GEO_HEAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530abe92a4bac34164e558c4e6f7c76babcc" prot="private">
+          <name>GEO_ARM1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a023f8501c593f9cf53f7e0591b5f6955" prot="private">
+          <name>GEO_ARM2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a96440007f207c06c62ac37da411f453d" prot="private">
+          <name>GEO_ARM3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530afe6fc6527f153821758c4834c10403fd" prot="private">
+          <name>GEO_EYE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9261344cfca6b4565e97192b8b54e5f4" prot="private">
+          <name>GEO_EYE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a89fbdae103443ec39c0e9c0388c2220e" prot="private">
+          <name>GEO_HAT1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a52b6609489c7d0f4f2bc5377b3a0199f" prot="private">
+          <name>GEO_HAT2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530ab6ea6edf3f674c5d3ef6b358851ac07f" prot="private">
+          <name>GEO_CROSS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530aeec9ea604f353f34dbb01d77fcad9d65" prot="private">
+          <name>GEO_EAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4d45f5b9e78117c48594c117e9285cce" prot="private">
+          <name>GEO_HORN1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a0cf52ca6a7a0cc7faaa551293e54346b" prot="private">
+          <name>GEO_HORN2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a723877ce42accb3476ecb493e7b77a60" prot="private">
+          <name>GEO_BODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a16aa4f70d845389ce437b0cc0d2b3acb" prot="private">
+          <name>GEO_PANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a8f0a91f766323732757ec144134f65b7" prot="private">
+          <name>GEO_TREE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530abb5d14ced7ed6b00d87165b40892011f" prot="private">
+          <name>GEO_TREE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a801e926be14ae9d9b129a3f06a7eeeec" prot="private">
+          <name>GEO_CANDY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4179ee1d8b38e3b0f7f46d586b25bde7" prot="private">
+          <name>GEO_STICK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1a02e5a1351c3667efe442e5b46be3a530a342e018f62240fb5bbb358cd39dbb3d5" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="13" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="12" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a4cf18e26e54677f62c95994da6974ffc" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a3b3d2252fcfea157ebf85a43166b29ed" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0ef0847f369536873ee42c2adad56eb1" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a14b4f5e1db3b2d05e1bdff3d5354686b" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0856492260a6b5e008b184456a5ce00e" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ace61c9d85df004c9ce1e18f421ca98be" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a15e289cf600b50d84face570f24d880b" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761af9be3d86a91fe8eee6e5fc684d120f95" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a16809ae68df7f4ffae59d510d52ab4a5" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761aa9ac79cad1b7c7ec5ed181b135f49285" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a067074280fab05236c31071407b1a198" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a254147508dfb9c4faa5cae323a8b76a0" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8a8aea578355c84d1a1501edcca00416" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8093f76e7bc32ddd4c67fb5666dd964d" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adb3a9089a3274587bdbf249e84782e45" prot="private">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adbb57aa9b4f7dec5a750e095fa1e938e" prot="private">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a663eeddc4a9d9c38faad9afc05f63b6b" prot="private">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761aea3626aba6583b38869a738880bbae12" prot="private">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ae2a1ac26075bd5b625bedcccb6d47ce4" prot="private">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a5e70e80c5737bda4e4e70db457bde2c6" prot="private">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a7e9e4b4853aa8e571ec3bed60e40e6cf" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="48" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="47" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAss2_1ac4e651a64caf2c45fd4fac0930e2623f" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass2::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="84" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classAss2_1aadd61b72d3dc83211ca49d5b09c6494a" compoundref="Assignment2_8cpp" startline="931" endline="935">Exit</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a5b94247de00e042db9f07e8dc0417802" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* Ass2::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="85" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a5d56ef4eb70e9649089aa9fd406dd094" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass2::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="87" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classAss2_1aadd61b72d3dc83211ca49d5b09c6494a" compoundref="Assignment2_8cpp" startline="931" endline="935">Exit</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a5ecff504bd2eb5e6e79519c0d1a34847" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass2::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="88" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">RenderMesh</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1aa314b92e0774b8cfb1d20b3724c85b8d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass2::armRotate</definition>
+        <argsstring></argsstring>
+        <name>armRotate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="90" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a4c38287ca3b2b558d530df8091ee446a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass2::upperJump</definition>
+        <argsstring></argsstring>
+        <name>upperJump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="91" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1aa8115aeec3866ba61397e988ba1f8f16" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass2::lowerJump</definition>
+        <argsstring></argsstring>
+        <name>lowerJump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="92" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a9af308a1f5e6049bb26afffe9237a171" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass2::inputDelay</definition>
+        <argsstring></argsstring>
+        <name>inputDelay</name>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="93" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a3175fd20998f624b53571fdfc137ca9c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ass2::checkArm</definition>
+        <argsstring></argsstring>
+        <name>checkArm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="94" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a8d11e90bc3f0c27f335d15bdda11147d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ass2::smile</definition>
+        <argsstring></argsstring>
+        <name>smile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="95" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a1ec9486e500a2b42218bcc0b6e2b64af" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ass2::jumping</definition>
+        <argsstring></argsstring>
+        <name>jumping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="96" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a0c39e23bb26b9aea524571a5104c45f7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ass2::togjump</definition>
+        <argsstring></argsstring>
+        <name>togjump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="97" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1af0c12b70483da6d30cd54c96ac6226c6" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera2" kindref="compound">Camera2</ref></type>
+        <definition>Camera2 Ass2::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="99" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a6bff589d41f354d7a56fddc14e3a8e7a" prot="private" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light Ass2::light[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="100" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" compoundref="Assignment2_8cpp" startline="270" endline="384">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a12f18c03f179c1a61bcc02ca329b7eb9" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Ass2::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="102" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1aa3ddcd8009001d7070799b5a4bcf8b3b" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Ass2::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="102" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss2_1a717242e514940cf116611068f3c8329e" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Ass2::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="102" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Init</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">RenderMesh</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAss2_1a5f2eb0152ae30ac97de18fd62914cdf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ass2::Ass2</definition>
+        <argsstring>()</argsstring>
+        <name>Ass2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="74" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classAss2_1aa2f396f4c49de76748a6235b04ce5f4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ass2::~Ass2</definition>
+        <argsstring>()</argsstring>
+        <name>~Ass2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="75" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass2::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="77" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="19" bodyend="264"/>
+        <references refid="classAss2_1aa314b92e0774b8cfb1d20b3724c85b8d" compoundref="Assignment2_8h" startline="90">armRotate</references>
+        <references refid="classAss2_1af0c12b70483da6d30cd54c96ac6226c6" compoundref="Assignment2_8h" startline="99">camera</references>
+        <references refid="classAss2_1a3175fd20998f624b53571fdfc137ca9c" compoundref="Assignment2_8h" startline="94">checkArm</references>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="24">Light::color</references>
+        <references refid="structLight_1af4ce5bbfbf33af96db9b8a222d073298" compoundref="Light_8h" startline="19">Light::cosCutoff</references>
+        <references refid="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" compoundref="Light_8h" startline="20">Light::cosInner</references>
+        <references refid="namespaceMath_1ac04b987cc6c574a059e68cb58f58c09a" compoundref="MyMath_8h" startline="49" endline="52">Math::DegreeToRadian</references>
+        <references refid="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" compoundref="Light_8h" startline="21">Light::exponent</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" compoundref="MeshBuilder_8cpp" startline="190" endline="229">MeshBuilder::GenerateCircle</references>
+        <references refid="classMeshBuilder_1aa3d73313a182a699cf0c55a2855817dd" compoundref="MeshBuilder_8cpp" startline="460" endline="516">MeshBuilder::GenerateCone</references>
+        <references refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</references>
+        <references refid="classMeshBuilder_1ae27b82decd63d0d0e51ecb778bbd20f6" compoundref="MeshBuilder_8cpp" startline="394" endline="458">MeshBuilder::GenerateCylin</references>
+        <references refid="classMeshBuilder_1a7f16aa9809e13f619862f7139c26d010" compoundref="MeshBuilder_8cpp" startline="620" endline="681">MeshBuilder::GenerateHalfHemi</references>
+        <references refid="classMeshBuilder_1a5942fd14f58736054c6da3ee034cc2b5" compoundref="MeshBuilder_8cpp" startline="569" endline="618">MeshBuilder::GenerateHalfTorus</references>
+        <references refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" compoundref="MeshBuilder_8cpp" startline="331" endline="392">MeshBuilder::GenerateHemi</references>
+        <references refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</references>
+        <references refid="classMeshBuilder_1ad2e28967c0c772fa32df30a49944891f" compoundref="MeshBuilder_8cpp" startline="518" endline="567">MeshBuilder::GenerateTorus</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530abe92a4bac34164e558c4e6f7c76babcc" compoundref="Assignment2_8h" startline="26">GEO_ARM1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a023f8501c593f9cf53f7e0591b5f6955" compoundref="Assignment2_8h" startline="27">GEO_ARM2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a96440007f207c06c62ac37da411f453d" compoundref="Assignment2_8h" startline="28">GEO_ARM3</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afd147b0d86bf976b1f99e29b026ce1e4" compoundref="Assignment2_8h" startline="15">GEO_AXES</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a723877ce42accb3476ecb493e7b77a60" compoundref="Assignment2_8h" startline="37">GEO_BODY</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a801e926be14ae9d9b129a3f06a7eeeec" compoundref="Assignment2_8h" startline="41">GEO_CANDY</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a510e5d4ad301385d1a7612e8b09ceb78" compoundref="Assignment2_8h" startline="18">GEO_CAPE1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9f65f2c974e65ae4dcd6ade6adeeb6b7" compoundref="Assignment2_8h" startline="19">GEO_CAPE2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530aa170ec1c95e292eeb1439ae62b869915" compoundref="Assignment2_8h" startline="20">GEO_CAPE3</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530ae7a73723433c2e571f1ad38a7442c2a3" compoundref="Assignment2_8h" startline="21">GEO_CAPE4</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530ab6ea6edf3f674c5d3ef6b358851ac07f" compoundref="Assignment2_8h" startline="33">GEO_CROSS</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530aeec9ea604f353f34dbb01d77fcad9d65" compoundref="Assignment2_8h" startline="34">GEO_EAR</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afe6fc6527f153821758c4834c10403fd" compoundref="Assignment2_8h" startline="29">GEO_EYE1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9261344cfca6b4565e97192b8b54e5f4" compoundref="Assignment2_8h" startline="30">GEO_EYE2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4938aba427c7c5e5d450b09e584ad991" compoundref="Assignment2_8h" startline="16">GEO_GROUND</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a89fbdae103443ec39c0e9c0388c2220e" compoundref="Assignment2_8h" startline="31">GEO_HAT1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a52b6609489c7d0f4f2bc5377b3a0199f" compoundref="Assignment2_8h" startline="32">GEO_HAT2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afce0e14b36135176a408444aa11ca6bf" compoundref="Assignment2_8h" startline="25">GEO_HEAD</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4d45f5b9e78117c48594c117e9285cce" compoundref="Assignment2_8h" startline="35">GEO_HORN1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a0cf52ca6a7a0cc7faaa551293e54346b" compoundref="Assignment2_8h" startline="36">GEO_HORN2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afa3e1da83a91c39dbe0f74c7406b4950" compoundref="Assignment2_8h" startline="17">GEO_LIGHTBALL</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a07859a90241058c363c7b4408b5cdf21" compoundref="Assignment2_8h" startline="23">GEO_MOUTH1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530af685e5fadf2ee289e61391e0923f30eb" compoundref="Assignment2_8h" startline="24">GEO_MOUTH2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4626d1e96d7da4713db5b5baf848a65a" compoundref="Assignment2_8h" startline="22">GEO_NOSE</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a16aa4f70d845389ce437b0cc0d2b3acb" compoundref="Assignment2_8h" startline="38">GEO_PANT</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4179ee1d8b38e3b0f7f46d586b25bde7" compoundref="Assignment2_8h" startline="42">GEO_STICK</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a8f0a91f766323732757ec144134f65b7" compoundref="Assignment2_8h" startline="39">GEO_TREE1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530abb5d14ced7ed6b00d87165b40892011f" compoundref="Assignment2_8h" startline="40">GEO_TREE2</references>
+        <references refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</references>
+        <references refid="classAss2_1a9af308a1f5e6049bb26afffe9237a171" compoundref="Assignment2_8h" startline="93">inputDelay</references>
+        <references refid="classAss2_1a1ec9486e500a2b42218bcc0b6e2b64af" compoundref="Assignment2_8h" startline="96">jumping</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="13">Material::kAmbient</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="26">Light::kC</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="14">Material::kDiffuse</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="26">Light::kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="26">Light::kQ</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="16">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="15">Material::kSpecular</references>
+        <references refid="classAss2_1a6bff589d41f354d7a56fddc14e3a8e7a" compoundref="Assignment2_8h" startline="100">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" compoundref="Light_8h" startline="10">Light::LIGHT_POINT</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classAss2_1aa8115aeec3866ba61397e988ba1f8f16" compoundref="Assignment2_8h" startline="92">lowerJump</references>
+        <references refid="classAss2_1a5ecff504bd2eb5e6e79519c0d1a34847" compoundref="Assignment2_8h" startline="88">m_parameters</references>
+        <references refid="classAss2_1a5d56ef4eb70e9649089aa9fd406dd094" compoundref="Assignment2_8h" startline="87">m_programID</references>
+        <references refid="classAss2_1ac4e651a64caf2c45fd4fac0930e2623f" compoundref="Assignment2_8h" startline="84">m_vertexArrayID</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="35">Mesh::material</references>
+        <references refid="classAss2_1a5b94247de00e042db9f07e8dc0417802" compoundref="Assignment2_8h" startline="85">meshList</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="25">Light::power</references>
+        <references refid="classAss2_1a717242e514940cf116611068f3c8329e" compoundref="Assignment2_8h" startline="102">projectionStack</references>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Component::Set</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="16" endline="16">Color::Set</references>
+        <references refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Vector3::Set</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="classAss2_1a8d11e90bc3f0c27f335d15bdda11147d" compoundref="Assignment2_8h" startline="95">smile</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="18">Light::spotDirection</references>
+        <references refid="classAss2_1a0c39e23bb26b9aea524571a5104c45f7" compoundref="Assignment2_8h" startline="97">togjump</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="17">Light::type</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a16809ae68df7f4ffae59d510d52ab4a5" compoundref="Assignment2_8h" startline="57">U_LIGHT0_COLOR</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a663eeddc4a9d9c38faad9afc05f63b6b" compoundref="Assignment2_8h" startline="65">U_LIGHT0_COSCUTOFF</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761aea3626aba6583b38869a738880bbae12" compoundref="Assignment2_8h" startline="66">U_LIGHT0_COSINNER</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ae2a1ac26075bd5b625bedcccb6d47ce4" compoundref="Assignment2_8h" startline="67">U_LIGHT0_EXPONENT</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a067074280fab05236c31071407b1a198" compoundref="Assignment2_8h" startline="59">U_LIGHT0_KC</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a254147508dfb9c4faa5cae323a8b76a0" compoundref="Assignment2_8h" startline="60">U_LIGHT0_KL</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8a8aea578355c84d1a1501edcca00416" compoundref="Assignment2_8h" startline="61">U_LIGHT0_KQ</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761af9be3d86a91fe8eee6e5fc684d120f95" compoundref="Assignment2_8h" startline="56">U_LIGHT0_POSITION</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761aa9ac79cad1b7c7ec5ed181b135f49285" compoundref="Assignment2_8h" startline="58">U_LIGHT0_POWER</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adbb57aa9b4f7dec5a750e095fa1e938e" compoundref="Assignment2_8h" startline="64">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adb3a9089a3274587bdbf249e84782e45" compoundref="Assignment2_8h" startline="63">U_LIGHT0_TYPE</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8093f76e7bc32ddd4c67fb5666dd964d" compoundref="Assignment2_8h" startline="62">U_LIGHTENABLED</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a14b4f5e1db3b2d05e1bdff3d5354686b" compoundref="Assignment2_8h" startline="52">U_MATERIAL_AMBIENT</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0856492260a6b5e008b184456a5ce00e" compoundref="Assignment2_8h" startline="53">U_MATERIAL_DIFFUSE</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a15e289cf600b50d84face570f24d880b" compoundref="Assignment2_8h" startline="55">U_MATERIAL_SHININESS</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ace61c9d85df004c9ce1e18f421ca98be" compoundref="Assignment2_8h" startline="54">U_MATERIAL_SPECULAR</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a3b3d2252fcfea157ebf85a43166b29ed" compoundref="Assignment2_8h" startline="50">U_MODELVIEW</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0ef0847f369536873ee42c2adad56eb1" compoundref="Assignment2_8h" startline="51">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a4cf18e26e54677f62c95994da6974ffc" compoundref="Assignment2_8h" startline="49">U_MVP</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a5e70e80c5737bda4e4e70db457bde2c6" compoundref="Assignment2_8h" startline="68">U_NUMLIGHTS</references>
+        <references refid="classAss2_1a4c38287ca3b2b558d530df8091ee446a" compoundref="Assignment2_8h" startline="91">upperJump</references>
+      </memberdef>
+      <memberdef kind="function" id="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass2::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="78" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="270" bodyend="384"/>
+        <references refid="classAss2_1aa314b92e0774b8cfb1d20b3724c85b8d" compoundref="Assignment2_8h" startline="90">armRotate</references>
+        <references refid="classAss2_1af0c12b70483da6d30cd54c96ac6226c6" compoundref="Assignment2_8h" startline="99">camera</references>
+        <references refid="classAss2_1a3175fd20998f624b53571fdfc137ca9c" compoundref="Assignment2_8h" startline="94">checkArm</references>
+        <references refid="classAss2_1a9af308a1f5e6049bb26afffe9237a171" compoundref="Assignment2_8h" startline="93">inputDelay</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classAss2_1a1ec9486e500a2b42218bcc0b6e2b64af" compoundref="Assignment2_8h" startline="96">jumping</references>
+        <references refid="classAss2_1a6bff589d41f354d7a56fddc14e3a8e7a" compoundref="Assignment2_8h" startline="100">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="11">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" compoundref="Light_8h" startline="10">Light::LIGHT_POINT</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="classAss2_1aa8115aeec3866ba61397e988ba1f8f16" compoundref="Assignment2_8h" startline="92">lowerJump</references>
+        <references refid="Assignment2_8cpp_1a30bf7b0e79d3a8170fd7379307ede671" compoundref="Assignment2_8cpp" startline="268">LSPEED</references>
+        <references refid="classAss2_1a5ecff504bd2eb5e6e79519c0d1a34847" compoundref="Assignment2_8h" startline="88">m_parameters</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classAss2_1a8d11e90bc3f0c27f335d15bdda11147d" compoundref="Assignment2_8h" startline="95">smile</references>
+        <references refid="classAss2_1a0c39e23bb26b9aea524571a5104c45f7" compoundref="Assignment2_8h" startline="97">togjump</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="17">Light::type</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adb3a9089a3274587bdbf249e84782e45" compoundref="Assignment2_8h" startline="63">U_LIGHT0_TYPE</references>
+        <references refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="89">Camera2::Update</references>
+        <references refid="classAss2_1a4c38287ca3b2b558d530df8091ee446a" compoundref="Assignment2_8h" startline="91">upperJump</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass2::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="79" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="415" bodyend="929"/>
+        <references refid="classAss2_1aa314b92e0774b8cfb1d20b3724c85b8d" compoundref="Assignment2_8h" startline="90">armRotate</references>
+        <references refid="classAss2_1af0c12b70483da6d30cd54c96ac6226c6" compoundref="Assignment2_8h" startline="99">camera</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530abe92a4bac34164e558c4e6f7c76babcc" compoundref="Assignment2_8h" startline="26">GEO_ARM1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a023f8501c593f9cf53f7e0591b5f6955" compoundref="Assignment2_8h" startline="27">GEO_ARM2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a96440007f207c06c62ac37da411f453d" compoundref="Assignment2_8h" startline="28">GEO_ARM3</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afd147b0d86bf976b1f99e29b026ce1e4" compoundref="Assignment2_8h" startline="15">GEO_AXES</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a723877ce42accb3476ecb493e7b77a60" compoundref="Assignment2_8h" startline="37">GEO_BODY</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a801e926be14ae9d9b129a3f06a7eeeec" compoundref="Assignment2_8h" startline="41">GEO_CANDY</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a510e5d4ad301385d1a7612e8b09ceb78" compoundref="Assignment2_8h" startline="18">GEO_CAPE1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9f65f2c974e65ae4dcd6ade6adeeb6b7" compoundref="Assignment2_8h" startline="19">GEO_CAPE2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530aa170ec1c95e292eeb1439ae62b869915" compoundref="Assignment2_8h" startline="20">GEO_CAPE3</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530ae7a73723433c2e571f1ad38a7442c2a3" compoundref="Assignment2_8h" startline="21">GEO_CAPE4</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530ab6ea6edf3f674c5d3ef6b358851ac07f" compoundref="Assignment2_8h" startline="33">GEO_CROSS</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530aeec9ea604f353f34dbb01d77fcad9d65" compoundref="Assignment2_8h" startline="34">GEO_EAR</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afe6fc6527f153821758c4834c10403fd" compoundref="Assignment2_8h" startline="29">GEO_EYE1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9261344cfca6b4565e97192b8b54e5f4" compoundref="Assignment2_8h" startline="30">GEO_EYE2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4938aba427c7c5e5d450b09e584ad991" compoundref="Assignment2_8h" startline="16">GEO_GROUND</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a89fbdae103443ec39c0e9c0388c2220e" compoundref="Assignment2_8h" startline="31">GEO_HAT1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a52b6609489c7d0f4f2bc5377b3a0199f" compoundref="Assignment2_8h" startline="32">GEO_HAT2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afce0e14b36135176a408444aa11ca6bf" compoundref="Assignment2_8h" startline="25">GEO_HEAD</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4d45f5b9e78117c48594c117e9285cce" compoundref="Assignment2_8h" startline="35">GEO_HORN1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a0cf52ca6a7a0cc7faaa551293e54346b" compoundref="Assignment2_8h" startline="36">GEO_HORN2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afa3e1da83a91c39dbe0f74c7406b4950" compoundref="Assignment2_8h" startline="17">GEO_LIGHTBALL</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a07859a90241058c363c7b4408b5cdf21" compoundref="Assignment2_8h" startline="23">GEO_MOUTH1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530af685e5fadf2ee289e61391e0923f30eb" compoundref="Assignment2_8h" startline="24">GEO_MOUTH2</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4626d1e96d7da4713db5b5baf848a65a" compoundref="Assignment2_8h" startline="22">GEO_NOSE</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a16aa4f70d845389ce437b0cc0d2b3acb" compoundref="Assignment2_8h" startline="38">GEO_PANT</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4179ee1d8b38e3b0f7f46d586b25bde7" compoundref="Assignment2_8h" startline="42">GEO_STICK</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a8f0a91f766323732757ec144134f65b7" compoundref="Assignment2_8h" startline="39">GEO_TREE1</references>
+        <references refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530abb5d14ced7ed6b00d87165b40892011f" compoundref="Assignment2_8h" startline="40">GEO_TREE2</references>
+        <references refid="classAss2_1a6bff589d41f354d7a56fddc14e3a8e7a" compoundref="Assignment2_8h" startline="100">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="11">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classAss2_1aa8115aeec3866ba61397e988ba1f8f16" compoundref="Assignment2_8h" startline="92">lowerJump</references>
+        <references refid="classAss2_1a5ecff504bd2eb5e6e79519c0d1a34847" compoundref="Assignment2_8h" startline="88">m_parameters</references>
+        <references refid="classAss2_1a5b94247de00e042db9f07e8dc0417802" compoundref="Assignment2_8h" startline="85">meshList</references>
+        <references refid="classAss2_1a12f18c03f179c1a61bcc02ca329b7eb9" compoundref="Assignment2_8h" startline="102">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">RenderMesh</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classAss2_1a8d11e90bc3f0c27f335d15bdda11147d" compoundref="Assignment2_8h" startline="95">smile</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="18">Light::spotDirection</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classAss2_1a0c39e23bb26b9aea524571a5104c45f7" compoundref="Assignment2_8h" startline="97">togjump</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761af9be3d86a91fe8eee6e5fc684d120f95" compoundref="Assignment2_8h" startline="56">U_LIGHT0_POSITION</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adbb57aa9b4f7dec5a750e095fa1e938e" compoundref="Assignment2_8h" startline="64">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classAss2_1a4c38287ca3b2b558d530df8091ee446a" compoundref="Assignment2_8h" startline="91">upperJump</references>
+        <references refid="classAss2_1aa3ddcd8009001d7070799b5a4bcf8b3b" compoundref="Assignment2_8h" startline="102">viewStack</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classAss2_1aadd61b72d3dc83211ca49d5b09c6494a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass2::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="80" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="931" bodyend="935"/>
+        <references refid="classAss2_1a5d56ef4eb70e9649089aa9fd406dd094" compoundref="Assignment2_8h" startline="87">m_programID</references>
+        <references refid="classAss2_1ac4e651a64caf2c45fd4fac0930e2623f" compoundref="Assignment2_8h" startline="84">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ass2::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment2.h" line="82" column="1" bodyfile="MyGraphics/Source/Assignment2.cpp" bodystart="386" bodyend="413"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</references>
+        <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="13">Material::kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="14">Material::kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="16">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="15">Material::kSpecular</references>
+        <references refid="classAss2_1a5ecff504bd2eb5e6e79519c0d1a34847" compoundref="Assignment2_8h" startline="88">m_parameters</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="35">Mesh::material</references>
+        <references refid="classAss2_1a12f18c03f179c1a61bcc02ca329b7eb9" compoundref="Assignment2_8h" startline="102">modelStack</references>
+        <references refid="classAss2_1a717242e514940cf116611068f3c8329e" compoundref="Assignment2_8h" startline="102">projectionStack</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">Component::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8093f76e7bc32ddd4c67fb5666dd964d" compoundref="Assignment2_8h" startline="62">U_LIGHTENABLED</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a14b4f5e1db3b2d05e1bdff3d5354686b" compoundref="Assignment2_8h" startline="52">U_MATERIAL_AMBIENT</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0856492260a6b5e008b184456a5ce00e" compoundref="Assignment2_8h" startline="53">U_MATERIAL_DIFFUSE</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a15e289cf600b50d84face570f24d880b" compoundref="Assignment2_8h" startline="55">U_MATERIAL_SHININESS</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ace61c9d85df004c9ce1e18f421ca98be" compoundref="Assignment2_8h" startline="54">U_MATERIAL_SPECULAR</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a3b3d2252fcfea157ebf85a43166b29ed" compoundref="Assignment2_8h" startline="50">U_MODELVIEW</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0ef0847f369536873ee42c2adad56eb1" compoundref="Assignment2_8h" startline="51">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a4cf18e26e54677f62c95994da6974ffc" compoundref="Assignment2_8h" startline="49">U_MVP</references>
+        <references refid="classAss2_1aa3ddcd8009001d7070799b5a4bcf8b3b" compoundref="Assignment2_8h" startline="102">viewStack</references>
+        <referencedby refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" compoundref="Assignment2_8cpp" startline="415" endline="929">Render</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4623">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="4622">
+        <label>Ass2</label>
+        <link refid="classAss2"/>
+        <childnode refid="4623" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4629">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="4635">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="4639">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="4628">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="4637">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="4638" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="4640" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="4641" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4642" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4640">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="4633">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="4630" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="4641">
+        <label>string</label>
+      </node>
+      <node id="4638">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="4639" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="4627">
+        <label>float</label>
+      </node>
+      <node id="4634">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="4635" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="4625">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="4626">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="4628" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4629" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="4630" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="4631" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="4632">
+        <label>Camera2</label>
+        <link refid="classCamera2"/>
+        <childnode refid="4633" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4630" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="4631">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="4642">
+        <label>unsigned</label>
+      </node>
+      <node id="4636">
+        <label>bool</label>
+      </node>
+      <node id="4624">
+        <label>Ass2</label>
+        <link refid="classAss2"/>
+        <childnode refid="4625" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4626" relation="usage">
+          <edgelabel>light</edgelabel>
+        </childnode>
+        <childnode refid="4632" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>upperJump</edgelabel>
+          <edgelabel>inputDelay</edgelabel>
+          <edgelabel>armRotate</edgelabel>
+          <edgelabel>lowerJump</edgelabel>
+        </childnode>
+        <childnode refid="4634" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="4636" relation="usage">
+          <edgelabel>smile</edgelabel>
+          <edgelabel>checkArm</edgelabel>
+          <edgelabel>jumping</edgelabel>
+          <edgelabel>togjump</edgelabel>
+        </childnode>
+        <childnode refid="4637" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="4642" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="4630">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="4627" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Assignment2.h" line="11" column="1" bodyfile="MyGraphics/Source/Assignment2.h" bodystart="10" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classAss2_1aa314b92e0774b8cfb1d20b3724c85b8d" prot="private" virt="non-virtual"><scope>Ass2</scope><name>armRotate</name></member>
+      <member refid="classAss2_1a5f2eb0152ae30ac97de18fd62914cdf1" prot="public" virt="non-virtual"><scope>Ass2</scope><name>Ass2</name></member>
+      <member refid="classAss2_1af0c12b70483da6d30cd54c96ac6226c6" prot="private" virt="non-virtual"><scope>Ass2</scope><name>camera</name></member>
+      <member refid="classAss2_1a3175fd20998f624b53571fdfc137ca9c" prot="private" virt="non-virtual"><scope>Ass2</scope><name>checkArm</name></member>
+      <member refid="classAss2_1aadd61b72d3dc83211ca49d5b09c6494a" prot="public" virt="virtual"><scope>Ass2</scope><name>Exit</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530abe92a4bac34164e558c4e6f7c76babcc" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_ARM1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a023f8501c593f9cf53f7e0591b5f6955" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_ARM2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a96440007f207c06c62ac37da411f453d" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_ARM3</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afd147b0d86bf976b1f99e29b026ce1e4" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_AXES</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a723877ce42accb3476ecb493e7b77a60" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_BODY</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a801e926be14ae9d9b129a3f06a7eeeec" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CANDY</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a510e5d4ad301385d1a7612e8b09ceb78" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CAPE1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9f65f2c974e65ae4dcd6ade6adeeb6b7" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CAPE2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530aa170ec1c95e292eeb1439ae62b869915" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CAPE3</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530ae7a73723433c2e571f1ad38a7442c2a3" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CAPE4</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530ab6ea6edf3f674c5d3ef6b358851ac07f" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CROSS</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4ed7578da4df336f8ee1af67bc33ba16" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_CUBE</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530aeec9ea604f353f34dbb01d77fcad9d65" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_EAR</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afe6fc6527f153821758c4834c10403fd" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_EYE1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a9261344cfca6b4565e97192b8b54e5f4" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_EYE2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4938aba427c7c5e5d450b09e584ad991" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_GROUND</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a89fbdae103443ec39c0e9c0388c2220e" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_HAT1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a52b6609489c7d0f4f2bc5377b3a0199f" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_HAT2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afce0e14b36135176a408444aa11ca6bf" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_HEAD</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4d45f5b9e78117c48594c117e9285cce" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_HORN1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a0cf52ca6a7a0cc7faaa551293e54346b" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_HORN2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530afa3e1da83a91c39dbe0f74c7406b4950" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a07859a90241058c363c7b4408b5cdf21" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_MOUTH1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530af685e5fadf2ee289e61391e0923f30eb" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_MOUTH2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4626d1e96d7da4713db5b5baf848a65a" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_NOSE</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a16aa4f70d845389ce437b0cc0d2b3acb" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_PANT</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a4179ee1d8b38e3b0f7f46d586b25bde7" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_STICK</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a8f0a91f766323732757ec144134f65b7" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_TREE1</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530abb5d14ced7ed6b00d87165b40892011f" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEO_TREE2</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530" prot="private" virt="non-virtual"><scope>Ass2</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" prot="public" virt="virtual"><scope>Ass2</scope><name>Init</name></member>
+      <member refid="classAss2_1a9af308a1f5e6049bb26afffe9237a171" prot="private" virt="non-virtual"><scope>Ass2</scope><name>inputDelay</name></member>
+      <member refid="classAss2_1a1ec9486e500a2b42218bcc0b6e2b64af" prot="private" virt="non-virtual"><scope>Ass2</scope><name>jumping</name></member>
+      <member refid="classAss2_1a6bff589d41f354d7a56fddc14e3a8e7a" prot="private" virt="non-virtual"><scope>Ass2</scope><name>light</name></member>
+      <member refid="classAss2_1aa8115aeec3866ba61397e988ba1f8f16" prot="private" virt="non-virtual"><scope>Ass2</scope><name>lowerJump</name></member>
+      <member refid="classAss2_1a5ecff504bd2eb5e6e79519c0d1a34847" prot="private" virt="non-virtual"><scope>Ass2</scope><name>m_parameters</name></member>
+      <member refid="classAss2_1a5d56ef4eb70e9649089aa9fd406dd094" prot="private" virt="non-virtual"><scope>Ass2</scope><name>m_programID</name></member>
+      <member refid="classAss2_1ac4e651a64caf2c45fd4fac0930e2623f" prot="private" virt="non-virtual"><scope>Ass2</scope><name>m_vertexArrayID</name></member>
+      <member refid="classAss2_1a5b94247de00e042db9f07e8dc0417802" prot="private" virt="non-virtual"><scope>Ass2</scope><name>meshList</name></member>
+      <member refid="classAss2_1a12f18c03f179c1a61bcc02ca329b7eb9" prot="private" virt="non-virtual"><scope>Ass2</scope><name>modelStack</name></member>
+      <member refid="classAss2_1a02e5a1351c3667efe442e5b46be3a530a342e018f62240fb5bbb358cd39dbb3d5" prot="private" virt="non-virtual"><scope>Ass2</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classAss2_1a717242e514940cf116611068f3c8329e" prot="private" virt="non-virtual"><scope>Ass2</scope><name>projectionStack</name></member>
+      <member refid="classAss2_1adc8ff297a0e9fcbd66f805cb78a4abf1" prot="public" virt="virtual"><scope>Ass2</scope><name>Render</name></member>
+      <member refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" prot="private" virt="non-virtual"><scope>Ass2</scope><name>RenderMesh</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Ass2</scope><name>Scene</name></member>
+      <member refid="classAss2_1a8d11e90bc3f0c27f335d15bdda11147d" prot="private" virt="non-virtual"><scope>Ass2</scope><name>smile</name></member>
+      <member refid="classAss2_1a0c39e23bb26b9aea524571a5104c45f7" prot="private" virt="non-virtual"><scope>Ass2</scope><name>togjump</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a16809ae68df7f4ffae59d510d52ab4a5" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a663eeddc4a9d9c38faad9afc05f63b6b" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_COSCUTOFF</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761aea3626aba6583b38869a738880bbae12" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_COSINNER</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ae2a1ac26075bd5b625bedcccb6d47ce4" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_EXPONENT</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a067074280fab05236c31071407b1a198" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a254147508dfb9c4faa5cae323a8b76a0" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8a8aea578355c84d1a1501edcca00416" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761af9be3d86a91fe8eee6e5fc684d120f95" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761aa9ac79cad1b7c7ec5ed181b135f49285" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adbb57aa9b4f7dec5a750e095fa1e938e" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_SPOTDIRECTION</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761adb3a9089a3274587bdbf249e84782e45" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHT0_TYPE</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a8093f76e7bc32ddd4c67fb5666dd964d" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a14b4f5e1db3b2d05e1bdff3d5354686b" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0856492260a6b5e008b184456a5ce00e" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a15e289cf600b50d84face570f24d880b" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761ace61c9d85df004c9ce1e18f421ca98be" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a3b3d2252fcfea157ebf85a43166b29ed" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MODELVIEW</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a0ef0847f369536873ee42c2adad56eb1" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a4cf18e26e54677f62c95994da6974ffc" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_MVP</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a5e70e80c5737bda4e4e70db457bde2c6" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_NUMLIGHTS</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761a7e9e4b4853aa8e571ec3bed60e40e6cf" prot="private" virt="non-virtual"><scope>Ass2</scope><name>U_TOTAL</name></member>
+      <member refid="classAss2_1ab5d83cc30e04d3fd45d6a5d617c14761" prot="private" virt="non-virtual"><scope>Ass2</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classAss2_1ad3cd03e6f66b37a7e1fd9c5c660babe8" prot="public" virt="virtual"><scope>Ass2</scope><name>Update</name></member>
+      <member refid="classAss2_1a4c38287ca3b2b558d530df8091ee446a" prot="private" virt="non-virtual"><scope>Ass2</scope><name>upperJump</name></member>
+      <member refid="classAss2_1aa3ddcd8009001d7070799b5a4bcf8b3b" prot="private" virt="non-virtual"><scope>Ass2</scope><name>viewStack</name></member>
+      <member refid="classAss2_1aa2f396f4c49de76748a6235b04ce5f4a" prot="public" virt="non-virtual"><scope>Ass2</scope><name>~Ass2</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Ass2</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

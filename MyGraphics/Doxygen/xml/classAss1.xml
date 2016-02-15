@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classAss1" kind="class" language="C++" prot="public">
+    <compoundname>Ass1</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Assignment1_8h" local="no">Assignment1.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5a81897ae87cbb28fac8a00f92fa7e283f" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5a9af4a831ef60f15f4ae8f8944afea279" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="10" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fed" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda703c9c539226590a4df80102f1a4d2cf" prot="private">
+          <name>GEO_LAKE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda27c905b5f3371b19d1d9bcc98f9405a6" prot="private">
+          <name>GEO_GRASS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedaa91ec1893571760648f2781d5861f2f8" prot="private">
+          <name>GEO_TREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda150d8d81a1baa08e4c398278343fb70f" prot="private">
+          <name>GEO_BOATBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5fc9a79eb89cb9e862ddbe2947bca0c8" prot="private">
+          <name>GEO_BOATPOLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda1e0466770baed5dba2c8caa428f0bdd9" prot="private">
+          <name>GEO_BOATFLAG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda033b156c0553cd12c926157df8b1553c" prot="private">
+          <name>GEO_SUN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda59a44e7dac237909c2a29eeb6ded7c27" prot="private">
+          <name>GEO_FLARE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda260c3dd21584ab6ad02aab4ef2768803" prot="private">
+          <name>GEO_CLOUD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda624157012acfc29e6b8bd9172fc32670" prot="private">
+          <name>GEO_SHELL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda225b86b483c2cd189e2fc3cf27ce6f07" prot="private">
+          <name>GEO_SHELL2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5f9731734760901fe09eb568fd925f85" prot="private">
+          <name>GEO_SNAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedae4724525562b994e8dd0f7298455898b" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="16" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="15" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAss1_1a90da03473bb72543b66884b72857fc29" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass1::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="43" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f" compoundref="Assignment1_8cpp" startline="660" endline="667">Exit</referencedby>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a1ef9a11ceb4c53c3f0ab6401d7988609" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass1::m_vertexBuffer[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>m_vertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="44" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f" compoundref="Assignment1_8cpp" startline="660" endline="667">Exit</referencedby>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a9fcad552c39cf22d646fa5999e9c4741" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass1::m_colorBuffer[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>m_colorBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="45" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f" compoundref="Assignment1_8cpp" startline="660" endline="667">Exit</referencedby>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1ab440bd1ed8243677b759a130debb644d" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass1::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="46" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f" compoundref="Assignment1_8cpp" startline="660" endline="667">Exit</referencedby>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1ad394375c14dd3ce53995cf29300ddd3c" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Ass1::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="47" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1ab16e73211516a464fa81914ad6ae4a4e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="49" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a030d8993c7dfb34dfd0991d7e4f82b38" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::translateX</definition>
+        <argsstring></argsstring>
+        <name>translateX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="50" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a369590eb53453ed13080bb4acf47a58e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::translateXflag</definition>
+        <argsstring></argsstring>
+        <name>translateXflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="51" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1abd369f6a3c2088a099a78bcadb15ba67" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::snail</definition>
+        <argsstring></argsstring>
+        <name>snail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="52" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1ad7bbb4c403e9e13612b1bfd1713456a9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::snail1</definition>
+        <argsstring></argsstring>
+        <name>snail1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="53" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a1bb8b41edab6c2eb3426ded82cd98a7d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::snail2</definition>
+        <argsstring></argsstring>
+        <name>snail2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="54" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1acde3c921d144d85ff46b43f357d84715" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::snail3</definition>
+        <argsstring></argsstring>
+        <name>snail3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="55" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a7d106a856586f4434bb0e859a06f4d94" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::trail</definition>
+        <argsstring></argsstring>
+        <name>trail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="56" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a3a0038dd6c078621609445c0d8d73015" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::cloud</definition>
+        <argsstring></argsstring>
+        <name>cloud</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="57" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a99747e01e8b30f0a420f59047aeaf1c1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::scaleAll</definition>
+        <argsstring></argsstring>
+        <name>scaleAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="58" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a54b8da1584ff304a310bb7448d16d229" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::rotateAroundSun</definition>
+        <argsstring></argsstring>
+        <name>rotateAroundSun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="59" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a440d58fe56484912dc303cf2fcb1bd85" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Ass1::rotateEyes</definition>
+        <argsstring></argsstring>
+        <name>rotateEyes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="60" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" compoundref="Assignment1_8cpp" startline="371" endline="658">Render</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAss1_1a9139c5bbe85a8752341263dd44691510" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Ass1::blob</definition>
+        <argsstring></argsstring>
+        <name>blob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="61" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Init</referencedby>
+        <referencedby refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" compoundref="Assignment1_8cpp" startline="286" endline="369">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAss1_1a8696c1a9ac852a95b8d74af222a8d569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ass1::Ass1</definition>
+        <argsstring>()</argsstring>
+        <name>Ass1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="34" column="1" bodyfile="MyGraphics/Source/Assignment1.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classAss1_1a70e0866bf5204a4315366f3cdd5eda27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ass1::~Ass1</definition>
+        <argsstring>()</argsstring>
+        <name>~Ass1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="35" column="1" bodyfile="MyGraphics/Source/Assignment1.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classAss1_1a8db5698b5115e294e84610cc19cdbca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass1::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="37" column="1" bodyfile="MyGraphics/Source/Assignment1.cpp" bodystart="16" bodyend="284"/>
+        <references refid="classAss1_1a9139c5bbe85a8752341263dd44691510" compoundref="Assignment1_8h" startline="61">blob</references>
+        <references refid="classAss1_1a3a0038dd6c078621609445c0d8d73015" compoundref="Assignment1_8h" startline="57">cloud</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda150d8d81a1baa08e4c398278343fb70f" compoundref="Assignment1_8h" startline="20">GEO_BOATBODY</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda1e0466770baed5dba2c8caa428f0bdd9" compoundref="Assignment1_8h" startline="22">GEO_BOATFLAG</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5fc9a79eb89cb9e862ddbe2947bca0c8" compoundref="Assignment1_8h" startline="21">GEO_BOATPOLE</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda260c3dd21584ab6ad02aab4ef2768803" compoundref="Assignment1_8h" startline="25">GEO_CLOUD</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda59a44e7dac237909c2a29eeb6ded7c27" compoundref="Assignment1_8h" startline="24">GEO_FLARE</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda27c905b5f3371b19d1d9bcc98f9405a6" compoundref="Assignment1_8h" startline="18">GEO_GRASS</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda703c9c539226590a4df80102f1a4d2cf" compoundref="Assignment1_8h" startline="17">GEO_LAKE</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda624157012acfc29e6b8bd9172fc32670" compoundref="Assignment1_8h" startline="26">GEO_SHELL</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda225b86b483c2cd189e2fc3cf27ce6f07" compoundref="Assignment1_8h" startline="27">GEO_SHELL2</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5f9731734760901fe09eb568fd925f85" compoundref="Assignment1_8h" startline="28">GEO_SNAIL</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda033b156c0553cd12c926157df8b1553c" compoundref="Assignment1_8h" startline="23">GEO_SUN</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedaa91ec1893571760648f2781d5861f2f8" compoundref="Assignment1_8h" startline="19">GEO_TREE</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classAss1_1a9fcad552c39cf22d646fa5999e9c4741" compoundref="Assignment1_8h" startline="45">m_colorBuffer</references>
+        <references refid="classAss1_1ad394375c14dd3ce53995cf29300ddd3c" compoundref="Assignment1_8h" startline="47">m_parameters</references>
+        <references refid="classAss1_1ab440bd1ed8243677b759a130debb644d" compoundref="Assignment1_8h" startline="46">m_programID</references>
+        <references refid="classAss1_1a90da03473bb72543b66884b72857fc29" compoundref="Assignment1_8h" startline="43">m_vertexArrayID</references>
+        <references refid="classAss1_1a1ef9a11ceb4c53c3f0ab6401d7988609" compoundref="Assignment1_8h" startline="44">m_vertexBuffer</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedae4724525562b994e8dd0f7298455898b" compoundref="Assignment1_8h" startline="30">NUM_GEOMETRY</references>
+        <references refid="classAss1_1ab16e73211516a464fa81914ad6ae4a4e" compoundref="Assignment1_8h" startline="49">rotateAngle</references>
+        <references refid="classAss1_1a54b8da1584ff304a310bb7448d16d229" compoundref="Assignment1_8h" startline="59">rotateAroundSun</references>
+        <references refid="classAss1_1a440d58fe56484912dc303cf2fcb1bd85" compoundref="Assignment1_8h" startline="60">rotateEyes</references>
+        <references refid="classAss1_1a99747e01e8b30f0a420f59047aeaf1c1" compoundref="Assignment1_8h" startline="58">scaleAll</references>
+        <references refid="classAss1_1abd369f6a3c2088a099a78bcadb15ba67" compoundref="Assignment1_8h" startline="52">snail</references>
+        <references refid="classAss1_1ad7bbb4c403e9e13612b1bfd1713456a9" compoundref="Assignment1_8h" startline="53">snail1</references>
+        <references refid="classAss1_1a1bb8b41edab6c2eb3426ded82cd98a7d" compoundref="Assignment1_8h" startline="54">snail2</references>
+        <references refid="classAss1_1acde3c921d144d85ff46b43f357d84715" compoundref="Assignment1_8h" startline="55">snail3</references>
+        <references refid="classAss1_1a7d106a856586f4434bb0e859a06f4d94" compoundref="Assignment1_8h" startline="56">trail</references>
+        <references refid="classAss1_1a030d8993c7dfb34dfd0991d7e4f82b38" compoundref="Assignment1_8h" startline="50">translateX</references>
+        <references refid="classAss1_1a369590eb53453ed13080bb4acf47a58e" compoundref="Assignment1_8h" startline="51">translateXflag</references>
+        <references refid="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5a81897ae87cbb28fac8a00f92fa7e283f" compoundref="Assignment1_8h" startline="11">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classAss1_1aa82417ea864dd7ca4625e597e8e11394" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass1::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="38" column="1" bodyfile="MyGraphics/Source/Assignment1.cpp" bodystart="286" bodyend="369"/>
+        <references refid="classAss1_1a9139c5bbe85a8752341263dd44691510" compoundref="Assignment1_8h" startline="61">blob</references>
+        <references refid="classAss1_1a3a0038dd6c078621609445c0d8d73015" compoundref="Assignment1_8h" startline="57">cloud</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classAss1_1ab16e73211516a464fa81914ad6ae4a4e" compoundref="Assignment1_8h" startline="49">rotateAngle</references>
+        <references refid="classAss1_1a54b8da1584ff304a310bb7448d16d229" compoundref="Assignment1_8h" startline="59">rotateAroundSun</references>
+        <references refid="classAss1_1a440d58fe56484912dc303cf2fcb1bd85" compoundref="Assignment1_8h" startline="60">rotateEyes</references>
+        <references refid="classAss1_1a99747e01e8b30f0a420f59047aeaf1c1" compoundref="Assignment1_8h" startline="58">scaleAll</references>
+        <references refid="classAss1_1abd369f6a3c2088a099a78bcadb15ba67" compoundref="Assignment1_8h" startline="52">snail</references>
+        <references refid="classAss1_1ad7bbb4c403e9e13612b1bfd1713456a9" compoundref="Assignment1_8h" startline="53">snail1</references>
+        <references refid="classAss1_1a1bb8b41edab6c2eb3426ded82cd98a7d" compoundref="Assignment1_8h" startline="54">snail2</references>
+        <references refid="classAss1_1acde3c921d144d85ff46b43f357d84715" compoundref="Assignment1_8h" startline="55">snail3</references>
+        <references refid="classAss1_1a7d106a856586f4434bb0e859a06f4d94" compoundref="Assignment1_8h" startline="56">trail</references>
+        <references refid="classAss1_1a030d8993c7dfb34dfd0991d7e4f82b38" compoundref="Assignment1_8h" startline="50">translateX</references>
+        <references refid="classAss1_1a369590eb53453ed13080bb4acf47a58e" compoundref="Assignment1_8h" startline="51">translateXflag</references>
+      </memberdef>
+      <memberdef kind="function" id="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass1::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="39" column="1" bodyfile="MyGraphics/Source/Assignment1.cpp" bodystart="371" bodyend="658"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classAss1_1a3a0038dd6c078621609445c0d8d73015" compoundref="Assignment1_8h" startline="57">cloud</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda150d8d81a1baa08e4c398278343fb70f" compoundref="Assignment1_8h" startline="20">GEO_BOATBODY</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda1e0466770baed5dba2c8caa428f0bdd9" compoundref="Assignment1_8h" startline="22">GEO_BOATFLAG</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5fc9a79eb89cb9e862ddbe2947bca0c8" compoundref="Assignment1_8h" startline="21">GEO_BOATPOLE</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda260c3dd21584ab6ad02aab4ef2768803" compoundref="Assignment1_8h" startline="25">GEO_CLOUD</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda59a44e7dac237909c2a29eeb6ded7c27" compoundref="Assignment1_8h" startline="24">GEO_FLARE</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda27c905b5f3371b19d1d9bcc98f9405a6" compoundref="Assignment1_8h" startline="18">GEO_GRASS</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda703c9c539226590a4df80102f1a4d2cf" compoundref="Assignment1_8h" startline="17">GEO_LAKE</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda624157012acfc29e6b8bd9172fc32670" compoundref="Assignment1_8h" startline="26">GEO_SHELL</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda225b86b483c2cd189e2fc3cf27ce6f07" compoundref="Assignment1_8h" startline="27">GEO_SHELL2</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5f9731734760901fe09eb568fd925f85" compoundref="Assignment1_8h" startline="28">GEO_SNAIL</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda033b156c0553cd12c926157df8b1553c" compoundref="Assignment1_8h" startline="23">GEO_SUN</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedaa91ec1893571760648f2781d5861f2f8" compoundref="Assignment1_8h" startline="19">GEO_TREE</references>
+        <references refid="classAss1_1a9fcad552c39cf22d646fa5999e9c4741" compoundref="Assignment1_8h" startline="45">m_colorBuffer</references>
+        <references refid="classAss1_1ad394375c14dd3ce53995cf29300ddd3c" compoundref="Assignment1_8h" startline="47">m_parameters</references>
+        <references refid="classAss1_1a1ef9a11ceb4c53c3f0ab6401d7988609" compoundref="Assignment1_8h" startline="44">m_vertexBuffer</references>
+        <references refid="classAss1_1ab16e73211516a464fa81914ad6ae4a4e" compoundref="Assignment1_8h" startline="49">rotateAngle</references>
+        <references refid="classAss1_1a54b8da1584ff304a310bb7448d16d229" compoundref="Assignment1_8h" startline="59">rotateAroundSun</references>
+        <references refid="classAss1_1a440d58fe56484912dc303cf2fcb1bd85" compoundref="Assignment1_8h" startline="60">rotateEyes</references>
+        <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">Mtx44::SetToIdentity</references>
+        <references refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" compoundref="Mtx44_8cpp" startline="492" endline="497">Mtx44::SetToOrtho</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</references>
+        <references refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">Mtx44::SetToScale</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classAss1_1abd369f6a3c2088a099a78bcadb15ba67" compoundref="Assignment1_8h" startline="52">snail</references>
+        <references refid="classAss1_1ad7bbb4c403e9e13612b1bfd1713456a9" compoundref="Assignment1_8h" startline="53">snail1</references>
+        <references refid="classAss1_1a1bb8b41edab6c2eb3426ded82cd98a7d" compoundref="Assignment1_8h" startline="54">snail2</references>
+        <references refid="classAss1_1acde3c921d144d85ff46b43f357d84715" compoundref="Assignment1_8h" startline="55">snail3</references>
+        <references refid="classAss1_1a7d106a856586f4434bb0e859a06f4d94" compoundref="Assignment1_8h" startline="56">trail</references>
+        <references refid="classAss1_1a030d8993c7dfb34dfd0991d7e4f82b38" compoundref="Assignment1_8h" startline="50">translateX</references>
+        <references refid="classAss1_1a369590eb53453ed13080bb4acf47a58e" compoundref="Assignment1_8h" startline="51">translateXflag</references>
+        <references refid="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5a81897ae87cbb28fac8a00f92fa7e283f" compoundref="Assignment1_8h" startline="11">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Ass1::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Assignment1.h" line="40" column="1" bodyfile="MyGraphics/Source/Assignment1.cpp" bodystart="660" bodyend="667"/>
+        <references refid="classAss1_1a9fcad552c39cf22d646fa5999e9c4741" compoundref="Assignment1_8h" startline="45">m_colorBuffer</references>
+        <references refid="classAss1_1ab440bd1ed8243677b759a130debb644d" compoundref="Assignment1_8h" startline="46">m_programID</references>
+        <references refid="classAss1_1a90da03473bb72543b66884b72857fc29" compoundref="Assignment1_8h" startline="43">m_vertexArrayID</references>
+        <references refid="classAss1_1a1ef9a11ceb4c53c3f0ab6401d7988609" compoundref="Assignment1_8h" startline="44">m_vertexBuffer</references>
+        <references refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedae4724525562b994e8dd0f7298455898b" compoundref="Assignment1_8h" startline="30">NUM_GEOMETRY</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4616">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="4615">
+        <label>Ass1</label>
+        <link refid="classAss1"/>
+        <childnode refid="4616" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4619">
+        <label>float</label>
+      </node>
+      <node id="4618">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="4621">
+        <label>unsigned</label>
+      </node>
+      <node id="4620">
+        <label>bool</label>
+      </node>
+      <node id="4617">
+        <label>Ass1</label>
+        <link refid="classAss1"/>
+        <childnode refid="4618" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4619" relation="usage">
+          <edgelabel>cloud</edgelabel>
+          <edgelabel>trail</edgelabel>
+          <edgelabel>rotateAroundSun</edgelabel>
+          <edgelabel>snail</edgelabel>
+          <edgelabel>translateX</edgelabel>
+          <edgelabel>snail1</edgelabel>
+          <edgelabel>rotateAngle</edgelabel>
+          <edgelabel>rotateEyes</edgelabel>
+          <edgelabel>scaleAll</edgelabel>
+          <edgelabel>snail2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4620" relation="usage">
+          <edgelabel>blob</edgelabel>
+        </childnode>
+        <childnode refid="4621" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_colorBuffer</edgelabel>
+          <edgelabel>m_vertexBuffer</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Assignment1.h" line="7" column="1" bodyfile="MyGraphics/Source/Assignment1.h" bodystart="6" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classAss1_1a8696c1a9ac852a95b8d74af222a8d569" prot="public" virt="non-virtual"><scope>Ass1</scope><name>Ass1</name></member>
+      <member refid="classAss1_1a9139c5bbe85a8752341263dd44691510" prot="private" virt="non-virtual"><scope>Ass1</scope><name>blob</name></member>
+      <member refid="classAss1_1a3a0038dd6c078621609445c0d8d73015" prot="private" virt="non-virtual"><scope>Ass1</scope><name>cloud</name></member>
+      <member refid="classAss1_1a123a6ef7763cc5832f474c4a70fd1c6f" prot="public" virt="virtual"><scope>Ass1</scope><name>Exit</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda150d8d81a1baa08e4c398278343fb70f" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_BOATBODY</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda1e0466770baed5dba2c8caa428f0bdd9" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_BOATFLAG</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5fc9a79eb89cb9e862ddbe2947bca0c8" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_BOATPOLE</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda260c3dd21584ab6ad02aab4ef2768803" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_CLOUD</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda59a44e7dac237909c2a29eeb6ded7c27" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_FLARE</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda27c905b5f3371b19d1d9bcc98f9405a6" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_GRASS</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda703c9c539226590a4df80102f1a4d2cf" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_LAKE</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda624157012acfc29e6b8bd9172fc32670" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_SHELL</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda225b86b483c2cd189e2fc3cf27ce6f07" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_SHELL2</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda5f9731734760901fe09eb568fd925f85" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_SNAIL</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59feda033b156c0553cd12c926157df8b1553c" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_SUN</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedaa91ec1893571760648f2781d5861f2f8" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEO_TREE</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fed" prot="private" virt="non-virtual"><scope>Ass1</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" prot="public" virt="virtual"><scope>Ass1</scope><name>Init</name></member>
+      <member refid="classAss1_1a9fcad552c39cf22d646fa5999e9c4741" prot="private" virt="non-virtual"><scope>Ass1</scope><name>m_colorBuffer</name></member>
+      <member refid="classAss1_1ad394375c14dd3ce53995cf29300ddd3c" prot="private" virt="non-virtual"><scope>Ass1</scope><name>m_parameters</name></member>
+      <member refid="classAss1_1ab440bd1ed8243677b759a130debb644d" prot="private" virt="non-virtual"><scope>Ass1</scope><name>m_programID</name></member>
+      <member refid="classAss1_1a90da03473bb72543b66884b72857fc29" prot="private" virt="non-virtual"><scope>Ass1</scope><name>m_vertexArrayID</name></member>
+      <member refid="classAss1_1a1ef9a11ceb4c53c3f0ab6401d7988609" prot="private" virt="non-virtual"><scope>Ass1</scope><name>m_vertexBuffer</name></member>
+      <member refid="classAss1_1ad31a81c8509f22b96c0fd0d0cec59fedae4724525562b994e8dd0f7298455898b" prot="private" virt="non-virtual"><scope>Ass1</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classAss1_1a2854f303c95cf0905b1f16cad408fc5d" prot="public" virt="virtual"><scope>Ass1</scope><name>Render</name></member>
+      <member refid="classAss1_1ab16e73211516a464fa81914ad6ae4a4e" prot="private" virt="non-virtual"><scope>Ass1</scope><name>rotateAngle</name></member>
+      <member refid="classAss1_1a54b8da1584ff304a310bb7448d16d229" prot="private" virt="non-virtual"><scope>Ass1</scope><name>rotateAroundSun</name></member>
+      <member refid="classAss1_1a440d58fe56484912dc303cf2fcb1bd85" prot="private" virt="non-virtual"><scope>Ass1</scope><name>rotateEyes</name></member>
+      <member refid="classAss1_1a99747e01e8b30f0a420f59047aeaf1c1" prot="private" virt="non-virtual"><scope>Ass1</scope><name>scaleAll</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Ass1</scope><name>Scene</name></member>
+      <member refid="classAss1_1abd369f6a3c2088a099a78bcadb15ba67" prot="private" virt="non-virtual"><scope>Ass1</scope><name>snail</name></member>
+      <member refid="classAss1_1ad7bbb4c403e9e13612b1bfd1713456a9" prot="private" virt="non-virtual"><scope>Ass1</scope><name>snail1</name></member>
+      <member refid="classAss1_1a1bb8b41edab6c2eb3426ded82cd98a7d" prot="private" virt="non-virtual"><scope>Ass1</scope><name>snail2</name></member>
+      <member refid="classAss1_1acde3c921d144d85ff46b43f357d84715" prot="private" virt="non-virtual"><scope>Ass1</scope><name>snail3</name></member>
+      <member refid="classAss1_1a7d106a856586f4434bb0e859a06f4d94" prot="private" virt="non-virtual"><scope>Ass1</scope><name>trail</name></member>
+      <member refid="classAss1_1a030d8993c7dfb34dfd0991d7e4f82b38" prot="private" virt="non-virtual"><scope>Ass1</scope><name>translateX</name></member>
+      <member refid="classAss1_1a369590eb53453ed13080bb4acf47a58e" prot="private" virt="non-virtual"><scope>Ass1</scope><name>translateXflag</name></member>
+      <member refid="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5a81897ae87cbb28fac8a00f92fa7e283f" prot="private" virt="non-virtual"><scope>Ass1</scope><name>U_MVP</name></member>
+      <member refid="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5a9af4a831ef60f15f4ae8f8944afea279" prot="private" virt="non-virtual"><scope>Ass1</scope><name>U_TOTAL</name></member>
+      <member refid="classAss1_1aedb74c04ed50b5a1c70193ef4b749fb5" prot="private" virt="non-virtual"><scope>Ass1</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classAss1_1aa82417ea864dd7ca4625e597e8e11394" prot="public" virt="virtual"><scope>Ass1</scope><name>Update</name></member>
+      <member refid="classAss1_1a70e0866bf5204a4315366f3cdd5eda27" prot="public" virt="non-virtual"><scope>Ass1</scope><name>~Ass1</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Ass1</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

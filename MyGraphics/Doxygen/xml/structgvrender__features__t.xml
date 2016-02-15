@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvrender__features__t" kind="struct" language="C++" prot="public">
+    <compoundname>gvrender_features_t</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvrender__features__t_1aace1f52ac1cb79ebbdf4dee8dffcaec6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvrender_features_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="114" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__features__t_1a926168fd17172ac8aa7babd8b5ddd2f0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gvrender_features_t::default_pad</definition>
+        <argsstring></argsstring>
+        <name>default_pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="115" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__features__t_1a2851c4d13c2a4271788ccc8af34fae8c" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** gvrender_features_t::knowncolors</definition>
+        <argsstring></argsstring>
+        <name>knowncolors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="116" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__features__t_1a0344d36d000fb771691fcc8d0dcdae30" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvrender_features_t::sz_knowncolors</definition>
+        <argsstring></argsstring>
+        <name>sz_knowncolors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="117" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__features__t_1a647a310e4fb8ca8b1ab43db7059bfcf6" prot="public" static="no" mutable="no">
+        <type><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20" kindref="member">color_type_t</ref></type>
+        <definition>color_type_t gvrender_features_t::color_type</definition>
+        <argsstring></argsstring>
+        <name>color_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="118" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5181">
+        <label>gvrender_features_t</label>
+        <link refid="structgvrender__features__t"/>
+        <childnode refid="5182" relation="usage">
+          <edgelabel>knowncolors</edgelabel>
+        </childnode>
+        <childnode refid="5183" relation="usage">
+          <edgelabel>color_type</edgelabel>
+        </childnode>
+        <childnode refid="5184" relation="usage">
+          <edgelabel>default_pad</edgelabel>
+        </childnode>
+        <childnode refid="5185" relation="usage">
+          <edgelabel>sz_knowncolors</edgelabel>
+          <edgelabel>flags</edgelabel>
+        </childnode>
+      </node>
+      <node id="5185">
+        <label>int</label>
+      </node>
+      <node id="5184">
+        <label>double</label>
+      </node>
+      <node id="5182">
+        <label>char **</label>
+      </node>
+      <node id="5183">
+        <label>color_type_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="113" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="113" bodyend="119"/>
+    <listofallmembers>
+      <member refid="structgvrender__features__t_1a647a310e4fb8ca8b1ab43db7059bfcf6" prot="public" virt="non-virtual"><scope>gvrender_features_t</scope><name>color_type</name></member>
+      <member refid="structgvrender__features__t_1a926168fd17172ac8aa7babd8b5ddd2f0" prot="public" virt="non-virtual"><scope>gvrender_features_t</scope><name>default_pad</name></member>
+      <member refid="structgvrender__features__t_1aace1f52ac1cb79ebbdf4dee8dffcaec6" prot="public" virt="non-virtual"><scope>gvrender_features_t</scope><name>flags</name></member>
+      <member refid="structgvrender__features__t_1a2851c4d13c2a4271788ccc8af34fae8c" prot="public" virt="non-virtual"><scope>gvrender_features_t</scope><name>knowncolors</name></member>
+      <member refid="structgvrender__features__t_1a0344d36d000fb771691fcc8d0dcdae30" prot="public" virt="non-virtual"><scope>gvrender_features_t</scope><name>sz_knowncolors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

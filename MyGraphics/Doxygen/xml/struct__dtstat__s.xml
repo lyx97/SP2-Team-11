@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__dtstat__s" kind="struct" language="C++" prot="public">
+    <compoundname>_dtstat_s</compoundname>
+    <includes refid="cdt_8h" local="no">cdt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dtstat__s_1ad2675c65d63ad8862bf0223af6c3f607" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtstat_s::dt_meth</definition>
+        <argsstring></argsstring>
+        <name>dt_meth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="135" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtstat__s_1a8d415172c2830301b7ffe3de8432e38a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtstat_s::dt_size</definition>
+        <argsstring></argsstring>
+        <name>dt_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="136" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtstat__s_1ad0d0ad85068a655586960c5042671235" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtstat_s::dt_n</definition>
+        <argsstring></argsstring>
+        <name>dt_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="137" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtstat__s_1a631bed0e141494d863a643ed124baa37" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtstat_s::dt_max</definition>
+        <argsstring></argsstring>
+        <name>dt_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="138" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtstat__s_1af6fa7b863a78050c63c30e29b2054f05" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* _dtstat_s::dt_count</definition>
+        <argsstring></argsstring>
+        <name>dt_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="139" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3107">
+        <label>_dtstat_s</label>
+        <link refid="struct__dtstat__s"/>
+        <childnode refid="3108" relation="usage">
+          <edgelabel>dt_max</edgelabel>
+          <edgelabel>dt_meth</edgelabel>
+          <edgelabel>dt_count</edgelabel>
+          <edgelabel>dt_n</edgelabel>
+          <edgelabel>dt_size</edgelabel>
+        </childnode>
+      </node>
+      <node id="3108">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cdt.h" line="135" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="134" bodyend="140"/>
+    <listofallmembers>
+      <member refid="struct__dtstat__s_1af6fa7b863a78050c63c30e29b2054f05" prot="public" virt="non-virtual"><scope>_dtstat_s</scope><name>dt_count</name></member>
+      <member refid="struct__dtstat__s_1a631bed0e141494d863a643ed124baa37" prot="public" virt="non-virtual"><scope>_dtstat_s</scope><name>dt_max</name></member>
+      <member refid="struct__dtstat__s_1ad2675c65d63ad8862bf0223af6c3f607" prot="public" virt="non-virtual"><scope>_dtstat_s</scope><name>dt_meth</name></member>
+      <member refid="struct__dtstat__s_1ad0d0ad85068a655586960c5042671235" prot="public" virt="non-virtual"><scope>_dtstat_s</scope><name>dt_n</name></member>
+      <member refid="struct__dtstat__s_1a8d415172c2830301b7ffe3de8432e38a" prot="public" virt="non-virtual"><scope>_dtstat_s</scope><name>dt_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgv__argvlist__s" kind="struct" language="C++" prot="public">
+    <compoundname>gv_argvlist_s</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgv__argvlist__s_1a4b9e20fbc445cd66aa6bc15751199733" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** gv_argvlist_s::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="151" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgv__argvlist__s_1acd01eb7c8adab05909a7aa6948cf9666" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gv_argvlist_s::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="152" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgv__argvlist__s_1ad359c24dfb7eb13ad82df626a46ac735" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gv_argvlist_s::alloc</definition>
+        <argsstring></argsstring>
+        <name>alloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="153" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4836">
+        <label>int</label>
+      </node>
+      <node id="4834">
+        <label>gv_argvlist_s</label>
+        <link refid="structgv__argvlist__s"/>
+        <childnode refid="4835" relation="usage">
+          <edgelabel>argv</edgelabel>
+        </childnode>
+        <childnode refid="4836" relation="usage">
+          <edgelabel>alloc</edgelabel>
+          <edgelabel>argc</edgelabel>
+        </childnode>
+      </node>
+      <node id="4835">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="150" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="150" bodyend="154"/>
+    <listofallmembers>
+      <member refid="structgv__argvlist__s_1ad359c24dfb7eb13ad82df626a46ac735" prot="public" virt="non-virtual"><scope>gv_argvlist_s</scope><name>alloc</name></member>
+      <member refid="structgv__argvlist__s_1acd01eb7c8adab05909a7aa6948cf9666" prot="public" virt="non-virtual"><scope>gv_argvlist_s</scope><name>argc</name></member>
+      <member refid="structgv__argvlist__s_1a4b9e20fbc445cd66aa6bc15751199733" prot="public" virt="non-virtual"><scope>gv_argvlist_s</scope><name>argv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

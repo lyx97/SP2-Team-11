@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvplugin__installed__t" kind="struct" language="C++" prot="public">
+    <compoundname>gvplugin_installed_t</compoundname>
+    <includes refid="gvplugin_8h" local="no">gvplugin.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvplugin__installed__t_1a18d59b8f83618b167ad96776150b184f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvplugin_installed_t::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin.h" line="34" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__installed__t_1af437ea384ed530792cac44c361bd8c25" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* gvplugin_installed_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__installed__t_1a3cf8df3ad1b36b320f4724b4ce1c4620" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvplugin_installed_t::quality</definition>
+        <argsstring></argsstring>
+        <name>quality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__installed__t_1a736d5873fcf50a384aae25fe41ff3e1d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* gvplugin_installed_t::engine</definition>
+        <argsstring></argsstring>
+        <name>engine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin.h" line="44" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__installed__t_1a02c5e2e73cfd0497c7b2145c9761d78c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* gvplugin_installed_t::features</definition>
+        <argsstring></argsstring>
+        <name>features</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin.h" line="45" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5062">
+        <label>void *</label>
+      </node>
+      <node id="5059">
+        <label>gvplugin_installed_t</label>
+        <link refid="structgvplugin__installed__t"/>
+        <childnode refid="5060" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5061" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>quality</edgelabel>
+        </childnode>
+        <childnode refid="5062" relation="usage">
+          <edgelabel>features</edgelabel>
+          <edgelabel>engine</edgelabel>
+        </childnode>
+      </node>
+      <node id="5061">
+        <label>int</label>
+      </node>
+      <node id="5060">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvplugin.h" line="33" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin.h" bodystart="33" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structgvplugin__installed__t_1a736d5873fcf50a384aae25fe41ff3e1d" prot="public" virt="non-virtual"><scope>gvplugin_installed_t</scope><name>engine</name></member>
+      <member refid="structgvplugin__installed__t_1a02c5e2e73cfd0497c7b2145c9761d78c" prot="public" virt="non-virtual"><scope>gvplugin_installed_t</scope><name>features</name></member>
+      <member refid="structgvplugin__installed__t_1a18d59b8f83618b167ad96776150b184f" prot="public" virt="non-virtual"><scope>gvplugin_installed_t</scope><name>id</name></member>
+      <member refid="structgvplugin__installed__t_1a3cf8df3ad1b36b320f4724b4ce1c4620" prot="public" virt="non-virtual"><scope>gvplugin_installed_t</scope><name>quality</name></member>
+      <member refid="structgvplugin__installed__t_1af437ea384ed530792cac44c361bd8c25" prot="public" virt="non-virtual"><scope>gvplugin_installed_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

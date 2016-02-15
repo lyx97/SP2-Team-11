@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgrec__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agrec_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgrec__s_1a81a026cc6c0a0759940833065f88971d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Agrec_s::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="71" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgrec__s_1a621c3208b7772dc3b5911997c41d2d87" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a2bd56252330358f27af8321f650a1e8a" kindref="member">Agrec_t</ref> *</type>
+        <definition>Agrec_t* Agrec_s::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="72" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4505">
+        <label>Agrec_s</label>
+        <link refid="structAgrec__s"/>
+        <childnode refid="4505" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4506" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4506">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="70" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="70" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structAgrec__s_1a81a026cc6c0a0759940833065f88971d" prot="public" virt="non-virtual"><scope>Agrec_s</scope><name>name</name></member>
+      <member refid="structAgrec__s_1a621c3208b7772dc3b5911997c41d2d87" prot="public" virt="non-virtual"><scope>Agrec_s</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

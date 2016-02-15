@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Scene4_8cpp" kind="file" language="C++">
+    <compoundname>Scene4.cpp</compoundname>
+    <includes refid="Scene4_8h" local="yes">Scene4.h</includes>
+    <includes local="yes">GL\glew.h</includes>
+    <includes refid="shader_8hpp" local="yes">shader.hpp</includes>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes refid="MeshBuilder_8h" local="yes">MeshBuilder.h</includes>
+    <incdepgraph>
+      <node id="2792">
+        <label>windows.h</label>
+      </node>
+      <node id="2795">
+        <label>LoadOBJ.h</label>
+        <link refid="LoadOBJ_8h"/>
+        <childnode refid="2796" relation="include">
+        </childnode>
+        <childnode refid="2794" relation="include">
+        </childnode>
+        <childnode refid="2775" relation="include">
+        </childnode>
+      </node>
+      <node id="2793">
+        <label>MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="2782" relation="include">
+        </childnode>
+        <childnode refid="2794" relation="include">
+        </childnode>
+        <childnode refid="2776" relation="include">
+        </childnode>
+        <childnode refid="2795" relation="include">
+        </childnode>
+      </node>
+      <node id="2784">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="2777">
+        <label>cmath</label>
+      </node>
+      <node id="2788">
+        <label>GL\glew.h</label>
+      </node>
+      <node id="2783">
+        <label>string</label>
+      </node>
+      <node id="2775">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2776" relation="include">
+        </childnode>
+        <childnode refid="2781" relation="include">
+        </childnode>
+      </node>
+      <node id="2785">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2786" relation="include">
+        </childnode>
+        <childnode refid="2787" relation="include">
+        </childnode>
+      </node>
+      <node id="2791">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2792" relation="include">
+        </childnode>
+      </node>
+      <node id="2778">
+        <label>exception</label>
+      </node>
+      <node id="2789">
+        <label>shader.hpp</label>
+        <link refid="shader_8hpp"/>
+      </node>
+      <node id="2773">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="2779">
+        <label>ctime</label>
+      </node>
+      <node id="2790">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2791" relation="include">
+        </childnode>
+      </node>
+      <node id="2796">
+        <label>vector</label>
+      </node>
+      <node id="2786">
+        <label>stack</label>
+      </node>
+      <node id="2774">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2775" relation="include">
+        </childnode>
+      </node>
+      <node id="2771">
+        <label>MyGraphics/Source/Scene4.cpp</label>
+        <link refid="Scene4.cpp"/>
+        <childnode refid="2772" relation="include">
+        </childnode>
+        <childnode refid="2788" relation="include">
+        </childnode>
+        <childnode refid="2789" relation="include">
+        </childnode>
+        <childnode refid="2787" relation="include">
+        </childnode>
+        <childnode refid="2790" relation="include">
+        </childnode>
+        <childnode refid="2793" relation="include">
+        </childnode>
+      </node>
+      <node id="2780">
+        <label>cstdlib</label>
+      </node>
+      <node id="2781">
+        <label>iostream</label>
+      </node>
+      <node id="2787">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2776" relation="include">
+        </childnode>
+        <childnode refid="2775" relation="include">
+        </childnode>
+      </node>
+      <node id="2772">
+        <label>Scene4.h</label>
+        <link refid="Scene4_8h"/>
+        <childnode refid="2773" relation="include">
+        </childnode>
+        <childnode refid="2774" relation="include">
+        </childnode>
+        <childnode refid="2782" relation="include">
+        </childnode>
+        <childnode refid="2785" relation="include">
+        </childnode>
+      </node>
+      <node id="2782">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="2783" relation="include">
+        </childnode>
+        <childnode refid="2784" relation="include">
+        </childnode>
+      </node>
+      <node id="2776">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2777" relation="include">
+        </childnode>
+        <childnode refid="2778" relation="include">
+        </childnode>
+        <childnode refid="2779" relation="include">
+        </childnode>
+        <childnode refid="2780" relation="include">
+        </childnode>
+      </node>
+      <node id="2794">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2787" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Scene4_8cpp_1ad466e04074e34746ca87ddf53f0e2792" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float ROT_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>ROT_LIMIT</name>
+        <initializer>= 45.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.cpp" line="62" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Scene4_8cpp_1a50eb4db9befcb2a28451eb8811e3fe0b" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float SCALE_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>SCALE_LIMIT</name>
+        <initializer>= 5.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.cpp" line="63" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene4_8h" kindref="compound">Scene4.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GL\glew.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shader_8hpp" kindref="compound">shader.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MeshBuilder_8h" kindref="compound">MeshBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classScene4_1adba454e3fa2804ec353c7fece8e956f7" refkind="member"><highlight class="normal"><ref refid="classScene4_1adba454e3fa2804ec353c7fece8e956f7" kindref="member">Scene4::Scene4</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classScene4_1a2d1ebdc69960c660030ecb16cd694513" refkind="member"><highlight class="normal"><ref refid="classScene4_1a2d1ebdc69960c660030ecb16cd694513" kindref="member">Scene4::~Scene4</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" kindref="member">Scene4::Init</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Init<sp/>VBO<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>background<sp/>color<sp/>to<sp/>dark<sp/>blue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClearColor(0.0f,<sp/>0.0f,<sp/>0.4f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Enable<sp/>depth<sp/>buffer<sp/>and<sp/>depth<sp/>testing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_DEPTH_TEST);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Enable<sp/>back<sp/>face<sp/>culling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_CULL_FACE);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Default<sp/>to<sp/>fill<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glPolygonMode(GL_FRONT_AND_BACK,<sp/>GL_FILL);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Generate<sp/>a<sp/>default<sp/>VAO<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenVertexArrays(1,<sp/>&amp;<ref refid="classScene4_1a8758e59ee476d520df891e7f959efd37" kindref="member">m_vertexArrayID</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindVertexArray(<ref refid="classScene4_1a8758e59ee476d520df891e7f959efd37" kindref="member">m_vertexArrayID</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Load<sp/>vertex<sp/>and<sp/>fragment<sp/>shaders</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" kindref="member">m_programID</ref><sp/>=<sp/><ref refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" kindref="member">LoadShaders</ref>(</highlight><highlight class="stringliteral">&quot;Shader//TransformVertexShader.vertexshader&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Shader//SimpleFragmentShader.fragmentshader&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>our<sp/>shader</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUseProgram(<ref refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" kindref="member">m_programID</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>handle<sp/>for<sp/>our<sp/>&quot;MVP&quot;<sp/>uniform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[<ref refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" kindref="member">U_MVP</ref>]<sp/>=<sp/>glGetUniformLocation(<ref refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" kindref="member">m_programID</ref>,<sp/></highlight><highlight class="stringliteral">&quot;MVP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//variable<sp/>to<sp/>rotate<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" kindref="member">rotateAngle</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>camera<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" kindref="member">Init</ref>(<ref refid="structVector3" kindref="compound">Vector3</ref>(40,<sp/>30,<sp/>30),<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(0,<sp/>0,<sp/>0),<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(0,<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" kindref="member">GEO_AXES</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" kindref="member">MeshBuilder::GenerateAxes</ref>(</highlight><highlight class="stringliteral">&quot;AXES&quot;</highlight><highlight class="normal">,<sp/>1000,<sp/>1000,<sp/>1000);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97acbc212a74932f4d11cdab3d6504125bc" kindref="member">GEO_CUBE</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" kindref="member">MeshBuilder::GenerateCube</ref>(</highlight><highlight class="stringliteral">&quot;CUBE&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(1,<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" kindref="member">GEO_SPHERE</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" kindref="member">MeshBuilder::GenerateSphere</ref>(</highlight><highlight class="stringliteral">&quot;SPHERE&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(0,<sp/>1,<sp/>1),<sp/>18,<sp/>36);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" kindref="member">GEO_RING</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" kindref="member">MeshBuilder::GenerateRing</ref>(</highlight><highlight class="stringliteral">&quot;RING&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(0,<sp/>0,<sp/>1),<sp/>0.8f,<sp/>36);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" kindref="member">GEO_SUN</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" kindref="member">MeshBuilder::GenerateSphere</ref>(</highlight><highlight class="stringliteral">&quot;SPHERE&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(1,<sp/>1,<sp/>0),<sp/>18,<sp/>36);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>projection;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>projection.<ref refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" kindref="member">SetToPerspective</ref>(45.f,<sp/>4.f<sp/>/<sp/>3.f,<sp/>0.1f,<sp/>1000.f);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>.<ref refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" kindref="member">LoadMatrix</ref>(projection);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="Scene4_8cpp_1ad466e04074e34746ca87ddf53f0e2792" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="Scene4_8cpp_1ad466e04074e34746ca87ddf53f0e2792" kindref="member">ROT_LIMIT</ref><sp/>=<sp/>45.f;</highlight></codeline>
+<codeline lineno="63" refid="Scene4_8cpp_1a50eb4db9befcb2a28451eb8811e3fe0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="Scene4_8cpp_1a50eb4db9befcb2a28451eb8811e3fe0b" kindref="member">SCALE_LIMIT</ref><sp/>=<sp/>5.f;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" kindref="member">Scene4::Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">))<sp/></highlight><highlight class="comment">//enable<sp/>back<sp/>face<sp/>culling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_CULL_FACE);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">))<sp/></highlight><highlight class="comment">//disable<sp/>back<sp/>face<sp/>culling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisable(GL_CULL_FACE);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glPolygonMode(GL_FRONT_AND_BACK,<sp/>GL_FILL);<sp/></highlight><highlight class="comment">//default<sp/>fill<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glPolygonMode(GL_FRONT_AND_BACK,<sp/>GL_LINE);<sp/></highlight><highlight class="comment">//wireframe<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" kindref="member">rotateAngle</ref><sp/>+=<sp/>(float)(10<sp/>*<sp/>dt);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" kindref="member">Update</ref>(dt);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" kindref="member">Scene4::Render</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Render<sp/>VBO<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClear(GL_COLOR_BUFFER_BIT<sp/>|<sp/>GL_DEPTH_BUFFER_BIT);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>view<sp/>matrix<sp/>using<sp/>camera<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" kindref="member">LoadIdentity</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a2638cd3249260877cc31329978fb6b38" kindref="member">LookAt</ref>(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref>,<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref>,<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>.<ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" kindref="member">LoadIdentity</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>MVP;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---AXIS---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[<ref refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" kindref="member">U_MVP</ref>],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" kindref="member">GEO_AXES</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" kindref="member">PopMatrix</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---SUN---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a52109795de960e24663b315e9128533f" kindref="member">Scale</ref>(8,<sp/>8,<sp/>8);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" kindref="member">Translate</ref>(0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" kindref="member">GEO_SUN</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" kindref="member">PopMatrix</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>---PLANET<sp/>AND<sp/>MOON---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a6ce592114042b920b648bca5519690cd" kindref="member">Rotate</ref>(<ref refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" kindref="member">rotateAngle</ref>,<sp/>0,<sp/>1,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rotate<sp/>around<sp/>origin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" kindref="member">Translate</ref>(20,<sp/>0,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>offset<sp/>from<sp/>origin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>moon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a6ce592114042b920b648bca5519690cd" kindref="member">Rotate</ref>(<ref refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" kindref="member">rotateAngle</ref>,<sp/>1,<sp/>0,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>revolution<sp/>around<sp/>the<sp/>planet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" kindref="member">Translate</ref>(0,<sp/>9,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>offset<sp/>from<sp/>planet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" kindref="member">GEO_SPHERE</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" kindref="member">PopMatrix</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>planet<sp/>itself</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a6ce592114042b920b648bca5519690cd" kindref="member">Rotate</ref>(10<sp/>*<sp/><ref refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" kindref="member">rotateAngle</ref>,<sp/>0,<sp/>1,<sp/>0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rotation<sp/>around<sp/>its<sp/>own<sp/>axis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>planet<sp/>ring</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a52109795de960e24663b315e9128533f" kindref="member">Scale</ref>(6,<sp/>6,<sp/>6);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ring<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" kindref="member">GEO_RING</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" kindref="member">PopMatrix</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" kindref="member">PushMatrix</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a52109795de960e24663b315e9128533f" kindref="member">Scale</ref>(4,<sp/>4,<sp/>4);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>()<sp/>*<sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" kindref="member">Top</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" kindref="member">GEO_SPHERE</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" kindref="member">PopMatrix</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>.<ref refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" kindref="member">PopMatrix</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9" kindref="member">Scene4::Exit</ref>()</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteVertexArrays(1,<sp/>&amp;<ref refid="classScene4_1a8758e59ee476d520df891e7f959efd37" kindref="member">m_vertexArrayID</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteProgram(<ref refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" kindref="member">m_programID</ref>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/Scene4.cpp"/>
+  </compounddef>
+</doxygen>

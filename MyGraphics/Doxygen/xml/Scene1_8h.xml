@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Scene1_8h" kind="file" language="C++">
+    <compoundname>Scene1.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includedby refid="Application_8cpp" local="yes">MyGraphics/Source/Application.cpp</includedby>
+    <includedby refid="Scene1_8cpp" local="yes">MyGraphics/Source/Scene1.cpp</includedby>
+    <incdepgraph>
+      <node id="2703">
+        <label>MyGraphics/Source/Scene1.h</label>
+        <link refid="Scene1.h"/>
+        <childnode refid="2704" relation="include">
+        </childnode>
+      </node>
+      <node id="2704">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2705">
+        <label>MyGraphics/Source/Scene1.h</label>
+        <link refid="Scene1.h"/>
+        <childnode refid="2706" relation="include">
+        </childnode>
+        <childnode refid="2707" relation="include">
+        </childnode>
+      </node>
+      <node id="2707">
+        <label>MyGraphics/Source/Scene1.cpp</label>
+        <link refid="Scene1_8cpp"/>
+      </node>
+      <node id="2706">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classScene1" prot="public">Scene1</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SCENE_1_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCENE_1_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classScene1" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScene1" kindref="compound">Scene1</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3ac3112d183a3880d87fee1b616dee8538" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3ac3112d183a3880d87fee1b616dee8538" kindref="member">GEO_TRIANGLE_1</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="11" refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a3e490422bcebac7cd160a605061ece5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a3e490422bcebac7cd160a605061ece5c" kindref="member">GEO_TRIANGLE_2</ref>,</highlight></codeline>
+<codeline lineno="12" refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene1_1a1d0255816852a435c1e00a3f15d03775" kindref="member">Scene1</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene1_1adbbfe0dfdc08bce0f8342bf631dcdf46" kindref="member">~Scene1</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene1_1a569fefef6ee64f45979ea39b8f12b2b1" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene1_1aa99ede8a76f1d9dac4d491c5337d559e" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene1_1a61e1db3a2a15af692807f28293e98eef" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25" refid="classScene1_1a459eeec81a050606ff0648bb453fb183" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene1_1a459eeec81a050606ff0648bb453fb183" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="26" refid="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" kindref="member">m_vertexBuffer</ref>[<ref refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="27" refid="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" kindref="member">m_colorBuffer</ref>[<ref refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="28" refid="classScene1_1ab2dc2b263a7995c6f0aa0bd77a869289" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene1_1ab2dc2b263a7995c6f0aa0bd77a869289" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/Scene1.h"/>
+  </compounddef>
+</doxygen>

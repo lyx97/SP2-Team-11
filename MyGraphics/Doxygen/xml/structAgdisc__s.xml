@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgdisc__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agdisc_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgdisc__s_1a2f3997fa3cd3a5f81062402dc9c7570b" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a9c972a6ee678b82cabc303e1e37ad0c6" kindref="member">Agmemdisc_t</ref> *</type>
+        <definition>Agmemdisc_t* Agdisc_s::mem</definition>
+        <argsstring></argsstring>
+        <name>mem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="177" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdisc__s_1ab074802fcaf2893c1a8af598e4da3657" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a8e845730a89de4d3b5609b996f94c9ac" kindref="member">Agiddisc_t</ref> *</type>
+        <definition>Agiddisc_t* Agdisc_s::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="178" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdisc__s_1af525f08f2c7787d98d31c2bcdc01eec1" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1aacaa7e5682be10f0c44bd7a93a00df8d" kindref="member">Agiodisc_t</ref> *</type>
+        <definition>Agiodisc_t* Agdisc_s::io</definition>
+        <argsstring></argsstring>
+        <name>io</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="179" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3506">
+        <label>void *(*)(Agdisc_t *)</label>
+      </node>
+      <node id="3496">
+        <label>long(*)(void *state, int objtype, char *str, unsigned long *id, int createflag)</label>
+      </node>
+      <node id="3499">
+        <label>long(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="3505">
+        <label>void *(*)(void *state, void *ptr, size_t old, size_t req)</label>
+      </node>
+      <node id="3495">
+        <label>void(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="3502">
+        <label>Agmemdisc_s</label>
+        <link refid="structAgmemdisc__s"/>
+        <childnode refid="3503" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="3504" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="3500" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="3505" relation="usage">
+          <edgelabel>resize</edgelabel>
+        </childnode>
+        <childnode refid="3506" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+      </node>
+      <node id="3501">
+        <label>void(*)(void *state, int objtype, void *obj)</label>
+      </node>
+      <node id="3504">
+        <label>void *(*)(void *state, size_t req)</label>
+      </node>
+      <node id="3494">
+        <label>Agiddisc_s</label>
+        <link refid="structAgiddisc__s"/>
+        <childnode refid="3495" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="3496" relation="usage">
+          <edgelabel>map</edgelabel>
+        </childnode>
+        <childnode refid="3497" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+        <childnode refid="3498" relation="usage">
+          <edgelabel>print</edgelabel>
+        </childnode>
+        <childnode refid="3499" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="3500" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="3501" relation="usage">
+          <edgelabel>idregister</edgelabel>
+        </childnode>
+      </node>
+      <node id="3493">
+        <label>int</label>
+      </node>
+      <node id="3500">
+        <label>void(*)(void *state)</label>
+      </node>
+      <node id="3503">
+        <label>void(*)(void *state, void *ptr)</label>
+      </node>
+      <node id="3491">
+        <label>Agdisc_s</label>
+        <link refid="structAgdisc__s"/>
+        <childnode refid="3492" relation="usage">
+          <edgelabel>io</edgelabel>
+        </childnode>
+        <childnode refid="3494" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="3502" relation="usage">
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="3497">
+        <label>void *(*)(Agraph_t *g, Agdisc_t *)</label>
+      </node>
+      <node id="3492">
+        <label>Agiodisc_s</label>
+        <link refid="structAgiodisc__s"/>
+        <childnode refid="3493" relation="usage">
+          <edgelabel>putstr</edgelabel>
+          <edgelabel>afread</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+      <node id="3498">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="176" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="176" bodyend="180"/>
+    <listofallmembers>
+      <member refid="structAgdisc__s_1ab074802fcaf2893c1a8af598e4da3657" prot="public" virt="non-virtual"><scope>Agdisc_s</scope><name>id</name></member>
+      <member refid="structAgdisc__s_1af525f08f2c7787d98d31c2bcdc01eec1" prot="public" virt="non-virtual"><scope>Agdisc_s</scope><name>io</name></member>
+      <member refid="structAgdisc__s_1a2f3997fa3cd3a5f81062402dc9c7570b" prot="public" virt="non-virtual"><scope>Agdisc_s</scope><name>mem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

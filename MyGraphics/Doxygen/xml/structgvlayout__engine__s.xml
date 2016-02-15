@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvlayout__engine__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvlayout_engine_s</compoundname>
+    <includes refid="gvplugin__layout_8h" local="no">gvplugin_layout.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvlayout__engine__s_1a5ca466eb4ea937abb7e53a9ba1f751b2" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvlayout_engine_s::layout) (graph_t *g)</definition>
+        <argsstring>)(graph_t *g)</argsstring>
+        <name>layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_layout.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_layout.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvlayout__engine__s_1a58abd11316269dd1ffebf23a6e6de47a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvlayout_engine_s::cleanup) (graph_t *g)</definition>
+        <argsstring>)(graph_t *g)</argsstring>
+        <name>cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_layout.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_layout.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5007">
+        <label>gvlayout_engine_s</label>
+        <link refid="structgvlayout__engine__s"/>
+        <childnode refid="5008" relation="usage">
+          <edgelabel>cleanup</edgelabel>
+          <edgelabel>layout</edgelabel>
+        </childnode>
+      </node>
+      <node id="5008">
+        <label>void(*)(graph_t *g)</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvplugin_layout.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_layout.h" bodystart="25" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structgvlayout__engine__s_1a58abd11316269dd1ffebf23a6e6de47a" prot="public" virt="non-virtual"><scope>gvlayout_engine_s</scope><name>cleanup</name></member>
+      <member refid="structgvlayout__engine__s_1a5ca466eb4ea937abb7e53a9ba1f751b2" prot="public" virt="non-virtual"><scope>gvlayout_engine_s</scope><name>layout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

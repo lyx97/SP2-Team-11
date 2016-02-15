@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot" kind="struct" language="C++" prot="public">
+    <compoundname>xdot</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot_1a3100ef451ff59bc4086c9638962434fc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot::cnt</definition>
+        <argsstring></argsstring>
+        <name>cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="139" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot_1a27412cb1f25195276ddb28a42fe0bacd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot::sz</definition>
+        <argsstring></argsstring>
+        <name>sz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="140" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot_1a82a85f30213b9db88e3fbe4e879bde8e" prot="public" static="no" mutable="no">
+        <type><ref refid="xdot_8h_1a506f55feaed523333fd66154d076c475" kindref="member">xdot_op</ref> *</type>
+        <definition>xdot_op* xdot::ops</definition>
+        <argsstring></argsstring>
+        <name>ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="141" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot_1a049bbff534fe0272c748960d7c6bc256" prot="public" static="no" mutable="no">
+        <type><ref refid="xdot_8h_1a79292a4183011bf60e3a715c5b427315" kindref="member">freefunc_t</ref></type>
+        <definition>freefunc_t xdot::freefunc</definition>
+        <argsstring></argsstring>
+        <name>freefunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="142" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot_1acf5b8e2478dac23c07ee64ac3abe46e3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="143" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6043">
+        <label></label>
+      </node>
+      <node id="6052">
+        <label>xdot_radial_grad</label>
+        <link refid="structxdot__radial__grad"/>
+        <childnode refid="6046" relation="usage">
+          <edgelabel>r0</edgelabel>
+          <edgelabel>r1</edgelabel>
+          <edgelabel>y0</edgelabel>
+          <edgelabel>y1</edgelabel>
+          <edgelabel>x0</edgelabel>
+          <edgelabel>x1</edgelabel>
+        </childnode>
+        <childnode refid="6047" relation="usage">
+          <edgelabel>n_stops</edgelabel>
+        </childnode>
+        <childnode refid="6048" relation="usage">
+          <edgelabel>stops</edgelabel>
+        </childnode>
+      </node>
+      <node id="6061">
+        <label>xdot_polyline</label>
+        <link refid="structxdot__polyline"/>
+        <childnode refid="6062" relation="usage">
+          <edgelabel>pts</edgelabel>
+        </childnode>
+        <childnode refid="6047" relation="usage">
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="6045">
+        <label>xdot_linear_grad</label>
+        <link refid="structxdot__linear__grad"/>
+        <childnode refid="6046" relation="usage">
+          <edgelabel>y0</edgelabel>
+          <edgelabel>y1</edgelabel>
+          <edgelabel>x0</edgelabel>
+          <edgelabel>x1</edgelabel>
+        </childnode>
+        <childnode refid="6047" relation="usage">
+          <edgelabel>n_stops</edgelabel>
+        </childnode>
+        <childnode refid="6048" relation="usage">
+          <edgelabel>stops</edgelabel>
+        </childnode>
+      </node>
+      <node id="6048">
+        <label>xdot_color_stop</label>
+        <link refid="structxdot__color__stop"/>
+        <childnode refid="6049" relation="usage">
+          <edgelabel>frac</edgelabel>
+        </childnode>
+        <childnode refid="6050" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="6050">
+        <label>char *</label>
+      </node>
+      <node id="6049">
+        <label>float</label>
+      </node>
+      <node id="6044">
+        <label>xdot_color</label>
+        <link refid="structxdot__color"/>
+        <childnode refid="6045" relation="usage">
+          <edgelabel>ling</edgelabel>
+        </childnode>
+        <childnode refid="6051" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="6052" relation="usage">
+          <edgelabel>ring</edgelabel>
+        </childnode>
+        <childnode refid="6043" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="6050" relation="usage">
+          <edgelabel>clr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6055">
+        <label>xdot_image</label>
+        <link refid="structxdot__image"/>
+        <childnode refid="6054" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="6056" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="6057">
+        <label>xdot_font</label>
+        <link refid="structxdot__font"/>
+        <childnode refid="6046" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="6054" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="6041">
+        <label>xdot</label>
+        <link refid="structxdot"/>
+        <childnode refid="6042" relation="usage">
+          <edgelabel>freefunc</edgelabel>
+          <edgelabel>ops</edgelabel>
+        </childnode>
+        <childnode refid="6047" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>cnt</edgelabel>
+          <edgelabel>sz</edgelabel>
+        </childnode>
+      </node>
+      <node id="6053">
+        <label>xdot_kind</label>
+      </node>
+      <node id="6047">
+        <label>int</label>
+      </node>
+      <node id="6056">
+        <label>xdot_rect</label>
+        <link refid="structxdot__rect"/>
+        <childnode refid="6046" relation="usage">
+          <edgelabel>w</edgelabel>
+          <edgelabel>x</edgelabel>
+          <edgelabel>h</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="6046">
+        <label>double</label>
+      </node>
+      <node id="6059">
+        <label>xdot_align</label>
+      </node>
+      <node id="6058">
+        <label>xdot_text</label>
+        <link refid="structxdot__text"/>
+        <childnode refid="6059" relation="usage">
+          <edgelabel>align</edgelabel>
+        </childnode>
+        <childnode refid="6046" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+        <childnode refid="6054" relation="usage">
+          <edgelabel>text</edgelabel>
+        </childnode>
+      </node>
+      <node id="6042">
+        <label>_xdot_op</label>
+        <link refid="struct__xdot__op"/>
+        <childnode refid="6042" relation="usage">
+          <edgelabel>drawfunc</edgelabel>
+        </childnode>
+        <childnode refid="6043" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="6044" relation="usage">
+          <edgelabel>grad_color</edgelabel>
+        </childnode>
+        <childnode refid="6053" relation="usage">
+          <edgelabel>kind</edgelabel>
+        </childnode>
+        <childnode refid="6054" relation="usage">
+          <edgelabel>style</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="6055" relation="usage">
+          <edgelabel>image</edgelabel>
+        </childnode>
+        <childnode refid="6057" relation="usage">
+          <edgelabel>font</edgelabel>
+        </childnode>
+        <childnode refid="6058" relation="usage">
+          <edgelabel>text</edgelabel>
+        </childnode>
+        <childnode refid="6056" relation="usage">
+          <edgelabel>ellipse</edgelabel>
+        </childnode>
+        <childnode refid="6060" relation="usage">
+          <edgelabel>fontchar</edgelabel>
+        </childnode>
+        <childnode refid="6061" relation="usage">
+          <edgelabel>polyline</edgelabel>
+          <edgelabel>polygon</edgelabel>
+          <edgelabel>bezier</edgelabel>
+        </childnode>
+      </node>
+      <node id="6060">
+        <label>unsigned</label>
+      </node>
+      <node id="6062">
+        <label>xdot_point</label>
+        <link refid="structxdot__point"/>
+        <childnode refid="6046" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="6054">
+        <label>char</label>
+      </node>
+      <node id="6051">
+        <label>xdot_grad_type</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="138" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="138" bodyend="144"/>
+    <listofallmembers>
+      <member refid="structxdot_1a3100ef451ff59bc4086c9638962434fc" prot="public" virt="non-virtual"><scope>xdot</scope><name>cnt</name></member>
+      <member refid="structxdot_1acf5b8e2478dac23c07ee64ac3abe46e3" prot="public" virt="non-virtual"><scope>xdot</scope><name>flags</name></member>
+      <member refid="structxdot_1a049bbff534fe0272c748960d7c6bc256" prot="public" virt="non-virtual"><scope>xdot</scope><name>freefunc</name></member>
+      <member refid="structxdot_1a82a85f30213b9db88e3fbe4e879bde8e" prot="public" virt="non-virtual"><scope>xdot</scope><name>ops</name></member>
+      <member refid="structxdot_1a27412cb1f25195276ddb28a42fe0bacd" prot="public" virt="non-virtual"><scope>xdot</scope><name>sz</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

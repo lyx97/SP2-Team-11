@@ -1,0 +1,39 @@
+digraph "shape_desc"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="shape_desc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="Helvetica"];
+  Node2 [label="char",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fns" ,fontname="Helvetica"];
+  Node3 [label="shape_functions",height=0.2,width=0.4,color="black",URL="$structshape__functions.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" portfn" ,fontname="Helvetica"];
+  Node4 [label="port",height=0.2,width=0.4,color="black",URL="$structport.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" theta" ,fontname="Helvetica"];
+  Node5 [label="double",height=0.2,width=0.4,color="grey75"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="Helvetica"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bp" ,fontname="Helvetica"];
+  Node6 [label="boxf",height=0.2,width=0.4,color="black",URL="$structboxf.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" LL\nUR" ,fontname="Helvetica"];
+  Node7 [label="pointf_s",height=0.2,width=0.4,color="black",URL="$structpointf__s.html"];
+  Node5 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" x\ny" ,fontname="Helvetica"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" constrained\ndefined\nside\norder\ndyna\nclip" ,fontname="Helvetica"];
+  Node8 [label="unsigned",height=0.2,width=0.4,color="grey75"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p" ,fontname="Helvetica"];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" insidefn" ,fontname="Helvetica"];
+  Node9 [label="unsigned char",height=0.2,width=0.4,color="grey75"];
+  Node10 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pboxfn" ,fontname="Helvetica"];
+  Node10 [label="int",height=0.2,width=0.4,color="grey75"];
+  Node11 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" freefn\ninitfn" ,fontname="Helvetica"];
+  Node11 [label="void(*)(node_t *)",height=0.2,width=0.4,color="grey75"];
+  Node12 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" codefn" ,fontname="Helvetica"];
+  Node12 [label="void(*)(GVJ_t *job,\l node_t *n)",height=0.2,width=0.4,color="grey75"];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" polygon" ,fontname="Helvetica"];
+  Node13 [label="polygon_t",height=0.2,width=0.4,color="black",URL="$structpolygon__t.html"];
+  Node5 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" distortion\nskew\norientation" ,fontname="Helvetica"];
+  Node10 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" peripheries\nsides\nregular\noption" ,fontname="Helvetica"];
+  Node7 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vertices" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" usershape" ,fontname="Helvetica"];
+}

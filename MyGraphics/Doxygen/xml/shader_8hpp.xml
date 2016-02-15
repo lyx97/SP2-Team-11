@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="shader_8hpp" kind="file" language="C++">
+    <compoundname>shader.hpp</compoundname>
+    <includedby refid="Assignment1_8cpp" local="yes">MyGraphics/Source/Assignment1.cpp</includedby>
+    <includedby refid="Assignment2_8cpp" local="yes">MyGraphics/Source/Assignment2.cpp</includedby>
+    <includedby refid="Assignment3_8cpp" local="yes">MyGraphics/Source/Assignment3.cpp</includedby>
+    <includedby refid="Scene1_8cpp" local="yes">MyGraphics/Source/Scene1.cpp</includedby>
+    <includedby refid="Scene2_8cpp" local="yes">MyGraphics/Source/Scene2.cpp</includedby>
+    <includedby refid="Scene3_8cpp" local="yes">MyGraphics/Source/Scene3.cpp</includedby>
+    <includedby refid="Scene4_8cpp" local="yes">MyGraphics/Source/Scene4.cpp</includedby>
+    <includedby refid="SceneLight_8cpp" local="yes">MyGraphics/Source/SceneLight.cpp</includedby>
+    <includedby refid="SceneLight2_8cpp" local="yes">MyGraphics/Source/SceneLight2.cpp</includedby>
+    <includedby refid="SceneModel_8cpp" local="yes">MyGraphics/Source/SceneModel.cpp</includedby>
+    <includedby refid="SceneSkybox_8cpp" local="yes">MyGraphics/Source/SceneSkybox.cpp</includedby>
+    <includedby refid="SceneText_8cpp" local="yes">MyGraphics/Source/SceneText.cpp</includedby>
+    <includedby refid="SceneTexture_8cpp" local="yes">MyGraphics/Source/SceneTexture.cpp</includedby>
+    <includedby refid="shader_8cpp" local="yes">MyGraphics/Source/shader.cpp</includedby>
+    <invincdepgraph>
+      <node id="3159">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="3157">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="3158">
+        <label>MyGraphics/Source/SceneText.cpp</label>
+        <link refid="SceneText_8cpp"/>
+      </node>
+      <node id="3154">
+        <label>MyGraphics/Source/SceneLight.cpp</label>
+        <link refid="SceneLight_8cpp"/>
+      </node>
+      <node id="3156">
+        <label>MyGraphics/Source/SceneModel.cpp</label>
+        <link refid="SceneModel_8cpp"/>
+      </node>
+      <node id="3146">
+        <label>MyGraphics/Source/shader.hpp</label>
+        <link refid="shader.hpp"/>
+        <childnode refid="3147" relation="include">
+        </childnode>
+        <childnode refid="3148" relation="include">
+        </childnode>
+        <childnode refid="3149" relation="include">
+        </childnode>
+        <childnode refid="3150" relation="include">
+        </childnode>
+        <childnode refid="3151" relation="include">
+        </childnode>
+        <childnode refid="3152" relation="include">
+        </childnode>
+        <childnode refid="3153" relation="include">
+        </childnode>
+        <childnode refid="3154" relation="include">
+        </childnode>
+        <childnode refid="3155" relation="include">
+        </childnode>
+        <childnode refid="3156" relation="include">
+        </childnode>
+        <childnode refid="3157" relation="include">
+        </childnode>
+        <childnode refid="3158" relation="include">
+        </childnode>
+        <childnode refid="3159" relation="include">
+        </childnode>
+        <childnode refid="3160" relation="include">
+        </childnode>
+      </node>
+      <node id="3160">
+        <label>MyGraphics/Source/shader.cpp</label>
+        <link refid="shader_8cpp"/>
+      </node>
+      <node id="3149">
+        <label>MyGraphics/Source/Assignment3.cpp</label>
+        <link refid="Assignment3_8cpp"/>
+      </node>
+      <node id="3153">
+        <label>MyGraphics/Source/Scene4.cpp</label>
+        <link refid="Scene4_8cpp"/>
+      </node>
+      <node id="3148">
+        <label>MyGraphics/Source/Assignment2.cpp</label>
+        <link refid="Assignment2_8cpp"/>
+      </node>
+      <node id="3152">
+        <label>MyGraphics/Source/Scene3.cpp</label>
+        <link refid="Scene3_8cpp"/>
+      </node>
+      <node id="3151">
+        <label>MyGraphics/Source/Scene2.cpp</label>
+        <link refid="Scene2_8cpp"/>
+      </node>
+      <node id="3150">
+        <label>MyGraphics/Source/Scene1.cpp</label>
+        <link refid="Scene1_8cpp"/>
+      </node>
+      <node id="3155">
+        <label>MyGraphics/Source/SceneLight2.cpp</label>
+        <link refid="SceneLight2_8cpp"/>
+      </node>
+      <node id="3147">
+        <label>MyGraphics/Source/Assignment1.cpp</label>
+        <link refid="Assignment1_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="shader_8hpp_1a833f10cca6a76fe34ae9efa23ac5e73c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint LoadShaders</definition>
+        <argsstring>(const char *vertex_file_path, const char *fragment_file_path)</argsstring>
+        <name>LoadShaders</name>
+        <param>
+          <type>const char *</type>
+          <declname>vertex_file_path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fragment_file_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/shader.hpp" line="4" column="1" bodyfile="MyGraphics/Source/shader.cpp" bodystart="16" bodyend="107"/>
+        <referencedby refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" compoundref="Scene1_8cpp" startline="15" endline="90">Scene1::Init</referencedby>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Scene2::Init</referencedby>
+        <referencedby refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" compoundref="Scene3_8cpp" startline="18" endline="59">Scene3::Init</referencedby>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Scene4::Init</referencedby>
+        <referencedby refid="classAss1_1a8db5698b5115e294e84610cc19cdbca9" compoundref="Assignment1_8cpp" startline="16" endline="284">Ass1::Init</referencedby>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">SceneTexture::Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="20" endline="124">SceneSkybox::Init</referencedby>
+        <referencedby refid="classSceneModel_1ad40b429986aa1429a308c20acdd26e0f" compoundref="SceneModel_8cpp" startline="20" endline="127">SceneModel::Init</referencedby>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">SceneText::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SHADER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHADER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">GLuint<sp/><ref refid="shader_8hpp_1a833f10cca6a76fe34ae9efa23ac5e73c" kindref="member">LoadShaders</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>vertex_file_path,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>fragment_file_path);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/shader.hpp"/>
+  </compounddef>
+</doxygen>

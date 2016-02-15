@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot__text" kind="struct" language="C++" prot="public">
+    <compoundname>xdot_text</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot__text_1a9f2896a7a9669dcac1d45eeb507e9b61" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_text::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="78" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__text_1af7eb8c3211b65c952e571421dfaeb481" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_text::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="78" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__text_1ad0e107afe33b75b4faf76316f8532ccd" prot="public" static="no" mutable="no">
+        <type><ref refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949e" kindref="member">xdot_align</ref></type>
+        <definition>xdot_align xdot_text::align</definition>
+        <argsstring></argsstring>
+        <name>align</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="79" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__text_1a0dd839573172654fb738ac197b24e68e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xdot_text::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="80" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__text_1a75ef3ce4a16c3f187535f906a89c97d0" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* xdot_text::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="81" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6118">
+        <label>double</label>
+      </node>
+      <node id="6117">
+        <label>xdot_align</label>
+      </node>
+      <node id="6116">
+        <label>xdot_text</label>
+        <link refid="structxdot__text"/>
+        <childnode refid="6117" relation="usage">
+          <edgelabel>align</edgelabel>
+        </childnode>
+        <childnode refid="6118" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+        <childnode refid="6119" relation="usage">
+          <edgelabel>text</edgelabel>
+        </childnode>
+      </node>
+      <node id="6119">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="77" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="77" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structxdot__text_1ad0e107afe33b75b4faf76316f8532ccd" prot="public" virt="non-virtual"><scope>xdot_text</scope><name>align</name></member>
+      <member refid="structxdot__text_1a75ef3ce4a16c3f187535f906a89c97d0" prot="public" virt="non-virtual"><scope>xdot_text</scope><name>text</name></member>
+      <member refid="structxdot__text_1a0dd839573172654fb738ac197b24e68e" prot="public" virt="non-virtual"><scope>xdot_text</scope><name>width</name></member>
+      <member refid="structxdot__text_1a9f2896a7a9669dcac1d45eeb507e9b61" prot="public" virt="non-virtual"><scope>xdot_text</scope><name>x</name></member>
+      <member refid="structxdot__text_1af7eb8c3211b65c952e571421dfaeb481" prot="public" virt="non-virtual"><scope>xdot_text</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

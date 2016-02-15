@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="pathgeom_8h" kind="file" language="C++">
+    <compoundname>pathgeom.h</compoundname>
+    <includedby refid="types_8h" local="yes">graphviz/release/include/graphviz/types.h</includedby>
+    <includedby refid="pathplan_8h" local="yes">graphviz/release/include/graphviz/pathplan.h</includedby>
+    <invincdepgraph>
+      <node id="2094">
+        <label>graphviz/release/include/graphviz/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2095" relation="include">
+        </childnode>
+        <childnode refid="2096" relation="include">
+        </childnode>
+        <childnode refid="2097" relation="include">
+        </childnode>
+        <childnode refid="2098" relation="include">
+        </childnode>
+        <childnode refid="2099" relation="include">
+        </childnode>
+        <childnode refid="2100" relation="include">
+        </childnode>
+        <childnode refid="2101" relation="include">
+        </childnode>
+      </node>
+      <node id="2095">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="2098">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="2096">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="2093">
+        <label>graphviz/release/include/graphviz/pathgeom.h</label>
+        <link refid="pathgeom.h"/>
+        <childnode refid="2094" relation="include">
+        </childnode>
+        <childnode refid="2102" relation="include">
+        </childnode>
+      </node>
+      <node id="2099">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="2097">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="2100">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="2101">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack_8h"/>
+      </node>
+      <node id="2102">
+        <label>graphviz/release/include/graphviz/pathplan.h</label>
+        <link refid="pathplan_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structPxy__t" prot="public">Pxy_t</innerclass>
+    <innerclass refid="structPpoly__t" prot="public">Ppoly_t</innerclass>
+    <innerclass refid="structPedge__t" prot="public">Pedge_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pathgeom_8h_1aef6fd0f365d7d7253289f83d8c43afe6" prot="public" static="no">
+        <type>struct <ref refid="structPxy__t" kindref="compound">Pxy_t</ref></type>
+        <definition>typedef struct Pxy_t  Pxy_t</definition>
+        <argsstring></argsstring>
+        <name>Pxy_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pathgeom_8h_1ae03dc374d3fff2c0f275c6c17e705d1f" prot="public" static="no">
+        <type>struct <ref refid="structPxy__t" kindref="compound">Pxy_t</ref></type>
+        <definition>typedef struct Pxy_t Ppoint_t</definition>
+        <argsstring></argsstring>
+        <name>Ppoint_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="57" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pathgeom_8h_1a1601338d97d595819723e748357f2dca" prot="public" static="no">
+        <type>struct <ref refid="structPxy__t" kindref="compound">Pxy_t</ref></type>
+        <definition>typedef struct Pxy_t Pvector_t</definition>
+        <argsstring></argsstring>
+        <name>Pvector_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="57" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pathgeom_8h_1a1dd4a9ca77183603a8564514f1df1748" prot="public" static="no">
+        <type>struct <ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref></type>
+        <definition>typedef struct Ppoly_t  Ppoly_t</definition>
+        <argsstring></argsstring>
+        <name>Ppoly_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" prot="public" static="no">
+        <type><ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref></type>
+        <definition>typedef Ppoly_t Ppolyline_t</definition>
+        <argsstring></argsstring>
+        <name>Ppolyline_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pathgeom_8h_1acf31b4c299fce7301a1a89d18c9966d4" prot="public" static="no">
+        <type>struct <ref refid="structPedge__t" kindref="compound">Pedge_t</ref></type>
+        <definition>typedef struct Pedge_t  Pedge_t</definition>
+        <argsstring></argsstring>
+        <name>Pedge_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pathgeom_8h_1af3ccabb851a77a61426d26c737df54b1" prot="public" static="no">
+        <type>struct vconfig_s</type>
+        <definition>typedef struct vconfig_s vconfig_t</definition>
+        <argsstring></argsstring>
+        <name>vconfig_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pathgeom_8h_1ae3dd307dd10b34f23bd094cf69f23c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freePath</definition>
+        <argsstring>(Ppolyline_t *p)</argsstring>
+        <name>freePath</name>
+        <param>
+          <type><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_PATHGEOM_INCLUDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PATHGEOM_INCLUDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_POINTF_S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpointf__s" kindref="compound">pointf_s</ref><sp/><ref refid="structPxy__t" kindref="compound">Ppoint_t</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpointf__s" kindref="compound">pointf_s</ref><sp/><ref refid="structPxy__t" kindref="compound">Pvector_t</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="structPxy__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPxy__t" kindref="compound">Pxy_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="27" refid="structPxy__t_1ab2a1cfb26785cc5b0215371cae157a1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structPxy__t_1a8bfdfac06a9c292b12760d41fd8c5b91" kindref="member">x</ref>,<sp/><ref refid="structPxy__t_1ab2a1cfb26785cc5b0215371cae157a1e" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="pathgeom_8h_1aef6fd0f365d7d7253289f83d8c43afe6" kindref="member">Pxy_t</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="pathgeom_8h_1ae03dc374d3fff2c0f275c6c17e705d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPxy__t" kindref="compound">Pxy_t</ref><sp/><ref refid="structPxy__t" kindref="compound">Ppoint_t</ref>;</highlight></codeline>
+<codeline lineno="31" refid="pathgeom_8h_1a1601338d97d595819723e748357f2dca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPxy__t" kindref="compound">Pxy_t</ref><sp/><ref refid="structPxy__t" kindref="compound">Pvector_t</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structPpoly__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="structPpoly__t_1a693e25a86e550ef1b164a8399d896a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPxy__t" kindref="compound">Ppoint_t</ref><sp/>*<ref refid="structPpoly__t_1a693e25a86e550ef1b164a8399d896a39" kindref="member">ps</ref>;</highlight></codeline>
+<codeline lineno="36" refid="structPpoly__t_1a2058b56b2ca48ccc95df43fe971efa71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structPpoly__t_1a2058b56b2ca48ccc95df43fe971efa71" kindref="member">pn</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="pathgeom_8h_1a1dd4a9ca77183603a8564514f1df1748" kindref="member">Ppoly_t</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref><sp/><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structPedge__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPedge__t" kindref="compound">Pedge_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structPedge__t_1a1753042bb23cb891962e2eae3d93c4a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPxy__t" kindref="compound">Ppoint_t</ref><sp/><ref refid="structPedge__t_1aad7db338c15c9d818104faf9ea90f7aa" kindref="member">a</ref>,<sp/><ref refid="structPedge__t_1a1753042bb23cb891962e2eae3d93c4a6" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="pathgeom_8h_1acf31b4c299fce7301a1a89d18c9966d4" kindref="member">Pedge_t</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>opaque<sp/>state<sp/>handle<sp/>for<sp/>visibility<sp/>graph<sp/>operations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="pathgeom_8h_1af3ccabb851a77a61426d26c737df54b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">vconfig_s<sp/><ref refid="pathgeom_8h_1af3ccabb851a77a61426d26c737df54b1" kindref="member">vconfig_t</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pathgeom_8h_1ae3dd307dd10b34f23bd094cf69f23c9f" kindref="member">freePath</ref>(Ppolyline_t*<sp/>p);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/pathgeom.h"/>
+  </compounddef>
+</doxygen>

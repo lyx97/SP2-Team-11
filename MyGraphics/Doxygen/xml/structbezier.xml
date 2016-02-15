@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structbezier" kind="struct" language="C++" prot="public">
+    <compoundname>bezier</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbezier_1a4ac62ec53001417740bb348df9246062" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref> *</type>
+        <definition>pointf* bezier::list</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="109" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbezier_1a39e61592ef6564b1e53948f9b3b08508" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bezier::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="110" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbezier_1aead7ea7b356a4775b709450fee78a65e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bezier::sflag</definition>
+        <argsstring></argsstring>
+        <name>sflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="111" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbezier_1a9da369f1bc68c131e02452ec45333ca8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bezier::eflag</definition>
+        <argsstring></argsstring>
+        <name>eflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="111" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbezier_1a0e3a565b5f8a4fc5e81abd90e97039fd" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf bezier::sp</definition>
+        <argsstring></argsstring>
+        <name>sp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="112" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbezier_1acc894ddf85fbc92ce92a97c93948a5b5" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf bezier::ep</definition>
+        <argsstring></argsstring>
+        <name>ep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="112" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4668">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="4669" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4667">
+        <label>int</label>
+      </node>
+      <node id="4669">
+        <label>double</label>
+      </node>
+      <node id="4666">
+        <label>bezier</label>
+        <link refid="structbezier"/>
+        <childnode refid="4667" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>sflag</edgelabel>
+          <edgelabel>eflag</edgelabel>
+        </childnode>
+        <childnode refid="4668" relation="usage">
+          <edgelabel>ep</edgelabel>
+          <edgelabel>sp</edgelabel>
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="108" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="108" bodyend="113"/>
+    <listofallmembers>
+      <member refid="structbezier_1a9da369f1bc68c131e02452ec45333ca8" prot="public" virt="non-virtual"><scope>bezier</scope><name>eflag</name></member>
+      <member refid="structbezier_1acc894ddf85fbc92ce92a97c93948a5b5" prot="public" virt="non-virtual"><scope>bezier</scope><name>ep</name></member>
+      <member refid="structbezier_1a4ac62ec53001417740bb348df9246062" prot="public" virt="non-virtual"><scope>bezier</scope><name>list</name></member>
+      <member refid="structbezier_1aead7ea7b356a4775b709450fee78a65e" prot="public" virt="non-virtual"><scope>bezier</scope><name>sflag</name></member>
+      <member refid="structbezier_1a39e61592ef6564b1e53948f9b3b08508" prot="public" virt="non-virtual"><scope>bezier</scope><name>size</name></member>
+      <member refid="structbezier_1a0e3a565b5f8a4fc5e81abd90e97039fd" prot="public" virt="non-virtual"><scope>bezier</scope><name>sp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

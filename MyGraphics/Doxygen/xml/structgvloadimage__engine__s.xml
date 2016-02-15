@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvloadimage__engine__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvloadimage_engine_s</compoundname>
+    <includes refid="gvplugin__loadimage_8h" local="no">gvplugin_loadimage.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvloadimage__engine__s_1a075966913bc760cbc61e8a5e6e6b89e8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvloadimage_engine_s::loadimage) (GVJ_t *job, usershape_t *us, boxf b, boolean filled)</definition>
+        <argsstring>)(GVJ_t *job, usershape_t *us, boxf b, boolean filled)</argsstring>
+        <name>loadimage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_loadimage.h" line="41" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_loadimage.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5014">
+        <label>void(*)(GVJ_t *job, usershape_t *us, boxf b, boolean filled)</label>
+      </node>
+      <node id="5013">
+        <label>gvloadimage_engine_s</label>
+        <link refid="structgvloadimage__engine__s"/>
+        <childnode refid="5014" relation="usage">
+          <edgelabel>loadimage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvplugin_loadimage.h" line="40" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_loadimage.h" bodystart="40" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structgvloadimage__engine__s_1a075966913bc760cbc61e8a5e6e6b89e8" prot="public" virt="non-virtual"><scope>gvloadimage_engine_s</scope><name>loadimage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

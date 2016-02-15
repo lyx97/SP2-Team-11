@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot__polyline" kind="struct" language="C++" prot="public">
+    <compoundname>xdot_polyline</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot__polyline_1a6aa15b7771767fe9719b1c19e29f2171" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_polyline::cnt</definition>
+        <argsstring></argsstring>
+        <name>cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="73" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__polyline_1af231d1c7f013a2c3128e836712b5aef8" prot="public" static="no" mutable="no">
+        <type><ref refid="structxdot__point" kindref="compound">xdot_point</ref> *</type>
+        <definition>xdot_point* xdot_polyline::pts</definition>
+        <argsstring></argsstring>
+        <name>pts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="74" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6098">
+        <label>xdot_polyline</label>
+        <link refid="structxdot__polyline"/>
+        <childnode refid="6099" relation="usage">
+          <edgelabel>pts</edgelabel>
+        </childnode>
+        <childnode refid="6101" relation="usage">
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="6101">
+        <label>int</label>
+      </node>
+      <node id="6100">
+        <label>double</label>
+      </node>
+      <node id="6099">
+        <label>xdot_point</label>
+        <link refid="structxdot__point"/>
+        <childnode refid="6100" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="72" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="72" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structxdot__polyline_1a6aa15b7771767fe9719b1c19e29f2171" prot="public" virt="non-virtual"><scope>xdot_polyline</scope><name>cnt</name></member>
+      <member refid="structxdot__polyline_1af231d1c7f013a2c3128e836712b5aef8" prot="public" virt="non-virtual"><scope>xdot_polyline</scope><name>pts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

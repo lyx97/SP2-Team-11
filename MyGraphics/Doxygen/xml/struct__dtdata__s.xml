@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__dtdata__s" kind="struct" language="C++" prot="public">
+    <compoundname>_dtdata_s</compoundname>
+    <includes refid="cdt_8h" local="no">cdt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dtdata__s_1a8863adf3f0b7466425fb9673cb9765aa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtdata_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="81" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1a7bbbae2b5f766648135230713faaf752" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref> *</type>
+        <definition>Dtlink_t* _dtdata_s::here</definition>
+        <argsstring></argsstring>
+        <name>here</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="82" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1ab661cdbcfdaf36270c85d16f2907d666" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref> **</type>
+        <definition>Dtlink_t** _dtdata_s::_htab</definition>
+        <argsstring></argsstring>
+        <name>_htab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="84" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1a614fcec7c2f841dc36351134df0707d3" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref> *</type>
+        <definition>Dtlink_t* _dtdata_s::_head</definition>
+        <argsstring></argsstring>
+        <name>_head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="85" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1ade8c0c04bc337f0f401e11994b44360e" prot="public" static="no" mutable="no">
+        <type>union _dtdata_s::@1</type>
+        <definition>union _dtdata_s::@1  _dtdata_s::hh</definition>
+        <argsstring></argsstring>
+        <name>hh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1a006b5d574af777b5b4413cf4f30d31e2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtdata_s::ntab</definition>
+        <argsstring></argsstring>
+        <name>ntab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="87" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1aadfeba4434a3a99cda6e2a480f8da5aa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtdata_s::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="88" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1a80639a12a69bca3c97746336962adbbb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtdata_s::loop</definition>
+        <argsstring></argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="89" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtdata__s_1aeca1af6a736b2c03fa7e247663218e58" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dtdata_s::minp</definition>
+        <argsstring></argsstring>
+        <name>minp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="90" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3079">
+        <label></label>
+      </node>
+      <node id="3078">
+        <label>_dtdata_s</label>
+        <link refid="struct__dtdata__s"/>
+        <childnode refid="3079" relation="usage">
+          <edgelabel>hh</edgelabel>
+        </childnode>
+        <childnode refid="3080" relation="usage">
+          <edgelabel>here</edgelabel>
+          <edgelabel>_htab</edgelabel>
+          <edgelabel>_head</edgelabel>
+        </childnode>
+        <childnode refid="3082" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>loop</edgelabel>
+          <edgelabel>ntab</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>minp</edgelabel>
+        </childnode>
+      </node>
+      <node id="3082">
+        <label>int</label>
+      </node>
+      <node id="3080">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="3080" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="3079" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="3081" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3081">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cdt.h" line="81" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="80" bodyend="92"/>
+    <listofallmembers>
+      <member refid="struct__dtdata__s_1a614fcec7c2f841dc36351134df0707d3" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>_head</name></member>
+      <member refid="struct__dtdata__s_1ab661cdbcfdaf36270c85d16f2907d666" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>_htab</name></member>
+      <member refid="struct__dtdata__s_1a7bbbae2b5f766648135230713faaf752" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>here</name></member>
+      <member refid="struct__dtdata__s_1ade8c0c04bc337f0f401e11994b44360e" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>hh</name></member>
+      <member refid="struct__dtdata__s_1a80639a12a69bca3c97746336962adbbb" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>loop</name></member>
+      <member refid="struct__dtdata__s_1aeca1af6a736b2c03fa7e247663218e58" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>minp</name></member>
+      <member refid="struct__dtdata__s_1a006b5d574af777b5b4413cf4f30d31e2" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>ntab</name></member>
+      <member refid="struct__dtdata__s_1aadfeba4434a3a99cda6e2a480f8da5aa" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>size</name></member>
+      <member refid="struct__dtdata__s_1a8863adf3f0b7466425fb9673cb9765aa" prot="public" virt="non-virtual"><scope>_dtdata_s</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structtextspan__t" kind="struct" language="C++" prot="public">
+    <compoundname>textspan_t</compoundname>
+    <includes refid="textspan_8h" local="no">textspan.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtextspan__t_1a31a8ceef5544790802908441b9f60d7c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* textspan_t::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="59" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1abffd51901f2150a45535fcb6d903e2d5" prot="public" static="no" mutable="no">
+        <type><ref refid="structtextfont__t" kindref="compound">textfont_t</ref> *</type>
+        <definition>textfont_t* textspan_t::font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="60" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1a4e63eb99a9a5dbc29b4e57bd5d9e7d84" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* textspan_t::layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1af4b2c72495e663712d59173149b542bc" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* textspan_t::free_layout) (void *layout)</definition>
+        <argsstring>)(void *layout)</argsstring>
+        <name>free_layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="62" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1a2721db6774a1a6d174fb7d40a99b1700" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textspan_t::yoffset_layout</definition>
+        <argsstring></argsstring>
+        <name>yoffset_layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="63" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1ae6c460d9cc5beb5dcad4939579332bac" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textspan_t::yoffset_centerline</definition>
+        <argsstring></argsstring>
+        <name>yoffset_centerline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="63" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1a83c75776d17b32647e2851cc97fb6f33" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf textspan_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="64" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextspan__t_1a4b35e6b131ae224e0f6b71a66925a8b7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char textspan_t::just</definition>
+        <argsstring></argsstring>
+        <name>just</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="65" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6017">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="6010" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="6016">
+        <label>void *</label>
+      </node>
+      <node id="6013">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="6012" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="6014" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="6008">
+        <label>textspan_t</label>
+        <link refid="structtextspan__t"/>
+        <childnode refid="6009" relation="usage">
+          <edgelabel>free_layout</edgelabel>
+        </childnode>
+        <childnode refid="6010" relation="usage">
+          <edgelabel>yoffset_layout</edgelabel>
+          <edgelabel>yoffset_centerline</edgelabel>
+        </childnode>
+        <childnode refid="6011" relation="usage">
+          <edgelabel>font</edgelabel>
+        </childnode>
+        <childnode refid="6012" relation="usage">
+          <edgelabel>str</edgelabel>
+          <edgelabel>just</edgelabel>
+        </childnode>
+        <childnode refid="6016" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+        <childnode refid="6017" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="6009">
+        <label>void(*)(void *layout)</label>
+      </node>
+      <node id="6014">
+        <label>int</label>
+      </node>
+      <node id="6010">
+        <label>double</label>
+      </node>
+      <node id="6015">
+        <label>unsigned</label>
+      </node>
+      <node id="6012">
+        <label>char</label>
+      </node>
+      <node id="6011">
+        <label>textfont_t</label>
+        <link refid="structtextfont__t"/>
+        <childnode refid="6010" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="6012" relation="usage">
+          <edgelabel>name</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="6013" relation="usage">
+          <edgelabel>postscript_alias</edgelabel>
+        </childnode>
+        <childnode refid="6015" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/textspan.h" line="58" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="58" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structtextspan__t_1abffd51901f2150a45535fcb6d903e2d5" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>font</name></member>
+      <member refid="structtextspan__t_1af4b2c72495e663712d59173149b542bc" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>free_layout</name></member>
+      <member refid="structtextspan__t_1a4b35e6b131ae224e0f6b71a66925a8b7" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>just</name></member>
+      <member refid="structtextspan__t_1a4e63eb99a9a5dbc29b4e57bd5d9e7d84" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>layout</name></member>
+      <member refid="structtextspan__t_1a83c75776d17b32647e2851cc97fb6f33" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>size</name></member>
+      <member refid="structtextspan__t_1a31a8ceef5544790802908441b9f60d7c" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>str</name></member>
+      <member refid="structtextspan__t_1ae6c460d9cc5beb5dcad4939579332bac" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>yoffset_centerline</name></member>
+      <member refid="structtextspan__t_1a2721db6774a1a6d174fb7d40a99b1700" prot="public" virt="non-virtual"><scope>textspan_t</scope><name>yoffset_layout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

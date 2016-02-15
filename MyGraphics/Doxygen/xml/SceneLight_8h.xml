@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SceneLight_8h" kind="file" language="C++">
+    <compoundname>SceneLight.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Camera2_8h" local="yes">Camera2.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includedby refid="Application_8cpp" local="yes">MyGraphics/Source/Application.cpp</includedby>
+    <includedby refid="SceneLight_8cpp" local="yes">MyGraphics/Source/SceneLight.cpp</includedby>
+    <incdepgraph>
+      <node id="2860">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="2853">
+        <label>cmath</label>
+      </node>
+      <node id="2859">
+        <label>string</label>
+      </node>
+      <node id="2851">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2852" relation="include">
+        </childnode>
+        <childnode refid="2857" relation="include">
+        </childnode>
+      </node>
+      <node id="2861">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2862" relation="include">
+        </childnode>
+        <childnode refid="2863" relation="include">
+        </childnode>
+      </node>
+      <node id="2854">
+        <label>exception</label>
+      </node>
+      <node id="2848">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="2855">
+        <label>ctime</label>
+      </node>
+      <node id="2862">
+        <label>stack</label>
+      </node>
+      <node id="2864">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2865" relation="include">
+        </childnode>
+      </node>
+      <node id="2850">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2851" relation="include">
+        </childnode>
+      </node>
+      <node id="2856">
+        <label>cstdlib</label>
+      </node>
+      <node id="2857">
+        <label>iostream</label>
+      </node>
+      <node id="2849">
+        <label>Camera2.h</label>
+        <link refid="Camera2_8h"/>
+        <childnode refid="2850" relation="include">
+        </childnode>
+      </node>
+      <node id="2863">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2852" relation="include">
+        </childnode>
+        <childnode refid="2851" relation="include">
+        </childnode>
+      </node>
+      <node id="2858">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2860" relation="include">
+        </childnode>
+      </node>
+      <node id="2852">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2853" relation="include">
+        </childnode>
+        <childnode refid="2854" relation="include">
+        </childnode>
+        <childnode refid="2855" relation="include">
+        </childnode>
+        <childnode refid="2856" relation="include">
+        </childnode>
+      </node>
+      <node id="2847">
+        <label>MyGraphics/Source/SceneLight.h</label>
+        <link refid="SceneLight.h"/>
+        <childnode refid="2848" relation="include">
+        </childnode>
+        <childnode refid="2849" relation="include">
+        </childnode>
+        <childnode refid="2858" relation="include">
+        </childnode>
+        <childnode refid="2861" relation="include">
+        </childnode>
+        <childnode refid="2864" relation="include">
+        </childnode>
+      </node>
+      <node id="2865">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2863" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2868">
+        <label>MyGraphics/Source/SceneLight.cpp</label>
+        <link refid="SceneLight_8cpp"/>
+      </node>
+      <node id="2867">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2866">
+        <label>MyGraphics/Source/SceneLight.h</label>
+        <link refid="SceneLight.h"/>
+        <childnode refid="2867" relation="include">
+        </childnode>
+        <childnode refid="2868" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSceneLight" prot="public">SceneLight</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SCENELIGHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCENELIGHT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera2_8h" kindref="compound">Camera2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classSceneLight" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSceneLight" kindref="compound">SceneLight</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a95fc50050f9976a904bfdcfc8f661fb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a95fc50050f9976a904bfdcfc8f661fb2" kindref="member">GEO_CUBE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="15" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a009f1e75bd8ba5d2006c1df7151ead09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a009f1e75bd8ba5d2006c1df7151ead09" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="16" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a50989f6e4c2994d4dc5e3edc8a32553f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a50989f6e4c2994d4dc5e3edc8a32553f" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="17" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a4b9d56dfba4d977a8e2d1cf1f6a783ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a4b9d56dfba4d977a8e2d1cf1f6a783ad" kindref="member">GEO_CIRCLE</ref>,</highlight></codeline>
+<codeline lineno="18" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a564fcc7f3816a473b8055e95b4218bf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a564fcc7f3816a473b8055e95b4218bf3" kindref="member">GEO_RING</ref>,</highlight></codeline>
+<codeline lineno="19" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0acbe77757162451e061299fd56dc055dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0acbe77757162451e061299fd56dc055dd" kindref="member">GEO_SPHERE</ref>,</highlight></codeline>
+<codeline lineno="20" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2146b3647c14879a0222caec62772892" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2146b3647c14879a0222caec62772892" kindref="member">GEO_LIGHTBALL</ref>,</highlight></codeline>
+<codeline lineno="21" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a129feba049d327d28a6f8fc938a837a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a129feba049d327d28a6f8fc938a837a5" kindref="member">GEO_CONE</ref>,</highlight></codeline>
+<codeline lineno="22" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a9242cc3c7a412bf0f7da9562abaf3160" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a9242cc3c7a412bf0f7da9562abaf3160" kindref="member">GEO_CYLIN</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2f956110dd89d61c5bae653b133f17cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2f956110dd89d61c5bae653b133f17cd" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8aa286e4b14c9176be1c3579cc8c893400" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8aa286e4b14c9176be1c3579cc8c893400" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="29" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a2d4de7758cc543a59bc19d7f7c9885eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a2d4de7758cc543a59bc19d7f7c9885eb" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="30" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8af921ddacbb75374809cd5771ebb7d875" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8af921ddacbb75374809cd5771ebb7d875" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a6dbf4d3dfeefbe284fe74675986a6fde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a6dbf4d3dfeefbe284fe74675986a6fde" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="32" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a565b12d6319bbb2a73173fdc8df1413b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a565b12d6319bbb2a73173fdc8df1413b" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="33" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a62d0b897abb74a78e48a3d7dd2b03a52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a62d0b897abb74a78e48a3d7dd2b03a52" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="34" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a148d404d6bfb8710984bf6c1b69f393e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a148d404d6bfb8710984bf6c1b69f393e" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="35" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a7f151bbfe1a4f66d61764c1b3864903a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a7f151bbfe1a4f66d61764c1b3864903a" kindref="member">U_LIGHT0_POSITION</ref>,</highlight></codeline>
+<codeline lineno="36" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8afbad572814b9b524b1ab71d320eaacb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8afbad572814b9b524b1ab71d320eaacb3" kindref="member">U_LIGHT0_COLOR</ref>,</highlight></codeline>
+<codeline lineno="37" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a83e679a211fc3aa54acbd759d166af66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a83e679a211fc3aa54acbd759d166af66" kindref="member">U_LIGHT0_POWER</ref>,</highlight></codeline>
+<codeline lineno="38" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8ab1b9a4152fc837fbc173ed22de1c59f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8ab1b9a4152fc837fbc173ed22de1c59f7" kindref="member">U_LIGHT0_KC</ref>,</highlight></codeline>
+<codeline lineno="39" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a392500b2b7fbea13d4f79d2de7149fd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a392500b2b7fbea13d4f79d2de7149fd7" kindref="member">U_LIGHT0_KL</ref>,</highlight></codeline>
+<codeline lineno="40" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a4ec4fbe93314371f523eda273df6bd05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a4ec4fbe93314371f523eda273df6bd05" kindref="member">U_LIGHT0_KQ</ref>,</highlight></codeline>
+<codeline lineno="41" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a68cf74e372ac5879fe0ba1bb010709d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a68cf74e372ac5879fe0ba1bb010709d3" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a239aa43ac86142ecdd24748da5a51ad9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a239aa43ac86142ecdd24748da5a51ad9" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a2e637306a7bf3a15067e403c8ef5f89e" kindref="member">SceneLight</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneLight_1a51e291c1be692276273992ca8aeac3be" kindref="member">~SceneLight</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a23681b3a667399752645d5763ddc72a7" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a9088eb7ba6a1d55ebe9e0094c67281bf" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1afe406a984481b2bc235c445beb2165f9" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" kindref="member">RenderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classSceneLight_1af258066c9eaa58422a208084d91c775c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1af258066c9eaa58422a208084d91c775c" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="57" refid="classSceneLight_1a769551d7547af54cadaccce8eec150c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*<ref refid="classSceneLight_1a769551d7547af54cadaccce8eec150c5" kindref="member">meshList</ref>[<ref refid="classSceneLight_1a45a5452b78e8e97d39d804783d9411c0a2f956110dd89d61c5bae653b133f17cd" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classSceneLight_1ad0bc48560f12a6d3f4231d64b1cff0cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1ad0bc48560f12a6d3f4231d64b1cff0cb" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a0f0e1834fd5de220ff20ce53bdf739c2" kindref="member">m_parameters</ref>[<ref refid="classSceneLight_1a54fedce14e740c7206006dc51fb1e8c8a239aa43ac86142ecdd24748da5a51ad9" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classSceneLight_1a036f6ec2d54d2e9f5788974558f5a915" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneLight_1a036f6ec2d54d2e9f5788974558f5a915" kindref="member">rotateAngle</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classSceneLight_1a11dfab1563f852b78978481b698f4dde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera2" kindref="compound">Camera2</ref><sp/><ref refid="classSceneLight_1a11dfab1563f852b78978481b698f4dde" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight" kindref="compound">Light</ref><sp/><ref refid="classSceneLight_1a71a40acaaa211555e16f860ebbcf64ec" kindref="member">light</ref>[10];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classSceneLight_1ae1147a8b1bc56bb49498e9792ec78574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSceneLight_1aac6fd53c289409a7ff06c42c2a1329ec" kindref="member">modelStack</ref>,<sp/><ref refid="classSceneLight_1ae1147a8b1bc56bb49498e9792ec78574" kindref="member">viewStack</ref>,<sp/><ref refid="classSceneLight_1a27bb9951ca602fb1259f8c3760d33dca" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/SceneLight.h"/>
+  </compounddef>
+</doxygen>

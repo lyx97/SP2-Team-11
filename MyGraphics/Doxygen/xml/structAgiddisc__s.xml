@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgiddisc__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agiddisc_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgiddisc__s_1a81f9c08770ca2eb44ad8417549118cc5" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* Agiddisc_s::open) (Agraph_t *g, Agdisc_t *)</definition>
+        <argsstring>)(Agraph_t *g, Agdisc_t *)</argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="159" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiddisc__s_1a5cb4e254e737294e6d5e6a880f31884b" prot="public" static="no" mutable="no">
+        <type>long(*</type>
+        <definition>long(* Agiddisc_s::map) (void *state, int objtype, char *str, unsigned long *id, int createflag)</definition>
+        <argsstring>)(void *state, int objtype, char *str, unsigned long *id, int createflag)</argsstring>
+        <name>map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="160" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiddisc__s_1adab20c9a235caf2bb4a9a3902a756168" prot="public" static="no" mutable="no">
+        <type>long(*</type>
+        <definition>long(* Agiddisc_s::alloc) (void *state, int objtype, unsigned long id)</definition>
+        <argsstring>)(void *state, int objtype, unsigned long id)</argsstring>
+        <name>alloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="162" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiddisc__s_1a30b450fd67442c0495550b16970f8cb5" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Agiddisc_s::free) (void *state, int objtype, unsigned long id)</definition>
+        <argsstring>)(void *state, int objtype, unsigned long id)</argsstring>
+        <name>free</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="163" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiddisc__s_1a9656eb0411b7a41c2135f7166989e5ff" prot="public" static="no" mutable="no">
+        <type>char *(*</type>
+        <definition>char*(* Agiddisc_s::print) (void *state, int objtype, unsigned long id)</definition>
+        <argsstring>)(void *state, int objtype, unsigned long id)</argsstring>
+        <name>print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="164" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiddisc__s_1a67673147fdf87cec41296dc37406d3ea" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Agiddisc_s::close) (void *state)</definition>
+        <argsstring>)(void *state)</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="165" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiddisc__s_1a3bd7dd8eeab462cfd538f3019d283c64" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Agiddisc_s::idregister) (void *state, int objtype, void *obj)</definition>
+        <argsstring>)(void *state, int objtype, void *obj)</argsstring>
+        <name>idregister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="166" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3866">
+        <label>long(*)(void *state, int objtype, char *str, unsigned long *id, int createflag)</label>
+      </node>
+      <node id="3869">
+        <label>long(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="3865">
+        <label>void(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="3871">
+        <label>void(*)(void *state, int objtype, void *obj)</label>
+      </node>
+      <node id="3864">
+        <label>Agiddisc_s</label>
+        <link refid="structAgiddisc__s"/>
+        <childnode refid="3865" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="3866" relation="usage">
+          <edgelabel>map</edgelabel>
+        </childnode>
+        <childnode refid="3867" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+        <childnode refid="3868" relation="usage">
+          <edgelabel>print</edgelabel>
+        </childnode>
+        <childnode refid="3869" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="3870" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="3871" relation="usage">
+          <edgelabel>idregister</edgelabel>
+        </childnode>
+      </node>
+      <node id="3870">
+        <label>void(*)(void *state)</label>
+      </node>
+      <node id="3867">
+        <label>void *(*)(Agraph_t *g, Agdisc_t *)</label>
+      </node>
+      <node id="3868">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="158" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="158" bodyend="167"/>
+    <listofallmembers>
+      <member refid="structAgiddisc__s_1adab20c9a235caf2bb4a9a3902a756168" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>alloc</name></member>
+      <member refid="structAgiddisc__s_1a67673147fdf87cec41296dc37406d3ea" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>close</name></member>
+      <member refid="structAgiddisc__s_1a30b450fd67442c0495550b16970f8cb5" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>free</name></member>
+      <member refid="structAgiddisc__s_1a3bd7dd8eeab462cfd538f3019d283c64" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>idregister</name></member>
+      <member refid="structAgiddisc__s_1a5cb4e254e737294e6d5e6a880f31884b" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>map</name></member>
+      <member refid="structAgiddisc__s_1a81f9c08770ca2eb44ad8417549118cc5" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>open</name></member>
+      <member refid="structAgiddisc__s_1a9656eb0411b7a41c2135f7166989e5ff" prot="public" virt="non-virtual"><scope>Agiddisc_s</scope><name>print</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

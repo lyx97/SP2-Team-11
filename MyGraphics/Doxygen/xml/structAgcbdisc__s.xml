@@ -1,0 +1,1248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgcbdisc__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agcbdisc_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgcbdisc__s_1a15d357569202b04cf212ccbe4b73977e" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a328f1953f5f8ccc75b7ea4bfbfcc3a6b" kindref="member">agobjfn_t</ref></type>
+        <definition>agobjfn_t Agcbdisc_s::ins</definition>
+        <argsstring></argsstring>
+        <name>ins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="210" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgcbdisc__s_1a000572ce35b9b5434bedab66db20c6b6" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a1346110b9185ce19585655259ebd3f54" kindref="member">agobjupdfn_t</ref></type>
+        <definition>agobjupdfn_t Agcbdisc_s::mod</definition>
+        <argsstring></argsstring>
+        <name>mod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="211" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgcbdisc__s_1ae615345d124523a5f0afe31dca91c626" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a328f1953f5f8ccc75b7ea4bfbfcc3a6b" kindref="member">agobjfn_t</ref></type>
+        <definition>agobjfn_t Agcbdisc_s::del</definition>
+        <argsstring></argsstring>
+        <name>del</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="212" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgcbdisc__s_1a0a458317ba4d08aeaf9e8e99cdb744a2" prot="public" static="no" mutable="no">
+        <type>struct Agcbdisc_s::@2</type>
+        <definition>struct Agcbdisc_s::@2  Agcbdisc_s::graph</definition>
+        <argsstring></argsstring>
+        <name>graph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgcbdisc__s_1aed0867fe05713fee2a52e441c839effd" prot="public" static="no" mutable="no">
+        <type>struct Agcbdisc_s::@2</type>
+        <definition>struct Agcbdisc_s::@2  Agcbdisc_s::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgcbdisc__s_1af39d585419a13e1c6e0a1a269acead4d" prot="public" static="no" mutable="no">
+        <type>struct Agcbdisc_s::@2</type>
+        <definition>struct Agcbdisc_s::@2  Agcbdisc_s::edge</definition>
+        <argsstring></argsstring>
+        <name>edge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="213" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3172">
+        <label></label>
+      </node>
+      <node id="3230">
+        <label>rank_t</label>
+        <link refid="structrank__t"/>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>ht1</edgelabel>
+          <edgelabel>ht2</edgelabel>
+          <edgelabel>pht1</edgelabel>
+          <edgelabel>pht2</edgelabel>
+        </childnode>
+        <childnode refid="3223" relation="usage">
+          <edgelabel>candidate</edgelabel>
+          <edgelabel>valid</edgelabel>
+        </childnode>
+        <childnode refid="3215" relation="usage">
+          <edgelabel>av</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>n</edgelabel>
+          <edgelabel>cache_nc</edgelabel>
+          <edgelabel>an</edgelabel>
+        </childnode>
+        <childnode refid="3231" relation="usage">
+          <edgelabel>flat</edgelabel>
+        </childnode>
+      </node>
+      <node id="3213">
+        <label>void *(*)(Agdisc_t *)</label>
+      </node>
+      <node id="3246">
+        <label>Agdict_t</label>
+        <link refid="structAgdict__t"/>
+        <childnode refid="3247" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>dict</edgelabel>
+        </childnode>
+        <childnode refid="3227" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3195">
+        <label>Void_t *</label>
+      </node>
+      <node id="3180">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="3233">
+        <label>ratio_t</label>
+      </node>
+      <node id="3204">
+        <label>long(*)(void *state, int objtype, char *str, unsigned long *id, int createflag)</label>
+      </node>
+      <node id="3179">
+        <label>void *</label>
+      </node>
+      <node id="3218">
+        <label>elist</label>
+        <link refid="structelist"/>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="3219" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="3225">
+        <label>void(*)(GVJ_t *job, node_t *n)</label>
+      </node>
+      <node id="3206">
+        <label>long(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="3198">
+        <label>Agclos_s</label>
+        <link refid="structAgclos__s"/>
+        <childnode refid="3199" relation="usage">
+          <edgelabel>cb</edgelabel>
+        </childnode>
+        <childnode refid="3200" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>strdict</edgelabel>
+          <edgelabel>lookup_by_id</edgelabel>
+          <edgelabel>lookup_by_name</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>callbacks_enabled</edgelabel>
+          <edgelabel>seq</edgelabel>
+        </childnode>
+        <childnode refid="3214" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+      </node>
+      <node id="3191">
+        <label>Dtcompar_f</label>
+      </node>
+      <node id="3212">
+        <label>void *(*)(void *state, void *ptr, size_t old, size_t req)</label>
+      </node>
+      <node id="3215">
+        <label>Agnode_s</label>
+        <link refid="structAgnode__s"/>
+        <childnode refid="3162" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="3184" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3216" relation="usage">
+          <edgelabel>mainsub</edgelabel>
+        </childnode>
+      </node>
+      <node id="3164">
+        <label>Agnode_t</label>
+        <link refid="structAgnode__t"/>
+        <childnode refid="3165" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="3163" relation="usage">
+          <edgelabel>attr</edgelabel>
+        </childnode>
+        <childnode refid="3162" relation="usage">
+          <edgelabel>graph</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>handle</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>pad</edgelabel>
+        </childnode>
+        <childnode refid="3227" relation="usage">
+          <edgelabel>didset</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3181">
+        <label>Agraph_s</label>
+        <link refid="structAgraph__s"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="3162" relation="usage">
+          <edgelabel>root</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="3183" relation="usage">
+          <edgelabel>desc</edgelabel>
+        </childnode>
+        <childnode refid="3184" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>e_id</edgelabel>
+          <edgelabel>n_seq</edgelabel>
+          <edgelabel>g_dict</edgelabel>
+          <edgelabel>e_seq</edgelabel>
+          <edgelabel>n_id</edgelabel>
+        </childnode>
+        <childnode refid="3198" relation="usage">
+          <edgelabel>clos</edgelabel>
+        </childnode>
+      </node>
+      <node id="3162">
+        <label>Agraph_t</label>
+        <link refid="structAgraph__t"/>
+        <childnode refid="3163" relation="usage">
+          <edgelabel>attr</edgelabel>
+        </childnode>
+        <childnode refid="3162" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="3164" relation="usage">
+          <edgelabel>meta_node</edgelabel>
+        </childnode>
+        <childnode refid="3228" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="3238" relation="usage">
+          <edgelabel>proto</edgelabel>
+        </childnode>
+        <childnode refid="3245" relation="usage">
+          <edgelabel>univ</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>kind</edgelabel>
+          <edgelabel>handle</edgelabel>
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>inedges</edgelabel>
+          <edgelabel>outedges</edgelabel>
+          <edgelabel>nodes</edgelabel>
+        </childnode>
+        <childnode refid="3227" relation="usage">
+          <edgelabel>didset</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3227">
+        <label>char *</label>
+      </node>
+      <node id="3169">
+        <label>htmllabel_t *</label>
+      </node>
+      <node id="3241">
+        <label>Ppoly_t</label>
+        <link refid="structPpoly__t"/>
+        <childnode refid="3242" relation="usage">
+          <edgelabel>ps</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>pn</edgelabel>
+        </childnode>
+      </node>
+      <node id="3203">
+        <label>void(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="3243">
+        <label>splines</label>
+        <link refid="structsplines"/>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="3217" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="3244" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="3209">
+        <label>Agmemdisc_s</label>
+        <link refid="structAgmemdisc__s"/>
+        <childnode refid="3210" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="3211" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="3207" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="3212" relation="usage">
+          <edgelabel>resize</edgelabel>
+        </childnode>
+        <childnode refid="3213" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+      </node>
+      <node id="3165">
+        <label>Agnodeinfo_t</label>
+        <link refid="structAgnodeinfo__t"/>
+        <childnode refid="3166" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="3168" relation="usage">
+          <edgelabel>xlabel</edgelabel>
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>mval</edgelabel>
+          <edgelabel>rw</edgelabel>
+          <edgelabel>dist</edgelabel>
+          <edgelabel>height</edgelabel>
+          <edgelabel>lw</edgelabel>
+          <edgelabel>ht</edgelabel>
+          <edgelabel>pad</edgelabel>
+          <edgelabel>pos</edgelabel>
+        </childnode>
+        <childnode refid="3181" relation="usage">
+          <edgelabel>clust</edgelabel>
+        </childnode>
+        <childnode refid="3215" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>outleaf</edgelabel>
+          <edgelabel>inleaf</edgelabel>
+          <edgelabel>next</edgelabel>
+          <edgelabel>rep</edgelabel>
+          <edgelabel>UF_parent</edgelabel>
+          <edgelabel>set</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>weight_class</edgelabel>
+          <edgelabel>onstack</edgelabel>
+          <edgelabel>ranktype</edgelabel>
+          <edgelabel>state</edgelabel>
+          <edgelabel>mark</edgelabel>
+          <edgelabel>node_type</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>heapindex</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>priority</edgelabel>
+          <edgelabel>lim</edgelabel>
+          <edgelabel>hops</edgelabel>
+          <edgelabel>UF_size</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>low</edgelabel>
+          <edgelabel>rank</edgelabel>
+        </childnode>
+        <childnode refid="3217" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="3218" relation="usage">
+          <edgelabel>tree_out</edgelabel>
+          <edgelabel>save_out</edgelabel>
+          <edgelabel>flat_out</edgelabel>
+          <edgelabel>flat_in</edgelabel>
+          <edgelabel>in</edgelabel>
+          <edgelabel>out</edgelabel>
+          <edgelabel>other</edgelabel>
+          <edgelabel>save_in</edgelabel>
+          <edgelabel>tree_in</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>clustnode</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+          <edgelabel>pinned</edgelabel>
+          <edgelabel>has_port</edgelabel>
+        </childnode>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>alg</edgelabel>
+          <edgelabel>shape_info</edgelabel>
+        </childnode>
+        <childnode refid="3220" relation="usage">
+          <edgelabel>shape</edgelabel>
+        </childnode>
+        <childnode refid="3219" relation="usage">
+          <edgelabel>par</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>coord</edgelabel>
+        </childnode>
+      </node>
+      <node id="3214">
+        <label>Agdstate_s</label>
+        <link refid="structAgdstate__s"/>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="3192">
+        <label>Dtmemory_f</label>
+      </node>
+      <node id="3247">
+        <label>Agsym_t</label>
+        <link refid="structAgsym__t"/>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>value</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>printed</edgelabel>
+          <edgelabel>fixed</edgelabel>
+        </childnode>
+      </node>
+      <node id="3208">
+        <label>void(*)(void *state, int objtype, void *obj)</label>
+      </node>
+      <node id="3185">
+        <label>Agtag_s</label>
+        <link refid="structAgtag__s"/>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>attrwf</edgelabel>
+          <edgelabel>mtflock</edgelabel>
+          <edgelabel>objtype</edgelabel>
+          <edgelabel>seq</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="3186">
+        <label>_dt_s</label>
+        <link refid="struct__dt__s"/>
+        <childnode refid="3187" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="3194" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="3195" relation="usage">
+          <edgelabel>user</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>type</edgelabel>
+          <edgelabel>nview</edgelabel>
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>view</edgelabel>
+          <edgelabel>walk</edgelabel>
+        </childnode>
+        <childnode refid="3192" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="3196" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+        <childnode refid="3197" relation="usage">
+          <edgelabel>meth</edgelabel>
+        </childnode>
+      </node>
+      <node id="3161">
+        <label>Agcbdisc_s</label>
+        <link refid="structAgcbdisc__s"/>
+        <childnode refid="3162" relation="usage">
+          <edgelabel>del</edgelabel>
+          <edgelabel>ins</edgelabel>
+          <edgelabel>mod</edgelabel>
+        </childnode>
+        <childnode refid="3172" relation="usage">
+          <edgelabel>node</edgelabel>
+          <edgelabel>graph</edgelabel>
+          <edgelabel>edge</edgelabel>
+        </childnode>
+      </node>
+      <node id="3232">
+        <label>layout_t</label>
+        <link refid="structlayout__t"/>
+        <childnode refid="3233" relation="usage">
+          <edgelabel>ratio_kind</edgelabel>
+        </childnode>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>ratio</edgelabel>
+          <edgelabel>scale</edgelabel>
+          <edgelabel>dpi</edgelabel>
+          <edgelabel>quantum</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>filled</edgelabel>
+          <edgelabel>centered</edgelabel>
+          <edgelabel>landscape</edgelabel>
+        </childnode>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>xdots</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>page</edgelabel>
+          <edgelabel>size</edgelabel>
+          <edgelabel>margin</edgelabel>
+        </childnode>
+      </node>
+      <node id="3211">
+        <label>void *(*)(void *state, size_t req)</label>
+      </node>
+      <node id="3178">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="3184">
+        <label>Agobj_s</label>
+        <link refid="structAgobj__s"/>
+        <childnode refid="3166" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="3185" relation="usage">
+          <edgelabel>tag</edgelabel>
+        </childnode>
+      </node>
+      <node id="3236">
+        <label>long</label>
+      </node>
+      <node id="3202">
+        <label>Agiddisc_s</label>
+        <link refid="structAgiddisc__s"/>
+        <childnode refid="3203" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="3204" relation="usage">
+          <edgelabel>map</edgelabel>
+        </childnode>
+        <childnode refid="3205" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>print</edgelabel>
+        </childnode>
+        <childnode refid="3206" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="3207" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="3208" relation="usage">
+          <edgelabel>idregister</edgelabel>
+        </childnode>
+      </node>
+      <node id="3223">
+        <label>unsigned char</label>
+      </node>
+      <node id="3194">
+        <label>_dtdata_s</label>
+        <link refid="struct__dtdata__s"/>
+        <childnode refid="3172" relation="usage">
+          <edgelabel>hh</edgelabel>
+        </childnode>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>here</edgelabel>
+          <edgelabel>_htab</edgelabel>
+          <edgelabel>_head</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>loop</edgelabel>
+          <edgelabel>ntab</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>minp</edgelabel>
+        </childnode>
+      </node>
+      <node id="3175">
+        <label>textspan_t</label>
+        <link refid="structtextspan__t"/>
+        <childnode refid="3176" relation="usage">
+          <edgelabel>free_layout</edgelabel>
+        </childnode>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>yoffset_layout</edgelabel>
+          <edgelabel>yoffset_centerline</edgelabel>
+        </childnode>
+        <childnode refid="3177" relation="usage">
+          <edgelabel>font</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>str</edgelabel>
+          <edgelabel>just</edgelabel>
+        </childnode>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="3220">
+        <label>shape_desc</label>
+        <link refid="structshape__desc"/>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="3221" relation="usage">
+          <edgelabel>fns</edgelabel>
+        </childnode>
+        <childnode refid="3226" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>usershape</edgelabel>
+        </childnode>
+      </node>
+      <node id="3176">
+        <label>void(*)(void *layout)</label>
+      </node>
+      <node id="3173">
+        <label>int</label>
+      </node>
+      <node id="3207">
+        <label>void(*)(void *state)</label>
+      </node>
+      <node id="3168">
+        <label>textlabel_t</label>
+        <link refid="structtextlabel__t"/>
+        <childnode refid="3169" relation="usage">
+          <edgelabel>html</edgelabel>
+        </childnode>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>fontsize</edgelabel>
+        </childnode>
+        <childnode refid="3171" relation="usage">
+          <edgelabel>nspans</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>valign</edgelabel>
+          <edgelabel>fontname</edgelabel>
+          <edgelabel>fontcolor</edgelabel>
+          <edgelabel>text</edgelabel>
+        </childnode>
+        <childnode refid="3172" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>charset</edgelabel>
+        </childnode>
+        <childnode refid="3172" relation="usage">
+          <edgelabel>txt</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>set</edgelabel>
+          <edgelabel>html</edgelabel>
+        </childnode>
+        <childnode refid="3175" relation="usage">
+          <edgelabel>span</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>space</edgelabel>
+          <edgelabel>dimen</edgelabel>
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="3234">
+        <label>fontname_kind</label>
+      </node>
+      <node id="3196">
+        <label>Dtsearch_f</label>
+      </node>
+      <node id="3170">
+        <label>double</label>
+      </node>
+      <node id="3240">
+        <label>Agedgeinfo_t</label>
+        <link refid="structAgedgeinfo__t"/>
+        <childnode refid="3166" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="3222" relation="usage">
+          <edgelabel>tail_port</edgelabel>
+          <edgelabel>head_port</edgelabel>
+        </childnode>
+        <childnode refid="3241" relation="usage">
+          <edgelabel>path</edgelabel>
+        </childnode>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>dist</edgelabel>
+          <edgelabel>factor</edgelabel>
+        </childnode>
+        <childnode refid="3168" relation="usage">
+          <edgelabel>head_label</edgelabel>
+          <edgelabel>tail_label</edgelabel>
+          <edgelabel>xlabel</edgelabel>
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="3243" relation="usage">
+          <edgelabel>spl</edgelabel>
+        </childnode>
+        <childnode refid="3171" relation="usage">
+          <edgelabel>count</edgelabel>
+          <edgelabel>xpenalty</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>adjacent</edgelabel>
+          <edgelabel>label_ontop</edgelabel>
+          <edgelabel>edge_type</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>tree_index</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>cutvalue</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>minlen</edgelabel>
+          <edgelabel>conc_opp_flag</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+        </childnode>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>alg</edgelabel>
+        </childnode>
+        <childnode refid="3219" relation="usage">
+          <edgelabel>to_virt</edgelabel>
+          <edgelabel>to_orig</edgelabel>
+        </childnode>
+      </node>
+      <node id="3244">
+        <label>bezier</label>
+        <link refid="structbezier"/>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>sflag</edgelabel>
+          <edgelabel>eflag</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>ep</edgelabel>
+          <edgelabel>sp</edgelabel>
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="3242">
+        <label>Pxy_t</label>
+        <link refid="structPxy__t"/>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="3197">
+        <label>_dtmethod_s</label>
+        <link refid="struct__dtmethod__s"/>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="3196" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3237">
+        <label>GVC_t *</label>
+      </node>
+      <node id="3245">
+        <label>Agdata_t</label>
+        <link refid="structAgdata__t"/>
+        <childnode refid="3246" relation="usage">
+          <edgelabel>globattr</edgelabel>
+          <edgelabel>edgeattr</edgelabel>
+          <edgelabel>nodeattr</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>max_edge_id</edgelabel>
+          <edgelabel>max_node_id</edgelabel>
+        </childnode>
+        <childnode refid="3186" relation="usage">
+          <edgelabel>node_dict</edgelabel>
+        </childnode>
+      </node>
+      <node id="3190">
+        <label>Dtmake_f</label>
+      </node>
+      <node id="3235">
+        <label>nlist_t</label>
+        <link refid="structnlist__t"/>
+        <childnode refid="3215" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="3166">
+        <label>Agrec_s</label>
+        <link refid="structAgrec__s"/>
+        <childnode refid="3166" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3171">
+        <label>short</label>
+      </node>
+      <node id="3210">
+        <label>void(*)(void *state, void *ptr)</label>
+      </node>
+      <node id="3200">
+        <label>Agdisc_s</label>
+        <link refid="structAgdisc__s"/>
+        <childnode refid="3201" relation="usage">
+          <edgelabel>io</edgelabel>
+        </childnode>
+        <childnode refid="3202" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="3209" relation="usage">
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="3231">
+        <label>adjmatrix_t</label>
+        <link refid="structadjmatrix__t"/>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>nrows</edgelabel>
+          <edgelabel>ncols</edgelabel>
+        </childnode>
+      </node>
+      <node id="3193">
+        <label>Dthash_f</label>
+      </node>
+      <node id="3229">
+        <label>void(*)(graph_t *g)</label>
+      </node>
+      <node id="3238">
+        <label>Agproto_t</label>
+        <link refid="structAgproto__t"/>
+        <childnode refid="3239" relation="usage">
+          <edgelabel>e</edgelabel>
+        </childnode>
+        <childnode refid="3164" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+        <childnode refid="3238" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="3222">
+        <label>port</label>
+        <link refid="structport"/>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>theta</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="3217" relation="usage">
+          <edgelabel>bp</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>constrained</edgelabel>
+          <edgelabel>defined</edgelabel>
+          <edgelabel>side</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>dyna</edgelabel>
+          <edgelabel>clip</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="3163">
+        <label>char **</label>
+      </node>
+      <node id="3205">
+        <label>void *(*)(Agraph_t *g, Agdisc_t *)</label>
+      </node>
+      <node id="3187">
+        <label>_dtdisc_s</label>
+        <link refid="struct__dtdisc__s"/>
+        <childnode refid="3188" relation="usage">
+          <edgelabel>freef</edgelabel>
+        </childnode>
+        <childnode refid="3189" relation="usage">
+          <edgelabel>eventf</edgelabel>
+        </childnode>
+        <childnode refid="3190" relation="usage">
+          <edgelabel>makef</edgelabel>
+        </childnode>
+        <childnode refid="3191" relation="usage">
+          <edgelabel>comparf</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>key</edgelabel>
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="3192" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="3193" relation="usage">
+          <edgelabel>hashf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3228">
+        <label>Agraphinfo_t</label>
+        <link refid="structAgraphinfo__t"/>
+        <childnode refid="3229" relation="usage">
+          <edgelabel>cleanup</edgelabel>
+        </childnode>
+        <childnode refid="3166" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="3230" relation="usage">
+          <edgelabel>rank</edgelabel>
+        </childnode>
+        <childnode refid="3232" relation="usage">
+          <edgelabel>drawing</edgelabel>
+        </childnode>
+        <childnode refid="3234" relation="usage">
+          <edgelabel>fontnames</edgelabel>
+        </childnode>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>ht1</edgelabel>
+          <edgelabel>ht2</edgelabel>
+          <edgelabel>dist</edgelabel>
+          <edgelabel>sum_t</edgelabel>
+          <edgelabel>t</edgelabel>
+          <edgelabel>spring</edgelabel>
+        </childnode>
+        <childnode refid="3168" relation="usage">
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="3181" relation="usage">
+          <edgelabel>dotroot</edgelabel>
+          <edgelabel>clust</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="3215" relation="usage">
+          <edgelabel>ln</edgelabel>
+          <edgelabel>neato_nlist</edgelabel>
+          <edgelabel>nlist</edgelabel>
+          <edgelabel>rankleader</edgelabel>
+          <edgelabel>leader</edgelabel>
+          <edgelabel>maxrep</edgelabel>
+          <edgelabel>minrep</edgelabel>
+          <edgelabel>rn</edgelabel>
+          <edgelabel>maxset</edgelabel>
+          <edgelabel>minset</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>label_pos</edgelabel>
+          <edgelabel>set_type</edgelabel>
+          <edgelabel>installed</edgelabel>
+        </childnode>
+        <childnode refid="3171" relation="usage">
+          <edgelabel>minrank</edgelabel>
+          <edgelabel>maxrank</edgelabel>
+        </childnode>
+        <childnode refid="3235" relation="usage">
+          <edgelabel>comp</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>ranksep</edgelabel>
+          <edgelabel>move</edgelabel>
+          <edgelabel>rankdir</edgelabel>
+          <edgelabel>nodesep</edgelabel>
+          <edgelabel>level</edgelabel>
+          <edgelabel>n_cluster</edgelabel>
+        </childnode>
+        <childnode refid="3217" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="3236" relation="usage">
+          <edgelabel>n_nodes</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>flags</edgelabel>
+          <edgelabel>has_sourcerank</edgelabel>
+          <edgelabel>expanded</edgelabel>
+          <edgelabel>has_images</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+          <edgelabel>has_sinkrank</edgelabel>
+          <edgelabel>odim</edgelabel>
+          <edgelabel>ndim</edgelabel>
+          <edgelabel>has_labels</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="3237" relation="usage">
+          <edgelabel>gvc</edgelabel>
+        </childnode>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>alg</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>border</edgelabel>
+        </childnode>
+      </node>
+      <node id="3201">
+        <label>Agiodisc_s</label>
+        <link refid="structAgiodisc__s"/>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>putstr</edgelabel>
+          <edgelabel>afread</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+      <node id="3226">
+        <label>polygon_t</label>
+        <link refid="structpolygon__t"/>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>distortion</edgelabel>
+          <edgelabel>skew</edgelabel>
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>peripheries</edgelabel>
+          <edgelabel>sides</edgelabel>
+          <edgelabel>regular</edgelabel>
+          <edgelabel>option</edgelabel>
+        </childnode>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+      <node id="3182">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="3172" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3174">
+        <label>unsigned</label>
+      </node>
+      <node id="3221">
+        <label>shape_functions</label>
+        <link refid="structshape__functions"/>
+        <childnode refid="3222" relation="usage">
+          <edgelabel>portfn</edgelabel>
+        </childnode>
+        <childnode refid="3223" relation="usage">
+          <edgelabel>insidefn</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>pboxfn</edgelabel>
+        </childnode>
+        <childnode refid="3224" relation="usage">
+          <edgelabel>freefn</edgelabel>
+          <edgelabel>initfn</edgelabel>
+        </childnode>
+        <childnode refid="3225" relation="usage">
+          <edgelabel>codefn</edgelabel>
+        </childnode>
+      </node>
+      <node id="3224">
+        <label>void(*)(node_t *)</label>
+      </node>
+      <node id="3199">
+        <label>Agcbstack_s</label>
+        <link refid="structAgcbstack__s"/>
+        <childnode refid="3199" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+        <childnode refid="3179" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="3161" relation="usage">
+          <edgelabel>f</edgelabel>
+        </childnode>
+      </node>
+      <node id="3188">
+        <label>Dtfree_f</label>
+      </node>
+      <node id="3183">
+        <label>Agdesc_s</label>
+        <link refid="structAgdesc__s"/>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>maingraph</edgelabel>
+          <edgelabel>no_write</edgelabel>
+          <edgelabel>has_attrs</edgelabel>
+          <edgelabel>no_loop</edgelabel>
+          <edgelabel>strict</edgelabel>
+          <edgelabel>directed</edgelabel>
+          <edgelabel>flatlock</edgelabel>
+          <edgelabel>has_cmpnd</edgelabel>
+        </childnode>
+      </node>
+      <node id="3167">
+        <label>char</label>
+      </node>
+      <node id="3216">
+        <label>Agsubnode_s</label>
+        <link refid="structAgsubnode__s"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>in_id</edgelabel>
+          <edgelabel>id_link</edgelabel>
+          <edgelabel>in_seq</edgelabel>
+          <edgelabel>out_seq</edgelabel>
+          <edgelabel>out_id</edgelabel>
+          <edgelabel>seq_link</edgelabel>
+        </childnode>
+        <childnode refid="3164" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="3219">
+        <label>Agedge_s</label>
+        <link refid="structAgedge__s"/>
+        <childnode refid="3182" relation="usage">
+          <edgelabel>id_link</edgelabel>
+          <edgelabel>seq_link</edgelabel>
+        </childnode>
+        <childnode refid="3164" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="3184" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="3239">
+        <label>Agedge_t</label>
+        <link refid="structAgedge__t"/>
+        <childnode refid="3164" relation="usage">
+          <edgelabel>head</edgelabel>
+          <edgelabel>tail</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>attr</edgelabel>
+          <edgelabel>didset</edgelabel>
+        </childnode>
+        <childnode refid="3173" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>printkey</edgelabel>
+          <edgelabel>handle</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="3240" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+      </node>
+      <node id="3189">
+        <label>Dtevent_f</label>
+      </node>
+      <node id="3177">
+        <label>textfont_t</label>
+        <link refid="structtextfont__t"/>
+        <childnode refid="3170" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="3167" relation="usage">
+          <edgelabel>name</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="3178" relation="usage">
+          <edgelabel>postscript_alias</edgelabel>
+        </childnode>
+        <childnode refid="3174" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="3217">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="3180" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="208" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="208" bodyend="214"/>
+    <listofallmembers>
+      <member refid="structAgcbdisc__s_1ae615345d124523a5f0afe31dca91c626" prot="public" virt="non-virtual"><scope>Agcbdisc_s</scope><name>del</name></member>
+      <member refid="structAgcbdisc__s_1af39d585419a13e1c6e0a1a269acead4d" prot="public" virt="non-virtual"><scope>Agcbdisc_s</scope><name>edge</name></member>
+      <member refid="structAgcbdisc__s_1a0a458317ba4d08aeaf9e8e99cdb744a2" prot="public" virt="non-virtual"><scope>Agcbdisc_s</scope><name>graph</name></member>
+      <member refid="structAgcbdisc__s_1a15d357569202b04cf212ccbe4b73977e" prot="public" virt="non-virtual"><scope>Agcbdisc_s</scope><name>ins</name></member>
+      <member refid="structAgcbdisc__s_1a000572ce35b9b5434bedab66db20c6b6" prot="public" virt="non-virtual"><scope>Agcbdisc_s</scope><name>mod</name></member>
+      <member refid="structAgcbdisc__s_1aed0867fe05713fee2a52e441c839effd" prot="public" virt="non-virtual"><scope>Agcbdisc_s</scope><name>node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

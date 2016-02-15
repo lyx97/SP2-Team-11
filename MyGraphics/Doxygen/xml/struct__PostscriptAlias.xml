@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__PostscriptAlias" kind="struct" language="C++" prot="public">
+    <compoundname>_PostscriptAlias</compoundname>
+    <includes refid="textpara_8h" local="no">textpara.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__PostscriptAlias_1acb7eb60e7dcf7cb393fd91b06a7adbc0" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1a22eda8c32299f4119b9fc9bed34a48c9" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::family</definition>
+        <argsstring></argsstring>
+        <name>family</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1a707761eec652a722b2c90d80c6ecee62" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1ade013121575b5cf23e5e57c770fbcb7f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::stretch</definition>
+        <argsstring></argsstring>
+        <name>stretch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1a359ee651e60b0c34062169bcd490e2a4" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::style</definition>
+        <argsstring></argsstring>
+        <name>style</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="29" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1a71df902192476abfa483718bfee6d060" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _PostscriptAlias::xfig_code</definition>
+        <argsstring></argsstring>
+        <name>xfig_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="30" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1a948696a8cd53c87fcf06576317457546" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::svg_font_family</definition>
+        <argsstring></argsstring>
+        <name>svg_font_family</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1a7ab646ed156e0e97ce79c1db3b11fe0f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::svg_font_weight</definition>
+        <argsstring></argsstring>
+        <name>svg_font_weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="32" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__PostscriptAlias_1aa2f3df62dbdeae135718944915425dda" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * _PostscriptAlias::svg_font_style</definition>
+        <argsstring></argsstring>
+        <name>svg_font_style</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="33" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3110">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="3111" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="3112" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="3112">
+        <label>int</label>
+      </node>
+      <node id="3111">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/textpara.h" line="24" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="24" bodyend="34"/>
+    <listofallmembers>
+      <member refid="struct__PostscriptAlias_1a22eda8c32299f4119b9fc9bed34a48c9" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>family</name></member>
+      <member refid="struct__PostscriptAlias_1acb7eb60e7dcf7cb393fd91b06a7adbc0" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>name</name></member>
+      <member refid="struct__PostscriptAlias_1ade013121575b5cf23e5e57c770fbcb7f" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>stretch</name></member>
+      <member refid="struct__PostscriptAlias_1a359ee651e60b0c34062169bcd490e2a4" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>style</name></member>
+      <member refid="struct__PostscriptAlias_1a948696a8cd53c87fcf06576317457546" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>svg_font_family</name></member>
+      <member refid="struct__PostscriptAlias_1aa2f3df62dbdeae135718944915425dda" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>svg_font_style</name></member>
+      <member refid="struct__PostscriptAlias_1a7ab646ed156e0e97ce79c1db3b11fe0f" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>svg_font_weight</name></member>
+      <member refid="struct__PostscriptAlias_1a707761eec652a722b2c90d80c6ecee62" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>weight</name></member>
+      <member refid="struct__PostscriptAlias_1a71df902192476abfa483718bfee6d060" prot="public" virt="non-virtual"><scope>_PostscriptAlias</scope><name>xfig_code</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

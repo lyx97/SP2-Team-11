@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structtextfont__t" kind="struct" language="C++" prot="public">
+    <compoundname>textfont_t</compoundname>
+    <includes refid="textspan_8h" local="no">textspan.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtextfont__t_1a57869d742504b4de73aa609641d2ee6d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* textfont_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="49" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextfont__t_1a0efd68bfcd391cb61a04f4cf8082f681" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* textfont_t::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="50" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextfont__t_1a57cdad13761e851f8a373bb860542e8c" prot="public" static="no" mutable="no">
+        <type><ref refid="textpara_8h_1abc71166eeaffdc8ea2c927368e58f74f" kindref="member">PostscriptAlias</ref> *</type>
+        <definition>PostscriptAlias* textfont_t::postscript_alias</definition>
+        <argsstring></argsstring>
+        <name>postscript_alias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="51" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextfont__t_1aee3e2129ddd89e25f57407d50a4dadcd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textfont_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="52" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextfont__t_1add445e68ddb397dc3b10870c9f3e6ee7" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int textfont_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <bitfield>7</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="53" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextfont__t_1aef7f7dd723ee85bd8e7822ac256729c3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int textfont_t::cnt</definition>
+        <argsstring></argsstring>
+        <name>cnt</name>
+        <bitfield>(sizeof(unsigned int) * 8 - 7)</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="54" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5981">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="5980" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="5982" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="5982">
+        <label>int</label>
+      </node>
+      <node id="5979">
+        <label>double</label>
+      </node>
+      <node id="5983">
+        <label>unsigned</label>
+      </node>
+      <node id="5980">
+        <label>char</label>
+      </node>
+      <node id="5978">
+        <label>textfont_t</label>
+        <link refid="structtextfont__t"/>
+        <childnode refid="5979" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="5980" relation="usage">
+          <edgelabel>name</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="5981" relation="usage">
+          <edgelabel>postscript_alias</edgelabel>
+        </childnode>
+        <childnode refid="5983" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/textspan.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="48" bodyend="55"/>
+    <listofallmembers>
+      <member refid="structtextfont__t_1aef7f7dd723ee85bd8e7822ac256729c3" prot="public" virt="non-virtual"><scope>textfont_t</scope><name>cnt</name></member>
+      <member refid="structtextfont__t_1a0efd68bfcd391cb61a04f4cf8082f681" prot="public" virt="non-virtual"><scope>textfont_t</scope><name>color</name></member>
+      <member refid="structtextfont__t_1add445e68ddb397dc3b10870c9f3e6ee7" prot="public" virt="non-virtual"><scope>textfont_t</scope><name>flags</name></member>
+      <member refid="structtextfont__t_1a57869d742504b4de73aa609641d2ee6d" prot="public" virt="non-virtual"><scope>textfont_t</scope><name>name</name></member>
+      <member refid="structtextfont__t_1a57cdad13761e851f8a373bb860542e8c" prot="public" virt="non-virtual"><scope>textfont_t</scope><name>postscript_alias</name></member>
+      <member refid="structtextfont__t_1aee3e2129ddd89e25f57407d50a4dadcd" prot="public" virt="non-virtual"><scope>textfont_t</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

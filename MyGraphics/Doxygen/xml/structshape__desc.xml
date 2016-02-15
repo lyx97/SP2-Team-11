@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structshape__desc" kind="struct" language="C++" prot="public">
+    <compoundname>shape_desc</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structshape__desc_1af19b381484ceb76bf8c4a0a9eed2acdd" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* shape_desc::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="185" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshape__desc_1a8d4ee4dd3c5b8c134f5ea75783f6d89c" prot="public" static="no" mutable="no">
+        <type><ref refid="structshape__functions" kindref="compound">shape_functions</ref> *</type>
+        <definition>shape_functions* shape_desc::fns</definition>
+        <argsstring></argsstring>
+        <name>fns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="186" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshape__desc_1a54d18ab4a65276ed9dcef2a3dbd06b71" prot="public" static="no" mutable="no">
+        <type><ref refid="structpolygon__t" kindref="compound">polygon_t</ref> *</type>
+        <definition>polygon_t* shape_desc::polygon</definition>
+        <argsstring></argsstring>
+        <name>polygon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="187" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshape__desc_1ad06af5679f9f663f94a409e3030fa82b" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean shape_desc::usershape</definition>
+        <argsstring></argsstring>
+        <name>usershape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="188" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5929">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5927" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5934">
+        <label>void(*)(GVJ_t *job, node_t *n)</label>
+      </node>
+      <node id="5931">
+        <label>unsigned char</label>
+      </node>
+      <node id="5923">
+        <label>shape_desc</label>
+        <link refid="structshape__desc"/>
+        <childnode refid="5924" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5925" relation="usage">
+          <edgelabel>fns</edgelabel>
+        </childnode>
+        <childnode refid="5935" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="5930" relation="usage">
+          <edgelabel>usershape</edgelabel>
+        </childnode>
+      </node>
+      <node id="5932">
+        <label>int</label>
+      </node>
+      <node id="5927">
+        <label>double</label>
+      </node>
+      <node id="5926">
+        <label>port</label>
+        <link refid="structport"/>
+        <childnode refid="5927" relation="usage">
+          <edgelabel>theta</edgelabel>
+        </childnode>
+        <childnode refid="5924" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5928" relation="usage">
+          <edgelabel>bp</edgelabel>
+        </childnode>
+        <childnode refid="5930" relation="usage">
+          <edgelabel>constrained</edgelabel>
+          <edgelabel>defined</edgelabel>
+          <edgelabel>side</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>dyna</edgelabel>
+          <edgelabel>clip</edgelabel>
+        </childnode>
+        <childnode refid="5929" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="5935">
+        <label>polygon_t</label>
+        <link refid="structpolygon__t"/>
+        <childnode refid="5927" relation="usage">
+          <edgelabel>distortion</edgelabel>
+          <edgelabel>skew</edgelabel>
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="5932" relation="usage">
+          <edgelabel>peripheries</edgelabel>
+          <edgelabel>sides</edgelabel>
+          <edgelabel>regular</edgelabel>
+          <edgelabel>option</edgelabel>
+        </childnode>
+        <childnode refid="5929" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+      <node id="5930">
+        <label>unsigned</label>
+      </node>
+      <node id="5925">
+        <label>shape_functions</label>
+        <link refid="structshape__functions"/>
+        <childnode refid="5926" relation="usage">
+          <edgelabel>portfn</edgelabel>
+        </childnode>
+        <childnode refid="5931" relation="usage">
+          <edgelabel>insidefn</edgelabel>
+        </childnode>
+        <childnode refid="5932" relation="usage">
+          <edgelabel>pboxfn</edgelabel>
+        </childnode>
+        <childnode refid="5933" relation="usage">
+          <edgelabel>freefn</edgelabel>
+          <edgelabel>initfn</edgelabel>
+        </childnode>
+        <childnode refid="5934" relation="usage">
+          <edgelabel>codefn</edgelabel>
+        </childnode>
+      </node>
+      <node id="5933">
+        <label>void(*)(node_t *)</label>
+      </node>
+      <node id="5924">
+        <label>char</label>
+      </node>
+      <node id="5928">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="5929" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="184" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="184" bodyend="189"/>
+    <listofallmembers>
+      <member refid="structshape__desc_1a8d4ee4dd3c5b8c134f5ea75783f6d89c" prot="public" virt="non-virtual"><scope>shape_desc</scope><name>fns</name></member>
+      <member refid="structshape__desc_1af19b381484ceb76bf8c4a0a9eed2acdd" prot="public" virt="non-virtual"><scope>shape_desc</scope><name>name</name></member>
+      <member refid="structshape__desc_1a54d18ab4a65276ed9dcef2a3dbd06b71" prot="public" virt="non-virtual"><scope>shape_desc</scope><name>polygon</name></member>
+      <member refid="structshape__desc_1ad06af5679f9f663f94a409e3030fa82b" prot="public" virt="non-virtual"><scope>shape_desc</scope><name>usershape</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

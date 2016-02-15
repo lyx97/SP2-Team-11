@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structusershape__s" kind="struct" language="C++" prot="public">
+    <compoundname>usershape_s</compoundname>
+    <includes refid="usershape_8h" local="no">usershape.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structusershape__s_1a40a2682187d2db02796ed4d446e82a2c" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref></type>
+        <definition>Dtlink_t usershape_s::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="40" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a06a61b2edb37e229109ff14f619cd1aa" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* usershape_s::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="41" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a523a462a282836af2f36192f3cfa9f82" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usershape_s::macro_id</definition>
+        <argsstring></argsstring>
+        <name>macro_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a0aed3732fcd0fb1a8b0ae28457c0bd21" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean usershape_s::must_inline</definition>
+        <argsstring></argsstring>
+        <name>must_inline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="43" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1acbef6e8fbcc12ea3f6f3a7b83584e587" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean usershape_s::nocache</definition>
+        <argsstring></argsstring>
+        <name>nocache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="44" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a19d2fd0633b82a33999e8db59bb5e64a" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* usershape_s::f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="45" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a8d5d4ae51d9cdbf406bb7ebf9c5c51e1" prot="public" static="no" mutable="no">
+        <type><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68c" kindref="member">imagetype_t</ref></type>
+        <definition>imagetype_t usershape_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="46" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a1730cee3ca8168c5b06aefcd22f5d4ed" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* usershape_s::stringtype</definition>
+        <argsstring></argsstring>
+        <name>stringtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="47" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a7de02dad8a213b0ff3efc19187c77419" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usershape_s::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1ae49c05bdf6dd868684e21c8240567b74" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usershape_s::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a420777f70f45f2298bb4e73cbb88fe85" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usershape_s::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1afcc76e4344256aa8d7131bfde3622a4e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usershape_s::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a0173c608d4bb680353ac56e499f4909e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int usershape_s::dpi</definition>
+        <argsstring></argsstring>
+        <name>dpi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a89fdc6e02e8b26990d5c6404f1a07686" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* usershape_s::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="49" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a52ea6bed2e8d199a74ec5609ac2f9981" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t usershape_s::datasize</definition>
+        <argsstring></argsstring>
+        <name>datasize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="50" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structusershape__s_1a3cd7486d446eddaf02842cd8ceaa11a7" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* usershape_s::datafree) (usershape_t *us)</definition>
+        <argsstring>)(usershape_t *us)</argsstring>
+        <name>datafree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="51" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6022">
+        <label></label>
+      </node>
+      <node id="6026">
+        <label>size_t</label>
+      </node>
+      <node id="6029">
+        <label>void *</label>
+      </node>
+      <node id="6027">
+        <label>int</label>
+      </node>
+      <node id="6025">
+        <label>FILE *</label>
+      </node>
+      <node id="6020">
+        <label>imagetype_t</label>
+      </node>
+      <node id="6021">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="6021" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="6022" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="6023" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="6023">
+        <label>unsigned</label>
+      </node>
+      <node id="6019">
+        <label>usershape_s</label>
+        <link refid="structusershape__s"/>
+        <childnode refid="6020" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="6021" relation="usage">
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="6024" relation="usage">
+          <edgelabel>stringtype</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="6025" relation="usage">
+          <edgelabel>f</edgelabel>
+        </childnode>
+        <childnode refid="6026" relation="usage">
+          <edgelabel>datasize</edgelabel>
+        </childnode>
+        <childnode refid="6027" relation="usage">
+          <edgelabel>w</edgelabel>
+          <edgelabel>x</edgelabel>
+          <edgelabel>h</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>dpi</edgelabel>
+          <edgelabel>macro_id</edgelabel>
+        </childnode>
+        <childnode refid="6023" relation="usage">
+          <edgelabel>nocache</edgelabel>
+          <edgelabel>must_inline</edgelabel>
+        </childnode>
+        <childnode refid="6028" relation="usage">
+          <edgelabel>datafree</edgelabel>
+        </childnode>
+        <childnode refid="6029" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="6024">
+        <label>char</label>
+      </node>
+      <node id="6028">
+        <label>void(*)(usershape_t *us)</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/usershape.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="39" bodyend="52"/>
+    <listofallmembers>
+      <member refid="structusershape__s_1a89fdc6e02e8b26990d5c6404f1a07686" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>data</name></member>
+      <member refid="structusershape__s_1a3cd7486d446eddaf02842cd8ceaa11a7" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>datafree</name></member>
+      <member refid="structusershape__s_1a52ea6bed2e8d199a74ec5609ac2f9981" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>datasize</name></member>
+      <member refid="structusershape__s_1a0173c608d4bb680353ac56e499f4909e" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>dpi</name></member>
+      <member refid="structusershape__s_1a19d2fd0633b82a33999e8db59bb5e64a" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>f</name></member>
+      <member refid="structusershape__s_1afcc76e4344256aa8d7131bfde3622a4e" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>h</name></member>
+      <member refid="structusershape__s_1a40a2682187d2db02796ed4d446e82a2c" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>link</name></member>
+      <member refid="structusershape__s_1a523a462a282836af2f36192f3cfa9f82" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>macro_id</name></member>
+      <member refid="structusershape__s_1a0aed3732fcd0fb1a8b0ae28457c0bd21" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>must_inline</name></member>
+      <member refid="structusershape__s_1a06a61b2edb37e229109ff14f619cd1aa" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>name</name></member>
+      <member refid="structusershape__s_1acbef6e8fbcc12ea3f6f3a7b83584e587" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>nocache</name></member>
+      <member refid="structusershape__s_1a1730cee3ca8168c5b06aefcd22f5d4ed" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>stringtype</name></member>
+      <member refid="structusershape__s_1a8d5d4ae51d9cdbf406bb7ebf9c5c51e1" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>type</name></member>
+      <member refid="structusershape__s_1a420777f70f45f2298bb4e73cbb88fe85" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>w</name></member>
+      <member refid="structusershape__s_1a7de02dad8a213b0ff3efc19187c77419" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>x</name></member>
+      <member refid="structusershape__s_1ae49c05bdf6dd868684e21c8240567b74" prot="public" virt="non-virtual"><scope>usershape_s</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

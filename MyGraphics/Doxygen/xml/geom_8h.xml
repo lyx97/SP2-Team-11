@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="geom_8h" kind="file" language="C++">
+    <compoundname>geom.h</compoundname>
+    <includedby refid="types_8h" local="yes">graphviz/release/include/graphviz/types.h</includedby>
+    <invincdepgraph>
+      <node id="1901">
+        <label>graphviz/release/include/graphviz/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1902" relation="include">
+        </childnode>
+        <childnode refid="1903" relation="include">
+        </childnode>
+        <childnode refid="1904" relation="include">
+        </childnode>
+        <childnode refid="1905" relation="include">
+        </childnode>
+        <childnode refid="1906" relation="include">
+        </childnode>
+        <childnode refid="1907" relation="include">
+        </childnode>
+        <childnode refid="1908" relation="include">
+        </childnode>
+      </node>
+      <node id="1902">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="1905">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1903">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1906">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1904">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1900">
+        <label>graphviz/release/include/graphviz/geom.h</label>
+        <link refid="geom.h"/>
+        <childnode refid="1901" relation="include">
+        </childnode>
+      </node>
+      <node id="1907">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="1908">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpoint" prot="public">point</innerclass>
+    <innerclass refid="structpointf__s" prot="public">pointf_s</innerclass>
+    <innerclass refid="structbox" prot="public">box</innerclass>
+    <innerclass refid="structboxf" prot="public">boxf</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="geom_8h_1ab69353e0ac74a73ef0ff9a8e7c060b0f" prot="public" static="no">
+        <name>HAVE_POINTF_S</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/geom.h" line="33" column="9" bodyfile="graphviz/release/include/graphviz/geom.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" prot="public" static="no">
+        <type>struct <ref refid="structpointf__s" kindref="compound">pointf_s</ref></type>
+        <definition>typedef struct pointf_s  pointf</definition>
+        <argsstring></argsstring>
+        <name>pointf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/geom.h" line="30" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>geometric<sp/>types<sp/>and<sp/>macros<sp/>(e.g.<sp/>points<sp/>and<sp/>boxes)<sp/>with<sp/>application<sp/>to,<sp/>but</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>no<sp/>specific<sp/>dependance<sp/>on<sp/>graphs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GV_GEOM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GV_GEOM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="arith_8h" kindref="compound">arith.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/><ref refid="structpoint_1a9a82ca9504acabb1e30569f89c805471" kindref="member">y</ref>;<sp/>}<sp/><ref refid="structpoint" kindref="compound">point</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structpointf__s_1ab603ada604b19e6e21599dacdc5b7912" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpointf__s" kindref="compound">pointf_s</ref><sp/>{<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structpointf__s_1a4663f66ed0fc4b92ceb851eb124ac968" kindref="member">x</ref>,<sp/><ref refid="structpointf__s_1ab603ada604b19e6e21599dacdc5b7912" kindref="member">y</ref>;<sp/>}<sp/><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>tell<sp/>pathplan/pathgeom.h<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="geom_8h_1ab69353e0ac74a73ef0ff9a8e7c060b0f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HAVE_POINTF_S</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structbox_1ab4d50647565ebd7f5f07396ddfda6690" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/><ref refid="structpoint" kindref="compound">point</ref><sp/>LL,<sp/><ref refid="structbox_1ab4d50647565ebd7f5f07396ddfda6690" kindref="member">UR</ref>;<sp/>}<sp/><ref refid="structbox" kindref="compound">box</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structboxf_1a46f87993847e4bcc58c598f17b14f505" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>LL,<sp/><ref refid="structboxf_1a46f87993847e4bcc58c598f17b14f505" kindref="member">UR</ref>;<sp/>}<sp/><ref refid="structboxf" kindref="compound">boxf</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>true<sp/>if<sp/>point<sp/>p<sp/>is<sp/>inside<sp/>box<sp/>b<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INSIDE(p,b)<sp/><sp/><sp/><sp/><sp/>(BETWEEN((b).LL.x,(p).x,(b).UR.x)<sp/>&amp;&amp;<sp/>BETWEEN((b).LL.y,(p).y,(b).UR.y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>true<sp/>if<sp/>boxes<sp/>b0<sp/>and<sp/>b1<sp/>overlap<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OVERLAP(b0,b1)<sp/><sp/>(((b0).UR.x<sp/>&gt;=<sp/>(b1).LL.x)<sp/>&amp;&amp;<sp/>((b1).UR.x<sp/>&gt;=<sp/>(b0).LL.x)<sp/>&amp;&amp;<sp/>((b0).UR.y<sp/>&gt;=<sp/>(b1).LL.y)<sp/>&amp;&amp;<sp/>((b1).UR.y<sp/>&gt;=<sp/>(b0).LL.y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>true<sp/>if<sp/>box<sp/>b0<sp/>completely<sp/>contains<sp/>b1*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONTAINS(b0,b1)<sp/>(((b0).UR.x<sp/>&gt;=<sp/>(b1).UR.x)<sp/>&amp;&amp;<sp/>((b0).UR.y<sp/>&gt;=<sp/>(b1).UR.y)<sp/>&amp;&amp;<sp/>((b0).LL.x<sp/>&lt;=<sp/>(b1).LL.x)<sp/>&amp;&amp;<sp/>((b0).LL.y<sp/>&lt;=<sp/>(b1).LL.y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>expand<sp/>box<sp/>b<sp/>as<sp/>needed<sp/>to<sp/>enclose<sp/>point<sp/>p<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPANDBP(b,<sp/>p)<sp/><sp/>((b).LL.x<sp/>=<sp/>MIN((b).LL.x,<sp/>(p).x),<sp/>(b).LL.y<sp/>=<sp/>MIN((b).LL.y,<sp/>(p).y),<sp/>(b).UR.x<sp/>=<sp/>MAX((b).UR.x,<sp/>(p).x),<sp/>(b).UR.y<sp/>=<sp/>MAX((b).UR.y,<sp/>(p).y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>expand<sp/>box<sp/>b0<sp/>as<sp/>needed<sp/>to<sp/>enclose<sp/>box<sp/>b1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPANDBB(b0,<sp/>b1)<sp/>((b0).LL.x<sp/>=<sp/>MIN((b0).LL.x,<sp/>(b1).LL.x),<sp/>(b0).LL.y<sp/>=<sp/>MIN((b0).LL.y,<sp/>(b1).LL.y),<sp/>(b0).UR.x<sp/>=<sp/>MAX((b0).UR.x,<sp/>(b1).UR.x),<sp/>(b0).UR.y<sp/>=<sp/>MAX((b0).UR.y,<sp/>(b1).UR.y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>clip<sp/>box<sp/>b0<sp/>to<sp/>fit<sp/>box<sp/>b1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLIPBB(b0,<sp/>b1)<sp/>((b0).LL.x<sp/>=<sp/>MAX((b0).LL.x,<sp/>(b1).LL.x),<sp/>(b0).LL.y<sp/>=<sp/>MAX((b0).LL.y,<sp/>(b1).LL.y),<sp/>(b0).UR.x<sp/>=<sp/>MIN((b0).UR.x,<sp/>(b1).UR.x),<sp/>(b0).UR.y<sp/>=<sp/>MIN((b0).UR.y,<sp/>(b1).UR.y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEN2(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SQR(a)<sp/>+<sp/>SQR(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEN(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(sqrt(LEN2((a),(b))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIST2(p,q)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(LEN2(((p).x<sp/>-<sp/>(q).x),((p).y<sp/>-<sp/>(q).y)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIST(p,q)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(sqrt(DIST2((p),(q))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POINTS_PER_INCH<sp/>72</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POINTS_PER_PC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((double)POINTS_PER_INCH<sp/>/<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POINTS_PER_CM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((double)POINTS_PER_INCH<sp/>*<sp/>0.393700787)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POINTS_PER_MM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((double)POINTS_PER_INCH<sp/>*<sp/>0.0393700787)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POINTS(a_inches)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ROUND((a_inches)*POINTS_PER_INCH))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCH2PS(a_inches)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a_inches)*(double)POINTS_PER_INCH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PS2INCH(a_points)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a_points)/(double)POINTS_PER_INCH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P2PF(p,pf)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((pf).x<sp/>=<sp/>(p).x,(pf).y<sp/>=<sp/>(p).y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PF2P(pf,p)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((p).x<sp/>=<sp/>ROUND((pf).x),(p).y<sp/>=<sp/>ROUND((pf).y))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B2BF(b,bf)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(P2PF((b).LL,(bf).LL),P2PF((b).UR,(bf).UR))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BF2B(bf,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(PF2P((bf).LL,(b).LL),PF2P((bf).UR,(b).UR))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APPROXEQ(a,b,tol)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ABS((a)<sp/>-<sp/>(b))<sp/>&lt;<sp/>(tol))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APPROXEQPT(p,q,tol)<sp/><sp/><sp/><sp/><sp/>(DIST2((p),(q))<sp/>&lt;<sp/>SQR(tol))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>some<sp/>common<sp/>tolerance<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MILLIPOINT<sp/>.001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MICROPOINT<sp/>.000001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/geom.h"/>
+  </compounddef>
+</doxygen>

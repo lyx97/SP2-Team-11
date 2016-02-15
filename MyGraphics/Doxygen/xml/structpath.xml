@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structpath" kind="struct" language="C++" prot="public">
+    <compoundname>path</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpath_1a017227d396a0248031695625623016a7" prot="public" static="no" mutable="no">
+        <type><ref refid="structport" kindref="compound">port</ref></type>
+        <definition>port path::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="102" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpath_1a4400691cb1af9747afd5c63b55308c17" prot="public" static="no" mutable="no">
+        <type><ref refid="structport" kindref="compound">port</ref></type>
+        <definition>port path::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="102" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpath_1a951008b669413f84b8f94ca692b95a87" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int path::nbox</definition>
+        <argsstring></argsstring>
+        <name>nbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="103" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpath_1a1a8f6710b832eb8feb917a9b8296cfdd" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref> *</type>
+        <definition>boxf* path::boxes</definition>
+        <argsstring></argsstring>
+        <name>boxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="104" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpath_1aa9eb1739345839b2a242806ceb94dc55" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* path::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="105" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5615">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5612" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5618">
+        <label>void *</label>
+      </node>
+      <node id="5610">
+        <label>path</label>
+        <link refid="structpath"/>
+        <childnode refid="5611" relation="usage">
+          <edgelabel>end</edgelabel>
+          <edgelabel>start</edgelabel>
+        </childnode>
+        <childnode refid="5617" relation="usage">
+          <edgelabel>nbox</edgelabel>
+        </childnode>
+        <childnode refid="5614" relation="usage">
+          <edgelabel>boxes</edgelabel>
+        </childnode>
+        <childnode refid="5618" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="5617">
+        <label>int</label>
+      </node>
+      <node id="5612">
+        <label>double</label>
+      </node>
+      <node id="5611">
+        <label>port</label>
+        <link refid="structport"/>
+        <childnode refid="5612" relation="usage">
+          <edgelabel>theta</edgelabel>
+        </childnode>
+        <childnode refid="5613" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5614" relation="usage">
+          <edgelabel>bp</edgelabel>
+        </childnode>
+        <childnode refid="5616" relation="usage">
+          <edgelabel>constrained</edgelabel>
+          <edgelabel>defined</edgelabel>
+          <edgelabel>side</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>dyna</edgelabel>
+          <edgelabel>clip</edgelabel>
+        </childnode>
+        <childnode refid="5615" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="5616">
+        <label>unsigned</label>
+      </node>
+      <node id="5613">
+        <label>char</label>
+      </node>
+      <node id="5614">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="5615" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="101" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="101" bodyend="106"/>
+    <listofallmembers>
+      <member refid="structpath_1a1a8f6710b832eb8feb917a9b8296cfdd" prot="public" virt="non-virtual"><scope>path</scope><name>boxes</name></member>
+      <member refid="structpath_1aa9eb1739345839b2a242806ceb94dc55" prot="public" virt="non-virtual"><scope>path</scope><name>data</name></member>
+      <member refid="structpath_1a4400691cb1af9747afd5c63b55308c17" prot="public" virt="non-virtual"><scope>path</scope><name>end</name></member>
+      <member refid="structpath_1a951008b669413f84b8f94ca692b95a87" prot="public" virt="non-virtual"><scope>path</scope><name>nbox</name></member>
+      <member refid="structpath_1a017227d396a0248031695625623016a7" prot="public" virt="non-virtual"><scope>path</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

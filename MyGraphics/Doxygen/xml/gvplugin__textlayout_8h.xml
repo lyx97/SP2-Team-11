@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvplugin__textlayout_8h" kind="file" language="C++">
+    <compoundname>gvplugin_textlayout.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="gvplugin_8h" local="yes">gvplugin.h</includes>
+    <includes refid="gvcjob_8h" local="yes">gvcjob.h</includes>
+    <includes refid="gvcommon_8h" local="yes">gvcommon.h</includes>
+    <incdepgraph>
+      <node id="2055">
+        <label>assert.h</label>
+      </node>
+      <node id="2053">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2054" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2060" relation="include">
+        </childnode>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+      </node>
+      <node id="2061">
+        <label>cgraph.h</label>
+        <link refid="cgraph_8h"/>
+        <childnode refid="2062" relation="include">
+        </childnode>
+      </node>
+      <node id="2059">
+        <label>pathgeom.h</label>
+        <link refid="pathgeom_8h"/>
+      </node>
+      <node id="2066">
+        <label>gvplugin.h</label>
+        <link refid="gvplugin_8h"/>
+        <childnode refid="2058" relation="include">
+        </childnode>
+      </node>
+      <node id="2063">
+        <label>stddef.h</label>
+      </node>
+      <node id="2064">
+        <label>string.h</label>
+      </node>
+      <node id="2067">
+        <label>gvcjob.h</label>
+        <link refid="gvcjob_8h"/>
+        <childnode refid="2068" relation="include">
+        </childnode>
+        <childnode refid="2069" relation="include">
+        </childnode>
+      </node>
+      <node id="2069">
+        <label>color.h</label>
+        <link refid="color_8h"/>
+      </node>
+      <node id="2056">
+        <label>signal.h</label>
+      </node>
+      <node id="2058">
+        <label>gvcext.h</label>
+        <link refid="gvcext_8h"/>
+      </node>
+      <node id="2057">
+        <label>geom.h</label>
+        <link refid="geom_8h"/>
+      </node>
+      <node id="2060">
+        <label>textspan.h</label>
+        <link refid="textspan_8h"/>
+      </node>
+      <node id="2052">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin_textlayout.h"/>
+        <childnode refid="2053" relation="include">
+        </childnode>
+        <childnode refid="2066" relation="include">
+        </childnode>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2068" relation="include">
+        </childnode>
+      </node>
+      <node id="2068">
+        <label>gvcommon.h</label>
+        <link refid="gvcommon_8h"/>
+      </node>
+      <node id="2062">
+        <label>cdt.h</label>
+        <link refid="cdt_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2064" relation="include">
+        </childnode>
+      </node>
+      <node id="2054">
+        <label>stdio.h</label>
+      </node>
+      <node id="2065">
+        <label>usershape.h</label>
+        <link refid="usershape_8h"/>
+        <childnode refid="2062" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structgvtextlayout__engine__s" prot="public">gvtextlayout_engine_s</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVPLUGIN_TEXTLAYOUT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVPLUGIN_TEXTLAYOUT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvplugin_8h" kindref="compound">gvplugin.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvcjob_8h" kindref="compound">gvcjob.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvcommon_8h" kindref="compound">gvcommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="structgvtextlayout__engine__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvtextlayout__engine__s" kindref="compound">gvtextlayout_engine_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="27" refid="structgvtextlayout__engine__s_1a948cd223017c339f2e3713b23ab70ce2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref><sp/>(*<ref refid="structgvtextlayout__engine__s_1a948cd223017c339f2e3713b23ab70ce2" kindref="member">textlayout</ref>)<sp/>(<ref refid="structtextspan__t" kindref="compound">textspan_t</ref><sp/>*span,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>fontpath);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GVPLUGIN_TEXTLAYOUT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvplugin_textlayout.h"/>
+  </compounddef>
+</doxygen>

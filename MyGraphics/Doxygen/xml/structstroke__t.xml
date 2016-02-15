@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structstroke__t" kind="struct" language="C++" prot="public">
+    <compoundname>stroke_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstroke__t_1aa345f1a6413d66eb9274e021d49a4f4c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int stroke_t::nvertices</definition>
+        <argsstring></argsstring>
+        <name>nvertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="155" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstroke__t_1aa44e31c7ba6bfd00b4482860a427fe83" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int stroke_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="156" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstroke__t_1a70702d1e3329b9be49585d5ba162e9d0" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref> *</type>
+        <definition>pointf* stroke_t::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="157" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5972">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5973" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5971">
+        <label>int</label>
+      </node>
+      <node id="5973">
+        <label>double</label>
+      </node>
+      <node id="5970">
+        <label>stroke_t</label>
+        <link refid="structstroke__t"/>
+        <childnode refid="5971" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>nvertices</edgelabel>
+        </childnode>
+        <childnode refid="5972" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="153" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="153" bodyend="158"/>
+    <listofallmembers>
+      <member refid="structstroke__t_1aa44e31c7ba6bfd00b4482860a427fe83" prot="public" virt="non-virtual"><scope>stroke_t</scope><name>flags</name></member>
+      <member refid="structstroke__t_1aa345f1a6413d66eb9274e021d49a4f4c" prot="public" virt="non-virtual"><scope>stroke_t</scope><name>nvertices</name></member>
+      <member refid="structstroke__t_1a70702d1e3329b9be49585d5ba162e9d0" prot="public" virt="non-virtual"><scope>stroke_t</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

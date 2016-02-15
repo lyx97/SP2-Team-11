@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="unionEXSTYPE" kind="union" language="C++" prot="public">
+    <compoundname>EXSTYPE</compoundname>
+    <includes refid="exparse_8h" local="no">exparse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionEXSTYPE_1a33188f636716cae0344536ef925768a9" prot="public" static="no" mutable="no">
+        <type>struct Exnode_s *</type>
+        <definition>struct Exnode_s* EXSTYPE::expr</definition>
+        <argsstring></argsstring>
+        <name>expr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="214" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1ae996e72b22cde8ed1527fb7c6bbca2b0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double EXSTYPE::floating</definition>
+        <argsstring></argsstring>
+        <name>floating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="215" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1a86de3c5b81ffa09f2e49175bf1020a16" prot="public" static="no" mutable="no">
+        <type>struct Exref_s *</type>
+        <definition>struct Exref_s* EXSTYPE::reference</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="216" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1ac7e7cefc74b6159bce6e384b6ba7ac7f" prot="public" static="no" mutable="no">
+        <type>struct Exid_s *</type>
+        <definition>struct Exid_s* EXSTYPE::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="217" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1a19fdf14fe477646209fdbbe73d1f5bad" prot="public" static="no" mutable="no">
+        <type>Sflong_t</type>
+        <definition>Sflong_t EXSTYPE::integer</definition>
+        <argsstring></argsstring>
+        <name>integer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="218" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1a6a8c61bda98920d16209d584abb5f672" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EXSTYPE::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="219" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1af726074c8740d3d4d33665ad3f0466aa" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* EXSTYPE::string</definition>
+        <argsstring></argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="220" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1af88ab6e9686aafed7ae6a00d87364ccd" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* EXSTYPE::user</definition>
+        <argsstring></argsstring>
+        <name>user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="221" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionEXSTYPE_1a2142802a96cf633e0e0e9d9817dfe807" prot="public" static="no" mutable="no">
+        <type>struct Exbuf_s *</type>
+        <definition>struct Exbuf_s* EXSTYPE::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/bin/exparse.h" line="222" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4812">
+        <label>void *</label>
+      </node>
+      <node id="4813">
+        <label>char *</label>
+      </node>
+      <node id="4805">
+        <label>EXSTYPE</label>
+        <link refid="unionEXSTYPE"/>
+        <childnode refid="4806" relation="usage">
+          <edgelabel>floating</edgelabel>
+        </childnode>
+        <childnode refid="4807" relation="usage">
+          <edgelabel>op</edgelabel>
+        </childnode>
+        <childnode refid="4808" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+        <childnode refid="4809" relation="usage">
+          <edgelabel>integer</edgelabel>
+        </childnode>
+        <childnode refid="4810" relation="usage">
+          <edgelabel>expr</edgelabel>
+        </childnode>
+        <childnode refid="4811" relation="usage">
+          <edgelabel>reference</edgelabel>
+        </childnode>
+        <childnode refid="4812" relation="usage">
+          <edgelabel>user</edgelabel>
+        </childnode>
+        <childnode refid="4813" relation="usage">
+          <edgelabel>string</edgelabel>
+        </childnode>
+        <childnode refid="4814" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4811">
+        <label>struct Exref_s *</label>
+      </node>
+      <node id="4807">
+        <label>int</label>
+      </node>
+      <node id="4806">
+        <label>double</label>
+      </node>
+      <node id="4809">
+        <label>Sflong_t</label>
+      </node>
+      <node id="4810">
+        <label>struct Exnode_s *</label>
+      </node>
+      <node id="4808">
+        <label>struct Exbuf_s *</label>
+      </node>
+      <node id="4814">
+        <label>struct Exid_s *</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/bin/exparse.h" line="209" column="1" bodyfile="graphviz/release/bin/exparse.h" bodystart="208" bodyend="228"/>
+    <listofallmembers>
+      <member refid="unionEXSTYPE_1a2142802a96cf633e0e0e9d9817dfe807" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>buffer</name></member>
+      <member refid="unionEXSTYPE_1a33188f636716cae0344536ef925768a9" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>expr</name></member>
+      <member refid="unionEXSTYPE_1ae996e72b22cde8ed1527fb7c6bbca2b0" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>floating</name></member>
+      <member refid="unionEXSTYPE_1ac7e7cefc74b6159bce6e384b6ba7ac7f" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>id</name></member>
+      <member refid="unionEXSTYPE_1a19fdf14fe477646209fdbbe73d1f5bad" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>integer</name></member>
+      <member refid="unionEXSTYPE_1a6a8c61bda98920d16209d584abb5f672" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>op</name></member>
+      <member refid="unionEXSTYPE_1a86de3c5b81ffa09f2e49175bf1020a16" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>reference</name></member>
+      <member refid="unionEXSTYPE_1af726074c8740d3d4d33665ad3f0466aa" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>string</name></member>
+      <member refid="unionEXSTYPE_1af88ab6e9686aafed7ae6a00d87364ccd" prot="public" virt="non-virtual"><scope>EXSTYPE</scope><name>user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

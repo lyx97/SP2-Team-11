@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgmemdisc__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agmemdisc_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgmemdisc__s_1aa3b88d6d66834941057059a09e665831" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* Agmemdisc_s::open) (Agdisc_t *)</definition>
+        <argsstring>)(Agdisc_t *)</argsstring>
+        <name>open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="151" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgmemdisc__s_1a47533f689760cf85402a43ea45cdfae1" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* Agmemdisc_s::alloc) (void *state, size_t req)</definition>
+        <argsstring>)(void *state, size_t req)</argsstring>
+        <name>alloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="152" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgmemdisc__s_1aedfbb8ddbabdda400e1b66e512e237fc" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* Agmemdisc_s::resize) (void *state, void *ptr, size_t old, size_t req)</definition>
+        <argsstring>)(void *state, void *ptr, size_t old, size_t req)</argsstring>
+        <name>resize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="153" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgmemdisc__s_1a6e02b7bba7708f7554ee0895ad552541" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Agmemdisc_s::free) (void *state, void *ptr)</definition>
+        <argsstring>)(void *state, void *ptr)</argsstring>
+        <name>free</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="154" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgmemdisc__s_1aa60ee35624830932ba13696872a9a799" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Agmemdisc_s::close) (void *state)</definition>
+        <argsstring>)(void *state)</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="155" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3881">
+        <label>void *(*)(Agdisc_t *)</label>
+      </node>
+      <node id="3880">
+        <label>void *(*)(void *state, void *ptr, size_t old, size_t req)</label>
+      </node>
+      <node id="3876">
+        <label>Agmemdisc_s</label>
+        <link refid="structAgmemdisc__s"/>
+        <childnode refid="3877" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="3878" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="3879" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="3880" relation="usage">
+          <edgelabel>resize</edgelabel>
+        </childnode>
+        <childnode refid="3881" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+      </node>
+      <node id="3878">
+        <label>void *(*)(void *state, size_t req)</label>
+      </node>
+      <node id="3879">
+        <label>void(*)(void *state)</label>
+      </node>
+      <node id="3877">
+        <label>void(*)(void *state, void *ptr)</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="150" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="150" bodyend="156"/>
+    <listofallmembers>
+      <member refid="structAgmemdisc__s_1a47533f689760cf85402a43ea45cdfae1" prot="public" virt="non-virtual"><scope>Agmemdisc_s</scope><name>alloc</name></member>
+      <member refid="structAgmemdisc__s_1aa60ee35624830932ba13696872a9a799" prot="public" virt="non-virtual"><scope>Agmemdisc_s</scope><name>close</name></member>
+      <member refid="structAgmemdisc__s_1a6e02b7bba7708f7554ee0895ad552541" prot="public" virt="non-virtual"><scope>Agmemdisc_s</scope><name>free</name></member>
+      <member refid="structAgmemdisc__s_1aa3b88d6d66834941057059a09e665831" prot="public" virt="non-virtual"><scope>Agmemdisc_s</scope><name>open</name></member>
+      <member refid="structAgmemdisc__s_1aedfbb8ddbabdda400e1b66e512e237fc" prot="public" virt="non-virtual"><scope>Agmemdisc_s</scope><name>resize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgiodisc__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agiodisc_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgiodisc__s_1a1c91df0b5961319ef5b5ead586f172bc" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Agiodisc_s::afread) (void *chan, char *buf, int bufsize)</definition>
+        <argsstring>)(void *chan, char *buf, int bufsize)</argsstring>
+        <name>afread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="170" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiodisc__s_1afec9a0e3659c2330ec58b906163df067" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Agiodisc_s::putstr) (void *chan, const char *str)</definition>
+        <argsstring>)(void *chan, const char *str)</argsstring>
+        <name>putstr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="171" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgiodisc__s_1ad4d831af53e796ce8857e80c0f230380" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Agiodisc_s::flush) (void *chan)</definition>
+        <argsstring>)(void *chan)</argsstring>
+        <name>flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="172" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3874">
+        <label>int</label>
+      </node>
+      <node id="3873">
+        <label>Agiodisc_s</label>
+        <link refid="structAgiodisc__s"/>
+        <childnode refid="3874" relation="usage">
+          <edgelabel>putstr</edgelabel>
+          <edgelabel>afread</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="169" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="169" bodyend="174"/>
+    <listofallmembers>
+      <member refid="structAgiodisc__s_1a1c91df0b5961319ef5b5ead586f172bc" prot="public" virt="non-virtual"><scope>Agiodisc_s</scope><name>afread</name></member>
+      <member refid="structAgiodisc__s_1ad4d831af53e796ce8857e80c0f230380" prot="public" virt="non-virtual"><scope>Agiodisc_s</scope><name>flush</name></member>
+      <member refid="structAgiodisc__s_1afec9a0e3659c2330ec58b906163df067" prot="public" virt="non-virtual"><scope>Agiodisc_s</scope><name>putstr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

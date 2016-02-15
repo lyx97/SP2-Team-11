@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Scene4_8h" kind="file" language="C++">
+    <compoundname>Scene4.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Camera_8h" local="yes">Camera.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includedby refid="Application_8cpp" local="yes">MyGraphics/Source/Application.cpp</includedby>
+    <includedby refid="Scene4_8cpp" local="yes">MyGraphics/Source/Scene4.cpp</includedby>
+    <incdepgraph>
+      <node id="2810">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="2803">
+        <label>cmath</label>
+      </node>
+      <node id="2809">
+        <label>string</label>
+      </node>
+      <node id="2801">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2802" relation="include">
+        </childnode>
+        <childnode refid="2807" relation="include">
+        </childnode>
+      </node>
+      <node id="2811">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2812" relation="include">
+        </childnode>
+        <childnode refid="2813" relation="include">
+        </childnode>
+      </node>
+      <node id="2804">
+        <label>exception</label>
+      </node>
+      <node id="2799">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="2805">
+        <label>ctime</label>
+      </node>
+      <node id="2812">
+        <label>stack</label>
+      </node>
+      <node id="2800">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2801" relation="include">
+        </childnode>
+      </node>
+      <node id="2806">
+        <label>cstdlib</label>
+      </node>
+      <node id="2807">
+        <label>iostream</label>
+      </node>
+      <node id="2813">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2802" relation="include">
+        </childnode>
+        <childnode refid="2801" relation="include">
+        </childnode>
+      </node>
+      <node id="2798">
+        <label>MyGraphics/Source/Scene4.h</label>
+        <link refid="Scene4.h"/>
+        <childnode refid="2799" relation="include">
+        </childnode>
+        <childnode refid="2800" relation="include">
+        </childnode>
+        <childnode refid="2808" relation="include">
+        </childnode>
+        <childnode refid="2811" relation="include">
+        </childnode>
+      </node>
+      <node id="2808">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="2809" relation="include">
+        </childnode>
+        <childnode refid="2810" relation="include">
+        </childnode>
+      </node>
+      <node id="2802">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2803" relation="include">
+        </childnode>
+        <childnode refid="2804" relation="include">
+        </childnode>
+        <childnode refid="2805" relation="include">
+        </childnode>
+        <childnode refid="2806" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2816">
+        <label>MyGraphics/Source/Scene4.cpp</label>
+        <link refid="Scene4_8cpp"/>
+      </node>
+      <node id="2814">
+        <label>MyGraphics/Source/Scene4.h</label>
+        <link refid="Scene4.h"/>
+        <childnode refid="2815" relation="include">
+        </childnode>
+        <childnode refid="2816" relation="include">
+        </childnode>
+      </node>
+      <node id="2815">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classScene4" prot="public">Scene4</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SCENE_4_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCENE_4_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera_8h" kindref="compound">Camera.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classScene4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classScene4" kindref="compound">Scene4</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97acbc212a74932f4d11cdab3d6504125bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97acbc212a74932f4d11cdab3d6504125bc" kindref="member">GEO_CUBE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="14" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="15" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97af4bfb8cee42e2b426fed4ef9b4c02190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97af4bfb8cee42e2b426fed4ef9b4c02190" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="16" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97aecb4805d7ae8439e86723585dfed3fe1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97aecb4805d7ae8439e86723585dfed3fe1" kindref="member">GEO_CIRCLE</ref>,</highlight></codeline>
+<codeline lineno="17" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" kindref="member">GEO_RING</ref>,</highlight></codeline>
+<codeline lineno="18" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" kindref="member">GEO_SPHERE</ref>,</highlight></codeline>
+<codeline lineno="19" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" kindref="member">GEO_SUN</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7f87d896558783e9c2457c3395e783a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7f87d896558783e9c2457c3395e783a8" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23" refid="classScene4_1ad881804ad325c694dd5997b18ed1093f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classScene4_1ad881804ad325c694dd5997b18ed1093f" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classScene4_1ad881804ad325c694dd5997b18ed1093fa3d5da8133b27ddfbbb25821bf024bfcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1ad881804ad325c694dd5997b18ed1093fa3d5da8133b27ddfbbb25821bf024bfcd" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1adba454e3fa2804ec353c7fece8e956f7" kindref="member">Scene4</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene4_1a2d1ebdc69960c660030ecb16cd694513" kindref="member">~Scene4</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classScene4_1a8758e59ee476d520df891e7f959efd37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene4_1a8758e59ee476d520df891e7f959efd37" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*<ref refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" kindref="member">meshList</ref>[<ref refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7f87d896558783e9c2457c3395e783a8" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" kindref="member">m_parameters</ref>[<ref refid="classScene4_1ad881804ad325c694dd5997b18ed1093fa3d5da8133b27ddfbbb25821bf024bfcd" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" kindref="member">rotateAngle</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera" kindref="compound">Camera</ref><sp/><ref refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classScene4_1a3c2e887765435717194575599c206019" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" kindref="member">modelStack</ref>,<sp/><ref refid="classScene4_1a3c2e887765435717194575599c206019" kindref="member">viewStack</ref>,<sp/><ref refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/Scene4.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvdevice__engine__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvdevice_engine_s</compoundname>
+    <includes refid="gvplugin__device_8h" local="no">gvplugin_device.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvdevice__engine__s_1aca087e3db2250b2c856d5b750d6b031d" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_engine_s::initialize) (GVJ_t *firstjob)</definition>
+        <argsstring>)(GVJ_t *firstjob)</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_device.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_device.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__engine__s_1a75ffd304562ffc3b458d86a199ed53ac" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_engine_s::format) (GVJ_t *firstjob)</definition>
+        <argsstring>)(GVJ_t *firstjob)</argsstring>
+        <name>format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_device.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_device.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__engine__s_1ab88efd89977ab295c8aaf536d35ccb1a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_engine_s::finalize) (GVJ_t *firstjob)</definition>
+        <argsstring>)(GVJ_t *firstjob)</argsstring>
+        <name>finalize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_device.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_device.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4859">
+        <label>void(*)(GVJ_t *firstjob)</label>
+      </node>
+      <node id="4858">
+        <label>gvdevice_engine_s</label>
+        <link refid="structgvdevice__engine__s"/>
+        <childnode refid="4859" relation="usage">
+          <edgelabel>finalize</edgelabel>
+          <edgelabel>initialize</edgelabel>
+          <edgelabel>format</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvplugin_device.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_device.h" bodystart="25" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structgvdevice__engine__s_1ab88efd89977ab295c8aaf536d35ccb1a" prot="public" virt="non-virtual"><scope>gvdevice_engine_s</scope><name>finalize</name></member>
+      <member refid="structgvdevice__engine__s_1a75ffd304562ffc3b458d86a199ed53ac" prot="public" virt="non-virtual"><scope>gvdevice_engine_s</scope><name>format</name></member>
+      <member refid="structgvdevice__engine__s_1aca087e3db2250b2c856d5b750d6b031d" prot="public" virt="non-virtual"><scope>gvdevice_engine_s</scope><name>initialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

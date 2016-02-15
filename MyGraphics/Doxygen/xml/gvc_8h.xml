@@ -1,0 +1,768 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvc_8h" kind="file" language="C++">
+    <compoundname>gvc.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="gvplugin_8h" local="yes">gvplugin.h</includes>
+    <incdepgraph>
+      <node id="1920">
+        <label>assert.h</label>
+      </node>
+      <node id="1918">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1919" relation="include">
+        </childnode>
+        <childnode refid="1920" relation="include">
+        </childnode>
+        <childnode refid="1921" relation="include">
+        </childnode>
+        <childnode refid="1922" relation="include">
+        </childnode>
+        <childnode refid="1923" relation="include">
+        </childnode>
+        <childnode refid="1924" relation="include">
+        </childnode>
+        <childnode refid="1925" relation="include">
+        </childnode>
+        <childnode refid="1926" relation="include">
+        </childnode>
+        <childnode refid="1930" relation="include">
+        </childnode>
+      </node>
+      <node id="1917">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc.h"/>
+        <childnode refid="1918" relation="include">
+        </childnode>
+        <childnode refid="1931" relation="include">
+        </childnode>
+      </node>
+      <node id="1926">
+        <label>cgraph.h</label>
+        <link refid="cgraph_8h"/>
+        <childnode refid="1927" relation="include">
+        </childnode>
+      </node>
+      <node id="1924">
+        <label>pathgeom.h</label>
+        <link refid="pathgeom_8h"/>
+      </node>
+      <node id="1931">
+        <label>gvplugin.h</label>
+        <link refid="gvplugin_8h"/>
+        <childnode refid="1923" relation="include">
+        </childnode>
+      </node>
+      <node id="1928">
+        <label>stddef.h</label>
+      </node>
+      <node id="1929">
+        <label>string.h</label>
+      </node>
+      <node id="1921">
+        <label>signal.h</label>
+      </node>
+      <node id="1923">
+        <label>gvcext.h</label>
+        <link refid="gvcext_8h"/>
+      </node>
+      <node id="1922">
+        <label>geom.h</label>
+        <link refid="geom_8h"/>
+      </node>
+      <node id="1925">
+        <label>textspan.h</label>
+        <link refid="textspan_8h"/>
+      </node>
+      <node id="1927">
+        <label>cdt.h</label>
+        <link refid="cdt_8h"/>
+        <childnode refid="1928" relation="include">
+        </childnode>
+        <childnode refid="1929" relation="include">
+        </childnode>
+      </node>
+      <node id="1919">
+        <label>stdio.h</label>
+      </node>
+      <node id="1930">
+        <label>usershape.h</label>
+        <link refid="usershape_8h"/>
+        <childnode refid="1927" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gvc_8h_1a2a624a765564411c0db3a2bee940f8bc" prot="public" static="no">
+        <name>extern</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="27" column="10" bodyfile="graphviz/release/include/graphviz/gvc.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvc_8h_1a1900bbae79ee742028fdade9874044ab" prot="public" static="no">
+        <name>LAYOUT_DONE</name>
+        <param><defname>g</defname></param>
+        <initializer>(<ref refid="cgraph_8h_1a03426e823bf4e21f5ef5cdfc9f188053" kindref="member">agbindrec</ref>(g, &quot;Agraphinfo_t&quot;, 0, TRUE) &amp;&amp; <ref refid="types_8h_1a304761d6ec6f0b12b6cef1b38d79fa37" kindref="member">GD_drawing</ref>(g))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="38" column="9" bodyfile="graphviz/release/include/graphviz/gvc.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gvc_8h_1a571fd72f89de3ff4f25b14c04b7ff461" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gvToggle</definition>
+        <argsstring>(int)</argsstring>
+        <name>gvToggle</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1aedaaaa2e5c15ae4529238baae4f077dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        <definition>GVC_t* gvNEWcontext</definition>
+        <argsstring>(const lt_symlist_t *builtins, int demand_loading)</argsstring>
+        <name>gvNEWcontext</name>
+        <param>
+          <type>const <ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref> *</type>
+          <declname>builtins</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>demand_loading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1aa64b972a885a52cdbaf5a1c9aff28041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        <definition>GVC_t* gvContext</definition>
+        <argsstring>(void)</argsstring>
+        <name>gvContext</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1af83cbf12adb243149643880fd609e460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        <definition>GVC_t* gvContextPlugins</definition>
+        <argsstring>(const lt_symlist_t *builtins, int demand_loading)</argsstring>
+        <name>gvContextPlugins</name>
+        <param>
+          <type>const <ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref> *</type>
+          <declname>builtins</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>demand_loading</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a03c8b92b7b4f46be5a2a0dd89f0f232f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char **</type>
+        <definition>char** gvcInfo</definition>
+        <argsstring>(GVC_t *)</argsstring>
+        <name>gvcInfo</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1abec107d61e37239ee3e17a65fc0913e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* gvcVersion</definition>
+        <argsstring>(GVC_t *)</argsstring>
+        <name>gvcVersion</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a87e1aa51e448e1356857447bf6bf3c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* gvcBuildDate</definition>
+        <argsstring>(GVC_t *)</argsstring>
+        <name>gvcBuildDate</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a25076e9f03e8de36cc39f933fb4b571e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvParseArgs</definition>
+        <argsstring>(GVC_t *gvc, int argc, char **argv)</argsstring>
+        <name>gvParseArgs</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a470abedd754cbaa1a24c93585a5fffed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+        <definition>graph_t* gvNextInputGraph</definition>
+        <argsstring>(GVC_t *gvc)</argsstring>
+        <name>gvNextInputGraph</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1ae28ba786b0811f07c793f2873171701e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+        <definition>graph_t* gvPluginsGraph</definition>
+        <argsstring>(GVC_t *gvc)</argsstring>
+        <name>gvPluginsGraph</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a61596ae3c9c9373f4f5e4ac498941122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvLayout</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g, const char *engine)</argsstring>
+        <name>gvLayout</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>engine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a992879e2fbe5e0347f3e0834f2063b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvLayoutJobs</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g)</argsstring>
+        <name>gvLayoutJobs</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1af52517392e8daee54f22de6b3885fc5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void attach_attrs</definition>
+        <argsstring>(graph_t *g)</argsstring>
+        <name>attach_attrs</name>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a6a428473e1d8a784491c564af2274a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvRender</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g, const char *format, FILE *out)</argsstring>
+        <name>gvRender</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1ae074e161c1dd2329956abe90763470c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvRenderFilename</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g, const char *format, const char *filename)</argsstring>
+        <name>gvRenderFilename</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1ad994c58c824976bfc749f02f197c348b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvRenderContext</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g, const char *format, void *context)</argsstring>
+        <name>gvRenderContext</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a805c0f03342cd13811f38f85611f298c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvRenderData</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g, const char *format, char **result, unsigned int *length)</argsstring>
+        <name>gvRenderData</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1abfe5c9ff1184a54f744b5f792322bef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gvFreeRenderData</definition>
+        <argsstring>(char *data)</argsstring>
+        <name>gvFreeRenderData</name>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a6caa087baf49774088f189d241eb20f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvRenderJobs</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g)</argsstring>
+        <name>gvRenderJobs</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a43361f3b706eccf5e8bab9756f4bc81d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvFreeLayout</definition>
+        <argsstring>(GVC_t *gvc, graph_t *g)</argsstring>
+        <name>gvFreeLayout</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a39e351e15d94e49ab86c22da7cb20353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gvFinalize</definition>
+        <argsstring>(GVC_t *gvc)</argsstring>
+        <name>gvFinalize</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1aa84d4a48426e4f65a515cbf35afbc4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gvFreeContext</definition>
+        <argsstring>(GVC_t *gvc)</argsstring>
+        <name>gvFreeContext</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a6aedce091638e981ec57d284e0c8fbbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char **</type>
+        <definition>char** gvPluginList</definition>
+        <argsstring>(GVC_t *gvc, char *kind, int *sz, char *)</argsstring>
+        <name>gvPluginList</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>kind</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvc_8h_1a16d7bba4d3b463feb5a0bfb001d4e275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gvAddLibrary</definition>
+        <argsstring>(GVC_t *gvc, gvplugin_library_t *lib)</argsstring>
+        <name>gvAddLibrary</name>
+        <param>
+          <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+          <declname>gvc</declname>
+        </param>
+        <param>
+          <type><ref refid="structgvplugin__library__t" kindref="compound">gvplugin_library_t</ref> *</type>
+          <declname>lib</declname>
+        </param>
+        <briefdescription>
+<para>Add a library from your user application. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gvc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Graphviz context to add library to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lib</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>library to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvc.h" line="114" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GVC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GVC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvplugin_8h" kindref="compound">gvplugin.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>GVDLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/>__declspec(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="gvc_8h_1a2a624a765564411c0db3a2bee940f8bc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVC_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*end<sp/>visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="gvc_8h_1a1900bbae79ee742028fdade9874044ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAYOUT_DONE(g)<sp/>(agbindrec(g,<sp/>&quot;Agraphinfo_t&quot;,<sp/>0,<sp/>TRUE)<sp/>&amp;&amp;<sp/>GD_drawing(g))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>misc<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FIXME<sp/>-<sp/>this<sp/>needs<sp/>eliminating<sp/>or<sp/>renaming<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a571fd72f89de3ff4f25b14c04b7ff461" kindref="member">gvToggle</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>set<sp/>up<sp/>a<sp/>graphviz<sp/>context<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*<ref refid="gvc_8h_1aedaaaa2e5c15ae4529238baae4f077dd" kindref="member">gvNEWcontext</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref><sp/>*builtins,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>demand_loading);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>set<sp/>up<sp/>a<sp/>graphviz<sp/>context<sp/>-<sp/>and<sp/>init<sp/>graph<sp/>-<sp/>retaining<sp/>old<sp/>API<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*<ref refid="gvc_8h_1aa64b972a885a52cdbaf5a1c9aff28041" kindref="member">gvContext</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>set<sp/>up<sp/>a<sp/>graphviz<sp/>context<sp/>-<sp/>and<sp/>init<sp/>graph<sp/>-<sp/>with<sp/>builtins<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*<ref refid="gvc_8h_1af83cbf12adb243149643880fd609e460" kindref="member">gvContextPlugins</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref><sp/>*builtins,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>demand_loading);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>get<sp/>information<sp/>associated<sp/>with<sp/>a<sp/>graphviz<sp/>context<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="gvc_8h_1a03c8b92b7b4f46be5a2a0dd89f0f232f" kindref="member">gvcInfo</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref>*);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="gvc_8h_1abec107d61e37239ee3e17a65fc0913e6" kindref="member">gvcVersion</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref>*);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="gvc_8h_1a87e1aa51e448e1356857447bf6bf3c05" kindref="member">gvcBuildDate</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref>*);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>parse<sp/>command<sp/>line<sp/>args<sp/>-<sp/>minimally<sp/>argv[0]<sp/>sets<sp/>layout<sp/>engine<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a25076e9f03e8de36cc39f933fb4b571e" kindref="member">gvParseArgs</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*<ref refid="gvc_8h_1a470abedd754cbaa1a24c93585a5fffed" kindref="member">gvNextInputGraph</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*<ref refid="gvc_8h_1ae28ba786b0811f07c793f2873171701e" kindref="member">gvPluginsGraph</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Compute<sp/>a<sp/>layout<sp/>using<sp/>a<sp/>specified<sp/>engine<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a61596ae3c9c9373f4f5e4ac498941122" kindref="member">gvLayout</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*engine);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Compute<sp/>a<sp/>layout<sp/>using<sp/>layout<sp/>engine<sp/>from<sp/>command<sp/>line<sp/>args<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a992879e2fbe5e0347f3e0834f2063b64" kindref="member">gvLayoutJobs</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>layout<sp/>into<sp/>string<sp/>attributes<sp/>of<sp/>the<sp/>graph<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1af52517392e8daee54f22de6b3885fc5f" kindref="member">attach_attrs</ref>(<ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>layout<sp/>in<sp/>a<sp/>specified<sp/>format<sp/>to<sp/>an<sp/>open<sp/>FILE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a6a428473e1d8a784491c564af2274a3a" kindref="member">gvRender</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>FILE<sp/>*out);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>layout<sp/>in<sp/>a<sp/>specified<sp/>format<sp/>to<sp/>an<sp/>open<sp/>FILE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1ae074e161c1dd2329956abe90763470c5" kindref="member">gvRenderFilename</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>layout<sp/>in<sp/>a<sp/>specified<sp/>format<sp/>to<sp/>an<sp/>external<sp/>context<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1ad994c58c824976bfc749f02f197c348b" kindref="member">gvRenderContext</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*context);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>layout<sp/>in<sp/>a<sp/>specified<sp/>format<sp/>to<sp/>a<sp/>malloc&apos;ed<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a805c0f03342cd13811f38f85611f298c" kindref="member">gvRenderData</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**result,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*length);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Free<sp/>memory<sp/>allocated<sp/>and<sp/>pointed<sp/>to<sp/>by<sp/>*result<sp/>in<sp/>gvRenderData<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1abfe5c9ff1184a54f744b5f792322bef7" kindref="member">gvFreeRenderData</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Render<sp/>layout<sp/>according<sp/>to<sp/>-T<sp/>and<sp/>-o<sp/>options<sp/>found<sp/>by<sp/>gvParseArgs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a6caa087baf49774088f189d241eb20f4" kindref="member">gvRenderJobs</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Clean<sp/>up<sp/>layout<sp/>data<sp/>structures<sp/>-<sp/>layouts<sp/>are<sp/>not<sp/>nestable<sp/>(yet)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a43361f3b706eccf5e8bab9756f4bc81d" kindref="member">gvFreeLayout</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*g);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Clean<sp/>up<sp/>graphviz<sp/>context<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a39e351e15d94e49ab86c22da7cb20353" kindref="member">gvFinalize</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1aa84d4a48426e4f65a515cbf35afbc4ed" kindref="member">gvFreeContext</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Return<sp/>list<sp/>of<sp/>plugins<sp/>of<sp/>type<sp/>kind.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*<sp/>kind<sp/>would<sp/>normally<sp/>be<sp/>&quot;render&quot;<sp/>&quot;layout&quot;<sp/>&quot;textlayout&quot;<sp/>&quot;device&quot;<sp/>&quot;loadimage&quot;</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/>The<sp/>size<sp/>of<sp/>the<sp/>list<sp/>is<sp/>stored<sp/>in<sp/>sz.</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/>The<sp/>caller<sp/>is<sp/>responsible<sp/>for<sp/>freeing<sp/>the<sp/>storage.<sp/>This<sp/>involves</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/>freeing<sp/>each<sp/>item,<sp/>then<sp/>the<sp/>list.</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*<sp/>Returns<sp/>NULL<sp/>on<sp/>error,<sp/>or<sp/>if<sp/>there<sp/>are<sp/>no<sp/>plugins.</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/>*<sp/>In<sp/>the<sp/>former<sp/>case,<sp/>sz<sp/>is<sp/>unchanged;<sp/>in<sp/>the<sp/>latter,<sp/>sz<sp/>=<sp/>0.</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/>*<sp/>At<sp/>present,<sp/>the<sp/>str<sp/>argument<sp/>is<sp/>unused,<sp/>but<sp/>may<sp/>be<sp/>used<sp/>to<sp/>modify</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/>*<sp/>the<sp/>search<sp/>as<sp/>in<sp/>gvplugin_list<sp/>above.</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/><ref refid="gvc_8h_1a6aedce091638e981ec57d284e0c8fbbf" kindref="member">gvPluginList</ref><sp/>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>kind,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>sz,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gvc_8h_1a16d7bba4d3b463feb5a0bfb001d4e275" kindref="member">gvAddLibrary</ref>(<ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*gvc,<sp/><ref refid="structgvplugin__library__t" kindref="compound">gvplugin_library_t</ref><sp/>*lib);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GVC_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvc.h"/>
+  </compounddef>
+</doxygen>

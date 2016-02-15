@@ -1,0 +1,744 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="pack_8h" kind="file" language="C++">
+    <compoundname>pack.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <incdepgraph>
+      <node id="2080">
+        <label>assert.h</label>
+      </node>
+      <node id="2078">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2079" relation="include">
+        </childnode>
+        <childnode refid="2080" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+        <childnode refid="2082" relation="include">
+        </childnode>
+        <childnode refid="2083" relation="include">
+        </childnode>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2085" relation="include">
+        </childnode>
+        <childnode refid="2086" relation="include">
+        </childnode>
+        <childnode refid="2090" relation="include">
+        </childnode>
+      </node>
+      <node id="2086">
+        <label>cgraph.h</label>
+        <link refid="cgraph_8h"/>
+        <childnode refid="2087" relation="include">
+        </childnode>
+      </node>
+      <node id="2084">
+        <label>pathgeom.h</label>
+        <link refid="pathgeom_8h"/>
+      </node>
+      <node id="2088">
+        <label>stddef.h</label>
+      </node>
+      <node id="2089">
+        <label>string.h</label>
+      </node>
+      <node id="2081">
+        <label>signal.h</label>
+      </node>
+      <node id="2083">
+        <label>gvcext.h</label>
+        <link refid="gvcext_8h"/>
+      </node>
+      <node id="2082">
+        <label>geom.h</label>
+        <link refid="geom_8h"/>
+      </node>
+      <node id="2085">
+        <label>textspan.h</label>
+        <link refid="textspan_8h"/>
+      </node>
+      <node id="2087">
+        <label>cdt.h</label>
+        <link refid="cdt_8h"/>
+        <childnode refid="2088" relation="include">
+        </childnode>
+        <childnode refid="2089" relation="include">
+        </childnode>
+      </node>
+      <node id="2079">
+        <label>stdio.h</label>
+      </node>
+      <node id="2090">
+        <label>usershape.h</label>
+        <link refid="usershape_8h"/>
+        <childnode refid="2087" relation="include">
+        </childnode>
+      </node>
+      <node id="2077">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack.h"/>
+        <childnode refid="2078" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structpack__info" prot="public">pack_info</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pack_8h_1aaa8a6cd9eee9dffc3393e5a57ec42e0b" prot="public" static="no">
+        <name>PK_COL_MAJOR</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="39" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pack_8h_1aad7ebfc06d7717a7e5a41535578d664f" prot="public" static="no">
+        <name>PK_USER_VALS</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="40" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pack_8h_1ac9096c006fab9e69731d50e40b52bf9d" prot="public" static="no">
+        <name>PK_LEFT_ALIGN</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="41" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pack_8h_1ae9a9561061b4ede23536b37ce77c36b2" prot="public" static="no">
+        <name>PK_RIGHT_ALIGN</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="42" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pack_8h_1a5791c249f2cb2fbc3f69686df02c7299" prot="public" static="no">
+        <name>PK_TOP_ALIGN</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="43" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pack_8h_1ac552e54a874d7d7e13e8230ba35caabc" prot="public" static="no">
+        <name>PK_BOT_ALIGN</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="44" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pack_8h_1adbe0e9aa2ef0e581468a15d6f4b31629" prot="public" static="no">
+        <name>PK_INPUT_ORDER</name>
+        <initializer>(1 &lt;&lt; 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="45" column="9" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="pack_8h_1a7867530e1843c636960ccb52dcd347f2" prot="public" static="no">
+        <name>pack_mode</name>
+        <enumvalue id="pack_8h_1a7867530e1843c636960ccb52dcd347f2a3e4ba46fe266df0f9085e24436ef948d" prot="public">
+          <name>l_undef</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pack_8h_1a7867530e1843c636960ccb52dcd347f2a25d95f2b6e3f7585e495b55407867cf8" prot="public">
+          <name>l_clust</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pack_8h_1a7867530e1843c636960ccb52dcd347f2ad0a4de273d36beb0c21b0f4ec7215ac3" prot="public">
+          <name>l_node</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pack_8h_1a7867530e1843c636960ccb52dcd347f2a7dbba35a1cb87ad4e71c4e0634447225" prot="public">
+          <name>l_graph</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pack_8h_1a7867530e1843c636960ccb52dcd347f2ab38798bc7ab1ac9bd8fd061f00da32a8" prot="public">
+          <name>l_array</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pack_8h_1a7867530e1843c636960ccb52dcd347f2a11c19ffbb2842ba3bc029f22a14723da" prot="public">
+          <name>l_aspect</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pack_8h_1a97c604e5f0df885172f770108f3df9cd" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int packval_t</definition>
+        <argsstring></argsstring>
+        <name>packval_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="47" column="1" bodyfile="graphviz/release/include/graphviz/pack.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pack_8h_1a2c15ca6c9eb82debf293160e55116a98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpoint" kindref="compound">point</ref> *</type>
+        <definition>point* putRects</definition>
+        <argsstring>(int ng, boxf *bbs, pack_info *pinfo)</argsstring>
+        <name>putRects</name>
+        <param>
+          <type>int</type>
+          <declname>ng</declname>
+        </param>
+        <param>
+          <type><ref refid="structboxf" kindref="compound">boxf</ref> *</type>
+          <declname>bbs</declname>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+          <declname>pinfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a364b86a15d3afba8632c15da993ee09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int packRects</definition>
+        <argsstring>(int ng, boxf *bbs, pack_info *pinfo)</argsstring>
+        <name>packRects</name>
+        <param>
+          <type>int</type>
+          <declname>ng</declname>
+        </param>
+        <param>
+          <type><ref refid="structboxf" kindref="compound">boxf</ref> *</type>
+          <declname>bbs</declname>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+          <declname>pinfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a8a7046f8790a6df527a3d1e07b120920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structpoint" kindref="compound">point</ref> *</type>
+        <definition>point* putGraphs</definition>
+        <argsstring>(int, Agraph_t **, Agraph_t *, pack_info *)</argsstring>
+        <name>putGraphs</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1af22382087633283c98ae19ec3f5ed045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int packGraphs</definition>
+        <argsstring>(int, Agraph_t **, Agraph_t *, pack_info *)</argsstring>
+        <name>packGraphs</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1ad030110cfab8452c311f680b39f30666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int packSubgraphs</definition>
+        <argsstring>(int, Agraph_t **, Agraph_t *, pack_info *)</argsstring>
+        <name>packSubgraphs</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a9b613a58b8ac479672b03a5cc98389f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pack_graph</definition>
+        <argsstring>(int ng, Agraph_t **gs, Agraph_t *root, boolean *fixed)</argsstring>
+        <name>pack_graph</name>
+        <param>
+          <type>int</type>
+          <declname>ng</declname>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+          <declname>gs</declname>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+          <declname>root</declname>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref> *</type>
+          <declname>fixed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="74" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a7af8f72a553016e2eaab59f5df6e8563" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int shiftGraphs</definition>
+        <argsstring>(int, Agraph_t **, point *, Agraph_t *, int)</argsstring>
+        <name>shiftGraphs</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        </param>
+        <param>
+          <type><ref refid="structpoint" kindref="compound">point</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a51784ccf6fe31a84181eada834a3b804" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+        <definition>pack_mode getPackMode</definition>
+        <argsstring>(Agraph_t *g, pack_mode dflt)</argsstring>
+        <name>getPackMode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+          <declname>dflt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a97e6eb9b4d1896f42f4d4eb91e99eeee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getPack</definition>
+        <argsstring>(Agraph_t *, int not_def, int dflt)</argsstring>
+        <name>getPack</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>not_def</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dflt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a90bd56e4c7d6e3aa6585b31b2fc100cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+        <definition>pack_mode getPackInfo</definition>
+        <argsstring>(Agraph_t *g, pack_mode dflt, int dfltMargin, pack_info *)</argsstring>
+        <name>getPackInfo</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+          <declname>dflt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dfltMargin</declname>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a975cc8ef60f0ef7ca664a8d5e8af00ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+        <definition>pack_mode getPackModeInfo</definition>
+        <argsstring>(Agraph_t *g, pack_mode dflt, pack_info *)</argsstring>
+        <name>getPackModeInfo</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+          <declname>dflt</declname>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1aba83e2ab7794070d1c994c75697c8a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+        <definition>pack_mode parsePackModeInfo</definition>
+        <argsstring>(char *p, pack_mode dflt, pack_info *pinfo)</argsstring>
+        <name>parsePackModeInfo</name>
+        <param>
+          <type>char *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref></type>
+          <declname>dflt</declname>
+        </param>
+        <param>
+          <type><ref refid="structpack__info" kindref="compound">pack_info</ref> *</type>
+          <declname>pinfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a7c7d92de85d7c85e7498d441c75238c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int isConnected</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>isConnected</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a9a4dc7037263866955701096254a1709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        <definition>Agraph_t** ccomps</definition>
+        <argsstring>(Agraph_t *, int *, char *)</argsstring>
+        <name>ccomps</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1ac8b7e0ead4bfb40eb2f1ceec936a8b49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        <definition>Agraph_t** cccomps</definition>
+        <argsstring>(Agraph_t *, int *, char *)</argsstring>
+        <name>cccomps</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a10538766f9c516d6ae28f1e2933286c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> **</type>
+        <definition>Agraph_t** pccomps</definition>
+        <argsstring>(Agraph_t *, int *, char *, boolean *)</argsstring>
+        <name>pccomps</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>int *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pack_8h_1a41d32efed24453917a1dfea58db1b85d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nodeInduce</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>nodeInduce</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pack.h" line="88" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_PACK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PACK_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Type<sp/>indicating<sp/>granularity<sp/>and<sp/>method<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/>l_undef<sp/><sp/><sp/><sp/>-<sp/>unspecified</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/>l_node<sp/><sp/><sp/><sp/><sp/>-<sp/>polyomino<sp/>using<sp/>nodes<sp/>and<sp/>edges</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/>l_clust<sp/><sp/><sp/><sp/>-<sp/>polyomino<sp/>using<sp/>nodes<sp/>and<sp/>edges<sp/>and<sp/>top-level<sp/>clusters</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(assumes<sp/>ND_clust(n)<sp/>unused<sp/>by<sp/>application)</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/>l_graph<sp/><sp/><sp/><sp/>-<sp/>polyomino<sp/>using<sp/>computer<sp/>graph<sp/>bounding<sp/>box</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/>l_array<sp/><sp/><sp/><sp/>-<sp/>array<sp/>based<sp/>on<sp/>graph<sp/>bounding<sp/>boxes</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/>l_aspect<sp/><sp/><sp/>-<sp/>tiling<sp/>based<sp/>on<sp/>graph<sp/>bounding<sp/>boxes<sp/>preserving<sp/>aspect<sp/>ratio</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/>l_hull<sp/><sp/><sp/><sp/><sp/>-<sp/>polyomino<sp/>using<sp/>convex<sp/>hull<sp/>(unimplemented)</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/>l_tile<sp/><sp/><sp/><sp/><sp/>-<sp/>tiling<sp/>using<sp/>graph<sp/>bounding<sp/>box<sp/>(unimplemented)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/>l_bisect<sp/><sp/><sp/>-<sp/>alternate<sp/>bisection<sp/>using<sp/>graph<sp/>bounding<sp/>box<sp/>(unimplemented)</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2a3e4ba46fe266df0f9085e24436ef948d" kindref="member">l_undef</ref>,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2a25d95f2b6e3f7585e495b55407867cf8" kindref="member">l_clust</ref>,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2ad0a4de273d36beb0c21b0f4ec7215ac3" kindref="member">l_node</ref>,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2a7dbba35a1cb87ad4e71c4e0634447225" kindref="member">l_graph</ref>,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2ab38798bc7ab1ac9bd8fd061f00da32a8" kindref="member">l_array</ref>,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2a11c19ffbb2842ba3bc029f22a14723da" kindref="member">l_aspect</ref><sp/>}<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="pack_8h_1aaa8a6cd9eee9dffc3393e5a57ec42e0b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_COL_MAJOR<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="pack_8h_1aad7ebfc06d7717a7e5a41535578d664f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_USER_VALS<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="pack_8h_1ac9096c006fab9e69731d50e40b52bf9d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_LEFT_ALIGN<sp/><sp/>(1<sp/>&lt;&lt;<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="pack_8h_1ae9a9561061b4ede23536b37ce77c36b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_RIGHT_ALIGN<sp/>(1<sp/>&lt;&lt;<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="pack_8h_1a5791c249f2cb2fbc3f69686df02c7299" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_TOP_ALIGN<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="pack_8h_1ac552e54a874d7d7e13e8230ba35caabc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_BOT_ALIGN<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="pack_8h_1adbe0e9aa2ef0e581468a15d6f4b31629" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PK_INPUT_ORDER<sp/>(1<sp/>&lt;&lt;<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="pack_8h_1a97c604e5f0df885172f770108f3df9cd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a97c604e5f0df885172f770108f3df9cd" kindref="member">packval_t</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structpack__info" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50" refid="structpack__info_1a07b6d2fc5d98620c409315133963dc5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structpack__info_1a07b6d2fc5d98620c409315133963dc5f" kindref="member">aspect</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>desired<sp/>aspect<sp/>ratio<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structpack__info_1a53ddd56f6a9173e2e5a59d431d437bea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpack__info_1a53ddd56f6a9173e2e5a59d431d437bea" kindref="member">sz</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>row/column<sp/>size<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="structpack__info_1acf43e29db789271a7494e51864e25a46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpack__info_1acf43e29db789271a7494e51864e25a46" kindref="member">margin</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>margin<sp/>left<sp/>around<sp/>objects,<sp/>in<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structpack__info_1aa2e93b65eaf035364214aea6db8f1feb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpack__info_1aa2e93b65eaf035364214aea6db8f1feb" kindref="member">doSplines</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>use<sp/>splines<sp/>in<sp/>constructing<sp/>graph<sp/>shape<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structpack__info_1a421f5826aa51c41653402e9072a2f86d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/><ref refid="structpack__info_1a421f5826aa51c41653402e9072a2f86d" kindref="member">mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>granularity<sp/>and<sp/>method<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structpack__info_1aa29bf3db883b8e88021de27051ab7b48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>*<ref refid="structpack__info_1aa29bf3db883b8e88021de27051ab7b48" kindref="member">fixed</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>fixed[i]<sp/>==<sp/>true<sp/>implies<sp/>g[i]<sp/>should<sp/>not<sp/>be<sp/>moved<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structpack__info_1aaa63ae4b75c6a88465b0507b17083dd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packval_t*<sp/><ref refid="structpack__info_1aaa63ae4b75c6a88465b0507b17083dd7" kindref="member">vals</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>arrays,<sp/>sort<sp/>numbers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structpack__info_1a1b713c8f5ae1329ec64129c5ada2a34d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structpack__info_1a1b713c8f5ae1329ec64129c5ada2a34d" kindref="member">flags</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVC_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*end<sp/>visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/>*<ref refid="pack_8h_1a2c15ca6c9eb82debf293160e55116a98" kindref="member">putRects</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ng,<sp/><ref refid="structboxf" kindref="compound">boxf</ref>*<sp/>bbs,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref>*<sp/>pinfo);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a364b86a15d3afba8632c15da993ee09f" kindref="member">packRects</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ng,<sp/><ref refid="structboxf" kindref="compound">boxf</ref>*<sp/>bbs,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref>*<sp/>pinfo);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/>*<ref refid="pack_8h_1a8a7046f8790a6df527a3d1e07b120920" kindref="member">putGraphs</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>**,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref><sp/>*);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1af22382087633283c98ae19ec3f5ed045" kindref="member">packGraphs</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>**,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref><sp/>*);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1ad030110cfab8452c311f680b39f30666" kindref="member">packSubgraphs</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>**,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref><sp/>*);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a9b613a58b8ac479672b03a5cc98389f9" kindref="member">pack_graph</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ng,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>**<sp/>gs,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>*<sp/>root,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal">*<sp/>fixed);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a7af8f72a553016e2eaab59f5df6e8563" kindref="member">shiftGraphs</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>**,<sp/><ref refid="structpoint" kindref="compound">point</ref>*,<sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/><ref refid="pack_8h_1a51784ccf6fe31a84181eada834a3b804" kindref="member">getPackMode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<sp/>g,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/>dflt);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a97e6eb9b4d1896f42f4d4eb91e99eeee" kindref="member">getPack</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>not_def,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dflt);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/><ref refid="pack_8h_1a90bd56e4c7d6e3aa6585b31b2fc100cc" kindref="member">getPackInfo</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<sp/>g,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/>dflt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dfltMargin,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref>*);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/><ref refid="pack_8h_1a975cc8ef60f0ef7ca664a8d5e8af00ba" kindref="member">getPackModeInfo</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<sp/>g,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/>dflt,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref>*);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/><ref refid="pack_8h_1aba83e2ab7794070d1c994c75697c8a7f" kindref="member">parsePackModeInfo</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>p,<sp/><ref refid="pack_8h_1a7867530e1843c636960ccb52dcd347f2" kindref="member">pack_mode</ref><sp/>dflt,<sp/><ref refid="structpack__info" kindref="compound">pack_info</ref>*<sp/>pinfo);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a7c7d92de85d7c85e7498d441c75238c1" kindref="member">isConnected</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>**<ref refid="pack_8h_1a9a4dc7037263866955701096254a1709" kindref="member">ccomps</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>**<ref refid="pack_8h_1ac8b7e0ead4bfb40eb2f1ceec936a8b49" kindref="member">cccomps</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>**<ref refid="pack_8h_1a10538766f9c516d6ae28f1e2933286c4" kindref="member">pccomps</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pack_8h_1a41d32efed24453917a1dfea58db1b85d" kindref="member">nodeInduce</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/pack.h"/>
+  </compounddef>
+</doxygen>

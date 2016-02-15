@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvplugin__active__device__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvplugin_active_device_s</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvplugin__active__device__s_1a41c0632dd1a305274b519f467bc2ad67" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1acc098e86302e99b8dd0a76e841b01e87" kindref="member">gvdevice_engine_t</ref> *</type>
+        <definition>gvdevice_engine_t* gvplugin_active_device_s::engine</definition>
+        <argsstring></argsstring>
+        <name>engine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="131" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__device__s_1a906c40b64020879e25a89fada3a67acf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvplugin_active_device_s::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="132" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__device__s_1a1c4781bdfcad3a41925bbe2b845e6a00" prot="public" static="no" mutable="no">
+        <type><ref refid="structgvdevice__features__t" kindref="compound">gvdevice_features_t</ref> *</type>
+        <definition>gvdevice_features_t* gvplugin_active_device_s::features</definition>
+        <argsstring></argsstring>
+        <name>features</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="133" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__device__s_1a5b71a28b13f386e4b300c8dd872d0a5b" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* gvplugin_active_device_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="134" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5022">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5023" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5019">
+        <label>void(*)(GVJ_t *firstjob)</label>
+      </node>
+      <node id="5021">
+        <label>int</label>
+      </node>
+      <node id="5023">
+        <label>double</label>
+      </node>
+      <node id="5016">
+        <label>gvplugin_active_device_s</label>
+        <link refid="structgvplugin__active__device__s"/>
+        <childnode refid="5017" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5018" relation="usage">
+          <edgelabel>engine</edgelabel>
+        </childnode>
+        <childnode refid="5020" relation="usage">
+          <edgelabel>features</edgelabel>
+        </childnode>
+        <childnode refid="5021" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="5020">
+        <label>gvdevice_features_t</label>
+        <link refid="structgvdevice__features__t"/>
+        <childnode refid="5021" relation="usage">
+          <edgelabel>flags</edgelabel>
+        </childnode>
+        <childnode refid="5022" relation="usage">
+          <edgelabel>default_pagesize</edgelabel>
+          <edgelabel>default_margin</edgelabel>
+          <edgelabel>default_dpi</edgelabel>
+        </childnode>
+      </node>
+      <node id="5018">
+        <label>gvdevice_engine_s</label>
+        <link refid="structgvdevice__engine__s"/>
+        <childnode refid="5019" relation="usage">
+          <edgelabel>finalize</edgelabel>
+          <edgelabel>initialize</edgelabel>
+          <edgelabel>format</edgelabel>
+        </childnode>
+      </node>
+      <node id="5017">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="130" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="130" bodyend="135"/>
+    <listofallmembers>
+      <member refid="structgvplugin__active__device__s_1a41c0632dd1a305274b519f467bc2ad67" prot="public" virt="non-virtual"><scope>gvplugin_active_device_s</scope><name>engine</name></member>
+      <member refid="structgvplugin__active__device__s_1a1c4781bdfcad3a41925bbe2b845e6a00" prot="public" virt="non-virtual"><scope>gvplugin_active_device_s</scope><name>features</name></member>
+      <member refid="structgvplugin__active__device__s_1a906c40b64020879e25a89fada3a67acf" prot="public" virt="non-virtual"><scope>gvplugin_active_device_s</scope><name>id</name></member>
+      <member refid="structgvplugin__active__device__s_1a5b71a28b13f386e4b300c8dd872d0a5b" prot="public" virt="non-virtual"><scope>gvplugin_active_device_s</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

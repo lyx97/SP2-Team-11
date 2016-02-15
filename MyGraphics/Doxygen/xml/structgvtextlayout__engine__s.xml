@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvtextlayout__engine__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvtextlayout_engine_s</compoundname>
+    <includes refid="gvplugin__textlayout_8h" local="no">gvplugin_textlayout.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvtextlayout__engine__s_1a948cd223017c339f2e3713b23ab70ce2" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref>(*</type>
+        <definition>boolean(* gvtextlayout_engine_s::textlayout) (textspan_t *span, char **fontpath)</definition>
+        <argsstring>)(textspan_t *span, char **fontpath)</argsstring>
+        <name>textlayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_textlayout.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_textlayout.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5187">
+        <label>gvtextlayout_engine_s</label>
+        <link refid="structgvtextlayout__engine__s"/>
+        <childnode refid="5188" relation="usage">
+          <edgelabel>textlayout</edgelabel>
+        </childnode>
+      </node>
+      <node id="5188">
+        <label>unsigned char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvplugin_textlayout.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_textlayout.h" bodystart="26" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structgvtextlayout__engine__s_1a948cd223017c339f2e3713b23ab70ce2" prot="public" virt="non-virtual"><scope>gvtextlayout_engine_s</scope><name>textlayout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Utility_8h" kind="file" language="C++">
+    <compoundname>Utility.h</compoundname>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includes refid="Vertex_8h" local="yes">Vertex.h</includes>
+    <includedby refid="Assignment2_8cpp" local="yes">MyGraphics/Source/Assignment2.cpp</includedby>
+    <includedby refid="Assignment3_8cpp" local="yes">MyGraphics/Source/Assignment3.cpp</includedby>
+    <includedby refid="SceneLight_8cpp" local="yes">MyGraphics/Source/SceneLight.cpp</includedby>
+    <includedby refid="SceneLight2_8cpp" local="yes">MyGraphics/Source/SceneLight2.cpp</includedby>
+    <includedby refid="SceneModel_8cpp" local="yes">MyGraphics/Source/SceneModel.cpp</includedby>
+    <includedby refid="SceneSkybox_8cpp" local="yes">MyGraphics/Source/SceneSkybox.cpp</includedby>
+    <includedby refid="SceneText_8cpp" local="yes">MyGraphics/Source/SceneText.cpp</includedby>
+    <includedby refid="SceneTexture_8cpp" local="yes">MyGraphics/Source/SceneTexture.cpp</includedby>
+    <includedby refid="Utility_8cpp" local="yes">MyGraphics/Source/Utility.cpp</includedby>
+    <incdepgraph>
+      <node id="3176">
+        <label>cmath</label>
+      </node>
+      <node id="3180">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3175" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+      </node>
+      <node id="3177">
+        <label>exception</label>
+      </node>
+      <node id="3178">
+        <label>ctime</label>
+      </node>
+      <node id="3173">
+        <label>MyGraphics/Source/Utility.h</label>
+        <link refid="Utility.h"/>
+        <childnode refid="3174" relation="include">
+        </childnode>
+        <childnode refid="3182" relation="include">
+        </childnode>
+      </node>
+      <node id="3179">
+        <label>cstdlib</label>
+      </node>
+      <node id="3181">
+        <label>iostream</label>
+      </node>
+      <node id="3174">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="3175" relation="include">
+        </childnode>
+        <childnode refid="3180" relation="include">
+        </childnode>
+      </node>
+      <node id="3175">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3176" relation="include">
+        </childnode>
+        <childnode refid="3177" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3179" relation="include">
+        </childnode>
+      </node>
+      <node id="3182">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="3174" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3191">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="3189">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="3190">
+        <label>MyGraphics/Source/SceneText.cpp</label>
+        <link refid="SceneText_8cpp"/>
+      </node>
+      <node id="3186">
+        <label>MyGraphics/Source/SceneLight.cpp</label>
+        <link refid="SceneLight_8cpp"/>
+      </node>
+      <node id="3188">
+        <label>MyGraphics/Source/SceneModel.cpp</label>
+        <link refid="SceneModel_8cpp"/>
+      </node>
+      <node id="3183">
+        <label>MyGraphics/Source/Utility.h</label>
+        <link refid="Utility.h"/>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3185" relation="include">
+        </childnode>
+        <childnode refid="3186" relation="include">
+        </childnode>
+        <childnode refid="3187" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+        <childnode refid="3189" relation="include">
+        </childnode>
+        <childnode refid="3190" relation="include">
+        </childnode>
+        <childnode refid="3191" relation="include">
+        </childnode>
+        <childnode refid="3192" relation="include">
+        </childnode>
+      </node>
+      <node id="3192">
+        <label>MyGraphics/Source/Utility.cpp</label>
+        <link refid="Utility_8cpp"/>
+      </node>
+      <node id="3185">
+        <label>MyGraphics/Source/Assignment3.cpp</label>
+        <link refid="Assignment3_8cpp"/>
+      </node>
+      <node id="3184">
+        <label>MyGraphics/Source/Assignment2.cpp</label>
+        <link refid="Assignment2_8cpp"/>
+      </node>
+      <node id="3187">
+        <label>MyGraphics/Source/SceneLight2.cpp</label>
+        <link refid="SceneLight2_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position operator*</definition>
+        <argsstring>(const Mtx44 &amp;lhs, const Position &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Utility.h" line="7" column="1" bodyfile="MyGraphics/Source/Utility.cpp" bodystart="3" bodyend="15"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" kindref="member">operator* </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/Utility.h"/>
+  </compounddef>
+</doxygen>

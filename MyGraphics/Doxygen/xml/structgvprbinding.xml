@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvprbinding" kind="struct" language="C++" prot="public">
+    <compoundname>gvprbinding</compoundname>
+    <includes refid="gvpr_8h" local="no">gvpr.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvprbinding_1a4005438ed9881c2e2ca387677c0f5e84" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* gvprbinding::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvpr.h" line="43" column="1" bodyfile="graphviz/release/include/graphviz/gvpr.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvprbinding_1a7996f0e4b05baac745f2ed6c5be7a48e" prot="public" static="no" mutable="no">
+        <type><ref refid="gvpr_8h_1a63948625781ab9e178029d681b5eb4a9" kindref="member">gvpruserfn</ref></type>
+        <definition>gvpruserfn gvprbinding::fn</definition>
+        <argsstring></argsstring>
+        <name>fn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvpr.h" line="44" column="1" bodyfile="graphviz/release/include/graphviz/gvpr.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5072">
+        <label>gvprbinding</label>
+        <link refid="structgvprbinding"/>
+        <childnode refid="5073" relation="usage">
+          <edgelabel>fn</edgelabel>
+        </childnode>
+        <childnode refid="5074" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="5074">
+        <label>char *</label>
+      </node>
+      <node id="5073">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvpr.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/gvpr.h" bodystart="42" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structgvprbinding_1a7996f0e4b05baac745f2ed6c5be7a48e" prot="public" virt="non-virtual"><scope>gvprbinding</scope><name>fn</name></member>
+      <member refid="structgvprbinding_1a4005438ed9881c2e2ca387677c0f5e84" prot="public" virt="non-virtual"><scope>gvprbinding</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgtag__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agtag_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgtag__s_1a3151531a8a8e65463e3430ac63b98eea" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agtag_s::objtype</definition>
+        <argsstring></argsstring>
+        <name>objtype</name>
+        <bitfield>2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="79" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgtag__s_1aaa4d9a53a33a194e419ce32d9e2db3be" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agtag_s::mtflock</definition>
+        <argsstring></argsstring>
+        <name>mtflock</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="80" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgtag__s_1a299f4a9923f3a3b4b97d4ac2a5d74810" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agtag_s::attrwf</definition>
+        <argsstring></argsstring>
+        <name>attrwf</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="81" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgtag__s_1a32e66cb84ffcc0b778c7658205e1e541" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agtag_s::seq</definition>
+        <argsstring></argsstring>
+        <name>seq</name>
+        <bitfield>(sizeof(unsigned) * 8 - 4)</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="82" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgtag__s_1abd289f91f0a174af2e833f83a9153e46" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Agtag_s::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="83" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4608">
+        <label>Agtag_s</label>
+        <link refid="structAgtag__s"/>
+        <childnode refid="4609" relation="usage">
+          <edgelabel>attrwf</edgelabel>
+          <edgelabel>mtflock</edgelabel>
+          <edgelabel>objtype</edgelabel>
+          <edgelabel>seq</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4609">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="78" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="78" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structAgtag__s_1a299f4a9923f3a3b4b97d4ac2a5d74810" prot="public" virt="non-virtual"><scope>Agtag_s</scope><name>attrwf</name></member>
+      <member refid="structAgtag__s_1abd289f91f0a174af2e833f83a9153e46" prot="public" virt="non-virtual"><scope>Agtag_s</scope><name>id</name></member>
+      <member refid="structAgtag__s_1aaa4d9a53a33a194e419ce32d9e2db3be" prot="public" virt="non-virtual"><scope>Agtag_s</scope><name>mtflock</name></member>
+      <member refid="structAgtag__s_1a3151531a8a8e65463e3430ac63b98eea" prot="public" virt="non-virtual"><scope>Agtag_s</scope><name>objtype</name></member>
+      <member refid="structAgtag__s_1a32e66cb84ffcc0b778c7658205e1e541" prot="public" virt="non-virtual"><scope>Agtag_s</scope><name>seq</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

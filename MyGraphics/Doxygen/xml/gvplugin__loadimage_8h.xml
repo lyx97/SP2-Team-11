@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvplugin__loadimage_8h" kind="file" language="C++">
+    <compoundname>gvplugin_loadimage.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <includes refid="gvplugin_8h" local="yes">gvplugin.h</includes>
+    <includes refid="gvcjob_8h" local="yes">gvcjob.h</includes>
+    <incdepgraph>
+      <node id="2017">
+        <label>assert.h</label>
+      </node>
+      <node id="2015">
+        <label>types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2016" relation="include">
+        </childnode>
+        <childnode refid="2017" relation="include">
+        </childnode>
+        <childnode refid="2018" relation="include">
+        </childnode>
+        <childnode refid="2019" relation="include">
+        </childnode>
+        <childnode refid="2020" relation="include">
+        </childnode>
+        <childnode refid="2021" relation="include">
+        </childnode>
+        <childnode refid="2022" relation="include">
+        </childnode>
+        <childnode refid="2023" relation="include">
+        </childnode>
+        <childnode refid="2027" relation="include">
+        </childnode>
+      </node>
+      <node id="2014">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin_loadimage.h"/>
+        <childnode refid="2015" relation="include">
+        </childnode>
+        <childnode refid="2028" relation="include">
+        </childnode>
+        <childnode refid="2029" relation="include">
+        </childnode>
+      </node>
+      <node id="2023">
+        <label>cgraph.h</label>
+        <link refid="cgraph_8h"/>
+        <childnode refid="2024" relation="include">
+        </childnode>
+      </node>
+      <node id="2021">
+        <label>pathgeom.h</label>
+        <link refid="pathgeom_8h"/>
+      </node>
+      <node id="2028">
+        <label>gvplugin.h</label>
+        <link refid="gvplugin_8h"/>
+        <childnode refid="2020" relation="include">
+        </childnode>
+      </node>
+      <node id="2025">
+        <label>stddef.h</label>
+      </node>
+      <node id="2026">
+        <label>string.h</label>
+      </node>
+      <node id="2029">
+        <label>gvcjob.h</label>
+        <link refid="gvcjob_8h"/>
+        <childnode refid="2030" relation="include">
+        </childnode>
+        <childnode refid="2031" relation="include">
+        </childnode>
+      </node>
+      <node id="2031">
+        <label>color.h</label>
+        <link refid="color_8h"/>
+      </node>
+      <node id="2018">
+        <label>signal.h</label>
+      </node>
+      <node id="2020">
+        <label>gvcext.h</label>
+        <link refid="gvcext_8h"/>
+      </node>
+      <node id="2019">
+        <label>geom.h</label>
+        <link refid="geom_8h"/>
+      </node>
+      <node id="2022">
+        <label>textspan.h</label>
+        <link refid="textspan_8h"/>
+      </node>
+      <node id="2030">
+        <label>gvcommon.h</label>
+        <link refid="gvcommon_8h"/>
+      </node>
+      <node id="2024">
+        <label>cdt.h</label>
+        <link refid="cdt_8h"/>
+        <childnode refid="2025" relation="include">
+        </childnode>
+        <childnode refid="2026" relation="include">
+        </childnode>
+      </node>
+      <node id="2016">
+        <label>stdio.h</label>
+      </node>
+      <node id="2027">
+        <label>usershape.h</label>
+        <link refid="usershape_8h"/>
+        <childnode refid="2024" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structgvloadimage__engine__s" prot="public">gvloadimage_engine_s</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gvplugin__loadimage_8h_1afa54e162cefd752b9feb8f5ffff668cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean gvusershape_file_access</definition>
+        <argsstring>(usershape_t *us)</argsstring>
+        <name>gvusershape_file_access</name>
+        <param>
+          <type><ref refid="usershape_8h_1a65c9d64037cce8c0cbf5fce493c8f8aa" kindref="member">usershape_t</ref> *</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_loadimage.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="gvplugin__loadimage_8h_1a7cbef7af96b15d7cdf604000fabe3e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gvusershape_file_release</definition>
+        <argsstring>(usershape_t *us)</argsstring>
+        <name>gvusershape_file_release</name>
+        <param>
+          <type><ref refid="usershape_8h_1a65c9d64037cce8c0cbf5fce493c8f8aa" kindref="member">usershape_t</ref> *</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_loadimage.h" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVPLUGIN_IMAGELOAD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVPLUGIN_IMAGELOAD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="types_8h" kindref="compound">types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvplugin_8h" kindref="compound">gvplugin.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvcjob_8h" kindref="compound">gvcjob.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>GVDLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>extern<sp/>__declspec(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVC_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*end<sp/>visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="gvplugin__loadimage_8h_1afa54e162cefd752b9feb8f5ffff668cd" kindref="member">gvusershape_file_access</ref>(<ref refid="structusershape__s" kindref="compound">usershape_t</ref><sp/>*us);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gvplugin__loadimage_8h_1a7cbef7af96b15d7cdf604000fabe3e55" kindref="member">gvusershape_file_release</ref>(<ref refid="structusershape__s" kindref="compound">usershape_t</ref><sp/>*us);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structgvloadimage__engine__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvloadimage__engine__s" kindref="compound">gvloadimage_engine_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="structgvloadimage__engine__s_1a075966913bc760cbc61e8a5e6e6b89e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvloadimage__engine__s_1a075966913bc760cbc61e8a5e6e6b89e8" kindref="member">loadimage</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*job,<sp/><ref refid="structusershape__s" kindref="compound">usershape_t</ref><sp/>*us,<sp/><ref refid="structboxf" kindref="compound">boxf</ref><sp/>b,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>filled);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GVPLUGIN_IMAGELOAD_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvplugin_loadimage.h"/>
+  </compounddef>
+</doxygen>

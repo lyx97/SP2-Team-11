@@ -1,0 +1,1941 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="graph_8h" kind="file" language="C++">
+    <compoundname>graph.h</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="cdt_8h" local="yes">cdt.h</includes>
+    <incdepgraph>
+      <node id="1911">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1914">
+        <label>stddef.h</label>
+      </node>
+      <node id="1909">
+        <label>graphviz/release/include/graphviz/graph.h</label>
+        <link refid="graph.h"/>
+        <childnode refid="1910" relation="include">
+        </childnode>
+        <childnode refid="1911" relation="include">
+        </childnode>
+        <childnode refid="1912" relation="include">
+        </childnode>
+        <childnode refid="1913" relation="include">
+        </childnode>
+      </node>
+      <node id="1910">
+        <label>sys/types.h</label>
+      </node>
+      <node id="1915">
+        <label>string.h</label>
+      </node>
+      <node id="1913">
+        <label>cdt.h</label>
+        <link refid="cdt_8h"/>
+        <childnode refid="1914" relation="include">
+        </childnode>
+        <childnode refid="1915" relation="include">
+        </childnode>
+      </node>
+      <node id="1912">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structAgraph__t" prot="public">Agraph_t</innerclass>
+    <innerclass refid="structAgnode__t" prot="public">Agnode_t</innerclass>
+    <innerclass refid="structAgedge__t" prot="public">Agedge_t</innerclass>
+    <innerclass refid="structAgdata__t" prot="public">Agdata_t</innerclass>
+    <innerclass refid="structAgsym__t" prot="public">Agsym_t</innerclass>
+    <innerclass refid="structAgdict__t" prot="public">Agdict_t</innerclass>
+    <innerclass refid="structAgproto__t" prot="public">Agproto_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="graph_8h_1a12d1b461e7a9a9ef358c6bec5264a2e2" prot="public" static="no">
+        <name>TAIL_ID</name>
+        <initializer>&quot;tailport&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="35" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1aaf9f916d15b0ab383ab871f5031c74eb" prot="public" static="no">
+        <name>HEAD_ID</name>
+        <initializer>&quot;headport&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="36" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a175ce9e95c7c3fa510a952710bf14f8d" prot="public" static="no">
+        <name>AGFLAG_DIRECTED</name>
+        <initializer>(1&lt;&lt;0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="48" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a01041601ac7fd58cb37fa27629e08280" prot="public" static="no">
+        <name>AGFLAG_STRICT</name>
+        <initializer>(1&lt;&lt;1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="49" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a99352ae5601f340cad5108ed53ac7afa" prot="public" static="no">
+        <name>AGFLAG_METAGRAPH</name>
+        <initializer>(1&lt;&lt;2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="50" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a1e06db728ec62594cc4c34d5e039f94b" prot="public" static="no">
+        <name>AGRAPH</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="52" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a30686bd9b430a8409ea78a8499088fb0" prot="public" static="no">
+        <name>AGRAPHSTRICT</name>
+        <initializer>(<ref refid="graph_8h_1a1e06db728ec62594cc4c34d5e039f94b" kindref="member">AGRAPH</ref> | <ref refid="graph_8h_1a01041601ac7fd58cb37fa27629e08280" kindref="member">AGFLAG_STRICT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="53" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a2c40727be0b4e7da1fa5e6b4772d3ba4" prot="public" static="no">
+        <name>AGDIGRAPH</name>
+        <initializer><ref refid="graph_8h_1a175ce9e95c7c3fa510a952710bf14f8d" kindref="member">AGFLAG_DIRECTED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="54" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1adb06a39cf3c440738bd4ee1c4a689d28" prot="public" static="no">
+        <name>AGDIGRAPHSTRICT</name>
+        <initializer>(<ref refid="graph_8h_1a2c40727be0b4e7da1fa5e6b4772d3ba4" kindref="member">AGDIGRAPH</ref> | <ref refid="graph_8h_1a01041601ac7fd58cb37fa27629e08280" kindref="member">AGFLAG_STRICT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="55" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1ab95d966cf23773c443c1bf2f99ebdd5f" prot="public" static="no">
+        <name>AGMETAGRAPH</name>
+        <initializer>(<ref refid="graph_8h_1a175ce9e95c7c3fa510a952710bf14f8d" kindref="member">AGFLAG_DIRECTED</ref> | <ref refid="graph_8h_1a01041601ac7fd58cb37fa27629e08280" kindref="member">AGFLAG_STRICT</ref> | <ref refid="graph_8h_1a99352ae5601f340cad5108ed53ac7afa" kindref="member">AGFLAG_METAGRAPH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="56" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a9e8552e3c862026590f3e6f024a83327" prot="public" static="no">
+        <name>AG_IS_DIRECTED</name>
+        <param><defname>g</defname></param>
+        <initializer>((g)-&gt;kind &amp; <ref refid="graph_8h_1a175ce9e95c7c3fa510a952710bf14f8d" kindref="member">AGFLAG_DIRECTED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="58" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a3661ac6f7bb18b2f32711ee154f979f3" prot="public" static="no">
+        <name>AG_IS_STRICT</name>
+        <param><defname>g</defname></param>
+        <initializer>((g)-&gt;kind &amp; <ref refid="graph_8h_1a01041601ac7fd58cb37fa27629e08280" kindref="member">AGFLAG_STRICT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="59" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a4f54f35a25ce8f804dc5b422d644c346" prot="public" static="no">
+        <name>AG_IS_METAGRAPH</name>
+        <param><defname>g</defname></param>
+        <initializer>((g)-&gt;kind &amp; <ref refid="graph_8h_1a99352ae5601f340cad5108ed53ac7afa" kindref="member">AGFLAG_METAGRAPH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="60" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a3ffedf8b8220d982d9a9ead675377a83" prot="public" static="no">
+        <name>aginit</name>
+        <param></param>
+        <initializer><ref refid="graph_8h_1a5329d7d6cfebe354f953ff3e875468a8" kindref="member">aginitlib</ref>(sizeof(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>),sizeof(<ref refid="structAgnode__t" kindref="compound">Agnode_t</ref>),sizeof(<ref refid="structAgedge__t" kindref="compound">Agedge_t</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="61" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a1f87a622c6344273ef87eaecdf0d81a8" prot="public" static="no">
+        <name>agobjkind</name>
+        <param><defname>p</defname></param>
+        <initializer>((<ref refid="graph_8h_1af4793e9075a9fbd7a4b169b66816a198" kindref="member">agobjkind_t</ref>)(((<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>*)(p))-&gt;tag))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="225" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="graph_8h_1a5011b3cc14de07a156b77edd820e38de" prot="public" static="no">
+        <name>agmetanode</name>
+        <param><defname>g</defname></param>
+        <initializer>((g)-&gt;meta_node)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="227" column="9" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" prot="public" static="no">
+        <name>agerrlevel_t</name>
+        <enumvalue id="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" prot="public">
+          <name>AGWARN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2" prot="public">
+          <name>AGERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77" prot="public">
+          <name>AGMAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398" prot="public">
+          <name>AGPREV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" prot="public">
+          <name>AGWARN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2" prot="public">
+          <name>AGERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77" prot="public">
+          <name>AGMAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398" prot="public">
+          <name>AGPREV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="212" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="212" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="enum" id="graph_8h_1af4793e9075a9fbd7a4b169b66816a198" prot="public" static="no">
+        <name>agobjkind_t</name>
+        <enumvalue id="graph_8h_1af4793e9075a9fbd7a4b169b66816a198a3dc0fc9889b0101640e46038fcf56a5f" prot="public">
+          <name>AGNODE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1af4793e9075a9fbd7a4b169b66816a198a2ae074e3366f229465b0e30a423e2cb1" prot="public">
+          <name>AGEDGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="graph_8h_1af4793e9075a9fbd7a4b169b66816a198ae993fba1ccd9a784d50556e8a80cfb85" prot="public">
+          <name>AGGRAPH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="224" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="224" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="graph_8h_1a677778d102c3ba73a6c8e931e3f752ce" prot="public" static="no">
+        <type>struct <ref refid="structAgraph__t" kindref="compound">Agraph_t</ref></type>
+        <definition>typedef struct Agraph_t Agraph_t</definition>
+        <argsstring></argsstring>
+        <name>Agraph_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1a6ccebdd7cc25e1a7cff5ec2725e4f562" prot="public" static="no">
+        <type>struct <ref refid="structAgnode__t" kindref="compound">Agnode_t</ref></type>
+        <definition>typedef struct Agnode_t Agnode_t</definition>
+        <argsstring></argsstring>
+        <name>Agnode_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1ac321f6ef5a469a0dad299960762693e7" prot="public" static="no">
+        <type>struct <ref refid="structAgedge__t" kindref="compound">Agedge_t</ref></type>
+        <definition>typedef struct Agedge_t Agedge_t</definition>
+        <argsstring></argsstring>
+        <name>Agedge_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1a5207b3668f396081442946a692f8f88d" prot="public" static="no">
+        <type>struct <ref refid="structAgdict__t" kindref="compound">Agdict_t</ref></type>
+        <definition>typedef struct Agdict_t Agdict_t</definition>
+        <argsstring></argsstring>
+        <name>Agdict_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1aee5e9972fe350ca92e717a9bf659dea1" prot="public" static="no">
+        <type>struct <ref refid="structAgsym__t" kindref="compound">Agsym_t</ref></type>
+        <definition>typedef struct Agsym_t Agsym_t</definition>
+        <argsstring></argsstring>
+        <name>Agsym_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1acb6f26794abbd3ab95055f7b49c9f767" prot="public" static="no">
+        <type>struct <ref refid="structAgdata__t" kindref="compound">Agdata_t</ref></type>
+        <definition>typedef struct Agdata_t Agdata_t</definition>
+        <argsstring></argsstring>
+        <name>Agdata_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1ab03918ade35007e29aee13df1d52e9fb" prot="public" static="no">
+        <type>struct <ref refid="structAgproto__t" kindref="compound">Agproto_t</ref></type>
+        <definition>typedef struct Agproto_t Agproto_t</definition>
+        <argsstring></argsstring>
+        <name>Agproto_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="graph_8h_1afa41f388c6b48b756ece082915aa378b" prot="public" static="no">
+        <type>char *(*</type>
+        <definition>typedef char*(* gets_f) (char *ubuf, int n, FILE *fp)</definition>
+        <argsstring>)(char *ubuf, int n, FILE *fp)</argsstring>
+        <name>gets_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="46" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="graph_8h_1abe4ea845ceb4ce6a0bf98a0477c5f762" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref></type>
+        <definition>agerrlevel_t agerrno</definition>
+        <argsstring></argsstring>
+        <name>agerrno</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="213" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="graph_8h_1abb5b9da1d396cb29c54ee60d9926fc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agstrcanon</definition>
+        <argsstring>(char *, char *)</argsstring>
+        <name>agstrcanon</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1abf05b325122bd47f5146f1bcd08ed7bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agcanonical</definition>
+        <argsstring>(char *)</argsstring>
+        <name>agcanonical</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a83b772e090fa9ada157c5a3d424c3957" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agcanon</definition>
+        <argsstring>(char *)</argsstring>
+        <name>agcanon</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a26baed2ec4bfe68a62b30bbcce9d0dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int aghtmlstr</definition>
+        <argsstring>(char *s)</argsstring>
+        <name>aghtmlstr</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1abb88241d179cfc1d0dc3d399b641bcd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agget</definition>
+        <argsstring>(void *, char *)</argsstring>
+        <name>agget</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ab8ac3f3d51fde9c0a05fd82aec317866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agxget</definition>
+        <argsstring>(void *, int)</argsstring>
+        <name>agxget</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ab0eb8548c7c0b0f448114e9e9fe1b2e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agset</definition>
+        <argsstring>(void *, char *, char *)</argsstring>
+        <name>agset</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a0c15345da808c69139faf730cd868889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agsafeset</definition>
+        <argsstring>(void *, char *, char *, char *)</argsstring>
+        <name>agsafeset</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a329d719ee7672725d185f8323573c113" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agxset</definition>
+        <argsstring>(void *, int, char *)</argsstring>
+        <name>agxset</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a868984a77f6981c41a5f6a2e09c3e463" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agindex</definition>
+        <argsstring>(void *, char *)</argsstring>
+        <name>agindex</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a5329d7d6cfebe354f953ff3e875468a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aginitlib</definition>
+        <argsstring>(int, int, int)</argsstring>
+        <name>aginitlib</name>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a209bcdd75d4680c4586f42fd9ca619f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agopen</definition>
+        <argsstring>(char *, int)</argsstring>
+        <name>agopen</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a51d19f23a598c107e9e99f2034d1a402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agsubg</definition>
+        <argsstring>(Agraph_t *, char *)</argsstring>
+        <name>agsubg</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1abfe8a7eb688b66e16028b4e87c77d7ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agfindsubg</definition>
+        <argsstring>(Agraph_t *, char *)</argsstring>
+        <name>agfindsubg</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a53f16df0e877fe3881054fae8421b394" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agclose</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>agclose</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a8944bde65fe51fdf309eebba4f55c317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agread</definition>
+        <argsstring>(FILE *)</argsstring>
+        <name>agread</name>
+        <param>
+          <type>FILE *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a65ca95beddb6bfb8342ca6319e33ef45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agread_usergets</definition>
+        <argsstring>(FILE *, gets_f)</argsstring>
+        <name>agread_usergets</name>
+        <param>
+          <type>FILE *</type>
+        </param>
+        <param>
+          <type><ref refid="graph_8h_1afa41f388c6b48b756ece082915aa378b" kindref="member">gets_f</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1af1ac82037b63add1c9e3e8277e2f9f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agreadline</definition>
+        <argsstring>(int)</argsstring>
+        <name>agreadline</name>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1af75258e3309e688079ed96506d3e5d8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agsetfile</definition>
+        <argsstring>(char *)</argsstring>
+        <name>agsetfile</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a977e391a5a73d1c29459960fa99521d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agmemread</definition>
+        <argsstring>(char *)</argsstring>
+        <name>agmemread</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ae68e093888aa501553583989052b240f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agsetiodisc</definition>
+        <argsstring>(char *(*myfgets)(char *s, int size, FILE *stream), size_t(*myfwrite)(const void *ptr, size_t size, size_t nmemb, FILE *stream), int(*myferror)(FILE *stream))</argsstring>
+        <name>agsetiodisc</name>
+        <param>
+          <type>char *(*)(char *s, int size, FILE *stream)</type>
+          <declname>myfgets</declname>
+        </param>
+        <param>
+          <type>size_t(*)(const void *ptr, size_t size, size_t nmemb, FILE *stream)</type>
+          <declname>myfwrite</declname>
+        </param>
+        <param>
+          <type>int(*)(FILE *stream)</type>
+          <declname>myferror</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a7bf5fbfe1624dca76c851695fe9c4373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agputs</definition>
+        <argsstring>(const char *s, FILE *fp)</argsstring>
+        <name>agputs</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1aa12ab6b863a4ac99fbf6c068540abfa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agputc</definition>
+        <argsstring>(int c, FILE *fp)</argsstring>
+        <name>agputc</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a301b4483bb55c9616458eb6bed9a91c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agwrite</definition>
+        <argsstring>(Agraph_t *, FILE *)</argsstring>
+        <name>agwrite</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>FILE *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ac2a1b4d812a9d914a152dcb4c4eaa69f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agerrors</definition>
+        <argsstring>(void)</argsstring>
+        <name>agerrors</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1aa2baf74ef1b1e3aca1d0956c8518a828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agprotograph</definition>
+        <argsstring>(void)</argsstring>
+        <name>agprotograph</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ab02e7f7183a07f62c475f0595b4c5b51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* agprotonode</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>agprotonode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a609a5030c6fafcd927c7955161f94c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agprotoedge</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>agprotoedge</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a936a12427e367098495e3931f67ec300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        <definition>Agraph_t* agusergraph</definition>
+        <argsstring>(Agnode_t *)</argsstring>
+        <name>agusergraph</name>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a7562a4c176033d22595084f15b43136f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agnnodes</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>agnnodes</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ad3f362cbf6ad1a023c3becb310da2580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agnedges</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>agnedges</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a05195b630ae14ee633b97f396734b8a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aginsert</definition>
+        <argsstring>(Agraph_t *, void *)</argsstring>
+        <name>aginsert</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a17ce8cbf268d512e8edd431c0854b9a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agdelete</definition>
+        <argsstring>(Agraph_t *, void *)</argsstring>
+        <name>agdelete</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="182" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a25771f5553a761ccafaa4cc50719453b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agcontains</definition>
+        <argsstring>(Agraph_t *, void *)</argsstring>
+        <name>agcontains</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="183" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1abd447e671d8d42f9beeb30bbf58bd15b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* agnode</definition>
+        <argsstring>(Agraph_t *, char *)</argsstring>
+        <name>agnode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a261a08b6e33292fef22cbe6e61e65079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* agfindnode</definition>
+        <argsstring>(Agraph_t *, char *)</argsstring>
+        <name>agfindnode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a2a230f4b82c04178681eb414e3058887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* agfstnode</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>agfstnode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="187" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a0eb204223fbf78dc079694d5fe74c1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* agnxtnode</definition>
+        <argsstring>(Agraph_t *, Agnode_t *)</argsstring>
+        <name>agnxtnode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="188" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a5559da36556d6ebfc44bc2c13946c917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* aglstnode</definition>
+        <argsstring>(Agraph_t *)</argsstring>
+        <name>aglstnode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ad6b1e07343f2c8a3cb09690026ca4aee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        <definition>Agnode_t* agprvnode</definition>
+        <argsstring>(Agraph_t *, Agnode_t *)</argsstring>
+        <name>agprvnode</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="190" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a376943234ff615693902f116a3b52fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agedge</definition>
+        <argsstring>(Agraph_t *, Agnode_t *, Agnode_t *)</argsstring>
+        <name>agedge</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="192" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a191b4fe6fedede4af90776e5d34aef6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agfindedge</definition>
+        <argsstring>(Agraph_t *, Agnode_t *, Agnode_t *)</argsstring>
+        <name>agfindedge</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a55a843a70edcd5c7cd5753883a79a64e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agfstedge</definition>
+        <argsstring>(Agraph_t *, Agnode_t *)</argsstring>
+        <name>agfstedge</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="194" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a4e90045dae1cf76b5e3d4511025c785a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agnxtedge</definition>
+        <argsstring>(Agraph_t *, Agedge_t *, Agnode_t *)</argsstring>
+        <name>agnxtedge</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a9aefb2593242f0244a3d5c864e5d78f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agfstin</definition>
+        <argsstring>(Agraph_t *, Agnode_t *)</argsstring>
+        <name>agfstin</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a771888bf8739073d70faa0dad86eedc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agnxtin</definition>
+        <argsstring>(Agraph_t *, Agedge_t *)</argsstring>
+        <name>agnxtin</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ab80a411859de22e5565558ebeb238f7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agfstout</definition>
+        <argsstring>(Agraph_t *, Agnode_t *)</argsstring>
+        <name>agfstout</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="198" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1af21951714af34ffdaca1669886e72683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        <definition>Agedge_t* agnxtout</definition>
+        <argsstring>(Agraph_t *, Agedge_t *)</argsstring>
+        <name>agnxtout</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="199" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a03efe30cfb3520a258c557453a6e0459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agattr</definition>
+        <argsstring>(void *, char *, char *)</argsstring>
+        <name>agattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="201" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a744c71788da1d40d2a82e1479c6c2ff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agraphattr</definition>
+        <argsstring>(Agraph_t *, char *, char *)</argsstring>
+        <name>agraphattr</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a242a2b16d69c271339874f4b16f597d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agnodeattr</definition>
+        <argsstring>(Agraph_t *, char *, char *)</argsstring>
+        <name>agnodeattr</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="203" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a77d76c51525b2c0a5c71e24ec612bc1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agedgeattr</definition>
+        <argsstring>(Agraph_t *, char *, char *)</argsstring>
+        <name>agedgeattr</name>
+        <param>
+          <type><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref> *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a7cb97ed677a5fb7d1145e2091bd33ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agfindattr</definition>
+        <argsstring>(void *, char *)</argsstring>
+        <name>agfindattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ac70b237eb8f65955dd8659d5b06fa7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agfstattr</definition>
+        <argsstring>(void *)</argsstring>
+        <name>agfstattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a47fc0602d78ba772f7e0f8f2b17e2139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agnxtattr</definition>
+        <argsstring>(void *, Agsym_t *)</argsstring>
+        <name>agnxtattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a216ef13235fa653ceb8dbd744d7c9eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* aglstattr</definition>
+        <argsstring>(void *)</argsstring>
+        <name>aglstattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1aa36e2df7a81519ae39861972bdd5799b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        <definition>Agsym_t* agprvattr</definition>
+        <argsstring>(void *, Agsym_t *)</argsstring>
+        <name>agprvattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a16a3200c6a1649bfecd8ab573279ae0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agcopyattr</definition>
+        <argsstring>(void *, void *)</argsstring>
+        <name>agcopyattr</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a4ee45ca29f8d5194d819f80b26555d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agseterr</definition>
+        <argsstring>(agerrlevel_t)</argsstring>
+        <name>agseterr</name>
+        <param>
+          <type><ref refid="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a1a4d9ef2cc3e3749fcff5f4a834cf612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* aglasterr</definition>
+        <argsstring>(void)</argsstring>
+        <name>aglasterr</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a8a10483db5e1e86662dff9366822c4ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int agerr</definition>
+        <argsstring>(agerrlevel_t level, char *fmt,...)</argsstring>
+        <name>agerr</name>
+        <param>
+          <type><ref refid="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a38893172666edf9723337028e216bcab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agerrorf</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>agerrorf</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a91ed9cad27760cce5c8fdf27038c1af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agwarningf</definition>
+        <argsstring>(char *fmt,...)</argsstring>
+        <name>agwarningf</name>
+        <param>
+          <type>char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1adfba16015603e6b64ad2e01d38a0a243" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agstrdup</definition>
+        <argsstring>(char *)</argsstring>
+        <name>agstrdup</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1a40d2bb0efc316f1dcba450016510a0bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* agstrdup_html</definition>
+        <argsstring>(char *s)</argsstring>
+        <name>agstrdup_html</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="graph_8h_1ad5aaab9838bd7b2c32c1bcdacbadad3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void agstrfree</definition>
+        <argsstring>(char *)</argsstring>
+        <name>agstrfree</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="222" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id:<sp/>graph.h,v<sp/>1.20<sp/>2009/06/03<sp/>01:10:53<sp/>ellson<sp/>Exp<sp/>$<sp/>$Revision:<sp/>1.20<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>part<sp/>of<sp/>the<sp/>graphviz<sp/>package<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>http://www.graphviz.org/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>1994-2004<sp/>AT&amp;T<sp/>Corp.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>is<sp/>licensed<sp/>under<sp/>the<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Common<sp/>Public<sp/>License,<sp/>Version<sp/>1.0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>by<sp/>AT&amp;T<sp/>Corp.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Information<sp/>and<sp/>Software<sp/>Systems<sp/>Research<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT&amp;T<sp/>Research,<sp/>Florham<sp/>Park<sp/>NJ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**********************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GRAPH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GRAPH_H<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_PACKAGE_ast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&lt;ast.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cdt_8h" kindref="compound">cdt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="graph_8h_1a12d1b461e7a9a9ef358c6bec5264a2e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAIL_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;tailport&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="graph_8h_1aaf9f916d15b0ab383ab871f5031c74eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HEAD_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;headport&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="graph_8h_1a677778d102c3ba73a6c8e931e3f752ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref>;</highlight></codeline>
+<codeline lineno="39" refid="graph_8h_1a6ccebdd7cc25e1a7cff5ec2725e4f562" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref>;</highlight></codeline>
+<codeline lineno="40" refid="graph_8h_1ac321f6ef5a469a0dad299960762693e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref>;</highlight></codeline>
+<codeline lineno="41" refid="graph_8h_1a5207b3668f396081442946a692f8f88d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgdict__t" kindref="compound">Agdict_t</ref><sp/><ref refid="structAgdict__t" kindref="compound">Agdict_t</ref>;</highlight></codeline>
+<codeline lineno="42" refid="graph_8h_1aee5e9972fe350ca92e717a9bf659dea1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref>;</highlight></codeline>
+<codeline lineno="43" refid="graph_8h_1acb6f26794abbd3ab95055f7b49c9f767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgdata__t" kindref="compound">Agdata_t</ref><sp/><ref refid="structAgdata__t" kindref="compound">Agdata_t</ref>;</highlight></codeline>
+<codeline lineno="44" refid="graph_8h_1ab03918ade35007e29aee13df1d52e9fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgproto__t" kindref="compound">Agproto_t</ref><sp/><ref refid="structAgproto__t" kindref="compound">Agproto_t</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="graph_8h_1afa41f388c6b48b756ece082915aa378b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*(*gets_f)<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ubuf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgproto__t_1a47d7c9dac6dd4d8394165be51896dee4" kindref="member">n</ref>,<sp/>FILE<sp/>*<sp/>fp);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="graph_8h_1a175ce9e95c7c3fa510a952710bf14f8d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGFLAG_DIRECTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="graph_8h_1a01041601ac7fd58cb37fa27629e08280" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGFLAG_STRICT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="graph_8h_1a99352ae5601f340cad5108ed53ac7afa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGFLAG_METAGRAPH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="graph_8h_1a1e06db728ec62594cc4c34d5e039f94b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGRAPH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="graph_8h_1a30686bd9b430a8409ea78a8499088fb0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGRAPHSTRICT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(AGRAPH<sp/>|<sp/>AGFLAG_STRICT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="graph_8h_1a2c40727be0b4e7da1fa5e6b4772d3ba4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGDIGRAPH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AGFLAG_DIRECTED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="graph_8h_1adb06a39cf3c440738bd4ee1c4a689d28" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGDIGRAPHSTRICT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(AGDIGRAPH<sp/>|<sp/>AGFLAG_STRICT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="graph_8h_1ab95d966cf23773c443c1bf2f99ebdd5f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AGMETAGRAPH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(AGFLAG_DIRECTED<sp/>|<sp/>AGFLAG_STRICT<sp/>|<sp/>AGFLAG_METAGRAPH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="graph_8h_1a9e8552e3c862026590f3e6f024a83327" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AG_IS_DIRECTED(g)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((g)-&gt;kind<sp/>&amp;<sp/>AGFLAG_DIRECTED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="graph_8h_1a3661ac6f7bb18b2f32711ee154f979f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AG_IS_STRICT(g)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((g)-&gt;kind<sp/>&amp;<sp/>AGFLAG_STRICT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="graph_8h_1a4f54f35a25ce8f804dc5b422d644c346" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AG_IS_METAGRAPH(g)<sp/><sp/><sp/><sp/><sp/><sp/>((g)-&gt;kind<sp/>&amp;<sp/>AGFLAG_METAGRAPH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="graph_8h_1a3ffedf8b8220d982d9a9ead675377a83" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>aginit()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aginitlib(sizeof(Agraph_t),sizeof(Agnode_t),sizeof(Agedge_t))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="structAgraph__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="64" refid="structAgraph__t_1ad24b32977925cec66a4f93d49f5810e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t_1ad24b32977925cec66a4f93d49f5810e8" kindref="member">tag</ref>:4;</highlight></codeline>
+<codeline lineno="65" refid="structAgraph__t_1a7b64b578254be9181085a0c0e8bb5630" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t_1a7b64b578254be9181085a0c0e8bb5630" kindref="member">kind</ref>:4;</highlight></codeline>
+<codeline lineno="66" refid="structAgraph__t_1a5a0e80debfe68c9382314e7e77c60d88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t_1a5a0e80debfe68c9382314e7e77c60d88" kindref="member">handle</ref>:24;</highlight></codeline>
+<codeline lineno="67" refid="structAgraph__t_1a3df5a7fd60c61c55ea2985cbcba032fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structAgraph__t_1a3df5a7fd60c61c55ea2985cbcba032fe" kindref="member">attr</ref>;</highlight></codeline>
+<codeline lineno="68" refid="structAgraph__t_1a9ba9630e80e7467a60df46666ebc88b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgraph__t_1a9ba9630e80e7467a60df46666ebc88b3" kindref="member">didset</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structAgraph__t_1acebbef3a10e621837e0a20b6189cbb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgraph__t_1acebbef3a10e621837e0a20b6189cbb59" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structAgraph__t_1aa7acbbb0f4d13bf47506c4da4f0fc4a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgdata__t" kindref="compound">Agdata_t</ref><sp/>*<ref refid="structAgraph__t_1aa7acbbb0f4d13bf47506c4da4f0fc4a0" kindref="member">univ</ref>;</highlight></codeline>
+<codeline lineno="71" refid="structAgraph__t_1a2fce7f370b565ab12c0eb48414156f4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dict_t</ref><sp/>*<ref refid="structAgraph__t_1ab4baacea03cb9e69d1a026a865066ad4" kindref="member">nodes</ref>,<sp/>*<ref refid="structAgraph__t_1a3490b47f3aa3dee5db7345a6cc2e6bcb" kindref="member">inedges</ref>,<sp/>*<ref refid="structAgraph__t_1a2fce7f370b565ab12c0eb48414156f4c" kindref="member">outedges</ref>;</highlight></codeline>
+<codeline lineno="72" refid="structAgraph__t_1a25b29b96813f236ffef21a4e9114d499" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="structAgraph__t_1a25b29b96813f236ffef21a4e9114d499" kindref="member">root</ref>;</highlight></codeline>
+<codeline lineno="73" refid="structAgraph__t_1af2572e0f58de8cfb07184a7767b4e477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="structAgraph__t_1af2572e0f58de8cfb07184a7767b4e477" kindref="member">meta_node</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structAgraph__t_1a9a93d69e509ca2aa03e07f5ed182f1b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgproto__t" kindref="compound">Agproto_t</ref><sp/>*<ref refid="structAgraph__t_1a9a93d69e509ca2aa03e07f5ed182f1b3" kindref="member">proto</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structAgraph__t_1aafb8b2b2e3d152a34948ef1908d0520a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgraphinfo__t" kindref="compound">Agraphinfo_t</ref><sp/><ref refid="structAgraph__t_1aafb8b2b2e3d152a34948ef1908d0520a" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structAgnode__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="79" refid="structAgnode__t_1aa5312c66d9079ffae24475f5ffe9e14d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t_1aa5312c66d9079ffae24475f5ffe9e14d" kindref="member">tag</ref>:4;</highlight></codeline>
+<codeline lineno="80" refid="structAgnode__t_1a562f93d9fca265d1659b647734a448c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t_1a562f93d9fca265d1659b647734a448c4" kindref="member">pad</ref>:4;</highlight></codeline>
+<codeline lineno="81" refid="structAgnode__t_1a840c1b0b451d6adb9d637ffec4523337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t_1a840c1b0b451d6adb9d637ffec4523337" kindref="member">handle</ref>:24;</highlight></codeline>
+<codeline lineno="82" refid="structAgnode__t_1a12fdb7dd424c6e9a4763e60cec0bc3c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structAgnode__t_1a12fdb7dd424c6e9a4763e60cec0bc3c3" kindref="member">attr</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structAgnode__t_1a3890c16751cbbc17597112ce82371b59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgnode__t_1a3890c16751cbbc17597112ce82371b59" kindref="member">didset</ref>;</highlight></codeline>
+<codeline lineno="84" refid="structAgnode__t_1ab17d63b84a3d84c0134a36e253f1d4ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgnode__t_1ab17d63b84a3d84c0134a36e253f1d4ab" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structAgnode__t_1a25b84a4530c279109f3f469ce56f6ec5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t_1a25b84a4530c279109f3f469ce56f6ec5" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structAgnode__t_1ae7bb0b1efbd28801f054c5f36db0132e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="structAgnode__t_1ae7bb0b1efbd28801f054c5f36db0132e" kindref="member">graph</ref>;</highlight></codeline>
+<codeline lineno="87" refid="structAgnode__t_1a811ec74ea7f471196d110641861a7340" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgnodeinfo__t" kindref="compound">Agnodeinfo_t</ref><sp/><ref refid="structAgnode__t_1a811ec74ea7f471196d110641861a7340" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structAgedge__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="91" refid="structAgedge__t_1ac31c9be5fb95e6ca442f1feeabedf692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t_1ac31c9be5fb95e6ca442f1feeabedf692" kindref="member">tag</ref>:4;</highlight></codeline>
+<codeline lineno="92" refid="structAgedge__t_1a0c7622f384335f46ffa984e6a0d275e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t_1a0c7622f384335f46ffa984e6a0d275e3" kindref="member">printkey</ref>:4;</highlight></codeline>
+<codeline lineno="93" refid="structAgedge__t_1aa9e9313b185f71b3d6aa2b6cb65dd1fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t_1aa9e9313b185f71b3d6aa2b6cb65dd1fd" kindref="member">handle</ref>:24;</highlight></codeline>
+<codeline lineno="94" refid="structAgedge__t_1a1d15482bee4174e79df2ce03609151a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structAgedge__t_1a1d15482bee4174e79df2ce03609151a3" kindref="member">attr</ref>;</highlight></codeline>
+<codeline lineno="95" refid="structAgedge__t_1acb5719a7e6d9215ce898b8959c6f37b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgedge__t_1acb5719a7e6d9215ce898b8959c6f37b7" kindref="member">didset</ref>;</highlight></codeline>
+<codeline lineno="96" refid="structAgedge__t_1a05ea38123a3a9c309a4ce892a578ebbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="structAgedge__t_1af722da62137a93d58b7454c48a3d7a43" kindref="member">head</ref>,<sp/>*<ref refid="structAgedge__t_1a05ea38123a3a9c309a4ce892a578ebbf" kindref="member">tail</ref>;</highlight></codeline>
+<codeline lineno="97" refid="structAgedge__t_1a369771facb21de3049c499203254afed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t_1a369771facb21de3049c499203254afed" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="98" refid="structAgedge__t_1a7aaf30eabe2e6ca91fcfbff0d8243f06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgedgeinfo__t" kindref="compound">Agedgeinfo_t</ref><sp/><ref refid="structAgedge__t_1a7aaf30eabe2e6ca91fcfbff0d8243f06" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structAgdata__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgdata__t" kindref="compound">Agdata_t</ref><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>main<sp/>graph<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structAgdata__t_1a8f3b1716f4f9cec325e018d4a7b741b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dict_t</ref><sp/>*<ref refid="structAgdata__t_1a8f3b1716f4f9cec325e018d4a7b741b3" kindref="member">node_dict</ref>;</highlight></codeline>
+<codeline lineno="103" refid="structAgdata__t_1a57c19dfdf2074854ac3e06742f6d266c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgdict__t" kindref="compound">Agdict_t</ref><sp/>*<ref refid="structAgdata__t_1a57c19dfdf2074854ac3e06742f6d266c" kindref="member">nodeattr</ref>;</highlight></codeline>
+<codeline lineno="104" refid="structAgdata__t_1a1929e2f49ab55bde7f9d9fe65647c0cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgdict__t" kindref="compound">Agdict_t</ref><sp/>*<ref refid="structAgdata__t_1a1929e2f49ab55bde7f9d9fe65647c0cd" kindref="member">edgeattr</ref>;</highlight></codeline>
+<codeline lineno="105" refid="structAgdata__t_1a4bd0d16f2ac63b793be1b27c0488b2f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgdict__t" kindref="compound">Agdict_t</ref><sp/>*<ref refid="structAgdata__t_1a4bd0d16f2ac63b793be1b27c0488b2f4" kindref="member">globattr</ref>;</highlight></codeline>
+<codeline lineno="106" refid="structAgdata__t_1a0b81a87ffd31b64fa2a4308cc9892abf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgdata__t_1a0b81a87ffd31b64fa2a4308cc9892abf" kindref="member">max_node_id</ref>,<sp/><ref refid="structAgdata__t_1a128306d1e38fb9a176f3cca02d160a0e" kindref="member">max_edge_id</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structAgsym__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="110" refid="structAgsym__t_1a51477b26bf14b16ffdc043c96797411a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgsym__t_1a3f1d8e82de627f7f765144fb44eb734b" kindref="member">name</ref>,<sp/>*<ref refid="structAgsym__t_1a51477b26bf14b16ffdc043c96797411a" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="111" refid="structAgsym__t_1a2b44783fbcff4f8921cb5a42457a9c91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t_1a2b44783fbcff4f8921cb5a42457a9c91" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structAgsym__t_1aef1501fe7b05c74bc4cff6dfd6477b19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t_1aef1501fe7b05c74bc4cff6dfd6477b19" kindref="member">printed</ref>;</highlight></codeline>
+<codeline lineno="113" refid="structAgsym__t_1ae225f29e57b7c1f4b789257aa9bbe0f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t_1ae225f29e57b7c1f4b789257aa9bbe0f9" kindref="member">fixed</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="structAgdict__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgdict__t" kindref="compound">Agdict_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="117" refid="structAgdict__t_1a29c4612c530c22c43cc47ba607d04235" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structAgdict__t_1a29c4612c530c22c43cc47ba607d04235" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structAgdict__t_1a95f3d8b2cd772d676bb80b97fbc0f7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dict_t</ref><sp/>*<ref refid="structAgdict__t_1a95f3d8b2cd772d676bb80b97fbc0f7ba" kindref="member">dict</ref>;</highlight></codeline>
+<codeline lineno="119" refid="structAgdict__t_1aa455c87854a6f5ffba370da88f5c645a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>**<ref refid="structAgdict__t_1aa455c87854a6f5ffba370da88f5c645a" kindref="member">list</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="structAgproto__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structAgproto__t" kindref="compound">Agproto_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="123" refid="structAgproto__t_1a47d7c9dac6dd4d8394165be51896dee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="structAgproto__t_1a47d7c9dac6dd4d8394165be51896dee4" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="124" refid="structAgproto__t_1a393abc9bf851b936e7d458d116f9d3b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="structAgproto__t_1a393abc9bf851b936e7d458d116f9d3b8" kindref="member">e</ref>;</highlight></codeline>
+<codeline lineno="125" refid="structAgproto__t_1a371ea67d8aa1b6b1dbad98c769082254" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgproto__t" kindref="compound">Agproto_t</ref><sp/>*<ref refid="structAgproto__t_1a371ea67d8aa1b6b1dbad98c769082254" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_PACKAGE_ast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" kindref="member">_BEGIN_EXTERNS_</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>public<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_BLD_graph<sp/>&amp;&amp;<sp/>defined(__EXPORT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/><sp/>__EXPORT__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!_BLD_graph<sp/>&amp;&amp;<sp/>defined(__IMPORT__)<sp/>&amp;&amp;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/><sp/>__IMPORT__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/*visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GRAPH_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*end<sp/>visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1abb5b9da1d396cb29c54ee60d9926fc7e" kindref="member">agstrcanon</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1abf05b325122bd47f5146f1bcd08ed7bd" kindref="member">agcanonical</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1a83b772e090fa9ada157c5a3d424c3957" kindref="member">agcanon</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a26baed2ec4bfe68a62b30bbcce9d0dec" kindref="member">aghtmlstr</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1abb88241d179cfc1d0dc3d399b641bcd5" kindref="member">agget</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1ab8ac3f3d51fde9c0a05fd82aec317866" kindref="member">agxget</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ab0eb8548c7c0b0f448114e9e9fe1b2e0" kindref="member">agset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a0c15345da808c69139faf730cd868889" kindref="member">agsafeset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a329d719ee7672725d185f8323573c113" kindref="member">agxset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a868984a77f6981c41a5f6a2e09c3e463" kindref="member">agindex</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a5329d7d6cfebe354f953ff3e875468a8" kindref="member">aginitlib</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1a209bcdd75d4680c4586f42fd9ca619f6" kindref="member">agopen</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1a51d19f23a598c107e9e99f2034d1a402" kindref="member">agsubg</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1abfe8a7eb688b66e16028b4e87c77d7ea" kindref="member">agfindsubg</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a53f16df0e877fe3881054fae8421b394" kindref="member">agclose</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1a8944bde65fe51fdf309eebba4f55c317" kindref="member">agread</ref>(FILE<sp/>*);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1a65ca95beddb6bfb8342ca6319e33ef45" kindref="member">agread_usergets</ref>(FILE<sp/>*,<sp/><ref refid="graph_8h_1afa41f388c6b48b756ece082915aa378b" kindref="member">gets_f</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1af1ac82037b63add1c9e3e8277e2f9f22" kindref="member">agreadline</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1af75258e3309e688079ed96506d3e5d8c" kindref="member">agsetfile</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1a977e391a5a73d1c29459960fa99521d7" kindref="member">agmemread</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ae68e093888aa501553583989052b240f" kindref="member">agsetiodisc</ref>(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>(*myfgets)<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/>FILE<sp/>*stream),</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>(*myfwrite)<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nmemb,<sp/>FILE<sp/>*stream),</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*myferror)<sp/>(FILE<sp/>*stream)<sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a7bf5fbfe1624dca76c851695fe9c4373" kindref="member">agputs</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/>FILE<sp/>*fp);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1aa12ab6b863a4ac99fbf6c068540abfa4" kindref="member">agputc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c,<sp/>FILE<sp/>*fp);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a301b4483bb55c9616458eb6bed9a91c5" kindref="member">agwrite</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/>FILE<sp/>*);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ac2a1b4d812a9d914a152dcb4c4eaa69f" kindref="member">agerrors</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1aa2baf74ef1b1e3aca1d0956c8518a828" kindref="member">agprotograph</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1ab02e7f7183a07f62c475f0595b4c5b51" kindref="member">agprotonode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a609a5030c6fafcd927c7955161f94c46" kindref="member">agprotoedge</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*<ref refid="graph_8h_1a936a12427e367098495e3931f67ec300" kindref="member">agusergraph</ref>(<ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a7562a4c176033d22595084f15b43136f" kindref="member">agnnodes</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ad3f362cbf6ad1a023c3becb310da2580" kindref="member">agnedges</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a05195b630ae14ee633b97f396734b8a5" kindref="member">aginsert</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a17ce8cbf268d512e8edd431c0854b9a0" kindref="member">agdelete</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a25771f5553a761ccafaa4cc50719453b" kindref="member">agcontains</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1abd447e671d8d42f9beeb30bbf58bd15b" kindref="member">agnode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1a261a08b6e33292fef22cbe6e61e65079" kindref="member">agfindnode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1a2a230f4b82c04178681eb414e3058887" kindref="member">agfstnode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1a0eb204223fbf78dc079694d5fe74c1bf" kindref="member">agnxtnode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1a5559da36556d6ebfc44bc2c13946c917" kindref="member">aglstnode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*<ref refid="graph_8h_1ad6b1e07343f2c8a3cb09690026ca4aee" kindref="member">agprvnode</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a376943234ff615693902f116a3b52fd5" kindref="member">agedge</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a191b4fe6fedede4af90776e5d34aef6e" kindref="member">agfindedge</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a55a843a70edcd5c7cd5753883a79a64e" kindref="member">agfstedge</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a4e90045dae1cf76b5e3d4511025c785a" kindref="member">agnxtedge</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a9aefb2593242f0244a3d5c864e5d78f0" kindref="member">agfstin</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1a771888bf8739073d70faa0dad86eedc1" kindref="member">agnxtin</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1ab80a411859de22e5565558ebeb238f7e" kindref="member">agfstout</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgnode__t" kindref="compound">Agnode_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*<ref refid="graph_8h_1af21951714af34ffdaca1669886e72683" kindref="member">agnxtout</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/><ref refid="structAgedge__t" kindref="compound">Agedge_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a03efe30cfb3520a258c557453a6e0459" kindref="member">agattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a744c71788da1d40d2a82e1479c6c2ff7" kindref="member">agraphattr</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a242a2b16d69c271339874f4b16f597d4" kindref="member">agnodeattr</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a77d76c51525b2c0a5c71e24ec612bc1a" kindref="member">agedgeattr</ref>(<ref refid="structAgraph__t" kindref="compound">Agraph_t</ref><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a7cb97ed677a5fb7d1145e2091bd33ed9" kindref="member">agfindattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1ac70b237eb8f65955dd8659d5b06fa7ec" kindref="member">agfstattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a47fc0602d78ba772f7e0f8f2b17e2139" kindref="member">agnxtattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1a216ef13235fa653ceb8dbd744d7c9eee" kindref="member">aglstattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*<ref refid="graph_8h_1aa36e2df7a81519ae39861972bdd5799b" kindref="member">agprvattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/><ref refid="structAgsym__t" kindref="compound">Agsym_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="graph_8h_1a16a3200c6a1649bfecd8ab573279ae0e" kindref="member">agcopyattr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);<sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" kindref="member">AGWARN</ref>,<sp/><ref refid="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2" kindref="member">AGERR</ref>,<sp/><ref refid="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77" kindref="member">AGMAX</ref>,<sp/><ref refid="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398" kindref="member">AGPREV</ref><sp/>}<sp/><ref refid="graph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref><sp/><ref refid="graph_8h_1abe4ea845ceb4ce6a0bf98a0477c5f762" kindref="member">agerrno</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a4ee45ca29f8d5194d819f80b26555d92" kindref="member">agseterr</ref>(<ref refid="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1a1a4d9ef2cc3e3749fcff5f4a834cf612" kindref="member">aglasterr</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a8a10483db5e1e86662dff9366822c4ce" kindref="member">agerr</ref>(<ref refid="cgraph_8h_1a0c75ffdbe1d93ca74fe77dc46a45a6cf" kindref="member">agerrlevel_t</ref><sp/>level,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a38893172666edf9723337028e216bcab" kindref="member">agerrorf</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1a91ed9cad27760cce5c8fdf27038c1af5" kindref="member">agwarningf</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1adfba16015603e6b64ad2e01d38a0a243" kindref="member">agstrdup</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="graph_8h_1a40d2bb0efc316f1dcba450016510a0bd" kindref="member">agstrdup_html</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="graph_8h_1ad5aaab9838bd7b2c32c1bcdacbadad3c" kindref="member">agstrfree</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="graph_8h_1af4793e9075a9fbd7a4b169b66816a198" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="graph_8h_1af4793e9075a9fbd7a4b169b66816a198a3dc0fc9889b0101640e46038fcf56a5f" kindref="member">AGNODE</ref><sp/>=<sp/>1,<sp/><ref refid="graph_8h_1af4793e9075a9fbd7a4b169b66816a198a2ae074e3366f229465b0e30a423e2cb1" kindref="member">AGEDGE</ref>,<sp/><ref refid="graph_8h_1af4793e9075a9fbd7a4b169b66816a198ae993fba1ccd9a784d50556e8a80cfb85" kindref="member">AGGRAPH</ref><sp/>}<sp/><ref refid="graph_8h_1af4793e9075a9fbd7a4b169b66816a198" kindref="member">agobjkind_t</ref>;</highlight></codeline>
+<codeline lineno="225" refid="graph_8h_1a1f87a622c6344273ef87eaecdf0d81a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>agobjkind(p)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((agobjkind_t)(((Agraph_t*)(p))-&gt;tag))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="graph_8h_1a5011b3cc14de07a156b77edd820e38de" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>agmetanode(g)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((g)-&gt;meta_node)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_PACKAGE_ast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a70eb038015c5bd9afc53b761c2dbc9ab" kindref="member">_END_EXTERNS_</ref></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>_GRAPH_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/graph.h"/>
+  </compounddef>
+</doxygen>

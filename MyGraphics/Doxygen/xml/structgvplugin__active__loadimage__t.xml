@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvplugin__active__loadimage__t" kind="struct" language="C++" prot="public">
+    <compoundname>gvplugin_active_loadimage_t</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvplugin__active__loadimage__t_1ab088dbbfaccb401025d6460e2ffd104e" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1a73586fb7b758379b308c315388f92a09" kindref="member">gvloadimage_engine_t</ref> *</type>
+        <definition>gvloadimage_engine_t* gvplugin_active_loadimage_t::engine</definition>
+        <argsstring></argsstring>
+        <name>engine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="145" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__loadimage__t_1ac960eae348143f69a83bafcc8b322805" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvplugin_active_loadimage_t::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="146" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__loadimage__t_1a162a0b6d46d3030bd13f91734daf16e9" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* gvplugin_active_loadimage_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="147" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5029">
+        <label>void(*)(GVJ_t *job, usershape_t *us, boxf b, boolean filled)</label>
+      </node>
+      <node id="5028">
+        <label>gvloadimage_engine_s</label>
+        <link refid="structgvloadimage__engine__s"/>
+        <childnode refid="5029" relation="usage">
+          <edgelabel>loadimage</edgelabel>
+        </childnode>
+      </node>
+      <node id="5027">
+        <label>int</label>
+      </node>
+      <node id="5026">
+        <label>char</label>
+      </node>
+      <node id="5025">
+        <label>gvplugin_active_loadimage_t</label>
+        <link refid="structgvplugin__active__loadimage__t"/>
+        <childnode refid="5026" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5027" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="5028" relation="usage">
+          <edgelabel>engine</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="144" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="144" bodyend="148"/>
+    <listofallmembers>
+      <member refid="structgvplugin__active__loadimage__t_1ab088dbbfaccb401025d6460e2ffd104e" prot="public" virt="non-virtual"><scope>gvplugin_active_loadimage_t</scope><name>engine</name></member>
+      <member refid="structgvplugin__active__loadimage__t_1ac960eae348143f69a83bafcc8b322805" prot="public" virt="non-virtual"><scope>gvplugin_active_loadimage_t</scope><name>id</name></member>
+      <member refid="structgvplugin__active__loadimage__t_1a162a0b6d46d3030bd13f91734daf16e9" prot="public" virt="non-virtual"><scope>gvplugin_active_loadimage_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

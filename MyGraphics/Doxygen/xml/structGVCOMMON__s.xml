@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structGVCOMMON__s" kind="struct" language="C++" prot="public">
+    <compoundname>GVCOMMON_s</compoundname>
+    <includes refid="gvcommon_8h" local="no">gvcommon.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGVCOMMON__s_1a43b8fc9935a0fdd8a35925b25eada529" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** GVCOMMON_s::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="22" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a02d345efd654a697c95bff408089c816" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* GVCOMMON_s::cmdname</definition>
+        <argsstring></argsstring>
+        <name>cmdname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="23" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1ae85d3a41a40d157759e0e4efc6037340" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVCOMMON_s::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="24" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a89b85ed728352961f2010065440de263" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVCOMMON_s::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1acde8c0bc74e8c3d6560cf7d797d30ef6" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVCOMMON_s::auto_outfile_names</definition>
+        <argsstring></argsstring>
+        <name>auto_outfile_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a4fe69cf94fe7a13ebbe8f46a264b0659" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* GVCOMMON_s::errorfn) (const char *fmt,...)</definition>
+        <argsstring>)(const char *fmt,...)</argsstring>
+        <name>errorfn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a66fdfff697be1ae2a3e131508ae08660" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** GVCOMMON_s::show_boxes</definition>
+        <argsstring></argsstring>
+        <name>show_boxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a3b5023c7d958069419dd50106806922e" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** GVCOMMON_s::lib</definition>
+        <argsstring></argsstring>
+        <name>lib</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a76c35a9300f73a412e5ea957d9e9a1ab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVCOMMON_s::viewNum</definition>
+        <argsstring></argsstring>
+        <name>viewNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1a05e311526d152c7e652793137b1c186e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref> *</type>
+        <definition>const lt_symlist_t* GVCOMMON_s::builtins</definition>
+        <argsstring></argsstring>
+        <name>builtins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="33" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVCOMMON__s_1aae3981dccdeb7f82aa71ac74e8f58692" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVCOMMON_s::demand_loading</definition>
+        <argsstring></argsstring>
+        <name>demand_loading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="34" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4842">
+        <label>void *</label>
+      </node>
+      <node id="4838">
+        <label>GVCOMMON_s</label>
+        <link refid="structGVCOMMON__s"/>
+        <childnode refid="4839" relation="usage">
+          <edgelabel>info</edgelabel>
+        </childnode>
+        <childnode refid="4840" relation="usage">
+          <edgelabel>builtins</edgelabel>
+        </childnode>
+        <childnode refid="4843" relation="usage">
+          <edgelabel>errorfn</edgelabel>
+        </childnode>
+        <childnode refid="4844" relation="usage">
+          <edgelabel>viewNum</edgelabel>
+          <edgelabel>demand_loading</edgelabel>
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+        <childnode refid="4845" relation="usage">
+          <edgelabel>show_boxes</edgelabel>
+          <edgelabel>lib</edgelabel>
+        </childnode>
+        <childnode refid="4846" relation="usage">
+          <edgelabel>config</edgelabel>
+          <edgelabel>auto_outfile_names</edgelabel>
+        </childnode>
+        <childnode refid="4847" relation="usage">
+          <edgelabel>cmdname</edgelabel>
+        </childnode>
+      </node>
+      <node id="4847">
+        <label>char *</label>
+      </node>
+      <node id="4840">
+        <label>lt_symlist_t</label>
+        <link refid="structlt__symlist__t"/>
+        <childnode refid="4841" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4842" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="4843">
+        <label>void(*)(const char *fmt,...)</label>
+      </node>
+      <node id="4844">
+        <label>int</label>
+      </node>
+      <node id="4839">
+        <label>char **</label>
+      </node>
+      <node id="4846">
+        <label>unsigned</label>
+      </node>
+      <node id="4845">
+        <label>const char **</label>
+      </node>
+      <node id="4841">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcommon.h" line="21" column="1" bodyfile="graphviz/release/include/graphviz/gvcommon.h" bodystart="21" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structGVCOMMON__s_1acde8c0bc74e8c3d6560cf7d797d30ef6" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>auto_outfile_names</name></member>
+      <member refid="structGVCOMMON__s_1a05e311526d152c7e652793137b1c186e" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>builtins</name></member>
+      <member refid="structGVCOMMON__s_1a02d345efd654a697c95bff408089c816" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>cmdname</name></member>
+      <member refid="structGVCOMMON__s_1a89b85ed728352961f2010065440de263" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>config</name></member>
+      <member refid="structGVCOMMON__s_1aae3981dccdeb7f82aa71ac74e8f58692" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>demand_loading</name></member>
+      <member refid="structGVCOMMON__s_1a4fe69cf94fe7a13ebbe8f46a264b0659" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>errorfn</name></member>
+      <member refid="structGVCOMMON__s_1a43b8fc9935a0fdd8a35925b25eada529" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>info</name></member>
+      <member refid="structGVCOMMON__s_1a3b5023c7d958069419dd50106806922e" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>lib</name></member>
+      <member refid="structGVCOMMON__s_1a66fdfff697be1ae2a3e131508ae08660" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>show_boxes</name></member>
+      <member refid="structGVCOMMON__s_1ae85d3a41a40d157759e0e4efc6037340" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>verbose</name></member>
+      <member refid="structGVCOMMON__s_1a76c35a9300f73a412e5ea957d9e9a1ab" prot="public" virt="non-virtual"><scope>GVCOMMON_s</scope><name>viewNum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

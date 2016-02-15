@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgdatadict__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agdatadict_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgdatadict__s_1afea537a2ef42a5ea94192afd1b048197" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a2bd56252330358f27af8321f650a1e8a" kindref="member">Agrec_t</ref></type>
+        <definition>Agrec_t Agdatadict_s::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="339" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdatadict__s_1a1337738c5e41cba9e851b46115bd3fda" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1ac0967b1ac6289e719be57de7797cbc56" kindref="member">Dict_t</ref> *</type>
+        <definition>Dict_t* Agdatadict_s::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="341" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdatadict__s_1a5dd15dd18a930d79bc062fd059bb79ba" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1ac0967b1ac6289e719be57de7797cbc56" kindref="member">Dict_t</ref> *</type>
+        <definition>Dict_t * Agdatadict_s::e</definition>
+        <argsstring></argsstring>
+        <name>e</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="341" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdatadict__s_1acc8e76ca65e34568e3878047002857f4" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1ac0967b1ac6289e719be57de7797cbc56" kindref="member">Dict_t</ref> *</type>
+        <definition>Dict_t * Agdatadict_s::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="341" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdatadict__s_1a3fccbc99b2c4ddd7503127d2d3106f37" prot="public" static="no" mutable="no">
+        <type>struct Agdatadict_s::@3</type>
+        <definition>struct Agdatadict_s::@3  Agdatadict_s::dict</definition>
+        <argsstring></argsstring>
+        <name>dict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="342" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3450">
+        <label></label>
+      </node>
+      <node id="3463">
+        <label>Void_t *</label>
+      </node>
+      <node id="3456">
+        <label>Dtcompar_f</label>
+      </node>
+      <node id="3447">
+        <label>Agdatadict_s</label>
+        <link refid="structAgdatadict__s"/>
+        <childnode refid="3448" relation="usage">
+          <edgelabel>h</edgelabel>
+        </childnode>
+        <childnode refid="3450" relation="usage">
+          <edgelabel>dict</edgelabel>
+        </childnode>
+        <childnode refid="3451" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>n</edgelabel>
+          <edgelabel>e</edgelabel>
+        </childnode>
+      </node>
+      <node id="3458">
+        <label>Dtmemory_f</label>
+      </node>
+      <node id="3451">
+        <label>_dt_s</label>
+        <link refid="struct__dt__s"/>
+        <childnode refid="3452" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="3460" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="3463" relation="usage">
+          <edgelabel>user</edgelabel>
+        </childnode>
+        <childnode refid="3457" relation="usage">
+          <edgelabel>type</edgelabel>
+          <edgelabel>nview</edgelabel>
+        </childnode>
+        <childnode refid="3451" relation="usage">
+          <edgelabel>view</edgelabel>
+          <edgelabel>walk</edgelabel>
+        </childnode>
+        <childnode refid="3458" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="3464" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+        <childnode refid="3465" relation="usage">
+          <edgelabel>meth</edgelabel>
+        </childnode>
+      </node>
+      <node id="3460">
+        <label>_dtdata_s</label>
+        <link refid="struct__dtdata__s"/>
+        <childnode refid="3450" relation="usage">
+          <edgelabel>hh</edgelabel>
+        </childnode>
+        <childnode refid="3461" relation="usage">
+          <edgelabel>here</edgelabel>
+          <edgelabel>_htab</edgelabel>
+          <edgelabel>_head</edgelabel>
+        </childnode>
+        <childnode refid="3457" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>loop</edgelabel>
+          <edgelabel>ntab</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>minp</edgelabel>
+        </childnode>
+      </node>
+      <node id="3457">
+        <label>int</label>
+      </node>
+      <node id="3464">
+        <label>Dtsearch_f</label>
+      </node>
+      <node id="3465">
+        <label>_dtmethod_s</label>
+        <link refid="struct__dtmethod__s"/>
+        <childnode refid="3457" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="3464" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3455">
+        <label>Dtmake_f</label>
+      </node>
+      <node id="3448">
+        <label>Agrec_s</label>
+        <link refid="structAgrec__s"/>
+        <childnode refid="3448" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="3449" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="3459">
+        <label>Dthash_f</label>
+      </node>
+      <node id="3452">
+        <label>_dtdisc_s</label>
+        <link refid="struct__dtdisc__s"/>
+        <childnode refid="3453" relation="usage">
+          <edgelabel>freef</edgelabel>
+        </childnode>
+        <childnode refid="3454" relation="usage">
+          <edgelabel>eventf</edgelabel>
+        </childnode>
+        <childnode refid="3455" relation="usage">
+          <edgelabel>makef</edgelabel>
+        </childnode>
+        <childnode refid="3456" relation="usage">
+          <edgelabel>comparf</edgelabel>
+        </childnode>
+        <childnode refid="3457" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>key</edgelabel>
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="3458" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="3459" relation="usage">
+          <edgelabel>hashf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3461">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="3461" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="3450" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="3462" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3462">
+        <label>unsigned</label>
+      </node>
+      <node id="3453">
+        <label>Dtfree_f</label>
+      </node>
+      <node id="3449">
+        <label>char</label>
+      </node>
+      <node id="3454">
+        <label>Dtevent_f</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="338" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="338" bodyend="343"/>
+    <listofallmembers>
+      <member refid="structAgdatadict__s_1a3fccbc99b2c4ddd7503127d2d3106f37" prot="public" virt="non-virtual"><scope>Agdatadict_s</scope><name>dict</name></member>
+      <member refid="structAgdatadict__s_1a5dd15dd18a930d79bc062fd059bb79ba" prot="public" virt="non-virtual"><scope>Agdatadict_s</scope><name>e</name></member>
+      <member refid="structAgdatadict__s_1acc8e76ca65e34568e3878047002857f4" prot="public" virt="non-virtual"><scope>Agdatadict_s</scope><name>g</name></member>
+      <member refid="structAgdatadict__s_1afea537a2ef42a5ea94192afd1b048197" prot="public" virt="non-virtual"><scope>Agdatadict_s</scope><name>h</name></member>
+      <member refid="structAgdatadict__s_1a1337738c5e41cba9e851b46115bd3fda" prot="public" virt="non-virtual"><scope>Agdatadict_s</scope><name>n</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

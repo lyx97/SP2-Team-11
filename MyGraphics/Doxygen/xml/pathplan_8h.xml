@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="pathplan_8h" kind="file" language="C++">
+    <compoundname>pathplan.h</compoundname>
+    <includes refid="pathgeom_8h" local="yes">pathgeom.h</includes>
+    <incdepgraph>
+      <node id="2104">
+        <label>pathgeom.h</label>
+        <link refid="pathgeom_8h"/>
+      </node>
+      <node id="2103">
+        <label>graphviz/release/include/graphviz/pathplan.h</label>
+        <link refid="pathplan.h"/>
+        <childnode refid="2104" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pathplan_8h_1acd43e0e060bf87289b8bc83ef60cff47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pshortestpath</definition>
+        <argsstring>(Ppoly_t *boundary, Ppoint_t endpoints[2], Ppolyline_t *output_route)</argsstring>
+        <name>Pshortestpath</name>
+        <param>
+          <type><ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref> *</type>
+          <declname>boundary</declname>
+        </param>
+        <param>
+          <type><ref refid="pathgeom_8h_1ae03dc374d3fff2c0f275c6c17e705d1f" kindref="member">Ppoint_t</ref></type>
+          <declname>endpoints</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref> *</type>
+          <declname>output_route</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathplan.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pathplan_8h_1a0e8f206994ab3644c38e9943cf9afd23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Proutespline</definition>
+        <argsstring>(Pedge_t *barriers, int n_barriers, Ppolyline_t input_route, Pvector_t endpoint_slopes[2], Ppolyline_t *output_route)</argsstring>
+        <name>Proutespline</name>
+        <param>
+          <type><ref refid="structPedge__t" kindref="compound">Pedge_t</ref> *</type>
+          <declname>barriers</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_barriers</declname>
+        </param>
+        <param>
+          <type><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref></type>
+          <declname>input_route</declname>
+        </param>
+        <param>
+          <type><ref refid="pathgeom_8h_1a1601338d97d595819723e748357f2dca" kindref="member">Pvector_t</ref></type>
+          <declname>endpoint_slopes</declname>
+          <array>[2]</array>
+        </param>
+        <param>
+          <type><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref> *</type>
+          <declname>output_route</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathplan.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pathplan_8h_1ae6c3192fb411d7d68e828b8afd3f0dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Ppolybarriers</definition>
+        <argsstring>(Ppoly_t **polys, int npolys, Pedge_t **barriers, int *n_barriers)</argsstring>
+        <name>Ppolybarriers</name>
+        <param>
+          <type><ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref> **</type>
+          <declname>polys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>npolys</declname>
+        </param>
+        <param>
+          <type><ref refid="structPedge__t" kindref="compound">Pedge_t</ref> **</type>
+          <declname>barriers</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>n_barriers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathplan.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pathplan_8h_1a19e43c4a1b6a0ff5b83a6a05298efe96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void make_polyline</definition>
+        <argsstring>(Ppolyline_t line, Ppolyline_t *sline)</argsstring>
+        <name>make_polyline</name>
+        <param>
+          <type><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref></type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type><ref refid="pathgeom_8h_1a40d0fc3e3db12860642e212281e44905" kindref="member">Ppolyline_t</ref> *</type>
+          <declname>sline</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathplan.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_PATH_INCLUDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_PATH_INCLUDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pathgeom_8h" kindref="compound">pathgeom.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_BLD_pathplan)<sp/>&amp;&amp;<sp/>defined(__EXPORT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>extern<sp/>__EXPORT__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>find<sp/>shortest<sp/>euclidean<sp/>path<sp/>within<sp/>a<sp/>simple<sp/>polygon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pathplan_8h_1acd43e0e060bf87289b8bc83ef60cff47" kindref="member">Pshortestpath</ref>(<ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref><sp/>*<sp/>boundary,<sp/><ref refid="structPxy__t" kindref="compound">Ppoint_t</ref><sp/>endpoints[2],</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPpoly__t" kindref="compound">Ppolyline_t</ref><sp/>*<sp/>output_route);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>fit<sp/>a<sp/>spline<sp/>to<sp/>an<sp/>input<sp/>polyline,<sp/>without<sp/>touching<sp/>barrier<sp/>segments<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pathplan_8h_1a0e8f206994ab3644c38e9943cf9afd23" kindref="member">Proutespline</ref>(<ref refid="structPedge__t" kindref="compound">Pedge_t</ref><sp/>*<sp/>barriers,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_barriers,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPpoly__t" kindref="compound">Ppolyline_t</ref><sp/>input_route,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPxy__t" kindref="compound">Pvector_t</ref><sp/>endpoint_slopes[2],</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPpoly__t" kindref="compound">Ppolyline_t</ref><sp/>*<sp/>output_route);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>utility<sp/>function<sp/>to<sp/>convert<sp/>from<sp/>a<sp/>set<sp/>of<sp/>polygonal<sp/>obstacles<sp/>to<sp/>barriers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pathplan_8h_1ae6c3192fb411d7d68e828b8afd3f0dfd" kindref="member">Ppolybarriers</ref>(<ref refid="structPpoly__t" kindref="compound">Ppoly_t</ref><sp/>**<sp/>polys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>npolys,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPedge__t" kindref="compound">Pedge_t</ref><sp/>**<sp/>barriers,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*n_barriers);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>function<sp/>to<sp/>convert<sp/>a<sp/>polyline<sp/>into<sp/>a<sp/>spline<sp/>representation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pathplan_8h_1a19e43c4a1b6a0ff5b83a6a05298efe96" kindref="member">make_polyline</ref>(<ref refid="structPpoly__t" kindref="compound">Ppolyline_t</ref><sp/>line,<sp/><ref refid="structPpoly__t" kindref="compound">Ppolyline_t</ref>*<sp/>sline);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/pathplan.h"/>
+  </compounddef>
+</doxygen>

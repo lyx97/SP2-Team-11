@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classScene2" kind="class" language="C++" prot="public">
+    <compoundname>Scene2</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Scene2_8h" local="no">Scene2.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classScene2_1a49448a0d6704fdddc6be96a09c943d99" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classScene2_1a49448a0d6704fdddc6be96a09c943d99a1e08e60bb835e7ce140cd99f82dea317" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene2_1a49448a0d6704fdddc6be96a09c943d99ae809848bc789a7dc95f96abb2d9475c5" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="10" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="classScene2_1a028873b2024a640768bebc50fb1b0b0e" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classScene2_1a028873b2024a640768bebc50fb1b0b0ea08667abdb192c2877a744541d3265cc0" prot="private">
+          <name>GEO_TRIANGLE_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene2_1a028873b2024a640768bebc50fb1b0b0ead5bc94f3b0f5366dde8c88c79daedab7" prot="private">
+          <name>GEO_TRIANGLE_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene2_1a028873b2024a640768bebc50fb1b0b0eadc4555c0e7019100171f80f80fa17e6b" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="16" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="15" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScene2_1a529ed103c05c030fa292b57e86ff9fcf" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene2::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="32" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classScene2_1ae4c94dab85cfe1e734af4e288060dec4" compoundref="Scene2_8cpp" startline="223" endline="230">Exit</referencedby>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1ab87cb6c0003e9266a0529080f4cfdeca" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene2::m_vertexBuffer[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>m_vertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="33" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classScene2_1ae4c94dab85cfe1e734af4e288060dec4" compoundref="Scene2_8cpp" startline="223" endline="230">Exit</referencedby>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+        <referencedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" compoundref="Scene2_8cpp" startline="148" endline="221">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1a3105aa4e308054a2033b34dd940ddd8c" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene2::m_colorBuffer[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>m_colorBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="34" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classScene2_1ae4c94dab85cfe1e734af4e288060dec4" compoundref="Scene2_8cpp" startline="223" endline="230">Exit</referencedby>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+        <referencedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" compoundref="Scene2_8cpp" startline="148" endline="221">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1a8062fd2e9221d76ce5fddebd8d9fd958" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene2::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="35" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classScene2_1ae4c94dab85cfe1e734af4e288060dec4" compoundref="Scene2_8cpp" startline="223" endline="230">Exit</referencedby>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1a91fa51259776242875a07ed6dba78bd0" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene2::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="36" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+        <referencedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" compoundref="Scene2_8cpp" startline="148" endline="221">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1af1e450d21db6d3ea63232aea222681df" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Scene2::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="38" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+        <referencedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" compoundref="Scene2_8cpp" startline="148" endline="221">Render</referencedby>
+        <referencedby refid="classScene2_1a26d9fb1c36b04d8b3dac98740f7f77e6" compoundref="Scene2_8cpp" startline="101" endline="146">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1a08edb88515cde967432df36ade24bc6f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Scene2::translateX</definition>
+        <argsstring></argsstring>
+        <name>translateX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="39" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+        <referencedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" compoundref="Scene2_8cpp" startline="148" endline="221">Render</referencedby>
+        <referencedby refid="classScene2_1a26d9fb1c36b04d8b3dac98740f7f77e6" compoundref="Scene2_8cpp" startline="101" endline="146">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene2_1a26b9f96854b0b2ae955b2d85dccf0341" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Scene2::scaleAll</definition>
+        <argsstring></argsstring>
+        <name>scaleAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="40" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" compoundref="Scene2_8cpp" startline="16" endline="99">Init</referencedby>
+        <referencedby refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" compoundref="Scene2_8cpp" startline="148" endline="221">Render</referencedby>
+        <referencedby refid="classScene2_1a26d9fb1c36b04d8b3dac98740f7f77e6" compoundref="Scene2_8cpp" startline="101" endline="146">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScene2_1ac2baa5364ff5dc6a7fbcbf5950812619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene2::Scene2</definition>
+        <argsstring>()</argsstring>
+        <name>Scene2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="23" column="1" bodyfile="MyGraphics/Source/Scene2.cpp" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene2_1ae5e9ca56e5c66f78eb5d6bdbf6753dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene2::~Scene2</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="24" column="1" bodyfile="MyGraphics/Source/Scene2.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene2_1ad452e11ff007a8a1a410284630eb6f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene2::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="26" column="1" bodyfile="MyGraphics/Source/Scene2.cpp" bodystart="16" bodyend="99"/>
+        <references refid="classScene2_1a028873b2024a640768bebc50fb1b0b0ea08667abdb192c2877a744541d3265cc0" compoundref="Scene2_8h" startline="17">GEO_TRIANGLE_1</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classScene2_1a3105aa4e308054a2033b34dd940ddd8c" compoundref="Scene2_8h" startline="34">m_colorBuffer</references>
+        <references refid="classScene2_1a91fa51259776242875a07ed6dba78bd0" compoundref="Scene2_8h" startline="36">m_parameters</references>
+        <references refid="classScene2_1a8062fd2e9221d76ce5fddebd8d9fd958" compoundref="Scene2_8h" startline="35">m_programID</references>
+        <references refid="classScene2_1a529ed103c05c030fa292b57e86ff9fcf" compoundref="Scene2_8h" startline="32">m_vertexArrayID</references>
+        <references refid="classScene2_1ab87cb6c0003e9266a0529080f4cfdeca" compoundref="Scene2_8h" startline="33">m_vertexBuffer</references>
+        <references refid="classScene2_1a028873b2024a640768bebc50fb1b0b0eadc4555c0e7019100171f80f80fa17e6b" compoundref="Scene2_8h" startline="19">NUM_GEOMETRY</references>
+        <references refid="classScene2_1af1e450d21db6d3ea63232aea222681df" compoundref="Scene2_8h" startline="38">rotateAngle</references>
+        <references refid="classScene2_1a26b9f96854b0b2ae955b2d85dccf0341" compoundref="Scene2_8h" startline="40">scaleAll</references>
+        <references refid="classScene2_1a08edb88515cde967432df36ade24bc6f" compoundref="Scene2_8h" startline="39">translateX</references>
+        <references refid="classScene2_1a49448a0d6704fdddc6be96a09c943d99a1e08e60bb835e7ce140cd99f82dea317" compoundref="Scene2_8h" startline="11">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene2_1a26d9fb1c36b04d8b3dac98740f7f77e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene2::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="27" column="1" bodyfile="MyGraphics/Source/Scene2.cpp" bodystart="101" bodyend="146"/>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classScene2_1af1e450d21db6d3ea63232aea222681df" compoundref="Scene2_8h" startline="38">rotateAngle</references>
+        <references refid="classScene2_1a26b9f96854b0b2ae955b2d85dccf0341" compoundref="Scene2_8h" startline="40">scaleAll</references>
+        <references refid="classScene2_1a08edb88515cde967432df36ade24bc6f" compoundref="Scene2_8h" startline="39">translateX</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene2::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="28" column="1" bodyfile="MyGraphics/Source/Scene2.cpp" bodystart="148" bodyend="221"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classScene2_1a028873b2024a640768bebc50fb1b0b0ea08667abdb192c2877a744541d3265cc0" compoundref="Scene2_8h" startline="17">GEO_TRIANGLE_1</references>
+        <references refid="classScene2_1a3105aa4e308054a2033b34dd940ddd8c" compoundref="Scene2_8h" startline="34">m_colorBuffer</references>
+        <references refid="classScene2_1a91fa51259776242875a07ed6dba78bd0" compoundref="Scene2_8h" startline="36">m_parameters</references>
+        <references refid="classScene2_1ab87cb6c0003e9266a0529080f4cfdeca" compoundref="Scene2_8h" startline="33">m_vertexBuffer</references>
+        <references refid="classScene2_1af1e450d21db6d3ea63232aea222681df" compoundref="Scene2_8h" startline="38">rotateAngle</references>
+        <references refid="classScene2_1a26b9f96854b0b2ae955b2d85dccf0341" compoundref="Scene2_8h" startline="40">scaleAll</references>
+        <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">Mtx44::SetToIdentity</references>
+        <references refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" compoundref="Mtx44_8cpp" startline="492" endline="497">Mtx44::SetToOrtho</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</references>
+        <references refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">Mtx44::SetToScale</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classScene2_1a08edb88515cde967432df36ade24bc6f" compoundref="Scene2_8h" startline="39">translateX</references>
+        <references refid="classScene2_1a49448a0d6704fdddc6be96a09c943d99a1e08e60bb835e7ce140cd99f82dea317" compoundref="Scene2_8h" startline="11">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene2_1ae4c94dab85cfe1e734af4e288060dec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene2::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene2.h" line="29" column="1" bodyfile="MyGraphics/Source/Scene2.cpp" bodystart="223" bodyend="230"/>
+        <references refid="classScene2_1a3105aa4e308054a2033b34dd940ddd8c" compoundref="Scene2_8h" startline="34">m_colorBuffer</references>
+        <references refid="classScene2_1a8062fd2e9221d76ce5fddebd8d9fd958" compoundref="Scene2_8h" startline="35">m_programID</references>
+        <references refid="classScene2_1a529ed103c05c030fa292b57e86ff9fcf" compoundref="Scene2_8h" startline="32">m_vertexArrayID</references>
+        <references refid="classScene2_1ab87cb6c0003e9266a0529080f4cfdeca" compoundref="Scene2_8h" startline="33">m_vertexBuffer</references>
+        <references refid="classScene2_1a028873b2024a640768bebc50fb1b0b0eadc4555c0e7019100171f80f80fa17e6b" compoundref="Scene2_8h" startline="19">NUM_GEOMETRY</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5766">
+        <label>Scene2</label>
+        <link refid="classScene2"/>
+        <childnode refid="5767" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5767">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5768">
+        <label>Scene2</label>
+        <link refid="classScene2"/>
+        <childnode refid="5769" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5770" relation="usage">
+          <edgelabel>translateX</edgelabel>
+          <edgelabel>rotateAngle</edgelabel>
+          <edgelabel>scaleAll</edgelabel>
+        </childnode>
+        <childnode refid="5771" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_colorBuffer</edgelabel>
+          <edgelabel>m_vertexBuffer</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5770">
+        <label>float</label>
+      </node>
+      <node id="5769">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5771">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Scene2.h" line="7" column="1" bodyfile="MyGraphics/Source/Scene2.h" bodystart="6" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classScene2_1ae4c94dab85cfe1e734af4e288060dec4" prot="public" virt="virtual"><scope>Scene2</scope><name>Exit</name></member>
+      <member refid="classScene2_1a028873b2024a640768bebc50fb1b0b0ea08667abdb192c2877a744541d3265cc0" prot="private" virt="non-virtual"><scope>Scene2</scope><name>GEO_TRIANGLE_1</name></member>
+      <member refid="classScene2_1a028873b2024a640768bebc50fb1b0b0ead5bc94f3b0f5366dde8c88c79daedab7" prot="private" virt="non-virtual"><scope>Scene2</scope><name>GEO_TRIANGLE_2</name></member>
+      <member refid="classScene2_1a028873b2024a640768bebc50fb1b0b0e" prot="private" virt="non-virtual"><scope>Scene2</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classScene2_1ad452e11ff007a8a1a410284630eb6f12" prot="public" virt="virtual"><scope>Scene2</scope><name>Init</name></member>
+      <member refid="classScene2_1a3105aa4e308054a2033b34dd940ddd8c" prot="private" virt="non-virtual"><scope>Scene2</scope><name>m_colorBuffer</name></member>
+      <member refid="classScene2_1a91fa51259776242875a07ed6dba78bd0" prot="private" virt="non-virtual"><scope>Scene2</scope><name>m_parameters</name></member>
+      <member refid="classScene2_1a8062fd2e9221d76ce5fddebd8d9fd958" prot="private" virt="non-virtual"><scope>Scene2</scope><name>m_programID</name></member>
+      <member refid="classScene2_1a529ed103c05c030fa292b57e86ff9fcf" prot="private" virt="non-virtual"><scope>Scene2</scope><name>m_vertexArrayID</name></member>
+      <member refid="classScene2_1ab87cb6c0003e9266a0529080f4cfdeca" prot="private" virt="non-virtual"><scope>Scene2</scope><name>m_vertexBuffer</name></member>
+      <member refid="classScene2_1a028873b2024a640768bebc50fb1b0b0eadc4555c0e7019100171f80f80fa17e6b" prot="private" virt="non-virtual"><scope>Scene2</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classScene2_1ac035da5e87c59e6b1828ceec8193cea4" prot="public" virt="virtual"><scope>Scene2</scope><name>Render</name></member>
+      <member refid="classScene2_1af1e450d21db6d3ea63232aea222681df" prot="private" virt="non-virtual"><scope>Scene2</scope><name>rotateAngle</name></member>
+      <member refid="classScene2_1a26b9f96854b0b2ae955b2d85dccf0341" prot="private" virt="non-virtual"><scope>Scene2</scope><name>scaleAll</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene2</scope><name>Scene</name></member>
+      <member refid="classScene2_1ac2baa5364ff5dc6a7fbcbf5950812619" prot="public" virt="non-virtual"><scope>Scene2</scope><name>Scene2</name></member>
+      <member refid="classScene2_1a08edb88515cde967432df36ade24bc6f" prot="private" virt="non-virtual"><scope>Scene2</scope><name>translateX</name></member>
+      <member refid="classScene2_1a49448a0d6704fdddc6be96a09c943d99a1e08e60bb835e7ce140cd99f82dea317" prot="private" virt="non-virtual"><scope>Scene2</scope><name>U_MVP</name></member>
+      <member refid="classScene2_1a49448a0d6704fdddc6be96a09c943d99ae809848bc789a7dc95f96abb2d9475c5" prot="private" virt="non-virtual"><scope>Scene2</scope><name>U_TOTAL</name></member>
+      <member refid="classScene2_1a49448a0d6704fdddc6be96a09c943d99" prot="private" virt="non-virtual"><scope>Scene2</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classScene2_1a26d9fb1c36b04d8b3dac98740f7f77e6" prot="public" virt="virtual"><scope>Scene2</scope><name>Update</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene2</scope><name>~Scene</name></member>
+      <member refid="classScene2_1ae5e9ca56e5c66f78eb5d6bdbf6753dde" prot="public" virt="non-virtual"><scope>Scene2</scope><name>~Scene2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

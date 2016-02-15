@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="textspan_8h" kind="file" language="C++">
+    <compoundname>textspan.h</compoundname>
+    <includedby refid="types_8h" local="yes">graphviz/release/include/graphviz/types.h</includedby>
+    <invincdepgraph>
+      <node id="2110">
+        <label>graphviz/release/include/graphviz/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2111" relation="include">
+        </childnode>
+        <childnode refid="2112" relation="include">
+        </childnode>
+        <childnode refid="2113" relation="include">
+        </childnode>
+        <childnode refid="2114" relation="include">
+        </childnode>
+        <childnode refid="2115" relation="include">
+        </childnode>
+        <childnode refid="2116" relation="include">
+        </childnode>
+        <childnode refid="2117" relation="include">
+        </childnode>
+      </node>
+      <node id="2111">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="2114">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="2112">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="2115">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="2113">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="2109">
+        <label>graphviz/release/include/graphviz/textspan.h</label>
+        <link refid="textspan.h"/>
+        <childnode refid="2110" relation="include">
+        </childnode>
+      </node>
+      <node id="2116">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="2117">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__PostscriptAlias" prot="public">_PostscriptAlias</innerclass>
+    <innerclass refid="structtextfont__t" prot="public">textfont_t</innerclass>
+    <innerclass refid="structtextspan__t" prot="public">textspan_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="textspan_8h_1a871d0b31fb72f321f8a794686d5ff518" prot="public" static="no">
+        <name>HTML_BF</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="24" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="textspan_8h_1a3c3110582acb70da8b3e0ca0635137fe" prot="public" static="no">
+        <name>HTML_IF</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="25" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="textspan_8h_1a743cbef7ee94f3c624c18cec4a3d56d5" prot="public" static="no">
+        <name>HTML_UL</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="26" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="textspan_8h_1ab9ff6b60b4a13cd65bacd156d06925a6" prot="public" static="no">
+        <name>HTML_SUP</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="27" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="textspan_8h_1ae3258aec43df4304b8771fa3cff14e2f" prot="public" static="no">
+        <name>HTML_SUB</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="28" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="textspan_8h_1ac71d604924e17d05f0fff9aca4e01611" prot="public" static="no">
+        <name>HTML_S</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="29" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="textspan_8h_1a34bcab0afcfebabc4162ee042d94bfc3" prot="public" static="no">
+        <name>HTML_OL</name>
+        <initializer>(1 &lt;&lt; 6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="30" column="9" bodyfile="graphviz/release/include/graphviz/textspan.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="textspan_8h_1abc71166eeaffdc8ea2c927368e58f74f" prot="public" static="no">
+        <type>struct <ref refid="struct__PostscriptAlias" kindref="compound">_PostscriptAlias</ref></type>
+        <definition>typedef struct _PostscriptAlias  PostscriptAlias</definition>
+        <argsstring></argsstring>
+        <name>PostscriptAlias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textspan.h" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TEXTSPAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEXTSPAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Bold,<sp/>Italic,<sp/>Underline,<sp/>Sup,<sp/>Sub,<sp/>Strike<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Stored<sp/>in<sp/>textfont_t.flags,<sp/>which<sp/>is<sp/>7<sp/>bits,<sp/>so<sp/>full<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Probably<sp/>should<sp/>be<sp/>moved<sp/>to<sp/>textspan_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="textspan_8h_1a871d0b31fb72f321f8a794686d5ff518" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_BF<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="textspan_8h_1a3c3110582acb70da8b3e0ca0635137fe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_IF<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="textspan_8h_1a743cbef7ee94f3c624c18cec4a3d56d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_UL<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="textspan_8h_1ab9ff6b60b4a13cd65bacd156d06925a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_SUP<sp/><sp/>(1<sp/>&lt;&lt;<sp/>3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="textspan_8h_1ae3258aec43df4304b8771fa3cff14e2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_SUB<sp/><sp/>(1<sp/>&lt;&lt;<sp/>4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="textspan_8h_1ac71d604924e17d05f0fff9aca4e01611" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_S<sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="textspan_8h_1a34bcab0afcfebabc4162ee042d94bfc3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HTML_OL<sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__PostscriptAlias" kindref="compound">_PostscriptAlias</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1acb7eb60e7dcf7cb393fd91b06a7adbc0" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1a22eda8c32299f4119b9fc9bed34a48c9" kindref="member">family</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1a707761eec652a722b2c90d80c6ecee62" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1ade013121575b5cf23e5e57c770fbcb7f" kindref="member">stretch</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1a359ee651e60b0c34062169bcd490e2a4" kindref="member">style</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct__PostscriptAlias_1a71df902192476abfa483718bfee6d060" kindref="member">xfig_code</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1a948696a8cd53c87fcf06576317457546" kindref="member">svg_font_family</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1a7ab646ed156e0e97ce79c1db3b11fe0f" kindref="member">svg_font_weight</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__PostscriptAlias_1aa2f3df62dbdeae135718944915425dda" kindref="member">svg_font_style</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="textspan_8h_1abc71166eeaffdc8ea2c927368e58f74f" kindref="member">PostscriptAlias</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>font<sp/>information</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>If<sp/>name<sp/>or<sp/>color<sp/>is<sp/>NULL,<sp/>or<sp/>size<sp/>&lt;<sp/>0,<sp/>that<sp/>attribute</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>unspecified.<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structtextfont__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49" refid="structtextfont__t_1a57869d742504b4de73aa609641d2ee6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structtextfont__t_1a57869d742504b4de73aa609641d2ee6d" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structtextfont__t_1a0efd68bfcd391cb61a04f4cf8082f681" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><ref refid="structtextfont__t_1a0efd68bfcd391cb61a04f4cf8082f681" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structtextfont__t_1a57cdad13761e851f8a373bb860542e8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__PostscriptAlias" kindref="compound">PostscriptAlias</ref><sp/>*<ref refid="structtextfont__t_1a57cdad13761e851f8a373bb860542e8c" kindref="member">postscript_alias</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structtextfont__t_1aee3e2129ddd89e25f57407d50a4dadcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structtextfont__t_1aee3e2129ddd89e25f57407d50a4dadcd" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structtextfont__t_1add445e68ddb397dc3b10870c9f3e6ee7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags:7;<sp/><sp/></highlight><highlight class="comment">/*<sp/>HTML_UL,<sp/>HTML_IF,<sp/>HTML_BF,<sp/>etc.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structtextfont__t_1aef7f7dd723ee85bd8e7822ac256729c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cnt:(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<sp/>*<sp/>8<sp/>-<sp/>7);<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>reference<sp/>count<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structtextfont__t" kindref="compound">textfont_t</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>atomic<sp/>unit<sp/>of<sp/>text<sp/>emitted<sp/>using<sp/>a<sp/>single<sp/>htmlfont_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structtextspan__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59" refid="structtextspan__t_1a31a8ceef5544790802908441b9f60d7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structtextspan__t_1a31a8ceef5544790802908441b9f60d7c" kindref="member">str</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>stored<sp/>in<sp/>utf-8<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structtextspan__t_1abffd51901f2150a45535fcb6d903e2d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtextfont__t" kindref="compound">textfont_t</ref><sp/>*<ref refid="structtextspan__t_1abffd51901f2150a45535fcb6d903e2d5" kindref="member">font</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structtextspan__t_1a4e63eb99a9a5dbc29b4e57bd5d9e7d84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structtextspan__t_1a4e63eb99a9a5dbc29b4e57bd5d9e7d84" kindref="member">layout</ref>;</highlight></codeline>
+<codeline lineno="62" refid="structtextspan__t_1af4b2c72495e663712d59173149b542bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*free_layout)<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*layout);<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>FIXME<sp/>-<sp/>this<sp/>is<sp/>ugly<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="structtextspan__t_1a2721db6774a1a6d174fb7d40a99b1700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structtextspan__t_1a2721db6774a1a6d174fb7d40a99b1700" kindref="member">yoffset_layout</ref>,<sp/>yoffset_centerline;</highlight></codeline>
+<codeline lineno="64" refid="structtextspan__t_1a83c75776d17b32647e2851cc97fb6f33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structtextspan__t_1a83c75776d17b32647e2851cc97fb6f33" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structtextspan__t_1a4b35e6b131ae224e0f6b71a66925a8b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structtextspan__t_1a4b35e6b131ae224e0f6b71a66925a8b7" kindref="member">just</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>&apos;l&apos;<sp/>&apos;n&apos;<sp/>&apos;r&apos;<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>FIXME<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structtextspan__t" kindref="compound">textspan_t</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/textspan.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structsplines" kind="struct" language="C++" prot="public">
+    <compoundname>splines</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsplines_1a113be8f9cf84f6db52b5345a3a096858" prot="public" static="no" mutable="no">
+        <type><ref refid="structbezier" kindref="compound">bezier</ref> *</type>
+        <definition>bezier* splines::list</definition>
+        <argsstring></argsstring>
+        <name>list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="116" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsplines_1abf829fef36acc6caccc2991cbb9efebb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int splines::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="117" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsplines_1a5a004f14846cd48aabd0bd230cb4bad1" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf splines::bb</definition>
+        <argsstring></argsstring>
+        <name>bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="118" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5962">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5963" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5959">
+        <label>splines</label>
+        <link refid="structsplines"/>
+        <childnode refid="5960" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="5961" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="5964" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="5960">
+        <label>int</label>
+      </node>
+      <node id="5963">
+        <label>double</label>
+      </node>
+      <node id="5964">
+        <label>bezier</label>
+        <link refid="structbezier"/>
+        <childnode refid="5960" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>sflag</edgelabel>
+          <edgelabel>eflag</edgelabel>
+        </childnode>
+        <childnode refid="5962" relation="usage">
+          <edgelabel>ep</edgelabel>
+          <edgelabel>sp</edgelabel>
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="5961">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="5962" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="115" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="115" bodyend="119"/>
+    <listofallmembers>
+      <member refid="structsplines_1a5a004f14846cd48aabd0bd230cb4bad1" prot="public" virt="non-virtual"><scope>splines</scope><name>bb</name></member>
+      <member refid="structsplines_1a113be8f9cf84f6db52b5345a3a096858" prot="public" virt="non-virtual"><scope>splines</scope><name>list</name></member>
+      <member refid="structsplines_1abf829fef36acc6caccc2991cbb9efebb" prot="public" virt="non-virtual"><scope>splines</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

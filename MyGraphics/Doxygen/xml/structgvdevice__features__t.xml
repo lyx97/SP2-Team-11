@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvdevice__features__t" kind="struct" language="C++" prot="public">
+    <compoundname>gvdevice_features_t</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvdevice__features__t_1a442a208ab39ec41f989064019a1eeb5b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvdevice_features_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="122" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__features__t_1ac91ad00b91457ab4637aee89daf840e2" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf gvdevice_features_t::default_margin</definition>
+        <argsstring></argsstring>
+        <name>default_margin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="123" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__features__t_1ad3f7cc9e38848ff9fa6f66f92752189e" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf gvdevice_features_t::default_pagesize</definition>
+        <argsstring></argsstring>
+        <name>default_pagesize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="124" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__features__t_1acfa6a68f6c88bba7a50f135bafc1eeec" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf gvdevice_features_t::default_dpi</definition>
+        <argsstring></argsstring>
+        <name>default_dpi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="125" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4863">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="4864" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4862">
+        <label>int</label>
+      </node>
+      <node id="4864">
+        <label>double</label>
+      </node>
+      <node id="4861">
+        <label>gvdevice_features_t</label>
+        <link refid="structgvdevice__features__t"/>
+        <childnode refid="4862" relation="usage">
+          <edgelabel>flags</edgelabel>
+        </childnode>
+        <childnode refid="4863" relation="usage">
+          <edgelabel>default_pagesize</edgelabel>
+          <edgelabel>default_margin</edgelabel>
+          <edgelabel>default_dpi</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="121" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="121" bodyend="126"/>
+    <listofallmembers>
+      <member refid="structgvdevice__features__t_1acfa6a68f6c88bba7a50f135bafc1eeec" prot="public" virt="non-virtual"><scope>gvdevice_features_t</scope><name>default_dpi</name></member>
+      <member refid="structgvdevice__features__t_1ac91ad00b91457ab4637aee89daf840e2" prot="public" virt="non-virtual"><scope>gvdevice_features_t</scope><name>default_margin</name></member>
+      <member refid="structgvdevice__features__t_1ad3f7cc9e38848ff9fa6f66f92752189e" prot="public" virt="non-virtual"><scope>gvdevice_features_t</scope><name>default_pagesize</name></member>
+      <member refid="structgvdevice__features__t_1a442a208ab39ec41f989064019a1eeb5b" prot="public" virt="non-virtual"><scope>gvdevice_features_t</scope><name>flags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

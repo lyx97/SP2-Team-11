@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvrender__engine__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvrender_engine_s</compoundname>
+    <includes refid="gvplugin__render_8h" local="no">gvplugin_render.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvrender__engine__s_1ab77448cc624796d7602090035a5f3a28" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_job) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_job</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a5dd4da474f0e6f6f0dde0504dcbe62df" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_job) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_job</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1add3e254ca58f87658f41d283271f3f2b" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_graph) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_graph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="28" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1ab3730d367fd769ddd74dd95bed1a0867" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_graph) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_graph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="29" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a02548954923cb14790de005806b89a32" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_layer) (GVJ_t *job, char *layername, int layerNum, int numLayers)</definition>
+        <argsstring>)(GVJ_t *job, char *layername, int layerNum, int numLayers)</argsstring>
+        <name>begin_layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="30" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1ab700f4e6ae1a5b1be92139ddf8350dfa" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_layer) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="32" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a4b9ed92904310113e0ed4208ada3fd87" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_page) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="33" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a846da51feeacfc96c406e5ff5de8e09d" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_page) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_page</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="34" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a4adce6578d1997abd55f23ae67e0514c" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_cluster) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_cluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="35" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1ac70ab71309b063da8ecba0c772a56b28" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_cluster) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_cluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="36" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1aab1fae12f3754c0bd8fc71a8a84a1302" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_nodes) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1aefb34e2a4128865080a6af578ce54585" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_nodes) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="38" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1abad17e2932b7b2f4a26172a0d8001e17" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_edges) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1ac4bd2808af5c4fdf136cf7d4f74ed75f" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_edges) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_edges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="40" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a5f84e0f2ae7a6db6e59e84e150975226" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_node) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="41" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a996710ccc23d98de8fcfecd5dd4baef3" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_node) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1aa7704db228202da9b0c973aaadb29820" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_edge) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>begin_edge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="43" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a9214933ea0ba0a7680d9c69cf5b28882" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_edge) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_edge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="44" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a41567ab3dfe84c7a487e612468203199" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_anchor) (GVJ_t *job, char *href, char *tooltip, char *target, char *id)</definition>
+        <argsstring>)(GVJ_t *job, char *href, char *tooltip, char *target, char *id)</argsstring>
+        <name>begin_anchor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="45" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1aa5644443edbd8eb0ead422f4eac29651" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_anchor) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_anchor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="47" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1aee66812627b856a9c58b672f9d1b63fb" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::begin_label) (GVJ_t *job, label_type type)</definition>
+        <argsstring>)(GVJ_t *job, label_type type)</argsstring>
+        <name>begin_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="48" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a01c0dd5dca977c9aa5a138edee4322a3" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::end_label) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>end_label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="49" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a9195f2083fbd928563284af73a7f6b47" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::textspan) (GVJ_t *job, pointf p, textspan_t *span)</definition>
+        <argsstring>)(GVJ_t *job, pointf p, textspan_t *span)</argsstring>
+        <name>textspan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="50" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a52e5ce59d3333f67552b3c37a776b1c6" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::resolve_color) (GVJ_t *job, gvcolor_t *color)</definition>
+        <argsstring>)(GVJ_t *job, gvcolor_t *color)</argsstring>
+        <name>resolve_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="51" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a6f598b5a14fb6f356f58cfc95f80d4b1" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::ellipse) (GVJ_t *job, pointf *A, int filled)</definition>
+        <argsstring>)(GVJ_t *job, pointf *A, int filled)</argsstring>
+        <name>ellipse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="52" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a5d5ee18f1f36df22170763f7a01aec6c" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::polygon) (GVJ_t *job, pointf *A, int n, int filled)</definition>
+        <argsstring>)(GVJ_t *job, pointf *A, int n, int filled)</argsstring>
+        <name>polygon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="53" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1ab0f6e466acad0321f4fded78f003fb35" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::beziercurve) (GVJ_t *job, pointf *A, int n, int arrow_at_start, int arrow_at_end, int)</definition>
+        <argsstring>)(GVJ_t *job, pointf *A, int n, int arrow_at_start, int arrow_at_end, int)</argsstring>
+        <name>beziercurve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="54" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1a244395cffd6607eac569ee1f1d4e8896" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::polyline) (GVJ_t *job, pointf *A, int n)</definition>
+        <argsstring>)(GVJ_t *job, pointf *A, int n)</argsstring>
+        <name>polyline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="56" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1aff4c30db40d1f9c4b5389fc353658641" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::comment) (GVJ_t *job, char *comment)</definition>
+        <argsstring>)(GVJ_t *job, char *comment)</argsstring>
+        <name>comment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="57" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvrender__engine__s_1ac38e50e3765c950887fd58e274287fad" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvrender_engine_s::library_shape) (GVJ_t *job, char *name, pointf *A, int n, int filled)</definition>
+        <argsstring>)(GVJ_t *job, char *name, pointf *A, int n, int filled)</argsstring>
+        <name>library_shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="58" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5170">
+        <label>void(*)(GVJ_t *job, pointf p, textspan_t *span)</label>
+      </node>
+      <node id="5169">
+        <label>void(*)(GVJ_t *job, char *name, pointf *A, int n, int filled)</label>
+      </node>
+      <node id="5173">
+        <label>void(*)(GVJ_t *job, pointf *A, int n)</label>
+      </node>
+      <node id="5179">
+        <label>void(*)(GVJ_t *job)</label>
+      </node>
+      <node id="5175">
+        <label>void(*)(GVJ_t *job, pointf *A, int n, int arrow_at_start, int arrow_at_end, int)</label>
+      </node>
+      <node id="5172">
+        <label>void(*)(GVJ_t *job, char *comment)</label>
+      </node>
+      <node id="5174">
+        <label>void(*)(GVJ_t *job, gvcolor_t *color)</label>
+      </node>
+      <node id="5178">
+        <label>void(*)(GVJ_t *job, pointf *A, int filled)</label>
+      </node>
+      <node id="5167">
+        <label>gvrender_engine_s</label>
+        <link refid="structgvrender__engine__s"/>
+        <childnode refid="5168" relation="usage">
+          <edgelabel>begin_label</edgelabel>
+        </childnode>
+        <childnode refid="5169" relation="usage">
+          <edgelabel>library_shape</edgelabel>
+        </childnode>
+        <childnode refid="5170" relation="usage">
+          <edgelabel>textspan</edgelabel>
+        </childnode>
+        <childnode refid="5171" relation="usage">
+          <edgelabel>begin_anchor</edgelabel>
+        </childnode>
+        <childnode refid="5172" relation="usage">
+          <edgelabel>comment</edgelabel>
+        </childnode>
+        <childnode refid="5173" relation="usage">
+          <edgelabel>polyline</edgelabel>
+        </childnode>
+        <childnode refid="5174" relation="usage">
+          <edgelabel>resolve_color</edgelabel>
+        </childnode>
+        <childnode refid="5175" relation="usage">
+          <edgelabel>beziercurve</edgelabel>
+        </childnode>
+        <childnode refid="5176" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="5177" relation="usage">
+          <edgelabel>begin_layer</edgelabel>
+        </childnode>
+        <childnode refid="5178" relation="usage">
+          <edgelabel>ellipse</edgelabel>
+        </childnode>
+        <childnode refid="5179" relation="usage">
+          <edgelabel>end_edges</edgelabel>
+          <edgelabel>end_cluster</edgelabel>
+          <edgelabel>begin_node</edgelabel>
+          <edgelabel>end_edge</edgelabel>
+          <edgelabel>begin_cluster</edgelabel>
+          <edgelabel>end_label</edgelabel>
+          <edgelabel>end_layer</edgelabel>
+          <edgelabel>end_nodes</edgelabel>
+          <edgelabel>begin_nodes</edgelabel>
+          <edgelabel>begin_job</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="5177">
+        <label>void(*)(GVJ_t *job, char *layername, int layerNum, int numLayers)</label>
+      </node>
+      <node id="5171">
+        <label>void(*)(GVJ_t *job, char *href, char *tooltip, char *target, char *id)</label>
+      </node>
+      <node id="5176">
+        <label>void(*)(GVJ_t *job, pointf *A, int n, int filled)</label>
+      </node>
+      <node id="5168">
+        <label>void(*)(GVJ_t *job, label_type type)</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvplugin_render.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/gvplugin_render.h" bodystart="25" bodyend="59"/>
+    <listofallmembers>
+      <member refid="structgvrender__engine__s_1a41567ab3dfe84c7a487e612468203199" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_anchor</name></member>
+      <member refid="structgvrender__engine__s_1a4adce6578d1997abd55f23ae67e0514c" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_cluster</name></member>
+      <member refid="structgvrender__engine__s_1aa7704db228202da9b0c973aaadb29820" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_edge</name></member>
+      <member refid="structgvrender__engine__s_1abad17e2932b7b2f4a26172a0d8001e17" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_edges</name></member>
+      <member refid="structgvrender__engine__s_1add3e254ca58f87658f41d283271f3f2b" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_graph</name></member>
+      <member refid="structgvrender__engine__s_1ab77448cc624796d7602090035a5f3a28" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_job</name></member>
+      <member refid="structgvrender__engine__s_1aee66812627b856a9c58b672f9d1b63fb" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_label</name></member>
+      <member refid="structgvrender__engine__s_1a02548954923cb14790de005806b89a32" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_layer</name></member>
+      <member refid="structgvrender__engine__s_1a5f84e0f2ae7a6db6e59e84e150975226" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_node</name></member>
+      <member refid="structgvrender__engine__s_1aab1fae12f3754c0bd8fc71a8a84a1302" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_nodes</name></member>
+      <member refid="structgvrender__engine__s_1a4b9ed92904310113e0ed4208ada3fd87" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>begin_page</name></member>
+      <member refid="structgvrender__engine__s_1ab0f6e466acad0321f4fded78f003fb35" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>beziercurve</name></member>
+      <member refid="structgvrender__engine__s_1aff4c30db40d1f9c4b5389fc353658641" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>comment</name></member>
+      <member refid="structgvrender__engine__s_1a6f598b5a14fb6f356f58cfc95f80d4b1" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>ellipse</name></member>
+      <member refid="structgvrender__engine__s_1aa5644443edbd8eb0ead422f4eac29651" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_anchor</name></member>
+      <member refid="structgvrender__engine__s_1ac70ab71309b063da8ecba0c772a56b28" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_cluster</name></member>
+      <member refid="structgvrender__engine__s_1a9214933ea0ba0a7680d9c69cf5b28882" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_edge</name></member>
+      <member refid="structgvrender__engine__s_1ac4bd2808af5c4fdf136cf7d4f74ed75f" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_edges</name></member>
+      <member refid="structgvrender__engine__s_1ab3730d367fd769ddd74dd95bed1a0867" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_graph</name></member>
+      <member refid="structgvrender__engine__s_1a5dd4da474f0e6f6f0dde0504dcbe62df" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_job</name></member>
+      <member refid="structgvrender__engine__s_1a01c0dd5dca977c9aa5a138edee4322a3" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_label</name></member>
+      <member refid="structgvrender__engine__s_1ab700f4e6ae1a5b1be92139ddf8350dfa" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_layer</name></member>
+      <member refid="structgvrender__engine__s_1a996710ccc23d98de8fcfecd5dd4baef3" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_node</name></member>
+      <member refid="structgvrender__engine__s_1aefb34e2a4128865080a6af578ce54585" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_nodes</name></member>
+      <member refid="structgvrender__engine__s_1a846da51feeacfc96c406e5ff5de8e09d" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>end_page</name></member>
+      <member refid="structgvrender__engine__s_1ac38e50e3765c950887fd58e274287fad" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>library_shape</name></member>
+      <member refid="structgvrender__engine__s_1a5d5ee18f1f36df22170763f7a01aec6c" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>polygon</name></member>
+      <member refid="structgvrender__engine__s_1a244395cffd6607eac569ee1f1d4e8896" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>polyline</name></member>
+      <member refid="structgvrender__engine__s_1a52e5ce59d3333f67552b3c37a776b1c6" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>resolve_color</name></member>
+      <member refid="structgvrender__engine__s_1a9195f2083fbd928563284af73a7f6b47" prot="public" virt="non-virtual"><scope>gvrender_engine_s</scope><name>textspan</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

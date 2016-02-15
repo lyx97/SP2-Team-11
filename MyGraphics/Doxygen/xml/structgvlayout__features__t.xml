@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvlayout__features__t" kind="struct" language="C++" prot="public">
+    <compoundname>gvlayout_features_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvlayout__features__t_1a6f77d34f718196164ad0d4f58387d5f0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvlayout_features_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="571" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="571" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5010">
+        <label>gvlayout_features_t</label>
+        <link refid="structgvlayout__features__t"/>
+        <childnode refid="5011" relation="usage">
+          <edgelabel>flags</edgelabel>
+        </childnode>
+      </node>
+      <node id="5011">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="570" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="570" bodyend="572"/>
+    <listofallmembers>
+      <member refid="structgvlayout__features__t_1a6f77d34f718196164ad0d4f58387d5f0" prot="public" virt="non-virtual"><scope>gvlayout_features_t</scope><name>flags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

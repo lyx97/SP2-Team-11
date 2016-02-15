@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structPxy__t" kind="struct" language="C++" prot="public">
+    <compoundname>Pxy_t</compoundname>
+    <includes refid="pathgeom_8h" local="no">pathgeom.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPxy__t_1a8bfdfac06a9c292b12760d41fd8c5b91" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Pxy_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPxy__t_1ab2a1cfb26785cc5b0215371cae157a1e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Pxy_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="27" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5657">
+        <label>double</label>
+      </node>
+      <node id="5656">
+        <label>Pxy_t</label>
+        <link refid="structPxy__t"/>
+        <childnode refid="5657" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/pathgeom.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="26" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structPxy__t_1a8bfdfac06a9c292b12760d41fd8c5b91" prot="public" virt="non-virtual"><scope>Pxy_t</scope><name>x</name></member>
+      <member refid="structPxy__t_1ab2a1cfb26785cc5b0215371cae157a1e" prot="public" virt="non-virtual"><scope>Pxy_t</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

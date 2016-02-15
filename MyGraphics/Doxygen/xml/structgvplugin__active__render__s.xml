@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvplugin__active__render__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvplugin_active_render_s</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvplugin__active__render__s_1a3c5165052e151c71350d11c86d974290" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1aa1b4a9a81e4c8d4e96a557de936fcb44" kindref="member">gvrender_engine_t</ref> *</type>
+        <definition>gvrender_engine_t* gvplugin_active_render_s::engine</definition>
+        <argsstring></argsstring>
+        <name>engine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="138" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__render__s_1ab6419e9e2bd706219693b7cad40c401c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gvplugin_active_render_s::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="139" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__render__s_1aac7cee0b1d42008f8af4d65f8ea9d9e4" prot="public" static="no" mutable="no">
+        <type><ref refid="structgvrender__features__t" kindref="compound">gvrender_features_t</ref> *</type>
+        <definition>gvrender_features_t* gvplugin_active_render_s::features</definition>
+        <argsstring></argsstring>
+        <name>features</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="140" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvplugin__active__render__s_1aa68b3455bdb4d6798b7d490ab6e75fdb" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* gvplugin_active_render_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="141" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5041">
+        <label>void(*)(GVJ_t *job, pointf p, textspan_t *span)</label>
+      </node>
+      <node id="5040">
+        <label>void(*)(GVJ_t *job, char *name, pointf *A, int n, int filled)</label>
+      </node>
+      <node id="5044">
+        <label>void(*)(GVJ_t *job, pointf *A, int n)</label>
+      </node>
+      <node id="5050">
+        <label>void(*)(GVJ_t *job)</label>
+      </node>
+      <node id="5033">
+        <label>gvrender_features_t</label>
+        <link refid="structgvrender__features__t"/>
+        <childnode refid="5034" relation="usage">
+          <edgelabel>knowncolors</edgelabel>
+        </childnode>
+        <childnode refid="5035" relation="usage">
+          <edgelabel>color_type</edgelabel>
+        </childnode>
+        <childnode refid="5036" relation="usage">
+          <edgelabel>default_pad</edgelabel>
+        </childnode>
+        <childnode refid="5037" relation="usage">
+          <edgelabel>sz_knowncolors</edgelabel>
+          <edgelabel>flags</edgelabel>
+        </childnode>
+      </node>
+      <node id="5046">
+        <label>void(*)(GVJ_t *job, pointf *A, int n, int arrow_at_start, int arrow_at_end, int)</label>
+      </node>
+      <node id="5037">
+        <label>int</label>
+      </node>
+      <node id="5036">
+        <label>double</label>
+      </node>
+      <node id="5043">
+        <label>void(*)(GVJ_t *job, char *comment)</label>
+      </node>
+      <node id="5045">
+        <label>void(*)(GVJ_t *job, gvcolor_t *color)</label>
+      </node>
+      <node id="5031">
+        <label>gvplugin_active_render_s</label>
+        <link refid="structgvplugin__active__render__s"/>
+        <childnode refid="5032" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5033" relation="usage">
+          <edgelabel>features</edgelabel>
+        </childnode>
+        <childnode refid="5037" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="5038" relation="usage">
+          <edgelabel>engine</edgelabel>
+        </childnode>
+      </node>
+      <node id="5049">
+        <label>void(*)(GVJ_t *job, pointf *A, int filled)</label>
+      </node>
+      <node id="5038">
+        <label>gvrender_engine_s</label>
+        <link refid="structgvrender__engine__s"/>
+        <childnode refid="5039" relation="usage">
+          <edgelabel>begin_label</edgelabel>
+        </childnode>
+        <childnode refid="5040" relation="usage">
+          <edgelabel>library_shape</edgelabel>
+        </childnode>
+        <childnode refid="5041" relation="usage">
+          <edgelabel>textspan</edgelabel>
+        </childnode>
+        <childnode refid="5042" relation="usage">
+          <edgelabel>begin_anchor</edgelabel>
+        </childnode>
+        <childnode refid="5043" relation="usage">
+          <edgelabel>comment</edgelabel>
+        </childnode>
+        <childnode refid="5044" relation="usage">
+          <edgelabel>polyline</edgelabel>
+        </childnode>
+        <childnode refid="5045" relation="usage">
+          <edgelabel>resolve_color</edgelabel>
+        </childnode>
+        <childnode refid="5046" relation="usage">
+          <edgelabel>beziercurve</edgelabel>
+        </childnode>
+        <childnode refid="5047" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="5048" relation="usage">
+          <edgelabel>begin_layer</edgelabel>
+        </childnode>
+        <childnode refid="5049" relation="usage">
+          <edgelabel>ellipse</edgelabel>
+        </childnode>
+        <childnode refid="5050" relation="usage">
+          <edgelabel>end_edges</edgelabel>
+          <edgelabel>end_cluster</edgelabel>
+          <edgelabel>begin_node</edgelabel>
+          <edgelabel>end_edge</edgelabel>
+          <edgelabel>begin_cluster</edgelabel>
+          <edgelabel>end_label</edgelabel>
+          <edgelabel>end_layer</edgelabel>
+          <edgelabel>end_nodes</edgelabel>
+          <edgelabel>begin_nodes</edgelabel>
+          <edgelabel>begin_job</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="5034">
+        <label>char **</label>
+      </node>
+      <node id="5048">
+        <label>void(*)(GVJ_t *job, char *layername, int layerNum, int numLayers)</label>
+      </node>
+      <node id="5042">
+        <label>void(*)(GVJ_t *job, char *href, char *tooltip, char *target, char *id)</label>
+      </node>
+      <node id="5047">
+        <label>void(*)(GVJ_t *job, pointf *A, int n, int filled)</label>
+      </node>
+      <node id="5032">
+        <label>char</label>
+      </node>
+      <node id="5039">
+        <label>void(*)(GVJ_t *job, label_type type)</label>
+      </node>
+      <node id="5035">
+        <label>color_type_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="137" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="137" bodyend="142"/>
+    <listofallmembers>
+      <member refid="structgvplugin__active__render__s_1a3c5165052e151c71350d11c86d974290" prot="public" virt="non-virtual"><scope>gvplugin_active_render_s</scope><name>engine</name></member>
+      <member refid="structgvplugin__active__render__s_1aac7cee0b1d42008f8af4d65f8ea9d9e4" prot="public" virt="non-virtual"><scope>gvplugin_active_render_s</scope><name>features</name></member>
+      <member refid="structgvplugin__active__render__s_1ab6419e9e2bd706219693b7cad40c401c" prot="public" virt="non-virtual"><scope>gvplugin_active_render_s</scope><name>id</name></member>
+      <member refid="structgvplugin__active__render__s_1aa68b3455bdb4d6798b7d490ab6e75fdb" prot="public" virt="non-virtual"><scope>gvplugin_active_render_s</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

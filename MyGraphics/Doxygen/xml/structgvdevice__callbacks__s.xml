@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structgvdevice__callbacks__s" kind="struct" language="C++" prot="public">
+    <compoundname>gvdevice_callbacks_s</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a666efa3f326b1e343f29b44b6e404991" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::refresh) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>refresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="157" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a67875b5779274bd47bfa969ae14cdae8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::button_press) (GVJ_t *job, int button, pointf pointer)</definition>
+        <argsstring>)(GVJ_t *job, int button, pointf pointer)</argsstring>
+        <name>button_press</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="158" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a5c4edc2c809c59d11fdb23941f4c58ef" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::button_release) (GVJ_t *job, int button, pointf pointer)</definition>
+        <argsstring>)(GVJ_t *job, int button, pointf pointer)</argsstring>
+        <name>button_release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="159" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a71f323fee9a3f7954a41a2b19a0949b3" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::motion) (GVJ_t *job, pointf pointer)</definition>
+        <argsstring>)(GVJ_t *job, pointf pointer)</argsstring>
+        <name>motion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="160" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1ad9fab53f61e7136743a9bbe539fc50fc" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::modify) (GVJ_t *job, const char *name, const char *value)</definition>
+        <argsstring>)(GVJ_t *job, const char *name, const char *value)</argsstring>
+        <name>modify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="161" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a9f864d10405b3a2bfe325556565cd86d" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::del) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>del</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="162" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1adedaef778696635fa3046d7873e41e0b" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::read) (GVJ_t *job, const char *filename, const char *layout)</definition>
+        <argsstring>)(GVJ_t *job, const char *filename, const char *layout)</argsstring>
+        <name>read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="163" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a3c07caefdb67aaa9294d5999af547be5" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::layout) (GVJ_t *job, const char *layout)</definition>
+        <argsstring>)(GVJ_t *job, const char *layout)</argsstring>
+        <name>layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="164" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgvdevice__callbacks__s_1a286fc3cd01f103de1560c69de31ccc62" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* gvdevice_callbacks_s::render) (GVJ_t *job, const char *format, const char *filename)</definition>
+        <argsstring>)(GVJ_t *job, const char *format, const char *filename)</argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="165" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4855">
+        <label>void(*)(GVJ_t *job, const char *layout)</label>
+      </node>
+      <node id="4852">
+        <label>void(*)(GVJ_t *job, pointf pointer)</label>
+      </node>
+      <node id="4856">
+        <label>void(*)(GVJ_t *job)</label>
+      </node>
+      <node id="4850">
+        <label>void(*)(GVJ_t *job, const char *filename, const char *layout)</label>
+      </node>
+      <node id="4853">
+        <label>void(*)(GVJ_t *job, int button, pointf pointer)</label>
+      </node>
+      <node id="4849">
+        <label>gvdevice_callbacks_s</label>
+        <link refid="structgvdevice__callbacks__s"/>
+        <childnode refid="4850" relation="usage">
+          <edgelabel>read</edgelabel>
+        </childnode>
+        <childnode refid="4851" relation="usage">
+          <edgelabel>modify</edgelabel>
+        </childnode>
+        <childnode refid="4852" relation="usage">
+          <edgelabel>motion</edgelabel>
+        </childnode>
+        <childnode refid="4853" relation="usage">
+          <edgelabel>button_release</edgelabel>
+          <edgelabel>button_press</edgelabel>
+        </childnode>
+        <childnode refid="4854" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="4855" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+        <childnode refid="4856" relation="usage">
+          <edgelabel>del</edgelabel>
+          <edgelabel>refresh</edgelabel>
+        </childnode>
+      </node>
+      <node id="4851">
+        <label>void(*)(GVJ_t *job, const char *name, const char *value)</label>
+      </node>
+      <node id="4854">
+        <label>void(*)(GVJ_t *job, const char *format, const char *filename)</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="156" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="156" bodyend="166"/>
+    <listofallmembers>
+      <member refid="structgvdevice__callbacks__s_1a67875b5779274bd47bfa969ae14cdae8" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>button_press</name></member>
+      <member refid="structgvdevice__callbacks__s_1a5c4edc2c809c59d11fdb23941f4c58ef" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>button_release</name></member>
+      <member refid="structgvdevice__callbacks__s_1a9f864d10405b3a2bfe325556565cd86d" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>del</name></member>
+      <member refid="structgvdevice__callbacks__s_1a3c07caefdb67aaa9294d5999af547be5" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>layout</name></member>
+      <member refid="structgvdevice__callbacks__s_1ad9fab53f61e7136743a9bbe539fc50fc" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>modify</name></member>
+      <member refid="structgvdevice__callbacks__s_1a71f323fee9a3f7954a41a2b19a0949b3" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>motion</name></member>
+      <member refid="structgvdevice__callbacks__s_1adedaef778696635fa3046d7873e41e0b" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>read</name></member>
+      <member refid="structgvdevice__callbacks__s_1a666efa3f326b1e343f29b44b6e404991" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>refresh</name></member>
+      <member refid="structgvdevice__callbacks__s_1a286fc3cd01f103de1560c69de31ccc62" prot="public" virt="non-virtual"><scope>gvdevice_callbacks_s</scope><name>render</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

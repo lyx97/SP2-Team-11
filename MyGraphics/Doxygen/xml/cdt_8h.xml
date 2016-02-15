@@ -1,0 +1,1899 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="cdt_8h" kind="file" language="C++">
+    <compoundname>cdt.h</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="cgraph_8h" local="yes">graphviz/release/include/graphviz/cgraph.h</includedby>
+    <includedby refid="graph_8h" local="yes">graphviz/release/include/graphviz/graph.h</includedby>
+    <includedby refid="usershape_8h" local="yes">graphviz/release/include/graphviz/usershape.h</includedby>
+    <incdepgraph>
+      <node id="1862">
+        <label>stddef.h</label>
+      </node>
+      <node id="1863">
+        <label>string.h</label>
+      </node>
+      <node id="1861">
+        <label>graphviz/release/include/graphviz/cdt.h</label>
+        <link refid="cdt.h"/>
+        <childnode refid="1862" relation="include">
+        </childnode>
+        <childnode refid="1863" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1866">
+        <label>graphviz/release/include/graphviz/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1867" relation="include">
+        </childnode>
+        <childnode refid="1868" relation="include">
+        </childnode>
+        <childnode refid="1869" relation="include">
+        </childnode>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1871" relation="include">
+        </childnode>
+        <childnode refid="1872" relation="include">
+        </childnode>
+        <childnode refid="1873" relation="include">
+        </childnode>
+      </node>
+      <node id="1867">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="1870">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1865">
+        <label>graphviz/release/include/graphviz/cgraph.h</label>
+        <link refid="cgraph_8h"/>
+        <childnode refid="1866" relation="include">
+        </childnode>
+        <childnode refid="1874" relation="include">
+        </childnode>
+      </node>
+      <node id="1868">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1871">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1875">
+        <label>graphviz/release/include/graphviz/graph.h</label>
+        <link refid="graph_8h"/>
+      </node>
+      <node id="1869">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1872">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="1874">
+        <label>graphviz/release/include/graphviz/gvpr.h</label>
+        <link refid="gvpr_8h"/>
+      </node>
+      <node id="1864">
+        <label>graphviz/release/include/graphviz/cdt.h</label>
+        <link refid="cdt.h"/>
+        <childnode refid="1865" relation="include">
+        </childnode>
+        <childnode refid="1875" relation="include">
+        </childnode>
+        <childnode refid="1876" relation="include">
+        </childnode>
+      </node>
+      <node id="1876">
+        <label>graphviz/release/include/graphviz/usershape.h</label>
+        <link refid="usershape_8h"/>
+        <childnode refid="1866" relation="include">
+        </childnode>
+      </node>
+      <node id="1873">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct__dtlink__s" prot="public">_dtlink_s</innerclass>
+    <innerclass refid="struct__dthold__s" prot="public">_dthold_s</innerclass>
+    <innerclass refid="struct__dtmethod__s" prot="public">_dtmethod_s</innerclass>
+    <innerclass refid="struct__dtdata__s" prot="public">_dtdata_s</innerclass>
+    <innerclass refid="struct__dtdisc__s" prot="public">_dtdisc_s</innerclass>
+    <innerclass refid="struct__dt__s" prot="public">_dt_s</innerclass>
+    <innerclass refid="struct__dtstat__s" prot="public">_dtstat_s</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cdt_8h_1a15ac0da44b92ccaf93b7087cb6cf641e" prot="public" static="no">
+        <name>CDT_VERSION</name>
+        <initializer>20050420L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="9" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" prot="public" static="no">
+        <name>Void_t</name>
+        <initializer>void</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="12" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" prot="public" static="no">
+        <name>_ARG_</name>
+        <param><defname>x</defname></param>
+        <initializer>x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="16" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" prot="public" static="no">
+        <name>_BEGIN_EXTERNS_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="23" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a70eb038015c5bd9afc53b761c2dbc9ab" prot="public" static="no">
+        <name>_END_EXTERNS_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="26" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a36cb002735d7dd5c5a0f8de7fe523452" prot="public" static="no">
+        <name>__EXTERN__</name>
+        <param><defname>T</defname></param>
+        <param><defname>obj</defname></param>
+        <initializer><ref refid="gvc_8h_1a2a624a765564411c0db3a2bee940f8bc" kindref="member">extern</ref> T obj</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="39" column="10" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a97dcaa931aa2b4194c99928eb4389ae0" prot="public" static="no">
+        <name>__DEFINE__</name>
+        <param><defname>T</defname></param>
+        <param><defname>obj</defname></param>
+        <param><defname>val</defname></param>
+        <initializer>T obj = val</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="40" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a6a39e47e9f0d4e0176bf675d7f2b0788" prot="public" static="no">
+        <name>DTDISC</name>
+        <param><defname>dc</defname></param>
+        <param><defname>ky</defname></param>
+        <param><defname>sz</defname></param>
+        <param><defname>lk</defname></param>
+        <param><defname>mkf</defname></param>
+        <param><defname>frf</defname></param>
+        <param><defname>cmpf</defname></param>
+        <param><defname>hshf</defname></param>
+        <param><defname>memf</defname></param>
+        <param><defname>evf</defname></param>
+        <initializer>( (dc)-&gt;key = (ky), (dc)-&gt;size = (sz), (dc)-&gt;link = (lk), \
+	  (dc)-&gt;makef = (mkf), (dc)-&gt;freef = (frf), \
+	  (dc)-&gt;comparf = (cmpf), (dc)-&gt;hashf = (hshf), \
+	  (dc)-&gt;memoryf = (memf), (dc)-&gt;eventf = (evf) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="107" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a1f67c6121a2af66e80d58d6210562f59" prot="public" static="no">
+        <name>DTOFFSET</name>
+        <param><defname>struct_s</defname></param>
+        <param><defname>member</defname></param>
+        <initializer>((int)(&amp;((struct_s*)0)-&gt;member))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="116" column="10" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1af4e9d5cbf75e9cf59d826d3968553ba1" prot="public" static="no">
+        <name>DT_FOUND</name>
+        <initializer>0100000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="143" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a257bbc9fe9828352a627cd1894030fbb" prot="public" static="no">
+        <name>DT_SET</name>
+        <initializer>0000001	/* set with unique elements		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="146" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1af174c3990360a8642fff6c014a2e677c" prot="public" static="no">
+        <name>DT_BAG</name>
+        <initializer>0000002	/* multiset				*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="147" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ab540f5d778fb80e2f825295c8ddf3ba7" prot="public" static="no">
+        <name>DT_OSET</name>
+        <initializer>0000004	/* ordered set (self-adjusting tree)	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="148" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a1acc2651207891a7c4d5f525aef60bc8" prot="public" static="no">
+        <name>DT_OBAG</name>
+        <initializer>0000010	/* ordered multiset			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="149" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aaed92dcddfae3a64d398f18212423f1b" prot="public" static="no">
+        <name>DT_LIST</name>
+        <initializer>0000020	/* linked list				*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="150" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aee4d7ae559cc7402896e8064fc19f6d2" prot="public" static="no">
+        <name>DT_STACK</name>
+        <initializer>0000040	/* stack: insert/delete at top		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="151" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aeff201475fec084c1ba0cfb5ef4458ea" prot="public" static="no">
+        <name>DT_QUEUE</name>
+        <initializer>0000100	/* queue: insert at top, delete at tail	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="152" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a6679e3d0db9e54c089f6c0ec3d0107ce" prot="public" static="no">
+        <name>DT_DEQUE</name>
+        <initializer>0000200 /* deque: insert at top, append at tail	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="153" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ab2ed93cb7ebee29498a079e553945b57" prot="public" static="no">
+        <name>DT_METHODS</name>
+        <initializer>0000377	/* all currently supported methods	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="154" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aa79b4bf6e2bb0ecebbf64e6ef6da9d7e" prot="public" static="no">
+        <name>DT_SAMECMP</name>
+        <initializer>0000001	/* compare methods equivalent		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="157" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ae7eb06a88514b98d348d10b46d3fcd3b" prot="public" static="no">
+        <name>DT_SAMEHASH</name>
+        <initializer>0000002	/* hash methods equivalent		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="158" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a8f9920c0fee0b9f50e0a3b23abd3fd26" prot="public" static="no">
+        <name>DT_INSERT</name>
+        <initializer>0000001	/* insert object if not found		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="161" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a645de2061b32735724c54c87fd5406a2" prot="public" static="no">
+        <name>DT_DELETE</name>
+        <initializer>0000002	/* delete object if found		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="162" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a47e5c8e948e61a82e17cb2a4bdb6caa2" prot="public" static="no">
+        <name>DT_SEARCH</name>
+        <initializer>0000004	/* look for an object			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="163" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a24fcda2658f9defe5bdb1984860d6240" prot="public" static="no">
+        <name>DT_NEXT</name>
+        <initializer>0000010	/* look for next element		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="164" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a1bea70faf05bae1b0a7548ea96e1d511" prot="public" static="no">
+        <name>DT_PREV</name>
+        <initializer>0000020	/* find previous element		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="165" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a9f480f0a639e6cbdfc740e489f034433" prot="public" static="no">
+        <name>DT_RENEW</name>
+        <initializer>0000040	/* renewing an object			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="166" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a7001f50d84e9fedcf3f838636af4e62c" prot="public" static="no">
+        <name>DT_CLEAR</name>
+        <initializer>0000100	/* clearing all objects			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="167" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1af046cba51c33a3931219518d4d1fcf99" prot="public" static="no">
+        <name>DT_FIRST</name>
+        <initializer>0000200	/* get first object			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="168" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a192bea83114b73344ba3e9aab4c796e3" prot="public" static="no">
+        <name>DT_LAST</name>
+        <initializer>0000400	/* get last object			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="169" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a01aca514b0b658320c893611601af6fa" prot="public" static="no">
+        <name>DT_MATCH</name>
+        <initializer>0001000	/* find object matching key		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="170" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a4fa66c08b3e8b07466485051fa8c328e" prot="public" static="no">
+        <name>DT_VSEARCH</name>
+        <initializer>0002000	/* search using internal representation	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="171" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aff852c2da33e1acb66d8632dcc03f115" prot="public" static="no">
+        <name>DT_ATTACH</name>
+        <initializer>0004000	/* attach an object to the dictionary	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="172" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a93e662669aa505475549609079d64592" prot="public" static="no">
+        <name>DT_DETACH</name>
+        <initializer>0010000	/* detach an object from the dictionary	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="173" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a5318be11b47485ea6a6dbacabccc1ed8" prot="public" static="no">
+        <name>DT_APPEND</name>
+        <initializer>0020000	/* used on <ref refid="cdt_8h_1ab7f083974d9e14f94af1fbc6211de018" kindref="member">Dtlist</ref> to append an object	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="174" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a6a939c5c13317e2ae53cfbb65ff20e34" prot="public" static="no">
+        <name>DT_OPEN</name>
+        <initializer>1	/* a dictionary is being opened		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="177" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1acb3dcfafd60ca5177416665dc7acb814" prot="public" static="no">
+        <name>DT_CLOSE</name>
+        <initializer>2	/* a dictionary is being closed		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="178" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a4aad1223d07f93c924e533362eded7ba" prot="public" static="no">
+        <name>DT_DISC</name>
+        <initializer>3	/* discipline is about to be changed	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="179" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a18eee91ec32bbcd762723153b019433c" prot="public" static="no">
+        <name>DT_METH</name>
+        <initializer>4	/* method is about to be changed	*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="180" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a4771f4fcf03652d3643686b6f09d05b9" prot="public" static="no">
+        <name>DT_ENDOPEN</name>
+        <initializer>5	/* dtopen() is done			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="181" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a908b36b4d2364bc7402b104d38e4500d" prot="public" static="no">
+        <name>DT_ENDCLOSE</name>
+        <initializer>6	/* dtclose() is done			*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="182" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a37a056e25a770178eae11c9fc8d8c691" prot="public" static="no">
+        <name>DT_HASHSIZE</name>
+        <initializer>7	/* setting hash table size		*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="183" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" prot="public" static="no">
+        <name>_DT</name>
+        <param><defname>dt</defname></param>
+        <initializer>((<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref>*)(dt))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="253" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a0c558c127c5b56704889617c71bcdf09" prot="public" static="no">
+        <name>_DTDSC</name>
+        <param><defname>dc</defname></param>
+        <param><defname>ky</defname></param>
+        <param><defname>sz</defname></param>
+        <param><defname>lk</defname></param>
+        <param><defname>cmpf</defname></param>
+        <initializer>(ky = dc-&gt;key, sz = dc-&gt;size, lk = dc-&gt;link, cmpf = dc-&gt;comparf)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="254" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a2366c9db1803f36d06e9e255fdbc6514" prot="public" static="no">
+        <name>_DTLNK</name>
+        <param><defname>o</defname></param>
+        <param><defname>lk</defname></param>
+        <initializer>((<ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref>*)((char*)(o) + lk) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="256" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1acd1eb06f8072a9014ff132c253884d10" prot="public" static="no">
+        <name>_DTOBJ</name>
+        <param><defname>e</defname></param>
+        <param><defname>lk</defname></param>
+        <initializer>(lk &lt; 0 ? ((<ref refid="cdt_8h_1a0a38fb0e224c2c78db09e185ff3b4a7a" kindref="member">Dthold_t</ref>*)(e))-&gt;obj : (<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)((char*)(e) - lk) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="257" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a08a47e323cf4fdbd6f9d7bf0855ce5bf" prot="public" static="no">
+        <name>_DTKEY</name>
+        <param><defname>o</defname></param>
+        <param><defname>ky</defname></param>
+        <param><defname>sz</defname></param>
+        <initializer>(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(sz &lt; 0 ? *((char**)((char*)(o)+ky)) : ((char*)(o)+ky))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="258" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aa2e5cfe64189864a47a660f0f31593b2" prot="public" static="no">
+        <name>_DTCMP</name>
+        <param><defname>dt</defname></param>
+        <param><defname>k1</defname></param>
+        <param><defname>k2</defname></param>
+        <param><defname>dc</defname></param>
+        <param><defname>cmpf</defname></param>
+        <param><defname>sz</defname></param>
+        <initializer>(cmpf ? (*cmpf)(dt,k1,k2,dc) : \
+			 (sz &lt;= 0 ? strcmp(k1,k2) : memcmp(k1,k2,sz)) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="260" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a35a1dfdc28ec4891539111e4de93bfb1" prot="public" static="no">
+        <name>_DTHSH</name>
+        <param><defname>dt</defname></param>
+        <param><defname>ky</defname></param>
+        <param><defname>dc</defname></param>
+        <param><defname>sz</defname></param>
+        <initializer>(dc-&gt;hashf ? (*dc-&gt;hashf)(dt,ky,dc) : dtstrhash(0,ky,sz) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="263" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a7e7851435e9042ecb13b347f4d64a402" prot="public" static="no">
+        <name>_DTMTCH</name>
+        <param><defname>dt</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>action</defname></param>
+        <initializer>do { <ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref>* _e; <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *_o, *_k, *_key; <ref refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" kindref="member">Dtdisc_t</ref>* _dc; \
+	     int _ky, _sz, _lk, _cmp; Dtcompar_f _cmpf; \
+	     _dc = (dt)-&gt;disc; <ref refid="cdt_8h_1a0c558c127c5b56704889617c71bcdf09" kindref="member">_DTDSC</ref>(_dc, _ky, _sz, _lk, _cmpf); \
+	     _key = (key); \
+	     for(_e = (dt)-&gt;data-&gt;here; _e; _e = _cmp &lt; 0 ? _e-&gt;hl._left : _e-&gt;right) \
+	     {	_o = <ref refid="cdt_8h_1acd1eb06f8072a9014ff132c253884d10" kindref="member">_DTOBJ</ref>(_e, _lk); _k = <ref refid="cdt_8h_1a08a47e323cf4fdbd6f9d7bf0855ce5bf" kindref="member">_DTKEY</ref>(_o, _ky, _sz); \
+		if((_cmp = <ref refid="cdt_8h_1aa2e5cfe64189864a47a660f0f31593b2" kindref="member">_DTCMP</ref>((dt), _key, _k, _dc, _cmpf, _sz)) == 0) \
+			break; \
+	     } \
+	     action (_e ? _o : (<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)0); \
+	} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="266" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a4b5b2cafd1acf7189a2e307117741dcc" prot="public" static="no">
+        <name>_DTSRCH</name>
+        <param><defname>dt</defname></param>
+        <param><defname>obj</defname></param>
+        <param><defname>action</defname></param>
+        <initializer>do { <ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref>* _e; <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *_o, *_k, *_key; <ref refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" kindref="member">Dtdisc_t</ref>* _dc; \
+	     int _ky, _sz, _lk, _cmp; Dtcompar_f _cmpf; \
+	     _dc = (dt)-&gt;disc; <ref refid="cdt_8h_1a0c558c127c5b56704889617c71bcdf09" kindref="member">_DTDSC</ref>(_dc, _ky, _sz, _lk, _cmpf); \
+	     _key = <ref refid="cdt_8h_1a08a47e323cf4fdbd6f9d7bf0855ce5bf" kindref="member">_DTKEY</ref>(obj, _ky, _sz); \
+	     for(_e = (dt)-&gt;data-&gt;here; _e; _e = _cmp &lt; 0 ? _e-&gt;hl._left : _e-&gt;right) \
+	     {	_o = <ref refid="cdt_8h_1acd1eb06f8072a9014ff132c253884d10" kindref="member">_DTOBJ</ref>(_e, _lk); _k = <ref refid="cdt_8h_1a08a47e323cf4fdbd6f9d7bf0855ce5bf" kindref="member">_DTKEY</ref>(_o, _ky, _sz); \
+		if((_cmp = <ref refid="cdt_8h_1aa2e5cfe64189864a47a660f0f31593b2" kindref="member">_DTCMP</ref>((dt), _key, _k, _dc, _cmpf, _sz)) == 0) \
+			break; \
+	     } \
+	     action (_e ? _o : (<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)0); \
+	} while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="279" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a3587d42c1f424edcf781b8f31d5b76f0" prot="public" static="no">
+        <name>DTTREEMATCH</name>
+        <param><defname>dt</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>action</defname></param>
+        <initializer><ref refid="cdt_8h_1a7e7851435e9042ecb13b347f4d64a402" kindref="member">_DTMTCH</ref>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(dt),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(key),action)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="292" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ab06e611cfb2cbd31399c80384d7171e4" prot="public" static="no">
+        <name>DTTREESEARCH</name>
+        <param><defname>dt</defname></param>
+        <param><defname>obj</defname></param>
+        <param><defname>action</defname></param>
+        <initializer><ref refid="cdt_8h_1a4b5b2cafd1acf7189a2e307117741dcc" kindref="member">_DTSRCH</ref>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(dt),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(obj),action)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="293" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1adaf27822db39a7300f8fb6f2f589d88b" prot="public" static="no">
+        <name>dtvnext</name>
+        <param><defname>d</defname></param>
+        <initializer>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;view)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="295" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1afbce63ae3c853163834ab17019b0abb1" prot="public" static="no">
+        <name>dtvcount</name>
+        <param><defname>d</defname></param>
+        <initializer>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;nview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="296" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a934e3765f51128a1b89a0aea68a7cdf4" prot="public" static="no">
+        <name>dtvhere</name>
+        <param><defname>d</defname></param>
+        <initializer>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;walk)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="297" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a79be8633be14ddf98d3b356e0d40564d" prot="public" static="no">
+        <name>dtlink</name>
+        <param><defname>d</defname></param>
+        <param><defname>e</defname></param>
+        <initializer>(((<ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref>*)(e))-&gt;right)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="299" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a4717180611823cdf0c057abe1a45315a" prot="public" static="no">
+        <name>dtobj</name>
+        <param><defname>d</defname></param>
+        <param><defname>e</defname></param>
+        <initializer><ref refid="cdt_8h_1acd1eb06f8072a9014ff132c253884d10" kindref="member">_DTOBJ</ref>((e), <ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;disc-&gt;link)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="300" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a820a52522c7b2de0619a793965d7d881" prot="public" static="no">
+        <name>dtfinger</name>
+        <param><defname>d</defname></param>
+        <initializer>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;data-&gt;here ? <ref refid="cdt_8h_1a4717180611823cdf0c057abe1a45315a" kindref="member">dtobj</ref>((d),<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;data-&gt;here):(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="301" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1af954ac773cdfecad7ec5ac45e9a63a23" prot="public" static="no">
+        <name>dtfirst</name>
+        <param><defname>d</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(0),<ref refid="cdt_8h_1af046cba51c33a3931219518d4d1fcf99" kindref="member">DT_FIRST</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="303" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1af6ea20c91403c1ef595681fc6b6ac30f" prot="public" static="no">
+        <name>dtnext</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a24fcda2658f9defe5bdb1984860d6240" kindref="member">DT_NEXT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="304" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1adc4c557fe7983acf4c3916ab0d547f72" prot="public" static="no">
+        <name>dtleast</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a47e5c8e948e61a82e17cb2a4bdb6caa2" kindref="member">DT_SEARCH</ref>|<ref refid="cdt_8h_1a24fcda2658f9defe5bdb1984860d6240" kindref="member">DT_NEXT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="305" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aba7b1b643434cc61b1692a1875c6029b" prot="public" static="no">
+        <name>dtlast</name>
+        <param><defname>d</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(0),<ref refid="cdt_8h_1a192bea83114b73344ba3e9aab4c796e3" kindref="member">DT_LAST</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="306" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aa6a97d9b70597ac2a34565f956ae3703" prot="public" static="no">
+        <name>dtprev</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a1bea70faf05bae1b0a7548ea96e1d511" kindref="member">DT_PREV</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="307" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ac7ff1c375df31729ab1092362f24572e" prot="public" static="no">
+        <name>dtmost</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a47e5c8e948e61a82e17cb2a4bdb6caa2" kindref="member">DT_SEARCH</ref>|<ref refid="cdt_8h_1a1bea70faf05bae1b0a7548ea96e1d511" kindref="member">DT_PREV</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="308" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a62014aa3c3853e006d7115b1dbfb81c9" prot="public" static="no">
+        <name>dtsearch</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a47e5c8e948e61a82e17cb2a4bdb6caa2" kindref="member">DT_SEARCH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="309" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a4dff83f53eb9464965da060528b4cae8" prot="public" static="no">
+        <name>dtmatch</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a01aca514b0b658320c893611601af6fa" kindref="member">DT_MATCH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="310" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a8ac18f2bf845640bd563a1545d2e3675" prot="public" static="no">
+        <name>dtinsert</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a8f9920c0fee0b9f50e0a3b23abd3fd26" kindref="member">DT_INSERT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="311" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a0e8b1acb7c062aa97fbb2312af20ae7e" prot="public" static="no">
+        <name>dtappend</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a8f9920c0fee0b9f50e0a3b23abd3fd26" kindref="member">DT_INSERT</ref>|<ref refid="cdt_8h_1a5318be11b47485ea6a6dbacabccc1ed8" kindref="member">DT_APPEND</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="312" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1ad351bb07a26ff918184f200ee1d655cc" prot="public" static="no">
+        <name>dtdelete</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a645de2061b32735724c54c87fd5406a2" kindref="member">DT_DELETE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="313" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1abaee56ec6a8a93fbd6134c402bfe15d1" prot="public" static="no">
+        <name>dtattach</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1aff852c2da33e1acb66d8632dcc03f115" kindref="member">DT_ATTACH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="314" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a6590446c25a135161df8945b8633b42a" prot="public" static="no">
+        <name>dtdetach</name>
+        <param><defname>d</defname></param>
+        <param><defname>o</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(o),<ref refid="cdt_8h_1a93e662669aa505475549609079d64592" kindref="member">DT_DETACH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="315" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a5cc1e11802758b8c71f085d463393ef0" prot="public" static="no">
+        <name>dtclear</name>
+        <param><defname>d</defname></param>
+        <initializer>(*(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;searchf))((d),(<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*)(0),<ref refid="cdt_8h_1a7001f50d84e9fedcf3f838636af4e62c" kindref="member">DT_CLEAR</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="316" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aa4a6629bb284f906ac0c9cf7f9108ac3" prot="public" static="no">
+        <name>dtfound</name>
+        <param><defname>d</defname></param>
+        <initializer>(<ref refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" kindref="member">_DT</ref>(d)-&gt;type &amp; <ref refid="cdt_8h_1af4e9d5cbf75e9cf59d826d3968553ba1" kindref="member">DT_FOUND</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="317" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1a49c375f27033b223eb7c3c911efd2ecd" prot="public" static="no">
+        <name>DT_PRIME</name>
+        <initializer>17109811 /* 2#00000001 00000101 00010011 00110011 */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="319" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cdt_8h_1aca8d07f23a11d05f32b6f0691c8a8446" prot="public" static="no">
+        <name>dtcharhash</name>
+        <param><defname>h</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>(((unsigned int)(h) + (unsigned int)(c)) * <ref refid="cdt_8h_1a49c375f27033b223eb7c3c911efd2ecd" kindref="member">DT_PRIME</ref> )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="320" column="9" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="cdt_8h_1a1346eabee70476232f305f8e876d7fab" prot="public" static="no">
+        <type>struct <ref refid="struct__dtlink__s" kindref="compound">_dtlink_s</ref></type>
+        <definition>typedef struct _dtlink_s Dtlink_t</definition>
+        <argsstring></argsstring>
+        <name>Dtlink_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1a0a38fb0e224c2c78db09e185ff3b4a7a" prot="public" static="no">
+        <type>struct <ref refid="struct__dthold__s" kindref="compound">_dthold_s</ref></type>
+        <definition>typedef struct _dthold_s Dthold_t</definition>
+        <argsstring></argsstring>
+        <name>Dthold_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" prot="public" static="no">
+        <type>struct <ref refid="struct__dtdisc__s" kindref="compound">_dtdisc_s</ref></type>
+        <definition>typedef struct _dtdisc_s Dtdisc_t</definition>
+        <argsstring></argsstring>
+        <name>Dtdisc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" prot="public" static="no">
+        <type>struct <ref refid="struct__dtmethod__s" kindref="compound">_dtmethod_s</ref></type>
+        <definition>typedef struct _dtmethod_s Dtmethod_t</definition>
+        <argsstring></argsstring>
+        <name>Dtmethod_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1aebf7c2e3f7b071f05ce6a9ff4701c5ee" prot="public" static="no">
+        <type>struct <ref refid="struct__dtdata__s" kindref="compound">_dtdata_s</ref></type>
+        <definition>typedef struct _dtdata_s Dtdata_t</definition>
+        <argsstring></argsstring>
+        <name>Dtdata_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" prot="public" static="no">
+        <type>struct <ref refid="struct__dt__s" kindref="compound">_dt_s</ref></type>
+        <definition>typedef struct _dt_s Dt_t</definition>
+        <argsstring></argsstring>
+        <name>Dt_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1ac0967b1ac6289e719be57de7797cbc56" prot="public" static="no">
+        <type>struct <ref refid="struct__dt__s" kindref="compound">_dt_s</ref></type>
+        <definition>typedef struct _dt_s Dict_t</definition>
+        <argsstring></argsstring>
+        <name>Dict_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1afd8d4c3d43959a81a02899cb6b3463e6" prot="public" static="no">
+        <type>struct <ref refid="struct__dtstat__s" kindref="compound">_dtstat_s</ref></type>
+        <definition>typedef struct _dtstat_s Dtstat_t</definition>
+        <argsstring></argsstring>
+        <name>Dtstat_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="31" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="cdt_8h_1ac20192b527e28fb19a0f5c4e35f8eb77" prot="public" static="no">
+        <type><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *Dtmemory_f</type>
+        <definition>int dtsize _ARG_</definition>
+        <argsstring>((Dt_t *, Void_t *, size_t, Dtdisc_t *))</argsstring>
+        <name>_ARG_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="51" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cdt_8h_1ad4efd81c5021fc1dfe374ec19cbf2532" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" kindref="member">_BEGIN_EXTERNS_</ref> <ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>_BEGIN_EXTERNS_ Dtmethod_t* Dtset</definition>
+        <argsstring></argsstring>
+        <name>Dtset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a37f5327c3048716f516b098b5ba60909" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtbag</definition>
+        <argsstring></argsstring>
+        <name>Dtbag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="194" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a7e69aaac929348c10a10e1ff5c0bacf7" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtoset</definition>
+        <argsstring></argsstring>
+        <name>Dtoset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1af399a676da6ae2102e351cf90a8685d5" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtobag</definition>
+        <argsstring></argsstring>
+        <name>Dtobag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1ab7f083974d9e14f94af1fbc6211de018" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtlist</definition>
+        <argsstring></argsstring>
+        <name>Dtlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a1b7403a602a610ad82102aeae2ef6fba" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtstack</definition>
+        <argsstring></argsstring>
+        <name>Dtstack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="198" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a31510147f5fc7159bdb26a1bdb7f2282" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtqueue</definition>
+        <argsstring></argsstring>
+        <name>Dtqueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="199" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a44c94004c9f6c8febf6e896be5153e30" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtdeque</definition>
+        <argsstring></argsstring>
+        <name>Dtdeque</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="200" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a9566d37ee1dabda894ec2afe406b08e2" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dtorder</definition>
+        <argsstring></argsstring>
+        <name>Dtorder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a0a46e31f08371f8e97a373eeba58cb9a" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dttree</definition>
+        <argsstring></argsstring>
+        <name>Dttree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1acfd0b50b7ab9a848cad260fcd2d12085" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* Dthash</definition>
+        <argsstring></argsstring>
+        <name>Dthash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a722eb5309bd31b3a612549d5d8ac7d4d" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref></type>
+        <definition>Dtmethod_t _Dttree</definition>
+        <argsstring></argsstring>
+        <name>_Dttree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a00d1c3c29b8a62f060063d0b1036a7e8" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref></type>
+        <definition>Dtmethod_t _Dthash</definition>
+        <argsstring></argsstring>
+        <name>_Dthash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a3bcfed8fad77fc7bcbb40f7bbca85f7d" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref></type>
+        <definition>Dtmethod_t _Dtlist</definition>
+        <argsstring></argsstring>
+        <name>_Dtlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1a707abbfb581a0504dc5a4a9ed74fc337" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref></type>
+        <definition>Dtmethod_t _Dtqueue</definition>
+        <argsstring></argsstring>
+        <name>_Dtqueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="cdt_8h_1ae6ea2ee05f5a73811820bea6b3626902" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref></type>
+        <definition>Dtmethod_t _Dtstack</definition>
+        <argsstring></argsstring>
+        <name>_Dtstack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="211" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cdt_8h_1aa8d6b98a75334b38b60e7c32e3a55364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cdt_8h_1a70eb038015c5bd9afc53b761c2dbc9ab" kindref="member">_END_EXTERNS_</ref> <ref refid="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" kindref="member">_BEGIN_EXTERNS_</ref> <ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *dtopen</type>
+        <definition>_END_EXTERNS_ _BEGIN_EXTERNS_ Dt_t* dtopen _ARG_</definition>
+        <argsstring>((Dtdisc_t *, Dtmethod_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" kindref="member">Dtdisc_t</ref> *, <ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="222" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1abf87b6d0045653e2984c346bcfb03c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int dtclose</type>
+        <definition>int dtclose _ARG_</definition>
+        <argsstring>((Dt_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1af256b911dc140baa441dbd168b30380e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *dtview</type>
+        <definition>Dt_t* dtview _ARG_</definition>
+        <argsstring>((Dt_t *, Dt_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, <ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1a8fe0f99a7c2ecbb6a62b5140e928113a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" kindref="member">Dtdisc_t</ref> *dtdisc</type>
+        <definition>Dtdisc_t* dtdisc _ARG_</definition>
+        <argsstring>((Dt_t *dt, Dtdisc_t *, int))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *dt, <ref refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" kindref="member">Dtdisc_t</ref> *, int)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="225" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1a89d052521f0e8da83f1e9e10b9edc829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *dtmethod</type>
+        <definition>Dtmethod_t* dtmethod _ARG_</definition>
+        <argsstring>((Dt_t *, Dtmethod_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, <ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="226" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1a91b94fb3f414a468e4ad22f5f814d46b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int dtrestore</type>
+        <definition>int dtrestore _ARG_</definition>
+        <argsstring>((Dt_t *, Dtlink_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, <ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="230" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1a98f092d010ccac890bb5fe8f84222c7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int dttreeset</type>
+        <definition>int dttreeset _ARG_</definition>
+        <argsstring>((Dt_t *, int, int))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, int, int)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1aa3fb7521fb2f9afbbea022ac2391bcaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int dtwalk</type>
+        <definition>int dtwalk _ARG_</definition>
+        <argsstring>((Dt_t *, int(*)(Dt_t *, Void_t *, Void_t *), Void_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, int(*)(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *, <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *), <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1a483281a6d5e5e1d9c855cb1603275ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *dtrenew</type>
+        <definition>Void_t* dtrenew _ARG_</definition>
+        <argsstring>((Dt_t *, Void_t *))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="236" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1ac67429664a463e2f37a11d2336de29bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int dtstat</type>
+        <definition>int dtstat _ARG_</definition>
+        <argsstring>((Dt_t *, Dtstat_t *, int))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(<ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *, <ref refid="cdt_8h_1afd8d4c3d43959a81a02899cb6b3463e6" kindref="member">Dtstat_t</ref> *, int)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="239" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cdt_8h_1ab2b0b0c7cf010303b49e08cf4cc45247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int dtstrhash</type>
+        <definition>unsigned int dtstrhash _ARG_</definition>
+        <argsstring>((unsigned int, Void_t *, int))</argsstring>
+        <name>_ARG_</name>
+        <param>
+          <type>(unsigned int, <ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *, int)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="240" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_CDT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CDT_H<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>Public<sp/>interface<sp/>for<sp/>the<sp/>dictionary<sp/>library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Written<sp/>by<sp/>Kiem-Phong<sp/>Vo</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="cdt_8h_1a15ac0da44b92ccaf93b7087cb6cf641e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CDT_VERSION<sp/><sp/><sp/><sp/><sp/>20050420L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Void_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Void_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ARG_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ARG_(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_BEGIN_EXTERNS_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BEGIN_EXTERNS_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_END_EXTERNS_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="cdt_8h_1a70eb038015c5bd9afc53b761c2dbc9ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_END_EXTERNS_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EXPORT__<sp/><sp/>__declspec<sp/>(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__IMPORT__<sp/><sp/><sp/><sp/><sp/><sp/>__declspec<sp/>(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!_DLL_BLD<sp/>&amp;&amp;<sp/>_dll_import</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EXTERN__(T,obj)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>T<sp/>obj;<sp/>T*<sp/>_imp__<sp/>##<sp/>obj<sp/>=<sp/>&amp;obj</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DEFINE__(T,obj,val)<sp/><sp/><sp/>T<sp/>obj<sp/>=<sp/>val;<sp/>T*<sp/>_imp__<sp/>##<sp/>obj<sp/>=<sp/>&amp;obj</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="cdt_8h_1a36cb002735d7dd5c5a0f8de7fe523452" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__EXTERN__(T,obj)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>extern<sp/>T<sp/>obj</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="cdt_8h_1a97dcaa931aa2b4194c99928eb4389ae0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DEFINE__(T,obj,val)<sp/><sp/><sp/>T<sp/>obj<sp/>=<sp/>val</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtlink__s" kindref="compound">_dtlink_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>;</highlight></codeline>
+<codeline lineno="44" refid="cdt_8h_1a0a38fb0e224c2c78db09e185ff3b4a7a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dthold__s" kindref="compound">_dthold_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dthold__s" kindref="compound">Dthold_t</ref>;</highlight></codeline>
+<codeline lineno="45" refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtdisc__s" kindref="compound">_dtdisc_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>;</highlight></codeline>
+<codeline lineno="46" refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtmethod__s" kindref="compound">_dtmethod_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>;</highlight></codeline>
+<codeline lineno="47" refid="cdt_8h_1aebf7c2e3f7b071f05ce6a9ff4701c5ee" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtdata__s" kindref="compound">_dtdata_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s" kindref="compound">Dtdata_t</ref>;</highlight></codeline>
+<codeline lineno="48" refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dt__s" kindref="compound">_dt_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dt_t</ref>;</highlight></codeline>
+<codeline lineno="49" refid="cdt_8h_1ac0967b1ac6289e719be57de7797cbc56" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dt__s" kindref="compound">_dt_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dict_t</ref>;<sp/></highlight><highlight class="comment">/*<sp/>for<sp/>libdict<sp/>compatibility<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="cdt_8h_1afd8d4c3d43959a81a02899cb6b3463e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtstat__s" kindref="compound">_dtstat_s</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtstat__s" kindref="compound">Dtstat_t</ref>;</highlight></codeline>
+<codeline lineno="51" refid="cdt_8h_1ac20192b527e28fb19a0f5c4e35f8eb77" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dtmemory_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">,<ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dtsearch_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dtmake_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,<ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dtfree_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,<ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">typedef<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dtcompar_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((Dt_t*,Void_t*,Void_t*,Dtdisc_t*));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">typedef<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dthash_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((Dt_t*,Void_t*,Dtdisc_t*));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">typedef<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*Dtevent_f)<ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((Dt_t*,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,Void_t*,Dtdisc_t*));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="struct__dtlink__s" refkind="compound"><highlight class="normal">struct<sp/><ref refid="struct__dtlink__s" kindref="compound">_dtlink_s</ref></highlight></codeline>
+<codeline lineno="60" refid="struct__dtlink__s_1aac8d7353a842d224c7208640c636b335" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s_1aac8d7353a842d224c7208640c636b335" kindref="member">right</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>right<sp/>child<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="struct__dtlink__s_1a336ddccc3fed053166ea09e6847a0812" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="struct__dtlink__s_1a336ddccc3fed053166ea09e6847a0812" kindref="member">_hash</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>hash<sp/>value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="struct__dtlink__s_1aa159da20576fe861b3303823d6e8e7f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*<sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s_1aa159da20576fe861b3303823d6e8e7f6" kindref="member">_left</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>left<sp/>child<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>hl;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>private<sp/>structure<sp/>to<sp/>hold<sp/>an<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="struct__dthold__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dthold__s" kindref="compound">_dthold_s</ref></highlight></codeline>
+<codeline lineno="69" refid="struct__dthold__s_1a7ad1b3aefcb4c0930783c39da15f3da3" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dthold__s_1a7ad1b3aefcb4c0930783c39da15f3da3" kindref="member">hdr</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>header<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="struct__dthold__s_1a7d7b1e1a2521bf9c4b10374bafec08db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dthold__s_1a7d7b1e1a2521bf9c4b10374bafec08db" kindref="member">obj</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>user<sp/>object<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>method<sp/>to<sp/>manipulate<sp/>dictionary<sp/>structure<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="struct__dtmethod__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtmethod__s" kindref="compound">_dtmethod_s</ref><sp/></highlight></codeline>
+<codeline lineno="75" refid="struct__dtmethod__s_1a4e4c9583a7075e46b4a7d82a7e439d34" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtsearch_f<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtmethod__s_1a4e4c9583a7075e46b4a7d82a7e439d34" kindref="member">searchf</ref>;<sp/></highlight><highlight class="comment">/*<sp/>search<sp/>function<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="struct__dtmethod__s_1a1341f1db39b9e430a09902e08d831a41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtmethod__s_1a1341f1db39b9e430a09902e08d831a41" kindref="member">type</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>type<sp/>of<sp/>operation<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>stuff<sp/>that<sp/>may<sp/>be<sp/>in<sp/>shared<sp/>memory<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="struct__dtdata__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtdata__s" kindref="compound">_dtdata_s</ref></highlight></codeline>
+<codeline lineno="81" refid="struct__dtdata__s_1a8863adf3f0b7466425fb9673cb9765aa" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1a8863adf3f0b7466425fb9673cb9765aa" kindref="member">type</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>type<sp/>of<sp/>dictionary<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="struct__dtdata__s_1a7bbbae2b5f766648135230713faaf752" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1a7bbbae2b5f766648135230713faaf752" kindref="member">here</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>finger<sp/>to<sp/>last<sp/>search<sp/>element<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="struct__dtdata__s_1ab661cdbcfdaf36270c85d16f2907d666" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>**<sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1ab661cdbcfdaf36270c85d16f2907d666" kindref="member">_htab</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>hash<sp/>table<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="struct__dtdata__s_1a614fcec7c2f841dc36351134df0707d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*<sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1a614fcec7c2f841dc36351134df0707d3" kindref="member">_head</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>linked<sp/>list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct__dtdata__s_1ade8c0c04bc337f0f401e11994b44360e" kindref="member">hh</ref>;</highlight></codeline>
+<codeline lineno="87" refid="struct__dtdata__s_1a006b5d574af777b5b4413cf4f30d31e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1a006b5d574af777b5b4413cf4f30d31e2" kindref="member">ntab</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>hash<sp/>slots<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="struct__dtdata__s_1aadfeba4434a3a99cda6e2a480f8da5aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1aadfeba4434a3a99cda6e2a480f8da5aa" kindref="member">size</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>objects<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="struct__dtdata__s_1a80639a12a69bca3c97746336962adbbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1a80639a12a69bca3c97746336962adbbb" kindref="member">loop</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>nested<sp/>loops<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="struct__dtdata__s_1aeca1af6a736b2c03fa7e247663218e58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s_1aeca1af6a736b2c03fa7e247663218e58" kindref="member">minp</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>min<sp/>path<sp/>before<sp/>splay,<sp/>always<sp/>even<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>hash<sp/>dt,<sp/>&gt;<sp/>0:<sp/>fixed<sp/>table<sp/>size<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>structure<sp/>to<sp/>hold<sp/>methods<sp/>that<sp/>manipulate<sp/>an<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="struct__dtdisc__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtdisc__s" kindref="compound">_dtdisc_s</ref></highlight></codeline>
+<codeline lineno="96" refid="struct__dtdisc__s_1ac51fb2ae5cce2f12e1a868a817bb3b87" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1ac51fb2ae5cce2f12e1a868a817bb3b87" kindref="member">key</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>where<sp/>the<sp/>key<sp/>begins<sp/>in<sp/>an<sp/>object<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="struct__dtdisc__s_1abd4388b917527c950d3e2159a29406e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1abd4388b917527c950d3e2159a29406e8" kindref="member">size</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>key<sp/>size<sp/>and<sp/>type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="struct__dtdisc__s_1acd31b53d4df17c5ef4838c935a9e55a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1acd31b53d4df17c5ef4838c935a9e55a7" kindref="member">link</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>offset<sp/>to<sp/>Dtlink_t<sp/>field<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="struct__dtdisc__s_1a3d291948ea2e6a4a4946c04fc9d13647" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtmake_f<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1a3d291948ea2e6a4a4946c04fc9d13647" kindref="member">makef</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>object<sp/>constructor<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="struct__dtdisc__s_1a33561846a811903d66ccc93cfc3c93f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtfree_f<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1a33561846a811903d66ccc93cfc3c93f7" kindref="member">freef</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>object<sp/>destructor<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="struct__dtdisc__s_1ae48c4e104a101df70fca5184bde96e91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtcompar_f<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1ae48c4e104a101df70fca5184bde96e91" kindref="member">comparf</ref>;</highlight><highlight class="comment">/*<sp/>to<sp/>compare<sp/>two<sp/>objects<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="struct__dtdisc__s_1a532f5af05024b4a4ff0516a3e60282f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dthash_f<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1a532f5af05024b4a4ff0516a3e60282f6" kindref="member">hashf</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>to<sp/>compute<sp/>hash<sp/>value<sp/>of<sp/>an<sp/>object<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="struct__dtdisc__s_1aef683a57ca621583c7a87212243825e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtmemory_f<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1aef683a57ca621583c7a87212243825e7" kindref="member">memoryf</ref>;</highlight><highlight class="comment">/*<sp/>to<sp/>allocate/free<sp/>memory<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="struct__dtdisc__s_1a1ed98dfe76104428815d3ce1514b7d2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtevent_f<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s_1a1ed98dfe76104428815d3ce1514b7d2c" kindref="member">eventf</ref>;<sp/></highlight><highlight class="comment">/*<sp/>to<sp/>process<sp/>events<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="cdt_8h_1a6a39e47e9f0d4e0176bf675d7f2b0788" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DTDISC(dc,ky,sz,lk,mkf,frf,cmpf,hshf,memf,evf)<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/>(dc)-&gt;key<sp/>=<sp/>(ky),<sp/>(dc)-&gt;size<sp/>=<sp/>(sz),<sp/>(dc)-&gt;link<sp/>=<sp/>(lk),<sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dc)-&gt;makef<sp/>=<sp/>(mkf),<sp/>(dc)-&gt;freef<sp/>=<sp/>(frf),<sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dc)-&gt;comparf<sp/>=<sp/>(cmpf),<sp/>(dc)-&gt;hashf<sp/>=<sp/>(hshf),<sp/>\</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(dc)-&gt;memoryf<sp/>=<sp/>(memf),<sp/>(dc)-&gt;eventf<sp/>=<sp/>(evf)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>offsetof</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DTOFFSET(struct_s,<sp/>member)<sp/><sp/><sp/><sp/><sp/><sp/>offsetof(struct_s,<sp/>member)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="cdt_8h_1a1f67c6121a2af66e80d58d6210562f59" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DTOFFSET(struct_s,<sp/>member)<sp/><sp/><sp/><sp/><sp/><sp/>((int)(&amp;((struct_s*)0)-&gt;member))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>the<sp/>dictionary<sp/>structure<sp/>itself<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="struct__dt__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dt__s" kindref="compound">_dt_s</ref></highlight></codeline>
+<codeline lineno="121" refid="struct__dt__s_1a3c02032f5160f30aa99ff21bb10b4d39" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtsearch_f<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a3c02032f5160f30aa99ff21bb10b4d39" kindref="member">searchf</ref>;</highlight><highlight class="comment">/*<sp/>search<sp/>function<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="struct__dt__s_1aad6bb1723ac19b670250686918c1a26a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1aad6bb1723ac19b670250686918c1a26a" kindref="member">disc</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>method<sp/>to<sp/>manipulate<sp/>objs<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="struct__dt__s_1aab8f40c305fabb6fa535071ab6048403" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtdata__s" kindref="compound">Dtdata_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1aab8f40c305fabb6fa535071ab6048403" kindref="member">data</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sharable<sp/>data<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="struct__dt__s_1a11bb56474dafa0ebabbbea78bbfd3260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dtmemory_f<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a11bb56474dafa0ebabbbea78bbfd3260" kindref="member">memoryf</ref>;</highlight><highlight class="comment">/*<sp/>function<sp/>to<sp/>alloc/free<sp/>memory<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="struct__dt__s_1ab7ae90e7d444274f6bf0aa02f8a5f1ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1ab7ae90e7d444274f6bf0aa02f8a5f1ce" kindref="member">meth</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dictionary<sp/>method<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="struct__dt__s_1a02ac8517c8eb70cb73aafff9c36d231c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a02ac8517c8eb70cb73aafff9c36d231c" kindref="member">type</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>type<sp/>information<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="struct__dt__s_1a970265c088872a3ee46fdb259777405f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a970265c088872a3ee46fdb259777405f" kindref="member">nview</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>parent<sp/>view<sp/>dictionaries<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="struct__dt__s_1a6bda875af8e9f14cdc191d8de2186b71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a6bda875af8e9f14cdc191d8de2186b71" kindref="member">view</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>next<sp/>on<sp/>viewpath<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="struct__dt__s_1a80379e874cc0211c4421cef5c89cea86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a80379e874cc0211c4421cef5c89cea86" kindref="member">walk</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dictionary<sp/>being<sp/>walked<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="struct__dt__s_1a9d8a1e4481743da4e265918e15c3b7b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dt__s_1a9d8a1e4481743da4e265918e15c3b7b5" kindref="member">user</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>user&apos;s<sp/>usage<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>structure<sp/>to<sp/>get<sp/>status<sp/>of<sp/>a<sp/>dictionary<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="struct__dtstat__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__dtstat__s" kindref="compound">_dtstat_s</ref></highlight></codeline>
+<codeline lineno="135" refid="struct__dtstat__s_1ad2675c65d63ad8862bf0223af6c3f607" refkind="member"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtstat__s_1ad2675c65d63ad8862bf0223af6c3f607" kindref="member">dt_meth</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>method<sp/>type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="struct__dtstat__s_1a8d415172c2830301b7ffe3de8432e38a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtstat__s_1a8d415172c2830301b7ffe3de8432e38a" kindref="member">dt_size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>elements<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="struct__dtstat__s_1ad0d0ad85068a655586960c5042671235" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtstat__s_1ad0d0ad85068a655586960c5042671235" kindref="member">dt_n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>chains<sp/>or<sp/>levels<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="struct__dtstat__s_1a631bed0e141494d863a643ed124baa37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtstat__s_1a631bed0e141494d863a643ed124baa37" kindref="member">dt_max</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>max<sp/>size<sp/>of<sp/>a<sp/>chain<sp/>or<sp/>a<sp/>level<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="struct__dtstat__s_1af6fa7b863a78050c63c30e29b2054f05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><ref refid="struct__dtstat__s_1af6fa7b863a78050c63c30e29b2054f05" kindref="member">dt_count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>counts<sp/>of<sp/>chains<sp/>or<sp/>levels<sp/>by<sp/>size<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>flag<sp/>set<sp/>if<sp/>the<sp/>last<sp/>search<sp/>operation<sp/>actually<sp/>found<sp/>the<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="cdt_8h_1af4e9d5cbf75e9cf59d826d3968553ba1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_FOUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0100000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>supported<sp/>storage<sp/>methods<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="cdt_8h_1a257bbc9fe9828352a627cd1894030fbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_SET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000001<sp/></highlight><highlight class="comment">/*<sp/>set<sp/>with<sp/>unique<sp/>elements<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="cdt_8h_1af174c3990360a8642fff6c014a2e677c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_BAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000002<sp/></highlight><highlight class="comment">/*<sp/>multiset<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="cdt_8h_1ab540f5d778fb80e2f825295c8ddf3ba7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_OSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000004<sp/></highlight><highlight class="comment">/*<sp/>ordered<sp/>set<sp/>(self-adjusting<sp/>tree)<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="cdt_8h_1a1acc2651207891a7c4d5f525aef60bc8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_OBAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000010<sp/></highlight><highlight class="comment">/*<sp/>ordered<sp/>multiset<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="cdt_8h_1aaed92dcddfae3a64d398f18212423f1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_LIST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000020<sp/></highlight><highlight class="comment">/*<sp/>linked<sp/>list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="cdt_8h_1aee4d7ae559cc7402896e8064fc19f6d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_STACK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000040<sp/></highlight><highlight class="comment">/*<sp/>stack:<sp/>insert/delete<sp/>at<sp/>top<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="cdt_8h_1aeff201475fec084c1ba0cfb5ef4458ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_QUEUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000100<sp/></highlight><highlight class="comment">/*<sp/>queue:<sp/>insert<sp/>at<sp/>top,<sp/>delete<sp/>at<sp/>tail<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="cdt_8h_1a6679e3d0db9e54c089f6c0ec3d0107ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_DEQUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000200<sp/></highlight><highlight class="comment">/*<sp/>deque:<sp/>insert<sp/>at<sp/>top,<sp/>append<sp/>at<sp/>tail<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="cdt_8h_1ab2ed93cb7ebee29498a079e553945b57" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_METHODS<sp/><sp/><sp/><sp/><sp/><sp/>0000377<sp/></highlight><highlight class="comment">/*<sp/>all<sp/>currently<sp/>supported<sp/>methods<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>asserts<sp/>to<sp/>dtdisc()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="cdt_8h_1aa79b4bf6e2bb0ecebbf64e6ef6da9d7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_SAMECMP<sp/><sp/><sp/><sp/><sp/><sp/>0000001<sp/></highlight><highlight class="comment">/*<sp/>compare<sp/>methods<sp/>equivalent<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="cdt_8h_1ae7eb06a88514b98d348d10b46d3fcd3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_SAMEHASH<sp/><sp/><sp/><sp/><sp/>0000002<sp/></highlight><highlight class="comment">/*<sp/>hash<sp/>methods<sp/>equivalent<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>types<sp/>of<sp/>search<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="cdt_8h_1a8f9920c0fee0b9f50e0a3b23abd3fd26" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_INSERT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000001<sp/></highlight><highlight class="comment">/*<sp/>insert<sp/>object<sp/>if<sp/>not<sp/>found<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="cdt_8h_1a645de2061b32735724c54c87fd5406a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_DELETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000002<sp/></highlight><highlight class="comment">/*<sp/>delete<sp/>object<sp/>if<sp/>found<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="cdt_8h_1a47e5c8e948e61a82e17cb2a4bdb6caa2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_SEARCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000004<sp/></highlight><highlight class="comment">/*<sp/>look<sp/>for<sp/>an<sp/>object<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="cdt_8h_1a24fcda2658f9defe5bdb1984860d6240" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_NEXT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000010<sp/></highlight><highlight class="comment">/*<sp/>look<sp/>for<sp/>next<sp/>element<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="cdt_8h_1a1bea70faf05bae1b0a7548ea96e1d511" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_PREV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000020<sp/></highlight><highlight class="comment">/*<sp/>find<sp/>previous<sp/>element<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="cdt_8h_1a9f480f0a639e6cbdfc740e489f034433" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_RENEW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000040<sp/></highlight><highlight class="comment">/*<sp/>renewing<sp/>an<sp/>object<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="cdt_8h_1a7001f50d84e9fedcf3f838636af4e62c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_CLEAR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000100<sp/></highlight><highlight class="comment">/*<sp/>clearing<sp/>all<sp/>objects<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="cdt_8h_1af046cba51c33a3931219518d4d1fcf99" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_FIRST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000200<sp/></highlight><highlight class="comment">/*<sp/>get<sp/>first<sp/>object<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="cdt_8h_1a192bea83114b73344ba3e9aab4c796e3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_LAST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0000400<sp/></highlight><highlight class="comment">/*<sp/>get<sp/>last<sp/>object<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="cdt_8h_1a01aca514b0b658320c893611601af6fa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_MATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0001000<sp/></highlight><highlight class="comment">/*<sp/>find<sp/>object<sp/>matching<sp/>key<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="cdt_8h_1a4fa66c08b3e8b07466485051fa8c328e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_VSEARCH<sp/><sp/><sp/><sp/><sp/><sp/>0002000<sp/></highlight><highlight class="comment">/*<sp/>search<sp/>using<sp/>internal<sp/>representation<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="cdt_8h_1aff852c2da33e1acb66d8632dcc03f115" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_ATTACH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0004000<sp/></highlight><highlight class="comment">/*<sp/>attach<sp/>an<sp/>object<sp/>to<sp/>the<sp/>dictionary<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="cdt_8h_1a93e662669aa505475549609079d64592" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_DETACH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0010000<sp/></highlight><highlight class="comment">/*<sp/>detach<sp/>an<sp/>object<sp/>from<sp/>the<sp/>dictionary<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="cdt_8h_1a5318be11b47485ea6a6dbacabccc1ed8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_APPEND<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0020000<sp/></highlight><highlight class="comment">/*<sp/>used<sp/>on<sp/>Dtlist<sp/>to<sp/>append<sp/>an<sp/>object<sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="cdt_8h_1a6a939c5c13317e2ae53cfbb65ff20e34" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_OPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>a<sp/>dictionary<sp/>is<sp/>being<sp/>opened<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="cdt_8h_1acb3dcfafd60ca5177416665dc7acb814" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_CLOSE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>a<sp/>dictionary<sp/>is<sp/>being<sp/>closed<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="cdt_8h_1a4aad1223d07f93c924e533362eded7ba" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_DISC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>discipline<sp/>is<sp/>about<sp/>to<sp/>be<sp/>changed<sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="cdt_8h_1a18eee91ec32bbcd762723153b019433c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_METH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>method<sp/>is<sp/>about<sp/>to<sp/>be<sp/>changed<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="cdt_8h_1a4771f4fcf03652d3643686b6f09d05b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_ENDOPEN<sp/><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dtopen()<sp/>is<sp/>done<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="cdt_8h_1a908b36b4d2364bc7402b104d38e4500d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_ENDCLOSE<sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dtclose()<sp/>is<sp/>done<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="cdt_8h_1a37a056e25a770178eae11c9fc8d8c691" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_HASHSIZE<sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>setting<sp/>hash<sp/>table<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" kindref="member">_BEGIN_EXTERNS_</ref><sp/></highlight><highlight class="comment">/*<sp/>public<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_BLD_cdt<sp/>&amp;&amp;<sp/>defined(__EXPORT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/><sp/>__EXPORT__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!_BLD_cdt<sp/>&amp;&amp;<sp/>defined(__IMPORT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/><sp/>__IMPORT__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1ad4efd81c5021fc1dfe374ec19cbf2532" kindref="member">Dtset</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a37f5327c3048716f516b098b5ba60909" kindref="member">Dtbag</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a7e69aaac929348c10a10e1ff5c0bacf7" kindref="member">Dtoset</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1af399a676da6ae2102e351cf90a8685d5" kindref="member">Dtobag</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1ab7f083974d9e14f94af1fbc6211de018" kindref="member">Dtlist</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a1b7403a602a610ad82102aeae2ef6fba" kindref="member">Dtstack</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a31510147f5fc7159bdb26a1bdb7f2282" kindref="member">Dtqueue</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a44c94004c9f6c8febf6e896be5153e30" kindref="member">Dtdeque</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>compatibility<sp/>stuff;<sp/>will<sp/>go<sp/>away<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>KPVDEL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a9566d37ee1dabda894ec2afe406b08e2" kindref="member">Dtorder</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a0a46e31f08371f8e97a373eeba58cb9a" kindref="member">Dttree</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1acfd0b50b7ab9a848cad260fcd2d12085" kindref="member">Dthash</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a722eb5309bd31b3a612549d5d8ac7d4d" kindref="member">_Dttree</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a00d1c3c29b8a62f060063d0b1036a7e8" kindref="member">_Dthash</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a3bcfed8fad77fc7bcbb40f7bbca85f7d" kindref="member">_Dtlist</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1a707abbfb581a0504dc5a4a9ed74fc337" kindref="member">_Dtqueue</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cdt_8h_1ae6ea2ee05f5a73811820bea6b3626902" kindref="member">_Dtstack</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="cdt_8h_1a70eb038015c5bd9afc53b761c2dbc9ab" kindref="member">_END_EXTERNS_</ref></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><ref refid="cdt_8h_1a900b45532ea7b291ea64d78e33afb82f" kindref="member">_BEGIN_EXTERNS_</ref><sp/></highlight><highlight class="comment">/*<sp/>public<sp/>functions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_BLD_cdt<sp/>&amp;&amp;<sp/>defined(__EXPORT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>extern<sp/><sp/>__EXPORT__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtopen<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*,<sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*));</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtclose<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtview<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/><ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*));</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtdisc<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*<sp/>dt,<sp/><ref refid="struct__dtdisc__s" kindref="compound">Dtdisc_t</ref>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/>dtmethod<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/><ref refid="struct__dtmethod__s" kindref="compound">Dtmethod_t</ref>*));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtflatten<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*));</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtextract<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*));</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtrestore<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref>*));</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dttreeset<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtwalk<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">(*)(<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,<ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*),<sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*));</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtrenew<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*));</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtsize<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*));</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dtstat<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((<ref refid="struct__dt__s" kindref="compound">Dt_t</ref>*,<sp/><ref refid="struct__dtstat__s" kindref="compound">Dtstat_t</ref>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>dtstrhash<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!_PACKAGE_ast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcmp<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref>*,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcmp<sp/><ref refid="cdt_8h_1a0d8afd815281843b5fa935d00d9967d4" kindref="member">_ARG_</ref>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*));</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><ref refid="cdt_8h_1a70eb038015c5bd9afc53b761c2dbc9ab" kindref="member">_END_EXTERNS_</ref></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>internal<sp/>functions<sp/>for<sp/>translating<sp/>among<sp/>holder,<sp/>object<sp/>and<sp/>key<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="cdt_8h_1a71abe7f6cb4cc1c3892cc2e3f7798655" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DT(dt)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Dt_t*)(dt))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="cdt_8h_1a0c558c127c5b56704889617c71bcdf09" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTDSC(dc,ky,sz,lk,cmpf)<sp/>\</highlight></codeline>
+<codeline lineno="255"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ky<sp/>=<sp/>dc-&gt;key,<sp/>sz<sp/>=<sp/>dc-&gt;size,<sp/>lk<sp/>=<sp/>dc-&gt;link,<sp/>cmpf<sp/>=<sp/>dc-&gt;comparf)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="cdt_8h_1a2366c9db1803f36d06e9e255fdbc6514" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTLNK(o,lk)<sp/><sp/><sp/><sp/>((Dtlink_t*)((char*)(o)<sp/>+<sp/>lk)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="cdt_8h_1acd1eb06f8072a9014ff132c253884d10" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTOBJ(e,lk)<sp/><sp/><sp/><sp/>(lk<sp/>&lt;<sp/>0<sp/>?<sp/>((Dthold_t*)(e))-&gt;obj<sp/>:<sp/>(Void_t*)((char*)(e)<sp/>-<sp/>lk)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="cdt_8h_1a08a47e323cf4fdbd6f9d7bf0855ce5bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTKEY(o,ky,sz)<sp/>(Void_t*)(sz<sp/>&lt;<sp/>0<sp/>?<sp/>*((char**)((char*)(o)+ky))<sp/>:<sp/>((char*)(o)+ky))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="cdt_8h_1aa2e5cfe64189864a47a660f0f31593b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTCMP(dt,k1,k2,dc,cmpf,sz)<sp/>\</highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(cmpf<sp/>?<sp/>(*cmpf)(dt,k1,k2,dc)<sp/>:<sp/>\</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(sz<sp/>&lt;=<sp/>0<sp/>?<sp/>strcmp(k1,k2)<sp/>:<sp/>memcmp(k1,k2,sz))<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="cdt_8h_1a35a1dfdc28ec4891539111e4de93bfb1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTHSH(dt,ky,dc,sz)<sp/>(dc-&gt;hashf<sp/>?<sp/>(*dc-&gt;hashf)(dt,ky,dc)<sp/>:<sp/>dtstrhash(0,ky,sz)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>special<sp/>search<sp/>function<sp/>for<sp/>tree<sp/>structure<sp/>only<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="cdt_8h_1a7e7851435e9042ecb13b347f4d64a402" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTMTCH(dt,key,action)<sp/>\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>Dtlink_t*<sp/>_e;<sp/>Void_t<sp/>*_o,<sp/>*_k,<sp/>*_key;<sp/>Dtdisc_t*<sp/>_dc;<sp/>\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>_ky,<sp/>_sz,<sp/>_lk,<sp/>_cmp;<sp/>Dtcompar_f<sp/>_cmpf;<sp/>\</highlight></codeline>
+<codeline lineno="269"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_dc<sp/>=<sp/>(dt)-&gt;disc;<sp/>_DTDSC(_dc,<sp/>_ky,<sp/>_sz,<sp/>_lk,<sp/>_cmpf);<sp/>\</highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>(key);<sp/>\</highlight></codeline>
+<codeline lineno="271"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(_e<sp/>=<sp/>(dt)-&gt;data-&gt;here;<sp/>_e;<sp/>_e<sp/>=<sp/>_cmp<sp/>&lt;<sp/>0<sp/>?<sp/>_e-&gt;hl._left<sp/>:<sp/>_e-&gt;right)<sp/>\</highlight></codeline>
+<codeline lineno="272"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>_o<sp/>=<sp/>_DTOBJ(_e,<sp/>_lk);<sp/>_k<sp/>=<sp/>_DTKEY(_o,<sp/>_ky,<sp/>_sz);<sp/>\</highlight></codeline>
+<codeline lineno="273"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if((_cmp<sp/>=<sp/>_DTCMP((dt),<sp/>_key,<sp/>_k,<sp/>_dc,<sp/>_cmpf,<sp/>_sz))<sp/>==<sp/>0)<sp/>\</highlight></codeline>
+<codeline lineno="274"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/>\</highlight></codeline>
+<codeline lineno="275"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action<sp/>(_e<sp/>?<sp/>_o<sp/>:<sp/>(Void_t*)0);<sp/>\</highlight></codeline>
+<codeline lineno="277"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="cdt_8h_1a4b5b2cafd1acf7189a2e307117741dcc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DTSRCH(dt,obj,action)<sp/>\</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>Dtlink_t*<sp/>_e;<sp/>Void_t<sp/>*_o,<sp/>*_k,<sp/>*_key;<sp/>Dtdisc_t*<sp/>_dc;<sp/>\</highlight></codeline>
+<codeline lineno="281"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>_ky,<sp/>_sz,<sp/>_lk,<sp/>_cmp;<sp/>Dtcompar_f<sp/>_cmpf;<sp/>\</highlight></codeline>
+<codeline lineno="282"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_dc<sp/>=<sp/>(dt)-&gt;disc;<sp/>_DTDSC(_dc,<sp/>_ky,<sp/>_sz,<sp/>_lk,<sp/>_cmpf);<sp/>\</highlight></codeline>
+<codeline lineno="283"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_key<sp/>=<sp/>_DTKEY(obj,<sp/>_ky,<sp/>_sz);<sp/>\</highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(_e<sp/>=<sp/>(dt)-&gt;data-&gt;here;<sp/>_e;<sp/>_e<sp/>=<sp/>_cmp<sp/>&lt;<sp/>0<sp/>?<sp/>_e-&gt;hl._left<sp/>:<sp/>_e-&gt;right)<sp/>\</highlight></codeline>
+<codeline lineno="285"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>_o<sp/>=<sp/>_DTOBJ(_e,<sp/>_lk);<sp/>_k<sp/>=<sp/>_DTKEY(_o,<sp/>_ky,<sp/>_sz);<sp/>\</highlight></codeline>
+<codeline lineno="286"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if((_cmp<sp/>=<sp/>_DTCMP((dt),<sp/>_key,<sp/>_k,<sp/>_dc,<sp/>_cmpf,<sp/>_sz))<sp/>==<sp/>0)<sp/>\</highlight></codeline>
+<codeline lineno="287"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/>\</highlight></codeline>
+<codeline lineno="288"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="289"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action<sp/>(_e<sp/>?<sp/>_o<sp/>:<sp/>(Void_t*)0);<sp/>\</highlight></codeline>
+<codeline lineno="290"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="cdt_8h_1a3587d42c1f424edcf781b8f31d5b76f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DTTREEMATCH(dt,key,action)<sp/><sp/><sp/><sp/><sp/><sp/>_DTMTCH(_DT(dt),(Void_t*)(key),action)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="cdt_8h_1ab06e611cfb2cbd31399c80384d7171e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DTTREESEARCH(dt,obj,action)<sp/><sp/><sp/><sp/><sp/>_DTSRCH(_DT(dt),(Void_t*)(obj),action)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="cdt_8h_1adaf27822db39a7300f8fb6f2f589d88b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtvnext(d)<sp/><sp/><sp/><sp/><sp/><sp/>(_DT(d)-&gt;view)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="cdt_8h_1afbce63ae3c853163834ab17019b0abb1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtvcount(d)<sp/><sp/><sp/><sp/><sp/>(_DT(d)-&gt;nview)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="cdt_8h_1a934e3765f51128a1b89a0aea68a7cdf4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtvhere(d)<sp/><sp/><sp/><sp/><sp/><sp/>(_DT(d)-&gt;walk)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="cdt_8h_1a79be8633be14ddf98d3b356e0d40564d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtlink(d,e)<sp/><sp/><sp/><sp/><sp/>(((Dtlink_t*)(e))-&gt;right)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="cdt_8h_1a4717180611823cdf0c057abe1a45315a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtobj(d,e)<sp/><sp/><sp/><sp/><sp/><sp/>_DTOBJ((e),<sp/>_DT(d)-&gt;disc-&gt;link)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="cdt_8h_1a820a52522c7b2de0619a793965d7d881" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtfinger(d)<sp/><sp/><sp/><sp/><sp/>(_DT(d)-&gt;data-&gt;here<sp/>?<sp/>dtobj((d),_DT(d)-&gt;data-&gt;here):(Void_t*)(0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="cdt_8h_1af954ac773cdfecad7ec5ac45e9a63a23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtfirst(d)<sp/><sp/><sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(0),DT_FIRST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="cdt_8h_1af6ea20c91403c1ef595681fc6b6ac30f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtnext(d,o)<sp/><sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_NEXT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="cdt_8h_1adc4c557fe7983acf4c3916ab0d547f72" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtleast(d,o)<sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_SEARCH|DT_NEXT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="cdt_8h_1aba7b1b643434cc61b1692a1875c6029b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtlast(d)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(0),DT_LAST)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="cdt_8h_1aa6a97d9b70597ac2a34565f956ae3703" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtprev(d,o)<sp/><sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_PREV)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308" refid="cdt_8h_1ac7ff1c375df31729ab1092362f24572e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtmost(d,o)<sp/><sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_SEARCH|DT_PREV)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="cdt_8h_1a62014aa3c3853e006d7115b1dbfb81c9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtsearch(d,o)<sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_SEARCH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="cdt_8h_1a4dff83f53eb9464965da060528b4cae8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtmatch(d,o)<sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_MATCH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="cdt_8h_1a8ac18f2bf845640bd563a1545d2e3675" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtinsert(d,o)<sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_INSERT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="cdt_8h_1a0e8b1acb7c062aa97fbb2312af20ae7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtappend(d,o)<sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_INSERT|DT_APPEND)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="cdt_8h_1ad351bb07a26ff918184f200ee1d655cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtdelete(d,o)<sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_DELETE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="cdt_8h_1abaee56ec6a8a93fbd6134c402bfe15d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtattach(d,o)<sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_ATTACH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="cdt_8h_1a6590446c25a135161df8945b8633b42a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtdetach(d,o)<sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(o),DT_DETACH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="cdt_8h_1a5cc1e11802758b8c71f085d463393ef0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtclear(d)<sp/><sp/><sp/><sp/><sp/><sp/>(*(_DT(d)-&gt;searchf))((d),(Void_t*)(0),DT_CLEAR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="cdt_8h_1aa4a6629bb284f906ac0c9cf7f9108ac3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtfound(d)<sp/><sp/><sp/><sp/><sp/><sp/>(_DT(d)-&gt;type<sp/>&amp;<sp/>DT_FOUND)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="cdt_8h_1a49c375f27033b223eb7c3c911efd2ecd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DT_PRIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17109811<sp/></highlight><highlight class="comment">/*<sp/>2#00000001<sp/>00000101<sp/>00010011<sp/>00110011<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320" refid="cdt_8h_1aca8d07f23a11d05f32b6f0691c8a8446" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>dtcharhash(h,c)<sp/>(((unsigned<sp/>int)(h)<sp/>+<sp/>(unsigned<sp/>int)(c))<sp/>*<sp/>DT_PRIME<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_CDT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/cdt.h"/>
+  </compounddef>
+</doxygen>

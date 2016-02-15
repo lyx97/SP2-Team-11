@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structtextpara__t" kind="struct" language="C++" prot="public">
+    <compoundname>textpara_t</compoundname>
+    <includes refid="textpara_8h" local="no">textpara.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtextpara__t_1a8a1ee7dce68066c471fd90039c258daa" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* textpara_t::str</definition>
+        <argsstring></argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a51c658956a04b84b06ff23a92b5ec299" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* textpara_t::fontname</definition>
+        <argsstring></argsstring>
+        <name>fontname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="38" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a1457f05562ffa7c912282d5e341db3c6" prot="public" static="no" mutable="no">
+        <type><ref refid="textpara_8h_1abc71166eeaffdc8ea2c927368e58f74f" kindref="member">PostscriptAlias</ref> *</type>
+        <definition>PostscriptAlias* textpara_t::postscript_alias</definition>
+        <argsstring></argsstring>
+        <name>postscript_alias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="39" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a255bb816d69151875641aa19da6abade" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* textpara_t::layout</definition>
+        <argsstring></argsstring>
+        <name>layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="40" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a0f528fe604e6fd11bba9e96f627dd780" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* textpara_t::free_layout) (void *layout)</definition>
+        <argsstring>)(void *layout)</argsstring>
+        <name>free_layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="41" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a87f50c4b4f575f92fd092ac4d1ecc508" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textpara_t::fontsize</definition>
+        <argsstring></argsstring>
+        <name>fontsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a9fc52f18647f8ba530e40edd035cd725" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textpara_t::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a506429f637fb9c68fc502c103f7d9293" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textpara_t::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1abd3165378cca7df9667df88a05f29b4c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textpara_t::yoffset_layout</definition>
+        <argsstring></argsstring>
+        <name>yoffset_layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1a4134e5341d7731fd657f2f03207690c6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double textpara_t::yoffset_centerline</definition>
+        <argsstring></argsstring>
+        <name>yoffset_centerline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtextpara__t_1aa3aa3135878f4bd538955495d6309c2e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char textpara_t::just</definition>
+        <argsstring></argsstring>
+        <name>just</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/textpara.h" line="43" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6006">
+        <label>void *</label>
+      </node>
+      <node id="6004">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="6003" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="6005" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="6001">
+        <label>void(*)(void *layout)</label>
+      </node>
+      <node id="6005">
+        <label>int</label>
+      </node>
+      <node id="6002">
+        <label>double</label>
+      </node>
+      <node id="6000">
+        <label>textpara_t</label>
+        <link refid="structtextpara__t"/>
+        <childnode refid="6001" relation="usage">
+          <edgelabel>free_layout</edgelabel>
+        </childnode>
+        <childnode refid="6002" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>fontsize</edgelabel>
+          <edgelabel>yoffset_layout</edgelabel>
+          <edgelabel>height</edgelabel>
+          <edgelabel>yoffset_centerline</edgelabel>
+        </childnode>
+        <childnode refid="6003" relation="usage">
+          <edgelabel>fontname</edgelabel>
+          <edgelabel>str</edgelabel>
+          <edgelabel>just</edgelabel>
+        </childnode>
+        <childnode refid="6004" relation="usage">
+          <edgelabel>postscript_alias</edgelabel>
+        </childnode>
+        <childnode refid="6006" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+      </node>
+      <node id="6003">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/textpara.h" line="36" column="1" bodyfile="graphviz/release/include/graphviz/textpara.h" bodystart="36" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structtextpara__t_1a51c658956a04b84b06ff23a92b5ec299" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>fontname</name></member>
+      <member refid="structtextpara__t_1a87f50c4b4f575f92fd092ac4d1ecc508" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>fontsize</name></member>
+      <member refid="structtextpara__t_1a0f528fe604e6fd11bba9e96f627dd780" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>free_layout</name></member>
+      <member refid="structtextpara__t_1a506429f637fb9c68fc502c103f7d9293" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>height</name></member>
+      <member refid="structtextpara__t_1aa3aa3135878f4bd538955495d6309c2e" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>just</name></member>
+      <member refid="structtextpara__t_1a255bb816d69151875641aa19da6abade" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>layout</name></member>
+      <member refid="structtextpara__t_1a1457f05562ffa7c912282d5e341db3c6" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>postscript_alias</name></member>
+      <member refid="structtextpara__t_1a8a1ee7dce68066c471fd90039c258daa" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>str</name></member>
+      <member refid="structtextpara__t_1a9fc52f18647f8ba530e40edd035cd725" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>width</name></member>
+      <member refid="structtextpara__t_1a4134e5341d7731fd657f2f03207690c6" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>yoffset_centerline</name></member>
+      <member refid="structtextpara__t_1abd3165378cca7df9667df88a05f29b4c" prot="public" virt="non-virtual"><scope>textpara_t</scope><name>yoffset_layout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="timer_8h" kind="file" language="C++">
+    <compoundname>timer.h</compoundname>
+    <includes local="no">windows.h</includes>
+    <includedby refid="timer_8cpp" local="yes">Common/Source/timer.cpp</includedby>
+    <includedby refid="Application_8h" local="yes">MyGraphics/Source/Application.h</includedby>
+    <incdepgraph>
+      <node id="1769">
+        <label>windows.h</label>
+      </node>
+      <node id="1768">
+        <label>Common/Source/timer.h</label>
+        <link refid="timer.h"/>
+        <childnode refid="1769" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1789">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="1787">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="1788">
+        <label>MyGraphics/Source/SceneText.cpp</label>
+        <link refid="SceneText_8cpp"/>
+      </node>
+      <node id="1784">
+        <label>MyGraphics/Source/SceneLight.cpp</label>
+        <link refid="SceneLight_8cpp"/>
+      </node>
+      <node id="1777">
+        <label>MyGraphics/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="1786">
+        <label>MyGraphics/Source/SceneModel.cpp</label>
+        <link refid="SceneModel_8cpp"/>
+      </node>
+      <node id="1770">
+        <label>Common/Source/timer.h</label>
+        <link refid="timer.h"/>
+        <childnode refid="1771" relation="include">
+        </childnode>
+        <childnode refid="1772" relation="include">
+        </childnode>
+      </node>
+      <node id="1771">
+        <label>Common/Source/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="1772">
+        <label>MyGraphics/Source/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="1773" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1775" relation="include">
+        </childnode>
+        <childnode refid="1776" relation="include">
+        </childnode>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+        <childnode refid="1783" relation="include">
+        </childnode>
+        <childnode refid="1784" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1786" relation="include">
+        </childnode>
+        <childnode refid="1787" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1789" relation="include">
+        </childnode>
+      </node>
+      <node id="1776">
+        <label>MyGraphics/Source/Assignment3.cpp</label>
+        <link refid="Assignment3_8cpp"/>
+      </node>
+      <node id="1783">
+        <label>MyGraphics/Source/Scene4.cpp</label>
+        <link refid="Scene4_8cpp"/>
+      </node>
+      <node id="1775">
+        <label>MyGraphics/Source/Assignment2.cpp</label>
+        <link refid="Assignment2_8cpp"/>
+      </node>
+      <node id="1778">
+        <label>MyGraphics/Source/Camera2.cpp</label>
+        <link refid="Camera2_8cpp"/>
+      </node>
+      <node id="1782">
+        <label>MyGraphics/Source/Scene3.cpp</label>
+        <link refid="Scene3_8cpp"/>
+      </node>
+      <node id="1779">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="1781">
+        <label>MyGraphics/Source/Scene2.cpp</label>
+        <link refid="Scene2_8cpp"/>
+      </node>
+      <node id="1773">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1780">
+        <label>MyGraphics/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1785">
+        <label>MyGraphics/Source/SceneLight2.cpp</label>
+        <link refid="SceneLight2_8cpp"/>
+      </node>
+      <node id="1774">
+        <label>MyGraphics/Source/Assignment1.cpp</label>
+        <link refid="Assignment1_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classStopWatch" prot="public">StopWatch</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_TIMER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_TIMER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classStopWatch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classStopWatch" kindref="compound">StopWatch</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11" refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LARGE_INTEGER<sp/><ref refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" kindref="member">frequency</ref>;</highlight></codeline>
+<codeline lineno="12" refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LARGE_INTEGER<sp/><ref refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" kindref="member">prevTime</ref>,<sp/><ref refid="classStopWatch_1a9ff6d4ddf698ba9cb82bdb0d27af72e8" kindref="member">currTime</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" kindref="member">LIToSecs</ref>(<sp/>LARGE_INTEGER<sp/>&amp;<sp/>L)<sp/>;</highlight></codeline>
+<codeline lineno="14" refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" kindref="member">wTimerRes</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch_1ad715945060eeb23baa3c036ad19b1edb" kindref="member">StopWatch</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch_1a223ec0da71dd0bc4f2b14d1af44bf20a" kindref="member">~StopWatch</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" kindref="member">startTimer</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" kindref="member">getElapsedTime</ref>();<sp/></highlight><highlight class="comment">//<sp/>get<sp/>time<sp/>in<sp/>seconds<sp/>since<sp/>the<sp/>last<sp/>call<sp/>to<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" kindref="member">waitUntil</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>time);<sp/><sp/></highlight><highlight class="comment">//<sp/>wait<sp/>until<sp/>this<sp/>time<sp/>in<sp/>milliseconds<sp/>has<sp/>passed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_TIMER_H</highlight></codeline>
+    </programlisting>
+    <location file="Common/Source/timer.h"/>
+  </compounddef>
+</doxygen>

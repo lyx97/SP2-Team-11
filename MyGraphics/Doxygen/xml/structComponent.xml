@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structComponent" kind="struct" language="C++" prot="public">
+    <compoundname>Component</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="6" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="classSceneLight_1a6756d6babfe6f90fa79fba5ef017e6fd" compoundref="SceneLight_8cpp" startline="132" endline="159">SceneLight::RenderMesh</referencedby>
+        <referencedby refid="classSceneLight2_1ad4101ae481deeb2fff1781d1b7bed804" compoundref="SceneLight2_8cpp" startline="170" endline="197">SceneLight2::RenderMesh</referencedby>
+        <referencedby refid="classSceneTexture_1a46c3ecd12ac84bfd2c29230d64aeb33b" compoundref="SceneTexture_8cpp" startline="156" endline="199">SceneTexture::RenderMesh</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="169" endline="212">SceneSkybox::RenderMesh</referencedby>
+        <referencedby refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" compoundref="SceneModel_8cpp" startline="172" endline="215">SceneModel::RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">SceneText::RenderMesh</referencedby>
+        <referencedby refid="classAss2_1a1dd4908940edea490a9a44b21d9fd9e3" compoundref="Assignment2_8cpp" startline="386" endline="413">Ass2::RenderMesh</referencedby>
+        <referencedby refid="classAss3_1ac16aa9c197e8e1119729f3ab9f0ad74e" compoundref="Assignment3_8cpp" startline="441" endline="484">Ass3::RenderMesh</referencedby>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="6" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="6" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Component::Set</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="7" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="7" bodyend="7"/>
+        <references refid="structComponent_1abd55184abe2aaf269b38f5913721821c" compoundref="Material_8h" startline="6">b</references>
+        <references refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" compoundref="Material_8h" startline="6">g</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">r</references>
+        <referencedby refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" compoundref="Material_8h" startline="8" endline="8">Component</referencedby>
+        <referencedby refid="classSceneLight_1a9efc7124efacb45a7cce730688bf20e9" compoundref="SceneLight_8cpp" startline="19" endline="97">SceneLight::Init</referencedby>
+        <referencedby refid="classSceneLight2_1acf5ae067a5c4e6b1b212711e12bac1fd" compoundref="SceneLight2_8cpp" startline="19" endline="125">SceneLight2::Init</referencedby>
+        <referencedby refid="classAss2_1a978cbbfe000d9cc3582e8b958856e6d0" compoundref="Assignment2_8cpp" startline="19" endline="264">Ass2::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8h" startline="18" endline="24">Material::Material</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Component::Component</definition>
+        <argsstring>(float r=0.1f, float g=0.1f, float b=0.1f)</argsstring>
+        <name>Component</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>0.1f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Material.h" line="8" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="8" bodyend="8"/>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="7" endline="7">Set</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4710">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="4711" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="4711">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Material.h" line="5" column="1" bodyfile="MyGraphics/Source/Material.h" bodystart="4" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" virt="non-virtual"><scope>Component</scope><name>b</name></member>
+      <member refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" virt="non-virtual"><scope>Component</scope><name>Component</name></member>
+      <member refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" virt="non-virtual"><scope>Component</scope><name>g</name></member>
+      <member refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" virt="non-virtual"><scope>Component</scope><name>r</name></member>
+      <member refid="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" virt="non-virtual"><scope>Component</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

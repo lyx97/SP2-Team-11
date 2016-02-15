@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot__image" kind="struct" language="C++" prot="public">
+    <compoundname>xdot_image</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot__image_1accf2f06b525565eb518c0b1b9a8fe7ca" prot="public" static="no" mutable="no">
+        <type><ref refid="structxdot__rect" kindref="compound">xdot_rect</ref></type>
+        <definition>xdot_rect xdot_image::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="85" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__image_1a2a9981b59ce46894de291f2fda090afc" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* xdot_image::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="86" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6083">
+        <label>xdot_image</label>
+        <link refid="structxdot__image"/>
+        <childnode refid="6084" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="6085" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="6085">
+        <label>xdot_rect</label>
+        <link refid="structxdot__rect"/>
+        <childnode refid="6086" relation="usage">
+          <edgelabel>w</edgelabel>
+          <edgelabel>x</edgelabel>
+          <edgelabel>h</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="6086">
+        <label>double</label>
+      </node>
+      <node id="6084">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="84" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="84" bodyend="87"/>
+    <listofallmembers>
+      <member refid="structxdot__image_1a2a9981b59ce46894de291f2fda090afc" prot="public" virt="non-virtual"><scope>xdot_image</scope><name>name</name></member>
+      <member refid="structxdot__image_1accf2f06b525565eb518c0b1b9a8fe7ca" prot="public" virt="non-virtual"><scope>xdot_image</scope><name>pos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

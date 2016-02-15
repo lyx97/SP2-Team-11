@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classScene1" kind="class" language="C++" prot="public">
+    <compoundname>Scene1</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Scene1_8h" local="no">Scene1.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3ac3112d183a3880d87fee1b616dee8538" prot="private">
+          <name>GEO_TRIANGLE_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a3e490422bcebac7cd160a605061ece5c" prot="private">
+          <name>GEO_TRIANGLE_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="9" column="1" bodyfile="MyGraphics/Source/Scene1.h" bodystart="8" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScene1_1a459eeec81a050606ff0648bb453fb183" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene1::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="25" column="1" bodyfile="MyGraphics/Source/Scene1.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classScene1_1a61e1db3a2a15af692807f28293e98eef" compoundref="Scene1_8cpp" startline="135" endline="142">Exit</referencedby>
+        <referencedby refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" compoundref="Scene1_8cpp" startline="15" endline="90">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene1::m_vertexBuffer[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>m_vertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="26" column="1" bodyfile="MyGraphics/Source/Scene1.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classScene1_1a61e1db3a2a15af692807f28293e98eef" compoundref="Scene1_8cpp" startline="135" endline="142">Exit</referencedby>
+        <referencedby refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" compoundref="Scene1_8cpp" startline="15" endline="90">Init</referencedby>
+        <referencedby refid="classScene1_1aa99ede8a76f1d9dac4d491c5337d559e" compoundref="Scene1_8cpp" startline="96" endline="133">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene1::m_colorBuffer[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>m_colorBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="27" column="1" bodyfile="MyGraphics/Source/Scene1.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classScene1_1a61e1db3a2a15af692807f28293e98eef" compoundref="Scene1_8cpp" startline="135" endline="142">Exit</referencedby>
+        <referencedby refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" compoundref="Scene1_8cpp" startline="15" endline="90">Init</referencedby>
+        <referencedby refid="classScene1_1aa99ede8a76f1d9dac4d491c5337d559e" compoundref="Scene1_8cpp" startline="96" endline="133">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene1_1ab2dc2b263a7995c6f0aa0bd77a869289" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene1::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="28" column="1" bodyfile="MyGraphics/Source/Scene1.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classScene1_1a61e1db3a2a15af692807f28293e98eef" compoundref="Scene1_8cpp" startline="135" endline="142">Exit</referencedby>
+        <referencedby refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" compoundref="Scene1_8cpp" startline="15" endline="90">Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScene1_1a1d0255816852a435c1e00a3f15d03775" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene1::Scene1</definition>
+        <argsstring>()</argsstring>
+        <name>Scene1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="16" column="1" bodyfile="MyGraphics/Source/Scene1.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene1_1adbbfe0dfdc08bce0f8342bf631dcdf46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene1::~Scene1</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="17" column="1" bodyfile="MyGraphics/Source/Scene1.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene1::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="19" column="1" bodyfile="MyGraphics/Source/Scene1.cpp" bodystart="15" bodyend="90"/>
+        <references refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3ac3112d183a3880d87fee1b616dee8538" compoundref="Scene1_8h" startline="10">GEO_TRIANGLE_1</references>
+        <references refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a3e490422bcebac7cd160a605061ece5c" compoundref="Scene1_8h" startline="11">GEO_TRIANGLE_2</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" compoundref="Scene1_8h" startline="27">m_colorBuffer</references>
+        <references refid="classScene1_1ab2dc2b263a7995c6f0aa0bd77a869289" compoundref="Scene1_8h" startline="28">m_programID</references>
+        <references refid="classScene1_1a459eeec81a050606ff0648bb453fb183" compoundref="Scene1_8h" startline="25">m_vertexArrayID</references>
+        <references refid="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" compoundref="Scene1_8h" startline="26">m_vertexBuffer</references>
+        <references refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" compoundref="Scene1_8h" startline="12">NUM_GEOMETRY</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene1_1a569fefef6ee64f45979ea39b8f12b2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene1::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="20" column="1" bodyfile="MyGraphics/Source/Scene1.cpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene1_1aa99ede8a76f1d9dac4d491c5337d559e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene1::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="21" column="1" bodyfile="MyGraphics/Source/Scene1.cpp" bodystart="96" bodyend="133"/>
+        <references refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3ac3112d183a3880d87fee1b616dee8538" compoundref="Scene1_8h" startline="10">GEO_TRIANGLE_1</references>
+        <references refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a3e490422bcebac7cd160a605061ece5c" compoundref="Scene1_8h" startline="11">GEO_TRIANGLE_2</references>
+        <references refid="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" compoundref="Scene1_8h" startline="27">m_colorBuffer</references>
+        <references refid="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" compoundref="Scene1_8h" startline="26">m_vertexBuffer</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene1_1a61e1db3a2a15af692807f28293e98eef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene1::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene1.h" line="22" column="1" bodyfile="MyGraphics/Source/Scene1.cpp" bodystart="135" bodyend="142"/>
+        <references refid="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" compoundref="Scene1_8h" startline="27">m_colorBuffer</references>
+        <references refid="classScene1_1ab2dc2b263a7995c6f0aa0bd77a869289" compoundref="Scene1_8h" startline="28">m_programID</references>
+        <references refid="classScene1_1a459eeec81a050606ff0648bb453fb183" compoundref="Scene1_8h" startline="25">m_vertexArrayID</references>
+        <references refid="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" compoundref="Scene1_8h" startline="26">m_vertexBuffer</references>
+        <references refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" compoundref="Scene1_8h" startline="12">NUM_GEOMETRY</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5761">
+        <label>Scene1</label>
+        <link refid="classScene1"/>
+        <childnode refid="5762" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5762">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5763">
+        <label>Scene1</label>
+        <link refid="classScene1"/>
+        <childnode refid="5764" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5765" relation="usage">
+          <edgelabel>m_colorBuffer</edgelabel>
+          <edgelabel>m_vertexBuffer</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5764">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5765">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Scene1.h" line="7" column="1" bodyfile="MyGraphics/Source/Scene1.h" bodystart="6" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classScene1_1a61e1db3a2a15af692807f28293e98eef" prot="public" virt="virtual"><scope>Scene1</scope><name>Exit</name></member>
+      <member refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3ac3112d183a3880d87fee1b616dee8538" prot="private" virt="non-virtual"><scope>Scene1</scope><name>GEO_TRIANGLE_1</name></member>
+      <member refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a3e490422bcebac7cd160a605061ece5c" prot="private" virt="non-virtual"><scope>Scene1</scope><name>GEO_TRIANGLE_2</name></member>
+      <member refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3" prot="private" virt="non-virtual"><scope>Scene1</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classScene1_1a34e29939733a7cfe7ac71cd3110e3eb1" prot="public" virt="virtual"><scope>Scene1</scope><name>Init</name></member>
+      <member refid="classScene1_1a64006323598acbbc2ee30dc7faf9a1f2" prot="private" virt="non-virtual"><scope>Scene1</scope><name>m_colorBuffer</name></member>
+      <member refid="classScene1_1ab2dc2b263a7995c6f0aa0bd77a869289" prot="private" virt="non-virtual"><scope>Scene1</scope><name>m_programID</name></member>
+      <member refid="classScene1_1a459eeec81a050606ff0648bb453fb183" prot="private" virt="non-virtual"><scope>Scene1</scope><name>m_vertexArrayID</name></member>
+      <member refid="classScene1_1ac9ec7d9f2a04d23e99dae752c893d2d8" prot="private" virt="non-virtual"><scope>Scene1</scope><name>m_vertexBuffer</name></member>
+      <member refid="classScene1_1aa9a6ee99c64ea967c6ddc707334c89a3a23dac8c639fcc197cc2ee3e88272e710" prot="private" virt="non-virtual"><scope>Scene1</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classScene1_1aa99ede8a76f1d9dac4d491c5337d559e" prot="public" virt="virtual"><scope>Scene1</scope><name>Render</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene1</scope><name>Scene</name></member>
+      <member refid="classScene1_1a1d0255816852a435c1e00a3f15d03775" prot="public" virt="non-virtual"><scope>Scene1</scope><name>Scene1</name></member>
+      <member refid="classScene1_1a569fefef6ee64f45979ea39b8f12b2b1" prot="public" virt="virtual"><scope>Scene1</scope><name>Update</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene1</scope><name>~Scene</name></member>
+      <member refid="classScene1_1adbbfe0dfdc08bce0f8342bf631dcdf46" prot="public" virt="non-virtual"><scope>Scene1</scope><name>~Scene1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

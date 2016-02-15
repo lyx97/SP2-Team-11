@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgdesc__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agdesc_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgdesc__s_1aad7b02a96be88194a0cf276f4feab454" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::directed</definition>
+        <argsstring></argsstring>
+        <name>directed</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="138" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1a4ffc2f9ef86cbde12240f67a91fd0d22" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::strict</definition>
+        <argsstring></argsstring>
+        <name>strict</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="139" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1a4349db6362aa021c96b397dbaf972ab1" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::no_loop</definition>
+        <argsstring></argsstring>
+        <name>no_loop</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="140" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1a22d8b07b83f80fa6caa3a01e4bce5f56" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::maingraph</definition>
+        <argsstring></argsstring>
+        <name>maingraph</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="141" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1aa6700f4648f3b69741b1fa81ba9f2899" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::flatlock</definition>
+        <argsstring></argsstring>
+        <name>flatlock</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="142" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1a61d6e2c04ac9740f89bcdaec2d2836cb" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::no_write</definition>
+        <argsstring></argsstring>
+        <name>no_write</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="143" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1a0428b81e63abec9a2d63a4cb20a38119" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::has_attrs</definition>
+        <argsstring></argsstring>
+        <name>has_attrs</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="144" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgdesc__s_1a7b98909aeaab188ebb64f1ef4442ff03" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Agdesc_s::has_cmpnd</definition>
+        <argsstring></argsstring>
+        <name>has_cmpnd</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="145" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3468">
+        <label>unsigned</label>
+      </node>
+      <node id="3467">
+        <label>Agdesc_s</label>
+        <link refid="structAgdesc__s"/>
+        <childnode refid="3468" relation="usage">
+          <edgelabel>maingraph</edgelabel>
+          <edgelabel>no_write</edgelabel>
+          <edgelabel>has_attrs</edgelabel>
+          <edgelabel>no_loop</edgelabel>
+          <edgelabel>strict</edgelabel>
+          <edgelabel>directed</edgelabel>
+          <edgelabel>flatlock</edgelabel>
+          <edgelabel>has_cmpnd</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="137" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="137" bodyend="146"/>
+    <listofallmembers>
+      <member refid="structAgdesc__s_1aad7b02a96be88194a0cf276f4feab454" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>directed</name></member>
+      <member refid="structAgdesc__s_1aa6700f4648f3b69741b1fa81ba9f2899" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>flatlock</name></member>
+      <member refid="structAgdesc__s_1a0428b81e63abec9a2d63a4cb20a38119" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>has_attrs</name></member>
+      <member refid="structAgdesc__s_1a7b98909aeaab188ebb64f1ef4442ff03" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>has_cmpnd</name></member>
+      <member refid="structAgdesc__s_1a22d8b07b83f80fa6caa3a01e4bce5f56" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>maingraph</name></member>
+      <member refid="structAgdesc__s_1a4349db6362aa021c96b397dbaf972ab1" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>no_loop</name></member>
+      <member refid="structAgdesc__s_1a61d6e2c04ac9740f89bcdaec2d2836cb" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>no_write</name></member>
+      <member refid="structAgdesc__s_1a4ffc2f9ef86cbde12240f67a91fd0d22" prot="public" virt="non-virtual"><scope>Agdesc_s</scope><name>strict</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

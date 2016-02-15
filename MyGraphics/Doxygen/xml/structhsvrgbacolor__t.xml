@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structhsvrgbacolor__t" kind="struct" language="C++" prot="public">
+    <compoundname>hsvrgbacolor_t</compoundname>
+    <includes refid="color_8h" local="no">color.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1ae86e35caea2c585343419c6122e5cc3d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* hsvrgbacolor_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="24" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1a519f5db8370777b193bcba9d4c69d3a1" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1aa8534788c747f1dc38f2baad8f44a149" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1ab16c706c5e2a729bd9f611cf43d05562" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="25" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1ac2d9e4fa53394ac95f24e642a089d4a3" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1a88638d694c1e1ca6be87c7b8a8dd7777" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1a6e97c507d2837f83468b35d41692893b" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structhsvrgbacolor__t_1a54171dd8a727b6be154f15ff852d3430" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char hsvrgbacolor_t::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5190">
+        <label>hsvrgbacolor_t</label>
+        <link refid="structhsvrgbacolor__t"/>
+        <childnode refid="5191" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>h</edgelabel>
+          <edgelabel>a</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+          <edgelabel>s</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+        <childnode refid="5192" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="5192">
+        <label>char *</label>
+      </node>
+      <node id="5191">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/color.h" line="23" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structhsvrgbacolor__t_1a54171dd8a727b6be154f15ff852d3430" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>a</name></member>
+      <member refid="structhsvrgbacolor__t_1a6e97c507d2837f83468b35d41692893b" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>b</name></member>
+      <member refid="structhsvrgbacolor__t_1a88638d694c1e1ca6be87c7b8a8dd7777" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>g</name></member>
+      <member refid="structhsvrgbacolor__t_1a519f5db8370777b193bcba9d4c69d3a1" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>h</name></member>
+      <member refid="structhsvrgbacolor__t_1ae86e35caea2c585343419c6122e5cc3d" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>name</name></member>
+      <member refid="structhsvrgbacolor__t_1ac2d9e4fa53394ac95f24e642a089d4a3" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>r</name></member>
+      <member refid="structhsvrgbacolor__t_1aa8534788c747f1dc38f2baad8f44a149" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>s</name></member>
+      <member refid="structhsvrgbacolor__t_1ab16c706c5e2a729bd9f611cf43d05562" prot="public" virt="non-virtual"><scope>hsvrgbacolor_t</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

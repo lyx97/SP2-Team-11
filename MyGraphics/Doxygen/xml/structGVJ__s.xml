@@ -1,0 +1,2729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structGVJ__s" kind="struct" language="C++" prot="public">
+    <compoundname>GVJ_s</compoundname>
+    <includes refid="gvcjob_8h" local="no">gvcjob.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGVJ__s_1ab9f701ce9e14e718974579da1324ce93" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref> *</type>
+        <definition>GVC_t* GVJ_s::gvc</definition>
+        <argsstring></argsstring>
+        <name>gvc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="271" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a0f52091bcfcaaaa0fd8e0d10cb4afff0" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcext_8h_1a9a257c86c8fde7d294726bece96315e5" kindref="member">GVJ_t</ref> *</type>
+        <definition>GVJ_t* GVJ_s::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="272" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1afa286d4946319b5194646ed12ede3172" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcext_8h_1a9a257c86c8fde7d294726bece96315e5" kindref="member">GVJ_t</ref> *</type>
+        <definition>GVJ_t* GVJ_s::next_active</definition>
+        <argsstring></argsstring>
+        <name>next_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="273" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a9ab244fc7b03a142509df51b8c15982c" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcommon_8h_1a20b0f60db8c13c492fb877d526057429" kindref="member">GVCOMMON_t</ref> *</type>
+        <definition>GVCOMMON_t* GVJ_s::common</definition>
+        <argsstring></argsstring>
+        <name>common</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="275" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a44ffb5f110d308af695e3a018e2f5a39" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1a02731e816998f46b1511d36eff0260ec" kindref="member">obj_state_t</ref> *</type>
+        <definition>obj_state_t* GVJ_s::obj</definition>
+        <argsstring></argsstring>
+        <name>obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="277" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ae104856f5323392e3017dc430e7faae9" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* GVJ_s::input_filename</definition>
+        <argsstring></argsstring>
+        <name>input_filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="279" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ae1f25b3227421cb79a058d93f437b037" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::graph_index</definition>
+        <argsstring></argsstring>
+        <name>graph_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="280" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aab3eab903c84af0622ba9128d7f21382" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* GVJ_s::layout_type</definition>
+        <argsstring></argsstring>
+        <name>layout_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="282" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a3274d07a8e222e5b0dd980b2d2646353" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* GVJ_s::output_filename</definition>
+        <argsstring></argsstring>
+        <name>output_filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="284" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa26a7ae90613b8ba8998ad9349e7e240" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* GVJ_s::output_file</definition>
+        <argsstring></argsstring>
+        <name>output_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="285" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a5d3304c201c3fb12979e490e21aa9d2f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* GVJ_s::output_data</definition>
+        <argsstring></argsstring>
+        <name>output_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="286" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1adc869f83a6238348480f4765414f5c01" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int GVJ_s::output_data_allocated</definition>
+        <argsstring></argsstring>
+        <name>output_data_allocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="287" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1af4637901a3c63cacc86dd101ace84e8c" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int GVJ_s::output_data_position</definition>
+        <argsstring></argsstring>
+        <name>output_data_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="288" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ae1ac152c41d1cbdad5985701a8ff520f" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* GVJ_s::output_langname</definition>
+        <argsstring></argsstring>
+        <name>output_langname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="290" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a4218b0118ee56dcb61554b95df15eb92" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::output_lang</definition>
+        <argsstring></argsstring>
+        <name>output_lang</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="291" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a7c677fb2a5098a0a31317fab379003fb" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1a60a8dbe816df29fb9bbf092aa9d857d9" kindref="member">gvplugin_active_render_t</ref></type>
+        <definition>gvplugin_active_render_t GVJ_s::render</definition>
+        <argsstring></argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="293" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a4cfcfe68c4de55779272f4018962d9b8" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1a911dc300e8ab12be9c5efe8168311861" kindref="member">gvplugin_active_device_t</ref></type>
+        <definition>gvplugin_active_device_t GVJ_s::device</definition>
+        <argsstring></argsstring>
+        <name>device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="294" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a3a61e329c5f6657a34601099afb4255c" prot="public" static="no" mutable="no">
+        <type><ref refid="structgvplugin__active__loadimage__t" kindref="compound">gvplugin_active_loadimage_t</ref></type>
+        <definition>gvplugin_active_loadimage_t GVJ_s::loadimage</definition>
+        <argsstring></argsstring>
+        <name>loadimage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="295" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a420b1ebf4c6cd958dcb5f5cce9ac7691" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1acc50ede9232c78aa3ff4bff97ffb4248" kindref="member">gvdevice_callbacks_t</ref> *</type>
+        <definition>gvdevice_callbacks_t* GVJ_s::callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="296" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa5798205b1140cb5629d61c3e092683c" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::device_dpi</definition>
+        <argsstring></argsstring>
+        <name>device_dpi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="297" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a120b1e86029d59aee9fb9f2aed859389" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::device_sets_dpi</definition>
+        <argsstring></argsstring>
+        <name>device_sets_dpi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="298" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a764ccadd64f751ef3e62f964917514a4" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* GVJ_s::display</definition>
+        <argsstring></argsstring>
+        <name>display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="300" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a275e59c24ae814353b5ae869ce4260bf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::screen</definition>
+        <argsstring></argsstring>
+        <name>screen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="301" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a64830ffbd1737c52ae85d6d0fb22831c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* GVJ_s::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="303" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a2db95d9d56b32107f107d7d7e39cf89e" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::external_context</definition>
+        <argsstring></argsstring>
+        <name>external_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="304" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a173b26cd25c7ca03973f5f054d9da2bc" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* GVJ_s::imagedata</definition>
+        <argsstring></argsstring>
+        <name>imagedata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="305" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a229f318e0a40f64ee14fa48403b420b3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="307" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aca0d52f7d0ac15f43895a9563c169665" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::numLayers</definition>
+        <argsstring></argsstring>
+        <name>numLayers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="309" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1abb36098c4e1c4fa70723cfe2726ab05b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::layerNum</definition>
+        <argsstring></argsstring>
+        <name>layerNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="310" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a343ebd309080301793f10b20f5d06fd6" prot="public" static="no" mutable="no">
+        <type><ref refid="structpoint" kindref="compound">point</ref></type>
+        <definition>point GVJ_s::pagesArraySize</definition>
+        <argsstring></argsstring>
+        <name>pagesArraySize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="312" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa149d3dc69fdbf0bd65e2e18385e3a6f" prot="public" static="no" mutable="no">
+        <type><ref refid="structpoint" kindref="compound">point</ref></type>
+        <definition>point GVJ_s::pagesArrayFirst</definition>
+        <argsstring></argsstring>
+        <name>pagesArrayFirst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="313" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a8ff911bab3a238320610a9f5396dc4f8" prot="public" static="no" mutable="no">
+        <type><ref refid="structpoint" kindref="compound">point</ref></type>
+        <definition>point GVJ_s::pagesArrayMajor</definition>
+        <argsstring></argsstring>
+        <name>pagesArrayMajor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="314" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a822f7b6818edd83b3ee8372d11e2a0a1" prot="public" static="no" mutable="no">
+        <type><ref refid="structpoint" kindref="compound">point</ref></type>
+        <definition>point GVJ_s::pagesArrayMinor</definition>
+        <argsstring></argsstring>
+        <name>pagesArrayMinor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="315" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a72a37c77ccb37a2d3ca571321ce34790" prot="public" static="no" mutable="no">
+        <type><ref refid="structpoint" kindref="compound">point</ref></type>
+        <definition>point GVJ_s::pagesArrayElem</definition>
+        <argsstring></argsstring>
+        <name>pagesArrayElem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="316" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ad8d2942d661c53d0939a822e1e70b8d6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::numPages</definition>
+        <argsstring></argsstring>
+        <name>numPages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="317" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a467d9cb63aef2952d17062bbdd059ce4" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf GVJ_s::bb</definition>
+        <argsstring></argsstring>
+        <name>bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="319" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1af317a6ccf3a9c3bfd30f7acfebffc8c7" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::pad</definition>
+        <argsstring></argsstring>
+        <name>pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="320" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a27f43293e7efed88e0f3d6a659b5a808" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf GVJ_s::clip</definition>
+        <argsstring></argsstring>
+        <name>clip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="321" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ade176a7ef34192906b3a0d9a768c0531" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf GVJ_s::pageBox</definition>
+        <argsstring></argsstring>
+        <name>pageBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="322" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a33f9ae349f2c963f8c5eb688dfbe7f2a" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::pageSize</definition>
+        <argsstring></argsstring>
+        <name>pageSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="323" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a97b66020d5c48e04cc8e7bfbdd92604a" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::focus</definition>
+        <argsstring></argsstring>
+        <name>focus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="324" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa7150d5a2b906bb0d55a3bbde37bd174" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double GVJ_s::zoom</definition>
+        <argsstring></argsstring>
+        <name>zoom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="326" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a0454cd254446c0c665668753d3101fe0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="327" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a8730f8538f37b391b283cce40d8e22ce" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="329" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ab79b9bda0057e30579e491cf2e6043c7" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf GVJ_s::canvasBox</definition>
+        <argsstring></argsstring>
+        <name>canvasBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="330" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a33e6ec2c386e79a238893dcfbfdf81cd" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::margin</definition>
+        <argsstring></argsstring>
+        <name>margin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="331" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a407924052cc9e202a9049a3459b8be25" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::dpi</definition>
+        <argsstring></argsstring>
+        <name>dpi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="333" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1abe26e05b4aa822e54bce9fc43df91544" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int GVJ_s::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="335" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aff7f63596a03a702ac81ced539ce9dd5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int GVJ_s::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="336" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa65400f688e5a55542d78a7e0895e77a" prot="public" static="no" mutable="no">
+        <type><ref refid="structbox" kindref="compound">box</ref></type>
+        <definition>box GVJ_s::pageBoundingBox</definition>
+        <argsstring></argsstring>
+        <name>pageBoundingBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="337" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa74767ae7fb43838cffab78cb070ecf3" prot="public" static="no" mutable="no">
+        <type><ref refid="structbox" kindref="compound">box</ref></type>
+        <definition>box GVJ_s::boundingBox</definition>
+        <argsstring></argsstring>
+        <name>boundingBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="338" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aaa5f8435371e394c3198ec28b2b64a38" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="340" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1af9b309b5c532cb1e9c99d0887e4afe1d" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::translation</definition>
+        <argsstring></argsstring>
+        <name>translation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="341" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a8ea411b5b762e464b77fdacaa9e3bc78" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::devscale</definition>
+        <argsstring></argsstring>
+        <name>devscale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="342" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ad9252e2450b3638ba6a58727ce9cbf4f" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::fit_mode</definition>
+        <argsstring></argsstring>
+        <name>fit_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="344" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a5144c245c67b228381d45ca750a69bb2" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::needs_refresh</definition>
+        <argsstring></argsstring>
+        <name>needs_refresh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="345" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a5875d1b052f9c1da66008606c1045937" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::click</definition>
+        <argsstring></argsstring>
+        <name>click</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="346" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1ae0af15fbc847abe9d1c07e500dcbe6d6" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::has_grown</definition>
+        <argsstring></argsstring>
+        <name>has_grown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="347" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a8d5a63b6e629c7aa2af59ebc7cf119c8" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean GVJ_s::has_been_rendered</definition>
+        <argsstring></argsstring>
+        <name>has_been_rendered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="348" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a34ef13bb3aca34988f182397a03ddf58" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char GVJ_s::button</definition>
+        <argsstring></argsstring>
+        <name>button</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="350" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a82e616ad7b025f257a223c88ce0106c7" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::pointer</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="351" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1af84d07cd0a5249a05873b4112bb4817f" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf GVJ_s::oldpointer</definition>
+        <argsstring></argsstring>
+        <name>oldpointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="352" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a140f56fd1588cdecdae80154732b1364" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* GVJ_s::current_obj</definition>
+        <argsstring></argsstring>
+        <name>current_obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="354" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a9492bc5460537eb36a1afadaf259017a" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* GVJ_s::selected_obj</definition>
+        <argsstring></argsstring>
+        <name>selected_obj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="356" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a495f696f150e1783c866bb962f1492ad" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* GVJ_s::active_tooltip</definition>
+        <argsstring></argsstring>
+        <name>active_tooltip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="358" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a498a5e939b92f7944e1c83a79f0fae99" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* GVJ_s::selected_href</definition>
+        <argsstring></argsstring>
+        <name>selected_href</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="359" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1aa201cde2f96331974ab3fb10c03a9a28" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1acae33e05df363c42d2d5661e03ac8e50" kindref="member">gv_argvlist_t</ref></type>
+        <definition>gv_argvlist_t GVJ_s::selected_obj_type_name</definition>
+        <argsstring></argsstring>
+        <name>selected_obj_type_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="360" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a2e3d9746085b08699ab3ce35142aeefe" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1acae33e05df363c42d2d5661e03ac8e50" kindref="member">gv_argvlist_t</ref></type>
+        <definition>gv_argvlist_t GVJ_s::selected_obj_attributes</definition>
+        <argsstring></argsstring>
+        <name>selected_obj_attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="361" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1acb540b2b04de30dc35616a60d1c848cb" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* GVJ_s::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="365" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a63b502b4c43204061b38859e2817ce36" prot="public" static="no" mutable="no">
+        <type><ref refid="gvcjob_8h_1aacafc045edb2325f10b1c592898615ab" kindref="member">gvevent_key_binding_t</ref> *</type>
+        <definition>gvevent_key_binding_t* GVJ_s::keybindings</definition>
+        <argsstring></argsstring>
+        <name>keybindings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="368" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1afbdb202145b0355b3a50f9bab87a81e1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GVJ_s::numkeys</definition>
+        <argsstring></argsstring>
+        <name>numkeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="369" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structGVJ__s_1a6ee50f25f739863b055c8c0912f58ba1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* GVJ_s::keycodes</definition>
+        <argsstring></argsstring>
+        <name>keycodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="370" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4898">
+        <label></label>
+      </node>
+      <node id="4929">
+        <label>rank_t</label>
+        <link refid="structrank__t"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>ht1</edgelabel>
+          <edgelabel>ht2</edgelabel>
+          <edgelabel>pht1</edgelabel>
+          <edgelabel>pht2</edgelabel>
+        </childnode>
+        <childnode refid="4891" relation="usage">
+          <edgelabel>candidate</edgelabel>
+          <edgelabel>valid</edgelabel>
+        </childnode>
+        <childnode refid="4913" relation="usage">
+          <edgelabel>av</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>n</edgelabel>
+          <edgelabel>cache_nc</edgelabel>
+          <edgelabel>an</edgelabel>
+        </childnode>
+        <childnode refid="4930" relation="usage">
+          <edgelabel>flat</edgelabel>
+        </childnode>
+      </node>
+      <node id="4976">
+        <label>void *(*)(Agdisc_t *)</label>
+      </node>
+      <node id="4945">
+        <label>Agdict_t</label>
+        <link refid="structAgdict__t"/>
+        <childnode refid="4946" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="4947" relation="usage">
+          <edgelabel>dict</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4881">
+        <label>void(*)(GVJ_t *job, pointf p, textspan_t *span)</label>
+      </node>
+      <node id="4894">
+        <label>void(*)(GVJ_t *job, usershape_t *us, boxf b, boolean filled)</label>
+      </node>
+      <node id="4870">
+        <label>GVJ_s</label>
+        <link refid="structGVJ__s"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>zoom</edgelabel>
+        </childnode>
+        <childnode refid="4872" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="4891" relation="usage">
+          <edgelabel>button</edgelabel>
+          <edgelabel>external_context</edgelabel>
+          <edgelabel>click</edgelabel>
+          <edgelabel>has_grown</edgelabel>
+          <edgelabel>needs_refresh</edgelabel>
+          <edgelabel>device_sets_dpi</edgelabel>
+          <edgelabel>fit_mode</edgelabel>
+          <edgelabel>has_been_rendered</edgelabel>
+        </childnode>
+        <childnode refid="4892" relation="usage">
+          <edgelabel>loadimage</edgelabel>
+        </childnode>
+        <childnode refid="4895" relation="usage">
+          <edgelabel>obj</edgelabel>
+        </childnode>
+        <childnode refid="4985" relation="usage">
+          <edgelabel>boundingBox</edgelabel>
+          <edgelabel>pageBoundingBox</edgelabel>
+        </childnode>
+        <childnode refid="4987" relation="usage">
+          <edgelabel>output_file</edgelabel>
+        </childnode>
+        <childnode refid="4988" relation="usage">
+          <edgelabel>common</edgelabel>
+        </childnode>
+        <childnode refid="4992" relation="usage">
+          <edgelabel>keybindings</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>flags</edgelabel>
+          <edgelabel>graph_index</edgelabel>
+          <edgelabel>output_data_position</edgelabel>
+          <edgelabel>layerNum</edgelabel>
+          <edgelabel>output_lang</edgelabel>
+          <edgelabel>numkeys</edgelabel>
+          <edgelabel>rotation</edgelabel>
+          <edgelabel>height</edgelabel>
+          <edgelabel>numLayers</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4986" relation="usage">
+          <edgelabel>pagesArrayElem</edgelabel>
+          <edgelabel>pagesArraySize</edgelabel>
+          <edgelabel>pagesArrayFirst</edgelabel>
+          <edgelabel>pagesArrayMajor</edgelabel>
+          <edgelabel>pagesArrayMinor</edgelabel>
+        </childnode>
+        <childnode refid="4993" relation="usage">
+          <edgelabel>callbacks</edgelabel>
+        </childnode>
+        <childnode refid="4870" relation="usage">
+          <edgelabel>next</edgelabel>
+          <edgelabel>next_active</edgelabel>
+        </childnode>
+        <childnode refid="4917" relation="usage">
+          <edgelabel>bb</edgelabel>
+          <edgelabel>pageBox</edgelabel>
+          <edgelabel>canvasBox</edgelabel>
+          <edgelabel>clip</edgelabel>
+        </childnode>
+        <childnode refid="5000" relation="usage">
+          <edgelabel>layout_type</edgelabel>
+          <edgelabel>output_filename</edgelabel>
+          <edgelabel>output_langname</edgelabel>
+        </childnode>
+        <childnode refid="5001" relation="usage">
+          <edgelabel>device</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>window</edgelabel>
+          <edgelabel>keycodes</edgelabel>
+          <edgelabel>context</edgelabel>
+          <edgelabel>current_obj</edgelabel>
+          <edgelabel>display</edgelabel>
+          <edgelabel>selected_obj</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>selected_href</edgelabel>
+          <edgelabel>active_tooltip</edgelabel>
+          <edgelabel>output_data</edgelabel>
+          <edgelabel>imagedata</edgelabel>
+          <edgelabel>input_filename</edgelabel>
+        </childnode>
+        <childnode refid="4936" relation="usage">
+          <edgelabel>gvc</edgelabel>
+        </childnode>
+        <childnode refid="5005" relation="usage">
+          <edgelabel>selected_obj_type_name</edgelabel>
+          <edgelabel>selected_obj_attributes</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>pageSize</edgelabel>
+          <edgelabel>focus</edgelabel>
+          <edgelabel>scale</edgelabel>
+          <edgelabel>view</edgelabel>
+          <edgelabel>dpi</edgelabel>
+          <edgelabel>device_dpi</edgelabel>
+          <edgelabel>oldpointer</edgelabel>
+          <edgelabel>translation</edgelabel>
+          <edgelabel>pad</edgelabel>
+          <edgelabel>pointer</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="4956">
+        <label>Void_t *</label>
+      </node>
+      <node id="4912">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4932">
+        <label>ratio_t</label>
+      </node>
+      <node id="4967">
+        <label>long(*)(void *state, int objtype, char *str, unsigned long *id, int createflag)</label>
+      </node>
+      <node id="4911">
+        <label>void *</label>
+      </node>
+      <node id="4978">
+        <label>fill_type</label>
+      </node>
+      <node id="4918">
+        <label>elist</label>
+        <link refid="structelist"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="4919" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="4924">
+        <label>void(*)(GVJ_t *job, node_t *n)</label>
+      </node>
+      <node id="4969">
+        <label>long(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="4893">
+        <label>gvloadimage_engine_s</label>
+        <link refid="structgvloadimage__engine__s"/>
+        <childnode refid="4894" relation="usage">
+          <edgelabel>loadimage</edgelabel>
+        </childnode>
+      </node>
+      <node id="4999">
+        <label>void(*)(GVJ_t *job, const char *layout)</label>
+      </node>
+      <node id="4992">
+        <label>gvevent_key_binding_s</label>
+        <link refid="structgvevent__key__binding__s"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>callback</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>keystring</edgelabel>
+        </childnode>
+      </node>
+      <node id="4996">
+        <label>void(*)(GVJ_t *job, pointf pointer)</label>
+      </node>
+      <node id="4988">
+        <label>GVCOMMON_s</label>
+        <link refid="structGVCOMMON__s"/>
+        <childnode refid="4875" relation="usage">
+          <edgelabel>info</edgelabel>
+        </childnode>
+        <childnode refid="4989" relation="usage">
+          <edgelabel>builtins</edgelabel>
+        </childnode>
+        <childnode refid="4990" relation="usage">
+          <edgelabel>errorfn</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>viewNum</edgelabel>
+          <edgelabel>demand_loading</edgelabel>
+          <edgelabel>verbose</edgelabel>
+        </childnode>
+        <childnode refid="4991" relation="usage">
+          <edgelabel>show_boxes</edgelabel>
+          <edgelabel>lib</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>config</edgelabel>
+          <edgelabel>auto_outfile_names</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>cmdname</edgelabel>
+        </childnode>
+      </node>
+      <node id="4960">
+        <label>Agclos_s</label>
+        <link refid="structAgclos__s"/>
+        <childnode refid="4961" relation="usage">
+          <edgelabel>cb</edgelabel>
+        </childnode>
+        <childnode refid="4963" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="4947" relation="usage">
+          <edgelabel>strdict</edgelabel>
+          <edgelabel>lookup_by_id</edgelabel>
+          <edgelabel>lookup_by_name</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>callbacks_enabled</edgelabel>
+          <edgelabel>seq</edgelabel>
+        </childnode>
+        <childnode refid="4977" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+      </node>
+      <node id="4880">
+        <label>void(*)(GVJ_t *job, char *name, pointf *A, int n, int filled)</label>
+      </node>
+      <node id="4884">
+        <label>void(*)(GVJ_t *job, pointf *A, int n)</label>
+      </node>
+      <node id="4890">
+        <label>void(*)(GVJ_t *job)</label>
+      </node>
+      <node id="4952">
+        <label>Dtcompar_f</label>
+      </node>
+      <node id="4975">
+        <label>void *(*)(void *state, void *ptr, size_t old, size_t req)</label>
+      </node>
+      <node id="4874">
+        <label>gvrender_features_t</label>
+        <link refid="structgvrender__features__t"/>
+        <childnode refid="4875" relation="usage">
+          <edgelabel>knowncolors</edgelabel>
+        </childnode>
+        <childnode refid="4876" relation="usage">
+          <edgelabel>color_type</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>default_pad</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>sz_knowncolors</edgelabel>
+          <edgelabel>flags</edgelabel>
+        </childnode>
+      </node>
+      <node id="4994">
+        <label>void(*)(GVJ_t *job, const char *filename, const char *layout)</label>
+      </node>
+      <node id="4913">
+        <label>Agnode_s</label>
+        <link refid="structAgnode__s"/>
+        <childnode refid="4900" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="4914" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="4916" relation="usage">
+          <edgelabel>mainsub</edgelabel>
+        </childnode>
+      </node>
+      <node id="4901">
+        <label>Agnode_t</label>
+        <link refid="structAgnode__t"/>
+        <childnode refid="4902" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4875" relation="usage">
+          <edgelabel>attr</edgelabel>
+        </childnode>
+        <childnode refid="4900" relation="usage">
+          <edgelabel>graph</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>handle</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>pad</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>didset</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4896">
+        <label>Agraph_s</label>
+        <link refid="structAgraph__s"/>
+        <childnode refid="4897" relation="usage">
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="4900" relation="usage">
+          <edgelabel>root</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4959" relation="usage">
+          <edgelabel>desc</edgelabel>
+        </childnode>
+        <childnode refid="4914" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="4947" relation="usage">
+          <edgelabel>e_id</edgelabel>
+          <edgelabel>n_seq</edgelabel>
+          <edgelabel>g_dict</edgelabel>
+          <edgelabel>e_seq</edgelabel>
+          <edgelabel>n_id</edgelabel>
+        </childnode>
+        <childnode refid="4960" relation="usage">
+          <edgelabel>clos</edgelabel>
+        </childnode>
+      </node>
+      <node id="4900">
+        <label>Agraph_t</label>
+        <link refid="structAgraph__t"/>
+        <childnode refid="4875" relation="usage">
+          <edgelabel>attr</edgelabel>
+        </childnode>
+        <childnode refid="4900" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="4901" relation="usage">
+          <edgelabel>meta_node</edgelabel>
+        </childnode>
+        <childnode refid="4927" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4937" relation="usage">
+          <edgelabel>proto</edgelabel>
+        </childnode>
+        <childnode refid="4944" relation="usage">
+          <edgelabel>univ</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>kind</edgelabel>
+          <edgelabel>handle</edgelabel>
+        </childnode>
+        <childnode refid="4947" relation="usage">
+          <edgelabel>inedges</edgelabel>
+          <edgelabel>outedges</edgelabel>
+          <edgelabel>nodes</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>didset</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4980">
+        <label>color_s</label>
+        <link refid="structcolor__s"/>
+        <childnode refid="4876" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>RGBA</edgelabel>
+          <edgelabel>HSVA</edgelabel>
+        </childnode>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>rrggbbaa</edgelabel>
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>rgba</edgelabel>
+          <edgelabel>cmyk</edgelabel>
+        </childnode>
+        <childnode refid="4926" relation="usage">
+          <edgelabel>string</edgelabel>
+        </childnode>
+      </node>
+      <node id="4926">
+        <label>char *</label>
+      </node>
+      <node id="4997">
+        <label>void(*)(GVJ_t *job, int button, pointf pointer)</label>
+      </node>
+      <node id="4905">
+        <label>htmllabel_t *</label>
+      </node>
+      <node id="4940">
+        <label>Ppoly_t</label>
+        <link refid="structPpoly__t"/>
+        <childnode refid="4941" relation="usage">
+          <edgelabel>ps</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>pn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4979">
+        <label>float</label>
+      </node>
+      <node id="4966">
+        <label>void(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="4942">
+        <label>splines</label>
+        <link refid="structsplines"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="4917" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="4943" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="4972">
+        <label>Agmemdisc_s</label>
+        <link refid="structAgmemdisc__s"/>
+        <childnode refid="4973" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="4974" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="4970" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="4975" relation="usage">
+          <edgelabel>resize</edgelabel>
+        </childnode>
+        <childnode refid="4976" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+      </node>
+      <node id="4902">
+        <label>Agnodeinfo_t</label>
+        <link refid="structAgnodeinfo__t"/>
+        <childnode refid="4903" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="4904" relation="usage">
+          <edgelabel>xlabel</edgelabel>
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>mval</edgelabel>
+          <edgelabel>rw</edgelabel>
+          <edgelabel>dist</edgelabel>
+          <edgelabel>height</edgelabel>
+          <edgelabel>lw</edgelabel>
+          <edgelabel>ht</edgelabel>
+          <edgelabel>pad</edgelabel>
+          <edgelabel>pos</edgelabel>
+        </childnode>
+        <childnode refid="4896" relation="usage">
+          <edgelabel>clust</edgelabel>
+        </childnode>
+        <childnode refid="4913" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>outleaf</edgelabel>
+          <edgelabel>inleaf</edgelabel>
+          <edgelabel>next</edgelabel>
+          <edgelabel>rep</edgelabel>
+          <edgelabel>UF_parent</edgelabel>
+          <edgelabel>set</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>weight_class</edgelabel>
+          <edgelabel>onstack</edgelabel>
+          <edgelabel>ranktype</edgelabel>
+          <edgelabel>state</edgelabel>
+          <edgelabel>mark</edgelabel>
+          <edgelabel>node_type</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>heapindex</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>priority</edgelabel>
+          <edgelabel>lim</edgelabel>
+          <edgelabel>hops</edgelabel>
+          <edgelabel>UF_size</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>low</edgelabel>
+          <edgelabel>rank</edgelabel>
+        </childnode>
+        <childnode refid="4917" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="4918" relation="usage">
+          <edgelabel>tree_out</edgelabel>
+          <edgelabel>save_out</edgelabel>
+          <edgelabel>flat_out</edgelabel>
+          <edgelabel>flat_in</edgelabel>
+          <edgelabel>in</edgelabel>
+          <edgelabel>out</edgelabel>
+          <edgelabel>other</edgelabel>
+          <edgelabel>save_in</edgelabel>
+          <edgelabel>tree_in</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>clustnode</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+          <edgelabel>pinned</edgelabel>
+          <edgelabel>has_port</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>alg</edgelabel>
+          <edgelabel>shape_info</edgelabel>
+        </childnode>
+        <childnode refid="4920" relation="usage">
+          <edgelabel>shape</edgelabel>
+        </childnode>
+        <childnode refid="4919" relation="usage">
+          <edgelabel>par</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>coord</edgelabel>
+        </childnode>
+      </node>
+      <node id="4977">
+        <label>Agdstate_s</label>
+        <link refid="structAgdstate__s"/>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="4953">
+        <label>Dtmemory_f</label>
+      </node>
+      <node id="4971">
+        <label>void(*)(void *state, int objtype, void *obj)</label>
+      </node>
+      <node id="4946">
+        <label>Agsym_t</label>
+        <link refid="structAgsym__t"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>value</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>printed</edgelabel>
+          <edgelabel>fixed</edgelabel>
+        </childnode>
+      </node>
+      <node id="4915">
+        <label>Agtag_s</label>
+        <link refid="structAgtag__s"/>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>attrwf</edgelabel>
+          <edgelabel>mtflock</edgelabel>
+          <edgelabel>objtype</edgelabel>
+          <edgelabel>seq</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4981">
+        <label>obj_type</label>
+      </node>
+      <node id="4989">
+        <label>lt_symlist_t</label>
+        <link refid="structlt__symlist__t"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="4947">
+        <label>_dt_s</label>
+        <link refid="struct__dt__s"/>
+        <childnode refid="4948" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="4955" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4956" relation="usage">
+          <edgelabel>user</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>type</edgelabel>
+          <edgelabel>nview</edgelabel>
+        </childnode>
+        <childnode refid="4947" relation="usage">
+          <edgelabel>view</edgelabel>
+          <edgelabel>walk</edgelabel>
+        </childnode>
+        <childnode refid="4953" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="4957" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+        <childnode refid="4958" relation="usage">
+          <edgelabel>meth</edgelabel>
+        </childnode>
+      </node>
+      <node id="4962">
+        <label>Agcbdisc_s</label>
+        <link refid="structAgcbdisc__s"/>
+        <childnode refid="4900" relation="usage">
+          <edgelabel>del</edgelabel>
+          <edgelabel>ins</edgelabel>
+          <edgelabel>mod</edgelabel>
+        </childnode>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>node</edgelabel>
+          <edgelabel>graph</edgelabel>
+          <edgelabel>edge</edgelabel>
+        </childnode>
+      </node>
+      <node id="4886">
+        <label>void(*)(GVJ_t *job, pointf *A, int n, int arrow_at_start, int arrow_at_end, int)</label>
+      </node>
+      <node id="4931">
+        <label>layout_t</label>
+        <link refid="structlayout__t"/>
+        <childnode refid="4932" relation="usage">
+          <edgelabel>ratio_kind</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>ratio</edgelabel>
+          <edgelabel>scale</edgelabel>
+          <edgelabel>dpi</edgelabel>
+          <edgelabel>quantum</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>filled</edgelabel>
+          <edgelabel>centered</edgelabel>
+          <edgelabel>landscape</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>xdots</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>page</edgelabel>
+          <edgelabel>size</edgelabel>
+          <edgelabel>margin</edgelabel>
+        </childnode>
+      </node>
+      <node id="4974">
+        <label>void *(*)(void *state, size_t req)</label>
+      </node>
+      <node id="4910">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="4982">
+        <label>emit_state_t</label>
+      </node>
+      <node id="4914">
+        <label>Agobj_s</label>
+        <link refid="structAgobj__s"/>
+        <childnode refid="4903" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4915" relation="usage">
+          <edgelabel>tag</edgelabel>
+        </childnode>
+      </node>
+      <node id="4935">
+        <label>long</label>
+      </node>
+      <node id="4990">
+        <label>void(*)(const char *fmt,...)</label>
+      </node>
+      <node id="4965">
+        <label>Agiddisc_s</label>
+        <link refid="structAgiddisc__s"/>
+        <childnode refid="4966" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="4967" relation="usage">
+          <edgelabel>map</edgelabel>
+        </childnode>
+        <childnode refid="4968" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>print</edgelabel>
+        </childnode>
+        <childnode refid="4969" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="4970" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="4971" relation="usage">
+          <edgelabel>idregister</edgelabel>
+        </childnode>
+      </node>
+      <node id="4891">
+        <label>unsigned char</label>
+      </node>
+      <node id="5003">
+        <label>void(*)(GVJ_t *firstjob)</label>
+      </node>
+      <node id="4955">
+        <label>_dtdata_s</label>
+        <link refid="struct__dtdata__s"/>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>hh</edgelabel>
+        </childnode>
+        <childnode refid="4897" relation="usage">
+          <edgelabel>here</edgelabel>
+          <edgelabel>_htab</edgelabel>
+          <edgelabel>_head</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>loop</edgelabel>
+          <edgelabel>ntab</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>minp</edgelabel>
+        </childnode>
+      </node>
+      <node id="4907">
+        <label>textspan_t</label>
+        <link refid="structtextspan__t"/>
+        <childnode refid="4908" relation="usage">
+          <edgelabel>free_layout</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>yoffset_layout</edgelabel>
+          <edgelabel>yoffset_centerline</edgelabel>
+        </childnode>
+        <childnode refid="4909" relation="usage">
+          <edgelabel>font</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>str</edgelabel>
+          <edgelabel>just</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="4920">
+        <label>shape_desc</label>
+        <link refid="structshape__desc"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4921" relation="usage">
+          <edgelabel>fns</edgelabel>
+        </childnode>
+        <childnode refid="4925" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>usershape</edgelabel>
+        </childnode>
+      </node>
+      <node id="4908">
+        <label>void(*)(void *layout)</label>
+      </node>
+      <node id="4877">
+        <label>int</label>
+      </node>
+      <node id="4970">
+        <label>void(*)(void *state)</label>
+      </node>
+      <node id="4904">
+        <label>textlabel_t</label>
+        <link refid="structtextlabel__t"/>
+        <childnode refid="4905" relation="usage">
+          <edgelabel>html</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>fontsize</edgelabel>
+        </childnode>
+        <childnode refid="4906" relation="usage">
+          <edgelabel>nspans</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>valign</edgelabel>
+          <edgelabel>fontname</edgelabel>
+          <edgelabel>fontcolor</edgelabel>
+          <edgelabel>text</edgelabel>
+        </childnode>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>charset</edgelabel>
+        </childnode>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>txt</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>set</edgelabel>
+          <edgelabel>html</edgelabel>
+        </childnode>
+        <childnode refid="4907" relation="usage">
+          <edgelabel>span</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>space</edgelabel>
+          <edgelabel>dimen</edgelabel>
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="4957">
+        <label>Dtsearch_f</label>
+      </node>
+      <node id="4933">
+        <label>fontname_kind</label>
+      </node>
+      <node id="4871">
+        <label>double</label>
+      </node>
+      <node id="4939">
+        <label>Agedgeinfo_t</label>
+        <link refid="structAgedgeinfo__t"/>
+        <childnode refid="4903" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="4922" relation="usage">
+          <edgelabel>tail_port</edgelabel>
+          <edgelabel>head_port</edgelabel>
+        </childnode>
+        <childnode refid="4940" relation="usage">
+          <edgelabel>path</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>dist</edgelabel>
+          <edgelabel>factor</edgelabel>
+        </childnode>
+        <childnode refid="4904" relation="usage">
+          <edgelabel>head_label</edgelabel>
+          <edgelabel>tail_label</edgelabel>
+          <edgelabel>xlabel</edgelabel>
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="4942" relation="usage">
+          <edgelabel>spl</edgelabel>
+        </childnode>
+        <childnode refid="4906" relation="usage">
+          <edgelabel>count</edgelabel>
+          <edgelabel>xpenalty</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>adjacent</edgelabel>
+          <edgelabel>label_ontop</edgelabel>
+          <edgelabel>edge_type</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>tree_index</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>cutvalue</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>minlen</edgelabel>
+          <edgelabel>conc_opp_flag</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>alg</edgelabel>
+        </childnode>
+        <childnode refid="4919" relation="usage">
+          <edgelabel>to_virt</edgelabel>
+          <edgelabel>to_orig</edgelabel>
+        </childnode>
+      </node>
+      <node id="4943">
+        <label>bezier</label>
+        <link refid="structbezier"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>sflag</edgelabel>
+          <edgelabel>eflag</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>ep</edgelabel>
+          <edgelabel>sp</edgelabel>
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="4941">
+        <label>Pxy_t</label>
+        <link refid="structPxy__t"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4883">
+        <label>void(*)(GVJ_t *job, char *comment)</label>
+      </node>
+      <node id="4958">
+        <label>_dtmethod_s</label>
+        <link refid="struct__dtmethod__s"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4957" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+      </node>
+      <node id="4936">
+        <label>GVC_t *</label>
+      </node>
+      <node id="4885">
+        <label>void(*)(GVJ_t *job, gvcolor_t *color)</label>
+      </node>
+      <node id="4944">
+        <label>Agdata_t</label>
+        <link refid="structAgdata__t"/>
+        <childnode refid="4945" relation="usage">
+          <edgelabel>globattr</edgelabel>
+          <edgelabel>edgeattr</edgelabel>
+          <edgelabel>nodeattr</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>max_edge_id</edgelabel>
+          <edgelabel>max_node_id</edgelabel>
+        </childnode>
+        <childnode refid="4947" relation="usage">
+          <edgelabel>node_dict</edgelabel>
+        </childnode>
+      </node>
+      <node id="4951">
+        <label>Dtmake_f</label>
+      </node>
+      <node id="4987">
+        <label>FILE *</label>
+      </node>
+      <node id="4872">
+        <label>gvplugin_active_render_s</label>
+        <link refid="structgvplugin__active__render__s"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4874" relation="usage">
+          <edgelabel>features</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4878" relation="usage">
+          <edgelabel>engine</edgelabel>
+        </childnode>
+      </node>
+      <node id="5005">
+        <label>gv_argvlist_s</label>
+        <link refid="structgv__argvlist__s"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>argv</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>alloc</edgelabel>
+          <edgelabel>argc</edgelabel>
+        </childnode>
+      </node>
+      <node id="4934">
+        <label>nlist_t</label>
+        <link refid="structnlist__t"/>
+        <childnode refid="4913" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="4986">
+        <label>point</label>
+        <link refid="structpoint"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4889">
+        <label>void(*)(GVJ_t *job, pointf *A, int filled)</label>
+      </node>
+      <node id="5000">
+        <label>const char *</label>
+      </node>
+      <node id="4903">
+        <label>Agrec_s</label>
+        <link refid="structAgrec__s"/>
+        <childnode refid="4903" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4906">
+        <label>short</label>
+      </node>
+      <node id="4973">
+        <label>void(*)(void *state, void *ptr)</label>
+      </node>
+      <node id="4963">
+        <label>Agdisc_s</label>
+        <link refid="structAgdisc__s"/>
+        <childnode refid="4964" relation="usage">
+          <edgelabel>io</edgelabel>
+        </childnode>
+        <childnode refid="4965" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4972" relation="usage">
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="4878">
+        <label>gvrender_engine_s</label>
+        <link refid="structgvrender__engine__s"/>
+        <childnode refid="4879" relation="usage">
+          <edgelabel>begin_label</edgelabel>
+        </childnode>
+        <childnode refid="4880" relation="usage">
+          <edgelabel>library_shape</edgelabel>
+        </childnode>
+        <childnode refid="4881" relation="usage">
+          <edgelabel>textspan</edgelabel>
+        </childnode>
+        <childnode refid="4882" relation="usage">
+          <edgelabel>begin_anchor</edgelabel>
+        </childnode>
+        <childnode refid="4883" relation="usage">
+          <edgelabel>comment</edgelabel>
+        </childnode>
+        <childnode refid="4884" relation="usage">
+          <edgelabel>polyline</edgelabel>
+        </childnode>
+        <childnode refid="4885" relation="usage">
+          <edgelabel>resolve_color</edgelabel>
+        </childnode>
+        <childnode refid="4886" relation="usage">
+          <edgelabel>beziercurve</edgelabel>
+        </childnode>
+        <childnode refid="4887" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="4888" relation="usage">
+          <edgelabel>begin_layer</edgelabel>
+        </childnode>
+        <childnode refid="4889" relation="usage">
+          <edgelabel>ellipse</edgelabel>
+        </childnode>
+        <childnode refid="4890" relation="usage">
+          <edgelabel>end_edges</edgelabel>
+          <edgelabel>end_cluster</edgelabel>
+          <edgelabel>begin_node</edgelabel>
+          <edgelabel>end_edge</edgelabel>
+          <edgelabel>begin_cluster</edgelabel>
+          <edgelabel>end_label</edgelabel>
+          <edgelabel>end_layer</edgelabel>
+          <edgelabel>end_nodes</edgelabel>
+          <edgelabel>begin_nodes</edgelabel>
+          <edgelabel>begin_job</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="4930">
+        <label>adjmatrix_t</label>
+        <link refid="structadjmatrix__t"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>nrows</edgelabel>
+          <edgelabel>ncols</edgelabel>
+        </childnode>
+      </node>
+      <node id="4954">
+        <label>Dthash_f</label>
+      </node>
+      <node id="4983">
+        <label>map_shape_t</label>
+      </node>
+      <node id="4928">
+        <label>void(*)(graph_t *g)</label>
+      </node>
+      <node id="4937">
+        <label>Agproto_t</label>
+        <link refid="structAgproto__t"/>
+        <childnode refid="4938" relation="usage">
+          <edgelabel>e</edgelabel>
+        </childnode>
+        <childnode refid="4901" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+        <childnode refid="4937" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="5001">
+        <label>gvplugin_active_device_s</label>
+        <link refid="structgvplugin__active__device__s"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5002" relation="usage">
+          <edgelabel>engine</edgelabel>
+        </childnode>
+        <childnode refid="5004" relation="usage">
+          <edgelabel>features</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4985">
+        <label>box</label>
+        <link refid="structbox"/>
+        <childnode refid="4986" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+      <node id="4922">
+        <label>port</label>
+        <link refid="structport"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>theta</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4917" relation="usage">
+          <edgelabel>bp</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>constrained</edgelabel>
+          <edgelabel>defined</edgelabel>
+          <edgelabel>side</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>dyna</edgelabel>
+          <edgelabel>clip</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="4875">
+        <label>char **</label>
+      </node>
+      <node id="4968">
+        <label>void *(*)(Agraph_t *g, Agdisc_t *)</label>
+      </node>
+      <node id="4888">
+        <label>void(*)(GVJ_t *job, char *layername, int layerNum, int numLayers)</label>
+      </node>
+      <node id="4948">
+        <label>_dtdisc_s</label>
+        <link refid="struct__dtdisc__s"/>
+        <childnode refid="4949" relation="usage">
+          <edgelabel>freef</edgelabel>
+        </childnode>
+        <childnode refid="4950" relation="usage">
+          <edgelabel>eventf</edgelabel>
+        </childnode>
+        <childnode refid="4951" relation="usage">
+          <edgelabel>makef</edgelabel>
+        </childnode>
+        <childnode refid="4952" relation="usage">
+          <edgelabel>comparf</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>key</edgelabel>
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="4953" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="4954" relation="usage">
+          <edgelabel>hashf</edgelabel>
+        </childnode>
+      </node>
+      <node id="4927">
+        <label>Agraphinfo_t</label>
+        <link refid="structAgraphinfo__t"/>
+        <childnode refid="4928" relation="usage">
+          <edgelabel>cleanup</edgelabel>
+        </childnode>
+        <childnode refid="4903" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="4929" relation="usage">
+          <edgelabel>rank</edgelabel>
+        </childnode>
+        <childnode refid="4931" relation="usage">
+          <edgelabel>drawing</edgelabel>
+        </childnode>
+        <childnode refid="4933" relation="usage">
+          <edgelabel>fontnames</edgelabel>
+        </childnode>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>ht1</edgelabel>
+          <edgelabel>ht2</edgelabel>
+          <edgelabel>dist</edgelabel>
+          <edgelabel>sum_t</edgelabel>
+          <edgelabel>t</edgelabel>
+          <edgelabel>spring</edgelabel>
+        </childnode>
+        <childnode refid="4904" relation="usage">
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="4896" relation="usage">
+          <edgelabel>dotroot</edgelabel>
+          <edgelabel>clust</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4913" relation="usage">
+          <edgelabel>ln</edgelabel>
+          <edgelabel>neato_nlist</edgelabel>
+          <edgelabel>nlist</edgelabel>
+          <edgelabel>rankleader</edgelabel>
+          <edgelabel>leader</edgelabel>
+          <edgelabel>maxrep</edgelabel>
+          <edgelabel>minrep</edgelabel>
+          <edgelabel>rn</edgelabel>
+          <edgelabel>maxset</edgelabel>
+          <edgelabel>minset</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>label_pos</edgelabel>
+          <edgelabel>set_type</edgelabel>
+          <edgelabel>installed</edgelabel>
+        </childnode>
+        <childnode refid="4906" relation="usage">
+          <edgelabel>minrank</edgelabel>
+          <edgelabel>maxrank</edgelabel>
+        </childnode>
+        <childnode refid="4934" relation="usage">
+          <edgelabel>comp</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>ranksep</edgelabel>
+          <edgelabel>move</edgelabel>
+          <edgelabel>rankdir</edgelabel>
+          <edgelabel>nodesep</edgelabel>
+          <edgelabel>level</edgelabel>
+          <edgelabel>n_cluster</edgelabel>
+        </childnode>
+        <childnode refid="4917" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="4935" relation="usage">
+          <edgelabel>n_nodes</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>flags</edgelabel>
+          <edgelabel>has_sourcerank</edgelabel>
+          <edgelabel>expanded</edgelabel>
+          <edgelabel>has_images</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+          <edgelabel>has_sinkrank</edgelabel>
+          <edgelabel>odim</edgelabel>
+          <edgelabel>ndim</edgelabel>
+          <edgelabel>has_labels</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4936" relation="usage">
+          <edgelabel>gvc</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>alg</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>border</edgelabel>
+        </childnode>
+      </node>
+      <node id="4882">
+        <label>void(*)(GVJ_t *job, char *href, char *tooltip, char *target, char *id)</label>
+      </node>
+      <node id="4964">
+        <label>Agiodisc_s</label>
+        <link refid="structAgiodisc__s"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>putstr</edgelabel>
+          <edgelabel>afread</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+      <node id="5004">
+        <label>gvdevice_features_t</label>
+        <link refid="structgvdevice__features__t"/>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>flags</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>default_pagesize</edgelabel>
+          <edgelabel>default_margin</edgelabel>
+          <edgelabel>default_dpi</edgelabel>
+        </childnode>
+      </node>
+      <node id="4925">
+        <label>polygon_t</label>
+        <link refid="structpolygon__t"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>distortion</edgelabel>
+          <edgelabel>skew</edgelabel>
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>peripheries</edgelabel>
+          <edgelabel>sides</edgelabel>
+          <edgelabel>regular</edgelabel>
+          <edgelabel>option</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+      <node id="4993">
+        <label>gvdevice_callbacks_s</label>
+        <link refid="structgvdevice__callbacks__s"/>
+        <childnode refid="4994" relation="usage">
+          <edgelabel>read</edgelabel>
+        </childnode>
+        <childnode refid="4995" relation="usage">
+          <edgelabel>modify</edgelabel>
+        </childnode>
+        <childnode refid="4996" relation="usage">
+          <edgelabel>motion</edgelabel>
+        </childnode>
+        <childnode refid="4997" relation="usage">
+          <edgelabel>button_release</edgelabel>
+          <edgelabel>button_press</edgelabel>
+        </childnode>
+        <childnode refid="4998" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="4999" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+        <childnode refid="4890" relation="usage">
+          <edgelabel>del</edgelabel>
+          <edgelabel>refresh</edgelabel>
+        </childnode>
+      </node>
+      <node id="4897">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="4897" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="4899">
+        <label>unsigned</label>
+      </node>
+      <node id="4921">
+        <label>shape_functions</label>
+        <link refid="structshape__functions"/>
+        <childnode refid="4922" relation="usage">
+          <edgelabel>portfn</edgelabel>
+        </childnode>
+        <childnode refid="4891" relation="usage">
+          <edgelabel>insidefn</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>pboxfn</edgelabel>
+        </childnode>
+        <childnode refid="4923" relation="usage">
+          <edgelabel>freefn</edgelabel>
+          <edgelabel>initfn</edgelabel>
+        </childnode>
+        <childnode refid="4924" relation="usage">
+          <edgelabel>codefn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4923">
+        <label>void(*)(node_t *)</label>
+      </node>
+      <node id="4995">
+        <label>void(*)(GVJ_t *job, const char *name, const char *value)</label>
+      </node>
+      <node id="4887">
+        <label>void(*)(GVJ_t *job, pointf *A, int n, int filled)</label>
+      </node>
+      <node id="4961">
+        <label>Agcbstack_s</label>
+        <link refid="structAgcbstack__s"/>
+        <childnode refid="4961" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+        <childnode refid="4911" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="4962" relation="usage">
+          <edgelabel>f</edgelabel>
+        </childnode>
+      </node>
+      <node id="4949">
+        <label>Dtfree_f</label>
+      </node>
+      <node id="4959">
+        <label>Agdesc_s</label>
+        <link refid="structAgdesc__s"/>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>maingraph</edgelabel>
+          <edgelabel>no_write</edgelabel>
+          <edgelabel>has_attrs</edgelabel>
+          <edgelabel>no_loop</edgelabel>
+          <edgelabel>strict</edgelabel>
+          <edgelabel>directed</edgelabel>
+          <edgelabel>flatlock</edgelabel>
+          <edgelabel>has_cmpnd</edgelabel>
+        </childnode>
+      </node>
+      <node id="4991">
+        <label>const char **</label>
+      </node>
+      <node id="4984">
+        <label>pen_type</label>
+      </node>
+      <node id="4895">
+        <label>obj_state_s</label>
+        <link refid="structobj__state__s"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>z</edgelabel>
+          <edgelabel>head_z</edgelabel>
+          <edgelabel>tail_z</edgelabel>
+          <edgelabel>penwidth</edgelabel>
+        </childnode>
+        <childnode refid="4896" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>sg</edgelabel>
+        </childnode>
+        <childnode refid="4913" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+        <childnode refid="4895" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>labeltooltip</edgelabel>
+          <edgelabel>tailtarget</edgelabel>
+          <edgelabel>tailtooltip</edgelabel>
+          <edgelabel>labelurl</edgelabel>
+          <edgelabel>headtarget</edgelabel>
+          <edgelabel>tailurl</edgelabel>
+          <edgelabel>headurl</edgelabel>
+          <edgelabel>url</edgelabel>
+          <edgelabel>taillabel</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4978" relation="usage">
+          <edgelabel>fill</edgelabel>
+        </childnode>
+        <childnode refid="4979" relation="usage">
+          <edgelabel>gradient_frac</edgelabel>
+        </childnode>
+        <childnode refid="4898" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>explicit_tailurl</edgelabel>
+          <edgelabel>gradient_angle</edgelabel>
+          <edgelabel>tailendurl_map_n</edgelabel>
+          <edgelabel>explicit_edgetarget</edgelabel>
+          <edgelabel>explicit_tailtarget</edgelabel>
+          <edgelabel>explicit_tailtooltip</edgelabel>
+          <edgelabel>explicit_tooltip</edgelabel>
+          <edgelabel>url_bsplinemap_n</edgelabel>
+          <edgelabel>url_bsplinemap_poly_n</edgelabel>
+          <edgelabel>headendurl_map_n</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4980" relation="usage">
+          <edgelabel>fillcolor</edgelabel>
+          <edgelabel>pencolor</edgelabel>
+          <edgelabel>stopcolor</edgelabel>
+        </childnode>
+        <childnode refid="4981" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4982" relation="usage">
+          <edgelabel>emit_state</edgelabel>
+        </childnode>
+        <childnode refid="4983" relation="usage">
+          <edgelabel>url_map_shape</edgelabel>
+        </childnode>
+        <childnode refid="4984" relation="usage">
+          <edgelabel>pen</edgelabel>
+        </childnode>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>tailendurl_map_p</edgelabel>
+          <edgelabel>url_map_p</edgelabel>
+          <edgelabel>headendurl_map_p</edgelabel>
+          <edgelabel>url_bsplinemap_p</edgelabel>
+        </childnode>
+        <childnode refid="4919" relation="usage">
+          <edgelabel>e</edgelabel>
+        </childnode>
+      </node>
+      <node id="5002">
+        <label>gvdevice_engine_s</label>
+        <link refid="structgvdevice__engine__s"/>
+        <childnode refid="5003" relation="usage">
+          <edgelabel>finalize</edgelabel>
+          <edgelabel>initialize</edgelabel>
+          <edgelabel>format</edgelabel>
+        </childnode>
+      </node>
+      <node id="4873">
+        <label>char</label>
+      </node>
+      <node id="4916">
+        <label>Agsubnode_s</label>
+        <link refid="structAgsubnode__s"/>
+        <childnode refid="4897" relation="usage">
+          <edgelabel>in_id</edgelabel>
+          <edgelabel>id_link</edgelabel>
+          <edgelabel>in_seq</edgelabel>
+          <edgelabel>out_seq</edgelabel>
+          <edgelabel>out_id</edgelabel>
+          <edgelabel>seq_link</edgelabel>
+        </childnode>
+        <childnode refid="4901" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="4919">
+        <label>Agedge_s</label>
+        <link refid="structAgedge__s"/>
+        <childnode refid="4897" relation="usage">
+          <edgelabel>id_link</edgelabel>
+          <edgelabel>seq_link</edgelabel>
+        </childnode>
+        <childnode refid="4901" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="4914" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="4938">
+        <label>Agedge_t</label>
+        <link refid="structAgedge__t"/>
+        <childnode refid="4901" relation="usage">
+          <edgelabel>head</edgelabel>
+          <edgelabel>tail</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>attr</edgelabel>
+          <edgelabel>didset</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>printkey</edgelabel>
+          <edgelabel>handle</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4939" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+      </node>
+      <node id="4892">
+        <label>gvplugin_active_loadimage_t</label>
+        <link refid="structgvplugin__active__loadimage__t"/>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4877" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4893" relation="usage">
+          <edgelabel>engine</edgelabel>
+        </childnode>
+      </node>
+      <node id="4879">
+        <label>void(*)(GVJ_t *job, label_type type)</label>
+      </node>
+      <node id="4950">
+        <label>Dtevent_f</label>
+      </node>
+      <node id="4876">
+        <label>color_type_t</label>
+      </node>
+      <node id="4998">
+        <label>void(*)(GVJ_t *job, const char *format, const char *filename)</label>
+      </node>
+      <node id="4909">
+        <label>textfont_t</label>
+        <link refid="structtextfont__t"/>
+        <childnode refid="4871" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="4873" relation="usage">
+          <edgelabel>name</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="4910" relation="usage">
+          <edgelabel>postscript_alias</edgelabel>
+        </childnode>
+        <childnode refid="4899" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="4917">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="4912" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/gvcjob.h" line="270" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="270" bodyend="371"/>
+    <listofallmembers>
+      <member refid="structGVJ__s_1a495f696f150e1783c866bb962f1492ad" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>active_tooltip</name></member>
+      <member refid="structGVJ__s_1a467d9cb63aef2952d17062bbdd059ce4" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>bb</name></member>
+      <member refid="structGVJ__s_1aa74767ae7fb43838cffab78cb070ecf3" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>boundingBox</name></member>
+      <member refid="structGVJ__s_1a34ef13bb3aca34988f182397a03ddf58" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>button</name></member>
+      <member refid="structGVJ__s_1a420b1ebf4c6cd958dcb5f5cce9ac7691" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>callbacks</name></member>
+      <member refid="structGVJ__s_1ab79b9bda0057e30579e491cf2e6043c7" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>canvasBox</name></member>
+      <member refid="structGVJ__s_1a5875d1b052f9c1da66008606c1045937" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>click</name></member>
+      <member refid="structGVJ__s_1a27f43293e7efed88e0f3d6a659b5a808" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>clip</name></member>
+      <member refid="structGVJ__s_1a9ab244fc7b03a142509df51b8c15982c" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>common</name></member>
+      <member refid="structGVJ__s_1a64830ffbd1737c52ae85d6d0fb22831c" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>context</name></member>
+      <member refid="structGVJ__s_1a140f56fd1588cdecdae80154732b1364" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>current_obj</name></member>
+      <member refid="structGVJ__s_1a4cfcfe68c4de55779272f4018962d9b8" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>device</name></member>
+      <member refid="structGVJ__s_1aa5798205b1140cb5629d61c3e092683c" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>device_dpi</name></member>
+      <member refid="structGVJ__s_1a120b1e86029d59aee9fb9f2aed859389" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>device_sets_dpi</name></member>
+      <member refid="structGVJ__s_1a8ea411b5b762e464b77fdacaa9e3bc78" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>devscale</name></member>
+      <member refid="structGVJ__s_1a764ccadd64f751ef3e62f964917514a4" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>display</name></member>
+      <member refid="structGVJ__s_1a407924052cc9e202a9049a3459b8be25" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>dpi</name></member>
+      <member refid="structGVJ__s_1a2db95d9d56b32107f107d7d7e39cf89e" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>external_context</name></member>
+      <member refid="structGVJ__s_1ad9252e2450b3638ba6a58727ce9cbf4f" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>fit_mode</name></member>
+      <member refid="structGVJ__s_1a229f318e0a40f64ee14fa48403b420b3" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>flags</name></member>
+      <member refid="structGVJ__s_1a97b66020d5c48e04cc8e7bfbdd92604a" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>focus</name></member>
+      <member refid="structGVJ__s_1ae1f25b3227421cb79a058d93f437b037" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>graph_index</name></member>
+      <member refid="structGVJ__s_1ab9f701ce9e14e718974579da1324ce93" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>gvc</name></member>
+      <member refid="structGVJ__s_1a8d5a63b6e629c7aa2af59ebc7cf119c8" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>has_been_rendered</name></member>
+      <member refid="structGVJ__s_1ae0af15fbc847abe9d1c07e500dcbe6d6" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>has_grown</name></member>
+      <member refid="structGVJ__s_1aff7f63596a03a702ac81ced539ce9dd5" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>height</name></member>
+      <member refid="structGVJ__s_1a173b26cd25c7ca03973f5f054d9da2bc" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>imagedata</name></member>
+      <member refid="structGVJ__s_1ae104856f5323392e3017dc430e7faae9" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>input_filename</name></member>
+      <member refid="structGVJ__s_1a63b502b4c43204061b38859e2817ce36" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>keybindings</name></member>
+      <member refid="structGVJ__s_1a6ee50f25f739863b055c8c0912f58ba1" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>keycodes</name></member>
+      <member refid="structGVJ__s_1abb36098c4e1c4fa70723cfe2726ab05b" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>layerNum</name></member>
+      <member refid="structGVJ__s_1aab3eab903c84af0622ba9128d7f21382" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>layout_type</name></member>
+      <member refid="structGVJ__s_1a3a61e329c5f6657a34601099afb4255c" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>loadimage</name></member>
+      <member refid="structGVJ__s_1a33e6ec2c386e79a238893dcfbfdf81cd" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>margin</name></member>
+      <member refid="structGVJ__s_1a5144c245c67b228381d45ca750a69bb2" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>needs_refresh</name></member>
+      <member refid="structGVJ__s_1a0f52091bcfcaaaa0fd8e0d10cb4afff0" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>next</name></member>
+      <member refid="structGVJ__s_1afa286d4946319b5194646ed12ede3172" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>next_active</name></member>
+      <member refid="structGVJ__s_1afbdb202145b0355b3a50f9bab87a81e1" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>numkeys</name></member>
+      <member refid="structGVJ__s_1aca0d52f7d0ac15f43895a9563c169665" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>numLayers</name></member>
+      <member refid="structGVJ__s_1ad8d2942d661c53d0939a822e1e70b8d6" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>numPages</name></member>
+      <member refid="structGVJ__s_1a44ffb5f110d308af695e3a018e2f5a39" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>obj</name></member>
+      <member refid="structGVJ__s_1af84d07cd0a5249a05873b4112bb4817f" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>oldpointer</name></member>
+      <member refid="structGVJ__s_1a5d3304c201c3fb12979e490e21aa9d2f" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_data</name></member>
+      <member refid="structGVJ__s_1adc869f83a6238348480f4765414f5c01" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_data_allocated</name></member>
+      <member refid="structGVJ__s_1af4637901a3c63cacc86dd101ace84e8c" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_data_position</name></member>
+      <member refid="structGVJ__s_1aa26a7ae90613b8ba8998ad9349e7e240" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_file</name></member>
+      <member refid="structGVJ__s_1a3274d07a8e222e5b0dd980b2d2646353" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_filename</name></member>
+      <member refid="structGVJ__s_1a4218b0118ee56dcb61554b95df15eb92" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_lang</name></member>
+      <member refid="structGVJ__s_1ae1ac152c41d1cbdad5985701a8ff520f" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>output_langname</name></member>
+      <member refid="structGVJ__s_1af317a6ccf3a9c3bfd30f7acfebffc8c7" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pad</name></member>
+      <member refid="structGVJ__s_1aa65400f688e5a55542d78a7e0895e77a" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pageBoundingBox</name></member>
+      <member refid="structGVJ__s_1ade176a7ef34192906b3a0d9a768c0531" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pageBox</name></member>
+      <member refid="structGVJ__s_1a72a37c77ccb37a2d3ca571321ce34790" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pagesArrayElem</name></member>
+      <member refid="structGVJ__s_1aa149d3dc69fdbf0bd65e2e18385e3a6f" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pagesArrayFirst</name></member>
+      <member refid="structGVJ__s_1a8ff911bab3a238320610a9f5396dc4f8" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pagesArrayMajor</name></member>
+      <member refid="structGVJ__s_1a822f7b6818edd83b3ee8372d11e2a0a1" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pagesArrayMinor</name></member>
+      <member refid="structGVJ__s_1a343ebd309080301793f10b20f5d06fd6" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pagesArraySize</name></member>
+      <member refid="structGVJ__s_1a33f9ae349f2c963f8c5eb688dfbe7f2a" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pageSize</name></member>
+      <member refid="structGVJ__s_1a82e616ad7b025f257a223c88ce0106c7" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>pointer</name></member>
+      <member refid="structGVJ__s_1a7c677fb2a5098a0a31317fab379003fb" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>render</name></member>
+      <member refid="structGVJ__s_1a0454cd254446c0c665668753d3101fe0" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>rotation</name></member>
+      <member refid="structGVJ__s_1aaa5f8435371e394c3198ec28b2b64a38" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>scale</name></member>
+      <member refid="structGVJ__s_1a275e59c24ae814353b5ae869ce4260bf" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>screen</name></member>
+      <member refid="structGVJ__s_1a498a5e939b92f7944e1c83a79f0fae99" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>selected_href</name></member>
+      <member refid="structGVJ__s_1a9492bc5460537eb36a1afadaf259017a" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>selected_obj</name></member>
+      <member refid="structGVJ__s_1a2e3d9746085b08699ab3ce35142aeefe" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>selected_obj_attributes</name></member>
+      <member refid="structGVJ__s_1aa201cde2f96331974ab3fb10c03a9a28" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>selected_obj_type_name</name></member>
+      <member refid="structGVJ__s_1af9b309b5c532cb1e9c99d0887e4afe1d" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>translation</name></member>
+      <member refid="structGVJ__s_1a8730f8538f37b391b283cce40d8e22ce" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>view</name></member>
+      <member refid="structGVJ__s_1abe26e05b4aa822e54bce9fc43df91544" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>width</name></member>
+      <member refid="structGVJ__s_1acb540b2b04de30dc35616a60d1c848cb" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>window</name></member>
+      <member refid="structGVJ__s_1aa7150d5a2b906bb0d55a3bbde37bd174" prot="public" virt="non-virtual"><scope>GVJ_s</scope><name>zoom</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

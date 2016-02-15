@@ -1,0 +1,1326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvcjob_8h" kind="file" language="C++">
+    <compoundname>gvcjob.h</compoundname>
+    <includes refid="gvcommon_8h" local="yes">gvcommon.h</includes>
+    <includes refid="color_8h" local="yes">color.h</includes>
+    <includedby refid="gvplugin__device_8h" local="yes">graphviz/release/include/graphviz/gvplugin_device.h</includedby>
+    <includedby refid="gvplugin__layout_8h" local="yes">graphviz/release/include/graphviz/gvplugin_layout.h</includedby>
+    <includedby refid="gvplugin__loadimage_8h" local="yes">graphviz/release/include/graphviz/gvplugin_loadimage.h</includedby>
+    <includedby refid="gvplugin__render_8h" local="yes">graphviz/release/include/graphviz/gvplugin_render.h</includedby>
+    <includedby refid="gvplugin__textlayout_8h" local="yes">graphviz/release/include/graphviz/gvplugin_textlayout.h</includedby>
+    <incdepgraph>
+      <node id="1945">
+        <label>graphviz/release/include/graphviz/gvcjob.h</label>
+        <link refid="gvcjob.h"/>
+        <childnode refid="1946" relation="include">
+        </childnode>
+        <childnode refid="1947" relation="include">
+        </childnode>
+      </node>
+      <node id="1947">
+        <label>color.h</label>
+        <link refid="color_8h"/>
+      </node>
+      <node id="1946">
+        <label>gvcommon.h</label>
+        <link refid="gvcommon_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1951">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1949">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1952">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1948">
+        <label>graphviz/release/include/graphviz/gvcjob.h</label>
+        <link refid="gvcjob.h"/>
+        <childnode refid="1949" relation="include">
+        </childnode>
+        <childnode refid="1950" relation="include">
+        </childnode>
+        <childnode refid="1951" relation="include">
+        </childnode>
+        <childnode refid="1952" relation="include">
+        </childnode>
+        <childnode refid="1953" relation="include">
+        </childnode>
+      </node>
+      <node id="1950">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1953">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgvrender__features__t" prot="public">gvrender_features_t</innerclass>
+    <innerclass refid="structgvdevice__features__t" prot="public">gvdevice_features_t</innerclass>
+    <innerclass refid="structgvplugin__active__device__s" prot="public">gvplugin_active_device_s</innerclass>
+    <innerclass refid="structgvplugin__active__render__s" prot="public">gvplugin_active_render_s</innerclass>
+    <innerclass refid="structgvplugin__active__loadimage__t" prot="public">gvplugin_active_loadimage_t</innerclass>
+    <innerclass refid="structgv__argvlist__s" prot="public">gv_argvlist_s</innerclass>
+    <innerclass refid="structgvdevice__callbacks__s" prot="public">gvdevice_callbacks_s</innerclass>
+    <innerclass refid="structgvevent__key__binding__s" prot="public">gvevent_key_binding_s</innerclass>
+    <innerclass refid="structobj__state__s" prot="public">obj_state_s</innerclass>
+    <innerclass refid="structGVJ__s" prot="public">GVJ_s</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gvcjob_8h_1a4163b4a4e9d8f2949741962dca6c5944" prot="public" static="no">
+        <name>ARRAY_SIZE</name>
+        <param><defname>A</defname></param>
+        <initializer>(sizeof(A)/sizeof(A[0]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="26" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1ad03a35ae3e8eb2d22ba05e3ab13469c2" prot="public" static="no">
+        <name>PENWIDTH_NORMAL</name>
+        <initializer>1.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="40" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1aa9d4b93a7285736626367c79e6a7e65b" prot="public" static="no">
+        <name>PENWIDTH_BOLD</name>
+        <initializer>2.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="41" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a33cff4ced6fee87fe933a71a93d1ddd8" prot="public" static="no">
+        <name>EMIT_SORTED</name>
+        <initializer>(1&lt;&lt;0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="84" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1ae4042465ba24c90c087a0e3071ea8939" prot="public" static="no">
+        <name>EMIT_COLORS</name>
+        <initializer>(1&lt;&lt;1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="85" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a01da62f83c93432d776dfb82ee06cc7f" prot="public" static="no">
+        <name>EMIT_CLUSTERS_LAST</name>
+        <initializer>(1&lt;&lt;2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="86" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a995caee67c9846d771eefc6132318bbc" prot="public" static="no">
+        <name>EMIT_PREORDER</name>
+        <initializer>(1&lt;&lt;3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="87" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a409796dc1ac7058fa2a40d578a7297cc" prot="public" static="no">
+        <name>EMIT_EDGE_SORTED</name>
+        <initializer>(1&lt;&lt;4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="88" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a67eb586db6b3ae361191f4fa2f0d6517" prot="public" static="no">
+        <name>GVDEVICE_DOES_PAGES</name>
+        <initializer>(1&lt;&lt;5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="89" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a6a8bc9b005d1a7185df952fa8c618c8c" prot="public" static="no">
+        <name>GVDEVICE_DOES_LAYERS</name>
+        <initializer>(1&lt;&lt;6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="90" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1aa811a27986a93bb5f01e98426b9331e5" prot="public" static="no">
+        <name>GVDEVICE_EVENTS</name>
+        <initializer>(1&lt;&lt;7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="91" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a6ee2b7613e1ad8bae8dd3a884ec58c06" prot="public" static="no">
+        <name>GVDEVICE_DOES_TRUECOLOR</name>
+        <initializer>(1&lt;&lt;8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="92" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a7a9454ee5e1bc0aa49d8c39c468b66c4" prot="public" static="no">
+        <name>GVDEVICE_BINARY_FORMAT</name>
+        <initializer>(1&lt;&lt;9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="93" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a2c946332a8e7484bda55e93d62e7312d" prot="public" static="no">
+        <name>GVDEVICE_COMPRESSED_FORMAT</name>
+        <initializer>(1&lt;&lt;10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="94" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a106f6008cfc71d48b8b67cd47c530e6d" prot="public" static="no">
+        <name>GVDEVICE_NO_WRITER</name>
+        <initializer>(1&lt;&lt;11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="95" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1addcf4609271d0fed66432102fcc49e60" prot="public" static="no">
+        <name>GVRENDER_Y_GOES_DOWN</name>
+        <initializer>(1&lt;&lt;12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="96" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1ad6673704b17c99db9588bfe4bea1ceae" prot="public" static="no">
+        <name>GVRENDER_DOES_TRANSFORM</name>
+        <initializer>(1&lt;&lt;13)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="97" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1aabb425dac84ebb15dc214b6b24efe51a" prot="public" static="no">
+        <name>GVRENDER_DOES_ARROWS</name>
+        <initializer>(1&lt;&lt;14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="98" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a42800cf2328a05b351d97de328f71835" prot="public" static="no">
+        <name>GVRENDER_DOES_LABELS</name>
+        <initializer>(1&lt;&lt;15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="99" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1aaa937a02c6c7be59cdab7b6f82da6586" prot="public" static="no">
+        <name>GVRENDER_DOES_MAPS</name>
+        <initializer>(1&lt;&lt;16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="100" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1af2ff5cf11d0ecef08c1e384a04f959e1" prot="public" static="no">
+        <name>GVRENDER_DOES_MAP_RECTANGLE</name>
+        <initializer>(1&lt;&lt;17)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="101" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1af6d511694b77a3a5571a8dc0126fcdb9" prot="public" static="no">
+        <name>GVRENDER_DOES_MAP_CIRCLE</name>
+        <initializer>(1&lt;&lt;18)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="102" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1af0bcd860ee725637b5103ffe3a30ea62" prot="public" static="no">
+        <name>GVRENDER_DOES_MAP_POLYGON</name>
+        <initializer>(1&lt;&lt;19)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="103" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a1a555b3636bc63f4552b4a16be7f89ee" prot="public" static="no">
+        <name>GVRENDER_DOES_MAP_ELLIPSE</name>
+        <initializer>(1&lt;&lt;20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="104" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1acf41c3ae6a6d67d1ad1e1f5c1ae516f0" prot="public" static="no">
+        <name>GVRENDER_DOES_MAP_BSPLINE</name>
+        <initializer>(1&lt;&lt;21)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="105" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a3abe26a1a0e7d49d56453a51959594dd" prot="public" static="no">
+        <name>GVRENDER_DOES_TOOLTIPS</name>
+        <initializer>(1&lt;&lt;22)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="106" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1ab011b585d098198162a67fb32cae2cd0" prot="public" static="no">
+        <name>GVRENDER_DOES_TARGETS</name>
+        <initializer>(1&lt;&lt;23)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="107" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a3d70997394b899458fd789d902b1764e" prot="public" static="no">
+        <name>GVRENDER_DOES_Z</name>
+        <initializer>(1&lt;&lt;24)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="108" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a4a3678c81c256d0d298d18a3e72cbcab" prot="public" static="no">
+        <name>GVRENDER_NO_WHITE_BG</name>
+        <initializer>(1&lt;&lt;25)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="109" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a862bdd7c9410e889ce13a7728af40bbb" prot="public" static="no">
+        <name>LAYOUT_NOT_REQUIRED</name>
+        <initializer>(1&lt;&lt;26)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="110" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a430d4d79ac8eba41cf38a7f11265dee4" prot="public" static="no">
+        <name>OUTPUT_NOT_REQUIRED</name>
+        <initializer>(1&lt;&lt;27)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="111" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcjob_8h_1a5370b8bc484c0586d8537944b1f3a8b3" prot="public" static="no">
+        <name>LAYOUT_USES_RANKDIR</name>
+        <initializer>(1&lt;&lt;0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="128" column="9" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44" prot="public" static="no">
+        <name>pen_type</name>
+        <enumvalue id="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44a1ea6f58bfade3f78fe217ef328fce04d" prot="public">
+          <name>PEN_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44ab1f05ac68389e236654d79692b26e7ff" prot="public">
+          <name>PEN_DASHED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44aa7d50db1156eddf79a8c8c316d3790b1" prot="public">
+          <name>PEN_DOTTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44a9dd963620972293d3b7821d923ce51d9" prot="public">
+          <name>PEN_SOLID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="35" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72" prot="public" static="no">
+        <name>fill_type</name>
+        <enumvalue id="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a4d3aeee5877e819284efa1e457b22f34" prot="public">
+          <name>FILL_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a9d6d4108c1f3913f3a4b6a09a9962809" prot="public">
+          <name>FILL_SOLID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a4a6e86dd59b94007d997b9cb3c5e2e33" prot="public">
+          <name>FILL_LINEAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a333224a0f8e27c7b44dd3786468a53d6" prot="public">
+          <name>FILL_RADIAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="36" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591" prot="public" static="no">
+        <name>font_type</name>
+        <enumvalue id="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591a5162dac0177f2dd4e0a8435e5184e359" prot="public">
+          <name>FONT_REGULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591a7a078f2b20d42d7f352d35396217e1ba" prot="public">
+          <name>FONT_BOLD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591aff11f5dd59d891ef3b880dbccca4ea2a" prot="public">
+          <name>FONT_ITALIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="37" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38" prot="public" static="no">
+        <name>label_type</name>
+        <enumvalue id="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38ac99e5e928ef0f8ce232b1758b68ba244" prot="public">
+          <name>LABEL_PLAIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38a666836f69dad5233e18b0ee914d1cd7d" prot="public">
+          <name>LABEL_HTML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="38" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18" prot="public" static="no">
+        <name>gvattr_t</name>
+        <enumvalue id="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18af82282feff99df6db7990b718e9e4aff" prot="public">
+          <name>GVATTR_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18ab361c9957d953d10f940086f828994ba" prot="public">
+          <name>GVATTR_BOOL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18aeb9159ae9c5b896b9ebdadeda52857e0" prot="public">
+          <name>GVATTR_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="42" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bb" prot="public" static="no">
+        <name>map_shape_t</name>
+        <enumvalue id="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bba93750fa7b7e32fdde29435cbc49c0990" prot="public">
+          <name>MAP_RECTANGLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bba52bb0ede7a27b16527d915d512786bf8" prot="public">
+          <name>MAP_CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bba8b0f19b8c292d1d2e9772feb41cc4496" prot="public">
+          <name>MAP_POLYGON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="175" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92" prot="public" static="no">
+        <name>obj_type</name>
+        <enumvalue id="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a552c0763f679b759c8083a2312db5670" prot="public">
+          <name>ROOTGRAPH_OBJTYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a32600cff05c8f94a126d59b08bbac81c" prot="public">
+          <name>CLUSTER_OBJTYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a97f20f6ae4bbbf503430fb49f051a61e" prot="public">
+          <name>NODE_OBJTYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a4b2fac9faf34f5eb8777db67b361e35f" prot="public">
+          <name>EDGE_OBJTYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="177" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="enum" id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0" prot="public" static="no">
+        <name>emit_state_t</name>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a68607c437efe73900c9263cd4f03b9a2" prot="public">
+          <name>EMIT_GDRAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a0e2e1037a7ea49ba93e1660b916905ab" prot="public">
+          <name>EMIT_CDRAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a2b3a09852e892aef3b852d6015725cfb" prot="public">
+          <name>EMIT_TDRAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a3e59bbb4aff494333b724015f3391986" prot="public">
+          <name>EMIT_HDRAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ac9c989cb015d82004843b3cd9ccabce7" prot="public">
+          <name>EMIT_GLABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0aef804da377cf9ba079e759674b76fdf8" prot="public">
+          <name>EMIT_CLABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0af46f555368f3e4b5ab9f135588ec5995" prot="public">
+          <name>EMIT_TLABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a449206c43bd305ad3caee2c54c04a892" prot="public">
+          <name>EMIT_HLABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a1d814d818b407b71c600c5c59cbf43ae" prot="public">
+          <name>EMIT_NDRAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ae215588aa83a61551880c7783ff2eb4c" prot="public">
+          <name>EMIT_EDRAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ac27f9399c30523b952cdef6b74a016bd" prot="public">
+          <name>EMIT_NLABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0accb8094c46739f15f6a36a30392bdeba" prot="public">
+          <name>EMIT_ELABEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="182" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="182" bodyend="186"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gvcjob_8h_1acc098e86302e99b8dd0a76e841b01e87" prot="public" static="no">
+        <type>struct <ref refid="structgvdevice__engine__s" kindref="compound">gvdevice_engine_s</ref></type>
+        <definition>typedef struct gvdevice_engine_s gvdevice_engine_t</definition>
+        <argsstring></argsstring>
+        <name>gvdevice_engine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1aa97e4762258d383100569d7edf4f3199" prot="public" static="no">
+        <type>struct gvformatter_engine_s</type>
+        <definition>typedef struct gvformatter_engine_s gvformatter_engine_t</definition>
+        <argsstring></argsstring>
+        <name>gvformatter_engine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1aa1b4a9a81e4c8d4e96a557de936fcb44" prot="public" static="no">
+        <type>struct <ref refid="structgvrender__engine__s" kindref="compound">gvrender_engine_s</ref></type>
+        <definition>typedef struct gvrender_engine_s gvrender_engine_t</definition>
+        <argsstring></argsstring>
+        <name>gvrender_engine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a6239c348363fd19ac844b85bbcaee9ec" prot="public" static="no">
+        <type>struct <ref refid="structgvlayout__engine__s" kindref="compound">gvlayout_engine_s</ref></type>
+        <definition>typedef struct gvlayout_engine_s gvlayout_engine_t</definition>
+        <argsstring></argsstring>
+        <name>gvlayout_engine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1af590c2b964f21ea238a2f2ab665215a8" prot="public" static="no">
+        <type>struct <ref refid="structgvtextlayout__engine__s" kindref="compound">gvtextlayout_engine_s</ref></type>
+        <definition>typedef struct gvtextlayout_engine_s gvtextlayout_engine_t</definition>
+        <argsstring></argsstring>
+        <name>gvtextlayout_engine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a73586fb7b758379b308c315388f92a09" prot="public" static="no">
+        <type>struct <ref refid="structgvloadimage__engine__s" kindref="compound">gvloadimage_engine_s</ref></type>
+        <definition>typedef struct gvloadimage_engine_s gvloadimage_engine_t</definition>
+        <argsstring></argsstring>
+        <name>gvloadimage_engine_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="61" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a911dc300e8ab12be9c5efe8168311861" prot="public" static="no">
+        <type>struct <ref refid="structgvplugin__active__device__s" kindref="compound">gvplugin_active_device_s</ref></type>
+        <definition>typedef struct gvplugin_active_device_s  gvplugin_active_device_t</definition>
+        <argsstring></argsstring>
+        <name>gvplugin_active_device_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a60a8dbe816df29fb9bbf092aa9d857d9" prot="public" static="no">
+        <type>struct <ref refid="structgvplugin__active__render__s" kindref="compound">gvplugin_active_render_s</ref></type>
+        <definition>typedef struct gvplugin_active_render_s  gvplugin_active_render_t</definition>
+        <argsstring></argsstring>
+        <name>gvplugin_active_render_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a7ea6b51ad09b79dc67498693a2301440" prot="public" static="no">
+        <type>struct <ref refid="structgvplugin__active__loadimage__t" kindref="compound">gvplugin_active_loadimage_t</ref></type>
+        <definition>typedef struct gvplugin_active_loadimage_t  gvplugin_active_loadimage_t</definition>
+        <argsstring></argsstring>
+        <name>gvplugin_active_loadimage_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1acae33e05df363c42d2d5661e03ac8e50" prot="public" static="no">
+        <type>struct <ref refid="structgv__argvlist__s" kindref="compound">gv_argvlist_s</ref></type>
+        <definition>typedef struct gv_argvlist_s  gv_argvlist_t</definition>
+        <argsstring></argsstring>
+        <name>gv_argvlist_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1acc50ede9232c78aa3ff4bff97ffb4248" prot="public" static="no">
+        <type>struct <ref refid="structgvdevice__callbacks__s" kindref="compound">gvdevice_callbacks_s</ref></type>
+        <definition>typedef struct gvdevice_callbacks_s  gvdevice_callbacks_t</definition>
+        <argsstring></argsstring>
+        <name>gvdevice_callbacks_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a4f6a6d73e7cd18369649c5cce7f65278" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* gvevent_key_callback_t) (GVJ_t *job)</definition>
+        <argsstring>)(GVJ_t *job)</argsstring>
+        <name>gvevent_key_callback_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="168" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1aacafc045edb2325f10b1c592898615ab" prot="public" static="no">
+        <type>struct <ref refid="structgvevent__key__binding__s" kindref="compound">gvevent_key_binding_s</ref></type>
+        <definition>typedef struct gvevent_key_binding_s  gvevent_key_binding_t</definition>
+        <argsstring></argsstring>
+        <name>gvevent_key_binding_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcjob_8h_1a02731e816998f46b1511d36eff0260ec" prot="public" static="no">
+        <type>struct <ref refid="structobj__state__s" kindref="compound">obj_state_s</ref></type>
+        <definition>typedef struct obj_state_s obj_state_t</definition>
+        <argsstring></argsstring>
+        <name>obj_state_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcjob.h" line="168" column="1" bodyfile="graphviz/release/include/graphviz/gvcjob.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Common<sp/>header<sp/>used<sp/>by<sp/>both<sp/>clients<sp/>and<sp/>plugins<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVCJOB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVCJOB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvcommon_8h" kindref="compound">gvcommon.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="color_8h" kindref="compound">color.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="gvcjob_8h_1a4163b4a4e9d8f2949741962dca6c5944" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ARRAY_SIZE(A)<sp/>(sizeof(A)/sizeof(A[0]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="gvcjob_8h_1acc098e86302e99b8dd0a76e841b01e87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvdevice__engine__s" kindref="compound">gvdevice_engine_s</ref><sp/><ref refid="structgvdevice__engine__s" kindref="compound">gvdevice_engine_t</ref>;</highlight></codeline>
+<codeline lineno="29" refid="gvcjob_8h_1aa97e4762258d383100569d7edf4f3199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gvformatter_engine_s<sp/><ref refid="gvcjob_8h_1aa97e4762258d383100569d7edf4f3199" kindref="member">gvformatter_engine_t</ref>;</highlight></codeline>
+<codeline lineno="30" refid="gvcjob_8h_1aa1b4a9a81e4c8d4e96a557de936fcb44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvrender__engine__s" kindref="compound">gvrender_engine_s</ref><sp/><ref refid="structgvrender__engine__s" kindref="compound">gvrender_engine_t</ref>;</highlight></codeline>
+<codeline lineno="31" refid="gvcjob_8h_1a6239c348363fd19ac844b85bbcaee9ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvlayout__engine__s" kindref="compound">gvlayout_engine_s</ref><sp/><ref refid="structgvlayout__engine__s" kindref="compound">gvlayout_engine_t</ref>;</highlight></codeline>
+<codeline lineno="32" refid="gvcjob_8h_1af590c2b964f21ea238a2f2ab665215a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvtextlayout__engine__s" kindref="compound">gvtextlayout_engine_s</ref><sp/><ref refid="structgvtextlayout__engine__s" kindref="compound">gvtextlayout_engine_t</ref>;</highlight></codeline>
+<codeline lineno="33" refid="gvcjob_8h_1a73586fb7b758379b308c315388f92a09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvloadimage__engine__s" kindref="compound">gvloadimage_engine_s</ref><sp/><ref refid="structgvloadimage__engine__s" kindref="compound">gvloadimage_engine_t</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44a1ea6f58bfade3f78fe217ef328fce04d" kindref="member">PEN_NONE</ref>,<sp/><ref refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44ab1f05ac68389e236654d79692b26e7ff" kindref="member">PEN_DASHED</ref>,<sp/><ref refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44aa7d50db1156eddf79a8c8c316d3790b1" kindref="member">PEN_DOTTED</ref>,<sp/><ref refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44a9dd963620972293d3b7821d923ce51d9" kindref="member">PEN_SOLID</ref><sp/>}<sp/><ref refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44" kindref="member">pen_type</ref>;</highlight></codeline>
+<codeline lineno="36" refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a4d3aeee5877e819284efa1e457b22f34" kindref="member">FILL_NONE</ref>,<sp/><ref refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a9d6d4108c1f3913f3a4b6a09a9962809" kindref="member">FILL_SOLID</ref>,<sp/><ref refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a4a6e86dd59b94007d997b9cb3c5e2e33" kindref="member">FILL_LINEAR</ref>,<sp/><ref refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72a333224a0f8e27c7b44dd3786468a53d6" kindref="member">FILL_RADIAL</ref><sp/>}<sp/><ref refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72" kindref="member">fill_type</ref>;</highlight></codeline>
+<codeline lineno="37" refid="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591a5162dac0177f2dd4e0a8435e5184e359" kindref="member">FONT_REGULAR</ref>,<sp/><ref refid="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591a7a078f2b20d42d7f352d35396217e1ba" kindref="member">FONT_BOLD</ref>,<sp/><ref refid="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591aff11f5dd59d891ef3b880dbccca4ea2a" kindref="member">FONT_ITALIC</ref><sp/>}<sp/><ref refid="gvcjob_8h_1a053425e9fef4e52c94d07c3ea352a591" kindref="member">font_type</ref>;</highlight></codeline>
+<codeline lineno="38" refid="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38ac99e5e928ef0f8ce232b1758b68ba244" kindref="member">LABEL_PLAIN</ref>,<sp/><ref refid="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38a666836f69dad5233e18b0ee914d1cd7d" kindref="member">LABEL_HTML</ref><sp/>}<sp/><ref refid="gvcjob_8h_1a27a2d3d0fcd201122f8c13d604f91e38" kindref="member">label_type</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="gvcjob_8h_1ad03a35ae3e8eb2d22ba05e3ab13469c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PENWIDTH_NORMAL<sp/>1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="gvcjob_8h_1aa9d4b93a7285736626367c79e6a7e65b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PENWIDTH_BOLD<sp/>2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18af82282feff99df6db7990b718e9e4aff" kindref="member">GVATTR_STRING</ref>,<sp/><ref refid="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18ab361c9957d953d10f940086f828994ba" kindref="member">GVATTR_BOOL</ref>,<sp/><ref refid="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18aeb9159ae9c5b896b9ebdadeda52857e0" kindref="member">GVATTR_COLOR</ref><sp/>}<sp/><ref refid="gvcjob_8h_1aa94507a537afb96bd72499779f7aee18" kindref="member">gvattr_t</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>-T<sp/>output<sp/>formats<sp/>listed<sp/>below<sp/>are<sp/>examples<sp/>only,<sp/>they<sp/>are<sp/>not<sp/>definitive<sp/>or<sp/>inclusive,</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>other<sp/>outputs<sp/>may<sp/>use<sp/>the<sp/>flags<sp/>now,<sp/>or<sp/>in<sp/>the<sp/>future<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Default<sp/>emit<sp/>order<sp/>is<sp/>breadth<sp/>first<sp/>graph<sp/>walk<sp/>order<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>EMIT_SORTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emits<sp/>nodes<sp/>before<sp/>edges<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>EMIT_COLORS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emits<sp/>colors<sp/>before<sp/>nodes<sp/>or<sp/>edge<sp/>-Tfig<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>EMIT_CLUSTERS_LAST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emits<sp/>cluster<sp/>after<sp/>nodes<sp/>and<sp/>edges<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>EMIT_PREORDER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>in<sp/>preorder<sp/>traversal<sp/>???<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>EMIT_EDGE_SORTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emits<sp/>edges<sp/>before<sp/>nodes<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="comment"></highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>GVDEVICE_DOES_PAGES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>provides<sp/>pagination<sp/>support<sp/>-Tps<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>GVDEVICE_DOES_LAYERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>provides<sp/>support<sp/>for<sp/>layers<sp/>-Tps<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>GVDEVICE_EVENTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>supports<sp/>mouse<sp/>events<sp/>-Tgtk,<sp/>-Txlib<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>GVDEVICE_DOES_TRUECOLOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>supports<sp/>alpha<sp/>channel<sp/>-Tpng,<sp/>-Tgtk,<sp/>-Txlib<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>GVDEVICE_BINARY_FORMAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Suppresses<sp/>\r\n<sp/>substitution<sp/>for<sp/>linends<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>GVDEVICE_COMPRESSED_FORMAT<sp/><sp/><sp/><sp/><sp/>controls<sp/>libz<sp/>compression<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>GVDEVICE_NO_WRITER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used<sp/>when<sp/>gvdevice<sp/>is<sp/>not<sp/>used<sp/>because<sp/>device<sp/>uses<sp/>its<sp/>own<sp/>writer,<sp/>-Tming,<sp/>devil<sp/>outputs<sp/><sp/><sp/>(FIXME<sp/>seems<sp/>to<sp/>overlap<sp/>OUTPUT_NOT_REQUIRED)</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"></highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>GVRENDER_Y_GOES_DOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device<sp/>origin<sp/>top<sp/>left,<sp/>y<sp/>goes<sp/>down,<sp/>otherwise</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device<sp/>origin<sp/>lower<sp/>left,<sp/>y<sp/>goes<sp/>up<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>GVRENDER_DOES_TRANSFORM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device<sp/>uses<sp/>scale,<sp/>translate,<sp/>rotate<sp/>to<sp/>do<sp/>its<sp/>own</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>coordinate<sp/>transformations,<sp/>otherwise<sp/>coordinates<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>are<sp/>pre-transformed<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>GVRENDER_DOES_ARROWS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>renderer<sp/>has<sp/>its<sp/>own<sp/>idea<sp/>of<sp/>arrow<sp/>shapes<sp/>(deprecated)<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>GVRENDER_DOES_LABELS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>basically,<sp/>maps<sp/>don&apos;t<sp/>need<sp/>labels<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>GVRENDER_DOES_MAPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>renderer<sp/>encodes<sp/>mapping<sp/>information<sp/>for<sp/>mouse<sp/>events<sp/>-Tcmapx<sp/>-Tsvg<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>GVRENDER_DOES_MAP_RECTANGLE<sp/><sp/><sp/><sp/>supports<sp/>a<sp/>2<sp/>coord<sp/>rectngle<sp/>optimization<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>GVRENDER_DOES_MAP_CIRCLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>supports<sp/>a<sp/>1<sp/>coord<sp/>+<sp/>radius<sp/>circle<sp/>optimization<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>GVRENDER_DOES_MAP_POLYGON<sp/><sp/><sp/><sp/><sp/><sp/>supports<sp/>polygons<sp/>(basically,<sp/>-Tsvg<sp/>uses<sp/>anchors,<sp/>so<sp/>doesn&apos;t<sp/>need<sp/>to<sp/>support<sp/>any<sp/>map<sp/>shapes)<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>GVRENDER_DOES_MAP_ELLIPSE<sp/><sp/><sp/><sp/><sp/><sp/>supports<sp/>a<sp/>2<sp/>coord<sp/>ellipse<sp/>optimization<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>GVRENDER_DOES_MAP_BSPLINE<sp/><sp/><sp/><sp/><sp/><sp/>supports<sp/>mapping<sp/>of<sp/>splines<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>GVRENDER_DOES_TOOLTIPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>can<sp/>represent<sp/>tooltip<sp/>info<sp/>-Tcmapx,<sp/>-Tsvg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>GVRENDER_DOES_TARGETS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>can<sp/>represent<sp/>target<sp/>info<sp/>(open<sp/>link<sp/>in<sp/>a<sp/>new<sp/>tab<sp/>or<sp/>window)<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>GVRENDER_DOES_Z<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>render<sp/>support<sp/>2.5D<sp/>representation<sp/>-Tvrml<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>GVRENDER_NO_WHITE_BG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>don&apos;t<sp/>paint<sp/>white<sp/>background,<sp/>assumes<sp/>white<sp/>paper<sp/>-Tps<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>LAYOUT_NOT_REQUIRED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>don&apos;t<sp/>perform<sp/>layout<sp/>-Tcanon<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>OUTPUT_NOT_REQUIRED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>don&apos;t<sp/>use<sp/>gvdevice<sp/>for<sp/>output<sp/>(basically<sp/>when<sp/>agwrite()<sp/>used<sp/>instead)<sp/>-Tcanon,<sp/>-Txdot<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="gvcjob_8h_1a33cff4ced6fee87fe933a71a93d1ddd8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMIT_SORTED<sp/>(1&lt;&lt;0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="gvcjob_8h_1ae4042465ba24c90c087a0e3071ea8939" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMIT_COLORS<sp/>(1&lt;&lt;1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="gvcjob_8h_1a01da62f83c93432d776dfb82ee06cc7f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMIT_CLUSTERS_LAST<sp/>(1&lt;&lt;2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="gvcjob_8h_1a995caee67c9846d771eefc6132318bbc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMIT_PREORDER<sp/>(1&lt;&lt;3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="gvcjob_8h_1a409796dc1ac7058fa2a40d578a7297cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EMIT_EDGE_SORTED<sp/>(1&lt;&lt;4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="gvcjob_8h_1a67eb586db6b3ae361191f4fa2f0d6517" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_DOES_PAGES<sp/>(1&lt;&lt;5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="gvcjob_8h_1a6a8bc9b005d1a7185df952fa8c618c8c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_DOES_LAYERS<sp/>(1&lt;&lt;6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="gvcjob_8h_1aa811a27986a93bb5f01e98426b9331e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_EVENTS<sp/>(1&lt;&lt;7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="gvcjob_8h_1a6ee2b7613e1ad8bae8dd3a884ec58c06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_DOES_TRUECOLOR<sp/>(1&lt;&lt;8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="gvcjob_8h_1a7a9454ee5e1bc0aa49d8c39c468b66c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_BINARY_FORMAT<sp/>(1&lt;&lt;9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="gvcjob_8h_1a2c946332a8e7484bda55e93d62e7312d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_COMPRESSED_FORMAT<sp/>(1&lt;&lt;10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="gvcjob_8h_1a106f6008cfc71d48b8b67cd47c530e6d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVDEVICE_NO_WRITER<sp/>(1&lt;&lt;11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="gvcjob_8h_1addcf4609271d0fed66432102fcc49e60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_Y_GOES_DOWN<sp/>(1&lt;&lt;12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="gvcjob_8h_1ad6673704b17c99db9588bfe4bea1ceae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_TRANSFORM<sp/>(1&lt;&lt;13)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="gvcjob_8h_1aabb425dac84ebb15dc214b6b24efe51a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_ARROWS<sp/>(1&lt;&lt;14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="gvcjob_8h_1a42800cf2328a05b351d97de328f71835" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_LABELS<sp/>(1&lt;&lt;15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="gvcjob_8h_1aaa937a02c6c7be59cdab7b6f82da6586" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_MAPS<sp/>(1&lt;&lt;16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="gvcjob_8h_1af2ff5cf11d0ecef08c1e384a04f959e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_MAP_RECTANGLE<sp/>(1&lt;&lt;17)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="gvcjob_8h_1af6d511694b77a3a5571a8dc0126fcdb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_MAP_CIRCLE<sp/>(1&lt;&lt;18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="gvcjob_8h_1af0bcd860ee725637b5103ffe3a30ea62" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_MAP_POLYGON<sp/>(1&lt;&lt;19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="gvcjob_8h_1a1a555b3636bc63f4552b4a16be7f89ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_MAP_ELLIPSE<sp/>(1&lt;&lt;20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="gvcjob_8h_1acf41c3ae6a6d67d1ad1e1f5c1ae516f0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_MAP_BSPLINE<sp/>(1&lt;&lt;21)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="gvcjob_8h_1a3abe26a1a0e7d49d56453a51959594dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_TOOLTIPS<sp/>(1&lt;&lt;22)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="gvcjob_8h_1ab011b585d098198162a67fb32cae2cd0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_TARGETS<sp/>(1&lt;&lt;23)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="gvcjob_8h_1a3d70997394b899458fd789d902b1764e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_DOES_Z<sp/>(1&lt;&lt;24)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="gvcjob_8h_1a4a3678c81c256d0d298d18a3e72cbcab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVRENDER_NO_WHITE_BG<sp/>(1&lt;&lt;25)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="gvcjob_8h_1a862bdd7c9410e889ce13a7728af40bbb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAYOUT_NOT_REQUIRED<sp/>(1&lt;&lt;26)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="gvcjob_8h_1a430d4d79ac8eba41cf38a7f11265dee4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OUTPUT_NOT_REQUIRED<sp/>(1&lt;&lt;27)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structgvrender__features__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114" refid="structgvrender__features__t_1aace1f52ac1cb79ebbdf4dee8dffcaec6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvrender__features__t_1aace1f52ac1cb79ebbdf4dee8dffcaec6" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="115" refid="structgvrender__features__t_1a926168fd17172ac8aa7babd8b5ddd2f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structgvrender__features__t_1a926168fd17172ac8aa7babd8b5ddd2f0" kindref="member">default_pad</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="structgvrender__features__t_1a2851c4d13c2a4271788ccc8af34fae8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structgvrender__features__t_1a2851c4d13c2a4271788ccc8af34fae8c" kindref="member">knowncolors</ref>;</highlight></codeline>
+<codeline lineno="117" refid="structgvrender__features__t_1a0344d36d000fb771691fcc8d0dcdae30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvrender__features__t_1a0344d36d000fb771691fcc8d0dcdae30" kindref="member">sz_knowncolors</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structgvrender__features__t_1a647a310e4fb8ca8b1ab43db7059bfcf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20" kindref="member">color_type_t</ref><sp/><ref refid="structgvrender__features__t_1a647a310e4fb8ca8b1ab43db7059bfcf6" kindref="member">color_type</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structgvrender__features__t" kindref="compound">gvrender_features_t</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="structgvdevice__features__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122" refid="structgvdevice__features__t_1a442a208ab39ec41f989064019a1eeb5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvdevice__features__t_1a442a208ab39ec41f989064019a1eeb5b" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="123" refid="structgvdevice__features__t_1ac91ad00b91457ab4637aee89daf840e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structgvdevice__features__t_1ac91ad00b91457ab4637aee89daf840e2" kindref="member">default_margin</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>left/right,<sp/>top/bottom<sp/>-<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structgvdevice__features__t_1ad3f7cc9e38848ff9fa6f66f92752189e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structgvdevice__features__t_1ad3f7cc9e38848ff9fa6f66f92752189e" kindref="member">default_pagesize</ref>;</highlight><highlight class="comment">/*<sp/>default<sp/>page<sp/>width,<sp/>height<sp/>-<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="structgvdevice__features__t_1acfa6a68f6c88bba7a50f135bafc1eeec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structgvdevice__features__t_1acfa6a68f6c88bba7a50f135bafc1eeec" kindref="member">default_dpi</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structgvdevice__features__t" kindref="compound">gvdevice_features_t</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="gvcjob_8h_1a5370b8bc484c0586d8537944b1f3a8b3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAYOUT_USES_RANKDIR<sp/>(1&lt;&lt;0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="structgvplugin__active__device__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvplugin__active__device__s" kindref="compound">gvplugin_active_device_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="131" refid="structgvplugin__active__device__s_1a41c0632dd1a305274b519f467bc2ad67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvdevice__engine__s" kindref="compound">gvdevice_engine_t</ref><sp/>*<ref refid="structgvplugin__active__device__s_1a41c0632dd1a305274b519f467bc2ad67" kindref="member">engine</ref>;</highlight></codeline>
+<codeline lineno="132" refid="structgvplugin__active__device__s_1a906c40b64020879e25a89fada3a67acf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvplugin__active__device__s_1a906c40b64020879e25a89fada3a67acf" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="133" refid="structgvplugin__active__device__s_1a1c4781bdfcad3a41925bbe2b845e6a00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvdevice__features__t" kindref="compound">gvdevice_features_t</ref><sp/>*<ref refid="structgvplugin__active__device__s_1a1c4781bdfcad3a41925bbe2b845e6a00" kindref="member">features</ref>;</highlight></codeline>
+<codeline lineno="134" refid="structgvplugin__active__device__s_1a5b71a28b13f386e4b300c8dd872d0a5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__active__device__s_1a5b71a28b13f386e4b300c8dd872d0a5b" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1a911dc300e8ab12be9c5efe8168311861" kindref="member">gvplugin_active_device_t</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="structgvplugin__active__render__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvplugin__active__render__s" kindref="compound">gvplugin_active_render_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="138" refid="structgvplugin__active__render__s_1a3c5165052e151c71350d11c86d974290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvrender__engine__s" kindref="compound">gvrender_engine_t</ref><sp/>*<ref refid="structgvplugin__active__render__s_1a3c5165052e151c71350d11c86d974290" kindref="member">engine</ref>;</highlight></codeline>
+<codeline lineno="139" refid="structgvplugin__active__render__s_1ab6419e9e2bd706219693b7cad40c401c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvplugin__active__render__s_1ab6419e9e2bd706219693b7cad40c401c" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="140" refid="structgvplugin__active__render__s_1aac7cee0b1d42008f8af4d65f8ea9d9e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvrender__features__t" kindref="compound">gvrender_features_t</ref><sp/>*<ref refid="structgvplugin__active__render__s_1aac7cee0b1d42008f8af4d65f8ea9d9e4" kindref="member">features</ref>;</highlight></codeline>
+<codeline lineno="141" refid="structgvplugin__active__render__s_1aa68b3455bdb4d6798b7d490ab6e75fdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__active__render__s_1aa68b3455bdb4d6798b7d490ab6e75fdb" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1a60a8dbe816df29fb9bbf092aa9d857d9" kindref="member">gvplugin_active_render_t</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="structgvplugin__active__loadimage__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvplugin__active__loadimage__t" kindref="compound">gvplugin_active_loadimage_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="145" refid="structgvplugin__active__loadimage__t_1ab088dbbfaccb401025d6460e2ffd104e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvloadimage__engine__s" kindref="compound">gvloadimage_engine_t</ref><sp/>*<ref refid="structgvplugin__active__loadimage__t_1ab088dbbfaccb401025d6460e2ffd104e" kindref="member">engine</ref>;</highlight></codeline>
+<codeline lineno="146" refid="structgvplugin__active__loadimage__t_1ac960eae348143f69a83bafcc8b322805" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvplugin__active__loadimage__t_1ac960eae348143f69a83bafcc8b322805" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structgvplugin__active__loadimage__t_1a162a0b6d46d3030bd13f91734daf16e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__active__loadimage__t_1a162a0b6d46d3030bd13f91734daf16e9" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1a7ea6b51ad09b79dc67498693a2301440" kindref="member">gvplugin_active_loadimage_t</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="structgv__argvlist__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgv__argvlist__s" kindref="compound">gv_argvlist_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="151" refid="structgv__argvlist__s_1a4b9e20fbc445cd66aa6bc15751199733" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structgv__argvlist__s_1a4b9e20fbc445cd66aa6bc15751199733" kindref="member">argv</ref>;</highlight></codeline>
+<codeline lineno="152" refid="structgv__argvlist__s_1acd01eb7c8adab05909a7aa6948cf9666" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgv__argvlist__s_1acd01eb7c8adab05909a7aa6948cf9666" kindref="member">argc</ref>;</highlight></codeline>
+<codeline lineno="153" refid="structgv__argvlist__s_1ad359c24dfb7eb13ad82df626a46ac735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgv__argvlist__s_1ad359c24dfb7eb13ad82df626a46ac735" kindref="member">alloc</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1acae33e05df363c42d2d5661e03ac8e50" kindref="member">gv_argvlist_t</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="structgvdevice__callbacks__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvdevice__callbacks__s" kindref="compound">gvdevice_callbacks_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="157" refid="structgvdevice__callbacks__s_1a666efa3f326b1e343f29b44b6e404991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a666efa3f326b1e343f29b44b6e404991" kindref="member">refresh</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job);</highlight></codeline>
+<codeline lineno="158" refid="structgvdevice__callbacks__s_1a67875b5779274bd47bfa969ae14cdae8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a67875b5779274bd47bfa969ae14cdae8" kindref="member">button_press</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button,<sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>pointer);</highlight></codeline>
+<codeline lineno="159" refid="structgvdevice__callbacks__s_1a5c4edc2c809c59d11fdb23941f4c58ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a5c4edc2c809c59d11fdb23941f4c58ef" kindref="member">button_release</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button,<sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>pointer);</highlight></codeline>
+<codeline lineno="160" refid="structgvdevice__callbacks__s_1a71f323fee9a3f7954a41a2b19a0949b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a71f323fee9a3f7954a41a2b19a0949b3" kindref="member">motion</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>pointer);</highlight></codeline>
+<codeline lineno="161" refid="structgvdevice__callbacks__s_1ad9fab53f61e7136743a9bbe539fc50fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1ad9fab53f61e7136743a9bbe539fc50fc" kindref="member">modify</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*value);</highlight></codeline>
+<codeline lineno="162" refid="structgvdevice__callbacks__s_1a9f864d10405b3a2bfe325556565cd86d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a9f864d10405b3a2bfe325556565cd86d" kindref="member">del</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job);<sp/><sp/></highlight><highlight class="comment">/*<sp/>can&apos;t<sp/>use<sp/>&quot;delete&quot;<sp/>&apos;cos<sp/>C++<sp/>stole<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="structgvdevice__callbacks__s_1adedaef778696635fa3046d7873e41e0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1adedaef778696635fa3046d7873e41e0b" kindref="member">read</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvdevice__callbacks__s_1a3c07caefdb67aaa9294d5999af547be5" kindref="member">layout</ref>);</highlight></codeline>
+<codeline lineno="164" refid="structgvdevice__callbacks__s_1a3c07caefdb67aaa9294d5999af547be5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a3c07caefdb67aaa9294d5999af547be5" kindref="member">layout</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvdevice__callbacks__s_1a3c07caefdb67aaa9294d5999af547be5" kindref="member">layout</ref>);</highlight></codeline>
+<codeline lineno="165" refid="structgvdevice__callbacks__s_1a286fc3cd01f103de1560c69de31ccc62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structgvdevice__callbacks__s_1a286fc3cd01f103de1560c69de31ccc62" kindref="member">render</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1acc50ede9232c78aa3ff4bff97ffb4248" kindref="member">gvdevice_callbacks_t</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="gvcjob_8h_1a4f6a6d73e7cd18369649c5cce7f65278" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="gvcjob_8h_1a4f6a6d73e7cd18369649c5cce7f65278" kindref="member">gvevent_key_callback_t</ref>)<sp/>(<ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<sp/>job);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="structgvevent__key__binding__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structgvevent__key__binding__s" kindref="compound">gvevent_key_binding_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="171" refid="structgvevent__key__binding__s_1afb541cc52a36f44453568d4879821be6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvevent__key__binding__s_1afb541cc52a36f44453568d4879821be6" kindref="member">keystring</ref>;</highlight></codeline>
+<codeline lineno="172" refid="structgvevent__key__binding__s_1a34074bcbd32e922cb2b4ca58530d39e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a4f6a6d73e7cd18369649c5cce7f65278" kindref="member">gvevent_key_callback_t</ref><sp/><ref refid="structgvevent__key__binding__s_1a34074bcbd32e922cb2b4ca58530d39e3" kindref="member">callback</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1aacafc045edb2325f10b1c592898615ab" kindref="member">gvevent_key_binding_t</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bba93750fa7b7e32fdde29435cbc49c0990" kindref="member">MAP_RECTANGLE</ref>,<sp/><ref refid="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bba52bb0ede7a27b16527d915d512786bf8" kindref="member">MAP_CIRCLE</ref>,<sp/><ref refid="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bba8b0f19b8c292d1d2e9772feb41cc4496" kindref="member">MAP_POLYGON</ref>,<sp/>}<sp/><ref refid="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bb" kindref="member">map_shape_t</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a552c0763f679b759c8083a2312db5670" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a552c0763f679b759c8083a2312db5670" kindref="member">ROOTGRAPH_OBJTYPE</ref>,<sp/><ref refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a32600cff05c8f94a126d59b08bbac81c" kindref="member">CLUSTER_OBJTYPE</ref>,<sp/><ref refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a97f20f6ae4bbbf503430fb49f051a61e" kindref="member">NODE_OBJTYPE</ref>,<sp/><ref refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92a4b2fac9faf34f5eb8777db67b361e35f" kindref="member">EDGE_OBJTYPE</ref>}<sp/><ref refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92" kindref="member">obj_type</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>this<sp/>enum<sp/>is<sp/>changed,<sp/>the<sp/>implementation<sp/>of<sp/>xbuf<sp/>and<sp/>xbufs<sp/>in</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>gvrender_core_dot.c<sp/>will<sp/>probably<sp/>need<sp/>to<sp/>be<sp/>changed.</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="183" refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a2b3a09852e892aef3b852d6015725cfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a68607c437efe73900c9263cd4f03b9a2" kindref="member">EMIT_GDRAW</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a0e2e1037a7ea49ba93e1660b916905ab" kindref="member">EMIT_CDRAW</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a2b3a09852e892aef3b852d6015725cfb" kindref="member">EMIT_TDRAW</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a3e59bbb4aff494333b724015f3391986" kindref="member">EMIT_HDRAW</ref>,<sp/></highlight></codeline>
+<codeline lineno="184" refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0af46f555368f3e4b5ab9f135588ec5995" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ac9c989cb015d82004843b3cd9ccabce7" kindref="member">EMIT_GLABEL</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0aef804da377cf9ba079e759674b76fdf8" kindref="member">EMIT_CLABEL</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0af46f555368f3e4b5ab9f135588ec5995" kindref="member">EMIT_TLABEL</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a449206c43bd305ad3caee2c54c04a892" kindref="member">EMIT_HLABEL</ref>,<sp/></highlight></codeline>
+<codeline lineno="185" refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ac27f9399c30523b952cdef6b74a016bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0a1d814d818b407b71c600c5c59cbf43ae" kindref="member">EMIT_NDRAW</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ae215588aa83a61551880c7783ff2eb4c" kindref="member">EMIT_EDRAW</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0ac27f9399c30523b952cdef6b74a016bd" kindref="member">EMIT_NLABEL</ref>,<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0accb8094c46739f15f6a36a30392bdeba" kindref="member">EMIT_ELABEL</ref>,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0" kindref="member">emit_state_t</ref>;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="gvcjob_8h_1a02731e816998f46b1511d36eff0260ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structobj__state__s" kindref="compound">obj_state_s</ref><sp/><ref refid="structobj__state__s" kindref="compound">obj_state_t</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="structobj__state__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structobj__state__s" kindref="compound">obj_state_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="191" refid="structobj__state__s_1ac7e652fa645b990a3d273c322c72ed37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structobj__state__s" kindref="compound">obj_state_t</ref><sp/>*<ref refid="structobj__state__s_1ac7e652fa645b990a3d273c322c72ed37" kindref="member">parent</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="structobj__state__s_1a686b61b585902fdb816869e1fc705f46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1ac87c026b772bad1b7bb6edea6200fc92" kindref="member">obj_type</ref><sp/><ref refid="structobj__state__s_1a686b61b585902fdb816869e1fc705f46" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195" refid="structobj__state__s_1a1372678d0083a80f6658fa10e20e5928" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*<ref refid="structobj__state__s_1a1372678d0083a80f6658fa10e20e5928" kindref="member">g</ref>;</highlight></codeline>
+<codeline lineno="196" refid="structobj__state__s_1a993330749d875cfdde890df21c90977b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgraph__s" kindref="compound">graph_t</ref><sp/>*<ref refid="structobj__state__s_1a993330749d875cfdde890df21c90977b" kindref="member">sg</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="197" refid="structobj__state__s_1a8881569da82b88c1a535103486995cab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgnode__s" kindref="compound">node_t</ref><sp/>*<ref refid="structobj__state__s_1a8881569da82b88c1a535103486995cab" kindref="member">n</ref>;</highlight></codeline>
+<codeline lineno="198" refid="structobj__state__s_1a1c67e6c02b5ba0ed613e8012b76b2937" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structAgedge__s" kindref="compound">edge_t</ref><sp/>*<ref refid="structobj__state__s_1a1c67e6c02b5ba0ed613e8012b76b2937" kindref="member">e</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="structobj__state__s_1a8b609d1b2bbd4d237c0cbeee9e8d0ca7" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="structobj__state__s_1ab8fe9ae126dfd7c449be2be22734efd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a9d67f57cb353edb06b582591b3f1eaf0" kindref="member">emit_state_t</ref><sp/><ref refid="structobj__state__s_1ab8fe9ae126dfd7c449be2be22734efd5" kindref="member">emit_state</ref>;<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="structobj__state__s_1a73194a8c35b272cbf588ee0c91531b2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structcolor__s" kindref="compound">gvcolor_t</ref><sp/><ref refid="structobj__state__s_1aa214195f79e7eedee74006bbe9765f79" kindref="member">pencolor</ref>,<sp/><ref refid="structobj__state__s_1a25db9225d76b6e43e74d70f3bfc23ae1" kindref="member">fillcolor</ref>,<sp/><ref refid="structobj__state__s_1a73194a8c35b272cbf588ee0c91531b2b" kindref="member">stopcolor</ref>;</highlight></codeline>
+<codeline lineno="204" refid="structobj__state__s_1ab51fa5bd497eb6e0723587da6d232043" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1ab51fa5bd497eb6e0723587da6d232043" kindref="member">gradient_angle</ref>;</highlight></codeline>
+<codeline lineno="205" refid="structobj__state__s_1a8b4f2ce9d985ab340920ad19fd0ae7f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a8b4f2ce9d985ab340920ad19fd0ae7f3" kindref="member">gradient_frac</ref>;</highlight></codeline>
+<codeline lineno="206" refid="structobj__state__s_1a7e97e6de2402896579423006d60898ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a056abdc3e65632a0666767d8395bdc44" kindref="member">pen_type</ref><sp/><ref refid="structobj__state__s_1a7e97e6de2402896579423006d60898ba" kindref="member">pen</ref>;</highlight></codeline>
+<codeline lineno="207" refid="structobj__state__s_1afe082b5b0510dd76bbf67af5ab822790" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a8b3c1e8eaca9ba6bf60627aee8bb9e72" kindref="member">fill_type</ref><sp/><ref refid="structobj__state__s_1afe082b5b0510dd76bbf67af5ab822790" kindref="member">fill</ref>;</highlight></codeline>
+<codeline lineno="208" refid="structobj__state__s_1aff055afa76950cf86469f202b2a24bce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1aff055afa76950cf86469f202b2a24bce" kindref="member">penwidth</ref>;</highlight></codeline>
+<codeline lineno="209" refid="structobj__state__s_1ab16ee35fe85d88cdf01eca253d04c6e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structobj__state__s_1ab16ee35fe85d88cdf01eca253d04c6e7" kindref="member">rawstyle</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="structobj__state__s_1a3fdff9f4082ad335b463d4249f25fcb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a3fdff9f4082ad335b463d4249f25fcb3" kindref="member">z</ref>,<sp/><ref refid="structobj__state__s_1ac811d320f6f7f92b3bde32973c008123" kindref="member">tail_z</ref>,<sp/><ref refid="structobj__state__s_1accbb1d0b8a6396d098b25b8845d41332" kindref="member">head_z</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>z<sp/>depths<sp/>for<sp/>2.5D<sp/>renderers<sp/>such<sp/>as<sp/>vrml<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>fully<sp/>substituted<sp/>text<sp/>strings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="structobj__state__s_1aecd95cd41e2138f93653455a56d94dbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1aecd95cd41e2138f93653455a56d94dbb" kindref="member">label</ref>;</highlight></codeline>
+<codeline lineno="215" refid="structobj__state__s_1a5d7d0d7323188a1e70b3c931b5a160cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a5d7d0d7323188a1e70b3c931b5a160cd" kindref="member">xlabel</ref>;</highlight></codeline>
+<codeline lineno="216" refid="structobj__state__s_1a2d61811979b08939e64c3cd351f5771d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a2d61811979b08939e64c3cd351f5771d" kindref="member">taillabel</ref>;</highlight></codeline>
+<codeline lineno="217" refid="structobj__state__s_1a0dba8f9bfa3c473395dc9b8c8a875c54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a0dba8f9bfa3c473395dc9b8c8a875c54" kindref="member">headlabel</ref>;<sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="structobj__state__s_1a46647452bcb8f9c39a81d86a70c58f1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a46647452bcb8f9c39a81d86a70c58f1b" kindref="member">url</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>GVRENDER_DOES_MAPS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="structobj__state__s_1ab49cb90241cd45f10de7c3bbd8a9d119" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1ab49cb90241cd45f10de7c3bbd8a9d119" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="221" refid="structobj__state__s_1a548c5cdf0cca91b6326a74240c892cbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a548c5cdf0cca91b6326a74240c892cbc" kindref="member">labelurl</ref>;</highlight></codeline>
+<codeline lineno="222" refid="structobj__state__s_1a556a06e041082ccdded147aca3b84141" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a556a06e041082ccdded147aca3b84141" kindref="member">tailurl</ref>;</highlight></codeline>
+<codeline lineno="223" refid="structobj__state__s_1a9f9572f9eae6c8ca21a02119755c253d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a9f9572f9eae6c8ca21a02119755c253d" kindref="member">headurl</ref>;<sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="structobj__state__s_1a26e255085bf4abac828ff3d355d10caf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a26e255085bf4abac828ff3d355d10caf" kindref="member">tooltip</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>GVRENDER_DOES_TOOLTIPS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="structobj__state__s_1a64d8062b517dc492b186a92ba8edca8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a64d8062b517dc492b186a92ba8edca8e" kindref="member">labeltooltip</ref>;</highlight></codeline>
+<codeline lineno="227" refid="structobj__state__s_1a6d3a114f924c556b7d0daa6b3a6fc21a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a6d3a114f924c556b7d0daa6b3a6fc21a" kindref="member">tailtooltip</ref>;</highlight></codeline>
+<codeline lineno="228" refid="structobj__state__s_1a833143bf1da45c6a561c255a7843e605" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a833143bf1da45c6a561c255a7843e605" kindref="member">headtooltip</ref>;<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="structobj__state__s_1a67ecd72ea2c7797ee1eba30f6617c7ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a67ecd72ea2c7797ee1eba30f6617c7ec" kindref="member">target</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>GVRENDER_DOES_TARGETS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="structobj__state__s_1abbd1afaea15ed5882237086d37f7804c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1abbd1afaea15ed5882237086d37f7804c" kindref="member">labeltarget</ref>;</highlight></codeline>
+<codeline lineno="232" refid="structobj__state__s_1ac94ea92ecf1e13e33dd3543f143336db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1ac94ea92ecf1e13e33dd3543f143336db" kindref="member">tailtarget</ref>;</highlight></codeline>
+<codeline lineno="233" refid="structobj__state__s_1a67a65a9f5ea7d8ddaffb9c2daeb9417f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a67a65a9f5ea7d8ddaffb9c2daeb9417f" kindref="member">headtarget</ref>;<sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="structobj__state__s_1accf8aea0edc64f8df141198866b126d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1accf8aea0edc64f8df141198866b126d7" kindref="member">explicit_tooltip</ref>:1;</highlight></codeline>
+<codeline lineno="236" refid="structobj__state__s_1a59ff637937b5c81c01e1f73ac8831fd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a59ff637937b5c81c01e1f73ac8831fd5" kindref="member">explicit_tailtooltip</ref>:1;</highlight></codeline>
+<codeline lineno="237" refid="structobj__state__s_1a94b59cfd921dd44f6d588baa09e245e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a94b59cfd921dd44f6d588baa09e245e1" kindref="member">explicit_headtooltip</ref>:1;</highlight></codeline>
+<codeline lineno="238" refid="structobj__state__s_1adff11665f1e1f9ffe932650dd45fb7ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1adff11665f1e1f9ffe932650dd45fb7ce" kindref="member">explicit_labeltooltip</ref>:1;</highlight></codeline>
+<codeline lineno="239" refid="structobj__state__s_1a0826138fee8e5851f1a26eed28848957" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a0826138fee8e5851f1a26eed28848957" kindref="member">explicit_tailtarget</ref>:1;</highlight></codeline>
+<codeline lineno="240" refid="structobj__state__s_1ab99a2d104f67390e12f5e8628f7071bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1ab99a2d104f67390e12f5e8628f7071bd" kindref="member">explicit_headtarget</ref>:1;</highlight></codeline>
+<codeline lineno="241" refid="structobj__state__s_1a5814ebec639be07236afacbe0228b05e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a5814ebec639be07236afacbe0228b05e" kindref="member">explicit_edgetarget</ref>:1;</highlight></codeline>
+<codeline lineno="242" refid="structobj__state__s_1a4564e68c83b8499ae444e81c0b29ddcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a4564e68c83b8499ae444e81c0b29ddcd" kindref="member">explicit_tailurl</ref>:1;</highlight></codeline>
+<codeline lineno="243" refid="structobj__state__s_1a1634299bd01f10d1a1976745b51561b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a1634299bd01f10d1a1976745b51561b7" kindref="member">explicit_headurl</ref>:1;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>primary<sp/>mapped<sp/>region<sp/>-<sp/>node<sp/>shape,<sp/>edge<sp/>labels<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="structobj__state__s_1a85f1fc3bc225a43626d8b6b1c0e21f00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcjob_8h_1a5ce3b3a21716351feb74e0155b6499bb" kindref="member">map_shape_t</ref><sp/><ref refid="structobj__state__s_1a85f1fc3bc225a43626d8b6b1c0e21f00" kindref="member">url_map_shape</ref>;<sp/></highlight></codeline>
+<codeline lineno="247" refid="structobj__state__s_1a5de29df5037944eb6866a767d3a157e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a5de29df5037944eb6866a767d3a157e9" kindref="member">url_map_n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>points<sp/>for<sp/>url<sp/>map<sp/>if<sp/>GVRENDER_DOES_MAPS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="structobj__state__s_1a1d158324172a38958b42d46939da8345" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>*<ref refid="structobj__state__s_1a1d158324172a38958b42d46939da8345" kindref="member">url_map_p</ref>;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>additonal<sp/>mapped<sp/>regions<sp/>for<sp/>edges<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="structobj__state__s_1ae5e484885ba9c00d4d630f06ded19e10" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1ae5e484885ba9c00d4d630f06ded19e10" kindref="member">url_bsplinemap_poly_n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>polygons<sp/>in<sp/>url<sp/>bspline<sp/>map</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>GVRENDER_DOES_MAPS<sp/>&amp;&amp;<sp/>GVRENDER_DOES_MAP_BSPLINES<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="structobj__state__s_1a2cfb27fa01d219bd1c9d934eabcde2fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structobj__state__s_1a2cfb27fa01d219bd1c9d934eabcde2fc" kindref="member">url_bsplinemap_n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>array<sp/>of<sp/>url_bsplinemap_poly_n<sp/>ints<sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>of<sp/>number<sp/>of<sp/>points<sp/>in<sp/>each<sp/>polygon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="structobj__state__s_1a862a9abf5d1961cca70e34ccdf0cb150" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>*<ref refid="structobj__state__s_1a862a9abf5d1961cca70e34ccdf0cb150" kindref="member">url_bsplinemap_p</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>all<sp/>the<sp/>polygon<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="structobj__state__s_1a0553e8338e2157222e76d52ed6aa5ee5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1a0553e8338e2157222e76d52ed6aa5ee5" kindref="member">tailendurl_map_n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>tail<sp/>end<sp/>intersection<sp/>with<sp/>node<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="structobj__state__s_1a23f5fdf30bc511ddbc117463732dab49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>*<ref refid="structobj__state__s_1a23f5fdf30bc511ddbc117463732dab49" kindref="member">tailendurl_map_p</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="structobj__state__s_1abc46c842b84cdf93ef64c76053de1444" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structobj__state__s_1abc46c842b84cdf93ef64c76053de1444" kindref="member">headendurl_map_n</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>head<sp/>end<sp/>intersection<sp/>with<sp/>node<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="structobj__state__s_1a4725b38952851159659998e665abe35d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/>*<ref refid="structobj__state__s_1a4725b38952851159659998e665abe35d" kindref="member">headendurl_map_p</ref>;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Note<sp/>on<sp/>units:</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>points<sp/><sp/>-<sp/>a<sp/>physical<sp/>distance<sp/>(1/72<sp/>inch)<sp/>unaffected<sp/>by<sp/>zoom<sp/>or<sp/>dpi.</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>graph<sp/>units<sp/>-<sp/>related<sp/>to<sp/>physical<sp/>distance<sp/>by<sp/>zoom.<sp/><sp/>Equals<sp/>points<sp/>at<sp/>zoom=1</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>device<sp/>units<sp/>-<sp/>related<sp/>to<sp/>physical<sp/>distance<sp/>in<sp/>points<sp/>by<sp/>dpi/72</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="structGVJ__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGVJ__s" kindref="compound">GVJ_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="271" refid="structGVJ__s_1ab9f701ce9e14e718974579da1324ce93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref><sp/>*<ref refid="structGVJ__s_1ab9f701ce9e14e718974579da1324ce93" kindref="member">gvc</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>parent<sp/>gvc<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="structGVJ__s_1a0f52091bcfcaaaa0fd8e0d10cb4afff0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<ref refid="structGVJ__s_1a0f52091bcfcaaaa0fd8e0d10cb4afff0" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>linked<sp/>list<sp/>of<sp/>jobs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="structGVJ__s_1afa286d4946319b5194646ed12ede3172" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s" kindref="compound">GVJ_t</ref><sp/>*<ref refid="structGVJ__s_1afa286d4946319b5194646ed12ede3172" kindref="member">next_active</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>linked<sp/>list<sp/>of<sp/>active<sp/>jobs<sp/>(e.g.<sp/>multiple<sp/>windows)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="structGVJ__s_1a9ab244fc7b03a142509df51b8c15982c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVCOMMON__s" kindref="compound">GVCOMMON_t</ref><sp/>*<ref refid="structGVJ__s_1a9ab244fc7b03a142509df51b8c15982c" kindref="member">common</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="structGVJ__s_1a44ffb5f110d308af695e3a018e2f5a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structobj__state__s" kindref="compound">obj_state_t</ref><sp/>*<ref refid="structGVJ__s_1a44ffb5f110d308af695e3a018e2f5a39" kindref="member">obj</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>objects<sp/>can<sp/>be<sp/>nested<sp/>(at<sp/>least<sp/>clusters<sp/>can)</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>so<sp/>keep<sp/>object<sp/>state<sp/>on<sp/>a<sp/>stack<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="structGVJ__s_1ae104856f5323392e3017dc430e7faae9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1ae104856f5323392e3017dc430e7faae9" kindref="member">input_filename</ref>;</highlight></codeline>
+<codeline lineno="280" refid="structGVJ__s_1ae1f25b3227421cb79a058d93f437b037" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1ae1f25b3227421cb79a058d93f437b037" kindref="member">graph_index</ref>;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="structGVJ__s_1aab3eab903c84af0622ba9128d7f21382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1aab3eab903c84af0622ba9128d7f21382" kindref="member">layout_type</ref>;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="structGVJ__s_1a3274d07a8e222e5b0dd980b2d2646353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a3274d07a8e222e5b0dd980b2d2646353" kindref="member">output_filename</ref>;</highlight></codeline>
+<codeline lineno="285" refid="structGVJ__s_1aa26a7ae90613b8ba8998ad9349e7e240" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/>*<ref refid="structGVJ__s_1aa26a7ae90613b8ba8998ad9349e7e240" kindref="member">output_file</ref>;</highlight></codeline>
+<codeline lineno="286" refid="structGVJ__s_1a5d3304c201c3fb12979e490e21aa9d2f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a5d3304c201c3fb12979e490e21aa9d2f" kindref="member">output_data</ref>;</highlight></codeline>
+<codeline lineno="287" refid="structGVJ__s_1adc869f83a6238348480f4765414f5c01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1adc869f83a6238348480f4765414f5c01" kindref="member">output_data_allocated</ref>;</highlight></codeline>
+<codeline lineno="288" refid="structGVJ__s_1af4637901a3c63cacc86dd101ace84e8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1af4637901a3c63cacc86dd101ace84e8c" kindref="member">output_data_position</ref>;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="structGVJ__s_1ae1ac152c41d1cbdad5985701a8ff520f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1ae1ac152c41d1cbdad5985701a8ff520f" kindref="member">output_langname</ref>;</highlight></codeline>
+<codeline lineno="291" refid="structGVJ__s_1a4218b0118ee56dcb61554b95df15eb92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1a4218b0118ee56dcb61554b95df15eb92" kindref="member">output_lang</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="structGVJ__s_1a7c677fb2a5098a0a31317fab379003fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvplugin__active__render__s" kindref="compound">gvplugin_active_render_t</ref><sp/><ref refid="structGVJ__s_1a7c677fb2a5098a0a31317fab379003fb" kindref="member">render</ref>;</highlight></codeline>
+<codeline lineno="294" refid="structGVJ__s_1a4cfcfe68c4de55779272f4018962d9b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvplugin__active__device__s" kindref="compound">gvplugin_active_device_t</ref><sp/><ref refid="structGVJ__s_1a4cfcfe68c4de55779272f4018962d9b8" kindref="member">device</ref>;</highlight></codeline>
+<codeline lineno="295" refid="structGVJ__s_1a3a61e329c5f6657a34601099afb4255c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvplugin__active__loadimage__t" kindref="compound">gvplugin_active_loadimage_t</ref><sp/><ref refid="structGVJ__s_1a3a61e329c5f6657a34601099afb4255c" kindref="member">loadimage</ref>;</highlight></codeline>
+<codeline lineno="296" refid="structGVJ__s_1a420b1ebf4c6cd958dcb5f5cce9ac7691" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvdevice__callbacks__s" kindref="compound">gvdevice_callbacks_t</ref><sp/>*<ref refid="structGVJ__s_1a420b1ebf4c6cd958dcb5f5cce9ac7691" kindref="member">callbacks</ref>;</highlight></codeline>
+<codeline lineno="297" refid="structGVJ__s_1aa5798205b1140cb5629d61c3e092683c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structGVJ__s_1aa5798205b1140cb5629d61c3e092683c" kindref="member">device_dpi</ref>;</highlight></codeline>
+<codeline lineno="298" refid="structGVJ__s_1a120b1e86029d59aee9fb9f2aed859389" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1a120b1e86029d59aee9fb9f2aed859389" kindref="member">device_sets_dpi</ref>;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="structGVJ__s_1a764ccadd64f751ef3e62f964917514a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a764ccadd64f751ef3e62f964917514a4" kindref="member">display</ref>;</highlight></codeline>
+<codeline lineno="301" refid="structGVJ__s_1a275e59c24ae814353b5ae869ce4260bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1a275e59c24ae814353b5ae869ce4260bf" kindref="member">screen</ref>;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="structGVJ__s_1a64830ffbd1737c52ae85d6d0fb22831c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a64830ffbd1737c52ae85d6d0fb22831c" kindref="member">context</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>gd<sp/>or<sp/>cairo<sp/>surface<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="structGVJ__s_1a2db95d9d56b32107f107d7d7e39cf89e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1a2db95d9d56b32107f107d7d7e39cf89e" kindref="member">external_context</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>context<sp/>belongs<sp/>to<sp/>caller<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="structGVJ__s_1a173b26cd25c7ca03973f5f054d9da2bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a173b26cd25c7ca03973f5f054d9da2bc" kindref="member">imagedata</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>location<sp/>of<sp/>imagedata<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="structGVJ__s_1a229f318e0a40f64ee14fa48403b420b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1a229f318e0a40f64ee14fa48403b420b3" kindref="member">flags</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>emit_graph<sp/>flags<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309" refid="structGVJ__s_1aca0d52f7d0ac15f43895a9563c169665" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1aca0d52f7d0ac15f43895a9563c169665" kindref="member">numLayers</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>layers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="structGVJ__s_1abb36098c4e1c4fa70723cfe2726ab05b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1abb36098c4e1c4fa70723cfe2726ab05b" kindref="member">layerNum</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>current<sp/>layer<sp/>-<sp/>1<sp/>based*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="structGVJ__s_1a343ebd309080301793f10b20f5d06fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/><sp/><sp/><ref refid="structGVJ__s_1a343ebd309080301793f10b20f5d06fd6" kindref="member">pagesArraySize</ref>;<sp/></highlight><highlight class="comment">/*<sp/>2D<sp/>size<sp/>of<sp/>page<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="structGVJ__s_1aa149d3dc69fdbf0bd65e2e18385e3a6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/><sp/><sp/><ref refid="structGVJ__s_1aa149d3dc69fdbf0bd65e2e18385e3a6f" kindref="member">pagesArrayFirst</ref>;</highlight><highlight class="comment">/*<sp/>2D<sp/>starting<sp/>corner<sp/>in<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="structGVJ__s_1a8ff911bab3a238320610a9f5396dc4f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/><sp/><sp/><ref refid="structGVJ__s_1a8ff911bab3a238320610a9f5396dc4f8" kindref="member">pagesArrayMajor</ref>;</highlight><highlight class="comment">/*<sp/>2D<sp/>major<sp/>increment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="structGVJ__s_1a822f7b6818edd83b3ee8372d11e2a0a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/><sp/><sp/><ref refid="structGVJ__s_1a822f7b6818edd83b3ee8372d11e2a0a1" kindref="member">pagesArrayMinor</ref>;</highlight><highlight class="comment">/*<sp/>2D<sp/>minor<sp/>increment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="structGVJ__s_1a72a37c77ccb37a2d3ca571321ce34790" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpoint" kindref="compound">point</ref><sp/><sp/><sp/><ref refid="structGVJ__s_1a72a37c77ccb37a2d3ca571321ce34790" kindref="member">pagesArrayElem</ref>;<sp/></highlight><highlight class="comment">/*<sp/>2D<sp/>coord<sp/>of<sp/>current<sp/>page<sp/>-<sp/>0,0<sp/>based<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="structGVJ__s_1ad8d2942d661c53d0939a822e1e70b8d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1ad8d2942d661c53d0939a822e1e70b8d6" kindref="member">numPages</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>pages<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="structGVJ__s_1a467d9cb63aef2952d17062bbdd059ce4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboxf" kindref="compound">boxf</ref><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1a467d9cb63aef2952d17062bbdd059ce4" kindref="member">bb</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>graph<sp/>bb<sp/>with<sp/>padding<sp/>-<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320" refid="structGVJ__s_1af317a6ccf3a9c3bfd30f7acfebffc8c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1af317a6ccf3a9c3bfd30f7acfebffc8c7" kindref="member">pad</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>padding<sp/>around<sp/>bb<sp/>-<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="structGVJ__s_1a27f43293e7efed88e0f3d6a659b5a808" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboxf" kindref="compound">boxf</ref><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1a27f43293e7efed88e0f3d6a659b5a808" kindref="member">clip</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>clip<sp/>region<sp/>in<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="structGVJ__s_1ade176a7ef34192906b3a0d9a768c0531" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboxf" kindref="compound">boxf</ref><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1ade176a7ef34192906b3a0d9a768c0531" kindref="member">pageBox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>current<sp/>page<sp/>in<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323" refid="structGVJ__s_1a33f9ae349f2c963f8c5eb688dfbe7f2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1a33f9ae349f2c963f8c5eb688dfbe7f2a" kindref="member">pageSize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>page<sp/>size<sp/>in<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="structGVJ__s_1a97b66020d5c48e04cc8e7bfbdd92604a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1a97b66020d5c48e04cc8e7bfbdd92604a" kindref="member">focus</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>viewport<sp/>focus<sp/>-<sp/>graph<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="structGVJ__s_1aa7150d5a2b906bb0d55a3bbde37bd174" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><ref refid="structGVJ__s_1aa7150d5a2b906bb0d55a3bbde37bd174" kindref="member">zoom</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>viewport<sp/>zoom<sp/>factor<sp/>(points<sp/>per<sp/>graph<sp/>unit)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="structGVJ__s_1a0454cd254446c0c665668753d3101fe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1a0454cd254446c0c665668753d3101fe0" kindref="member">rotation</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>viewport<sp/>rotation<sp/>(degrees)<sp/><sp/>0=portrait,<sp/>90=landscape<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="structGVJ__s_1a8730f8538f37b391b283cce40d8e22ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1a8730f8538f37b391b283cce40d8e22ce" kindref="member">view</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>viewport<sp/>size<sp/>-<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330" refid="structGVJ__s_1ab79b9bda0057e30579e491cf2e6043c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structboxf" kindref="compound">boxf</ref><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1ab79b9bda0057e30579e491cf2e6043c7" kindref="member">canvasBox</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>viewport<sp/>area<sp/>-<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="structGVJ__s_1a33e6ec2c386e79a238893dcfbfdf81cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1a33e6ec2c386e79a238893dcfbfdf81cd" kindref="member">margin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>job-specific<sp/>margin<sp/>-<sp/>points<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="structGVJ__s_1a407924052cc9e202a9049a3459b8be25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1a407924052cc9e202a9049a3459b8be25" kindref="member">dpi</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>device<sp/>resolution<sp/>device-units-per-inch<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335" refid="structGVJ__s_1abe26e05b4aa822e54bce9fc43df91544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1abe26e05b4aa822e54bce9fc43df91544" kindref="member">width</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>device<sp/>width<sp/>-<sp/>device<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="structGVJ__s_1aff7f63596a03a702ac81ced539ce9dd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1aff7f63596a03a702ac81ced539ce9dd5" kindref="member">height</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>device<sp/>height<sp/>-<sp/>device<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="structGVJ__s_1aa65400f688e5a55542d78a7e0895e77a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structbox" kindref="compound">box</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1aa65400f688e5a55542d78a7e0895e77a" kindref="member">pageBoundingBox</ref>;</highlight><highlight class="comment">/*<sp/>rotated<sp/>boundingBox<sp/>-<sp/>device<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338" refid="structGVJ__s_1aa74767ae7fb43838cffab78cb070ecf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structbox" kindref="compound">box</ref><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1aa74767ae7fb43838cffab78cb070ecf3" kindref="member">boundingBox</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>cumulative<sp/>boundingBox<sp/>over<sp/>all<sp/>pages<sp/>-<sp/>device<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340" refid="structGVJ__s_1aaa5f8435371e394c3198ec28b2b64a38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1aaa5f8435371e394c3198ec28b2b64a38" kindref="member">scale</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>composite<sp/>device<sp/>to<sp/>graph<sp/>units<sp/>(zoom<sp/>and<sp/>dpi)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341" refid="structGVJ__s_1af9b309b5c532cb1e9c99d0887e4afe1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1af9b309b5c532cb1e9c99d0887e4afe1d" kindref="member">translation</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>composite<sp/>translation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="structGVJ__s_1a8ea411b5b762e464b77fdacaa9e3bc78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><sp/><ref refid="structGVJ__s_1a8ea411b5b762e464b77fdacaa9e3bc78" kindref="member">devscale</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>composite<sp/>device<sp/>to<sp/>points:<sp/>dpi,<sp/>y_goes_down<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="structGVJ__s_1a5144c245c67b228381d45ca750a69bb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1ad9252e2450b3638ba6a58727ce9cbf4f" kindref="member">fit_mode</ref>,</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1a5144c245c67b228381d45ca750a69bb2" kindref="member">needs_refresh</ref>,</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1a5875d1b052f9c1da66008606c1045937" kindref="member">click</ref>,</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1ae0af15fbc847abe9d1c07e500dcbe6d6" kindref="member">has_grown</ref>,</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structGVJ__s_1a8d5a63b6e629c7aa2af59ebc7cf119c8" kindref="member">has_been_rendered</ref>;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350" refid="structGVJ__s_1a34ef13bb3aca34988f182397a03ddf58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1a34ef13bb3aca34988f182397a03ddf58" kindref="member">button</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>active<sp/>button<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351" refid="structGVJ__s_1a82e616ad7b025f257a223c88ce0106c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structGVJ__s_1a82e616ad7b025f257a223c88ce0106c7" kindref="member">pointer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>pointer<sp/>position<sp/>in<sp/>device<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="structGVJ__s_1af84d07cd0a5249a05873b4112bb4817f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpointf__s" kindref="compound">pointf</ref><sp/><ref refid="structGVJ__s_1af84d07cd0a5249a05873b4112bb4817f" kindref="member">oldpointer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>old<sp/>pointer<sp/>position<sp/>in<sp/>device<sp/>units<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="structGVJ__s_1a140f56fd1588cdecdae80154732b1364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a140f56fd1588cdecdae80154732b1364" kindref="member">current_obj</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>graph<sp/>object<sp/>that<sp/>pointer<sp/>is<sp/>in<sp/>currently<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="structGVJ__s_1a9492bc5460537eb36a1afadaf259017a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a9492bc5460537eb36a1afadaf259017a" kindref="member">selected_obj</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>graph<sp/>object<sp/>that<sp/>has<sp/>been<sp/>selected<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>(e.g.<sp/>button<sp/>1<sp/>clicked<sp/>on<sp/>current<sp/>obj)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358" refid="structGVJ__s_1a495f696f150e1783c866bb962f1492ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a495f696f150e1783c866bb962f1492ad" kindref="member">active_tooltip</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>tooltip<sp/>of<sp/>active<sp/>object<sp/>-<sp/>or<sp/>NULL<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359" refid="structGVJ__s_1a498a5e939b92f7944e1c83a79f0fae99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a498a5e939b92f7944e1c83a79f0fae99" kindref="member">selected_href</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>href<sp/>of<sp/>selected<sp/>object<sp/>-<sp/>or<sp/>NULL<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360" refid="structGVJ__s_1aa201cde2f96331974ab3fb10c03a9a28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgv__argvlist__s" kindref="compound">gv_argvlist_t</ref><sp/><ref refid="structGVJ__s_1aa201cde2f96331974ab3fb10c03a9a28" kindref="member">selected_obj_type_name</ref>;<sp/></highlight><highlight class="comment">/*<sp/>(e.g.<sp/>&quot;edge&quot;<sp/>&quot;node3&quot;<sp/>&quot;e&quot;<sp/>&quot;-&gt;&quot;<sp/>&quot;node5&quot;<sp/>&quot;&quot;)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361" refid="structGVJ__s_1a2e3d9746085b08699ab3ce35142aeefe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgv__argvlist__s" kindref="compound">gv_argvlist_t</ref><sp/><ref refid="structGVJ__s_1a2e3d9746085b08699ab3ce35142aeefe" kindref="member">selected_obj_attributes</ref>;<sp/></highlight><highlight class="comment">/*<sp/>attribute<sp/>triplets:<sp/>name,<sp/>value,<sp/>type<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>e.g.<sp/>&quot;color&quot;,<sp/>&quot;red&quot;,<sp/>GVATTR_COLOR,</highlight></codeline>
+<codeline lineno="363"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;style&quot;,<sp/>&quot;filled&quot;,<sp/>GVATTR_BOOL,<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="structGVJ__s_1acb540b2b04de30dc35616a60d1c848cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1acb540b2b04de30dc35616a60d1c848cb" kindref="member">window</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>display-specific<sp/>data<sp/>for<sp/>gvrender<sp/>plugin<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>keybindings<sp/>for<sp/>keyboard<sp/>events<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="structGVJ__s_1a63b502b4c43204061b38859e2817ce36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvevent__key__binding__s" kindref="compound">gvevent_key_binding_t</ref><sp/>*<ref refid="structGVJ__s_1a63b502b4c43204061b38859e2817ce36" kindref="member">keybindings</ref>;</highlight></codeline>
+<codeline lineno="369" refid="structGVJ__s_1afbdb202145b0355b3a50f9bab87a81e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVJ__s_1afbdb202145b0355b3a50f9bab87a81e1" kindref="member">numkeys</ref>;</highlight></codeline>
+<codeline lineno="370" refid="structGVJ__s_1a6ee50f25f739863b055c8c0912f58ba1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structGVJ__s_1a6ee50f25f739863b055c8c0912f58ba1" kindref="member">keycodes</ref>;</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GVCJOB_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvcjob.h"/>
+  </compounddef>
+</doxygen>

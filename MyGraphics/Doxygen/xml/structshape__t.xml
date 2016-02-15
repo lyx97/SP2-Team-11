@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structshape__t" kind="struct" language="C++" prot="public">
+    <compoundname>shape_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structshape__t_1ac153df38098f1b9f15a40361ff0da949" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int shape_t::nstrokes</definition>
+        <argsstring></argsstring>
+        <name>nstrokes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="167" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structshape__t_1a0e3c5e1b587341c8318596d515e37a3c" prot="public" static="no" mutable="no">
+        <type><ref refid="structstroke__t" kindref="compound">stroke_t</ref> *</type>
+        <definition>stroke_t* shape_t::strokes</definition>
+        <argsstring></argsstring>
+        <name>strokes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="168" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5949">
+        <label>shape_t</label>
+        <link refid="structshape__t"/>
+        <childnode refid="5950" relation="usage">
+          <edgelabel>nstrokes</edgelabel>
+        </childnode>
+        <childnode refid="5951" relation="usage">
+          <edgelabel>strokes</edgelabel>
+        </childnode>
+      </node>
+      <node id="5952">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5953" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5950">
+        <label>int</label>
+      </node>
+      <node id="5953">
+        <label>double</label>
+      </node>
+      <node id="5951">
+        <label>stroke_t</label>
+        <link refid="structstroke__t"/>
+        <childnode refid="5950" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>nvertices</edgelabel>
+        </childnode>
+        <childnode refid="5952" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="166" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="166" bodyend="171"/>
+    <listofallmembers>
+      <member refid="structshape__t_1ac153df38098f1b9f15a40361ff0da949" prot="public" virt="non-virtual"><scope>shape_t</scope><name>nstrokes</name></member>
+      <member refid="structshape__t_1a0e3c5e1b587341c8318596d515e37a3c" prot="public" virt="non-virtual"><scope>shape_t</scope><name>strokes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

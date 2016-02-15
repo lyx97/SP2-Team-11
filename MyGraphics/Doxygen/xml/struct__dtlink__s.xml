@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__dtlink__s" kind="struct" language="C++" prot="public">
+    <compoundname>_dtlink_s</compoundname>
+    <includes refid="cdt_8h" local="no">cdt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dtlink__s_1aac8d7353a842d224c7208640c636b335" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref> *</type>
+        <definition>Dtlink_t* _dtlink_s::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="60" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtlink__s_1a336ddccc3fed053166ea09e6847a0812" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int _dtlink_s::_hash</definition>
+        <argsstring></argsstring>
+        <name>_hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="62" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtlink__s_1aa159da20576fe861b3303823d6e8e7f6" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a1346eabee70476232f305f8e876d7fab" kindref="member">Dtlink_t</ref> *</type>
+        <definition>Dtlink_t* _dtlink_s::_left</definition>
+        <argsstring></argsstring>
+        <name>_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="63" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dtlink__s_1a9130db61679beeb495141a116e4b06ff" prot="public" static="no" mutable="no">
+        <type>union _dtlink_s::@0</type>
+        <definition>union _dtlink_s::@0  _dtlink_s::hl</definition>
+        <argsstring></argsstring>
+        <name>hl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="64" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3100">
+        <label></label>
+      </node>
+      <node id="3099">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="3099" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="3100" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="3101" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3101">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cdt.h" line="60" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="59" bodyend="65"/>
+    <listofallmembers>
+      <member refid="struct__dtlink__s_1a336ddccc3fed053166ea09e6847a0812" prot="public" virt="non-virtual"><scope>_dtlink_s</scope><name>_hash</name></member>
+      <member refid="struct__dtlink__s_1aa159da20576fe861b3303823d6e8e7f6" prot="public" virt="non-virtual"><scope>_dtlink_s</scope><name>_left</name></member>
+      <member refid="struct__dtlink__s_1a9130db61679beeb495141a116e4b06ff" prot="public" virt="non-virtual"><scope>_dtlink_s</scope><name>hl</name></member>
+      <member refid="struct__dtlink__s_1aac8d7353a842d224c7208640c636b335" prot="public" virt="non-virtual"><scope>_dtlink_s</scope><name>right</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

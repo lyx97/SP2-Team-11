@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="LoadTGA_8h" kind="file" language="C++">
+    <compoundname>LoadTGA.h</compoundname>
+    <includedby refid="Assignment3_8cpp" local="yes">MyGraphics/Source/Assignment3.cpp</includedby>
+    <includedby refid="LoadTGA_8cpp" local="yes">MyGraphics/Source/LoadTGA.cpp</includedby>
+    <includedby refid="SceneModel_8cpp" local="yes">MyGraphics/Source/SceneModel.cpp</includedby>
+    <includedby refid="SceneSkybox_8cpp" local="yes">MyGraphics/Source/SceneSkybox.cpp</includedby>
+    <includedby refid="SceneText_8cpp" local="yes">MyGraphics/Source/SceneText.cpp</includedby>
+    <includedby refid="SceneTexture_8cpp" local="yes">MyGraphics/Source/SceneTexture.cpp</includedby>
+    <invincdepgraph>
+      <node id="2546">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="2544">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="2545">
+        <label>MyGraphics/Source/SceneText.cpp</label>
+        <link refid="SceneText_8cpp"/>
+      </node>
+      <node id="2543">
+        <label>MyGraphics/Source/SceneModel.cpp</label>
+        <link refid="SceneModel_8cpp"/>
+      </node>
+      <node id="2541">
+        <label>MyGraphics/Source/Assignment3.cpp</label>
+        <link refid="Assignment3_8cpp"/>
+      </node>
+      <node id="2542">
+        <label>MyGraphics/Source/LoadTGA.cpp</label>
+        <link refid="LoadTGA_8cpp"/>
+      </node>
+      <node id="2540">
+        <label>MyGraphics/Source/LoadTGA.h</label>
+        <link refid="LoadTGA.h"/>
+        <childnode refid="2541" relation="include">
+        </childnode>
+        <childnode refid="2542" relation="include">
+        </childnode>
+        <childnode refid="2543" relation="include">
+        </childnode>
+        <childnode refid="2544" relation="include">
+        </childnode>
+        <childnode refid="2545" relation="include">
+        </childnode>
+        <childnode refid="2546" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="LoadTGA_8h_1a459a80ca6de67a1e3493bfb66ae317e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint LoadTGA</definition>
+        <argsstring>(const char *file_path)</argsstring>
+        <name>LoadTGA</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/LoadTGA.h" line="4" column="1" bodyfile="MyGraphics/Source/LoadTGA.cpp" bodystart="8" bodyend="67"/>
+        <referencedby refid="classSceneTexture_1a8499b9b84a1509327e29fa5f7899ec58" compoundref="SceneTexture_8cpp" startline="20" endline="111">SceneTexture::Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="20" endline="124">SceneSkybox::Init</referencedby>
+        <referencedby refid="classSceneModel_1ad40b429986aa1429a308c20acdd26e0f" compoundref="SceneModel_8cpp" startline="20" endline="127">SceneModel::Init</referencedby>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">SceneText::Init</referencedby>
+        <referencedby refid="classAss3_1a3e25cf5b32c24d3be834cb034eca9b34" compoundref="Assignment3_8cpp" startline="22" endline="304">Ass3::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LOAD_TGA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOAD_TGA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">GLuint<sp/><ref refid="LoadTGA_8h_1a459a80ca6de67a1e3493bfb66ae317e4" kindref="member">LoadTGA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/LoadTGA.h"/>
+  </compounddef>
+</doxygen>

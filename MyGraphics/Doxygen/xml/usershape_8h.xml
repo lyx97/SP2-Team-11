@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="usershape_8h" kind="file" language="C++">
+    <compoundname>usershape.h</compoundname>
+    <includes refid="cdt_8h" local="yes">cdt.h</includes>
+    <includedby refid="types_8h" local="yes">graphviz/release/include/graphviz/types.h</includedby>
+    <incdepgraph>
+      <node id="2141">
+        <label>stddef.h</label>
+      </node>
+      <node id="2142">
+        <label>string.h</label>
+      </node>
+      <node id="2140">
+        <label>cdt.h</label>
+        <link refid="cdt_8h"/>
+        <childnode refid="2141" relation="include">
+        </childnode>
+        <childnode refid="2142" relation="include">
+        </childnode>
+      </node>
+      <node id="2139">
+        <label>graphviz/release/include/graphviz/usershape.h</label>
+        <link refid="usershape.h"/>
+        <childnode refid="2140" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2144">
+        <label>graphviz/release/include/graphviz/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="2145" relation="include">
+        </childnode>
+        <childnode refid="2146" relation="include">
+        </childnode>
+        <childnode refid="2147" relation="include">
+        </childnode>
+        <childnode refid="2148" relation="include">
+        </childnode>
+        <childnode refid="2149" relation="include">
+        </childnode>
+        <childnode refid="2150" relation="include">
+        </childnode>
+        <childnode refid="2151" relation="include">
+        </childnode>
+      </node>
+      <node id="2145">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="2148">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="2146">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="2149">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="2147">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="2150">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="2143">
+        <label>graphviz/release/include/graphviz/usershape.h</label>
+        <link refid="usershape.h"/>
+        <childnode refid="2144" relation="include">
+        </childnode>
+      </node>
+      <node id="2151">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structusershape__s" prot="public">usershape_s</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="usershape_8h_1aec44135355da1b53a922fab69dbea68c" prot="public" static="no">
+        <name>imagetype_t</name>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4" prot="public">
+          <name>FT_NULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d" prot="public">
+          <name>FT_BMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9" prot="public">
+          <name>FT_GIF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9" prot="public">
+          <name>FT_PNG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806" prot="public">
+          <name>FT_JPEG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f" prot="public">
+          <name>FT_PDF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2" prot="public">
+          <name>FT_PS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a" prot="public">
+          <name>FT_EPS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd" prot="public">
+          <name>FT_SVG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8" prot="public">
+          <name>FT_XML</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba" prot="public">
+          <name>FT_RIFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e" prot="public">
+          <name>FT_WEBP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140" prot="public">
+          <name>FT_ICO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075" prot="public">
+          <name>FT_TIFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="23" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3a" prot="public" static="no">
+        <name>imagescale_t</name>
+        <enumvalue id="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4" prot="public">
+          <name>IMAGESCALE_FALSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb" prot="public">
+          <name>IMAGESCALE_TRUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3" prot="public">
+          <name>IMAGESCALE_WIDTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69" prot="public">
+          <name>IMAGESCALE_HEIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69" prot="public">
+          <name>IMAGESCALE_BOTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="29" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="29" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="usershape_8h_1a65c9d64037cce8c0cbf5fce493c8f8aa" prot="public" static="no">
+        <type>struct <ref refid="structusershape__s" kindref="compound">usershape_s</ref></type>
+        <definition>typedef struct usershape_s usershape_t</definition>
+        <argsstring></argsstring>
+        <name>usershape_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/usershape.h" line="571" column="1" bodyfile="graphviz/release/include/graphviz/usershape.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USERSHAPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USERSHAPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cdt_8h" kindref="compound">cdt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="usershape_8h_1aec44135355da1b53a922fab69dbea68c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4" kindref="member">FT_NULL</ref>,</highlight></codeline>
+<codeline lineno="24" refid="usershape_8h_1aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d" kindref="member">FT_BMP</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9" kindref="member">FT_GIF</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9" kindref="member">FT_PNG</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806" kindref="member">FT_JPEG</ref>,</highlight></codeline>
+<codeline lineno="25" refid="usershape_8h_1aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f" kindref="member">FT_PDF</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2" kindref="member">FT_PS</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a" kindref="member">FT_EPS</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd" kindref="member">FT_SVG</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8" kindref="member">FT_XML</ref>,</highlight></codeline>
+<codeline lineno="26" refid="usershape_8h_1aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba" kindref="member">FT_RIFF</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e" kindref="member">FT_WEBP</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140" kindref="member">FT_ICO</ref>,<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075" kindref="member">FT_TIFF</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68c" kindref="member">imagetype_t</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4" kindref="member">IMAGESCALE_FALSE</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>no<sp/>image<sp/>scaling<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb" kindref="member">IMAGESCALE_TRUE</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>scale<sp/>image<sp/>to<sp/>fit<sp/>but<sp/>keep<sp/>aspect<sp/>ratio<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3" kindref="member">IMAGESCALE_WIDTH</ref>,<sp/><sp/></highlight><highlight class="comment">/*<sp/>scale<sp/>image<sp/>width<sp/>to<sp/>fit,<sp/>keep<sp/>height<sp/>fixed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69" kindref="member">IMAGESCALE_HEIGHT</ref>,<sp/></highlight><highlight class="comment">/*<sp/>scale<sp/>image<sp/>height<sp/>to<sp/>fit,<sp/>keep<sp/>width<sp/>fixed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69" kindref="member">IMAGESCALE_BOTH</ref><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>scale<sp/>image<sp/>to<sp/>fit<sp/>without<sp/>regard<sp/>for<sp/>aspect<sp/>ratio<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="usershape_8h_1a5d2e5a4ec27171d56dfb4b70dd7edd3a" kindref="member">imagescale_t</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="usershape_8h_1a65c9d64037cce8c0cbf5fce493c8f8aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structusershape__s" kindref="compound">usershape_s</ref><sp/><ref refid="structusershape__s" kindref="compound">usershape_t</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structusershape__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structusershape__s" kindref="compound">usershape_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="structusershape__s_1a40a2682187d2db02796ed4d446e82a2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct__dtlink__s" kindref="compound">Dtlink_t</ref><sp/><ref refid="structusershape__s_1a40a2682187d2db02796ed4d446e82a2c" kindref="member">link</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structusershape__s_1a06a61b2edb37e229109ff14f619cd1aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structusershape__s_1a06a61b2edb37e229109ff14f619cd1aa" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structusershape__s_1a523a462a282836af2f36192f3cfa9f82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structusershape__s_1a523a462a282836af2f36192f3cfa9f82" kindref="member">macro_id</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structusershape__s_1a0aed3732fcd0fb1a8b0ae28457c0bd21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="structusershape__s_1a0aed3732fcd0fb1a8b0ae28457c0bd21" kindref="member">must_inline</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structusershape__s_1acbef6e8fbcc12ea3f6f3a7b83584e587" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="structusershape__s_1acbef6e8fbcc12ea3f6f3a7b83584e587" kindref="member">nocache</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structusershape__s_1a19d2fd0633b82a33999e8db59bb5e64a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/>*<ref refid="structusershape__s_1a19d2fd0633b82a33999e8db59bb5e64a" kindref="member">f</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structusershape__s_1a8d5d4ae51d9cdbf406bb7ebf9c5c51e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="usershape_8h_1aec44135355da1b53a922fab69dbea68c" kindref="member">imagetype_t</ref><sp/><ref refid="structusershape__s_1a8d5d4ae51d9cdbf406bb7ebf9c5c51e1" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structusershape__s_1a1730cee3ca8168c5b06aefcd22f5d4ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structusershape__s_1a1730cee3ca8168c5b06aefcd22f5d4ed" kindref="member">stringtype</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structusershape__s_1ae49c05bdf6dd868684e21c8240567b74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structusershape__s_1a7de02dad8a213b0ff3efc19187c77419" kindref="member">x</ref>,<sp/><ref refid="structusershape__s_1ae49c05bdf6dd868684e21c8240567b74" kindref="member">y</ref>,<sp/><ref refid="structusershape__s_1a420777f70f45f2298bb4e73cbb88fe85" kindref="member">w</ref>,<sp/><ref refid="structusershape__s_1afcc76e4344256aa8d7131bfde3622a4e" kindref="member">h</ref>,<sp/><ref refid="structusershape__s_1a0173c608d4bb680353ac56e499f4909e" kindref="member">dpi</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structusershape__s_1a89fdc6e02e8b26990d5c6404f1a07686" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structusershape__s_1a89fdc6e02e8b26990d5c6404f1a07686" kindref="member">data</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>data<sp/>loaded<sp/>by<sp/>a<sp/>renderer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structusershape__s_1a52ea6bed2e8d199a74ec5609ac2f9981" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structusershape__s_1a52ea6bed2e8d199a74ec5609ac2f9981" kindref="member">datasize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/>of<sp/>data<sp/>(if<sp/>mmap&apos;ed)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structusershape__s_1a3cd7486d446eddaf02842cd8ceaa11a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structusershape__s_1a3cd7486d446eddaf02842cd8ceaa11a7" kindref="member">datafree</ref>)(<ref refid="structusershape__s" kindref="compound">usershape_t</ref><sp/>*us);<sp/></highlight><highlight class="comment">/*<sp/>renderer&apos;s<sp/>function<sp/>for<sp/>freeing<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/usershape.h"/>
+  </compounddef>
+</doxygen>

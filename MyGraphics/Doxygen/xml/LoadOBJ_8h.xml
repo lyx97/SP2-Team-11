@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="LoadOBJ_8h" kind="file" language="C++">
+    <compoundname>LoadOBJ.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="Vertex_8h" local="yes">Vertex.h</includes>
+    <includes refid="Vector3_8h" local="yes">Vector3.h</includes>
+    <includedby refid="MeshBuilder_8h" local="yes">MyGraphics/Source/MeshBuilder.h</includedby>
+    <includedby refid="LoadOBJ_8cpp" local="yes">MyGraphics/Source/LoadOBJ.cpp</includedby>
+    <incdepgraph>
+      <node id="2508">
+        <label>MyGraphics/Source/LoadOBJ.h</label>
+        <link refid="LoadOBJ.h"/>
+        <childnode refid="2509" relation="include">
+        </childnode>
+        <childnode refid="2510" relation="include">
+        </childnode>
+        <childnode refid="2517" relation="include">
+        </childnode>
+      </node>
+      <node id="2513">
+        <label>cmath</label>
+      </node>
+      <node id="2517">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2512" relation="include">
+        </childnode>
+        <childnode refid="2518" relation="include">
+        </childnode>
+      </node>
+      <node id="2514">
+        <label>exception</label>
+      </node>
+      <node id="2515">
+        <label>ctime</label>
+      </node>
+      <node id="2509">
+        <label>vector</label>
+      </node>
+      <node id="2516">
+        <label>cstdlib</label>
+      </node>
+      <node id="2518">
+        <label>iostream</label>
+      </node>
+      <node id="2511">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2512" relation="include">
+        </childnode>
+        <childnode refid="2517" relation="include">
+        </childnode>
+      </node>
+      <node id="2512">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2513" relation="include">
+        </childnode>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2515" relation="include">
+        </childnode>
+        <childnode refid="2516" relation="include">
+        </childnode>
+      </node>
+      <node id="2510">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2511" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2531">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="2529">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="2530">
+        <label>MyGraphics/Source/SceneText.cpp</label>
+        <link refid="SceneText_8cpp"/>
+      </node>
+      <node id="2523">
+        <label>MyGraphics/Source/MeshBuilder.cpp</label>
+        <link refid="MeshBuilder_8cpp"/>
+      </node>
+      <node id="2532">
+        <label>MyGraphics/Source/LoadOBJ.cpp</label>
+        <link refid="LoadOBJ_8cpp"/>
+      </node>
+      <node id="2526">
+        <label>MyGraphics/Source/SceneLight.cpp</label>
+        <link refid="SceneLight_8cpp"/>
+      </node>
+      <node id="2519">
+        <label>MyGraphics/Source/LoadOBJ.h</label>
+        <link refid="LoadOBJ.h"/>
+        <childnode refid="2520" relation="include">
+        </childnode>
+        <childnode refid="2532" relation="include">
+        </childnode>
+      </node>
+      <node id="2520">
+        <label>MyGraphics/Source/MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="2521" relation="include">
+        </childnode>
+        <childnode refid="2522" relation="include">
+        </childnode>
+        <childnode refid="2523" relation="include">
+        </childnode>
+        <childnode refid="2524" relation="include">
+        </childnode>
+        <childnode refid="2525" relation="include">
+        </childnode>
+        <childnode refid="2526" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+        <childnode refid="2528" relation="include">
+        </childnode>
+        <childnode refid="2529" relation="include">
+        </childnode>
+        <childnode refid="2530" relation="include">
+        </childnode>
+        <childnode refid="2531" relation="include">
+        </childnode>
+      </node>
+      <node id="2528">
+        <label>MyGraphics/Source/SceneModel.cpp</label>
+        <link refid="SceneModel_8cpp"/>
+      </node>
+      <node id="2522">
+        <label>MyGraphics/Source/Assignment3.cpp</label>
+        <link refid="Assignment3_8cpp"/>
+      </node>
+      <node id="2525">
+        <label>MyGraphics/Source/Scene4.cpp</label>
+        <link refid="Scene4_8cpp"/>
+      </node>
+      <node id="2521">
+        <label>MyGraphics/Source/Assignment2.cpp</label>
+        <link refid="Assignment2_8cpp"/>
+      </node>
+      <node id="2524">
+        <label>MyGraphics/Source/Scene3.cpp</label>
+        <link refid="Scene3_8cpp"/>
+      </node>
+      <node id="2527">
+        <label>MyGraphics/Source/SceneLight2.cpp</label>
+        <link refid="SceneLight2_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LoadOBJ</definition>
+        <argsstring>(const char *file_path, std::vector&lt; Position &gt; &amp;out_vertices, std::vector&lt; TexCoord &gt; &amp;out_uvs, std::vector&lt; Vector3 &gt; &amp;out_normals)</argsstring>
+        <name>LoadOBJ</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_path</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>out_vertices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structTexCoord" kindref="compound">TexCoord</ref> &gt; &amp;</type>
+          <declname>out_uvs</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structVector3" kindref="compound">Vector3</ref> &gt; &amp;</type>
+          <declname>out_normals</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/LoadOBJ.h" line="8" column="1" bodyfile="MyGraphics/Source/LoadOBJ.cpp" bodystart="7" bodyend="136"/>
+        <references refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" compoundref="Vertex_8h" startline="20">TexCoord::u</references>
+        <references refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" compoundref="Vertex_8h" startline="20">TexCoord::v</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="683" endline="707">MeshBuilder::GenerateOBJ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IndexVBO</definition>
+        <argsstring>(std::vector&lt; Position &gt; &amp;in_vertices, std::vector&lt; TexCoord &gt; &amp;in_uvs, std::vector&lt; Vector3 &gt; &amp;in_normals, std::vector&lt; unsigned &gt; &amp;out_indices, std::vector&lt; Vertex &gt; &amp;out_vertices)</argsstring>
+        <name>IndexVBO</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structPosition" kindref="compound">Position</ref> &gt; &amp;</type>
+          <declname>in_vertices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structTexCoord" kindref="compound">TexCoord</ref> &gt; &amp;</type>
+          <declname>in_uvs</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structVector3" kindref="compound">Vector3</ref> &gt; &amp;</type>
+          <declname>in_normals</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; unsigned &gt; &amp;</type>
+          <declname>out_indices</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structVertex" kindref="compound">Vertex</ref> &gt; &amp;</type>
+          <declname>out_vertices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/LoadOBJ.h" line="15" column="1" bodyfile="MyGraphics/Source/LoadOBJ.cpp" bodystart="164" bodyend="204"/>
+        <references refid="LoadOBJ_8cpp_1af43afccb67fd9c80513489b75fddb347" compoundref="LoadOBJ_8cpp" startline="147" endline="162">getSimilarVertexIndex_fast</references>
+        <references refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" compoundref="Vertex_8h" startline="26">Vertex::pos</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Position::Set</references>
+        <references refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="22" endline="22">TexCoord::Set</references>
+        <references refid="structVertex_1a717d827da388b9c4847d1f5343959c78" compoundref="Vertex_8h" startline="29">Vertex::texCoord</references>
+        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="683" endline="707">MeshBuilder::GenerateOBJ</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LOAD_OBJ_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOAD_OBJ_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" kindref="member">LoadOBJ</ref>(</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path,<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Position&gt;<sp/>&amp;<sp/>out_vertices,<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TexCoord&gt;<sp/>&amp;<sp/>out_uvs,<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Vector3&gt;<sp/>&amp;<sp/>out_normals</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" kindref="member">IndexVBO</ref>(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Position&gt;<sp/>&amp;<sp/>in_vertices,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TexCoord&gt;<sp/>&amp;<sp/>in_uvs,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Vector3&gt;<sp/>&amp;<sp/>in_normals,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;unsigned&gt;<sp/>&amp;<sp/>out_indices,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Vertex&gt;<sp/>&amp;<sp/>out_vertices</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/LoadOBJ.h"/>
+  </compounddef>
+</doxygen>

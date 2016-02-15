@@ -1,0 +1,1934 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgnodeinfo__t" kind="struct" language="C++" prot="public">
+    <compoundname>Agnodeinfo_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a04e9986e0043b00c1c49ac9d890c58ac" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a2bd56252330358f27af8321f650a1e8a" kindref="member">Agrec_t</ref></type>
+        <definition>Agrec_t Agnodeinfo_t::hdr</definition>
+        <argsstring></argsstring>
+        <name>hdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="397" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a9b9cc2413e0fbd69d74f04542d204433" prot="public" static="no" mutable="no">
+        <type><ref refid="structshape__desc" kindref="compound">shape_desc</ref> *</type>
+        <definition>shape_desc* Agnodeinfo_t::shape</definition>
+        <argsstring></argsstring>
+        <name>shape</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="398" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a7d30ccada3964341e92b04450bea9c23" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Agnodeinfo_t::shape_info</definition>
+        <argsstring></argsstring>
+        <name>shape_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="399" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a4022a77ce465f3319f1f2d59b2a452c6" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf Agnodeinfo_t::coord</definition>
+        <argsstring></argsstring>
+        <name>coord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="400" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a0eb16e79104273a276bc30a10ae4f4d9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="401" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a37f6de44fbb0cb2e394bd6c43f0bfbef" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="401" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a249e032f928a9d172e0e84b4e2c8eb6e" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf Agnodeinfo_t::bb</definition>
+        <argsstring></argsstring>
+        <name>bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="402" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1afb9b91836901786236912a5bcc6e9646" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::ht</definition>
+        <argsstring></argsstring>
+        <name>ht</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="403" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a57c26e1f3129094538de78cfce3b5c4d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::lw</definition>
+        <argsstring></argsstring>
+        <name>lw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="403" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a0e8ce4ed8936be519c39f2fdcfa5a38d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::rw</definition>
+        <argsstring></argsstring>
+        <name>rw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="403" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a6e217dbc4ea34e6a63c9e74a23c1708f" prot="public" static="no" mutable="no">
+        <type><ref refid="structtextlabel__t" kindref="compound">textlabel_t</ref> *</type>
+        <definition>textlabel_t* Agnodeinfo_t::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="404" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a95dc60ae2925878bc270ffbbd9c84704" prot="public" static="no" mutable="no">
+        <type><ref refid="structtextlabel__t" kindref="compound">textlabel_t</ref> *</type>
+        <definition>textlabel_t* Agnodeinfo_t::xlabel</definition>
+        <argsstring></argsstring>
+        <name>xlabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="405" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a2f2406fb2fd238fd003415d428b75948" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Agnodeinfo_t::alg</definition>
+        <argsstring></argsstring>
+        <name>alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="406" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ae2526e010bdeb496dde00cd04ad7cac1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Agnodeinfo_t::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="407" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a75c1120d38aff9b8dd0508bc063378f5" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Agnodeinfo_t::gui_state</definition>
+        <argsstring></argsstring>
+        <name>gui_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="408" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ade64df258390fe9bdc2b923377370e49" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean Agnodeinfo_t::clustnode</definition>
+        <argsstring></argsstring>
+        <name>clustnode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="409" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a0feabe436db4204390b3dbbe5d7d7d73" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Agnodeinfo_t::pinned</definition>
+        <argsstring></argsstring>
+        <name>pinned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="412" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a85edf73145eaf819b85d804bf3975438" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="413" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a5ed3cd9e721ee9c478aec8fe752096d2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::heapindex</definition>
+        <argsstring></argsstring>
+        <name>heapindex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="413" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1abe2116feb081319a3b2eea29369a18d1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::hops</definition>
+        <argsstring></argsstring>
+        <name>hops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="413" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ab209cadb7e79192e61bfe1791b5a6b64" prot="public" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* Agnodeinfo_t::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="414" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a6640b9c93b05410452591340d7e440f7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::dist</definition>
+        <argsstring></argsstring>
+        <name>dist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="414" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a8ace281110ccb6836d0569a41bdbc2eb" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Agnodeinfo_t::showboxes</definition>
+        <argsstring></argsstring>
+        <name>showboxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="417" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ace2edada351eceb87f574d8843ab33d5" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1a7670a4e8a07d9ebb00411948b0bbf86d" kindref="member">boolean</ref></type>
+        <definition>boolean Agnodeinfo_t::has_port</definition>
+        <argsstring></argsstring>
+        <name>has_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="418" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1aa756672038e563e41fbe6551eeddb26a" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t* Agnodeinfo_t::rep</definition>
+        <argsstring></argsstring>
+        <name>rep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="419" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a789c289cda5ed646376b580352508d40" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t* Agnodeinfo_t::set</definition>
+        <argsstring></argsstring>
+        <name>set</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="420" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a0d4dfc72187560b861802b9ee4abbae3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Agnodeinfo_t::node_type</definition>
+        <argsstring></argsstring>
+        <name>node_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="423" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1adaf48bb3644a3d26d50f0845bce88b15" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Agnodeinfo_t::mark</definition>
+        <argsstring></argsstring>
+        <name>mark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="423" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a588f583535fbb53ada43bdf4bcc8ffd9" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Agnodeinfo_t::onstack</definition>
+        <argsstring></argsstring>
+        <name>onstack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="423" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a941b18ffec27aa24e0e36b24c45c8713" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Agnodeinfo_t::ranktype</definition>
+        <argsstring></argsstring>
+        <name>ranktype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="424" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a62867b6ec9cbc6b6a116c97c5dc3f925" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Agnodeinfo_t::weight_class</definition>
+        <argsstring></argsstring>
+        <name>weight_class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="424" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ab6462a99c6f362e60a62cc7a8d2e212c" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t* Agnodeinfo_t::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="425" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a151ea139b0b017e3212638b1c3233957" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t * Agnodeinfo_t::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="425" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a9b5958f138a099c3fa19b4c2dcb89524" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="426" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a55c47895ce58eecf4d2c5b2bb4f4efd8" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="426" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a706e552fb9332ae1b096f6493116362c" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::flat_out</definition>
+        <argsstring></argsstring>
+        <name>flat_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="426" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a5d4a9446610041070cbe4bc92d21a47c" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::flat_in</definition>
+        <argsstring></argsstring>
+        <name>flat_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="426" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1adba160969a51e7ec4582b064e6b91830" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::other</definition>
+        <argsstring></argsstring>
+        <name>other</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="426" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1aba8f5800f9df651be7171542ca0ebf5d" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aedca4e11cb6b1a3893747040cb785c12" kindref="member">graph_t</ref> *</type>
+        <definition>graph_t* Agnodeinfo_t::clust</definition>
+        <argsstring></argsstring>
+        <name>clust</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="427" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a789bfc74f3019f3b7fbeaac0a9e96dd5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::UF_size</definition>
+        <argsstring></argsstring>
+        <name>UF_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="430" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a8be0fcd365f8c4c03eccb9dec07d92e0" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t* Agnodeinfo_t::UF_parent</definition>
+        <argsstring></argsstring>
+        <name>UF_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="431" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a310d44ea755c65d705106ecc9f1ef743" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t* Agnodeinfo_t::inleaf</definition>
+        <argsstring></argsstring>
+        <name>inleaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="432" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a719d725723c17ecda7153bb65af01e54" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1aa54efbeed985023658063bdae73347ec" kindref="member">node_t</ref> *</type>
+        <definition>node_t * Agnodeinfo_t::outleaf</definition>
+        <argsstring></argsstring>
+        <name>outleaf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="432" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1abff4af7c68bd02f9289b7fb7b5d087bb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::rank</definition>
+        <argsstring></argsstring>
+        <name>rank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="435" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a67a121c2366f88703549f70b2066190a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::order</definition>
+        <argsstring></argsstring>
+        <name>order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="435" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a0701e6e29996b3777623764fc06402a0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::mval</definition>
+        <argsstring></argsstring>
+        <name>mval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="436" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1afac4e6b893221077d76f2acb2f4c466d" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::save_in</definition>
+        <argsstring></argsstring>
+        <name>save_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="437" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1abed21fa6556bc175a436b49d7b0b1141" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::save_out</definition>
+        <argsstring></argsstring>
+        <name>save_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="437" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1afdb9ebdbd7a77ffad54e35846a93f140" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::tree_in</definition>
+        <argsstring></argsstring>
+        <name>tree_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="440" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a7075eaa0407664f673383f05bad32833" prot="public" static="no" mutable="no">
+        <type><ref refid="structelist" kindref="compound">elist</ref></type>
+        <definition>elist Agnodeinfo_t::tree_out</definition>
+        <argsstring></argsstring>
+        <name>tree_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="440" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ae9fe16328675c6607feaba0608f91306" prot="public" static="no" mutable="no">
+        <type><ref refid="types_8h_1ab6289995bb0656f4da2ae67d80fea6d2" kindref="member">edge_t</ref> *</type>
+        <definition>edge_t* Agnodeinfo_t::par</definition>
+        <argsstring></argsstring>
+        <name>par</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="441" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a0e4e42f8e544f29dd9f47997b2708d7b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::low</definition>
+        <argsstring></argsstring>
+        <name>low</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="442" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1a9efc525b9bfa6e74f8879f509e169b3b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::lim</definition>
+        <argsstring></argsstring>
+        <name>lim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="442" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1ab88eb1a018df09eff45bc43cb3dace09" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agnodeinfo_t::priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="443" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgnodeinfo__t_1aa51d206384f26c970a10027c24a4ddde" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Agnodeinfo_t::pad[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="445" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4066">
+        <label></label>
+      </node>
+      <node id="4083">
+        <label>rank_t</label>
+        <link refid="structrank__t"/>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>ht1</edgelabel>
+          <edgelabel>ht2</edgelabel>
+          <edgelabel>pht1</edgelabel>
+          <edgelabel>pht2</edgelabel>
+        </childnode>
+        <childnode refid="4084" relation="usage">
+          <edgelabel>candidate</edgelabel>
+          <edgelabel>valid</edgelabel>
+        </childnode>
+        <childnode refid="4085" relation="usage">
+          <edgelabel>av</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>n</edgelabel>
+          <edgelabel>cache_nc</edgelabel>
+          <edgelabel>an</edgelabel>
+        </childnode>
+        <childnode refid="4089" relation="usage">
+          <edgelabel>flat</edgelabel>
+        </childnode>
+      </node>
+      <node id="4138">
+        <label>void *(*)(Agdisc_t *)</label>
+      </node>
+      <node id="4107">
+        <label>Agdict_t</label>
+        <link refid="structAgdict__t"/>
+        <childnode refid="4108" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="4109" relation="usage">
+          <edgelabel>dict</edgelabel>
+        </childnode>
+        <childnode refid="4080" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4118">
+        <label>Void_t *</label>
+      </node>
+      <node id="4074">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4091">
+        <label>ratio_t</label>
+      </node>
+      <node id="4129">
+        <label>long(*)(void *state, int objtype, char *str, unsigned long *id, int createflag)</label>
+      </node>
+      <node id="4073">
+        <label>void *</label>
+      </node>
+      <node id="4140">
+        <label>elist</label>
+        <link refid="structelist"/>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="4105" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="4144">
+        <label>void(*)(GVJ_t *job, node_t *n)</label>
+      </node>
+      <node id="4131">
+        <label>long(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="4122">
+        <label>Agclos_s</label>
+        <link refid="structAgclos__s"/>
+        <childnode refid="4123" relation="usage">
+          <edgelabel>cb</edgelabel>
+        </childnode>
+        <childnode refid="4125" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="4109" relation="usage">
+          <edgelabel>strdict</edgelabel>
+          <edgelabel>lookup_by_id</edgelabel>
+          <edgelabel>lookup_by_name</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>callbacks_enabled</edgelabel>
+          <edgelabel>seq</edgelabel>
+        </childnode>
+        <childnode refid="4139" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+      </node>
+      <node id="4114">
+        <label>Dtcompar_f</label>
+      </node>
+      <node id="4137">
+        <label>void *(*)(void *state, void *ptr, size_t old, size_t req)</label>
+      </node>
+      <node id="4085">
+        <label>Agnode_s</label>
+        <link refid="structAgnode__s"/>
+        <childnode refid="4077" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="4086" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="4088" relation="usage">
+          <edgelabel>mainsub</edgelabel>
+        </childnode>
+      </node>
+      <node id="4079">
+        <label>Agnode_t</label>
+        <link refid="structAgnode__t"/>
+        <childnode refid="4059" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4078" relation="usage">
+          <edgelabel>attr</edgelabel>
+        </childnode>
+        <childnode refid="4077" relation="usage">
+          <edgelabel>graph</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>handle</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>pad</edgelabel>
+        </childnode>
+        <childnode refid="4080" relation="usage">
+          <edgelabel>didset</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4075">
+        <label>Agraph_s</label>
+        <link refid="structAgraph__s"/>
+        <childnode refid="4076" relation="usage">
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="4077" relation="usage">
+          <edgelabel>root</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4121" relation="usage">
+          <edgelabel>desc</edgelabel>
+        </childnode>
+        <childnode refid="4086" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+        <childnode refid="4109" relation="usage">
+          <edgelabel>e_id</edgelabel>
+          <edgelabel>n_seq</edgelabel>
+          <edgelabel>g_dict</edgelabel>
+          <edgelabel>e_seq</edgelabel>
+          <edgelabel>n_id</edgelabel>
+        </childnode>
+        <childnode refid="4122" relation="usage">
+          <edgelabel>clos</edgelabel>
+        </childnode>
+      </node>
+      <node id="4077">
+        <label>Agraph_t</label>
+        <link refid="structAgraph__t"/>
+        <childnode refid="4078" relation="usage">
+          <edgelabel>attr</edgelabel>
+        </childnode>
+        <childnode refid="4077" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="4079" relation="usage">
+          <edgelabel>meta_node</edgelabel>
+        </childnode>
+        <childnode refid="4081" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4097" relation="usage">
+          <edgelabel>proto</edgelabel>
+        </childnode>
+        <childnode refid="4106" relation="usage">
+          <edgelabel>univ</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>kind</edgelabel>
+          <edgelabel>handle</edgelabel>
+        </childnode>
+        <childnode refid="4109" relation="usage">
+          <edgelabel>inedges</edgelabel>
+          <edgelabel>outedges</edgelabel>
+          <edgelabel>nodes</edgelabel>
+        </childnode>
+        <childnode refid="4080" relation="usage">
+          <edgelabel>didset</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4080">
+        <label>char *</label>
+      </node>
+      <node id="4063">
+        <label>htmllabel_t *</label>
+      </node>
+      <node id="4101">
+        <label>Ppoly_t</label>
+        <link refid="structPpoly__t"/>
+        <childnode refid="4102" relation="usage">
+          <edgelabel>ps</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>pn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4128">
+        <label>void(*)(void *state, int objtype, unsigned long id)</label>
+      </node>
+      <node id="4103">
+        <label>splines</label>
+        <link refid="structsplines"/>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="4094" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="4104" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="4134">
+        <label>Agmemdisc_s</label>
+        <link refid="structAgmemdisc__s"/>
+        <childnode refid="4135" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="4136" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="4132" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="4137" relation="usage">
+          <edgelabel>resize</edgelabel>
+        </childnode>
+        <childnode refid="4138" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+      </node>
+      <node id="4059">
+        <label>Agnodeinfo_t</label>
+        <link refid="structAgnodeinfo__t"/>
+        <childnode refid="4060" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="4062" relation="usage">
+          <edgelabel>xlabel</edgelabel>
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>width</edgelabel>
+          <edgelabel>mval</edgelabel>
+          <edgelabel>rw</edgelabel>
+          <edgelabel>dist</edgelabel>
+          <edgelabel>height</edgelabel>
+          <edgelabel>lw</edgelabel>
+          <edgelabel>ht</edgelabel>
+          <edgelabel>pad</edgelabel>
+          <edgelabel>pos</edgelabel>
+        </childnode>
+        <childnode refid="4075" relation="usage">
+          <edgelabel>clust</edgelabel>
+        </childnode>
+        <childnode refid="4085" relation="usage">
+          <edgelabel>prev</edgelabel>
+          <edgelabel>outleaf</edgelabel>
+          <edgelabel>inleaf</edgelabel>
+          <edgelabel>next</edgelabel>
+          <edgelabel>rep</edgelabel>
+          <edgelabel>UF_parent</edgelabel>
+          <edgelabel>set</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>weight_class</edgelabel>
+          <edgelabel>onstack</edgelabel>
+          <edgelabel>ranktype</edgelabel>
+          <edgelabel>state</edgelabel>
+          <edgelabel>mark</edgelabel>
+          <edgelabel>node_type</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>heapindex</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>priority</edgelabel>
+          <edgelabel>lim</edgelabel>
+          <edgelabel>hops</edgelabel>
+          <edgelabel>UF_size</edgelabel>
+          <edgelabel>id</edgelabel>
+          <edgelabel>low</edgelabel>
+          <edgelabel>rank</edgelabel>
+        </childnode>
+        <childnode refid="4094" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="4140" relation="usage">
+          <edgelabel>tree_out</edgelabel>
+          <edgelabel>save_out</edgelabel>
+          <edgelabel>flat_out</edgelabel>
+          <edgelabel>flat_in</edgelabel>
+          <edgelabel>in</edgelabel>
+          <edgelabel>out</edgelabel>
+          <edgelabel>other</edgelabel>
+          <edgelabel>save_in</edgelabel>
+          <edgelabel>tree_in</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>clustnode</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+          <edgelabel>pinned</edgelabel>
+          <edgelabel>has_port</edgelabel>
+        </childnode>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>alg</edgelabel>
+          <edgelabel>shape_info</edgelabel>
+        </childnode>
+        <childnode refid="4141" relation="usage">
+          <edgelabel>shape</edgelabel>
+        </childnode>
+        <childnode refid="4105" relation="usage">
+          <edgelabel>par</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>coord</edgelabel>
+        </childnode>
+      </node>
+      <node id="4139">
+        <label>Agdstate_s</label>
+        <link refid="structAgdstate__s"/>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="4115">
+        <label>Dtmemory_f</label>
+      </node>
+      <node id="4133">
+        <label>void(*)(void *state, int objtype, void *obj)</label>
+      </node>
+      <node id="4108">
+        <label>Agsym_t</label>
+        <link refid="structAgsym__t"/>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>value</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>printed</edgelabel>
+          <edgelabel>fixed</edgelabel>
+        </childnode>
+      </node>
+      <node id="4087">
+        <label>Agtag_s</label>
+        <link refid="structAgtag__s"/>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>attrwf</edgelabel>
+          <edgelabel>mtflock</edgelabel>
+          <edgelabel>objtype</edgelabel>
+          <edgelabel>seq</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4109">
+        <label>_dt_s</label>
+        <link refid="struct__dt__s"/>
+        <childnode refid="4110" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="4117" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4118" relation="usage">
+          <edgelabel>user</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>type</edgelabel>
+          <edgelabel>nview</edgelabel>
+        </childnode>
+        <childnode refid="4109" relation="usage">
+          <edgelabel>view</edgelabel>
+          <edgelabel>walk</edgelabel>
+        </childnode>
+        <childnode refid="4115" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="4119" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+        <childnode refid="4120" relation="usage">
+          <edgelabel>meth</edgelabel>
+        </childnode>
+      </node>
+      <node id="4124">
+        <label>Agcbdisc_s</label>
+        <link refid="structAgcbdisc__s"/>
+        <childnode refid="4077" relation="usage">
+          <edgelabel>del</edgelabel>
+          <edgelabel>ins</edgelabel>
+          <edgelabel>mod</edgelabel>
+        </childnode>
+        <childnode refid="4066" relation="usage">
+          <edgelabel>node</edgelabel>
+          <edgelabel>graph</edgelabel>
+          <edgelabel>edge</edgelabel>
+        </childnode>
+      </node>
+      <node id="4090">
+        <label>layout_t</label>
+        <link refid="structlayout__t"/>
+        <childnode refid="4091" relation="usage">
+          <edgelabel>ratio_kind</edgelabel>
+        </childnode>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>ratio</edgelabel>
+          <edgelabel>scale</edgelabel>
+          <edgelabel>dpi</edgelabel>
+          <edgelabel>quantum</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>filled</edgelabel>
+          <edgelabel>centered</edgelabel>
+          <edgelabel>landscape</edgelabel>
+        </childnode>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>xdots</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>page</edgelabel>
+          <edgelabel>size</edgelabel>
+          <edgelabel>margin</edgelabel>
+        </childnode>
+      </node>
+      <node id="4136">
+        <label>void *(*)(void *state, size_t req)</label>
+      </node>
+      <node id="4072">
+        <label>_PostscriptAlias</label>
+        <link refid="struct__PostscriptAlias"/>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>family</edgelabel>
+          <edgelabel>svg_font_style</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>svg_font_weight</edgelabel>
+          <edgelabel>style</edgelabel>
+          <edgelabel>name</edgelabel>
+          <edgelabel>svg_font_family</edgelabel>
+          <edgelabel>stretch</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>xfig_code</edgelabel>
+        </childnode>
+      </node>
+      <node id="4086">
+        <label>Agobj_s</label>
+        <link refid="structAgobj__s"/>
+        <childnode refid="4060" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4087" relation="usage">
+          <edgelabel>tag</edgelabel>
+        </childnode>
+      </node>
+      <node id="4095">
+        <label>long</label>
+      </node>
+      <node id="4127">
+        <label>Agiddisc_s</label>
+        <link refid="structAgiddisc__s"/>
+        <childnode refid="4128" relation="usage">
+          <edgelabel>free</edgelabel>
+        </childnode>
+        <childnode refid="4129" relation="usage">
+          <edgelabel>map</edgelabel>
+        </childnode>
+        <childnode refid="4130" relation="usage">
+          <edgelabel>open</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>print</edgelabel>
+        </childnode>
+        <childnode refid="4131" relation="usage">
+          <edgelabel>alloc</edgelabel>
+        </childnode>
+        <childnode refid="4132" relation="usage">
+          <edgelabel>close</edgelabel>
+        </childnode>
+        <childnode refid="4133" relation="usage">
+          <edgelabel>idregister</edgelabel>
+        </childnode>
+      </node>
+      <node id="4084">
+        <label>unsigned char</label>
+      </node>
+      <node id="4117">
+        <label>_dtdata_s</label>
+        <link refid="struct__dtdata__s"/>
+        <childnode refid="4066" relation="usage">
+          <edgelabel>hh</edgelabel>
+        </childnode>
+        <childnode refid="4076" relation="usage">
+          <edgelabel>here</edgelabel>
+          <edgelabel>_htab</edgelabel>
+          <edgelabel>_head</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>loop</edgelabel>
+          <edgelabel>ntab</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>minp</edgelabel>
+        </childnode>
+      </node>
+      <node id="4069">
+        <label>textspan_t</label>
+        <link refid="structtextspan__t"/>
+        <childnode refid="4070" relation="usage">
+          <edgelabel>free_layout</edgelabel>
+        </childnode>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>yoffset_layout</edgelabel>
+          <edgelabel>yoffset_centerline</edgelabel>
+        </childnode>
+        <childnode refid="4071" relation="usage">
+          <edgelabel>font</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>str</edgelabel>
+          <edgelabel>just</edgelabel>
+        </childnode>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>layout</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="4141">
+        <label>shape_desc</label>
+        <link refid="structshape__desc"/>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4142" relation="usage">
+          <edgelabel>fns</edgelabel>
+        </childnode>
+        <childnode refid="4145" relation="usage">
+          <edgelabel>polygon</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>usershape</edgelabel>
+        </childnode>
+      </node>
+      <node id="4070">
+        <label>void(*)(void *layout)</label>
+      </node>
+      <node id="4067">
+        <label>int</label>
+      </node>
+      <node id="4132">
+        <label>void(*)(void *state)</label>
+      </node>
+      <node id="4062">
+        <label>textlabel_t</label>
+        <link refid="structtextlabel__t"/>
+        <childnode refid="4063" relation="usage">
+          <edgelabel>html</edgelabel>
+        </childnode>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>fontsize</edgelabel>
+        </childnode>
+        <childnode refid="4065" relation="usage">
+          <edgelabel>nspans</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>valign</edgelabel>
+          <edgelabel>fontname</edgelabel>
+          <edgelabel>fontcolor</edgelabel>
+          <edgelabel>text</edgelabel>
+        </childnode>
+        <childnode refid="4066" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>charset</edgelabel>
+        </childnode>
+        <childnode refid="4066" relation="usage">
+          <edgelabel>txt</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>set</edgelabel>
+          <edgelabel>html</edgelabel>
+        </childnode>
+        <childnode refid="4069" relation="usage">
+          <edgelabel>span</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>space</edgelabel>
+          <edgelabel>dimen</edgelabel>
+          <edgelabel>pos</edgelabel>
+        </childnode>
+      </node>
+      <node id="4119">
+        <label>Dtsearch_f</label>
+      </node>
+      <node id="4092">
+        <label>fontname_kind</label>
+      </node>
+      <node id="4064">
+        <label>double</label>
+      </node>
+      <node id="4099">
+        <label>Agedgeinfo_t</label>
+        <link refid="structAgedgeinfo__t"/>
+        <childnode refid="4060" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="4100" relation="usage">
+          <edgelabel>tail_port</edgelabel>
+          <edgelabel>head_port</edgelabel>
+        </childnode>
+        <childnode refid="4101" relation="usage">
+          <edgelabel>path</edgelabel>
+        </childnode>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>dist</edgelabel>
+          <edgelabel>factor</edgelabel>
+        </childnode>
+        <childnode refid="4062" relation="usage">
+          <edgelabel>head_label</edgelabel>
+          <edgelabel>tail_label</edgelabel>
+          <edgelabel>xlabel</edgelabel>
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="4103" relation="usage">
+          <edgelabel>spl</edgelabel>
+        </childnode>
+        <childnode refid="4065" relation="usage">
+          <edgelabel>count</edgelabel>
+          <edgelabel>xpenalty</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>adjacent</edgelabel>
+          <edgelabel>label_ontop</edgelabel>
+          <edgelabel>edge_type</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>tree_index</edgelabel>
+          <edgelabel>weight</edgelabel>
+          <edgelabel>cutvalue</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>minlen</edgelabel>
+          <edgelabel>conc_opp_flag</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+        </childnode>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>alg</edgelabel>
+        </childnode>
+        <childnode refid="4105" relation="usage">
+          <edgelabel>to_virt</edgelabel>
+          <edgelabel>to_orig</edgelabel>
+        </childnode>
+      </node>
+      <node id="4104">
+        <label>bezier</label>
+        <link refid="structbezier"/>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>sflag</edgelabel>
+          <edgelabel>eflag</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>ep</edgelabel>
+          <edgelabel>sp</edgelabel>
+          <edgelabel>list</edgelabel>
+        </childnode>
+      </node>
+      <node id="4102">
+        <label>Pxy_t</label>
+        <link refid="structPxy__t"/>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="4120">
+        <label>_dtmethod_s</label>
+        <link refid="struct__dtmethod__s"/>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="4119" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+      </node>
+      <node id="4096">
+        <label>GVC_t *</label>
+      </node>
+      <node id="4106">
+        <label>Agdata_t</label>
+        <link refid="structAgdata__t"/>
+        <childnode refid="4107" relation="usage">
+          <edgelabel>globattr</edgelabel>
+          <edgelabel>edgeattr</edgelabel>
+          <edgelabel>nodeattr</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>max_edge_id</edgelabel>
+          <edgelabel>max_node_id</edgelabel>
+        </childnode>
+        <childnode refid="4109" relation="usage">
+          <edgelabel>node_dict</edgelabel>
+        </childnode>
+      </node>
+      <node id="4113">
+        <label>Dtmake_f</label>
+      </node>
+      <node id="4093">
+        <label>nlist_t</label>
+        <link refid="structnlist__t"/>
+        <childnode refid="4085" relation="usage">
+          <edgelabel>list</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="4060">
+        <label>Agrec_s</label>
+        <link refid="structAgrec__s"/>
+        <childnode refid="4060" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4065">
+        <label>short</label>
+      </node>
+      <node id="4135">
+        <label>void(*)(void *state, void *ptr)</label>
+      </node>
+      <node id="4125">
+        <label>Agdisc_s</label>
+        <link refid="structAgdisc__s"/>
+        <childnode refid="4126" relation="usage">
+          <edgelabel>io</edgelabel>
+        </childnode>
+        <childnode refid="4127" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4134" relation="usage">
+          <edgelabel>mem</edgelabel>
+        </childnode>
+      </node>
+      <node id="4089">
+        <label>adjmatrix_t</label>
+        <link refid="structadjmatrix__t"/>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>nrows</edgelabel>
+          <edgelabel>ncols</edgelabel>
+        </childnode>
+      </node>
+      <node id="4116">
+        <label>Dthash_f</label>
+      </node>
+      <node id="4082">
+        <label>void(*)(graph_t *g)</label>
+      </node>
+      <node id="4097">
+        <label>Agproto_t</label>
+        <link refid="structAgproto__t"/>
+        <childnode refid="4098" relation="usage">
+          <edgelabel>e</edgelabel>
+        </childnode>
+        <childnode refid="4079" relation="usage">
+          <edgelabel>n</edgelabel>
+        </childnode>
+        <childnode refid="4097" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="4100">
+        <label>port</label>
+        <link refid="structport"/>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>theta</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4094" relation="usage">
+          <edgelabel>bp</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>constrained</edgelabel>
+          <edgelabel>defined</edgelabel>
+          <edgelabel>side</edgelabel>
+          <edgelabel>order</edgelabel>
+          <edgelabel>dyna</edgelabel>
+          <edgelabel>clip</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>p</edgelabel>
+        </childnode>
+      </node>
+      <node id="4078">
+        <label>char **</label>
+      </node>
+      <node id="4130">
+        <label>void *(*)(Agraph_t *g, Agdisc_t *)</label>
+      </node>
+      <node id="4110">
+        <label>_dtdisc_s</label>
+        <link refid="struct__dtdisc__s"/>
+        <childnode refid="4111" relation="usage">
+          <edgelabel>freef</edgelabel>
+        </childnode>
+        <childnode refid="4112" relation="usage">
+          <edgelabel>eventf</edgelabel>
+        </childnode>
+        <childnode refid="4113" relation="usage">
+          <edgelabel>makef</edgelabel>
+        </childnode>
+        <childnode refid="4114" relation="usage">
+          <edgelabel>comparf</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>key</edgelabel>
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="4115" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="4116" relation="usage">
+          <edgelabel>hashf</edgelabel>
+        </childnode>
+      </node>
+      <node id="4081">
+        <label>Agraphinfo_t</label>
+        <link refid="structAgraphinfo__t"/>
+        <childnode refid="4082" relation="usage">
+          <edgelabel>cleanup</edgelabel>
+        </childnode>
+        <childnode refid="4060" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+        <childnode refid="4083" relation="usage">
+          <edgelabel>rank</edgelabel>
+        </childnode>
+        <childnode refid="4090" relation="usage">
+          <edgelabel>drawing</edgelabel>
+        </childnode>
+        <childnode refid="4092" relation="usage">
+          <edgelabel>fontnames</edgelabel>
+        </childnode>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>ht1</edgelabel>
+          <edgelabel>ht2</edgelabel>
+          <edgelabel>dist</edgelabel>
+          <edgelabel>sum_t</edgelabel>
+          <edgelabel>t</edgelabel>
+          <edgelabel>spring</edgelabel>
+        </childnode>
+        <childnode refid="4062" relation="usage">
+          <edgelabel>label</edgelabel>
+        </childnode>
+        <childnode refid="4075" relation="usage">
+          <edgelabel>dotroot</edgelabel>
+          <edgelabel>clust</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4085" relation="usage">
+          <edgelabel>ln</edgelabel>
+          <edgelabel>neato_nlist</edgelabel>
+          <edgelabel>nlist</edgelabel>
+          <edgelabel>rankleader</edgelabel>
+          <edgelabel>leader</edgelabel>
+          <edgelabel>maxrep</edgelabel>
+          <edgelabel>minrep</edgelabel>
+          <edgelabel>rn</edgelabel>
+          <edgelabel>maxset</edgelabel>
+          <edgelabel>minset</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>label_pos</edgelabel>
+          <edgelabel>set_type</edgelabel>
+          <edgelabel>installed</edgelabel>
+        </childnode>
+        <childnode refid="4065" relation="usage">
+          <edgelabel>minrank</edgelabel>
+          <edgelabel>maxrank</edgelabel>
+        </childnode>
+        <childnode refid="4093" relation="usage">
+          <edgelabel>comp</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>ranksep</edgelabel>
+          <edgelabel>move</edgelabel>
+          <edgelabel>rankdir</edgelabel>
+          <edgelabel>nodesep</edgelabel>
+          <edgelabel>level</edgelabel>
+          <edgelabel>n_cluster</edgelabel>
+        </childnode>
+        <childnode refid="4094" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+        <childnode refid="4095" relation="usage">
+          <edgelabel>n_nodes</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>gui_state</edgelabel>
+          <edgelabel>flags</edgelabel>
+          <edgelabel>has_sourcerank</edgelabel>
+          <edgelabel>expanded</edgelabel>
+          <edgelabel>has_images</edgelabel>
+          <edgelabel>showboxes</edgelabel>
+          <edgelabel>has_sinkrank</edgelabel>
+          <edgelabel>odim</edgelabel>
+          <edgelabel>ndim</edgelabel>
+          <edgelabel>has_labels</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4096" relation="usage">
+          <edgelabel>gvc</edgelabel>
+        </childnode>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>alg</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>border</edgelabel>
+        </childnode>
+      </node>
+      <node id="4126">
+        <label>Agiodisc_s</label>
+        <link refid="structAgiodisc__s"/>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>putstr</edgelabel>
+          <edgelabel>afread</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+      <node id="4145">
+        <label>polygon_t</label>
+        <link refid="structpolygon__t"/>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>distortion</edgelabel>
+          <edgelabel>skew</edgelabel>
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>peripheries</edgelabel>
+          <edgelabel>sides</edgelabel>
+          <edgelabel>regular</edgelabel>
+          <edgelabel>option</edgelabel>
+        </childnode>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+      <node id="4076">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="4076" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="4066" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="4068">
+        <label>unsigned</label>
+      </node>
+      <node id="4142">
+        <label>shape_functions</label>
+        <link refid="structshape__functions"/>
+        <childnode refid="4100" relation="usage">
+          <edgelabel>portfn</edgelabel>
+        </childnode>
+        <childnode refid="4084" relation="usage">
+          <edgelabel>insidefn</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>pboxfn</edgelabel>
+        </childnode>
+        <childnode refid="4143" relation="usage">
+          <edgelabel>freefn</edgelabel>
+          <edgelabel>initfn</edgelabel>
+        </childnode>
+        <childnode refid="4144" relation="usage">
+          <edgelabel>codefn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4143">
+        <label>void(*)(node_t *)</label>
+      </node>
+      <node id="4123">
+        <label>Agcbstack_s</label>
+        <link refid="structAgcbstack__s"/>
+        <childnode refid="4123" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+        <childnode refid="4073" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="4124" relation="usage">
+          <edgelabel>f</edgelabel>
+        </childnode>
+      </node>
+      <node id="4111">
+        <label>Dtfree_f</label>
+      </node>
+      <node id="4121">
+        <label>Agdesc_s</label>
+        <link refid="structAgdesc__s"/>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>maingraph</edgelabel>
+          <edgelabel>no_write</edgelabel>
+          <edgelabel>has_attrs</edgelabel>
+          <edgelabel>no_loop</edgelabel>
+          <edgelabel>strict</edgelabel>
+          <edgelabel>directed</edgelabel>
+          <edgelabel>flatlock</edgelabel>
+          <edgelabel>has_cmpnd</edgelabel>
+        </childnode>
+      </node>
+      <node id="4061">
+        <label>char</label>
+      </node>
+      <node id="4088">
+        <label>Agsubnode_s</label>
+        <link refid="structAgsubnode__s"/>
+        <childnode refid="4076" relation="usage">
+          <edgelabel>in_id</edgelabel>
+          <edgelabel>id_link</edgelabel>
+          <edgelabel>in_seq</edgelabel>
+          <edgelabel>out_seq</edgelabel>
+          <edgelabel>out_id</edgelabel>
+          <edgelabel>seq_link</edgelabel>
+        </childnode>
+        <childnode refid="4079" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+      </node>
+      <node id="4105">
+        <label>Agedge_s</label>
+        <link refid="structAgedge__s"/>
+        <childnode refid="4076" relation="usage">
+          <edgelabel>id_link</edgelabel>
+          <edgelabel>seq_link</edgelabel>
+        </childnode>
+        <childnode refid="4079" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="4086" relation="usage">
+          <edgelabel>base</edgelabel>
+        </childnode>
+      </node>
+      <node id="4098">
+        <label>Agedge_t</label>
+        <link refid="structAgedge__t"/>
+        <childnode refid="4079" relation="usage">
+          <edgelabel>head</edgelabel>
+          <edgelabel>tail</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>attr</edgelabel>
+          <edgelabel>didset</edgelabel>
+        </childnode>
+        <childnode refid="4067" relation="usage">
+          <edgelabel>tag</edgelabel>
+          <edgelabel>printkey</edgelabel>
+          <edgelabel>handle</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="4099" relation="usage">
+          <edgelabel>u</edgelabel>
+        </childnode>
+      </node>
+      <node id="4112">
+        <label>Dtevent_f</label>
+      </node>
+      <node id="4071">
+        <label>textfont_t</label>
+        <link refid="structtextfont__t"/>
+        <childnode refid="4064" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+        <childnode refid="4061" relation="usage">
+          <edgelabel>name</edgelabel>
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="4072" relation="usage">
+          <edgelabel>postscript_alias</edgelabel>
+        </childnode>
+        <childnode refid="4068" relation="usage">
+          <edgelabel>flags</edgelabel>
+          <edgelabel>cnt</edgelabel>
+        </childnode>
+      </node>
+      <node id="4094">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="4074" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="396" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="396" bodyend="448"/>
+    <listofallmembers>
+      <member refid="structAgnodeinfo__t_1a2f2406fb2fd238fd003415d428b75948" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>alg</name></member>
+      <member refid="structAgnodeinfo__t_1a249e032f928a9d172e0e84b4e2c8eb6e" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>bb</name></member>
+      <member refid="structAgnodeinfo__t_1aba8f5800f9df651be7171542ca0ebf5d" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>clust</name></member>
+      <member refid="structAgnodeinfo__t_1ade64df258390fe9bdc2b923377370e49" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>clustnode</name></member>
+      <member refid="structAgnodeinfo__t_1a4022a77ce465f3319f1f2d59b2a452c6" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>coord</name></member>
+      <member refid="structAgnodeinfo__t_1a6640b9c93b05410452591340d7e440f7" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>dist</name></member>
+      <member refid="structAgnodeinfo__t_1a5d4a9446610041070cbe4bc92d21a47c" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>flat_in</name></member>
+      <member refid="structAgnodeinfo__t_1a706e552fb9332ae1b096f6493116362c" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>flat_out</name></member>
+      <member refid="structAgnodeinfo__t_1a75c1120d38aff9b8dd0508bc063378f5" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>gui_state</name></member>
+      <member refid="structAgnodeinfo__t_1ace2edada351eceb87f574d8843ab33d5" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>has_port</name></member>
+      <member refid="structAgnodeinfo__t_1a04e9986e0043b00c1c49ac9d890c58ac" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>hdr</name></member>
+      <member refid="structAgnodeinfo__t_1a5ed3cd9e721ee9c478aec8fe752096d2" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>heapindex</name></member>
+      <member refid="structAgnodeinfo__t_1a37f6de44fbb0cb2e394bd6c43f0bfbef" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>height</name></member>
+      <member refid="structAgnodeinfo__t_1abe2116feb081319a3b2eea29369a18d1" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>hops</name></member>
+      <member refid="structAgnodeinfo__t_1afb9b91836901786236912a5bcc6e9646" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>ht</name></member>
+      <member refid="structAgnodeinfo__t_1a85edf73145eaf819b85d804bf3975438" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>id</name></member>
+      <member refid="structAgnodeinfo__t_1a9b5958f138a099c3fa19b4c2dcb89524" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>in</name></member>
+      <member refid="structAgnodeinfo__t_1a310d44ea755c65d705106ecc9f1ef743" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>inleaf</name></member>
+      <member refid="structAgnodeinfo__t_1a6e217dbc4ea34e6a63c9e74a23c1708f" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>label</name></member>
+      <member refid="structAgnodeinfo__t_1a9efc525b9bfa6e74f8879f509e169b3b" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>lim</name></member>
+      <member refid="structAgnodeinfo__t_1a0e4e42f8e544f29dd9f47997b2708d7b" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>low</name></member>
+      <member refid="structAgnodeinfo__t_1a57c26e1f3129094538de78cfce3b5c4d" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>lw</name></member>
+      <member refid="structAgnodeinfo__t_1adaf48bb3644a3d26d50f0845bce88b15" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>mark</name></member>
+      <member refid="structAgnodeinfo__t_1a0701e6e29996b3777623764fc06402a0" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>mval</name></member>
+      <member refid="structAgnodeinfo__t_1ab6462a99c6f362e60a62cc7a8d2e212c" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>next</name></member>
+      <member refid="structAgnodeinfo__t_1a0d4dfc72187560b861802b9ee4abbae3" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>node_type</name></member>
+      <member refid="structAgnodeinfo__t_1a588f583535fbb53ada43bdf4bcc8ffd9" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>onstack</name></member>
+      <member refid="structAgnodeinfo__t_1a67a121c2366f88703549f70b2066190a" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>order</name></member>
+      <member refid="structAgnodeinfo__t_1adba160969a51e7ec4582b064e6b91830" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>other</name></member>
+      <member refid="structAgnodeinfo__t_1a55c47895ce58eecf4d2c5b2bb4f4efd8" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>out</name></member>
+      <member refid="structAgnodeinfo__t_1a719d725723c17ecda7153bb65af01e54" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>outleaf</name></member>
+      <member refid="structAgnodeinfo__t_1aa51d206384f26c970a10027c24a4ddde" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>pad</name></member>
+      <member refid="structAgnodeinfo__t_1ae9fe16328675c6607feaba0608f91306" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>par</name></member>
+      <member refid="structAgnodeinfo__t_1a0feabe436db4204390b3dbbe5d7d7d73" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>pinned</name></member>
+      <member refid="structAgnodeinfo__t_1ab209cadb7e79192e61bfe1791b5a6b64" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>pos</name></member>
+      <member refid="structAgnodeinfo__t_1a151ea139b0b017e3212638b1c3233957" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>prev</name></member>
+      <member refid="structAgnodeinfo__t_1ab88eb1a018df09eff45bc43cb3dace09" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>priority</name></member>
+      <member refid="structAgnodeinfo__t_1abff4af7c68bd02f9289b7fb7b5d087bb" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>rank</name></member>
+      <member refid="structAgnodeinfo__t_1a941b18ffec27aa24e0e36b24c45c8713" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>ranktype</name></member>
+      <member refid="structAgnodeinfo__t_1aa756672038e563e41fbe6551eeddb26a" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>rep</name></member>
+      <member refid="structAgnodeinfo__t_1a0e8ce4ed8936be519c39f2fdcfa5a38d" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>rw</name></member>
+      <member refid="structAgnodeinfo__t_1afac4e6b893221077d76f2acb2f4c466d" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>save_in</name></member>
+      <member refid="structAgnodeinfo__t_1abed21fa6556bc175a436b49d7b0b1141" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>save_out</name></member>
+      <member refid="structAgnodeinfo__t_1a789c289cda5ed646376b580352508d40" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>set</name></member>
+      <member refid="structAgnodeinfo__t_1a9b9cc2413e0fbd69d74f04542d204433" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>shape</name></member>
+      <member refid="structAgnodeinfo__t_1a7d30ccada3964341e92b04450bea9c23" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>shape_info</name></member>
+      <member refid="structAgnodeinfo__t_1a8ace281110ccb6836d0569a41bdbc2eb" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>showboxes</name></member>
+      <member refid="structAgnodeinfo__t_1ae2526e010bdeb496dde00cd04ad7cac1" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>state</name></member>
+      <member refid="structAgnodeinfo__t_1afdb9ebdbd7a77ffad54e35846a93f140" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>tree_in</name></member>
+      <member refid="structAgnodeinfo__t_1a7075eaa0407664f673383f05bad32833" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>tree_out</name></member>
+      <member refid="structAgnodeinfo__t_1a8be0fcd365f8c4c03eccb9dec07d92e0" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>UF_parent</name></member>
+      <member refid="structAgnodeinfo__t_1a789bfc74f3019f3b7fbeaac0a9e96dd5" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>UF_size</name></member>
+      <member refid="structAgnodeinfo__t_1a62867b6ec9cbc6b6a116c97c5dc3f925" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>weight_class</name></member>
+      <member refid="structAgnodeinfo__t_1a0eb16e79104273a276bc30a10ae4f4d9" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>width</name></member>
+      <member refid="structAgnodeinfo__t_1a95dc60ae2925878bc270ffbbd9c84704" prot="public" virt="non-virtual"><scope>Agnodeinfo_t</scope><name>xlabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

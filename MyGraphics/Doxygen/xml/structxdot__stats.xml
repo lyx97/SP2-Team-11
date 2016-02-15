@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structxdot__stats" kind="struct" language="C++" prot="public">
+    <compoundname>xdot_stats</compoundname>
+    <includes refid="xdot_8h" local="no">xdot.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structxdot__stats_1accff29d566aba99020cf5e90748b5fe6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::cnt</definition>
+        <argsstring></argsstring>
+        <name>cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="147" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a08dce3195b1b810cfb01336bdd99a0c6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_ellipse</definition>
+        <argsstring></argsstring>
+        <name>n_ellipse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="148" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a1a3f97baae31388f381712c647daa091" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_polygon</definition>
+        <argsstring></argsstring>
+        <name>n_polygon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="149" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a70210702a3c8b91e7644e3b0276e23b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_polygon_pts</definition>
+        <argsstring></argsstring>
+        <name>n_polygon_pts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="150" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a3bd3ed537fe9aadfc8a98329b7b10e18" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_polyline</definition>
+        <argsstring></argsstring>
+        <name>n_polyline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="151" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a23ed706badf61af39274cf8328da992c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_polyline_pts</definition>
+        <argsstring></argsstring>
+        <name>n_polyline_pts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="152" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a11907b299ff3623cddbfac1c457a76a8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_bezier</definition>
+        <argsstring></argsstring>
+        <name>n_bezier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="153" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a3e6c878c858f6f8b70a3ba902470847c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_bezier_pts</definition>
+        <argsstring></argsstring>
+        <name>n_bezier_pts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="154" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a71c09b294ad29cd6ef936e7c759fa741" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_text</definition>
+        <argsstring></argsstring>
+        <name>n_text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="155" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1ac0d09b0d33b85a2c994e2fda5e1bf39c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_font</definition>
+        <argsstring></argsstring>
+        <name>n_font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="156" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a32340ee252e417d0f72bcd50c43fe3de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_style</definition>
+        <argsstring></argsstring>
+        <name>n_style</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="157" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a469401f17d16a8e151213cbf68a1a99b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_color</definition>
+        <argsstring></argsstring>
+        <name>n_color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="158" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1adba45b6f192e1c8598412b6085e668e7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_image</definition>
+        <argsstring></argsstring>
+        <name>n_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="159" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1a5a84da6b1032e531be9b191405f40b07" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_gradcolor</definition>
+        <argsstring></argsstring>
+        <name>n_gradcolor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="160" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structxdot__stats_1ab4e02049131b3dcda681033874973cb9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xdot_stats::n_fontchar</definition>
+        <argsstring></argsstring>
+        <name>n_fontchar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="161" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6114">
+        <label>int</label>
+      </node>
+      <node id="6113">
+        <label>xdot_stats</label>
+        <link refid="structxdot__stats"/>
+        <childnode refid="6114" relation="usage">
+          <edgelabel>n_font</edgelabel>
+          <edgelabel>n_text</edgelabel>
+          <edgelabel>n_polygon</edgelabel>
+          <edgelabel>n_polyline</edgelabel>
+          <edgelabel>n_ellipse</edgelabel>
+          <edgelabel>n_polyline_pts</edgelabel>
+          <edgelabel>cnt</edgelabel>
+          <edgelabel>n_color</edgelabel>
+          <edgelabel>n_gradcolor</edgelabel>
+          <edgelabel>n_bezier_pts</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/xdot.h" line="146" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="146" bodyend="162"/>
+    <listofallmembers>
+      <member refid="structxdot__stats_1accff29d566aba99020cf5e90748b5fe6" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>cnt</name></member>
+      <member refid="structxdot__stats_1a11907b299ff3623cddbfac1c457a76a8" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_bezier</name></member>
+      <member refid="structxdot__stats_1a3e6c878c858f6f8b70a3ba902470847c" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_bezier_pts</name></member>
+      <member refid="structxdot__stats_1a469401f17d16a8e151213cbf68a1a99b" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_color</name></member>
+      <member refid="structxdot__stats_1a08dce3195b1b810cfb01336bdd99a0c6" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_ellipse</name></member>
+      <member refid="structxdot__stats_1ac0d09b0d33b85a2c994e2fda5e1bf39c" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_font</name></member>
+      <member refid="structxdot__stats_1ab4e02049131b3dcda681033874973cb9" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_fontchar</name></member>
+      <member refid="structxdot__stats_1a5a84da6b1032e531be9b191405f40b07" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_gradcolor</name></member>
+      <member refid="structxdot__stats_1adba45b6f192e1c8598412b6085e668e7" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_image</name></member>
+      <member refid="structxdot__stats_1a1a3f97baae31388f381712c647daa091" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_polygon</name></member>
+      <member refid="structxdot__stats_1a70210702a3c8b91e7644e3b0276e23b1" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_polygon_pts</name></member>
+      <member refid="structxdot__stats_1a3bd3ed537fe9aadfc8a98329b7b10e18" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_polyline</name></member>
+      <member refid="structxdot__stats_1a23ed706badf61af39274cf8328da992c" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_polyline_pts</name></member>
+      <member refid="structxdot__stats_1a32340ee252e417d0f72bcd50c43fe3de" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_style</name></member>
+      <member refid="structxdot__stats_1a71c09b294ad29cd6ef936e7c759fa741" prot="public" virt="non-virtual"><scope>xdot_stats</scope><name>n_text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structpolygon__t" kind="struct" language="C++" prot="public">
+    <compoundname>polygon_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpolygon__t_1a338b552120115b02706569dae7656454" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int polygon_t::regular</definition>
+        <argsstring></argsstring>
+        <name>regular</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="143" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1a809c53ae7d83d63ea9b76973934e85fe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int polygon_t::peripheries</definition>
+        <argsstring></argsstring>
+        <name>peripheries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="144" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1aafa8e4dc4f6e5c395a118fa878d72dcb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int polygon_t::sides</definition>
+        <argsstring></argsstring>
+        <name>sides</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="145" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1ad108cfe9253d3235ac8e15e6a488aac3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double polygon_t::orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="146" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1ad7a861622d7b581b786c0a16cbe61135" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double polygon_t::distortion</definition>
+        <argsstring></argsstring>
+        <name>distortion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="147" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1abbc12c2fe3577a66400ae7d9419ce543" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double polygon_t::skew</definition>
+        <argsstring></argsstring>
+        <name>skew</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="148" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1a12d68719516446092b01d178837db2ad" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int polygon_t::option</definition>
+        <argsstring></argsstring>
+        <name>option</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="149" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolygon__t_1af046cba77647c8d4ab0e16b06c88853e" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref> *</type>
+        <definition>pointf* polygon_t::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="150" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5639">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5637" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5638">
+        <label>int</label>
+      </node>
+      <node id="5637">
+        <label>double</label>
+      </node>
+      <node id="5636">
+        <label>polygon_t</label>
+        <link refid="structpolygon__t"/>
+        <childnode refid="5637" relation="usage">
+          <edgelabel>distortion</edgelabel>
+          <edgelabel>skew</edgelabel>
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="5638" relation="usage">
+          <edgelabel>peripheries</edgelabel>
+          <edgelabel>sides</edgelabel>
+          <edgelabel>regular</edgelabel>
+          <edgelabel>option</edgelabel>
+        </childnode>
+        <childnode refid="5639" relation="usage">
+          <edgelabel>vertices</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="142" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="142" bodyend="151"/>
+    <listofallmembers>
+      <member refid="structpolygon__t_1ad7a861622d7b581b786c0a16cbe61135" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>distortion</name></member>
+      <member refid="structpolygon__t_1a12d68719516446092b01d178837db2ad" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>option</name></member>
+      <member refid="structpolygon__t_1ad108cfe9253d3235ac8e15e6a488aac3" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>orientation</name></member>
+      <member refid="structpolygon__t_1a809c53ae7d83d63ea9b76973934e85fe" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>peripheries</name></member>
+      <member refid="structpolygon__t_1a338b552120115b02706569dae7656454" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>regular</name></member>
+      <member refid="structpolygon__t_1aafa8e4dc4f6e5c395a118fa878d72dcb" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>sides</name></member>
+      <member refid="structpolygon__t_1abbc12c2fe3577a66400ae7d9419ce543" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>skew</name></member>
+      <member refid="structpolygon__t_1af046cba77647c8d4ab0e16b06c88853e" prot="public" virt="non-virtual"><scope>polygon_t</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

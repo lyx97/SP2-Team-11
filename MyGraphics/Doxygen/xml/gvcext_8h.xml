@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvcext_8h" kind="file" language="C++">
+    <compoundname>gvcext.h</compoundname>
+    <includedby refid="types_8h" local="yes">graphviz/release/include/graphviz/types.h</includedby>
+    <includedby refid="gvplugin_8h" local="yes">graphviz/release/include/graphviz/gvplugin.h</includedby>
+    <invincdepgraph>
+      <node id="1935">
+        <label>graphviz/release/include/graphviz/types.h</label>
+        <link refid="types_8h"/>
+        <childnode refid="1936" relation="include">
+        </childnode>
+        <childnode refid="1937" relation="include">
+        </childnode>
+        <childnode refid="1938" relation="include">
+        </childnode>
+        <childnode refid="1939" relation="include">
+        </childnode>
+        <childnode refid="1940" relation="include">
+        </childnode>
+        <childnode refid="1941" relation="include">
+        </childnode>
+        <childnode refid="1942" relation="include">
+        </childnode>
+      </node>
+      <node id="1936">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="1939">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1937">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1940">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1943">
+        <label>graphviz/release/include/graphviz/gvplugin.h</label>
+        <link refid="gvplugin_8h"/>
+        <childnode refid="1936" relation="include">
+        </childnode>
+        <childnode refid="1944" relation="include">
+        </childnode>
+        <childnode refid="1937" relation="include">
+        </childnode>
+        <childnode refid="1938" relation="include">
+        </childnode>
+        <childnode refid="1939" relation="include">
+        </childnode>
+        <childnode refid="1940" relation="include">
+        </childnode>
+        <childnode refid="1941" relation="include">
+        </childnode>
+      </node>
+      <node id="1944">
+        <label>graphviz/release/include/graphviz/gvconfig.h</label>
+        <link refid="gvconfig_8h"/>
+      </node>
+      <node id="1934">
+        <label>graphviz/release/include/graphviz/gvcext.h</label>
+        <link refid="gvcext.h"/>
+        <childnode refid="1935" relation="include">
+        </childnode>
+        <childnode refid="1943" relation="include">
+        </childnode>
+      </node>
+      <node id="1938">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1941">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="1942">
+        <label>graphviz/release/include/graphviz/pack.h</label>
+        <link refid="pack_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlt__symlist__t" prot="public">lt_symlist_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="gvcext_8h_1abdbe963515b51a66d3c4bedcdac270d8" prot="public" static="no">
+        <name>APIS</name>
+        <initializer><ref refid="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" kindref="member">ELEM</ref>(render) <ref refid="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" kindref="member">ELEM</ref>(layout) <ref refid="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" kindref="member">ELEM</ref>(textlayout) <ref refid="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" kindref="member">ELEM</ref>(device) <ref refid="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" kindref="member">ELEM</ref>(loadimage)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="28" column="9" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" prot="public" static="no">
+        <name>ELEM</name>
+        <param><defname>x</defname></param>
+        <initializer>API_##x,</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="33" column="9" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="gvcext_8h_1ae124da9cae472afed2b4d3c7ef2ff574" prot="public" static="no">
+        <name>api_t</name>
+        <enumvalue id="gvcext_8h_1ae124da9cae472afed2b4d3c7ef2ff574a7d0bbfc7da12b9e1da2969faedf21490" prot="public">
+          <name>_DUMMY_ELEM_</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="34" column="1" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gvcext_8h_1a9a257c86c8fde7d294726bece96315e5" prot="public" static="no">
+        <type>struct <ref refid="structGVJ__s" kindref="compound">GVJ_s</ref></type>
+        <definition>typedef struct GVJ_s GVJ_t</definition>
+        <argsstring></argsstring>
+        <name>GVJ_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="114" column="1" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcext_8h_1af6bd0e091413025a4d30fa7eca90b641" prot="public" static="no">
+        <type>struct GVG_s</type>
+        <definition>typedef struct GVG_s GVG_t</definition>
+        <argsstring></argsstring>
+        <name>GVG_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="114" column="1" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" prot="public" static="no">
+        <type>struct GVC_s</type>
+        <definition>typedef struct GVC_s GVC_t</definition>
+        <argsstring></argsstring>
+        <name>GVC_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="114" column="1" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="gvcext_8h_1aae45d96279062a78e72e7c861600fd0e" prot="public" static="no">
+        <type>struct gvplugin_available_s</type>
+        <definition>typedef struct gvplugin_available_s gvplugin_available_t</definition>
+        <argsstring></argsstring>
+        <name>gvplugin_available_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="114" column="1" bodyfile="graphviz/release/include/graphviz/gvcext.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="gvcext_8h_1a3722c3fc0f0be8654c675764e4bb7ef5" prot="public" static="no" mutable="no">
+        <type><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref></type>
+        <definition>lt_symlist_t lt_preloaded_symbols[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lt_preloaded_symbols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcext.h" line="83" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Common<sp/>header<sp/>used<sp/>by<sp/>both<sp/>clients<sp/>and<sp/>plugins<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVCEXT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVCEXT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Define<sp/>an<sp/>apis<sp/>array<sp/>of<sp/>name<sp/>strings<sp/>using<sp/>an<sp/>enumerated<sp/>api_t<sp/>as<sp/>index.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>The<sp/>enumerated<sp/>type<sp/>is<sp/>defined<sp/>here.<sp/><sp/>The<sp/>apis<sp/>array<sp/>is</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>inititialized<sp/>in<sp/>gvplugin.c<sp/>by<sp/>redefining<sp/>ELEM<sp/>and<sp/>reinvoking<sp/>APIS.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="gvcext_8h_1abdbe963515b51a66d3c4bedcdac270d8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APIS<sp/>ELEM(render)<sp/>ELEM(layout)<sp/>ELEM(textlayout)<sp/>ELEM(device)<sp/>ELEM(loadimage)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>Define<sp/>api_t<sp/>using<sp/>names<sp/>based<sp/>on<sp/>the<sp/>plugin<sp/>names<sp/>with<sp/>API_<sp/>prefixed.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="gvcext_8h_1a362272c997ae8f67a45bc9a4b399c736" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ELEM(x)<sp/>API_##x,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="gvcext_8h_1ae124da9cae472afed2b4d3c7ef2ff574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="gvcext_8h_1abdbe963515b51a66d3c4bedcdac270d8" kindref="member">APIS</ref><sp/><ref refid="gvcext_8h_1ae124da9cae472afed2b4d3c7ef2ff574a7d0bbfc7da12b9e1da2969faedf21490" kindref="member">_DUMMY_ELEM_</ref>=0<sp/>}<sp/><ref refid="gvcext_8h_1ae124da9cae472afed2b4d3c7ef2ff574" kindref="member">api_t</ref>;<sp/></highlight><highlight class="comment">/*<sp/>API_render,<sp/>API_layout,<sp/>...<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Stupid<sp/>but<sp/>true:<sp/>The<sp/>sole<sp/>purpose<sp/>of<sp/>&quot;_DUMMY_ELEM_=0&quot;</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>to<sp/>avoid<sp/>a<sp/>&quot;,&quot;<sp/>after<sp/>the<sp/>last<sp/>element<sp/>of<sp/>the<sp/>enum</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>because<sp/>some<sp/>compilers<sp/>when<sp/>using<sp/>&quot;-pedantic&quot;</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>generate<sp/>an<sp/>error<sp/>for<sp/>about<sp/>the<sp/>dangling<sp/>&quot;,&quot;</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>but<sp/>only<sp/>if<sp/>this<sp/>header<sp/>is<sp/>used<sp/>from<sp/>a<sp/>.cpp<sp/>file!</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Setting<sp/>it<sp/>to<sp/>0<sp/>makes<sp/>sure<sp/>that<sp/>the<sp/>enumeration</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>does<sp/>not<sp/>define<sp/>an<sp/>extra<sp/>value.<sp/><sp/>(It<sp/>does<sp/>however</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>define<sp/>_DUMMY_ELEM_<sp/>as<sp/>an<sp/>enumeration<sp/>symbol,</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>but<sp/>its<sp/>value<sp/>duplicates<sp/>that<sp/>of<sp/>the<sp/>first</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>symbol<sp/>in<sp/>the<sp/>enumeration<sp/>-<sp/>in<sp/>this<sp/>case<sp/>&quot;render&quot;.)</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>One<sp/>could<sp/>wonder<sp/>why<sp/>trailing<sp/>&quot;,&quot;<sp/>in:</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>nums[]={1,2,3,};</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>OK,<sp/>but<sp/>in:</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>typedef<sp/>enum<sp/>{a,b,c,}<sp/>abc_t;<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>not!!!</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>ELEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="gvcext_8h_1a9a257c86c8fde7d294726bece96315e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGVJ__s" kindref="compound">GVJ_s</ref><sp/><ref refid="structGVJ__s" kindref="compound">GVJ_t</ref>;</highlight></codeline>
+<codeline lineno="56" refid="gvcext_8h_1af6bd0e091413025a4d30fa7eca90b641" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">GVG_s<sp/><ref refid="gvcext_8h_1af6bd0e091413025a4d30fa7eca90b641" kindref="member">GVG_t</ref>;</highlight></codeline>
+<codeline lineno="57" refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">GVC_s<sp/><ref refid="gvcext_8h_1ad6cf1b9d460390425d8f423380c2a7ed" kindref="member">GVC_t</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structlt__symlist__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60" refid="structlt__symlist__t_1a2261f1d6864e82f62f61ec8ec248aa4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structlt__symlist__t_1a2261f1d6864e82f62f61ec8ec248aa4f" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structlt__symlist__t_1a72296d014346c3eddcab6f06cdbac935" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="structlt__symlist__t_1a72296d014346c3eddcab6f06cdbac935" kindref="member">address</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="gvcext_8h_1aae45d96279062a78e72e7c861600fd0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">gvplugin_available_s<sp/><ref refid="gvcext_8h_1aae45d96279062a78e72e7c861600fd0e" kindref="member">gvplugin_available_t</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVC_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">__declspec(dllimport)<sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref><sp/><ref refid="gvcext_8h_1a3722c3fc0f0be8654c675764e4bb7ef5" kindref="member">lt_preloaded_symbols</ref>[];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//__declspec(dllexport)<sp/>lt_symlist_t<sp/>lt_preloaded_symbols[];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//lt_symlist_t<sp/>lt_preloaded_symbols[];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*end<sp/>visual<sp/>studio*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WIN32_DLL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(GVDLL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__declspec(dllexport)<sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref><sp/>lt_preloaded_symbols[];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(LTDL_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref><sp/>lt_preloaded_symbols[];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvcext.h"/>
+  </compounddef>
+</doxygen>

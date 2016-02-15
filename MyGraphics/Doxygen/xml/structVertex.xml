@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structVertex" kind="struct" language="C++" prot="public">
+    <compoundname>Vertex</compoundname>
+    <includes refid="Vertex_8h" local="no">Vertex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" prot="public" static="no" mutable="no">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position Vertex::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="26" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" compoundref="MeshBuilder_8cpp" startline="190" endline="229">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3d73313a182a699cf0c55a2855817dd" compoundref="MeshBuilder_8cpp" startline="460" endline="516">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1ae27b82decd63d0d0e51ecb778bbd20f6" compoundref="MeshBuilder_8cpp" startline="394" endline="458">MeshBuilder::GenerateCylin</referencedby>
+        <referencedby refid="classMeshBuilder_1a7f16aa9809e13f619862f7139c26d010" compoundref="MeshBuilder_8cpp" startline="620" endline="681">MeshBuilder::GenerateHalfHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1a5942fd14f58736054c6da3ee034cc2b5" compoundref="MeshBuilder_8cpp" startline="569" endline="618">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" compoundref="MeshBuilder_8cpp" startline="331" endline="392">MeshBuilder::GenerateHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" compoundref="MeshBuilder_8cpp" startline="231" endline="269">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="709" endline="749">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ad2e28967c0c772fa32df30a49944891f" compoundref="MeshBuilder_8cpp" startline="518" endline="567">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="164" endline="204">IndexVBO</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" prot="public" static="no" mutable="no">
+        <type><ref refid="structColor" kindref="compound">Color</ref></type>
+        <definition>Color Vertex::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="27" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" compoundref="MeshBuilder_8cpp" startline="190" endline="229">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3d73313a182a699cf0c55a2855817dd" compoundref="MeshBuilder_8cpp" startline="460" endline="516">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1ae27b82decd63d0d0e51ecb778bbd20f6" compoundref="MeshBuilder_8cpp" startline="394" endline="458">MeshBuilder::GenerateCylin</referencedby>
+        <referencedby refid="classMeshBuilder_1a7f16aa9809e13f619862f7139c26d010" compoundref="MeshBuilder_8cpp" startline="620" endline="681">MeshBuilder::GenerateHalfHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1a5942fd14f58736054c6da3ee034cc2b5" compoundref="MeshBuilder_8cpp" startline="569" endline="618">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" compoundref="MeshBuilder_8cpp" startline="331" endline="392">MeshBuilder::GenerateHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" compoundref="MeshBuilder_8cpp" startline="231" endline="269">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1ad2e28967c0c772fa32df30a49944891f" compoundref="MeshBuilder_8cpp" startline="518" endline="567">MeshBuilder::GenerateTorus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structVertex_1adce2d4b3d1191c69328519bdf231c344" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vertex::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="28" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" compoundref="MeshBuilder_8cpp" startline="190" endline="229">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3d73313a182a699cf0c55a2855817dd" compoundref="MeshBuilder_8cpp" startline="460" endline="516">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1ae27b82decd63d0d0e51ecb778bbd20f6" compoundref="MeshBuilder_8cpp" startline="394" endline="458">MeshBuilder::GenerateCylin</referencedby>
+        <referencedby refid="classMeshBuilder_1a7f16aa9809e13f619862f7139c26d010" compoundref="MeshBuilder_8cpp" startline="620" endline="681">MeshBuilder::GenerateHalfHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1a5942fd14f58736054c6da3ee034cc2b5" compoundref="MeshBuilder_8cpp" startline="569" endline="618">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" compoundref="MeshBuilder_8cpp" startline="331" endline="392">MeshBuilder::GenerateHemi</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1ad2e28967c0c772fa32df30a49944891f" compoundref="MeshBuilder_8cpp" startline="518" endline="567">MeshBuilder::GenerateTorus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structVertex_1a717d827da388b9c4847d1f5343959c78" prot="public" static="no" mutable="no">
+        <type><ref refid="structTexCoord" kindref="compound">TexCoord</ref></type>
+        <definition>TexCoord Vertex::texCoord</definition>
+        <argsstring></argsstring>
+        <name>texCoord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Vertex.h" line="29" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="709" endline="749">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="164" endline="204">IndexVBO</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6038">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="6036" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="6035">
+        <label>TexCoord</label>
+        <link refid="structTexCoord"/>
+        <childnode refid="6036" relation="usage">
+          <edgelabel>u</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="6034">
+        <label>Vertex</label>
+        <link refid="structVertex"/>
+        <childnode refid="6035" relation="usage">
+          <edgelabel>texCoord</edgelabel>
+        </childnode>
+        <childnode refid="6037" relation="usage">
+          <edgelabel>normal</edgelabel>
+        </childnode>
+        <childnode refid="6038" relation="usage">
+          <edgelabel>pos</edgelabel>
+        </childnode>
+        <childnode refid="6039" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="6036">
+        <label>float</label>
+      </node>
+      <node id="6039">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="6036" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="6037">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="6036" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Vertex.h" line="25" column="1" bodyfile="MyGraphics/Source/Vertex.h" bodystart="24" bodyend="30"/>
+    <listofallmembers>
+      <member refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" prot="public" virt="non-virtual"><scope>Vertex</scope><name>color</name></member>
+      <member refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" prot="public" virt="non-virtual"><scope>Vertex</scope><name>normal</name></member>
+      <member refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" prot="public" virt="non-virtual"><scope>Vertex</scope><name>pos</name></member>
+      <member refid="structVertex_1a717d827da388b9c4847d1f5343959c78" prot="public" virt="non-virtual"><scope>Vertex</scope><name>texCoord</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

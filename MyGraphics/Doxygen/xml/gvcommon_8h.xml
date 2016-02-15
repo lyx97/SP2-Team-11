@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvcommon_8h" kind="file" language="C++">
+    <compoundname>gvcommon.h</compoundname>
+    <includedby refid="gvcjob_8h" local="yes">graphviz/release/include/graphviz/gvcjob.h</includedby>
+    <includedby refid="gvplugin__textlayout_8h" local="yes">graphviz/release/include/graphviz/gvplugin_textlayout.h</includedby>
+    <invincdepgraph>
+      <node id="1959">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1957">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1960">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1956">
+        <label>graphviz/release/include/graphviz/gvcjob.h</label>
+        <link refid="gvcjob_8h"/>
+        <childnode refid="1957" relation="include">
+        </childnode>
+        <childnode refid="1958" relation="include">
+        </childnode>
+        <childnode refid="1959" relation="include">
+        </childnode>
+        <childnode refid="1960" relation="include">
+        </childnode>
+        <childnode refid="1961" relation="include">
+        </childnode>
+      </node>
+      <node id="1958">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1961">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+      <node id="1955">
+        <label>graphviz/release/include/graphviz/gvcommon.h</label>
+        <link refid="gvcommon.h"/>
+        <childnode refid="1956" relation="include">
+        </childnode>
+        <childnode refid="1961" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGVCOMMON__s" prot="public">GVCOMMON_s</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="gvcommon_8h_1a20b0f60db8c13c492fb877d526057429" prot="public" static="no">
+        <type>struct <ref refid="structGVCOMMON__s" kindref="compound">GVCOMMON_s</ref></type>
+        <definition>typedef struct GVCOMMON_s  GVCOMMON_t</definition>
+        <argsstring></argsstring>
+        <name>GVCOMMON_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/gvcommon.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVCOMMON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVCOMMON_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="structGVCOMMON__s" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGVCOMMON__s" kindref="compound">GVCOMMON_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="structGVCOMMON__s_1a43b8fc9935a0fdd8a35925b25eada529" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structGVCOMMON__s_1a43b8fc9935a0fdd8a35925b25eada529" kindref="member">info</ref>;</highlight></codeline>
+<codeline lineno="23" refid="structGVCOMMON__s_1a02d345efd654a697c95bff408089c816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structGVCOMMON__s_1a02d345efd654a697c95bff408089c816" kindref="member">cmdname</ref>;</highlight></codeline>
+<codeline lineno="24" refid="structGVCOMMON__s_1ae85d3a41a40d157759e0e4efc6037340" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVCOMMON__s_1ae85d3a41a40d157759e0e4efc6037340" kindref="member">verbose</ref>;</highlight></codeline>
+<codeline lineno="25" refid="structGVCOMMON__s_1a89b85ed728352961f2010065440de263" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="structGVCOMMON__s_1a89b85ed728352961f2010065440de263" kindref="member">config</ref>,<sp/><ref refid="structGVCOMMON__s_1acde8c0bc74e8c3d6560cf7d797d30ef6" kindref="member">auto_outfile_names</ref>;</highlight></codeline>
+<codeline lineno="26" refid="structGVCOMMON__s_1a4fe69cf94fe7a13ebbe8f46a264b0659" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>(*<ref refid="structGVCOMMON__s_1a4fe69cf94fe7a13ebbe8f46a264b0659" kindref="member">errorfn</ref>)<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="27" refid="structGVCOMMON__s_1a66fdfff697be1ae2a3e131508ae08660" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structGVCOMMON__s_1a66fdfff697be1ae2a3e131508ae08660" kindref="member">show_boxes</ref>;<sp/></highlight><highlight class="comment">/*<sp/>emit<sp/>code<sp/>for<sp/>correct<sp/>box<sp/>coordinates<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="structGVCOMMON__s_1a3b5023c7d958069419dd50106806922e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structGVCOMMON__s_1a3b5023c7d958069419dd50106806922e" kindref="member">lib</ref>;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>rendering<sp/>state<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structGVCOMMON__s_1a76c35a9300f73a412e5ea957d9e9a1ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVCOMMON__s_1a76c35a9300f73a412e5ea957d9e9a1ab" kindref="member">viewNum</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>current<sp/>view<sp/>-<sp/>1<sp/>based<sp/>count<sp/>of<sp/>views,</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>all<sp/>pages<sp/>in<sp/>all<sp/>layers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structGVCOMMON__s_1a05e311526d152c7e652793137b1c186e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structlt__symlist__t" kindref="compound">lt_symlist_t</ref><sp/>*<ref refid="structGVCOMMON__s_1a05e311526d152c7e652793137b1c186e" kindref="member">builtins</ref>;</highlight></codeline>
+<codeline lineno="34" refid="structGVCOMMON__s_1aae3981dccdeb7f82aa71ac74e8f58692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGVCOMMON__s_1aae3981dccdeb7f82aa71ac74e8f58692" kindref="member">demand_loading</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="gvcommon_8h_1a20b0f60db8c13c492fb877d526057429" kindref="member">GVCOMMON_t</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GVCOMMON_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvcommon.h"/>
+  </compounddef>
+</doxygen>

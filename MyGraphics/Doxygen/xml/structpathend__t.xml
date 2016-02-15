@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structpathend__t" kind="struct" language="C++" prot="public">
+    <compoundname>pathend_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpathend__t_1a56ff1178e631514dc27e0e57e68a12a5" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf pathend_t::nb</definition>
+        <argsstring></argsstring>
+        <name>nb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="94" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpathend__t_1af15bd85fa140a888fae5d09e898cffbc" prot="public" static="no" mutable="no">
+        <type><ref refid="geom_8h_1a4a9b2ddd7c93a900f904873a30f4dddd" kindref="member">pointf</ref></type>
+        <definition>pointf pathend_t::np</definition>
+        <argsstring></argsstring>
+        <name>np</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="95" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpathend__t_1ab04fb05180b885cb47f5239c2e292586" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pathend_t::sidemask</definition>
+        <argsstring></argsstring>
+        <name>sidemask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="96" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpathend__t_1a57607691e740667252bf6e5306a5e557" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int pathend_t::boxn</definition>
+        <argsstring></argsstring>
+        <name>boxn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="97" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpathend__t_1ab0eb2c2f12999ce1c3b7c90870dc457a" prot="public" static="no" mutable="no">
+        <type><ref refid="structboxf" kindref="compound">boxf</ref></type>
+        <definition>boxf pathend_t::boxes[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>boxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="98" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5623">
+        <label>pointf_s</label>
+        <link refid="structpointf__s"/>
+        <childnode refid="5624" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+      <node id="5621">
+        <label>int</label>
+      </node>
+      <node id="5624">
+        <label>double</label>
+      </node>
+      <node id="5620">
+        <label>pathend_t</label>
+        <link refid="structpathend__t"/>
+        <childnode refid="5621" relation="usage">
+          <edgelabel>boxn</edgelabel>
+          <edgelabel>sidemask</edgelabel>
+        </childnode>
+        <childnode refid="5622" relation="usage">
+          <edgelabel>boxes</edgelabel>
+          <edgelabel>nb</edgelabel>
+        </childnode>
+        <childnode refid="5623" relation="usage">
+          <edgelabel>np</edgelabel>
+        </childnode>
+      </node>
+      <node id="5622">
+        <label>boxf</label>
+        <link refid="structboxf"/>
+        <childnode refid="5623" relation="usage">
+          <edgelabel>LL</edgelabel>
+          <edgelabel>UR</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="93" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="93" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structpathend__t_1ab0eb2c2f12999ce1c3b7c90870dc457a" prot="public" virt="non-virtual"><scope>pathend_t</scope><name>boxes</name></member>
+      <member refid="structpathend__t_1a57607691e740667252bf6e5306a5e557" prot="public" virt="non-virtual"><scope>pathend_t</scope><name>boxn</name></member>
+      <member refid="structpathend__t_1a56ff1178e631514dc27e0e57e68a12a5" prot="public" virt="non-virtual"><scope>pathend_t</scope><name>nb</name></member>
+      <member refid="structpathend__t_1af15bd85fa140a888fae5d09e898cffbc" prot="public" virt="non-virtual"><scope>pathend_t</scope><name>np</name></member>
+      <member refid="structpathend__t_1ab04fb05180b885cb47f5239c2e292586" prot="public" virt="non-virtual"><scope>pathend_t</scope><name>sidemask</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

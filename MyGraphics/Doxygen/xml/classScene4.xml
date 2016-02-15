@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classScene4" kind="class" language="C++" prot="public">
+    <compoundname>Scene4</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Scene4_8h" local="no">Scene4.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classScene4_1aabc2ae25c70bb744606a6342b8169b97" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97acbc212a74932f4d11cdab3d6504125bc" prot="private">
+          <name>GEO_CUBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97af4bfb8cee42e2b426fed4ef9b4c02190" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97aecb4805d7ae8439e86723585dfed3fe1" prot="private">
+          <name>GEO_CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" prot="private">
+          <name>GEO_RING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" prot="private">
+          <name>GEO_SPHERE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" prot="private">
+          <name>GEO_SUN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7f87d896558783e9c2457c3395e783a8" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="12" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="11" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="enum" id="classScene4_1ad881804ad325c694dd5997b18ed1093f" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScene4_1ad881804ad325c694dd5997b18ed1093fa3d5da8133b27ddfbbb25821bf024bfcd" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="24" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="23" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScene4_1a8758e59ee476d520df891e7f959efd37" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene4::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="38" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9" compoundref="Scene4_8cpp" startline="153" endline="157">Exit</referencedby>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* Scene4::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="39" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1ac877ec7e64225a7e11d435085040c4af" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene4::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="41" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9" compoundref="Scene4_8cpp" startline="153" endline="157">Exit</referencedby>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Scene4::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="42" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Scene4::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="44" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+        <referencedby refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" compoundref="Scene4_8cpp" startline="65" endline="79">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera" kindref="compound">Camera</ref></type>
+        <definition>Camera Scene4::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="46" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+        <referencedby refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" compoundref="Scene4_8cpp" startline="65" endline="79">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Scene4::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="48" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1a3c2e887765435717194575599c206019" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Scene4::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="48" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Scene4::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="48" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" compoundref="Scene4_8cpp" startline="18" endline="60">Init</referencedby>
+        <referencedby refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" compoundref="Scene4_8cpp" startline="81" endline="151">Render</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScene4_1adba454e3fa2804ec353c7fece8e956f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene4::Scene4</definition>
+        <argsstring>()</argsstring>
+        <name>Scene4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="30" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene4_1a2d1ebdc69960c660030ecb16cd694513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene4::~Scene4</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="31" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene4::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="33" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="18" bodyend="60"/>
+        <references refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" compoundref="Scene4_8h" startline="46">camera</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="114" endline="179">MeshBuilder::GenerateCube</references>
+        <references refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" compoundref="MeshBuilder_8cpp" startline="231" endline="269">MeshBuilder::GenerateRing</references>
+        <references refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" compoundref="Scene4_8h" startline="14">GEO_AXES</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97acbc212a74932f4d11cdab3d6504125bc" compoundref="Scene4_8h" startline="13">GEO_CUBE</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" compoundref="Scene4_8h" startline="17">GEO_RING</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" compoundref="Scene4_8h" startline="18">GEO_SPHERE</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" compoundref="Scene4_8h" startline="19">GEO_SUN</references>
+        <references refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" compoundref="Camera_8cpp" startline="14" endline="19">Camera::Init</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" compoundref="Scene4_8h" startline="42">m_parameters</references>
+        <references refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" compoundref="Scene4_8h" startline="41">m_programID</references>
+        <references refid="classScene4_1a8758e59ee476d520df891e7f959efd37" compoundref="Scene4_8h" startline="38">m_vertexArrayID</references>
+        <references refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" compoundref="Scene4_8h" startline="39">meshList</references>
+        <references refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" compoundref="Scene4_8h" startline="48">projectionStack</references>
+        <references refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" compoundref="Scene4_8h" startline="44">rotateAngle</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" compoundref="Scene4_8h" startline="25">U_MVP</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene4::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="34" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="65" bodyend="79"/>
+        <references refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" compoundref="Scene4_8h" startline="46">camera</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" compoundref="Scene4_8h" startline="44">rotateAngle</references>
+        <references refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="28" endline="47">Camera::Update</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene4::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="35" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="81" bodyend="151"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" compoundref="Scene4_8h" startline="46">camera</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" compoundref="Scene4_8h" startline="14">GEO_AXES</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" compoundref="Scene4_8h" startline="17">GEO_RING</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" compoundref="Scene4_8h" startline="18">GEO_SPHERE</references>
+        <references refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" compoundref="Scene4_8h" startline="19">GEO_SUN</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" compoundref="Scene4_8h" startline="42">m_parameters</references>
+        <references refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" compoundref="Scene4_8h" startline="39">meshList</references>
+        <references refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" compoundref="Scene4_8h" startline="48">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" compoundref="Scene4_8h" startline="48">projectionStack</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" compoundref="Scene4_8h" startline="44">rotateAngle</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" compoundref="Scene4_8h" startline="25">U_MVP</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classScene4_1a3c2e887765435717194575599c206019" compoundref="Scene4_8h" startline="48">viewStack</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classScene4_1a06cde399a3cda7d85d69773eb16237a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Scene4::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene4.h" line="36" column="1" bodyfile="MyGraphics/Source/Scene4.cpp" bodystart="153" bodyend="157"/>
+        <references refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" compoundref="Scene4_8h" startline="41">m_programID</references>
+        <references refid="classScene4_1a8758e59ee476d520df891e7f959efd37" compoundref="Scene4_8h" startline="38">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5785">
+        <label>Scene4</label>
+        <link refid="classScene4"/>
+        <childnode refid="5786" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5786">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5793">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="5796">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="5791" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5794">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="5795" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="5797" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="5798" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5799" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="5797">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="5789">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="5790" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="5787">
+        <label>Scene4</label>
+        <link refid="classScene4"/>
+        <childnode refid="5788" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5789" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="5791" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+        </childnode>
+        <childnode refid="5792" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="5794" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="5799" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5798">
+        <label>string</label>
+      </node>
+      <node id="5795">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="5791" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="5796" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="5791">
+        <label>float</label>
+      </node>
+      <node id="5792">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="5793" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="5788">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5799">
+        <label>unsigned</label>
+      </node>
+      <node id="5790">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="5791" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/Scene4.h" line="10" column="1" bodyfile="MyGraphics/Source/Scene4.h" bodystart="9" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classScene4_1ac95d01aeb3ddce7ab4cf206d2e07c54c" prot="private" virt="non-virtual"><scope>Scene4</scope><name>camera</name></member>
+      <member refid="classScene4_1a06cde399a3cda7d85d69773eb16237a9" prot="public" virt="virtual"><scope>Scene4</scope><name>Exit</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a0742d45c32b30fc39ccaf66a2536ad68" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_AXES</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97aecb4805d7ae8439e86723585dfed3fe1" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_CIRCLE</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97acbc212a74932f4d11cdab3d6504125bc" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_CUBE</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97af4bfb8cee42e2b426fed4ef9b4c02190" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_QUAD</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a4c37508cf6af1a60d8c60b5f4fd1eab8" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_RING</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7d62c68098e5344df58c4725f7511657" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_SPHERE</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7aee75ec49a189f94dae0f2b2efbd9a1" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEO_SUN</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97" prot="private" virt="non-virtual"><scope>Scene4</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classScene4_1a3df44b08162c976706aa49ceef9e9f1a" prot="public" virt="virtual"><scope>Scene4</scope><name>Init</name></member>
+      <member refid="classScene4_1a2ca3cd6cc27f15f44f5ced383e57a02e" prot="private" virt="non-virtual"><scope>Scene4</scope><name>m_parameters</name></member>
+      <member refid="classScene4_1ac877ec7e64225a7e11d435085040c4af" prot="private" virt="non-virtual"><scope>Scene4</scope><name>m_programID</name></member>
+      <member refid="classScene4_1a8758e59ee476d520df891e7f959efd37" prot="private" virt="non-virtual"><scope>Scene4</scope><name>m_vertexArrayID</name></member>
+      <member refid="classScene4_1a5420d3b600ae0f21a43273e1c3203e91" prot="private" virt="non-virtual"><scope>Scene4</scope><name>meshList</name></member>
+      <member refid="classScene4_1a1c0f614c3be451fa2dd531bf91772cf0" prot="private" virt="non-virtual"><scope>Scene4</scope><name>modelStack</name></member>
+      <member refid="classScene4_1aabc2ae25c70bb744606a6342b8169b97a7f87d896558783e9c2457c3395e783a8" prot="private" virt="non-virtual"><scope>Scene4</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classScene4_1a86850ec5bdd15d17940d7feb1eca339c" prot="private" virt="non-virtual"><scope>Scene4</scope><name>projectionStack</name></member>
+      <member refid="classScene4_1aedb8a31e5bde1b6ad9d8127a0ac393da" prot="public" virt="virtual"><scope>Scene4</scope><name>Render</name></member>
+      <member refid="classScene4_1aaca67ad2f6c3191d11a3e818cfb5c320" prot="private" virt="non-virtual"><scope>Scene4</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene4</scope><name>Scene</name></member>
+      <member refid="classScene4_1adba454e3fa2804ec353c7fece8e956f7" prot="public" virt="non-virtual"><scope>Scene4</scope><name>Scene4</name></member>
+      <member refid="classScene4_1ad881804ad325c694dd5997b18ed1093fad3250916da0748c4f36000db1b48e588" prot="private" virt="non-virtual"><scope>Scene4</scope><name>U_MVP</name></member>
+      <member refid="classScene4_1ad881804ad325c694dd5997b18ed1093fa3d5da8133b27ddfbbb25821bf024bfcd" prot="private" virt="non-virtual"><scope>Scene4</scope><name>U_TOTAL</name></member>
+      <member refid="classScene4_1ad881804ad325c694dd5997b18ed1093f" prot="private" virt="non-virtual"><scope>Scene4</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classScene4_1abfad5f484a4cc6e8a4b58c149e9ade21" prot="public" virt="virtual"><scope>Scene4</scope><name>Update</name></member>
+      <member refid="classScene4_1a3c2e887765435717194575599c206019" prot="private" virt="non-virtual"><scope>Scene4</scope><name>viewStack</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene4</scope><name>~Scene</name></member>
+      <member refid="classScene4_1a2d1ebdc69960c660030ecb16cd694513" prot="public" virt="non-virtual"><scope>Scene4</scope><name>~Scene4</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

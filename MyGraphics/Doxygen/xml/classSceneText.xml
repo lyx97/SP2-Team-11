@@ -1,0 +1,1107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classSceneText" kind="class" language="C++" prot="public">
+    <compoundname>SceneText</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="SceneText_8h" local="no">SceneText.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cc" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca5769c7a5c2dab2884c9c27de30cd7c1c" prot="private">
+          <name>GEO_CUBE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccadb6ce5e871015a6018135efefb927558" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccac202c9fecaf19ecb79e9ee5181dee077" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccaf4ee2c92c52a2787416e3e39df53a39e" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3c3e569786914f4f4fbbbd79e152e2f3" prot="private">
+          <name>GEO_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca60589163b90d132c99fa466b083f4a09" prot="private">
+          <name>GEO_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca738d005d9c15757c8a6350471dc5aca2" prot="private">
+          <name>GEO_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca9d8000d2c90fe22a1926d0ae949cf6f8" prot="private">
+          <name>GEO_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca1983630174b0b9ff1cde2d7f5722ef98" prot="private">
+          <name>GEO_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3862abdc8549b2e7f87168e4b4f9ef1b" prot="private">
+          <name>GEO_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca02aad7b9cc08c4554749cf57a4d7edc2" prot="private">
+          <name>GEO_MODEL1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccab0e8df7b37800446bb4ea505f6ce8ace" prot="private">
+          <name>GEO_TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccac148c9457a988b69f2b5805afa95e6f6" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="13" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="12" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSceneText_1ade17913eb383f664cae2565d24a7d163" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a2c740dcdf47c83ebd4a4242ebf60ca83" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ab69186222f9595551936815371c16d0d" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163adfda6f6d95ba3ac8fc7d35e4af45df6a" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163aab4aa07e2b11f6b087704e2501ed6dc0" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a0227007e065c267a115806bb424fda0d" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163acdecfaa4b471d4f14fe2fa82afdef283" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163aa68d5a023f438eec1ddce290e0191b94" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163abe1cca54e44ada28aaab1925dbc85d11" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163abc0bc9e92529f496571cb8c598b67283" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ae45c6ab649644583977eb4ae223a84cd" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163aeb9d52f66ba15a3bee37884fab81c3d6" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a688ca1138feddc1d9a3bace279d6ca98" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163adaf22b06e48c5f3d0d864877bef13c97" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ab9cf451e7b8be77a0c2b0213ca7ed10a" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a251b040710d25bf97500b7076125b192" prot="private">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163aa6944eac8a8883e9dc66a85ec184796c" prot="private">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ac3265f3ceb0db3a44ba611af9c0d4958" prot="private">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a3b665c72b27d4bf89cb8e3b438b085c6" prot="private">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a709c7ac8aa7bb5fa376438e51a890a67" prot="private">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ac700d63cb9df3b26c3c79cb52bd0bb03" prot="private">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a38fb4c7114d8e4db7fc52e8aa7b1b453" prot="private">
+          <name>U_COLOR_TEXTURE_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ada2df3b75b508402e7cf328eabdf69a1" prot="private">
+          <name>U_COLOR_TEXTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163a7c277c257de47964eb875394b24da632" prot="private">
+          <name>U_TEXT_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163ad1f092106addf6856f277f51f5cfaddc" prot="private">
+          <name>U_TEXT_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneText_1ade17913eb383f664cae2565d24a7d163acc99f996963c91488e505dd4f4b1ef8a" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="30" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="29" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSceneText_1a73bfb73d684ceb058e5c4d3a848128f1" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneText::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="73" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classSceneText_1a342e3931c55500c0bd5b757d9bedb86e" compoundref="SceneText_8cpp" startline="394" endline="398">Exit</referencedby>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a3d35c2449fd439ca6b12d888d7d31639" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* SceneText::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="74" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1a7f66a1cb3b9ab40f04a5ec86168cebca" compoundref="SceneText_8cpp" startline="281" endline="325">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a4c6e0d7e67739fd9d2b9678308e775b0" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneText::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="76" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="classSceneText_1a342e3931c55500c0bd5b757d9bedb86e" compoundref="SceneText_8cpp" startline="394" endline="398">Exit</referencedby>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a351239295f12be1461350efd679cc743" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneText::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="77" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" compoundref="SceneText_8cpp" startline="327" endline="352">RenderText</referencedby>
+        <referencedby refid="classSceneText_1ae71601254d7b314184d0bb529e09114e" compoundref="SceneText_8cpp" startline="354" endline="392">RenderTextOnScreen</referencedby>
+        <referencedby refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" compoundref="SceneText_8cpp" startline="138" endline="175">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1abbd3ef6662ea5c97507b91ade8a1269c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneText::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="79" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+        <referencedby refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" compoundref="SceneText_8cpp" startline="138" endline="175">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a7d17ed0880e2b24b17f193f62c2511c9" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera2" kindref="compound">Camera2</ref></type>
+        <definition>Camera2 SceneText::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="81" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" compoundref="SceneText_8cpp" startline="138" endline="175">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a13de93181c786bafe4a4dc58bb1e097a" prot="private" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light SceneText::light[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="82" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" compoundref="SceneText_8cpp" startline="138" endline="175">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneText::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="84" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1a7f66a1cb3b9ab40f04a5ec86168cebca" compoundref="SceneText_8cpp" startline="281" endline="325">RenderSkybox</referencedby>
+        <referencedby refid="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" compoundref="SceneText_8cpp" startline="327" endline="352">RenderText</referencedby>
+        <referencedby refid="classSceneText_1ae71601254d7b314184d0bb529e09114e" compoundref="SceneText_8cpp" startline="354" endline="392">RenderTextOnScreen</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a0a4b48be69e2a687fb7082f30c618fc8" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneText::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="84" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" compoundref="SceneText_8cpp" startline="327" endline="352">RenderText</referencedby>
+        <referencedby refid="classSceneText_1ae71601254d7b314184d0bb529e09114e" compoundref="SceneText_8cpp" startline="354" endline="392">RenderTextOnScreen</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneText_1a5f33431dbaee6d124215fa26b80a7008" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneText::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="84" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" compoundref="SceneText_8cpp" startline="20" endline="132">Init</referencedby>
+        <referencedby refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">RenderMesh</referencedby>
+        <referencedby refid="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" compoundref="SceneText_8cpp" startline="327" endline="352">RenderText</referencedby>
+        <referencedby refid="classSceneText_1ae71601254d7b314184d0bb529e09114e" compoundref="SceneText_8cpp" startline="354" endline="392">RenderTextOnScreen</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSceneText_1a46e1c865c6be6482f19eefba3deeddde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneText::SceneText</definition>
+        <argsstring>()</argsstring>
+        <name>SceneText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="60" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1ad6570e4fe381a3c186f81d25c129a2b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneText::~SceneText</definition>
+        <argsstring>()</argsstring>
+        <name>~SceneText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="61" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1ac827b68f9b72397b91da9785efb096b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneText::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="63" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="20" bodyend="132"/>
+        <references refid="classSceneText_1a7d17ed0880e2b24b17f193f62c2511c9" compoundref="SceneText_8h" startline="81">camera</references>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="24">Light::color</references>
+        <references refid="structLight_1af4ce5bbfbf33af96db9b8a222d073298" compoundref="Light_8h" startline="19">Light::cosCutoff</references>
+        <references refid="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" compoundref="Light_8h" startline="20">Light::cosInner</references>
+        <references refid="namespaceMath_1ac04b987cc6c574a059e68cb58f58c09a" compoundref="MyMath_8h" startline="49" endline="52">Math::DegreeToRadian</references>
+        <references refid="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" compoundref="Light_8h" startline="21">Light::exponent</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="683" endline="707">MeshBuilder::GenerateOBJ</references>
+        <references refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="98">MeshBuilder::GenerateQuad</references>
+        <references refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" compoundref="MeshBuilder_8cpp" startline="284" endline="329">MeshBuilder::GenerateSphere</references>
+        <references refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="709" endline="749">MeshBuilder::GenerateText</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccadb6ce5e871015a6018135efefb927558" compoundref="SceneText_8h" startline="15">GEO_AXES</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3862abdc8549b2e7f87168e4b4f9ef1b" compoundref="SceneText_8h" startline="23">GEO_BACK</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca9d8000d2c90fe22a1926d0ae949cf6f8" compoundref="SceneText_8h" startline="21">GEO_BOTTOM</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca1983630174b0b9ff1cde2d7f5722ef98" compoundref="SceneText_8h" startline="22">GEO_FRONT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3c3e569786914f4f4fbbbd79e152e2f3" compoundref="SceneText_8h" startline="18">GEO_LEFT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccaf4ee2c92c52a2787416e3e39df53a39e" compoundref="SceneText_8h" startline="17">GEO_LIGHTBALL</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca02aad7b9cc08c4554749cf57a4d7edc2" compoundref="SceneText_8h" startline="24">GEO_MODEL1</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccac202c9fecaf19ecb79e9ee5181dee077" compoundref="SceneText_8h" startline="16">GEO_QUAD</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca60589163b90d132c99fa466b083f4a09" compoundref="SceneText_8h" startline="19">GEO_RIGHT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccab0e8df7b37800446bb4ea505f6ce8ace" compoundref="SceneText_8h" startline="25">GEO_TEXT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca738d005d9c15757c8a6350471dc5aca2" compoundref="SceneText_8h" startline="20">GEO_TOP</references>
+        <references refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="26">Light::kC</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="26">Light::kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="26">Light::kQ</references>
+        <references refid="classSceneText_1a13de93181c786bafe4a4dc58bb1e097a" compoundref="SceneText_8h" startline="82">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="LoadTGA_8cpp_1a459a80ca6de67a1e3493bfb66ae317e4" compoundref="LoadTGA_8cpp" startline="8" endline="67">LoadTGA</references>
+        <references refid="classSceneText_1a351239295f12be1461350efd679cc743" compoundref="SceneText_8h" startline="77">m_parameters</references>
+        <references refid="classSceneText_1a4c6e0d7e67739fd9d2b9678308e775b0" compoundref="SceneText_8h" startline="76">m_programID</references>
+        <references refid="classSceneText_1a73bfb73d684ceb058e5c4d3a848128f1" compoundref="SceneText_8h" startline="73">m_vertexArrayID</references>
+        <references refid="classSceneText_1a3d35c2449fd439ca6b12d888d7d31639" compoundref="SceneText_8h" startline="74">meshList</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="25">Light::power</references>
+        <references refid="classSceneText_1a5f33431dbaee6d124215fa26b80a7008" compoundref="SceneText_8h" startline="84">projectionStack</references>
+        <references refid="classSceneText_1abbd3ef6662ea5c97507b91ade8a1269c" compoundref="SceneText_8h" startline="79">rotateAngle</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="16" endline="16">Color::Set</references>
+        <references refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Vector3::Set</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="18">Light::spotDirection</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="34">Mesh::textureID</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="17">Light::type</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ada2df3b75b508402e7cf328eabdf69a1" compoundref="SceneText_8h" startline="52">U_COLOR_TEXTURE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a38fb4c7114d8e4db7fc52e8aa7b1b453" compoundref="SceneText_8h" startline="51">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163abc0bc9e92529f496571cb8c598b67283" compoundref="SceneText_8h" startline="39">U_LIGHT0_COLOR</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ac3265f3ceb0db3a44ba611af9c0d4958" compoundref="SceneText_8h" startline="47">U_LIGHT0_COSCUTOFF</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a3b665c72b27d4bf89cb8e3b438b085c6" compoundref="SceneText_8h" startline="48">U_LIGHT0_COSINNER</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a709c7ac8aa7bb5fa376438e51a890a67" compoundref="SceneText_8h" startline="49">U_LIGHT0_EXPONENT</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aeb9d52f66ba15a3bee37884fab81c3d6" compoundref="SceneText_8h" startline="41">U_LIGHT0_KC</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a688ca1138feddc1d9a3bace279d6ca98" compoundref="SceneText_8h" startline="42">U_LIGHT0_KL</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163adaf22b06e48c5f3d0d864877bef13c97" compoundref="SceneText_8h" startline="43">U_LIGHT0_KQ</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163abe1cca54e44ada28aaab1925dbc85d11" compoundref="SceneText_8h" startline="38">U_LIGHT0_POSITION</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ae45c6ab649644583977eb4ae223a84cd" compoundref="SceneText_8h" startline="40">U_LIGHT0_POWER</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aa6944eac8a8883e9dc66a85ec184796c" compoundref="SceneText_8h" startline="46">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a251b040710d25bf97500b7076125b192" compoundref="SceneText_8h" startline="45">U_LIGHT0_TYPE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab9cf451e7b8be77a0c2b0213ca7ed10a" compoundref="SceneText_8h" startline="44">U_LIGHTENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aab4aa07e2b11f6b087704e2501ed6dc0" compoundref="SceneText_8h" startline="34">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a0227007e065c267a115806bb424fda0d" compoundref="SceneText_8h" startline="35">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aa68d5a023f438eec1ddce290e0191b94" compoundref="SceneText_8h" startline="37">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163acdecfaa4b471d4f14fe2fa82afdef283" compoundref="SceneText_8h" startline="36">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab69186222f9595551936815371c16d0d" compoundref="SceneText_8h" startline="32">U_MODELVIEW</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163adfda6f6d95ba3ac8fc7d35e4af45df6a" compoundref="SceneText_8h" startline="33">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a2c740dcdf47c83ebd4a4242ebf60ca83" compoundref="SceneText_8h" startline="31">U_MVP</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ac700d63cb9df3b26c3c79cb52bd0bb03" compoundref="SceneText_8h" startline="50">U_NUMLIGHTS</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ad1f092106addf6856f277f51f5cfaddc" compoundref="SceneText_8h" startline="54">U_TEXT_COLOR</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a7c277c257de47964eb875394b24da632" compoundref="SceneText_8h" startline="53">U_TEXT_ENABLED</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneText::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="64" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="138" bodyend="175"/>
+        <references refid="classSceneText_1a7d17ed0880e2b24b17f193f62c2511c9" compoundref="SceneText_8h" startline="81">camera</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="51" endline="54">Application::IsKeyPressed</references>
+        <references refid="classSceneText_1a13de93181c786bafe4a4dc58bb1e097a" compoundref="SceneText_8h" startline="82">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="11">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" compoundref="Light_8h" startline="10">Light::LIGHT_POINT</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="SceneText_8cpp_1a30bf7b0e79d3a8170fd7379307ede671" compoundref="SceneText_8cpp" startline="136">LSPEED</references>
+        <references refid="classSceneText_1a351239295f12be1461350efd679cc743" compoundref="SceneText_8h" startline="77">m_parameters</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classSceneText_1abbd3ef6662ea5c97507b91ade8a1269c" compoundref="SceneText_8h" startline="79">rotateAngle</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="17">Light::type</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a251b040710d25bf97500b7076125b192" compoundref="SceneText_8h" startline="45">U_LIGHT0_TYPE</references>
+        <references refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="89">Camera2::Update</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneText::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="65" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="222" bodyend="279"/>
+        <references refid="classSceneText_1a7d17ed0880e2b24b17f193f62c2511c9" compoundref="SceneText_8h" startline="81">camera</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccaf4ee2c92c52a2787416e3e39df53a39e" compoundref="SceneText_8h" startline="17">GEO_LIGHTBALL</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca02aad7b9cc08c4554749cf57a4d7edc2" compoundref="SceneText_8h" startline="24">GEO_MODEL1</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccab0e8df7b37800446bb4ea505f6ce8ace" compoundref="SceneText_8h" startline="25">GEO_TEXT</references>
+        <references refid="classSceneText_1a13de93181c786bafe4a4dc58bb1e097a" compoundref="SceneText_8h" startline="82">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="11">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="12">Light::LIGHT_SPOT</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classSceneText_1a351239295f12be1461350efd679cc743" compoundref="SceneText_8h" startline="77">m_parameters</references>
+        <references refid="classSceneText_1a3d35c2449fd439ca6b12d888d7d31639" compoundref="SceneText_8h" startline="74">meshList</references>
+        <references refid="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" compoundref="SceneText_8h" startline="84">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="23">Light::position</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">RenderMesh</references>
+        <references refid="classSceneText_1a7f66a1cb3b9ab40f04a5ec86168cebca" compoundref="SceneText_8cpp" startline="281" endline="325">RenderSkybox</references>
+        <references refid="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" compoundref="SceneText_8cpp" startline="327" endline="352">RenderText</references>
+        <references refid="classSceneText_1ae71601254d7b314184d0bb529e09114e" compoundref="SceneText_8cpp" startline="354" endline="392">RenderTextOnScreen</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="18">Light::spotDirection</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163abe1cca54e44ada28aaab1925dbc85d11" compoundref="SceneText_8h" startline="38">U_LIGHT0_POSITION</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aa6944eac8a8883e9dc66a85ec184796c" compoundref="SceneText_8h" startline="46">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classSceneText_1a0a4b48be69e2a687fb7082f30c618fc8" compoundref="SceneText_8h" startline="84">viewStack</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1a342e3931c55500c0bd5b757d9bedb86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneText::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="66" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="394" bodyend="398"/>
+        <references refid="classSceneText_1a4c6e0d7e67739fd9d2b9678308e775b0" compoundref="SceneText_8h" startline="76">m_programID</references>
+        <references refid="classSceneText_1a73bfb73d684ceb058e5c4d3a848128f1" compoundref="SceneText_8h" startline="73">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneText::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="68" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="177" bodyend="220"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</references>
+        <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="13">Material::kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="14">Material::kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="16">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="15">Material::kSpecular</references>
+        <references refid="classSceneText_1a351239295f12be1461350efd679cc743" compoundref="SceneText_8h" startline="77">m_parameters</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="35">Mesh::material</references>
+        <references refid="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" compoundref="SceneText_8h" startline="84">modelStack</references>
+        <references refid="classSceneText_1a5f33431dbaee6d124215fa26b80a7008" compoundref="SceneText_8h" startline="84">projectionStack</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">Component::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="34">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ada2df3b75b508402e7cf328eabdf69a1" compoundref="SceneText_8h" startline="52">U_COLOR_TEXTURE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a38fb4c7114d8e4db7fc52e8aa7b1b453" compoundref="SceneText_8h" startline="51">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab9cf451e7b8be77a0c2b0213ca7ed10a" compoundref="SceneText_8h" startline="44">U_LIGHTENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aab4aa07e2b11f6b087704e2501ed6dc0" compoundref="SceneText_8h" startline="34">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a0227007e065c267a115806bb424fda0d" compoundref="SceneText_8h" startline="35">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aa68d5a023f438eec1ddce290e0191b94" compoundref="SceneText_8h" startline="37">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163acdecfaa4b471d4f14fe2fa82afdef283" compoundref="SceneText_8h" startline="36">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab69186222f9595551936815371c16d0d" compoundref="SceneText_8h" startline="32">U_MODELVIEW</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163adfda6f6d95ba3ac8fc7d35e4af45df6a" compoundref="SceneText_8h" startline="33">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a2c740dcdf47c83ebd4a4242ebf60ca83" compoundref="SceneText_8h" startline="31">U_MVP</references>
+        <references refid="classSceneText_1a0a4b48be69e2a687fb7082f30c618fc8" compoundref="SceneText_8h" startline="84">viewStack</references>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+        <referencedby refid="classSceneText_1a7f66a1cb3b9ab40f04a5ec86168cebca" compoundref="SceneText_8cpp" startline="281" endline="325">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1a7f66a1cb3b9ab40f04a5ec86168cebca" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneText::RenderSkybox</definition>
+        <argsstring>()</argsstring>
+        <name>RenderSkybox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="69" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="281" bodyend="325"/>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3862abdc8549b2e7f87168e4b4f9ef1b" compoundref="SceneText_8h" startline="23">GEO_BACK</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca9d8000d2c90fe22a1926d0ae949cf6f8" compoundref="SceneText_8h" startline="21">GEO_BOTTOM</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca1983630174b0b9ff1cde2d7f5722ef98" compoundref="SceneText_8h" startline="22">GEO_FRONT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3c3e569786914f4f4fbbbd79e152e2f3" compoundref="SceneText_8h" startline="18">GEO_LEFT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca60589163b90d132c99fa466b083f4a09" compoundref="SceneText_8h" startline="19">GEO_RIGHT</references>
+        <references refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca738d005d9c15757c8a6350471dc5aca2" compoundref="SceneText_8h" startline="20">GEO_TOP</references>
+        <references refid="classSceneText_1a3d35c2449fd439ca6b12d888d7d31639" compoundref="SceneText_8h" startline="74">meshList</references>
+        <references refid="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" compoundref="SceneText_8h" startline="84">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" compoundref="SceneText_8cpp" startline="177" endline="220">RenderMesh</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneText::RenderText</definition>
+        <argsstring>(Mesh *mesh, std::string text, Color color)</argsstring>
+        <name>RenderText</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="structColor" kindref="compound">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="70" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="327" bodyend="352"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classSceneText_1a351239295f12be1461350efd679cc743" compoundref="SceneText_8h" startline="77">m_parameters</references>
+        <references refid="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" compoundref="SceneText_8h" startline="84">modelStack</references>
+        <references refid="classSceneText_1a5f33431dbaee6d124215fa26b80a7008" compoundref="SceneText_8h" startline="84">projectionStack</references>
+        <references refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" compoundref="Vertex_8h" startline="14">Color::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="34">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ada2df3b75b508402e7cf328eabdf69a1" compoundref="SceneText_8h" startline="52">U_COLOR_TEXTURE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a38fb4c7114d8e4db7fc52e8aa7b1b453" compoundref="SceneText_8h" startline="51">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab9cf451e7b8be77a0c2b0213ca7ed10a" compoundref="SceneText_8h" startline="44">U_LIGHTENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a2c740dcdf47c83ebd4a4242ebf60ca83" compoundref="SceneText_8h" startline="31">U_MVP</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ad1f092106addf6856f277f51f5cfaddc" compoundref="SceneText_8h" startline="54">U_TEXT_COLOR</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a7c277c257de47964eb875394b24da632" compoundref="SceneText_8h" startline="53">U_TEXT_ENABLED</references>
+        <references refid="classSceneText_1a0a4b48be69e2a687fb7082f30c618fc8" compoundref="SceneText_8h" startline="84">viewStack</references>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSceneText_1ae71601254d7b314184d0bb529e09114e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneText::RenderTextOnScreen</definition>
+        <argsstring>(Mesh *mesh, std::string text, Color color, float size, float x, float y)</argsstring>
+        <name>RenderTextOnScreen</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="structColor" kindref="compound">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/SceneText.h" line="71" column="1" bodyfile="MyGraphics/Source/SceneText.cpp" bodystart="354" bodyend="392"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="classSceneText_1a351239295f12be1461350efd679cc743" compoundref="SceneText_8h" startline="77">m_parameters</references>
+        <references refid="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" compoundref="SceneText_8h" startline="84">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classSceneText_1a5f33431dbaee6d124215fa26b80a7008" compoundref="SceneText_8h" startline="84">projectionStack</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" compoundref="Vertex_8h" startline="14">Color::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="84">Mesh::Render</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" compoundref="Mtx44_8cpp" startline="492" endline="497">Mtx44::SetToOrtho</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="34">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ada2df3b75b508402e7cf328eabdf69a1" compoundref="SceneText_8h" startline="52">U_COLOR_TEXTURE</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a38fb4c7114d8e4db7fc52e8aa7b1b453" compoundref="SceneText_8h" startline="51">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab9cf451e7b8be77a0c2b0213ca7ed10a" compoundref="SceneText_8h" startline="44">U_LIGHTENABLED</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a2c740dcdf47c83ebd4a4242ebf60ca83" compoundref="SceneText_8h" startline="31">U_MVP</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ad1f092106addf6856f277f51f5cfaddc" compoundref="SceneText_8h" startline="54">U_TEXT_COLOR</references>
+        <references refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a7c277c257de47964eb875394b24da632" compoundref="SceneText_8h" startline="53">U_TEXT_ENABLED</references>
+        <references refid="classSceneText_1a0a4b48be69e2a687fb7082f30c618fc8" compoundref="SceneText_8h" startline="84">viewStack</references>
+        <referencedby refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" compoundref="SceneText_8cpp" startline="222" endline="279">Render</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5883">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5882">
+        <label>SceneText</label>
+        <link refid="classSceneText"/>
+        <childnode refid="5883" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5889">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="5895">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="5898">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5888">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="5896">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="5897" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="5899" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="5900" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="5901" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="5899">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="5893">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="5890" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="5900">
+        <label>string</label>
+      </node>
+      <node id="5897">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="5898" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="5887">
+        <label>float</label>
+      </node>
+      <node id="5894">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="5895" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="5885">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="5886">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="5888" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="5889" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="5890" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="5891" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="5884">
+        <label>SceneText</label>
+        <link refid="classSceneText"/>
+        <childnode refid="5885" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5886" relation="usage">
+          <edgelabel>light</edgelabel>
+        </childnode>
+        <childnode refid="5892" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+        </childnode>
+        <childnode refid="5894" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="5896" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="5901" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="5892">
+        <label>Camera2</label>
+        <link refid="classCamera2"/>
+        <childnode refid="5893" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5890" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="5891">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="5901">
+        <label>unsigned</label>
+      </node>
+      <node id="5890">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="5887" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="MyGraphics/Source/SceneText.h" line="11" column="1" bodyfile="MyGraphics/Source/SceneText.h" bodystart="10" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classSceneText_1a7d17ed0880e2b24b17f193f62c2511c9" prot="private" virt="non-virtual"><scope>SceneText</scope><name>camera</name></member>
+      <member refid="classSceneText_1a342e3931c55500c0bd5b757d9bedb86e" prot="public" virt="virtual"><scope>SceneText</scope><name>Exit</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccadb6ce5e871015a6018135efefb927558" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_AXES</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3862abdc8549b2e7f87168e4b4f9ef1b" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_BACK</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca9d8000d2c90fe22a1926d0ae949cf6f8" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_BOTTOM</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca5769c7a5c2dab2884c9c27de30cd7c1c" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_CUBE</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca1983630174b0b9ff1cde2d7f5722ef98" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_FRONT</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca3c3e569786914f4f4fbbbd79e152e2f3" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_LEFT</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccaf4ee2c92c52a2787416e3e39df53a39e" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca02aad7b9cc08c4554749cf57a4d7edc2" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_MODEL1</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccac202c9fecaf19ecb79e9ee5181dee077" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_QUAD</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca60589163b90d132c99fa466b083f4a09" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_RIGHT</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccab0e8df7b37800446bb4ea505f6ce8ace" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_TEXT</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cca738d005d9c15757c8a6350471dc5aca2" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEO_TOP</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59cc" prot="private" virt="non-virtual"><scope>SceneText</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classSceneText_1ac827b68f9b72397b91da9785efb096b8" prot="public" virt="virtual"><scope>SceneText</scope><name>Init</name></member>
+      <member refid="classSceneText_1a13de93181c786bafe4a4dc58bb1e097a" prot="private" virt="non-virtual"><scope>SceneText</scope><name>light</name></member>
+      <member refid="classSceneText_1a351239295f12be1461350efd679cc743" prot="private" virt="non-virtual"><scope>SceneText</scope><name>m_parameters</name></member>
+      <member refid="classSceneText_1a4c6e0d7e67739fd9d2b9678308e775b0" prot="private" virt="non-virtual"><scope>SceneText</scope><name>m_programID</name></member>
+      <member refid="classSceneText_1a73bfb73d684ceb058e5c4d3a848128f1" prot="private" virt="non-virtual"><scope>SceneText</scope><name>m_vertexArrayID</name></member>
+      <member refid="classSceneText_1a3d35c2449fd439ca6b12d888d7d31639" prot="private" virt="non-virtual"><scope>SceneText</scope><name>meshList</name></member>
+      <member refid="classSceneText_1aa28f0492a8411f071450aee95a35b3c5" prot="private" virt="non-virtual"><scope>SceneText</scope><name>modelStack</name></member>
+      <member refid="classSceneText_1a72574cc4e30e8f71073a07d05c1a59ccac148c9457a988b69f2b5805afa95e6f6" prot="private" virt="non-virtual"><scope>SceneText</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classSceneText_1a5f33431dbaee6d124215fa26b80a7008" prot="private" virt="non-virtual"><scope>SceneText</scope><name>projectionStack</name></member>
+      <member refid="classSceneText_1aab7d8acab32f8e5ea85d4ca2f3b1b174" prot="public" virt="virtual"><scope>SceneText</scope><name>Render</name></member>
+      <member refid="classSceneText_1abfb0e94c3ee5aa622d8844a285701e33" prot="private" virt="non-virtual"><scope>SceneText</scope><name>RenderMesh</name></member>
+      <member refid="classSceneText_1a7f66a1cb3b9ab40f04a5ec86168cebca" prot="private" virt="non-virtual"><scope>SceneText</scope><name>RenderSkybox</name></member>
+      <member refid="classSceneText_1aa01e07a3b3282a54fb5a0a7c3bf68ecf" prot="private" virt="non-virtual"><scope>SceneText</scope><name>RenderText</name></member>
+      <member refid="classSceneText_1ae71601254d7b314184d0bb529e09114e" prot="private" virt="non-virtual"><scope>SceneText</scope><name>RenderTextOnScreen</name></member>
+      <member refid="classSceneText_1abbd3ef6662ea5c97507b91ade8a1269c" prot="private" virt="non-virtual"><scope>SceneText</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>SceneText</scope><name>Scene</name></member>
+      <member refid="classSceneText_1a46e1c865c6be6482f19eefba3deeddde" prot="public" virt="non-virtual"><scope>SceneText</scope><name>SceneText</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ada2df3b75b508402e7cf328eabdf69a1" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_COLOR_TEXTURE</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a38fb4c7114d8e4db7fc52e8aa7b1b453" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_COLOR_TEXTURE_ENABLED</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163abc0bc9e92529f496571cb8c598b67283" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ac3265f3ceb0db3a44ba611af9c0d4958" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_COSCUTOFF</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a3b665c72b27d4bf89cb8e3b438b085c6" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_COSINNER</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a709c7ac8aa7bb5fa376438e51a890a67" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_EXPONENT</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aeb9d52f66ba15a3bee37884fab81c3d6" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a688ca1138feddc1d9a3bace279d6ca98" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163adaf22b06e48c5f3d0d864877bef13c97" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163abe1cca54e44ada28aaab1925dbc85d11" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ae45c6ab649644583977eb4ae223a84cd" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aa6944eac8a8883e9dc66a85ec184796c" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_SPOTDIRECTION</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a251b040710d25bf97500b7076125b192" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHT0_TYPE</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab9cf451e7b8be77a0c2b0213ca7ed10a" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aab4aa07e2b11f6b087704e2501ed6dc0" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a0227007e065c267a115806bb424fda0d" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163aa68d5a023f438eec1ddce290e0191b94" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163acdecfaa4b471d4f14fe2fa82afdef283" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ab69186222f9595551936815371c16d0d" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MODELVIEW</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163adfda6f6d95ba3ac8fc7d35e4af45df6a" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a2c740dcdf47c83ebd4a4242ebf60ca83" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_MVP</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ac700d63cb9df3b26c3c79cb52bd0bb03" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_NUMLIGHTS</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163ad1f092106addf6856f277f51f5cfaddc" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_TEXT_COLOR</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163a7c277c257de47964eb875394b24da632" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_TEXT_ENABLED</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163acc99f996963c91488e505dd4f4b1ef8a" prot="private" virt="non-virtual"><scope>SceneText</scope><name>U_TOTAL</name></member>
+      <member refid="classSceneText_1ade17913eb383f664cae2565d24a7d163" prot="private" virt="non-virtual"><scope>SceneText</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classSceneText_1adc1a70bbd23ec1b2236bcb76b557bb3e" prot="public" virt="virtual"><scope>SceneText</scope><name>Update</name></member>
+      <member refid="classSceneText_1a0a4b48be69e2a687fb7082f30c618fc8" prot="private" virt="non-virtual"><scope>SceneText</scope><name>viewStack</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>SceneText</scope><name>~Scene</name></member>
+      <member refid="classSceneText_1ad6570e4fe381a3c186f81d25c129a2b0" prot="public" virt="non-virtual"><scope>SceneText</scope><name>~SceneText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

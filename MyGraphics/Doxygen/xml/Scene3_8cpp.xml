@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Scene3_8cpp" kind="file" language="C++">
+    <compoundname>Scene3.cpp</compoundname>
+    <includes refid="Scene3_8h" local="yes">Scene3.h</includes>
+    <includes local="yes">GL\glew.h</includes>
+    <includes refid="shader_8hpp" local="yes">shader.hpp</includes>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes refid="MeshBuilder_8h" local="yes">MeshBuilder.h</includes>
+    <incdepgraph>
+      <node id="2749">
+        <label>windows.h</label>
+      </node>
+      <node id="2752">
+        <label>LoadOBJ.h</label>
+        <link refid="LoadOBJ_8h"/>
+        <childnode refid="2753" relation="include">
+        </childnode>
+        <childnode refid="2751" relation="include">
+        </childnode>
+        <childnode refid="2734" relation="include">
+        </childnode>
+      </node>
+      <node id="2750">
+        <label>MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="2741" relation="include">
+        </childnode>
+        <childnode refid="2751" relation="include">
+        </childnode>
+        <childnode refid="2735" relation="include">
+        </childnode>
+        <childnode refid="2752" relation="include">
+        </childnode>
+      </node>
+      <node id="2743">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="2736">
+        <label>cmath</label>
+      </node>
+      <node id="2744">
+        <label>GL\glew.h</label>
+      </node>
+      <node id="2742">
+        <label>string</label>
+      </node>
+      <node id="2734">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2735" relation="include">
+        </childnode>
+        <childnode refid="2740" relation="include">
+        </childnode>
+      </node>
+      <node id="2748">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2749" relation="include">
+        </childnode>
+      </node>
+      <node id="2737">
+        <label>exception</label>
+      </node>
+      <node id="2745">
+        <label>shader.hpp</label>
+        <link refid="shader_8hpp"/>
+      </node>
+      <node id="2732">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="2738">
+        <label>ctime</label>
+      </node>
+      <node id="2731">
+        <label>Scene3.h</label>
+        <link refid="Scene3_8h"/>
+        <childnode refid="2732" relation="include">
+        </childnode>
+        <childnode refid="2733" relation="include">
+        </childnode>
+        <childnode refid="2741" relation="include">
+        </childnode>
+      </node>
+      <node id="2747">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2748" relation="include">
+        </childnode>
+      </node>
+      <node id="2753">
+        <label>vector</label>
+      </node>
+      <node id="2733">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2734" relation="include">
+        </childnode>
+      </node>
+      <node id="2739">
+        <label>cstdlib</label>
+      </node>
+      <node id="2740">
+        <label>iostream</label>
+      </node>
+      <node id="2730">
+        <label>MyGraphics/Source/Scene3.cpp</label>
+        <link refid="Scene3.cpp"/>
+        <childnode refid="2731" relation="include">
+        </childnode>
+        <childnode refid="2744" relation="include">
+        </childnode>
+        <childnode refid="2745" relation="include">
+        </childnode>
+        <childnode refid="2746" relation="include">
+        </childnode>
+        <childnode refid="2747" relation="include">
+        </childnode>
+        <childnode refid="2750" relation="include">
+        </childnode>
+      </node>
+      <node id="2746">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2735" relation="include">
+        </childnode>
+        <childnode refid="2734" relation="include">
+        </childnode>
+      </node>
+      <node id="2741">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="2742" relation="include">
+        </childnode>
+        <childnode refid="2743" relation="include">
+        </childnode>
+      </node>
+      <node id="2735">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2736" relation="include">
+        </childnode>
+        <childnode refid="2737" relation="include">
+        </childnode>
+        <childnode refid="2738" relation="include">
+        </childnode>
+        <childnode refid="2739" relation="include">
+        </childnode>
+      </node>
+      <node id="2751">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2746" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Scene3_8cpp_1ad466e04074e34746ca87ddf53f0e2792" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float ROT_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>ROT_LIMIT</name>
+        <initializer>= 45.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.cpp" line="61" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Scene3_8cpp_1a50eb4db9befcb2a28451eb8811e3fe0b" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float SCALE_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>SCALE_LIMIT</name>
+        <initializer>= 5.f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MyGraphics/Source/Scene3.cpp" line="62" column="1" bodyfile="MyGraphics/Source/Scene3.cpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene3_8h" kindref="compound">Scene3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GL\glew.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="shader_8hpp" kindref="compound">shader.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MeshBuilder_8h" kindref="compound">MeshBuilder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classScene3_1abe028b4f887292044eb08a4e9b09060a" refkind="member"><highlight class="normal"><ref refid="classScene3_1abe028b4f887292044eb08a4e9b09060a" kindref="member">Scene3::Scene3</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classScene3_1aaf3f902f03431df9fb6c0b15308d201a" refkind="member"><highlight class="normal"><ref refid="classScene3_1aaf3f902f03431df9fb6c0b15308d201a" kindref="member">Scene3::~Scene3</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene3_1ae0fa7e48f701d3761d8c6ca01a334feb" kindref="member">Scene3::Init</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Init<sp/>VBO<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>background<sp/>color<sp/>to<sp/>dark<sp/>blue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClearColor(0.0f,<sp/>0.0f,<sp/>0.4f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Enable<sp/>depth<sp/>buffer<sp/>and<sp/>depth<sp/>testing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_DEPTH_TEST);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Enable<sp/>back<sp/>face<sp/>culling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_CULL_FACE);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Default<sp/>to<sp/>fill<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glPolygonMode(GL_FRONT_AND_BACK,<sp/>GL_FILL);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Generate<sp/>a<sp/>default<sp/>VAO<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenVertexArrays(1,<sp/>&amp;<ref refid="classScene3_1afdf6706566755abff63b667e92e667d9" kindref="member">m_vertexArrayID</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindVertexArray(<ref refid="classScene3_1afdf6706566755abff63b667e92e667d9" kindref="member">m_vertexArrayID</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Load<sp/>vertex<sp/>and<sp/>fragment<sp/>shaders</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1afc538770801dee4754a816f42adf8021" kindref="member">m_programID</ref><sp/>=<sp/><ref refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" kindref="member">LoadShaders</ref>(</highlight><highlight class="stringliteral">&quot;Shader//TransformVertexShader.vertexshader&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Shader//SimpleFragmentShader.fragmentshader&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>our<sp/>shader</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUseProgram(<ref refid="classScene3_1afc538770801dee4754a816f42adf8021" kindref="member">m_programID</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>handle<sp/>for<sp/>our<sp/>&quot;MVP&quot;<sp/>uniform</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[<ref refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea593e45eaa1b10e3f8e427db73208ecb4" kindref="member">U_MVP</ref>]<sp/>=<sp/>glGetUniformLocation(<ref refid="classScene3_1afc538770801dee4754a816f42adf8021" kindref="member">m_programID</ref>,<sp/></highlight><highlight class="stringliteral">&quot;MVP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//variable<sp/>to<sp/>rotate<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" kindref="member">rotateAngle</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>camera<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" kindref="member">Init</ref>(<ref refid="structVector3" kindref="compound">Vector3</ref>(4,<sp/>3,<sp/>3),<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(0,<sp/>0,<sp/>0),<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(0,<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba5e4f82a98b1e0afaeee96c388ef23697" kindref="member">GEO_AXES</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" kindref="member">MeshBuilder::GenerateAxes</ref>(</highlight><highlight class="stringliteral">&quot;AXES&quot;</highlight><highlight class="normal">,<sp/>1000,<sp/>1000,<sp/>1000);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba1033a9810449be531922ccb32c3eee3b" kindref="member">GEO_QUAD</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" kindref="member">MeshBuilder::GenerateQuad</ref>(</highlight><highlight class="stringliteral">&quot;QUAD&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(1,<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba23f9b642b292fec2efefebccfffe5708" kindref="member">GEO_CUBE</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" kindref="member">MeshBuilder::GenerateCube</ref>(</highlight><highlight class="stringliteral">&quot;CUBE&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(0,<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba232b28c90af8861134fc9d9dadfd0352" kindref="member">GEO_CIRCLE</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1a7159eed1c0e58ad5f45f785796166ab4" kindref="member">MeshBuilder::GenerateCircle</ref>(</highlight><highlight class="stringliteral">&quot;CIRCLE&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(1,<sp/>0,<sp/>0),<sp/>36);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bbaef83a54ae341ba2ded5526ccac4e0e33" kindref="member">GEO_RING</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1aaa989b0714d5fc01a4c10c4ffaf8a2d8" kindref="member">MeshBuilder::GenerateRing</ref>(</highlight><highlight class="stringliteral">&quot;RING&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(0,<sp/>0,<sp/>1),<sp/>0.8f,<sp/>36);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba9d3d806d707927467b4b2b272ab53242" kindref="member">GEO_SPHERE</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1ad57247d585dac3161243ba582367c38f" kindref="member">MeshBuilder::GenerateSphere</ref>(</highlight><highlight class="stringliteral">&quot;SPHERE&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(0,<sp/>1,<sp/>1),<sp/>18,<sp/>36);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba4073800412feeb3c781708c67a360f17" kindref="member">GEO_HEMI</ref>]<sp/>=<sp/><ref refid="classMeshBuilder_1ac0a50135f33cb7d68840f4c57c07923d" kindref="member">MeshBuilder::GenerateHemi</ref>(</highlight><highlight class="stringliteral">&quot;HEMI&quot;</highlight><highlight class="normal">,<sp/><ref refid="structColor" kindref="compound">Color</ref>(1,<sp/>1,<sp/>0),<sp/>18,<sp/>36);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_CYLIN]<sp/>=<sp/>MeshBuilder::GenerateCylin(&quot;CYLIN&quot;,<sp/>Color(1,<sp/>0,<sp/>1),<sp/>18,<sp/>36);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="Scene3_8cpp_1ad466e04074e34746ca87ddf53f0e2792" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="Scene3_8cpp_1ad466e04074e34746ca87ddf53f0e2792" kindref="member">ROT_LIMIT</ref><sp/>=<sp/>45.f;</highlight></codeline>
+<codeline lineno="62" refid="Scene3_8cpp_1a50eb4db9befcb2a28451eb8811e3fe0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="Scene3_8cpp_1a50eb4db9befcb2a28451eb8811e3fe0b" kindref="member">SCALE_LIMIT</ref><sp/>=<sp/>5.f;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene3_1ac6aee0665d9f41f4a009fdcb29ac40f1" kindref="member">Scene3::Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal">))<sp/></highlight><highlight class="comment">//enable<sp/>back<sp/>face<sp/>culling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnable(GL_CULL_FACE);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">))<sp/></highlight><highlight class="comment">//disable<sp/>back<sp/>face<sp/>culling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisable(GL_CULL_FACE);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;3&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glPolygonMode(GL_FRONT_AND_BACK,<sp/>GL_FILL);<sp/></highlight><highlight class="comment">//default<sp/>fill<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;4&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glPolygonMode(GL_FRONT_AND_BACK,<sp/>GL_LINE);<sp/></highlight><highlight class="comment">//wireframe<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" kindref="member">rotateAngle</ref><sp/>+=<sp/>(float)(10<sp/>*<sp/>dt);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" kindref="member">Update</ref>(dt);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene3_1aca22983af978d16e380bf5ca4ceab143" kindref="member">Scene3::Render</ref>()</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Render<sp/>VBO<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glClear(GL_COLOR_BUFFER_BIT<sp/>|<sp/>GL_DEPTH_BUFFER_BIT);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Temp<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>translate,<sp/>rotate,<sp/>scale;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>MVP;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//These<sp/>will<sp/>be<sp/>replaced<sp/>by<sp/>matrix<sp/>stack<sp/>soon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>model;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>view;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>projection;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>all<sp/>matrices<sp/>to<sp/>identity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" kindref="member">SetToIdentity</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.<ref refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" kindref="member">SetToIdentity</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.<ref refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" kindref="member">SetToIdentity</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model.<ref refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" kindref="member">SetToIdentity</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>view<sp/>matrix<sp/>using<sp/>camera<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>view.<ref refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" kindref="member">SetToLookAt</ref>(</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref>,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="classScene3_1a596bfb4c74b93cba84d6eb0d10c1a71a" kindref="member">camera</ref>.<ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>projection<sp/>matrix<sp/>to<sp/>perspective<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>projection.<ref refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" kindref="member">SetToPerspective</ref>(45.0f,<sp/>4.0f<sp/>/<sp/>3.0f,<sp/>0.1f,<sp/>1000.0f);<sp/></highlight><highlight class="comment">//FOV,<sp/>Aspect<sp/>Ratio,<sp/>Near<sp/>plane,<sp/>Far<sp/>plane</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model.<ref refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" kindref="member">SetToIdentity</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[<ref refid="classScene3_1a9b928ccb48c4d2f4ab587754e748d41ea593e45eaa1b10e3f8e427db73208ecb4" kindref="member">U_MVP</ref>],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba5e4f82a98b1e0afaeee96c388ef23697" kindref="member">GEO_AXES</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(1,<sp/>1,<sp/>1);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.<ref refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" kindref="member">SetToScale</ref>(1.0f,<sp/>1.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>translate<sp/>*<sp/>scale;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_QUAD]-&gt;Render();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(-1,<sp/>2,<sp/>1);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.<ref refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" kindref="member">SetToRotation</ref>(<ref refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" kindref="member">rotateAngle</ref>,<sp/>0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.SetToScale(1.0f,<sp/>1.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>rotate<sp/>*<sp/>translate<sp/>*<sp/>scale;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_CUBE]-&gt;Render();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(1,<sp/>1,<sp/>1);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.<ref refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" kindref="member">SetToRotation</ref>(0,<sp/>0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.SetToScale(1.0f,<sp/>1.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>rotate<sp/>*<sp/>translate<sp/>*<sp/>scale;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_CIRCLE]-&gt;Render();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(1,<sp/>2,<sp/>1);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.<ref refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" kindref="member">SetToRotation</ref>(0,<sp/>0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.SetToScale(1.0f,<sp/>1.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>rotate<sp/>*<sp/>translate<sp/>*<sp/>scale;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_RING]-&gt;Render();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(3,<sp/>2,<sp/>1);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.<ref refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" kindref="member">SetToRotation</ref>(<ref refid="classScene3_1afadb208379e3e9de9df1332ccaf7501c" kindref="member">rotateAngle</ref>,<sp/>0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.SetToScale(0.5f,<sp/>0.5f,<sp/>0.5f);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>translate<sp/>*<sp/>scale<sp/>*<sp/>rotate;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_SPHERE]-&gt;Render();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.SetToRotation(0,<sp/>0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.SetToScale(0.5f,<sp/>0.5f,<sp/>0.5f);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>rotate<sp/>*<sp/>translate<sp/>*<sp/>scale;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene3_1aafc9c3608926f6279fae71dfdf43603b" kindref="member">meshList</ref>[<ref refid="classScene3_1a75fcef79ae2ae31b96eb6e5c05bc31bba4073800412feeb3c781708c67a360f17" kindref="member">GEO_HEMI</ref>]-&gt;<ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translate.<ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rotate.SetToRotation(0,<sp/>0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale.SetToScale(0.5f,<sp/>0.5f,<sp/>0.5f);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model<sp/>=<sp/>rotate<sp/>*<sp/>translate<sp/>*<sp/>scale;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MVP<sp/>=<sp/>projection<sp/>*<sp/>view<sp/>*<sp/>model;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(<ref refid="classScene3_1aa32b078e76dc8d44853bba229e55771d" kindref="member">m_parameters</ref>[U_MVP],<sp/>1,<sp/>GL_FALSE,<sp/>&amp;MVP.<ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[0]);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meshList[GEO_CYLIN]-&gt;Render();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScene3_1a71f49cdf7e105d554c2c8f03b720cdc9" kindref="member">Scene3::Exit</ref>()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteVertexArrays(1,<sp/>&amp;<ref refid="classScene3_1afdf6706566755abff63b667e92e667d9" kindref="member">m_vertexArrayID</ref>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteProgram(<ref refid="classScene3_1afc538770801dee4754a816f42adf8021" kindref="member">m_programID</ref>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/Scene3.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgsym__t" kind="struct" language="C++" prot="public">
+    <compoundname>Agsym_t</compoundname>
+    <includes refid="graph_8h" local="no">graph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgsym__t_1a3f1d8e82de627f7f765144fb44eb734b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Agsym_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="110" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgsym__t_1a51477b26bf14b16ffdc043c96797411a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * Agsym_t::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="110" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgsym__t_1a2b44783fbcff4f8921cb5a42457a9c91" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Agsym_t::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="111" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgsym__t_1aef1501fe7b05c74bc4cff6dfd6477b19" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Agsym_t::printed</definition>
+        <argsstring></argsstring>
+        <name>printed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="112" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgsym__t_1ae225f29e57b7c1f4b789257aa9bbe0f9" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Agsym_t::fixed</definition>
+        <argsstring></argsstring>
+        <name>fixed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/graph.h" line="113" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4603">
+        <label>Agsym_t</label>
+        <link refid="structAgsym__t"/>
+        <childnode refid="4604" relation="usage">
+          <edgelabel>value</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="4605" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="4606" relation="usage">
+          <edgelabel>printed</edgelabel>
+          <edgelabel>fixed</edgelabel>
+        </childnode>
+      </node>
+      <node id="4605">
+        <label>int</label>
+      </node>
+      <node id="4606">
+        <label>unsigned</label>
+      </node>
+      <node id="4604">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/graph.h" line="109" column="1" bodyfile="graphviz/release/include/graphviz/graph.h" bodystart="109" bodyend="114"/>
+    <listofallmembers>
+      <member refid="structAgsym__t_1ae225f29e57b7c1f4b789257aa9bbe0f9" prot="public" virt="non-virtual"><scope>Agsym_t</scope><name>fixed</name></member>
+      <member refid="structAgsym__t_1a2b44783fbcff4f8921cb5a42457a9c91" prot="public" virt="non-virtual"><scope>Agsym_t</scope><name>index</name></member>
+      <member refid="structAgsym__t_1a3f1d8e82de627f7f765144fb44eb734b" prot="public" virt="non-virtual"><scope>Agsym_t</scope><name>name</name></member>
+      <member refid="structAgsym__t_1aef1501fe7b05c74bc4cff6dfd6477b19" prot="public" virt="non-virtual"><scope>Agsym_t</scope><name>printed</name></member>
+      <member refid="structAgsym__t_1a51477b26bf14b16ffdc043c96797411a" prot="public" virt="non-virtual"><scope>Agsym_t</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

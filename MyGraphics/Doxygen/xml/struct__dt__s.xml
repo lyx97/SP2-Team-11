@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="struct__dt__s" kind="struct" language="C++" prot="public">
+    <compoundname>_dt_s</compoundname>
+    <includes refid="cdt_8h" local="no">cdt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dt__s_1a3c02032f5160f30aa99ff21bb10b4d39" prot="public" static="no" mutable="no">
+        <type>Dtsearch_f</type>
+        <definition>Dtsearch_f _dt_s::searchf</definition>
+        <argsstring></argsstring>
+        <name>searchf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="121" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1aad6bb1723ac19b670250686918c1a26a" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1aea140cf19552bb2cd490b286cd45eff4" kindref="member">Dtdisc_t</ref> *</type>
+        <definition>Dtdisc_t* _dt_s::disc</definition>
+        <argsstring></argsstring>
+        <name>disc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="122" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1aab8f40c305fabb6fa535071ab6048403" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1aebf7c2e3f7b071f05ce6a9ff4701c5ee" kindref="member">Dtdata_t</ref> *</type>
+        <definition>Dtdata_t* _dt_s::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="123" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1a11bb56474dafa0ebabbbea78bbfd3260" prot="public" static="no" mutable="no">
+        <type>Dtmemory_f</type>
+        <definition>Dtmemory_f _dt_s::memoryf</definition>
+        <argsstring></argsstring>
+        <name>memoryf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="124" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1ab7ae90e7d444274f6bf0aa02f8a5f1ce" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1abf86d6f2f269d37e5944cd844290cf5f" kindref="member">Dtmethod_t</ref> *</type>
+        <definition>Dtmethod_t* _dt_s::meth</definition>
+        <argsstring></argsstring>
+        <name>meth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="125" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1a02ac8517c8eb70cb73aafff9c36d231c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dt_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="126" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1a970265c088872a3ee46fdb259777405f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dt_s::nview</definition>
+        <argsstring></argsstring>
+        <name>nview</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="127" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1a6bda875af8e9f14cdc191d8de2186b71" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *</type>
+        <definition>Dt_t* _dt_s::view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="128" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1a80379e874cc0211c4421cef5c89cea86" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1a37bbcd168191cb3ea46033b4d2514b5b" kindref="member">Dt_t</ref> *</type>
+        <definition>Dt_t* _dt_s::walk</definition>
+        <argsstring></argsstring>
+        <name>walk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="129" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dt__s_1a9d8a1e4481743da4e265918e15c3b7b5" prot="public" static="no" mutable="no">
+        <type><ref refid="cdt_8h_1ad164328de1d92cc0383058c0daab33f7" kindref="member">Void_t</ref> *</type>
+        <definition>Void_t* _dt_s::user</definition>
+        <argsstring></argsstring>
+        <name>user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cdt.h" line="130" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3071">
+        <label></label>
+      </node>
+      <node id="3074">
+        <label>Void_t *</label>
+      </node>
+      <node id="3066">
+        <label>Dtcompar_f</label>
+      </node>
+      <node id="3068">
+        <label>Dtmemory_f</label>
+      </node>
+      <node id="3061">
+        <label>_dt_s</label>
+        <link refid="struct__dt__s"/>
+        <childnode refid="3062" relation="usage">
+          <edgelabel>disc</edgelabel>
+        </childnode>
+        <childnode refid="3070" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="3074" relation="usage">
+          <edgelabel>user</edgelabel>
+        </childnode>
+        <childnode refid="3067" relation="usage">
+          <edgelabel>type</edgelabel>
+          <edgelabel>nview</edgelabel>
+        </childnode>
+        <childnode refid="3061" relation="usage">
+          <edgelabel>view</edgelabel>
+          <edgelabel>walk</edgelabel>
+        </childnode>
+        <childnode refid="3068" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="3075" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+        <childnode refid="3076" relation="usage">
+          <edgelabel>meth</edgelabel>
+        </childnode>
+      </node>
+      <node id="3070">
+        <label>_dtdata_s</label>
+        <link refid="struct__dtdata__s"/>
+        <childnode refid="3071" relation="usage">
+          <edgelabel>hh</edgelabel>
+        </childnode>
+        <childnode refid="3072" relation="usage">
+          <edgelabel>here</edgelabel>
+          <edgelabel>_htab</edgelabel>
+          <edgelabel>_head</edgelabel>
+        </childnode>
+        <childnode refid="3067" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>loop</edgelabel>
+          <edgelabel>ntab</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>minp</edgelabel>
+        </childnode>
+      </node>
+      <node id="3067">
+        <label>int</label>
+      </node>
+      <node id="3075">
+        <label>Dtsearch_f</label>
+      </node>
+      <node id="3076">
+        <label>_dtmethod_s</label>
+        <link refid="struct__dtmethod__s"/>
+        <childnode refid="3067" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="3075" relation="usage">
+          <edgelabel>searchf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3065">
+        <label>Dtmake_f</label>
+      </node>
+      <node id="3069">
+        <label>Dthash_f</label>
+      </node>
+      <node id="3062">
+        <label>_dtdisc_s</label>
+        <link refid="struct__dtdisc__s"/>
+        <childnode refid="3063" relation="usage">
+          <edgelabel>freef</edgelabel>
+        </childnode>
+        <childnode refid="3064" relation="usage">
+          <edgelabel>eventf</edgelabel>
+        </childnode>
+        <childnode refid="3065" relation="usage">
+          <edgelabel>makef</edgelabel>
+        </childnode>
+        <childnode refid="3066" relation="usage">
+          <edgelabel>comparf</edgelabel>
+        </childnode>
+        <childnode refid="3067" relation="usage">
+          <edgelabel>size</edgelabel>
+          <edgelabel>key</edgelabel>
+          <edgelabel>link</edgelabel>
+        </childnode>
+        <childnode refid="3068" relation="usage">
+          <edgelabel>memoryf</edgelabel>
+        </childnode>
+        <childnode refid="3069" relation="usage">
+          <edgelabel>hashf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3072">
+        <label>_dtlink_s</label>
+        <link refid="struct__dtlink__s"/>
+        <childnode refid="3072" relation="usage">
+          <edgelabel>_left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+        <childnode refid="3071" relation="usage">
+          <edgelabel>hl</edgelabel>
+        </childnode>
+        <childnode refid="3073" relation="usage">
+          <edgelabel>_hash</edgelabel>
+        </childnode>
+      </node>
+      <node id="3073">
+        <label>unsigned</label>
+      </node>
+      <node id="3063">
+        <label>Dtfree_f</label>
+      </node>
+      <node id="3064">
+        <label>Dtevent_f</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cdt.h" line="121" column="1" bodyfile="graphviz/release/include/graphviz/cdt.h" bodystart="120" bodyend="131"/>
+    <listofallmembers>
+      <member refid="struct__dt__s_1aab8f40c305fabb6fa535071ab6048403" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>data</name></member>
+      <member refid="struct__dt__s_1aad6bb1723ac19b670250686918c1a26a" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>disc</name></member>
+      <member refid="struct__dt__s_1a11bb56474dafa0ebabbbea78bbfd3260" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>memoryf</name></member>
+      <member refid="struct__dt__s_1ab7ae90e7d444274f6bf0aa02f8a5f1ce" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>meth</name></member>
+      <member refid="struct__dt__s_1a970265c088872a3ee46fdb259777405f" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>nview</name></member>
+      <member refid="struct__dt__s_1a3c02032f5160f30aa99ff21bb10b4d39" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>searchf</name></member>
+      <member refid="struct__dt__s_1a02ac8517c8eb70cb73aafff9c36d231c" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>type</name></member>
+      <member refid="struct__dt__s_1a9d8a1e4481743da4e265918e15c3b7b5" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>user</name></member>
+      <member refid="struct__dt__s_1a6bda875af8e9f14cdc191d8de2186b71" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>view</name></member>
+      <member refid="struct__dt__s_1a80379e874cc0211c4421cef5c89cea86" prot="public" virt="non-virtual"><scope>_dt_s</scope><name>walk</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

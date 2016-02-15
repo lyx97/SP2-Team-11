@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Vertex_8h" kind="file" language="C++">
+    <compoundname>Vertex.h</compoundname>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includedby refid="Light_8h" local="yes">MyGraphics/Source/Light.h</includedby>
+    <includedby refid="MeshBuilder_8h" local="yes">MyGraphics/Source/MeshBuilder.h</includedby>
+    <includedby refid="LoadOBJ_8h" local="yes">MyGraphics/Source/LoadOBJ.h</includedby>
+    <includedby refid="Utility_8h" local="yes">MyGraphics/Source/Utility.h</includedby>
+    <includedby refid="Mesh_8cpp" local="yes">MyGraphics/Source/Mesh.cpp</includedby>
+    <incdepgraph>
+      <node id="3196">
+        <label>cmath</label>
+      </node>
+      <node id="3200">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+      </node>
+      <node id="3197">
+        <label>exception</label>
+      </node>
+      <node id="3198">
+        <label>ctime</label>
+      </node>
+      <node id="3199">
+        <label>cstdlib</label>
+      </node>
+      <node id="3201">
+        <label>iostream</label>
+      </node>
+      <node id="3194">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="3195" relation="include">
+        </childnode>
+        <childnode refid="3200" relation="include">
+        </childnode>
+      </node>
+      <node id="3195">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3196" relation="include">
+        </childnode>
+        <childnode refid="3197" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+        <childnode refid="3199" relation="include">
+        </childnode>
+      </node>
+      <node id="3193">
+        <label>MyGraphics/Source/Vertex.h</label>
+        <link refid="Vertex.h"/>
+        <childnode refid="3194" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3219">
+        <label>MyGraphics/Source/Assignment3.h</label>
+        <link refid="Assignment3_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+      </node>
+      <node id="3212">
+        <label>MyGraphics/Source/SceneTexture.cpp</label>
+        <link refid="SceneTexture_8cpp"/>
+      </node>
+      <node id="3214">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="3218">
+        <label>MyGraphics/Source/SceneText.cpp</label>
+        <link refid="SceneText_8cpp"/>
+      </node>
+      <node id="3222">
+        <label>MyGraphics/Source/MeshBuilder.cpp</label>
+        <link refid="MeshBuilder_8cpp"/>
+      </node>
+      <node id="3226">
+        <label>MyGraphics/Source/LoadOBJ.cpp</label>
+        <link refid="LoadOBJ_8cpp"/>
+      </node>
+      <node id="3206">
+        <label>MyGraphics/Source/SceneLight.cpp</label>
+        <link refid="SceneLight_8cpp"/>
+      </node>
+      <node id="3225">
+        <label>MyGraphics/Source/LoadOBJ.h</label>
+        <link refid="LoadOBJ_8h"/>
+        <childnode refid="3221" relation="include">
+        </childnode>
+        <childnode refid="3226" relation="include">
+        </childnode>
+      </node>
+      <node id="3221">
+        <label>MyGraphics/Source/MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="3210" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+        <childnode refid="3222" relation="include">
+        </childnode>
+        <childnode refid="3223" relation="include">
+        </childnode>
+        <childnode refid="3224" relation="include">
+        </childnode>
+        <childnode refid="3206" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+        <childnode refid="3214" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+      </node>
+      <node id="3216">
+        <label>MyGraphics/Source/SceneModel.cpp</label>
+        <link refid="SceneModel_8cpp"/>
+      </node>
+      <node id="3207">
+        <label>MyGraphics/Source/SceneLight2.h</label>
+        <link refid="SceneLight2_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+      </node>
+      <node id="3227">
+        <label>MyGraphics/Source/Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="3210" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+        <childnode refid="3206" relation="include">
+        </childnode>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+        <childnode refid="3214" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+        <childnode refid="3228" relation="include">
+        </childnode>
+      </node>
+      <node id="3228">
+        <label>MyGraphics/Source/Utility.cpp</label>
+        <link refid="Utility_8cpp"/>
+      </node>
+      <node id="3203">
+        <label>MyGraphics/Source/Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="3204" relation="include">
+        </childnode>
+        <childnode refid="3207" relation="include">
+        </childnode>
+        <childnode refid="3209" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+        <childnode refid="3213" relation="include">
+        </childnode>
+        <childnode refid="3215" relation="include">
+        </childnode>
+        <childnode refid="3217" relation="include">
+        </childnode>
+        <childnode refid="3219" relation="include">
+        </childnode>
+      </node>
+      <node id="3220">
+        <label>MyGraphics/Source/Assignment3.cpp</label>
+        <link refid="Assignment3_8cpp"/>
+      </node>
+      <node id="3224">
+        <label>MyGraphics/Source/Scene4.cpp</label>
+        <link refid="Scene4_8cpp"/>
+      </node>
+      <node id="3210">
+        <label>MyGraphics/Source/Assignment2.cpp</label>
+        <link refid="Assignment2_8cpp"/>
+      </node>
+      <node id="3213">
+        <label>MyGraphics/Source/SceneSkybox.h</label>
+        <link refid="SceneSkybox_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3214" relation="include">
+        </childnode>
+      </node>
+      <node id="3217">
+        <label>MyGraphics/Source/SceneText.h</label>
+        <link refid="SceneText_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+      </node>
+      <node id="3215">
+        <label>MyGraphics/Source/SceneModel.h</label>
+        <link refid="SceneModel_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+      </node>
+      <node id="3223">
+        <label>MyGraphics/Source/Scene3.cpp</label>
+        <link refid="Scene3_8cpp"/>
+      </node>
+      <node id="3209">
+        <label>MyGraphics/Source/Assignment2.h</label>
+        <link refid="Assignment2_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3210" relation="include">
+        </childnode>
+      </node>
+      <node id="3205">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3229">
+        <label>MyGraphics/Source/Mesh.cpp</label>
+        <link refid="Mesh_8cpp"/>
+      </node>
+      <node id="3211">
+        <label>MyGraphics/Source/SceneTexture.h</label>
+        <link refid="SceneTexture_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+      </node>
+      <node id="3204">
+        <label>MyGraphics/Source/SceneLight.h</label>
+        <link refid="SceneLight_8h"/>
+        <childnode refid="3205" relation="include">
+        </childnode>
+        <childnode refid="3206" relation="include">
+        </childnode>
+      </node>
+      <node id="3202">
+        <label>MyGraphics/Source/Vertex.h</label>
+        <link refid="Vertex.h"/>
+        <childnode refid="3203" relation="include">
+        </childnode>
+        <childnode refid="3221" relation="include">
+        </childnode>
+        <childnode refid="3225" relation="include">
+        </childnode>
+        <childnode refid="3227" relation="include">
+        </childnode>
+        <childnode refid="3229" relation="include">
+        </childnode>
+      </node>
+      <node id="3208">
+        <label>MyGraphics/Source/SceneLight2.cpp</label>
+        <link refid="SceneLight2_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structPosition" prot="public">Position</innerclass>
+    <innerclass refid="structColor" prot="public">Color</innerclass>
+    <innerclass refid="structTexCoord" prot="public">TexCoord</innerclass>
+    <innerclass refid="structVertex" prot="public">Vertex</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="structPosition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>,<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>,<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="9" refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" kindref="member">Position</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>0)<sp/>{<sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(x,<sp/>y,<sp/>z);<sp/>}</highlight></codeline>
+<codeline lineno="10" refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z)<sp/>{<sp/>this-&gt;x<sp/>=<sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>;<sp/>this-&gt;y<sp/>=<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>;<sp/>this-&gt;z<sp/>=<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12" refid="structColor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structColor" kindref="compound">Color</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>,<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>,<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="15" refid="structColor_1aa2ccdb977158b64bf8ad9000f443b09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor_1aa2ccdb977158b64bf8ad9000f443b09c" kindref="member">Color</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>1)<sp/>{<sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(r,<sp/>g,<sp/>b);<sp/>}</highlight></codeline>
+<codeline lineno="16" refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/>this-&gt;r<sp/>=<sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>;<sp/>this-&gt;g<sp/>=<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>;<sp/>this-&gt;b<sp/>=<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18" refid="structTexCoord" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTexCoord" kindref="compound">TexCoord</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>,<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" kindref="member">TexCoord</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>0)<sp/>{<sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(u,<sp/>v);<sp/>}</highlight></codeline>
+<codeline lineno="22" refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v)<sp/>{<sp/>this-&gt;u<sp/>=<sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>;<sp/>this-&gt;v<sp/>=<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24" refid="structVertex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVertex" kindref="compound">Vertex</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="27" refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor" kindref="compound">Color</ref><sp/><ref refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="28" refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" kindref="member">normal</ref>;</highlight></codeline>
+<codeline lineno="29" refid="structVertex_1a717d827da388b9c4847d1f5343959c78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord" kindref="compound">TexCoord</ref><sp/><ref refid="structVertex_1a717d827da388b9c4847d1f5343959c78" kindref="member">texCoord</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>VERTEX_H</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/Vertex.h"/>
+  </compounddef>
+</doxygen>

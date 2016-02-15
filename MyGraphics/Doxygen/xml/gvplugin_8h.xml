@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="gvplugin_8h" kind="file" language="C++">
+    <compoundname>gvplugin.h</compoundname>
+    <includes refid="gvcext_8h" local="yes">gvcext.h</includes>
+    <includedby refid="gvc_8h" local="yes">graphviz/release/include/graphviz/gvc.h</includedby>
+    <includedby refid="gvconfig_8h" local="yes">graphviz/release/include/graphviz/gvconfig.h</includedby>
+    <includedby refid="gvplugin__device_8h" local="yes">graphviz/release/include/graphviz/gvplugin_device.h</includedby>
+    <includedby refid="gvplugin__layout_8h" local="yes">graphviz/release/include/graphviz/gvplugin_layout.h</includedby>
+    <includedby refid="gvplugin__loadimage_8h" local="yes">graphviz/release/include/graphviz/gvplugin_loadimage.h</includedby>
+    <includedby refid="gvplugin__render_8h" local="yes">graphviz/release/include/graphviz/gvplugin_render.h</includedby>
+    <includedby refid="gvplugin__textlayout_8h" local="yes">graphviz/release/include/graphviz/gvplugin_textlayout.h</includedby>
+    <incdepgraph>
+      <node id="1966">
+        <label>graphviz/release/include/graphviz/gvplugin.h</label>
+        <link refid="gvplugin.h"/>
+        <childnode refid="1967" relation="include">
+        </childnode>
+      </node>
+      <node id="1967">
+        <label>gvcext.h</label>
+        <link refid="gvcext_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1969">
+        <label>graphviz/release/include/graphviz/gvc.h</label>
+        <link refid="gvc_8h"/>
+      </node>
+      <node id="1973">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1971">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1974">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1968">
+        <label>graphviz/release/include/graphviz/gvplugin.h</label>
+        <link refid="gvplugin.h"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1970" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1972" relation="include">
+        </childnode>
+        <childnode refid="1973" relation="include">
+        </childnode>
+        <childnode refid="1974" relation="include">
+        </childnode>
+        <childnode refid="1975" relation="include">
+        </childnode>
+      </node>
+      <node id="1970">
+        <label>graphviz/release/include/graphviz/gvconfig.h</label>
+        <link refid="gvconfig_8h"/>
+      </node>
+      <node id="1972">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1975">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgvplugin__installed__t" prot="public">gvplugin_installed_t</innerclass>
+    <innerclass refid="structgvplugin__api__t" prot="public">gvplugin_api_t</innerclass>
+    <innerclass refid="structgvplugin__library__t" prot="public">gvplugin_library_t</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Header<sp/>used<sp/>by<sp/>plugins<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GVPLUGIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GVPLUGIN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gvcext_8h" kindref="compound">gvcext.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>Terminology:</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>package<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e.g.<sp/>libgvplugin_cairo.so</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>api<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e.g.<sp/>render</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>type<sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e.g.<sp/>&quot;png&quot;,<sp/>&quot;ps&quot;</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structgvplugin__installed__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34" refid="structgvplugin__installed__t_1a18d59b8f83618b167ad96776150b184f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvplugin__installed__t_1a18d59b8f83618b167ad96776150b184f" kindref="member">id</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>an<sp/>id<sp/>that<sp/>is<sp/>only<sp/>unique<sp/>within<sp/>a<sp/>package<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>of<sp/>plugins<sp/>of<sp/>the<sp/>same<sp/>api.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A<sp/>renderer-type<sp/>such<sp/>as<sp/>&quot;png&quot;<sp/>in<sp/>the<sp/>cairo<sp/>package</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has<sp/>an<sp/>id<sp/>that<sp/>is<sp/>different<sp/>from<sp/>the<sp/>&quot;ps&quot;<sp/>type</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>in<sp/>the<sp/>same<sp/>package<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structgvplugin__installed__t_1af437ea384ed530792cac44c361bd8c25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__installed__t_1af437ea384ed530792cac44c361bd8c25" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>a<sp/>string<sp/>name,<sp/>such<sp/>as<sp/>&quot;png&quot;<sp/>or<sp/>&quot;ps&quot;<sp/>that</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distinguishes<sp/>different<sp/>types<sp/>withing<sp/>the<sp/>same</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(renderer<sp/>in<sp/>this<sp/>case)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="structgvplugin__installed__t_1a3cf8df3ad1b36b320f4724b4ce1c4620" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structgvplugin__installed__t_1a3cf8df3ad1b36b320f4724b4ce1c4620" kindref="member">quality</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>an<sp/>arbitrary<sp/>integer<sp/>used<sp/>for<sp/>ordering<sp/>plugins<sp/>of</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>same<sp/>type<sp/>from<sp/>different<sp/>packages<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structgvplugin__installed__t_1a736d5873fcf50a384aae25fe41ff3e1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__installed__t_1a736d5873fcf50a384aae25fe41ff3e1d" kindref="member">engine</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>pointer<sp/>to<sp/>the<sp/>jump<sp/>table<sp/>for<sp/>the<sp/>plugin<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="structgvplugin__installed__t_1a02c5e2e73cfd0497c7b2145c9761d78c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__installed__t_1a02c5e2e73cfd0497c7b2145c9761d78c" kindref="member">features</ref>;<sp/></highlight><highlight class="comment">/*<sp/>pointer<sp/>to<sp/>the<sp/>feature<sp/>description<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void*<sp/>because<sp/>type<sp/>varies<sp/>by<sp/>api<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structgvplugin__installed__t" kindref="compound">gvplugin_installed_t</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="structgvplugin__api__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50" refid="structgvplugin__api__t_1a9f7766289dadc3de6e3390d85a54244d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gvcext_8h_1ae124da9cae472afed2b4d3c7ef2ff574" kindref="member">api_t</ref><sp/><ref refid="structgvplugin__api__t_1a9f7766289dadc3de6e3390d85a54244d" kindref="member">api</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structgvplugin__api__t_1aff869f838f426c6e25eba224d64e296f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvplugin__installed__t" kindref="compound">gvplugin_installed_t</ref><sp/>*<ref refid="structgvplugin__api__t_1aff869f838f426c6e25eba224d64e296f" kindref="member">types</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structgvplugin__api__t" kindref="compound">gvplugin_api_t</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="structgvplugin__library__t" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="structgvplugin__library__t_1a427cd929e4d01d8eb493f17b189b87c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structgvplugin__library__t_1a427cd929e4d01d8eb493f17b189b87c1" kindref="member">packagename</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>used<sp/>when<sp/>this<sp/>plugin<sp/>is<sp/>builtin<sp/>and<sp/>has</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>no<sp/>pathname<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structgvplugin__library__t_1a253967ed16d1bbf448699a9a75622bd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structgvplugin__api__t" kindref="compound">gvplugin_api_t</ref><sp/>*<ref refid="structgvplugin__library__t_1a253967ed16d1bbf448699a9a75622bd9" kindref="member">apis</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structgvplugin__library__t" kindref="compound">gvplugin_library_t</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>GVPLUGIN_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/gvplugin.h"/>
+  </compounddef>
+</doxygen>

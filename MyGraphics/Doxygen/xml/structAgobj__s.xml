@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structAgobj__s" kind="struct" language="C++" prot="public">
+    <compoundname>Agobj_s</compoundname>
+    <includes refid="cgraph_8h" local="no">cgraph.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAgobj__s_1aec3227ecf50548d9bc58169218c7fbfa" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1aacd16fe557116c340e6bad52ac843f3c" kindref="member">Agtag_t</ref></type>
+        <definition>Agtag_t Agobj_s::tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="95" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAgobj__s_1ac595be4c079abaf534843935f4db97b6" prot="public" static="no" mutable="no">
+        <type><ref refid="cgraph_8h_1a2bd56252330358f27af8321f650a1e8a" kindref="member">Agrec_t</ref> *</type>
+        <definition>Agrec_t* Agobj_s::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/cgraph.h" line="96" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4150">
+        <label>Agtag_s</label>
+        <link refid="structAgtag__s"/>
+        <childnode refid="4151" relation="usage">
+          <edgelabel>attrwf</edgelabel>
+          <edgelabel>mtflock</edgelabel>
+          <edgelabel>objtype</edgelabel>
+          <edgelabel>seq</edgelabel>
+          <edgelabel>id</edgelabel>
+        </childnode>
+      </node>
+      <node id="4147">
+        <label>Agobj_s</label>
+        <link refid="structAgobj__s"/>
+        <childnode refid="4148" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="4150" relation="usage">
+          <edgelabel>tag</edgelabel>
+        </childnode>
+      </node>
+      <node id="4148">
+        <label>Agrec_s</label>
+        <link refid="structAgrec__s"/>
+        <childnode refid="4148" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="4149" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="4151">
+        <label>unsigned</label>
+      </node>
+      <node id="4149">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/cgraph.h" line="94" column="1" bodyfile="graphviz/release/include/graphviz/cgraph.h" bodystart="94" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structAgobj__s_1ac595be4c079abaf534843935f4db97b6" prot="public" virt="non-virtual"><scope>Agobj_s</scope><name>data</name></member>
+      <member refid="structAgobj__s_1aec3227ecf50548d9bc58169218c7fbfa" prot="public" virt="non-virtual"><scope>Agobj_s</scope><name>tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

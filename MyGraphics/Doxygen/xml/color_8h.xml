@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="color_8h" kind="file" language="C++">
+    <compoundname>color.h</compoundname>
+    <includedby refid="gvcjob_8h" local="yes">graphviz/release/include/graphviz/gvcjob.h</includedby>
+    <invincdepgraph>
+      <node id="1896">
+        <label>graphviz/release/include/graphviz/gvplugin_loadimage.h</label>
+        <link refid="gvplugin__loadimage_8h"/>
+      </node>
+      <node id="1894">
+        <label>graphviz/release/include/graphviz/gvplugin_device.h</label>
+        <link refid="gvplugin__device_8h"/>
+      </node>
+      <node id="1897">
+        <label>graphviz/release/include/graphviz/gvplugin_render.h</label>
+        <link refid="gvplugin__render_8h"/>
+      </node>
+      <node id="1893">
+        <label>graphviz/release/include/graphviz/gvcjob.h</label>
+        <link refid="gvcjob_8h"/>
+        <childnode refid="1894" relation="include">
+        </childnode>
+        <childnode refid="1895" relation="include">
+        </childnode>
+        <childnode refid="1896" relation="include">
+        </childnode>
+        <childnode refid="1897" relation="include">
+        </childnode>
+        <childnode refid="1898" relation="include">
+        </childnode>
+      </node>
+      <node id="1892">
+        <label>graphviz/release/include/graphviz/color.h</label>
+        <link refid="color.h"/>
+        <childnode refid="1893" relation="include">
+        </childnode>
+      </node>
+      <node id="1895">
+        <label>graphviz/release/include/graphviz/gvplugin_layout.h</label>
+        <link refid="gvplugin__layout_8h"/>
+      </node>
+      <node id="1898">
+        <label>graphviz/release/include/graphviz/gvplugin_textlayout.h</label>
+        <link refid="gvplugin__textlayout_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structhsvrgbacolor__t" prot="public">hsvrgbacolor_t</innerclass>
+    <innerclass refid="structcolor__s" prot="public">color_s</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="color_8h_1a33b51f43e7445305cc51be2f8cf37df5" prot="public" static="no">
+        <name>COLOR_MALLOC_FAIL</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="47" column="9" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="color_8h_1aeae63bffec753f28eca373ef5ebd1493" prot="public" static="no">
+        <name>COLOR_UNKNOWN</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="48" column="9" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="color_8h_1a2bbbfc6b13243b5d5ea1159eed41942c" prot="public" static="no">
+        <name>COLOR_OK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="49" column="9" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="color_8h_1a0254bf137f575a4c9b56103c6859fe20" prot="public" static="no">
+        <name>color_type_t</name>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20a4ec09b7c709fcb6ce271c8224e868182" prot="public">
+          <name>HSVA_DOUBLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20aa6fd28dfa5d78b69ad9a5a6663089563" prot="public">
+          <name>RGBA_BYTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6" prot="public">
+          <name>RGBA_WORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20abea14eaa37333c495d55bcdea07f44d7" prot="public">
+          <name>CMYK_BYTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945" prot="public">
+          <name>RGBA_DOUBLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20aef9051aa6077a779f60cc7bb2513913b" prot="public">
+          <name>COLOR_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="color_8h_1a0254bf137f575a4c9b56103c6859fe20ae60d922c402a91f1721af706f61ea466" prot="public">
+          <name>COLOR_INDEX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="30" column="1" bodyfile="graphviz/release/include/graphviz/color.h" bodystart="30" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="color_8h_1a42da764a6cb87989dd449ff0899503a9" prot="public" static="no">
+        <type>struct <ref refid="structhsvrgbacolor__t" kindref="compound">hsvrgbacolor_t</ref></type>
+        <definition>typedef struct hsvrgbacolor_t  hsvrgbacolor_t</definition>
+        <argsstring></argsstring>
+        <name>hsvrgbacolor_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="color_8h_1ab45fc4b4bd9d6ad7e70ec758246994e7" prot="public" static="no">
+        <type>struct <ref refid="structcolor__s" kindref="compound">color_s</ref></type>
+        <definition>typedef struct color_s  gvcolor_t</definition>
+        <argsstring></argsstring>
+        <name>gvcolor_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/color.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GV_COLOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GV_COLOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>#include<sp/>&quot;arith.h&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structhsvrgbacolor__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structhsvrgbacolor__t" kindref="compound">hsvrgbacolor_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="structhsvrgbacolor__t_1ae86e35caea2c585343419c6122e5cc3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structhsvrgbacolor__t_1ae86e35caea2c585343419c6122e5cc3d" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="25" refid="structhsvrgbacolor__t_1ab16c706c5e2a729bd9f611cf43d05562" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structhsvrgbacolor__t_1a519f5db8370777b193bcba9d4c69d3a1" kindref="member">h</ref>,<sp/><ref refid="structhsvrgbacolor__t_1aa8534788c747f1dc38f2baad8f44a149" kindref="member">s</ref>,<sp/><ref refid="structhsvrgbacolor__t_1ab16c706c5e2a729bd9f611cf43d05562" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="26" refid="structhsvrgbacolor__t_1ac2d9e4fa53394ac95f24e642a089d4a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structhsvrgbacolor__t_1ac2d9e4fa53394ac95f24e642a089d4a3" kindref="member">r</ref>,<sp/><ref refid="structhsvrgbacolor__t_1a88638d694c1e1ca6be87c7b8a8dd7777" kindref="member">g</ref>,<sp/><ref refid="structhsvrgbacolor__t_1a6e97c507d2837f83468b35d41692893b" kindref="member">b</ref>,<sp/><ref refid="structhsvrgbacolor__t_1a54171dd8a727b6be154f15ff852d3430" kindref="member">a</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/><ref refid="color_8h_1a42da764a6cb87989dd449ff0899503a9" kindref="member">hsvrgbacolor_t</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>possible<sp/>representations<sp/>of<sp/>color<sp/>in<sp/>gvcolor_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20a4ec09b7c709fcb6ce271c8224e868182" kindref="member">HSVA_DOUBLE</ref>,<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20aa6fd28dfa5d78b69ad9a5a6663089563" kindref="member">RGBA_BYTE</ref>,<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6" kindref="member">RGBA_WORD</ref>,<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20abea14eaa37333c495d55bcdea07f44d7" kindref="member">CMYK_BYTE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945" kindref="member">RGBA_DOUBLE</ref>,<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20aef9051aa6077a779f60cc7bb2513913b" kindref="member">COLOR_STRING</ref>,<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20ae60d922c402a91f1721af706f61ea466" kindref="member">COLOR_INDEX</ref><sp/>}<sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20" kindref="member">color_type_t</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>gvcolor_t<sp/>can<sp/>hold<sp/>a<sp/>color<sp/>spec<sp/>in<sp/>a<sp/>choice<sp/>or<sp/>representations<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structcolor__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcolor__s" kindref="compound">color_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36" refid="structcolor__s_1a2aa06fe8deb3b9aab722153c87dec0ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcolor__s_1a2aa06fe8deb3b9aab722153c87dec0ac" kindref="member">RGBA</ref>[4];</highlight></codeline>
+<codeline lineno="37" refid="structcolor__s_1a5138284bed348fafa3c1a72f22094377" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structcolor__s_1a5138284bed348fafa3c1a72f22094377" kindref="member">HSVA</ref>[4];</highlight></codeline>
+<codeline lineno="38" refid="structcolor__s_1acfe59dac196e02b0d63d58468ab6be9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcolor__s_1acfe59dac196e02b0d63d58468ab6be9b" kindref="member">rgba</ref>[4];</highlight></codeline>
+<codeline lineno="39" refid="structcolor__s_1a6866a58347a03334aacd1b19cff6f1d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcolor__s_1a6866a58347a03334aacd1b19cff6f1d0" kindref="member">cmyk</ref>[4];</highlight></codeline>
+<codeline lineno="40" refid="structcolor__s_1a3ba7369dd590b336d3c950d3d39af998" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcolor__s_1a3ba7369dd590b336d3c950d3d39af998" kindref="member">rrggbbaa</ref>[4];</highlight></codeline>
+<codeline lineno="41" refid="structcolor__s_1a236d63da02059b4df20358cf2eeecccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structcolor__s_1a236d63da02059b4df20358cf2eeecccd" kindref="member">string</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structcolor__s_1a01227ba12ab7210cfb839124b06e1779" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structcolor__s_1a01227ba12ab7210cfb839124b06e1779" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structcolor__s_1a2f7db900f41d098ff4b19d5581e83eab" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structcolor__s_1afff9b62d12e78b81a0d0939c1830011e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="color_8h_1a0254bf137f575a4c9b56103c6859fe20" kindref="member">color_type_t</ref><sp/><ref refid="structcolor__s_1afff9b62d12e78b81a0d0939c1830011e" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="color_8h_1ab45fc4b4bd9d6ad7e70ec758246994e7" kindref="member">gvcolor_t</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="color_8h_1a33b51f43e7445305cc51be2f8cf37df5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_MALLOC_FAIL<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="color_8h_1aeae63bffec753f28eca373ef5ebd1493" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_UNKNOWN<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="color_8h_1a2bbbfc6b13243b5d5ea1159eed41942c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_OK<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/color.h"/>
+  </compounddef>
+</doxygen>

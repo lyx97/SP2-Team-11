@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structPpoly__t" kind="struct" language="C++" prot="public">
+    <compoundname>Ppoly_t</compoundname>
+    <includes refid="pathgeom_8h" local="no">pathgeom.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPpoly__t_1a693e25a86e550ef1b164a8399d896a39" prot="public" static="no" mutable="no">
+        <type><ref refid="pathgeom_8h_1ae03dc374d3fff2c0f275c6c17e705d1f" kindref="member">Ppoint_t</ref> *</type>
+        <definition>Ppoint_t* Ppoly_t::ps</definition>
+        <argsstring></argsstring>
+        <name>ps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="35" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPpoly__t_1a2058b56b2ca48ccc95df43fe971efa71" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Ppoly_t::pn</definition>
+        <argsstring></argsstring>
+        <name>pn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/pathgeom.h" line="36" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5651">
+        <label>Ppoly_t</label>
+        <link refid="structPpoly__t"/>
+        <childnode refid="5652" relation="usage">
+          <edgelabel>ps</edgelabel>
+        </childnode>
+        <childnode refid="5654" relation="usage">
+          <edgelabel>pn</edgelabel>
+        </childnode>
+      </node>
+      <node id="5654">
+        <label>int</label>
+      </node>
+      <node id="5653">
+        <label>double</label>
+      </node>
+      <node id="5652">
+        <label>Pxy_t</label>
+        <link refid="structPxy__t"/>
+        <childnode refid="5653" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/pathgeom.h" line="34" column="1" bodyfile="graphviz/release/include/graphviz/pathgeom.h" bodystart="34" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structPpoly__t_1a2058b56b2ca48ccc95df43fe971efa71" prot="public" virt="non-virtual"><scope>Ppoly_t</scope><name>pn</name></member>
+      <member refid="structPpoly__t_1a693e25a86e550ef1b164a8399d896a39" prot="public" virt="non-virtual"><scope>Ppoly_t</scope><name>ps</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

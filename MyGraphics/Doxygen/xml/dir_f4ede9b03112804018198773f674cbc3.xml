@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_f4ede9b03112804018198773f674cbc3" kind="dir">
+    <compoundname>graphviz/release/include/graphviz</compoundname>
+    <innerfile refid="arith_8h">arith.h</innerfile>
+    <innerfile refid="cdt_8h">cdt.h</innerfile>
+    <innerfile refid="cgraph_8h">cgraph.h</innerfile>
+    <innerfile refid="color_8h">color.h</innerfile>
+    <innerfile refid="geom_8h">geom.h</innerfile>
+    <innerfile refid="graph_8h">graph.h</innerfile>
+    <innerfile refid="gvc_8h">gvc.h</innerfile>
+    <innerfile refid="gvcext_8h">gvcext.h</innerfile>
+    <innerfile refid="gvcjob_8h">gvcjob.h</innerfile>
+    <innerfile refid="gvcommon_8h">gvcommon.h</innerfile>
+    <innerfile refid="gvconfig_8h">gvconfig.h</innerfile>
+    <innerfile refid="gvplugin_8h">gvplugin.h</innerfile>
+    <innerfile refid="gvplugin__device_8h">gvplugin_device.h</innerfile>
+    <innerfile refid="gvplugin__layout_8h">gvplugin_layout.h</innerfile>
+    <innerfile refid="gvplugin__loadimage_8h">gvplugin_loadimage.h</innerfile>
+    <innerfile refid="gvplugin__render_8h">gvplugin_render.h</innerfile>
+    <innerfile refid="gvplugin__textlayout_8h">gvplugin_textlayout.h</innerfile>
+    <innerfile refid="gvpr_8h">gvpr.h</innerfile>
+    <innerfile refid="pack_8h">pack.h</innerfile>
+    <innerfile refid="pathgeom_8h">pathgeom.h</innerfile>
+    <innerfile refid="pathplan_8h">pathplan.h</innerfile>
+    <innerfile refid="textpara_8h">textpara.h</innerfile>
+    <innerfile refid="textspan_8h">textspan.h</innerfile>
+    <innerfile refid="types_8h">types.h</innerfile>
+    <innerfile refid="usershape_8h">usershape.h</innerfile>
+    <innerfile refid="xdot_8h">xdot.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="graphviz/release/include/graphviz/"/>
+  </compounddef>
+</doxygen>

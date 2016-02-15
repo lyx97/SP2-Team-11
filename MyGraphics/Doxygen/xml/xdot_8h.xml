@@ -1,0 +1,776 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="xdot_8h" kind="file" language="C++">
+    <compoundname>xdot.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="2152">
+        <label>graphviz/release/include/graphviz/xdot.h</label>
+        <link refid="xdot.h"/>
+        <childnode refid="2153" relation="include">
+        </childnode>
+      </node>
+      <node id="2153">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structxdot__color__stop" prot="public">xdot_color_stop</innerclass>
+    <innerclass refid="structxdot__linear__grad" prot="public">xdot_linear_grad</innerclass>
+    <innerclass refid="structxdot__radial__grad" prot="public">xdot_radial_grad</innerclass>
+    <innerclass refid="structxdot__color" prot="public">xdot_color</innerclass>
+    <innerclass refid="structxdot__point" prot="public">xdot_point</innerclass>
+    <innerclass refid="structxdot__rect" prot="public">xdot_rect</innerclass>
+    <innerclass refid="structxdot__polyline" prot="public">xdot_polyline</innerclass>
+    <innerclass refid="structxdot__text" prot="public">xdot_text</innerclass>
+    <innerclass refid="structxdot__image" prot="public">xdot_image</innerclass>
+    <innerclass refid="structxdot__font" prot="public">xdot_font</innerclass>
+    <innerclass refid="struct__xdot__op" prot="public">_xdot_op</innerclass>
+    <innerclass refid="structxdot" prot="public">xdot</innerclass>
+    <innerclass refid="structxdot__stats" prot="public">xdot_stats</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="xdot_8h_1ac16b7119ce3b9a2e8a5d278442ffd93a" prot="public" static="no">
+        <name>INITIAL_XDOT_CAPACITY</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="24" column="9" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="xdot_8h_1a7186f24afcfa0a2476a28760acca249f" prot="public" static="no">
+        <name>XDOT_PARSE_ERROR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="136" column="9" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="xdot_8h_1a01060e38b65176015a53e621a323b23d" prot="public" static="no">
+        <name>xdot_grad_type</name>
+        <enumvalue id="xdot_8h_1a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6" prot="public">
+          <name>xd_none</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d" prot="public">
+          <name>xd_linear</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678" prot="public">
+          <name>xd_radial</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="26" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="enum" id="xdot_8h_1a886393475707990cd9a4a8d6b44d949e" prot="public" static="no">
+        <name>xdot_align</name>
+        <enumvalue id="xdot_8h_1a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850" prot="public">
+          <name>xd_left</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d" prot="public">
+          <name>xd_center</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27" prot="public">
+          <name>xd_right</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="60" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="enum" id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614" prot="public" static="no">
+        <name>xdot_kind</name>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8" prot="public">
+          <name>xd_filled_ellipse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2" prot="public">
+          <name>xd_unfilled_ellipse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff" prot="public">
+          <name>xd_filled_polygon</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc" prot="public">
+          <name>xd_unfilled_polygon</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9" prot="public">
+          <name>xd_filled_bezier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249" prot="public">
+          <name>xd_unfilled_bezier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7" prot="public">
+          <name>xd_polyline</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80" prot="public">
+          <name>xd_text</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7" prot="public">
+          <name>xd_fill_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76" prot="public">
+          <name>xd_pen_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da" prot="public">
+          <name>xd_font</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf" prot="public">
+          <name>xd_style</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b" prot="public">
+          <name>xd_image</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa" prot="public">
+          <name>xd_grad_fill_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159" prot="public">
+          <name>xd_grad_pen_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d" prot="public">
+          <name>xd_fontchar</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="94" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="94" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="enum" id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7" prot="public" static="no">
+        <name>xop_kind</name>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849" prot="public">
+          <name>xop_ellipse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93" prot="public">
+          <name>xop_polygon</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69" prot="public">
+          <name>xop_bezier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d" prot="public">
+          <name>xop_polyline</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c" prot="public">
+          <name>xop_text</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8" prot="public">
+          <name>xop_fill_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08" prot="public">
+          <name>xop_pen_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911" prot="public">
+          <name>xop_font</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af" prot="public">
+          <name>xop_style</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a" prot="public">
+          <name>xop_image</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c" prot="public">
+          <name>xop_grad_color</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583" prot="public">
+          <name>xop_fontchar</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="104" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="104" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="xdot_8h_1a506f55feaed523333fd66154d076c475" prot="public" static="no">
+        <type>struct <ref refid="struct__xdot__op" kindref="compound">_xdot_op</ref></type>
+        <definition>typedef struct _xdot_op xdot_op</definition>
+        <argsstring></argsstring>
+        <name>xdot_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="51" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* drawfunc_t) (xdot_op *, int)</definition>
+        <argsstring>)(xdot_op *, int)</argsstring>
+        <name>drawfunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="115" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="xdot_8h_1a79292a4183011bf60e3a715c5b427315" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* freefunc_t) (xdot_op *)</definition>
+        <argsstring>)(xdot_op *)</argsstring>
+        <name>freefunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="116" column="1" bodyfile="graphviz/release/include/graphviz/xdot.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="xdot_8h_1a05dd04a93eee33e4f345f7c8fc686396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        <definition>xdot* parseXDotF</definition>
+        <argsstring>(char *, drawfunc_t opfns[], int sz)</argsstring>
+        <name>parseXDotF</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type><ref refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" kindref="member">drawfunc_t</ref></type>
+          <declname>opfns</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a0b924ae8ce4b56a8087f8f70b575a474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        <definition>xdot* parseXDotFOn</definition>
+        <argsstring>(char *, drawfunc_t opfns[], int sz, xdot *)</argsstring>
+        <name>parseXDotFOn</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <param>
+          <type><ref refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" kindref="member">drawfunc_t</ref></type>
+          <declname>opfns</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sz</declname>
+        </param>
+        <param>
+          <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a3a3701397492b731573797729b89faf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        <definition>xdot* parseXDot</definition>
+        <argsstring>(char *)</argsstring>
+        <name>parseXDot</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a4534d072566a07cb6a17dbc85bf28459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* sprintXDot</definition>
+        <argsstring>(xdot *)</argsstring>
+        <name>sprintXDot</name>
+        <param>
+          <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a0b2f8d422712f85383be1986490b7023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fprintXDot</definition>
+        <argsstring>(FILE *, xdot *)</argsstring>
+        <name>fprintXDot</name>
+        <param>
+          <type>FILE *</type>
+        </param>
+        <param>
+          <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1ab65644c23e684c41b8043979a8f5dd72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jsonXDot</definition>
+        <argsstring>(FILE *, xdot *)</argsstring>
+        <name>jsonXDot</name>
+        <param>
+          <type>FILE *</type>
+        </param>
+        <param>
+          <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a2f6e80a56658fd92da562794889fae5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freeXDot</definition>
+        <argsstring>(xdot *)</argsstring>
+        <name>freeXDot</name>
+        <param>
+          <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1aafef048a88dc0146661a6b131a4eeeaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int statXDot</definition>
+        <argsstring>(xdot *, xdot_stats *)</argsstring>
+        <name>statXDot</name>
+        <param>
+          <type><ref refid="structxdot" kindref="compound">xdot</ref> *</type>
+        </param>
+        <param>
+          <type><ref refid="structxdot__stats" kindref="compound">xdot_stats</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a7131e87602e1804e9aef557384288603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23d" kindref="member">xdot_grad_type</ref></type>
+        <definition>xdot_grad_type colorTypeXDot</definition>
+        <argsstring>(char *)</argsstring>
+        <name>colorTypeXDot</name>
+        <param>
+          <type>char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a38958cac41d4d6e7fc4f294b9c9ac820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* parseXDotColor</definition>
+        <argsstring>(char *cp, xdot_color *clr)</argsstring>
+        <name>parseXDotColor</name>
+        <param>
+          <type>char *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type><ref refid="structxdot__color" kindref="compound">xdot_color</ref> *</type>
+          <declname>clr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="xdot_8h_1a1d036a9953b27372686ff7bdf6b41625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freeXDotColor</definition>
+        <argsstring>(xdot_color *)</argsstring>
+        <name>freeXDotColor</name>
+        <param>
+          <type><ref refid="structxdot__color" kindref="compound">xdot_color</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/xdot.h" line="175" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>XDOT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XDOT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="xdot_8h_1ac16b7119ce3b9a2e8a5d278442ffd93a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INITIAL_XDOT_CAPACITY<sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="xdot_8h_1a01060e38b65176015a53e621a323b23d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27" refid="xdot_8h_1a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6" kindref="member">xd_none</ref>,</highlight></codeline>
+<codeline lineno="28" refid="xdot_8h_1a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d" kindref="member">xd_linear</ref>,</highlight></codeline>
+<codeline lineno="29" refid="xdot_8h_1a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678" kindref="member">xd_radial</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23d" kindref="member">xdot_grad_type</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="structxdot__color__stop" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33" refid="structxdot__color__stop_1af5dd8f2939d3cb1cd5d6351951d262db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structxdot__color__stop_1af5dd8f2939d3cb1cd5d6351951d262db" kindref="member">frac</ref>;</highlight></codeline>
+<codeline lineno="34" refid="structxdot__color__stop_1a9ad2d5d6cff5df37c3b99aa176757bea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structxdot__color__stop_1a9ad2d5d6cff5df37c3b99aa176757bea" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><ref refid="structxdot__color__stop" kindref="compound">xdot_color_stop</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structxdot__linear__grad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="structxdot__linear__grad_1a13fc1faa9cbf4fcaae2f2406639dd37b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/><ref refid="structxdot__linear__grad_1a13fc1faa9cbf4fcaae2f2406639dd37b" kindref="member">y0</ref>;</highlight></codeline>
+<codeline lineno="39" refid="structxdot__linear__grad_1a07409c5b9f85b660650b6ed52040b475" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/><ref refid="structxdot__linear__grad_1a07409c5b9f85b660650b6ed52040b475" kindref="member">y1</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structxdot__linear__grad_1a9974550beda483fd1245003bf72e1aa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__linear__grad_1a9974550beda483fd1245003bf72e1aa7" kindref="member">n_stops</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structxdot__linear__grad_1a12334410358a4c6a1b95b8c6774564da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxdot__color__stop" kindref="compound">xdot_color_stop</ref>*<sp/><ref refid="structxdot__linear__grad_1a12334410358a4c6a1b95b8c6774564da" kindref="member">stops</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structxdot__linear__grad" kindref="compound">xdot_linear_grad</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structxdot__radial__grad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="structxdot__radial__grad_1a216c08500a761495c51d9c50203d7cd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/><ref refid="structxdot__radial__grad_1a216c08500a761495c51d9c50203d7cd3" kindref="member">y0</ref>,<sp/>r0;</highlight></codeline>
+<codeline lineno="46" refid="structxdot__radial__grad_1a4a6dcb1c56d0d696b132347f50aa00a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/><ref refid="structxdot__radial__grad_1a4a6dcb1c56d0d696b132347f50aa00a6" kindref="member">y1</ref>,<sp/>r1;</highlight></codeline>
+<codeline lineno="47" refid="structxdot__radial__grad_1abeed1c02ab6813ca212319806de8a971" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__radial__grad_1abeed1c02ab6813ca212319806de8a971" kindref="member">n_stops</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structxdot__radial__grad_1a87276d709c16fee3601b096c9b4862e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxdot__color__stop" kindref="compound">xdot_color_stop</ref>*<sp/><ref refid="structxdot__radial__grad_1a87276d709c16fee3601b096c9b4862e5" kindref="member">stops</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="structxdot__radial__grad" kindref="compound">xdot_radial_grad</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structxdot__color" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52" refid="structxdot__color_1a1b2780fd527dd5f488a436e08743f317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23d" kindref="member">xdot_grad_type</ref><sp/><ref refid="structxdot__color_1a1b2780fd527dd5f488a436e08743f317" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54" refid="structxdot__color_1ad441f65fa3b20c688ead560822442137" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structxdot__color_1ad441f65fa3b20c688ead560822442137" kindref="member">clr</ref>;</highlight></codeline>
+<codeline lineno="55" refid="structxdot__color_1a25d4a64de764eb89b61c408d3e430642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__linear__grad" kindref="compound">xdot_linear_grad</ref><sp/><ref refid="structxdot__color_1a25d4a64de764eb89b61c408d3e430642" kindref="member">ling</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structxdot__color_1abc5dfcc67858600ee513fe447309844f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__radial__grad" kindref="compound">xdot_radial_grad</ref><sp/><ref refid="structxdot__color_1abc5dfcc67858600ee513fe447309844f" kindref="member">ring</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>u;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="structxdot__color" kindref="compound">xdot_color</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="61" refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850" kindref="member">xd_left</ref>,<sp/><ref refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d" kindref="member">xd_center</ref>,<sp/><ref refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27" kindref="member">xd_right</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}<sp/><ref refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949e" kindref="member">xdot_align</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structxdot__point" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65" refid="structxdot__point_1ace0bf9867293817bc3978ae9641f1ea8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/>y,<sp/><ref refid="structxdot__point_1ace0bf9867293817bc3978ae9641f1ea8" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}<sp/><ref refid="structxdot__point" kindref="compound">xdot_point</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structxdot__rect" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69" refid="structxdot__rect_1a3b734703f3421271154448b17c956917" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><ref refid="structxdot__rect_1a3b734703f3421271154448b17c956917" kindref="member">y</ref>,<sp/>w,<sp/>h;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><ref refid="structxdot__rect" kindref="compound">xdot_rect</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="structxdot__polyline" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73" refid="structxdot__polyline_1a6aa15b7771767fe9719b1c19e29f2171" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__polyline_1a6aa15b7771767fe9719b1c19e29f2171" kindref="member">cnt</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structxdot__polyline_1af231d1c7f013a2c3128e836712b5aef8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxdot__point" kindref="compound">xdot_point</ref>*<sp/><ref refid="structxdot__polyline_1af231d1c7f013a2c3128e836712b5aef8" kindref="member">pts</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><ref refid="structxdot__polyline" kindref="compound">xdot_polyline</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="structxdot__text" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78" refid="structxdot__text_1af7eb8c3211b65c952e571421dfaeb481" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><ref refid="structxdot__text_1af7eb8c3211b65c952e571421dfaeb481" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="79" refid="structxdot__text_1ad0e107afe33b75b4faf76316f8532ccd" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="xdot_8h_1a886393475707990cd9a4a8d6b44d949e" kindref="member">xdot_align</ref><sp/><ref refid="structxdot__text_1ad0e107afe33b75b4faf76316f8532ccd" kindref="member">align</ref>;</highlight></codeline>
+<codeline lineno="80" refid="structxdot__text_1a0dd839573172654fb738ac197b24e68e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structxdot__text_1a0dd839573172654fb738ac197b24e68e" kindref="member">width</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structxdot__text_1a75ef3ce4a16c3f187535f906a89c97d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structxdot__text_1a75ef3ce4a16c3f187535f906a89c97d0" kindref="member">text</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/><ref refid="structxdot__text" kindref="compound">xdot_text</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="structxdot__image" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85" refid="structxdot__image_1accf2f06b525565eb518c0b1b9a8fe7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structxdot__rect" kindref="compound">xdot_rect</ref><sp/><ref refid="structxdot__image_1accf2f06b525565eb518c0b1b9a8fe7ca" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structxdot__image_1a2a9981b59ce46894de291f2fda090afc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structxdot__image_1a2a9981b59ce46894de291f2fda090afc" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<sp/><ref refid="structxdot__image" kindref="compound">xdot_image</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structxdot__font" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90" refid="structxdot__font_1a192106b4f062c9663d5e7833f13fe09b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structxdot__font_1a192106b4f062c9663d5e7833f13fe09b" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="91" refid="structxdot__font_1a38940c4c27530ef8e434a76aad899e2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structxdot__font_1a38940c4c27530ef8e434a76aad899e2b" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/><ref refid="structxdot__font" kindref="compound">xdot_font</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8" kindref="member">xd_filled_ellipse</ref>,<sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2" kindref="member">xd_unfilled_ellipse</ref>,</highlight></codeline>
+<codeline lineno="96" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff" kindref="member">xd_filled_polygon</ref>,<sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc" kindref="member">xd_unfilled_polygon</ref>,</highlight></codeline>
+<codeline lineno="97" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9" kindref="member">xd_filled_bezier</ref>,<sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249" kindref="member">xd_unfilled_bezier</ref>,</highlight></codeline>
+<codeline lineno="98" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7" kindref="member">xd_polyline</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80" kindref="member">xd_text</ref>,</highlight></codeline>
+<codeline lineno="99" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7" kindref="member">xd_fill_color</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76" kindref="member">xd_pen_color</ref>,<sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da" kindref="member">xd_font</ref>,<sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf" kindref="member">xd_style</ref>,<sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b" kindref="member">xd_image</ref>,</highlight></codeline>
+<codeline lineno="100" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa" kindref="member">xd_grad_fill_color</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159" kindref="member">xd_grad_pen_color</ref>,</highlight></codeline>
+<codeline lineno="101" refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d" kindref="member">xd_fontchar</ref></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614" kindref="member">xdot_kind</ref>;<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="105" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849" kindref="member">xop_ellipse</ref>,</highlight></codeline>
+<codeline lineno="106" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93" kindref="member">xop_polygon</ref>,</highlight></codeline>
+<codeline lineno="107" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69" kindref="member">xop_bezier</ref>,</highlight></codeline>
+<codeline lineno="108" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d" kindref="member">xop_polyline</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c" kindref="member">xop_text</ref>,</highlight></codeline>
+<codeline lineno="109" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8" kindref="member">xop_fill_color</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08" kindref="member">xop_pen_color</ref>,<sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911" kindref="member">xop_font</ref>,<sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af" kindref="member">xop_style</ref>,<sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a" kindref="member">xop_image</ref>,</highlight></codeline>
+<codeline lineno="110" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c" kindref="member">xop_grad_color</ref>,</highlight></codeline>
+<codeline lineno="111" refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583" kindref="member">xop_fontchar</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}<sp/><ref refid="xdot_8h_1a87f5dc0f21d895468ad1bb7864716ab7" kindref="member">xop_kind</ref>;<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="xdot_8h_1a506f55feaed523333fd66154d076c475" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__xdot__op" kindref="compound">_xdot_op</ref><sp/><ref refid="struct__xdot__op" kindref="compound">xdot_op</ref>;</highlight></codeline>
+<codeline lineno="115" refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" kindref="member">drawfunc_t</ref>)(<ref refid="struct__xdot__op" kindref="compound">xdot_op</ref>*,<sp/>int);</highlight></codeline>
+<codeline lineno="116" refid="xdot_8h_1a79292a4183011bf60e3a715c5b427315" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="xdot_8h_1a79292a4183011bf60e3a715c5b427315" kindref="member">freefunc_t</ref>)(xdot_op*);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="struct__xdot__op" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__xdot__op" kindref="compound">_xdot_op</ref><sp/>{</highlight></codeline>
+<codeline lineno="119" refid="struct__xdot__op_1a89e34c5d65402c3cd6bf2cde38e1c09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1ad1a5946e6f85d31e5d8f5718e723b614" kindref="member">xdot_kind</ref><sp/><ref refid="struct__xdot__op_1a89e34c5d65402c3cd6bf2cde38e1c09c" kindref="member">kind</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121" refid="struct__xdot__op_1a4c563544683a7230271798bae7b842fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__rect" kindref="compound">xdot_rect</ref><sp/><ref refid="struct__xdot__op_1a4c563544683a7230271798bae7b842fa" kindref="member">ellipse</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_filled_ellipse,<sp/>xd_unfilled_ellipse<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="struct__xdot__op_1a40187a11cf4ca97d9548bfde0f79da4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__polyline" kindref="compound">xdot_polyline</ref><sp/><ref refid="struct__xdot__op_1a40187a11cf4ca97d9548bfde0f79da4e" kindref="member">polygon</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_filled_polygon,<sp/>xd_unfilled_polygon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="struct__xdot__op_1ab87f1866d818a475fd65da5c89c7b9d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__polyline" kindref="compound">xdot_polyline</ref><sp/><ref refid="struct__xdot__op_1ab87f1866d818a475fd65da5c89c7b9d6" kindref="member">polyline</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_polyline<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="struct__xdot__op_1a9d6717195690a7ace6f572cd5f829990" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__polyline" kindref="compound">xdot_polyline</ref><sp/><ref refid="struct__xdot__op_1a9d6717195690a7ace6f572cd5f829990" kindref="member">bezier</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_filled_bezier,<sp/><sp/>xd_unfilled_bezier<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="struct__xdot__op_1a9682358bdb3e2a39c56f12e1dc8683b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__text" kindref="compound">xdot_text</ref><sp/><ref refid="struct__xdot__op_1a9682358bdb3e2a39c56f12e1dc8683b2" kindref="member">text</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_text<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="struct__xdot__op_1a4e0c66f221c4c40c3b71632dcf4f3ff7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__image" kindref="compound">xdot_image</ref><sp/><ref refid="struct__xdot__op_1a4e0c66f221c4c40c3b71632dcf4f3ff7" kindref="member">image</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_image<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="struct__xdot__op_1a73ae439bd50322a63c0fb8a0fabdb5d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__xdot__op_1a73ae439bd50322a63c0fb8a0fabdb5d8" kindref="member">color</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_fill_color,<sp/>xd_pen_color<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="struct__xdot__op_1adc27fbfa9a8306d760423f70c972e436" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__color" kindref="compound">xdot_color</ref><sp/><ref refid="struct__xdot__op_1adc27fbfa9a8306d760423f70c972e436" kindref="member">grad_color</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_grad_fill_color,<sp/>xd_grad_pen_color<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="struct__xdot__op_1a3ced89a5de028d0e21431f812c5f05cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structxdot__font" kindref="compound">xdot_font</ref><sp/><ref refid="struct__xdot__op_1a3ced89a5de028d0e21431f812c5f05cd" kindref="member">font</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_font<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="struct__xdot__op_1a18d8ce1fbc4fe621aa9fcdf8a1eb3771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__xdot__op_1a18d8ce1fbc4fe621aa9fcdf8a1eb3771" kindref="member">style</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_style<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="struct__xdot__op_1a811eec17cb0fed1d5c98442e641252a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct__xdot__op_1a811eec17cb0fed1d5c98442e641252a7" kindref="member">fontchar</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>xd_fontchar<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="struct__xdot__op_1a57465e7b1c75d7ad1424bebe736ac08d" kindref="member">u</ref>;</highlight></codeline>
+<codeline lineno="133" refid="struct__xdot__op_1af7659d00901c7e9b2541e1d30981cec4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" kindref="member">drawfunc_t</ref><sp/><ref refid="struct__xdot__op_1af7659d00901c7e9b2541e1d30981cec4" kindref="member">drawfunc</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="xdot_8h_1a7186f24afcfa0a2476a28760acca249f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XDOT_PARSE_ERROR<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structxdot" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139" refid="structxdot_1a3100ef451ff59bc4086c9638962434fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot_1a3100ef451ff59bc4086c9638962434fc" kindref="member">cnt</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>no.<sp/>of<sp/>xdot<sp/>ops<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="structxdot_1a27412cb1f25195276ddb28a42fe0bacd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot_1a27412cb1f25195276ddb28a42fe0bacd" kindref="member">sz</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sizeof<sp/>structure<sp/>containing<sp/>xdot_op<sp/>as<sp/>first<sp/>field<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structxdot_1a82a85f30213b9db88e3fbe4e879bde8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>xdot_op*<sp/><ref refid="structxdot_1a82a85f30213b9db88e3fbe4e879bde8e" kindref="member">ops</ref>;</highlight></codeline>
+<codeline lineno="142" refid="structxdot_1a049bbff534fe0272c748960d7c6bc256" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="xdot_8h_1a79292a4183011bf60e3a715c5b427315" kindref="member">freefunc_t</ref><sp/><ref refid="structxdot_1a049bbff534fe0272c748960d7c6bc256" kindref="member">freefunc</ref>;</highlight></codeline>
+<codeline lineno="143" refid="structxdot_1acf5b8e2478dac23c07ee64ac3abe46e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot_1acf5b8e2478dac23c07ee64ac3abe46e3" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}<sp/><ref refid="structxdot" kindref="compound">xdot</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="structxdot__stats" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147" refid="structxdot__stats_1accff29d566aba99020cf5e90748b5fe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1accff29d566aba99020cf5e90748b5fe6" kindref="member">cnt</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>no.<sp/>of<sp/>xdot<sp/>ops<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="structxdot__stats_1a08dce3195b1b810cfb01336bdd99a0c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a08dce3195b1b810cfb01336bdd99a0c6" kindref="member">n_ellipse</ref>;</highlight></codeline>
+<codeline lineno="149" refid="structxdot__stats_1a1a3f97baae31388f381712c647daa091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a1a3f97baae31388f381712c647daa091" kindref="member">n_polygon</ref>;</highlight></codeline>
+<codeline lineno="150" refid="structxdot__stats_1a70210702a3c8b91e7644e3b0276e23b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a70210702a3c8b91e7644e3b0276e23b1" kindref="member">n_polygon_pts</ref>;</highlight></codeline>
+<codeline lineno="151" refid="structxdot__stats_1a3bd3ed537fe9aadfc8a98329b7b10e18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a3bd3ed537fe9aadfc8a98329b7b10e18" kindref="member">n_polyline</ref>;</highlight></codeline>
+<codeline lineno="152" refid="structxdot__stats_1a23ed706badf61af39274cf8328da992c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a23ed706badf61af39274cf8328da992c" kindref="member">n_polyline_pts</ref>;</highlight></codeline>
+<codeline lineno="153" refid="structxdot__stats_1a11907b299ff3623cddbfac1c457a76a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a11907b299ff3623cddbfac1c457a76a8" kindref="member">n_bezier</ref>;</highlight></codeline>
+<codeline lineno="154" refid="structxdot__stats_1a3e6c878c858f6f8b70a3ba902470847c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a3e6c878c858f6f8b70a3ba902470847c" kindref="member">n_bezier_pts</ref>;</highlight></codeline>
+<codeline lineno="155" refid="structxdot__stats_1a71c09b294ad29cd6ef936e7c759fa741" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a71c09b294ad29cd6ef936e7c759fa741" kindref="member">n_text</ref>;</highlight></codeline>
+<codeline lineno="156" refid="structxdot__stats_1ac0d09b0d33b85a2c994e2fda5e1bf39c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1ac0d09b0d33b85a2c994e2fda5e1bf39c" kindref="member">n_font</ref>;</highlight></codeline>
+<codeline lineno="157" refid="structxdot__stats_1a32340ee252e417d0f72bcd50c43fe3de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a32340ee252e417d0f72bcd50c43fe3de" kindref="member">n_style</ref>;</highlight></codeline>
+<codeline lineno="158" refid="structxdot__stats_1a469401f17d16a8e151213cbf68a1a99b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a469401f17d16a8e151213cbf68a1a99b" kindref="member">n_color</ref>;</highlight></codeline>
+<codeline lineno="159" refid="structxdot__stats_1adba45b6f192e1c8598412b6085e668e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1adba45b6f192e1c8598412b6085e668e7" kindref="member">n_image</ref>;</highlight></codeline>
+<codeline lineno="160" refid="structxdot__stats_1a5a84da6b1032e531be9b191405f40b07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1a5a84da6b1032e531be9b191405f40b07" kindref="member">n_gradcolor</ref>;</highlight></codeline>
+<codeline lineno="161" refid="structxdot__stats_1ab4e02049131b3dcda681033874973cb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structxdot__stats_1ab4e02049131b3dcda681033874973cb9" kindref="member">n_fontchar</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}<sp/><ref refid="structxdot__stats" kindref="compound">xdot_stats</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ops<sp/>are<sp/>indexed<sp/>by<sp/>xop_kind<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structxdot" kindref="compound">xdot</ref>*<sp/><ref refid="xdot_8h_1a05dd04a93eee33e4f345f7c8fc686396" kindref="member">parseXDotF</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/><ref refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" kindref="member">drawfunc_t</ref><sp/>opfns[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sz);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structxdot" kindref="compound">xdot</ref>*<sp/><ref refid="xdot_8h_1a0b924ae8ce4b56a8087f8f70b575a474" kindref="member">parseXDotFOn</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/><ref refid="xdot_8h_1a8bb541a0389eff13933e5fb7ab8b9f60" kindref="member">drawfunc_t</ref><sp/>opfns[],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sz,<sp/><ref refid="structxdot" kindref="compound">xdot</ref>*);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structxdot" kindref="compound">xdot</ref>*<sp/><ref refid="xdot_8h_1a3a3701397492b731573797729b89faf7" kindref="member">parseXDot</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="xdot_8h_1a4534d072566a07cb6a17dbc85bf28459" kindref="member">sprintXDot</ref><sp/>(<ref refid="structxdot" kindref="compound">xdot</ref>*);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xdot_8h_1a0b2f8d422712f85383be1986490b7023" kindref="member">fprintXDot</ref><sp/>(FILE*,<sp/><ref refid="structxdot" kindref="compound">xdot</ref>*);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xdot_8h_1ab65644c23e684c41b8043979a8f5dd72" kindref="member">jsonXDot</ref><sp/>(FILE*,<sp/><ref refid="structxdot" kindref="compound">xdot</ref>*);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xdot_8h_1a2f6e80a56658fd92da562794889fae5b" kindref="member">freeXDot</ref><sp/>(<ref refid="structxdot" kindref="compound">xdot</ref>*);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="xdot_8h_1aafef048a88dc0146661a6b131a4eeeaa" kindref="member">statXDot</ref><sp/>(<ref refid="structxdot" kindref="compound">xdot</ref>*,<sp/><ref refid="structxdot__stats" kindref="compound">xdot_stats</ref>*);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="xdot_8h_1a01060e38b65176015a53e621a323b23d" kindref="member">xdot_grad_type</ref><sp/><ref refid="xdot_8h_1a7131e87602e1804e9aef557384288603" kindref="member">colorTypeXDot</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="xdot_8h_1a38958cac41d4d6e7fc4f294b9c9ac820" kindref="member">parseXDotColor</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cp,<sp/><ref refid="structxdot__color" kindref="compound">xdot_color</ref>*<sp/>clr);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="xdot_8h_1a1d036a9953b27372686ff7bdf6b41625" kindref="member">freeXDotColor</ref><sp/>(<ref refid="structxdot__color" kindref="compound">xdot_color</ref>*);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/xdot.h"/>
+  </compounddef>
+</doxygen>

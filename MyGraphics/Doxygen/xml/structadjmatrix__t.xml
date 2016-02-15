@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structadjmatrix__t" kind="struct" language="C++" prot="public">
+    <compoundname>adjmatrix_t</compoundname>
+    <includes refid="types_8h" local="no">types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structadjmatrix__t_1ad7c210a0d484627a69107f3a66f8871b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int adjmatrix_t::nrows</definition>
+        <argsstring></argsstring>
+        <name>nrows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="198" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structadjmatrix__t_1a6346fd72c52ff7d21bac2832ac4e837b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int adjmatrix_t::ncols</definition>
+        <argsstring></argsstring>
+        <name>ncols</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="198" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structadjmatrix__t_1a9f0dd9249cb0e2bf16464edb15a57faa" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* adjmatrix_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/types.h" line="199" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3138">
+        <label>int</label>
+      </node>
+      <node id="3136">
+        <label>adjmatrix_t</label>
+        <link refid="structadjmatrix__t"/>
+        <childnode refid="3137" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="3138" relation="usage">
+          <edgelabel>nrows</edgelabel>
+          <edgelabel>ncols</edgelabel>
+        </childnode>
+      </node>
+      <node id="3137">
+        <label>char</label>
+      </node>
+    </collaborationgraph>
+    <location file="graphviz/release/include/graphviz/types.h" line="197" column="1" bodyfile="graphviz/release/include/graphviz/types.h" bodystart="197" bodyend="200"/>
+    <listofallmembers>
+      <member refid="structadjmatrix__t_1a9f0dd9249cb0e2bf16464edb15a57faa" prot="public" virt="non-virtual"><scope>adjmatrix_t</scope><name>data</name></member>
+      <member refid="structadjmatrix__t_1a6346fd72c52ff7d21bac2832ac4e837b" prot="public" virt="non-virtual"><scope>adjmatrix_t</scope><name>ncols</name></member>
+      <member refid="structadjmatrix__t_1ad7c210a0d484627a69107f3a66f8871b" prot="public" virt="non-virtual"><scope>adjmatrix_t</scope><name>nrows</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SceneSkybox_8h" kind="file" language="C++">
+    <compoundname>SceneSkybox.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Camera3_8h" local="yes">Camera3.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includedby refid="Application_8cpp" local="yes">MyGraphics/Source/Application.cpp</includedby>
+    <includedby refid="SceneSkybox_8cpp" local="yes">MyGraphics/Source/SceneSkybox.cpp</includedby>
+    <incdepgraph>
+      <node id="3018">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="3011">
+        <label>cmath</label>
+      </node>
+      <node id="3017">
+        <label>string</label>
+      </node>
+      <node id="3009">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3010" relation="include">
+        </childnode>
+        <childnode refid="3015" relation="include">
+        </childnode>
+      </node>
+      <node id="3019">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+      <node id="3012">
+        <label>exception</label>
+      </node>
+      <node id="3006">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="3007">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="3008" relation="include">
+        </childnode>
+      </node>
+      <node id="3013">
+        <label>ctime</label>
+      </node>
+      <node id="3020">
+        <label>stack</label>
+      </node>
+      <node id="3022">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="3023" relation="include">
+        </childnode>
+      </node>
+      <node id="3008">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="3009" relation="include">
+        </childnode>
+      </node>
+      <node id="3005">
+        <label>MyGraphics/Source/SceneSkybox.h</label>
+        <link refid="SceneSkybox.h"/>
+        <childnode refid="3006" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+        <childnode refid="3016" relation="include">
+        </childnode>
+        <childnode refid="3019" relation="include">
+        </childnode>
+        <childnode refid="3022" relation="include">
+        </childnode>
+      </node>
+      <node id="3014">
+        <label>cstdlib</label>
+      </node>
+      <node id="3015">
+        <label>iostream</label>
+      </node>
+      <node id="3021">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="3010" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+      </node>
+      <node id="3016">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="3017" relation="include">
+        </childnode>
+        <childnode refid="3018" relation="include">
+        </childnode>
+      </node>
+      <node id="3010">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3011" relation="include">
+        </childnode>
+        <childnode refid="3012" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+        <childnode refid="3014" relation="include">
+        </childnode>
+      </node>
+      <node id="3023">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3026">
+        <label>MyGraphics/Source/SceneSkybox.cpp</label>
+        <link refid="SceneSkybox_8cpp"/>
+      </node>
+      <node id="3024">
+        <label>MyGraphics/Source/SceneSkybox.h</label>
+        <link refid="SceneSkybox.h"/>
+        <childnode refid="3025" relation="include">
+        </childnode>
+        <childnode refid="3026" relation="include">
+        </childnode>
+      </node>
+      <node id="3025">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSceneSkybox" prot="public">SceneSkybox</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SCENESKYBOX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCENESKYBOX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera3_8h" kindref="compound">Camera3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classSceneSkybox" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSceneSkybox" kindref="compound">SceneSkybox</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab24bb12b508262215a3f085bf6e909f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab24bb12b508262215a3f085bf6e909f4" kindref="member">GEO_CUBE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="15" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a0df0c6dd64f522ab199c100badf20d3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a0df0c6dd64f522ab199c100badf20d3e" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="16" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3924f25fee0d3cfcf4ee147f9793e5b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3924f25fee0d3cfcf4ee147f9793e5b4" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="17" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab536641d97acd515cfde9151fa4b781a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab536641d97acd515cfde9151fa4b781a" kindref="member">GEO_LIGHTBALL</ref>,</highlight></codeline>
+<codeline lineno="18" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3ad94fb32300bff652dc31b3d3cc2888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3ad94fb32300bff652dc31b3d3cc2888" kindref="member">GEO_LEFT</ref>,</highlight></codeline>
+<codeline lineno="19" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ad7e97dbcff8ec0921391b15586636382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ad7e97dbcff8ec0921391b15586636382" kindref="member">GEO_RIGHT</ref>,</highlight></codeline>
+<codeline lineno="20" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a955580a4c27f5f7a3cedcb3f162f4f88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a955580a4c27f5f7a3cedcb3f162f4f88" kindref="member">GEO_TOP</ref>,</highlight></codeline>
+<codeline lineno="21" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058accb43b6cc0476800062349f1c6dd552f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058accb43b6cc0476800062349f1c6dd552f" kindref="member">GEO_BOTTOM</ref>,</highlight></codeline>
+<codeline lineno="22" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a4e4d368ed158e0637b1c37b30a18bf74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a4e4d368ed158e0637b1c37b30a18bf74" kindref="member">GEO_FRONT</ref>,</highlight></codeline>
+<codeline lineno="23" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a884ab600e66a36a1fb0bc116502da4d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a884ab600e66a36a1fb0bc116502da4d6" kindref="member">GEO_BACK</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="27" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752c" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca70e9a92fdf0f28ced4f211c99b81c0b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca70e9a92fdf0f28ced4f211c99b81c0b2" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="30" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac3b37a8df2079e1ece790e19c5a0e709" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac3b37a8df2079e1ece790e19c5a0e709" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="31" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e5417436ce0624062f798c64ee257f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e5417436ce0624062f798c64ee257f7" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="32" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0293325d902f53dfda306e4cbe2645c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0293325d902f53dfda306e4cbe2645c7" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="33" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca718e12ab0fe170ea6589a1e9a5e04a97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca718e12ab0fe170ea6589a1e9a5e04a97" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="34" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca775cff2eec8ae1ab46b7fc15259cc401" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca775cff2eec8ae1ab46b7fc15259cc401" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="35" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caade83b46c2ae185569b9c4f04747b220" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caade83b46c2ae185569b9c4f04747b220" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="36" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca68b3a04d7ec03d7935df4bb3cde13190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca68b3a04d7ec03d7935df4bb3cde13190" kindref="member">U_LIGHT0_POSITION</ref>,</highlight></codeline>
+<codeline lineno="37" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2e45ab50490e680239adffa424760477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2e45ab50490e680239adffa424760477" kindref="member">U_LIGHT0_COLOR</ref>,</highlight></codeline>
+<codeline lineno="38" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0bd6b5efc1b98030bb85f8ec2ac8194d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0bd6b5efc1b98030bb85f8ec2ac8194d" kindref="member">U_LIGHT0_POWER</ref>,</highlight></codeline>
+<codeline lineno="39" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5e43a5d1420905ea8c5524f780bcc75e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5e43a5d1420905ea8c5524f780bcc75e" kindref="member">U_LIGHT0_KC</ref>,</highlight></codeline>
+<codeline lineno="40" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9ce501e3be013059226ab2b9e815a694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9ce501e3be013059226ab2b9e815a694" kindref="member">U_LIGHT0_KL</ref>,</highlight></codeline>
+<codeline lineno="41" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cad3307190c2c5bab445459a0f22c8eff4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cad3307190c2c5bab445459a0f22c8eff4" kindref="member">U_LIGHT0_KQ</ref>,</highlight></codeline>
+<codeline lineno="42" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac1f9a39f5e8f81ee7e01146869b36aaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac1f9a39f5e8f81ee7e01146869b36aaa" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="43" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca3f7ca9d9a426bda6aff6c7725600d1f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca3f7ca9d9a426bda6aff6c7725600d1f0" kindref="member">U_LIGHT0_TYPE</ref>,</highlight></codeline>
+<codeline lineno="44" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca7f2007fbf336d8a7b00dd306dd8972ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca7f2007fbf336d8a7b00dd306dd8972ad" kindref="member">U_LIGHT0_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="45" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca6148e45932900ec3039595d547e19572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca6148e45932900ec3039595d547e19572" kindref="member">U_LIGHT0_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="46" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5b47f89d26e1b1a1fbb3989e87bde2ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5b47f89d26e1b1a1fbb3989e87bde2ff" kindref="member">U_LIGHT0_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="47" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca28a4794d5083de858911a82ad93e47a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca28a4794d5083de858911a82ad93e47a8" kindref="member">U_LIGHT0_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="48" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab6743dd8266b53b786e2dadd83c385fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab6743dd8266b53b786e2dadd83c385fe" kindref="member">U_NUMLIGHTS</ref>,</highlight></codeline>
+<codeline lineno="49" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca17ab05f68cc31931a58c62d1fcc22dd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca17ab05f68cc31931a58c62d1fcc22dd8" kindref="member">U_COLOR_TEXTURE_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="50" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e7841be4cc6e862bbe38949718b276b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e7841be4cc6e862bbe38949718b276b" kindref="member">U_COLOR_TEXTURE</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab9bcf1a5fb13965b55a793af51e1e36b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab9bcf1a5fb13965b55a793af51e1e36b" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ad401c768e2c83ef35d3e7ef163a0701b" kindref="member">SceneSkybox</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSkybox_1ad3d654797aa904a7fad3ebbc58f1a1c4" kindref="member">~SceneSkybox</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" kindref="member">RenderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" kindref="member">RenderSkybox</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classSceneSkybox_1a8274e5c83f72f773e2c6d8662679f219" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a8274e5c83f72f773e2c6d8662679f219" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*<ref refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" kindref="member">meshList</ref>[<ref refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classSceneSkybox_1ab9f7813e66e75001b9f43fafbdeba9c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1ab9f7813e66e75001b9f43fafbdeba9c7" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="70" refid="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" kindref="member">m_parameters</ref>[<ref refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab9bcf1a5fb13965b55a793af51e1e36b" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classSceneSkybox_1a3d6451a7f62dc374d1a1bf8ad0f2577a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSkybox_1a3d6451a7f62dc374d1a1bf8ad0f2577a" kindref="member">rotateAngle</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/><ref refid="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="75" refid="classSceneSkybox_1a49b5c4493c974714a5d0791c3991926d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight" kindref="compound">Light</ref><sp/><ref refid="classSceneSkybox_1a49b5c4493c974714a5d0791c3991926d" kindref="member">light</ref>[10];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classSceneSkybox_1a3d78ef61789f9a11ca9299d46c1e8edf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSceneSkybox_1af18f8371d71ca250a8461af7135a3ebb" kindref="member">modelStack</ref>,<sp/><ref refid="classSceneSkybox_1a3d78ef61789f9a11ca9299d46c1e8edf" kindref="member">viewStack</ref>,<sp/><ref refid="classSceneSkybox_1ae0b00f894c72f883f53256dccf63b94e" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="MyGraphics/Source/SceneSkybox.h"/>
+  </compounddef>
+</doxygen>
