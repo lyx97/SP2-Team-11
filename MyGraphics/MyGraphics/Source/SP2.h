@@ -112,6 +112,7 @@ private:
 	bool jumping;
 	bool togjump;
 	bool board;
+    int numPlanes =1;
 	Vector3 PlanePos;
 
 	Camera3 camera;

@@ -119,10 +119,8 @@ void SP2::Init()
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
 	meshList[GEO_GLASS] = MeshBuilder::GenerateQuad("GLASS", Color(0.3f, 0.3f, 0.3f));
-	meshList[GEO_GLASS]->material.kAmbient.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_GLASS]->material.kDiffuse.Set(0.7f, 0.7f, 0.7f);
-	meshList[GEO_GLASS]->material.kSpecular.Set(0.7f, 0.7f, 0.7f);
-	meshList[GEO_GLASS]->material.kShininess = 1.0f;
+    meshList[GEO_GLASS]->textureID = LoadTGA("Image//planet1_land.tga");
+
 
 	meshList[GEO_HOUSE1] = MeshBuilder::GenerateQuad("FLOOR", Color(0.3f, 0.3f, 0.3f));
 	meshList[GEO_HOUSE1]->material.kAmbient.Set(0.4f, 0.4f, 0.4f);
@@ -387,6 +385,7 @@ void SP2::Update(double dt)
 		if (smile == true)
 		{
 			smile = false;
+            numPlanes++;
 		}
 		else if (smile == false)
 		{
@@ -527,15 +526,15 @@ void SP2::Render()
 	RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	glBlendFunc(1, 1.9f);
-	modelStack.PushMatrix();
-	modelStack.Translate(0, -7, 0);
-	modelStack.Rotate(-90, 1, 0, 0);
-	modelStack.Scale(300, 300, 1);
-	RenderMesh(meshList[GEO_GLASS], true);
-	modelStack.PopMatrix();
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+        modelStack.PushMatrix();
+        modelStack.Translate(0, -7, 0);
+        modelStack.Rotate(-90, 1, 0, 0);
+        modelStack.Scale(300 , 300, 1);
+        RenderMesh(meshList[GEO_GLASS], true);
+        modelStack.PopMatrix();
+        
+  
 	modelStack.PushMatrix();
 	modelStack.Translate(90, -6.8, 70);
 	modelStack.Rotate(-90, 1, 0, 0);
@@ -1154,3 +1153,4 @@ void SP2::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
+
