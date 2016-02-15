@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="arith_8h" kind="file" language="C++">
+    <compoundname>arith.h</compoundname>
+    <includes local="no">limits.h</includes>
+    <includes local="no">math.h</includes>
+    <incdepgraph>
+      <node id="1857">
+        <label>graphviz/release/include/graphviz/arith.h</label>
+        <link refid="arith.h"/>
+        <childnode refid="1858" relation="include">
+        </childnode>
+        <childnode refid="1859" relation="include">
+        </childnode>
+      </node>
+      <node id="1858">
+        <label>limits.h</label>
+      </node>
+      <node id="1859">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="arith_8h_1a369266c24eacffb87046522897a570d5" prot="public" static="no">
+        <name>_GNU_SOURCE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="22" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a)&lt;(b)?(a):(b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="38" column="10" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a)&gt;(b)?(a):(b))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="43" column="10" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1ae2f08dc603ae93c402abd918ba4e23e1" prot="public" static="no">
+        <name>ABS</name>
+        <param><defname>a</defname></param>
+        <initializer>((a) &gt;= 0 ? (a) : -(a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="48" column="10" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a5d66ce7f9d1958415dc8a5f9556e73b2" prot="public" static="no">
+        <name>AVG</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>((a + b) / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="50" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a0501e9b03fb5d244efedcc437ef66f68" prot="public" static="no">
+        <name>SGN</name>
+        <param><defname>a</defname></param>
+        <initializer>(((a)&lt;0)? -1 : 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="51" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1adf44891366ab95806ded6886a9f1c2ee" prot="public" static="no">
+        <name>CMP</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(((a)&lt;(b)) ? -1 : (((a)&gt;(b)) ? 1 : 0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="52" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a9ec306f36d50c7375e74f0d1c55a3a67" prot="public" static="no">
+        <name>INT_MAX</name>
+        <initializer>((int)(~(unsigned)0 &gt;&gt; 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="55" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a21658776274b3d146c674318b635a334" prot="public" static="no">
+        <name>INT_MIN</name>
+        <initializer>(-<ref refid="arith_8h_1a9ec306f36d50c7375e74f0d1c55a3a67" kindref="member">INT_MAX</ref> - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="59" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a1e5264eeb3e2ad97c6f33d88e80a49b4" prot="public" static="no">
+        <name>MAXSHORT</name>
+        <initializer>(0x7fff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="63" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1ace724a9256f4e65b352465e5feb24a21" prot="public" static="no">
+        <name>MAXDOUBLE</name>
+        <initializer>1.7976931348623157e+308</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="67" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a5e9e29217f6ec61105a4520ec5942225" prot="public" static="no">
+        <name>MAXFLOAT</name>
+        <initializer>((float)3.40282347e+38)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="71" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a043815e8b2e49280dc4fcd060fc56a38" prot="public" static="no">
+        <name>BETWEEN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>(((a) &lt;= (b)) &amp;&amp; ((b) &lt;= (c)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="77" column="10" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1ae71449b1cc6e6250b91f539153a7a0d3" prot="public" static="no">
+        <name>M_PI</name>
+        <initializer>3.14159265358979323846</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="80" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a514396dd60fa0621c83072091fb2a0cd" prot="public" static="no">
+        <name>SQRT2</name>
+        <initializer>1.41421356237309504880</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="84" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1aaa5e1bf3d25c4680663ea0df3558187f" prot="public" static="no">
+        <name>ROUND</name>
+        <param><defname>f</defname></param>
+        <initializer>((f&gt;=0)?(int)(f + .5):(int)(f - .5))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="87" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1a4af1b2e9b11a7583daf59f2cb45a22e5" prot="public" static="no">
+        <name>RADIANS</name>
+        <param><defname>deg</defname></param>
+        <initializer>((deg)/180.0 * <ref refid="arith_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="88" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1aaee81a47de7098b758f6aadc3e2d9007" prot="public" static="no">
+        <name>DEGREES</name>
+        <param><defname>rad</defname></param>
+        <initializer>((rad)/<ref refid="arith_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref> * 180.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="89" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1ad41630f833e920c1ffa34722f45a8e77" prot="public" static="no">
+        <name>SQR</name>
+        <param><defname>a</defname></param>
+        <initializer>((a) * (a))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="91" column="9" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="arith_8h_1acc80bfed9382d1c32be56f4114e1fbeb" prot="public" static="no">
+        <name>sincos</name>
+        <param><defname>x</defname></param>
+        <param><defname>s</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>*s = sin(x); *c = cos(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="graphviz/release/include/graphviz/arith.h" line="96" column="11" bodyfile="graphviz/release/include/graphviz/arith.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>$Id$<sp/>$Revision$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>shiftwidth=4<sp/>ts=8:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2011<sp/>AT&amp;T<sp/>Intellectual<sp/>Property<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>program<sp/>and<sp/>the<sp/>accompanying<sp/>materials</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>made<sp/>available<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Eclipse<sp/>Public<sp/>License<sp/>v1.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>which<sp/>accompanies<sp/>this<sp/>distribution,<sp/>and<sp/>is<sp/>available<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>http://www.eclipse.org/legal/epl-v10.html</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Contributors:<sp/>See<sp/>CVS<sp/>logs.<sp/>Details<sp/>at<sp/>http://www.graphviz.org/</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>geometric<sp/>functions<sp/>(e.g.<sp/>on<sp/>points<sp/>and<sp/>boxes)<sp/>with<sp/>application<sp/>to,<sp/>but</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>no<sp/>specific<sp/>dependance<sp/>on<sp/>graphs<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GV_ARITH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GV_ARITH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>for<sp/>sincos<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_GNU_SOURCE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="arith_8h_1a369266c24eacffb87046522897a570d5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GNU_SOURCE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_VALUES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;values.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="arith_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)&lt;(b)?(a):(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="arith_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)&gt;(b)?(a):(b))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ABS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>ABS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="arith_8h_1ae2f08dc603ae93c402abd918ba4e23e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ABS(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a)<sp/>&gt;=<sp/>0<sp/>?<sp/>(a)<sp/>:<sp/>-(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="arith_8h_1a5d66ce7f9d1958415dc8a5f9556e73b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AVG(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((a<sp/>+<sp/>b)<sp/>/<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="arith_8h_1a0501e9b03fb5d244efedcc437ef66f68" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SGN(a)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a)&lt;0)?<sp/>-1<sp/>:<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="arith_8h_1adf44891366ab95806ded6886a9f1c2ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMP(a,b)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((a)&lt;(b))<sp/>?<sp/>-1<sp/>:<sp/>(((a)&gt;(b))<sp/>?<sp/>1<sp/>:<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INT_MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="arith_8h_1a9ec306f36d50c7375e74f0d1c55a3a67" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INT_MAX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((int)(~(unsigned)0<sp/>&gt;&gt;<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INT_MIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="arith_8h_1a21658776274b3d146c674318b635a334" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INT_MIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-INT_MAX<sp/>-<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MAXSHORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="arith_8h_1a1e5264eeb3e2ad97c6f33d88e80a49b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXSHORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x7fff)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MAXDOUBLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="arith_8h_1ace724a9256f4e65b352465e5feb24a21" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXDOUBLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.7976931348623157e+308</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MAXFLOAT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="arith_8h_1a5e9e29217f6ec61105a4520ec5942225" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXFLOAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((float)3.40282347e+38)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BETWEEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BETWEEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="arith_8h_1a043815e8b2e49280dc4fcd060fc56a38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BETWEEN(a,b,c)<sp/><sp/>(((a)<sp/>&lt;=<sp/>(b))<sp/>&amp;&amp;<sp/>((b)<sp/>&lt;=<sp/>(c)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>M_PI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="arith_8h_1ae71449b1cc6e6250b91f539153a7a0d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M_PI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.14159265358979323846</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SQRT2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="arith_8h_1a514396dd60fa0621c83072091fb2a0cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SQRT2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.41421356237309504880</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="arith_8h_1aaa5e1bf3d25c4680663ea0df3558187f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROUND(f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((f&gt;=0)?(int)(f<sp/>+<sp/>.5):(int)(f<sp/>-<sp/>.5))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="arith_8h_1a4af1b2e9b11a7583daf59f2cb45a22e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RADIANS(deg)<sp/><sp/><sp/><sp/>((deg)/180.0<sp/>*<sp/>M_PI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="arith_8h_1aaee81a47de7098b758f6aadc3e2d9007" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEGREES(rad)<sp/><sp/><sp/><sp/>((rad)/M_PI<sp/>*<sp/>180.0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="arith_8h_1ad41630f833e920c1ffa34722f45a8e77" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SQR(a)<sp/>((a)<sp/>*<sp/>(a))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_SINCOS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="arith_8h_1acc80bfed9382d1c32be56f4114e1fbeb" kindref="member">sincos</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*c);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="arith_8h_1acc80bfed9382d1c32be56f4114e1fbeb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>sincos(x,s,c)<sp/>*s<sp/>=<sp/>sin(x);<sp/>*c<sp/>=<sp/>cos(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="graphviz/release/include/graphviz/arith.h"/>
+  </compounddef>
+</doxygen>
