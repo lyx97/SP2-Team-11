@@ -33,7 +33,15 @@ void SP2::Init()
 	togjump = false;
 	board = false;
 	PlanePos.Set(10, 0, 50);
-	
+	startingPlane.planePos = Vector3(0, -10, 0);
+	startingPlane.planeMin = Vector3(-150, 0, 150);
+	startingPlane.planeMax = Vector3(150, 0, 150);
+	planesList.push_back(startingPlane);
+	for (int loop = 0; loop < oreFrequency; loop++)
+	{
+		srand(rand() % 100 - 1);
+		orePos.push_back(Vector3(rand() % 800 - 1, rand() % 800 - 1, rand() % 800 - 1));
+	}
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -137,6 +145,9 @@ void SP2::Init()
 
 	meshList[GEO_MODEL2] = MeshBuilder::GenerateOBJ("PELICAN", "OBJ//air.obj");
 	meshList[GEO_MODEL2]->textureID = LoadTGA("Image//air_UV.tga");
+
+	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("PELICAN", "OBJ//Ore.obj");
+	meshList[GEO_ORE]->textureID = LoadTGA("Image//TinOre.tga");
 
 	meshList[GEO_SWITCH] = MeshBuilder::GenerateQuad("SWITCH", Color(0.3f, 0.3f, 0.3f));
 	meshList[GEO_SWITCH]->textureID = LoadTGA("Image//switch.tga");
@@ -308,6 +319,7 @@ std::string FPS;
 
 void SP2::Update(double dt)
 {
+	std::cout << camera.position << std::endl;
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if (Application::IsKeyPressed('2')) //disable back face culling
@@ -341,7 +353,7 @@ void SP2::Update(double dt)
 	glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
 	FPS = std::to_string(toupper(1 / dt));
-
+	
 	if (armRotate > 85)
 	{
 		checkArm = false;
@@ -386,7 +398,7 @@ void SP2::Update(double dt)
 		if (smile == true)
 		{
 			smile = false;
-            numPlanes++;
+     
 		}
 		else if (smile == false)
 		{
@@ -413,6 +425,23 @@ void SP2::Update(double dt)
 		inputDelay = 0;
 		board = true;
 	}
+	for (auto planeIt : planesList){
+		if ((camera.position.x <= planeIt.planeMax.x && camera.position.z <= planeIt.planeMax.z) && (camera.position.x >= planeIt.planeMin.x && camera.position.z >= planeIt.planeMin.z)){
+			currPlane = planeIt;
+		}
+	}
+
+		if (camera.position.x > currPlane.planeMax.x - 30){
+			plane newPlane;
+
+			newPlane.planeMin = currPlane.planeMax;
+			newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
+			newPlane.planePos = Vector3(newPlane.planeMin.x + 450 , currPlane.planePos.y, newPlane.planeMin.z + 150);
+			planesList.push_back(newPlane);
+		}
+
+	
+	
 
 	if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
 	{
@@ -427,6 +456,8 @@ void SP2::Update(double dt)
 		board = false;
 	}
 
+
+		
 	if (board == true)
 	{
 		camera.EnterShip(PlanePos, dt);
@@ -527,14 +558,24 @@ void SP2::Render()
 	RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
+	for (auto planeIt : planesList)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(planeIt.planePos.x, planeIt.planePos.y, planeIt.planePos.z);
+		modelStack.Rotate(-90, 1, 0, 0);
+		modelStack.Scale(300, 300, 1);
+		RenderMesh(meshList[GEO_GLASS], true);
+		modelStack.PopMatrix();
 
-        modelStack.PushMatrix();
-        modelStack.Translate(0, -7, 0);
-        modelStack.Rotate(-90, 1, 0, 0);
-        modelStack.Scale(300 , 300, 1);
-        RenderMesh(meshList[GEO_GLASS], true);
-        modelStack.PopMatrix();
-        
+	}
+	for (auto pos : orePos){
+		modelStack.PushMatrix();
+		modelStack.Translate(0 + pos.x, -7, 0 + pos.z);
+		modelStack.Rotate(-90, 1, 0, 0);
+		modelStack.Scale(4, 4, 4);
+		RenderMesh(meshList[GEO_ORE], true);
+		modelStack.PopMatrix();
+	}
   
 	modelStack.PushMatrix();
 	modelStack.Translate(90, -6.8, 70);
@@ -549,11 +590,13 @@ void SP2::Render()
 	RenderMesh(meshList[GEO_MODEL1], false);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(PlanePos.x, PlanePos.y, PlanePos.z);
-	modelStack.Scale(10, 10, 10);
-	RenderMesh(meshList[GEO_MODEL2], false);
-	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(PlanePos.x, PlanePos.y, PlanePos.z);
+		modelStack.Scale(10, 10, 10);
+		RenderMesh(meshList[GEO_MODEL2], false);
+		modelStack.PopMatrix();
+	
 
 	modelStack.PushMatrix();
 	modelStack.Translate(90, -6.9f, 150);

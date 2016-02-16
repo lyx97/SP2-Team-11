@@ -6,6 +6,11 @@
 #include "Mesh.h"
 #include "MatrixStack.h"
 #include "Light.h"
+#include <vector>
+#include <list>
+#include "Plane.h"
+
+using std::list;
 class SP2 : public Scene
 {
 	enum GEOMETRY_TYPE
@@ -50,6 +55,7 @@ class SP2 : public Scene
 		GEO_STICK,
 		GEO_TREE1,
 		GEO_SWITCH,
+		GEO_ORE,
 
 		NUM_GEOMETRY,
 	};
@@ -111,9 +117,13 @@ private:
 	bool jumping;
 	bool togjump;
 	bool board;
-    int numPlanes =1;
+    int numPlanes = 2;
 	Vector3 PlanePos;
-
+	int oreFrequency = 100;
+	std::vector<Vector3> orePos;
+	std::list<plane> planesList;
+	plane startingPlane;
+	plane currPlane;
 
 	Camera3 camera;
 	Light light[10];
