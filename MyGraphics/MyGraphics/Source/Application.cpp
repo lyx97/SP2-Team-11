@@ -12,18 +12,6 @@
 #include <stdlib.h>
 #include <iostream>
 
-#include "Scene1.h"
-#include "Scene2.h"
-#include "Scene3.h"
-#include "Scene4.h"
-#include "Assignment1.h"
-#include "SceneLight.h"
-#include "SceneLight2.h"
-#include "Assignment2.h"
-#include "SceneTexture.h"
-#include "SceneSkybox.h"
-#include "SceneModel.h"
-#include "SceneText.h"
 #include "SP2.h"
 
 using std::cout;
@@ -151,18 +139,6 @@ void Application::Init()
 void Application::Run()
 {
 	//Main Loop
-	//Scene *scene = new Scene1();
-	//Scene *scene = new Scene2();
-	//Scene *scene = new Scene3();
-	//Scene *scene = new Scene4();
-	//Scene *scene = new Ass1();
-	//Scene *scene = new SceneLight();
-	//Scene *scene = new SceneLight2();
-	//Scene *scene = new Ass2();
-	//Scene *scene = new SceneTexture();
-	//Scene *scene = new SceneSkybox();
-	//Scene *scene = new SceneModel();
-	//Scene *scene = new SceneText();
 	Scene *scene = new SP2();
 	scene->Init();
 

@@ -2,7 +2,7 @@
 #define SP2_H
 
 #include "Scene.h"
-#include "Camera3.h"
+#include "Camera.h"
 #include "Mesh.h"
 #include "MatrixStack.h"
 #include "Light.h"
@@ -125,7 +125,7 @@ private:
 	plane startingPlane;
 	plane currPlane;
 
-	Camera3 camera;
+	Camera camera;
 	Light light[10];
 
 	MS modelStack, viewStack, projectionStack;
