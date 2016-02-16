@@ -38,7 +38,7 @@ bool bound(Vector3& camPos)
 	}
 	else
 	{
-		return false;
+		return true;
 	}
 }
 

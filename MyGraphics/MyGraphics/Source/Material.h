@@ -17,10 +17,10 @@ struct Material
 
 	Material()
 	{
-		kAmbient.Set(1.f, 1.f, 1.f);
-		kDiffuse.Set(1.f, 1.f, 1.f);
-		kSpecular.Set(1.f, 1.f, 1.f);
-		kShininess = 1.f;
+		kAmbient.Set(0.f, 0.05f, 0.f);
+		kDiffuse.Set(0.4f, 0.5f, 0.4f);
+		kSpecular.Set(0.4f, 0.7f, 0.4f);
+		kShininess = 0.78125f;
 	}
 };
 

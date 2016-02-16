@@ -6,7 +6,6 @@
 #include "Mesh.h"
 #include "MatrixStack.h"
 #include "Light.h"
-
 class SP2 : public Scene
 {
 	enum GEOMETRY_TYPE
@@ -114,6 +113,7 @@ private:
 	bool board;
     int numPlanes =1;
 	Vector3 PlanePos;
+
 
 	Camera3 camera;
 	Light light[10];

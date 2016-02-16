@@ -33,6 +33,7 @@ void SP2::Init()
 	togjump = false;
 	board = false;
 	PlanePos.Set(10, 0, 50);
+	
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
