@@ -127,11 +127,11 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_GLASS] = MeshBuilder::GenerateQuad("GLASS", Color(0.3f, 0.3f, 0.3f));
+	meshList[GEO_GLASS] = MeshBuilder::GenerateQuad("GLASS", Color(0.3f, 0.3f, 0.3f), TexCoord(1,1));
     meshList[GEO_GLASS]->textureID = LoadTGA("Image//planet1_land.tga");
 
 
-	meshList[GEO_HOUSE1] = MeshBuilder::GenerateQuad("FLOOR", Color(0.3f, 0.3f, 0.3f));
+	meshList[GEO_HOUSE1] = MeshBuilder::GenerateQuad("FLOOR", Color(0.3f, 0.3f, 0.3f), TexCoord(1, 1));
 	meshList[GEO_HOUSE1]->material.kAmbient.Set(0.4f, 0.4f, 0.4f);
 	meshList[GEO_HOUSE1]->material.kDiffuse.Set(0.4f, 0.4f, 0.4f);
 	meshList[GEO_HOUSE1]->material.kSpecular.Set(0.4f, 0.4f, 0.4f);
@@ -155,23 +155,23 @@ void SP2::Init()
 	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//sword.obj");
 	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
-	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1));
+	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1));
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
 
-	meshList[GEO_SWITCH] = MeshBuilder::GenerateQuad("SWITCH", Color(0.3f, 0.3f, 0.3f));
+	meshList[GEO_SWITCH] = MeshBuilder::GenerateQuad("SWITCH", Color(0.3f, 0.3f, 0.3f), TexCoord(1, 1));
 	meshList[GEO_SWITCH]->textureID = LoadTGA("Image//switch.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0));
+	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0));
+	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_BACK]->textureID = LoadTGA("Image//planet1_bk.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("TOP", Color(0, 0, 0));
+	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("TOP", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_TOP]->textureID = LoadTGA("Image//planet1_up.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("BOTTOM", Color(0, 0, 0));
+	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("BOTTOM", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//planet1_dn.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("RIGHT", Color(0, 0, 0));
+	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("RIGHT", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//planet1_rt.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0));
+	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//planet1_lf.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
