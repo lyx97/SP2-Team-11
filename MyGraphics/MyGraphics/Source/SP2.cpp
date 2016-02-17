@@ -154,9 +154,6 @@ void SP2::Init()
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1));
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
 
-	meshList[GEO_SWITCH] = MeshBuilder::GenerateQuad("SWITCH", Color(0.3f, 0.3f, 0.3f), TexCoord(1, 1));
-	meshList[GEO_SWITCH]->textureID = LoadTGA("Image//switch.tga");
-
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1));
@@ -228,24 +225,6 @@ void SP2::Update(double dt)
 	else collideText = false;
 
 
-	if (armRotate > 85)
-	{
-		checkArm = false;
-	}
-	else if (armRotate < 65)
-	{
-		checkArm = true;
-	}
-
-	if (checkArm)
-	{
-		armRotate += (float)(50 * dt);
-	}
-	else
-	{
-		armRotate -= (float)(50 * dt);
-	}
-
 	if (inputDelay <= 10.0f)
 	{
 		inputDelay += (float)(1 * dt);
@@ -271,8 +250,6 @@ void SP2::Update(double dt)
 		}
 	}
 
-		if (camera.position.x > currPlane.planeMax.x - 30){
-			plane newPlane;
 
 
     if (planesList.size() > 4){
@@ -353,7 +330,7 @@ void SP2::Update(double dt)
 
         std::cout << "plane pos" << startingPlane.planePos << std::endl;
         std::cout << planesList.size() << std::endl;
->>>>>>> Stashed changes
+
 	if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
 	{
 		camera.position = PlanePos;
@@ -681,4 +658,3 @@ void SP2::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-

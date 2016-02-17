@@ -39,6 +39,7 @@ class SP2 : public Scene
 		GEO_IMAGES,
 		GEO_GUN,
 		GEO_SWORD,
+        GEO_HITBOX,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
