@@ -29,9 +29,9 @@ void SP2::Init()
 	inputDelay = 9.0f;
 	board = false;
 	PlanePos.Set(10, 0, 50);
-	startingPlane.planePos = Vector3(0, -10, 0);
-	startingPlane.planeMin = Vector3(-150, 0, 150);
-	startingPlane.planeMax = Vector3(150, 0, 150);
+	startingPlane.planePos = Vector3(0, 0, 0);
+	startingPlane.planeMin = Vector3(0, 0, 0);
+	startingPlane.planeMax = Vector3(300, 0, 300);
 	planesList.push_back(startingPlane);
 	for (int loop = 0; loop < oreFrequency; loop++)
 	{
@@ -142,7 +142,7 @@ void SP2::Init()
 	meshList[GEO_PELICAN] = MeshBuilder::GenerateOBJ("PELICAN", "OBJ//air.obj");
 	meshList[GEO_PELICAN]->textureID = LoadTGA("Image//air_UV.tga");
 
-	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("PELICAN", "OBJ//Ore.obj");
+	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("ORE", "OBJ//Ore.obj");
 	meshList[GEO_ORE]->textureID = LoadTGA("Image//TinOre.tga");
 
 	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//gun3.obj");
@@ -263,20 +263,97 @@ void SP2::Update(double dt)
 		inputDelay = 0;
 		board = true;
 	}
+
+    //Check which plane player is standing on
 	for (auto planeIt : planesList){
 		if ((camera.position.x <= planeIt.planeMax.x && camera.position.z <= planeIt.planeMax.z) && (camera.position.x >= planeIt.planeMin.x && camera.position.z >= planeIt.planeMin.z)){
 			currPlane = planeIt;
 		}
 	}
+
 		if (camera.position.x > currPlane.planeMax.x - 30){
 			plane newPlane;
 
-			newPlane.planeMin = currPlane.planeMax;
+
+    if (planesList.size() > 4){
+        planesList.pop_front();
+
+    }
+
+
+    //Generate plane to the  of the current plane
+		if (camera.position.z > currPlane.planeMax.z - 40){
+			plane newPlane;
+            //int offset = 0;
+            //if (planesList.size() == 1){
+            //    offset = 300;
+            //}
+            //else{
+            //    offset = 0;
+            //}
+			newPlane.planeMin = currPlane.planeMax - Vector3(300,0,0);
 			newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
-			newPlane.planePos = Vector3(newPlane.planeMin.x + 450 , currPlane.planePos.y, newPlane.planeMin.z + 150);
+            newPlane.planePos = newPlane.planeMin;
 			planesList.push_back(newPlane);
+           
 		}
 
+
+        if (camera.position.z < currPlane.planeMin.z + 40){
+            plane newPlane;
+            //int offset = 0;
+            //if (planesList.size() == 1){
+            //    offset = 300;
+            //}
+            //else{
+            //    offset = 0;
+            //}
+            newPlane.planeMax = currPlane.planeMin + Vector3(300, 0, 0);
+            newPlane.planeMin = Vector3(newPlane.planeMax.x - 300, 0, newPlane.planeMax.z - 300);
+            newPlane.planePos = newPlane.planeMin;
+
+            planesList.push_back(newPlane);
+        }
+
+        if (camera.position.x > currPlane.planeMax.x - 40){
+            plane newPlane;
+            //int offset = 0;
+            //if (planesList.size() == 1){
+            //    offset = 300;
+            //}
+            //else{
+            //    offset = 0;
+            //}
+            newPlane.planeMin = currPlane.planeMin + Vector3(300,0,0);
+            newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
+            newPlane.planePos = newPlane.planeMin;
+
+            planesList.push_back(newPlane);
+
+        }
+
+        if (camera.position.x < currPlane.planeMin.x + 40){
+            plane newPlane;
+            //int offset = 0;
+            //if (planesList.size() == 1){
+            //    offset = 300;
+            //}
+            //else{
+            //    offset = 0;
+            //}
+            newPlane.planeMin = currPlane.planeMin - Vector3(300, 0, 0);
+            newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
+            newPlane.planePos = newPlane.planeMin;
+
+            planesList.push_back(newPlane);
+
+        }
+
+
+
+        std::cout << "plane pos" << startingPlane.planePos << std::endl;
+        std::cout << planesList.size() << std::endl;
+>>>>>>> Stashed changes
 	if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
 	{
 		camera.position = PlanePos;
@@ -404,7 +481,7 @@ void SP2::Render()
 	for (auto planeIt : planesList)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(planeIt.planePos.x, planeIt.planePos.y, planeIt.planePos.z);
+		modelStack.Translate(planeIt.planePos.x, -7, planeIt.planePos.z);
 		modelStack.Rotate(-90, 1, 0, 0);
 		modelStack.Scale(300, 300, 1);
 		RenderMesh(meshList[GEO_GLASS], true);
@@ -453,6 +530,9 @@ void SP2::Render()
 
 void SP2::RenderSkybox()
 {
+    modelStack.PushMatrix();
+    modelStack.Scale(0.20f, 0.20f, 0.20f);
+
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, 997.f);
 	modelStack.Rotate(180, 0, 1, 0);
@@ -495,6 +575,9 @@ void SP2::RenderSkybox()
 	modelStack.Scale(1000, 1000, 1000);
 	RenderMesh(meshList[GEO_RIGHT], false);
 	modelStack.PopMatrix();
+
+    modelStack.PopMatrix();
+
 }
 
 void SP2::RenderText(Mesh* mesh, std::string text, Color color)
