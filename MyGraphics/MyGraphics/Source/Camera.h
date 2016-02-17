@@ -1,6 +1,7 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 #include "Vector3.h"
+#include "Object.h"
 
 class Camera
 {
@@ -25,7 +26,7 @@ public:
 	Camera();
 	~Camera();
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
-	virtual void Update(double dt);
+	virtual void Update(double dt, vector<Object*> objectVec);
 	virtual void Reset();
 	void EnterShip(Vector3& planePos, double dt);
 	bool collision(Vector3& camPos);

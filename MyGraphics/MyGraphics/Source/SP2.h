@@ -1,5 +1,7 @@
 #ifndef SP2_H
 #define SP2_H
+#include <vector>
+#include <list>
 
 #include "Scene.h"
 #include "Camera.h"
@@ -9,8 +11,11 @@
 #include <vector>
 #include <list>
 #include "Plane.h"
+#include "Object.h"
+#include "Singleton.h"
 
 using std::list;
+
 class SP2 : public Scene
 {
 	enum GEOMETRY_TYPE
@@ -25,36 +30,11 @@ class SP2 : public Scene
 		GEO_BOTTOM,
 		GEO_FRONT,
 		GEO_BACK,
-		GEO_MODEL1,
-		GEO_MODEL2,
+		GEO_ATAT,
+		GEO_PELICAN,
 		GEO_TEXT,
 		GEO_HOUSE1,
 		GEO_HOUSE2,
-		GEO_CAPE1,
-		GEO_CAPE2,
-		GEO_CAPE3,
-		GEO_CAPE4,
-		GEO_NOSE,
-		GEO_MOUTH1,
-		GEO_MOUTH2,
-		GEO_HEAD,
-		GEO_ARM1,
-		GEO_ARM2,
-		GEO_ARM3,
-		GEO_EYE1,
-		GEO_EYE2,
-		GEO_HAT1,
-		GEO_HAT2,
-		GEO_CROSS,
-		GEO_EAR,
-		GEO_HORN1,
-		GEO_HORN2,
-		GEO_BODY,
-		GEO_PANT,
-		GEO_CANDY,
-		GEO_STICK,
-		GEO_TREE1,
-		GEO_SWITCH,
 		GEO_ORE,
 		GEO_IMAGES,
 		GEO_GUN,
@@ -111,14 +91,7 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	float armRotate;
-	float upperJump;
-	float lowerJump;
 	float inputDelay = 0.0f;
-	bool checkArm;
-	bool smile;
-	bool jumping;
-	bool togjump;
 	bool board;
     int numPlanes = 2;
 	float distanceSword;
@@ -131,6 +104,8 @@ private:
 	std::list<plane> planesList;
 	plane startingPlane;
 	plane currPlane;
+
+	Object* test = new Object();
 
 	Camera camera;
 	Light light[10];

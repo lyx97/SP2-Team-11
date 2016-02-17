@@ -111,7 +111,7 @@ void Camera::EnterShip(Vector3& planePos, double dt)
 	}
 }
 
-void Camera::Update(double dt)
+void Camera::Update(double dt, vector<Object*> objectVec)
 {
 	static const float CAMERA_SPEED = 50.f;
 	static const float SPRINT_SPEED = 120.f;
