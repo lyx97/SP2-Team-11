@@ -149,6 +149,15 @@ void SP2::Init()
 	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("PELICAN", "OBJ//Ore.obj");
 	meshList[GEO_ORE]->textureID = LoadTGA("Image//TinOre.tga");
 
+	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//gun3.obj");
+	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
+
+	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//sword.obj");
+	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
+
+	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1));
+	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
+
 	meshList[GEO_SWITCH] = MeshBuilder::GenerateQuad("SWITCH", Color(0.3f, 0.3f, 0.3f));
 	meshList[GEO_SWITCH]->textureID = LoadTGA("Image//switch.tga");
 
@@ -354,6 +363,14 @@ void SP2::Update(double dt)
 
 	FPS = std::to_string(toupper(1 / dt));
 	
+	distanceSword = sqrtf((0.f - camera.position.x) * (0.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+	distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+
+	if (distanceSword < 10) collideText = true;
+	else if (distanceGun < 10) collideText = true;
+	else collideText = false;
+
+
 	if (armRotate > 85)
 	{
 		checkArm = false;
@@ -590,13 +607,25 @@ void SP2::Render()
 	RenderMesh(meshList[GEO_MODEL1], false);
 	modelStack.PopMatrix();
 
-
-		modelStack.PushMatrix();
-		modelStack.Translate(PlanePos.x, PlanePos.y, PlanePos.z);
-		modelStack.Scale(10, 10, 10);
-		RenderMesh(meshList[GEO_MODEL2], false);
-		modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(PlanePos.x, PlanePos.y, PlanePos.z);
+	modelStack.Scale(10, 10, 10);
+	RenderMesh(meshList[GEO_MODEL2], false);
+	modelStack.PopMatrix();
 	
+	modelStack.PushMatrix();
+	modelStack.Translate(-50, -10, 0);
+	//modelStack.Rotate(180, 1, 0, 0);
+	modelStack.Scale(10, 10, 10);
+	RenderMesh(meshList[GEO_GUN], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	//modelStack.Translate(-5, 0, 0);
+	//modelStack.Rotate(-90, 1, 0, 0);
+	//modelStack.Scale(30, 30, 1);
+	RenderMesh(meshList[GEO_SWORD], true);
+	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(90, -6.9f, 150);
@@ -1074,9 +1103,18 @@ void SP2::Render()
 			inputDelay = 0;
 		}
 	}
-
+	RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
+	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
+	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.up.x), Color(0, 0, 0), 1, 1, 46);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.up.y), Color(0, 0, 0), 1, 1, 44);
+	RenderTextOnScreen(meshList[GEO_TEXT], "distance sword " + std::to_string(distanceSword), Color(0, 0, 0), 1, 1, 42);
+	RenderTextOnScreen(meshList[GEO_TEXT], "distance gun " + std::to_string(distanceGun), Color(0, 0, 0), 1, 1, 40);
 	RenderTextOnScreen(meshList[GEO_TEXT], ">0<", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
+
+	if (collideText)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Collide!!!", Color(0, 0, 0), 1, 40, 25);
 }
 
 void SP2::RenderSkybox()
@@ -1191,7 +1229,36 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+void SP2::RenderUI(Mesh* mesh, float size, float x, float y)
+{
+	glDisable(GL_DEPTH_TEST);
+	Mtx44 ortho;
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Scale(size, size, size);
+	modelStack.Translate(x, y, 1);
+	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+	glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, mesh->textureID);
+	glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
 
+	Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
+	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
+
+	mesh->Render();
+
+	glBindTexture(GL_TEXTURE_2D, 0);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+}
 void SP2::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

@@ -56,7 +56,9 @@ class SP2 : public Scene
 		GEO_TREE1,
 		GEO_SWITCH,
 		GEO_ORE,
-
+		GEO_IMAGES,
+		GEO_GUN,
+		GEO_SWORD,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -101,6 +103,7 @@ private:
 	void RenderSkybox();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
+	void RenderUI(Mesh* mesh, float size, float x, float y);
 
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
@@ -118,6 +121,10 @@ private:
 	bool togjump;
 	bool board;
     int numPlanes = 2;
+	float distanceSword;
+	float distanceGun;
+	bool collideText = false;
+
 	Vector3 PlanePos;
 	int oreFrequency = 100;
 	std::vector<Vector3> orePos;

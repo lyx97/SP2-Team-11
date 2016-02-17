@@ -28,7 +28,7 @@ public:
 	virtual void Update(double dt);
 	virtual void Reset();
 	void EnterShip(Vector3& planePos, double dt);
-
+	bool collision(Vector3& camPos);
 };
 
 bool planeHitbox(Vector3& camPos);

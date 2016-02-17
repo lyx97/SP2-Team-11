@@ -26,7 +26,16 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	right.Normalize();
 	this->up = right.Cross(view).Normalized();
 }
+bool Camera::collision(Vector3& camPos)
+{
+	//sword distance
+	if (sqrtf((0.f - camPos.x) * (0.f - camPos.x) + (0.f - camPos.z) * (0.f - camPos.z)) < 5) return false;
 
+	//gun distance
+	else if (sqrtf((-50.f - camPos.x) * (-50.f - camPos.x) + (0.f - camPos.z) * (0.f - camPos.z)) < 5) return false;
+
+	else return true;
+}
 bool bound(Vector3& camPos)
 {
 	Vector3 maxPos(300, 0, 300);
@@ -192,7 +201,7 @@ void Camera::Update(double dt)
 		{
 			boundCheckPos.x += view.x * (float)(CAMERA_SPEED * dt);
 			boundCheckPos.z += view.z * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos))
+			if (bound(boundCheckPos) && collision(boundCheckPos))
 			{
 				if (Application::IsKeyPressed(VK_SHIFT))
 				{
@@ -222,7 +231,7 @@ void Camera::Update(double dt)
 		{
 			boundCheckPos.x -= view.x * (float)(CAMERA_SPEED * dt);
 			boundCheckPos.z -= view.z * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos))
+			if (bound(boundCheckPos) && collision(boundCheckPos))
 			{
 				if (Application::IsKeyPressed(VK_SHIFT))
 				{
@@ -251,7 +260,7 @@ void Camera::Update(double dt)
 		else
 		{
 			boundCheckPos += right * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos))
+			if (bound(boundCheckPos) && collision(boundCheckPos))
 			{
 				position += right * (float)(CAMERA_SPEED * dt);
 				target += right * (float)(CAMERA_SPEED * dt);
@@ -268,7 +277,7 @@ void Camera::Update(double dt)
 		else
 		{
 			boundCheckPos -= right * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos))
+			if (bound(boundCheckPos) && collision(boundCheckPos))
 			{
 				position -= right * (float)(CAMERA_SPEED * dt);
 				target -= right * (float)(CAMERA_SPEED * dt);
