@@ -5,18 +5,21 @@ vector<Object*> Object::objectVec;
 Object::Object(Vector3 pos, Vector3 scale):
 hitbox(pos, scale)
 {
-	objectVec.push_back(this);
+	Object::objectVec.push_back(this);
 }
 
 Object::~Object()
 {
 }
 
-void Object::setPos(float posX, float posY, float posZ)
+void Object::setPos(float x, float y, float z)
 {
-	this->pos.x = posX;
-	this->pos.y = posY;
-	this->pos.z = posZ;
+	this->pos.x = x;
+	this->pos.y = y;
+	this->pos.z = z;
+	hitbox.pos.x = x;
+	hitbox.pos.y = y;
+	hitbox.pos.z = z;
 }
 
 void Object::setSize(float scaleX, float scaleY, float scaleZ)
@@ -24,15 +27,8 @@ void Object::setSize(float scaleX, float scaleY, float scaleZ)
 	this->size.x = scaleX;
 	this->size.y = scaleY;
 	this->size.z = scaleZ;
-}
-
-Vector3 Object::getPos()
-{
-	return pos;
-}
-
-Vector3 Object::getSize()
-{
-	return size;
+	hitbox.size.x = scaleX;
+	hitbox.size.y = scaleY;
+	hitbox.size.z = scaleZ;
 }
 
