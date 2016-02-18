@@ -179,92 +179,93 @@ std::string FPS;
 
 void SP2::Update(double dt)
 {
-	if (Singleton::getInstance()->pause == true)
-	{
-		if (Application::IsKeyPressed('O'))
-		{
-			Singleton::getInstance()->pause = false;
-		}
-	}
-	else
-	{
-		if (Application::IsKeyPressed('1')) //enable back face culling
-			glEnable(GL_CULL_FACE);
-		if (Application::IsKeyPressed('2')) //disable back face culling
-			glDisable(GL_CULL_FACE);
-		if (Application::IsKeyPressed('3'))
-			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-		if (Application::IsKeyPressed('4'))
-			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+    if (Singleton::getInstance()->pause == true)
+    {
+        if (Application::IsKeyPressed('O'))
+        {
+            Singleton::getInstance()->pause = false;
+        }
+    }
+    else
+    {
+        if (Application::IsKeyPressed('1')) //enable back face culling
+            glEnable(GL_CULL_FACE);
+        if (Application::IsKeyPressed('2')) //disable back face culling
+            glDisable(GL_CULL_FACE);
+        if (Application::IsKeyPressed('3'))
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+        if (Application::IsKeyPressed('4'))
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-		if (Application::IsKeyPressed('P'))
-		{
-			Singleton::getInstance()->pause = true;
-		}
+        if (Application::IsKeyPressed('P'))
+        {
+            Singleton::getInstance()->pause = true;
+        }
 
-		if (Application::IsKeyPressed('Z'))
-			light[0].type = Light::LIGHT_POINT;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-		if (Application::IsKeyPressed('X'))
-			light[0].type = Light::LIGHT_DIRECTIONAL;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-		if (Application::IsKeyPressed('C'))
-			light[0].type = Light::LIGHT_SPOT;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+        if (Application::IsKeyPressed('Z'))
+            light[0].type = Light::LIGHT_POINT;
+        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+        if (Application::IsKeyPressed('X'))
+            light[0].type = Light::LIGHT_DIRECTIONAL;
+        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+        if (Application::IsKeyPressed('C'))
+            light[0].type = Light::LIGHT_SPOT;
+        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
-		FPS = std::to_string(toupper(1 / dt));
-		distanceSword = sqrtf((0.f - camera.position.x) * (0.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
-		distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+        FPS = std::to_string(toupper(1 / dt));
+        distanceSword = sqrtf((0.f - camera.position.x) * (0.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+        distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
 
-		if (distanceSword < 10) collideText = true;
-		else if (distanceGun < 10) collideText = true;
-		else collideText = false;
-
-
-
-		if (inputDelay <= 10.0f)
-		{
-			inputDelay += (float)(1 * dt);
-		}
-
-
-		if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
-		{
-			camera.target = PlanePos;
-			camera.view = Vector3(1, 0, 0);
-			camera.position = camera.target - camera.view * 100;
-			camera.up = Vector3(0, 1, 0);
-			camera.right = camera.view.Cross(camera.up);
-			camera.right.Normalized();
-
-			inputDelay = 0;
-			board = true;
-		}
+        if (distanceSword < 10) collideText = true;
+        else if (distanceGun < 10) collideText = true;
+        else collideText = false;
 
 
 
-	if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
-	{
-		camera.position = PlanePos;
-		camera.view = Vector3(1, 0, 0);
-		camera.target = camera.position + camera.view;
-		camera.up = Vector3(0, 1, 0);
-		camera.right = camera.view.Cross(camera.up);
-		camera.right.Normalized();
+        if (inputDelay <= 10.0f)
+        {
+            inputDelay += (float)(1 * dt);
+        }
 
-		inputDelay = 0;
-		board = false;
-	}
 
-	if (board == true)
-	{
-		camera.EnterShip(PlanePos, dt);
-	}
-	else
-	{
-		camera.Update(dt, Object::objectVec);
-	}
+        if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
+        {
+            camera.target = PlanePos;
+            camera.view = Vector3(1, 0, 0);
+            camera.position = camera.target - camera.view * 100;
+            camera.up = Vector3(0, 1, 0);
+            camera.right = camera.view.Cross(camera.up);
+            camera.right.Normalized();
 
+            inputDelay = 0;
+            board = true;
+        }
+
+
+
+        if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
+        {
+            camera.position = PlanePos;
+            camera.view = Vector3(1, 0, 0);
+            camera.target = camera.position + camera.view;
+            camera.up = Vector3(0, 1, 0);
+            camera.right = camera.view.Cross(camera.up);
+            camera.right.Normalized();
+
+            inputDelay = 0;
+            board = false;
+        }
+
+        if (board == true)
+        {
+            camera.EnterShip(PlanePos, dt);
+        }
+        else
+        {
+            camera.Update(dt, Object::objectVec);
+        }
+
+    }
 }
 
 void SP2::RenderMesh(Mesh *mesh, bool enableLight)
