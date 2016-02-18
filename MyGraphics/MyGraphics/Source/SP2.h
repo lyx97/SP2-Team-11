@@ -9,11 +9,11 @@
 #include "MatrixStack.h"
 #include "Light.h"
 #include <vector>
-#include <list>
+#include <map>
 #include "Plane.h"
 #include "Object.h"
 
-using std::list;
+using std::map;
 
 class SP2 : public Scene
 {
@@ -84,6 +84,7 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y);
+    void planeInit();
 
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
@@ -101,9 +102,8 @@ private:
 	Vector3 PlanePos;
 	int oreFrequency = 100;
 	std::vector<Vector3> orePos;
-	std::list<plane> planesList;
-	plane startingPlane;
-	plane currPlane;
+	map<int,plane> planeMap;
+    plane currPlane;
 
 	Object* test = new Object();
 

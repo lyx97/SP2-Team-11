@@ -113,7 +113,7 @@ void Camera::EnterShip(Vector3& planePos, double dt)
 
 void Camera::Update(double dt, vector<Object*> objectVec)
 {
-	static const float CAMERA_SPEED = 50.f;
+	static const float CAMERA_SPEED = 200.f;
 	static const float SPRINT_SPEED = 120.f;
 	static const float LOOKING_SPEED = 20.f;
 	static const float JUMPING_SPEED = 30.f;
@@ -340,7 +340,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 
 void Camera::Reset()
 {
-	position.Set(1, 0, 0);
+	position.Set(150, 7, 150);
 	target.Set(0, 0, 0);
 	up.Set(0, 1, 0);
 }
