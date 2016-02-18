@@ -42,33 +42,18 @@ bool Application::IsKeyPressed(unsigned short key)
 
 void Application::MouseMove(double &x, double &y)
 {
-	glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+	if (Singleton::getInstance()->pause == false)
+		glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+	
 	glfwGetCursorPos(m_window, &x, &y);
 	glfwSetCursorPos(m_window, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 }
 
-static void mouseButtonCallback(GLFWwindow *m_window, int button, int action, int mods)
+void Application::MouseUI(double &x, double &y)
 {
-	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS)
-	{
-		cout << "LEFT PRESSED" << endl;
-	}
-	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_RELEASE)
-	{
-		cout << "LEFT RELEASED" << endl;
-	}
-}
-
-static void cursorEnterCallback(GLFWwindow *m_window, int entered)
-{
-	if (entered)
-	{
-		cout << "ENTERED" << endl;
-	}
-	else
-	{
-		cout << "LEAVE" << endl;
-	}
+	if (Singleton::getInstance()->pause == true)
+		glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+	glfwGetCursorPos(m_window, &x, &y);
 }
 
 Application::Application()
@@ -105,9 +90,7 @@ void Application::Init()
 
 	//Create a window and create its OpenGL context
 	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", NULL, NULL);
-	glfwSetCursorEnterCallback(m_window, cursorEnterCallback);
-	glfwSetMouseButtonCallback(m_window, mouseButtonCallback);
-
+	//m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", glfwGetPrimaryMonitor(), NULL);
 	glfwSetWindowSizeCallback(m_window, resize_callback);
 	
 	//If the window couldn't be created

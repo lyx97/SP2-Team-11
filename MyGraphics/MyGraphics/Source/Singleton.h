@@ -9,11 +9,8 @@ public:
 
 		return &instance;
 	}
-
-	bool single;
-	int test;
-	double testy;
-
+	bool pause;
+	bool buttonText;
 private:
 	Singleton(){}
 };

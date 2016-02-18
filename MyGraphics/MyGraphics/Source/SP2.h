@@ -12,7 +12,6 @@
 #include <list>
 #include "Plane.h"
 #include "Object.h"
-#include "Singleton.h"
 
 using std::list;
 

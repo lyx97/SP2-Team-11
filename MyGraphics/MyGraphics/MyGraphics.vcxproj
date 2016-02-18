@@ -124,6 +124,7 @@
     <ClInclude Include="Source\Plane.h" />
     <ClInclude Include="Source\Scene.h" />
     <ClInclude Include="Source\shader.hpp" />
+    <ClInclude Include="Source\Singleton.h" />
     <ClInclude Include="Source\SP2.h" />
     <ClInclude Include="Source\Utility.h" />
     <ClInclude Include="Source\Vertex.h" />

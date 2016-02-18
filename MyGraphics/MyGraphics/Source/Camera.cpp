@@ -118,9 +118,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 	static const float LOOKING_SPEED = 20.f;
 	static const float JUMPING_SPEED = 30.f;
 
-	Application::MouseMove(mousex, mousey);
-	float yaw = LOOKING_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
-	float pitch = LOOKING_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
+	
 
 	Vector3 boundCheckPos = position;
 
@@ -152,7 +150,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 		jumping = false;
 		togJump = false;
 	}
-	if (Application::IsKeyPressed(VK_SPACE) && jumpDelay >= 10.0f)
+	if (Application::IsKeyPressed(VK_SPACE) && jumpDelay >= 10.0f && Singleton::getInstance()->pause == false)
 	{
 		if (togJump == false)
 		{
@@ -182,7 +180,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 		}
 	}
 
-	if (Application::IsKeyPressed('W'))
+	if (Application::IsKeyPressed('W') && Singleton::getInstance()->pause == false)
 	{
 		if (flying == true)
 		{
@@ -220,7 +218,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('S'))
+	if (Application::IsKeyPressed('S') && Singleton::getInstance()->pause == false)
 	{
 		if (flying == true)
 		{
@@ -250,7 +248,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('D'))
+	if (Application::IsKeyPressed('D') && Singleton::getInstance()->pause == false)
 	{
 		if (flying == true)
 		{
@@ -267,7 +265,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('A'))
+	if (Application::IsKeyPressed('A') && Singleton::getInstance()->pause == false)
 	{
 		if (flying == true)
 		{
@@ -284,28 +282,56 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 			}
 		}
 	}
-	// --- YAW ---
-	if (yaw)
+
+	if (Singleton::getInstance()->pause == false)
 	{
-		Mtx44 rotation;
-		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = rotation * view;
-		target = position + view;
-		right = rotation * right;
-		up = rotation * up;
+		Application::MouseMove(mousex, mousey);
+		float yaw = LOOKING_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
+		float pitch = LOOKING_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
+		// --- YAW ---
+		if (yaw)
+		{
+			Mtx44 rotation;
+			rotation.SetToRotation(yaw, 0, 1, 0);
+			view = rotation * view;
+			target = position + view;
+			right = rotation * right;
+			up = rotation * up;
+		}
+		// -----------
+		// --- PITCH ---
+		if (pitch)
+		{
+			right.Normalize();
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = position + view;
+			up = right.Cross(view);
+		}
+		// --------------
 	}
-	// -----------
-	// --- PITCH ---
-	if (pitch)
+	else
 	{
-		right.Normalize();
-		Mtx44 rotation;
-		rotation.SetToRotation(pitch, right.x, right.y, right.z);
-		view = rotation * view;
-		target = position + view;
-		up = right.Cross(view);
+		Application::MouseUI(mousex, mousey);
+
+		Vector3 maxPos(1905, 700, 0);
+		Vector3 minPos(1430, 350, 0);
+		if ((maxPos.x > mousex && minPos.x < mousex) &&
+			(maxPos.y > mousey && minPos.y <mousey))
+		{
+			if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+			{
+				Singleton::getInstance()->buttonText = true;
+			}
+			else
+				Singleton::getInstance()->buttonText = false;
+		}
+		else
+		{
+			Singleton::getInstance()->buttonText = false;
+		}
 	}
-	// --------------
 	if (Application::IsKeyPressed('R'))
 	{
 		Reset();

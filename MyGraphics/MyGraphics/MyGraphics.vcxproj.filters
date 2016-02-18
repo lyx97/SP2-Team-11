@@ -142,5 +142,8 @@
     <ClInclude Include="Source\Plane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

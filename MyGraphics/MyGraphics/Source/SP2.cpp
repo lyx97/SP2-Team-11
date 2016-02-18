@@ -25,7 +25,8 @@ SP2::~SP2()
 void SP2::Init()
 {
 	// Init VBO here
-
+	Singleton::getInstance()->pause = false;
+	Singleton::getInstance()->buttonText = false;
 	inputDelay = 9.0f;
 	board = false;
 	PlanePos.Set(10, 0, 50);
@@ -181,168 +182,167 @@ std::string FPS;
 
 void SP2::Update(double dt)
 {
-	//std::cout << camera.position << std::endl;
-	//cout << test->hitbox.minPt << " : " << test->hitbox.maxPt << endl;
-	if (Application::IsKeyPressed('1')) //enable back face culling
-		glEnable(GL_CULL_FACE);
-	if (Application::IsKeyPressed('2')) //disable back face culling
-		glDisable(GL_CULL_FACE);
-	if (Application::IsKeyPressed('3'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-	if (Application::IsKeyPressed('4'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-
-	if (Application::IsKeyPressed('I'))
-		light[0].position.z -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('K'))
-		light[0].position.z += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('J'))
-		light[0].position.x -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('L'))
-		light[0].position.x += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('O'))
-		light[0].position.y -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('P'))
-		light[0].position.y += (float)(LSPEED * dt);
-
-	if (Application::IsKeyPressed('Z'))
-		light[0].type = Light::LIGHT_POINT;
-	glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	if (Application::IsKeyPressed('X'))
-		light[0].type = Light::LIGHT_DIRECTIONAL;
-	glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	if (Application::IsKeyPressed('C'))
-		light[0].type = Light::LIGHT_SPOT;
-	glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-
-	FPS = std::to_string(toupper(1 / dt));
-	
-	distanceSword = sqrtf((0.f - camera.position.x) * (0.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
-	distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
-
-	if (distanceSword < 10) collideText = true;
-	else if (distanceGun < 10) collideText = true;
-	else collideText = false;
-
-
-	if (inputDelay <= 10.0f)
+	if (Singleton::getInstance()->pause == true)
 	{
-		inputDelay += (float)(1 * dt);
-	}
-
-	if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true && inputDelay >= 10.f)
-	{
-		camera.target = PlanePos;
-		camera.view = Vector3(1, 0, 0);
-		camera.position = camera.target - camera.view * 100;
-		camera.up = Vector3(0, 1, 0);
-		camera.right = camera.view.Cross(camera.up);
-		camera.right.Normalized();
-
-		inputDelay = 0;
-		board = true;
-	}
-
-    //Check which plane player is standing on
-	for (auto planeIt : planesList){
-		if ((camera.position.x <= planeIt.planeMax.x && camera.position.z <= planeIt.planeMax.z) && (camera.position.x >= planeIt.planeMin.x && camera.position.z >= planeIt.planeMin.z)){
-			currPlane = planeIt;
+		if (Application::IsKeyPressed('O'))
+		{
+			Singleton::getInstance()->pause = false;
 		}
 	}
+	else
+	{
+		if (Application::IsKeyPressed('1')) //enable back face culling
+			glEnable(GL_CULL_FACE);
+		if (Application::IsKeyPressed('2')) //disable back face culling
+			glDisable(GL_CULL_FACE);
+		if (Application::IsKeyPressed('3'))
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+		if (Application::IsKeyPressed('4'))
+			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+
+		if (Application::IsKeyPressed('P'))
+		{
+			Singleton::getInstance()->pause = true;
+		}
+
+		if (Application::IsKeyPressed('Z'))
+			light[0].type = Light::LIGHT_POINT;
+		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+		if (Application::IsKeyPressed('X'))
+			light[0].type = Light::LIGHT_DIRECTIONAL;
+		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+		if (Application::IsKeyPressed('C'))
+			light[0].type = Light::LIGHT_SPOT;
+		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+
+		FPS = std::to_string(toupper(1 / dt));
+
+		distanceSword = sqrtf((0.f - camera.position.x) * (0.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+		distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+
+		if (distanceSword < 10) collideText = true;
+		else if (distanceGun < 10) collideText = true;
+		else collideText = false;
+
+
+		if (inputDelay <= 10.0f)
+		{
+			inputDelay += (float)(1 * dt);
+		}
+
+		if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
+		{
+			camera.target = PlanePos;
+			camera.view = Vector3(1, 0, 0);
+			camera.position = camera.target - camera.view * 100;
+			camera.up = Vector3(0, 1, 0);
+			camera.right = camera.view.Cross(camera.up);
+			camera.right.Normalized();
+
+			inputDelay = 0;
+			board = true;
+		}
+
+		//Check which plane player is standing on
+		for (auto planeIt : planesList){
+			if ((camera.position.x <= planeIt.planeMax.x && camera.position.z <= planeIt.planeMax.z) && (camera.position.x >= planeIt.planeMin.x && camera.position.z >= planeIt.planeMin.z)){
+				currPlane = planeIt;
+			}
+		}
 
 
 
-    if (planesList.size() > 4){
-        planesList.pop_front();
+		if (planesList.size() > 4){
+			planesList.pop_front();
 
-    }
+		}
 
 
-    //Generate plane to the  of the current plane
+		//Generate plane to the  of the current plane
 		if (camera.position.z > currPlane.planeMax.z - 40){
 			plane newPlane;
-            //int offset = 0;
-            //if (planesList.size() == 1){
-            //    offset = 300;
-            //}
-            //else{
-            //    offset = 0;
-            //}
-			newPlane.planeMin = currPlane.planeMax - Vector3(300,0,0);
+			//int offset = 0;
+			//if (planesList.size() == 1){
+			//    offset = 300;
+			//}
+			//else{
+			//    offset = 0;
+			//}
+			newPlane.planeMin = currPlane.planeMax - Vector3(300, 0, 0);
 			newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
-            newPlane.planePos = newPlane.planeMin;
+			newPlane.planePos = newPlane.planeMin;
 			planesList.push_back(newPlane);
-           
+
 		}
 
 
-        if (camera.position.z < currPlane.planeMin.z + 40){
-            plane newPlane;
-            //int offset = 0;
-            //if (planesList.size() == 1){
-            //    offset = 300;
-            //}
-            //else{
-            //    offset = 0;
-            //}
-            newPlane.planeMax = currPlane.planeMin + Vector3(300, 0, 0);
-            newPlane.planeMin = Vector3(newPlane.planeMax.x - 300, 0, newPlane.planeMax.z - 300);
-            newPlane.planePos = newPlane.planeMin;
+		if (camera.position.z < currPlane.planeMin.z + 40){
+			plane newPlane;
+			//int offset = 0;
+			//if (planesList.size() == 1){
+			//    offset = 300;
+			//}
+			//else{
+			//    offset = 0;
+			//}
+			newPlane.planeMax = currPlane.planeMin + Vector3(300, 0, 0);
+			newPlane.planeMin = Vector3(newPlane.planeMax.x - 300, 0, newPlane.planeMax.z - 300);
+			newPlane.planePos = newPlane.planeMin;
 
-            planesList.push_back(newPlane);
-        }
+			planesList.push_back(newPlane);
+		}
 
-        if (camera.position.x > currPlane.planeMax.x - 40){
-            plane newPlane;
-            //int offset = 0;
-            //if (planesList.size() == 1){
-            //    offset = 300;
-            //}
-            //else{
-            //    offset = 0;
-            //}
-            newPlane.planeMin = currPlane.planeMin + Vector3(300,0,0);
-            newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
-            newPlane.planePos = newPlane.planeMin;
+		if (camera.position.x > currPlane.planeMax.x - 40){
+			plane newPlane;
+			//int offset = 0;
+			//if (planesList.size() == 1){
+			//    offset = 300;
+			//}
+			//else{
+			//    offset = 0;
+			//}
+			newPlane.planeMin = currPlane.planeMin + Vector3(300, 0, 0);
+			newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
+			newPlane.planePos = newPlane.planeMin;
 
-            planesList.push_back(newPlane);
+			planesList.push_back(newPlane);
 
-        }
+		}
 
-        if (camera.position.x < currPlane.planeMin.x + 40){
-            plane newPlane;
-            //int offset = 0;
-            //if (planesList.size() == 1){
-            //    offset = 300;
-            //}
-            //else{
-            //    offset = 0;
-            //}
-            newPlane.planeMin = currPlane.planeMin - Vector3(300, 0, 0);
-            newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
-            newPlane.planePos = newPlane.planeMin;
+		if (camera.position.x < currPlane.planeMin.x + 40){
+			plane newPlane;
+			//int offset = 0;
+			//if (planesList.size() == 1){
+			//    offset = 300;
+			//}
+			//else{
+			//    offset = 0;
+			//}
+			newPlane.planeMin = currPlane.planeMin - Vector3(300, 0, 0);
+			newPlane.planeMax = Vector3(newPlane.planeMin.x + 300, 0, newPlane.planeMin.z + 300);
+			newPlane.planePos = newPlane.planeMin;
 
-            planesList.push_back(newPlane);
+			planesList.push_back(newPlane);
 
-        }
+		}
 
+		std::cout << "plane pos" << startingPlane.planePos << std::endl;
+		std::cout << planesList.size() << std::endl;
 
+		if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
+		{
+			camera.position = PlanePos;
+			camera.view = Vector3(1, 0, 0);
+			camera.target = camera.position + camera.view;
+			camera.up = Vector3(0, 1, 0);
+			camera.right = camera.view.Cross(camera.up);
+			camera.right.Normalized();
 
-        std::cout << "plane pos" << startingPlane.planePos << std::endl;
-        std::cout << planesList.size() << std::endl;
-
-	if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
-	{
-		camera.position = PlanePos;
-		camera.view = Vector3(1, 0, 0);
-		camera.target = camera.position + camera.view;
-		camera.up = Vector3(0, 1, 0);
-		camera.right = camera.view.Cross(camera.up);
-		camera.right.Normalized();
-
-		inputDelay = 0;
-		board = false;
+			inputDelay = 0;
+			board = false;
+		}
 	}
+	
 
 	if (board == true)
 	{
@@ -487,22 +487,39 @@ void SP2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+	modelStack.Translate(-50, -10, 0);
+	//modelStack.Rotate(180, 1, 0, 0);
+	modelStack.Scale(10, 10, 10);
+	RenderMesh(meshList[GEO_GUN], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	//modelStack.Translate(-5, 0, 0);
+	//modelStack.Rotate(-90, 1, 0, 0);
+	//modelStack.Scale(30, 30, 1);
+	RenderMesh(meshList[GEO_SWORD], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
 	modelStack.Translate(PlanePos.x, PlanePos.y, PlanePos.z);
 	modelStack.Scale(10, 10, 10);
 	RenderMesh(meshList[GEO_PELICAN], false);
 	modelStack.PopMatrix();
-
+	RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.up.x), Color(0, 0, 0), 1, 1, 46);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.up.y), Color(0, 0, 0), 1, 1, 44);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(0, 0, 0), 1, 1, 46);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(0, 0, 0), 1, 1, 44);
 	RenderTextOnScreen(meshList[GEO_TEXT], "distance sword " + std::to_string(distanceSword), Color(0, 0, 0), 1, 1, 42);
 	RenderTextOnScreen(meshList[GEO_TEXT], "distance gun " + std::to_string(distanceGun), Color(0, 0, 0), 1, 1, 40);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
 	RenderTextOnScreen(meshList[GEO_TEXT], ">0<", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
 
 	if (collideText)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Collide!!!", Color(0, 0, 0), 1, 40, 25);
+	if (Singleton::getInstance()->buttonText == true)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
 }
 
 void SP2::RenderSkybox()
