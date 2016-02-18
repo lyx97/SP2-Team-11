@@ -222,6 +222,8 @@ void SP2::Update(double dt)
 
         FPS = std::to_string(toupper(1 / dt));
 
+        planeLoader();
+
 		for (auto q : Object::objectVec)
 		{
 			if (Application::IsKeyPressed('E') && q->hitbox.isTouching(camera.target))
@@ -374,11 +376,8 @@ void SP2::Render()
 
     map<int, plane>::iterator iter;
    
-    int count = 0;
-
     for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
 	{
-        count++;
         
 		modelStack.PushMatrix();
 		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
@@ -388,9 +387,7 @@ void SP2::Render()
         modelStack.PopMatrix();
         
 	}
-    static int counter = count;
-    std::cout << counter << std::endl;
-    cout << planeMap.size() << std::endl;
+
 	for (auto pos : orePos)
 	{
 		modelStack.PushMatrix();
@@ -645,7 +642,39 @@ void SP2::planeInit(){
     planeMap.insert(std::pair<int, plane>(8, startingPlane));
 
 }                                                              
-                                                                                                
+                                                                          
+void SP2::planeLoader(){
+
+    for (auto iter : planeMap){
+
+        if ((camera.position.x >= iter.second.planeMin.x && camera.position.x <= iter.second.planeMax.x) && (camera.position.z >= iter.second.planeMin.z && camera.position.z <= iter.second.planeMax.z)){
+
+            currPlane = iter.second;
+            currPlaneKey = iter.first;
+        }
+
+    }
+
+    planeMap[4] = planeMap[currPlaneKey];
+    planeMap[1].planeMin = planeMap[1].planePos = planeMap[4].planeMin + Vector3(0, 0, 150);
+    planeMap[1].planeMax = planeMap[1].planeMin + Vector3(150, 0, 150);
+    planeMap[0].planeMin = planeMap[0].planePos = planeMap[1].planeMin - Vector3(150, 0, 0);
+    planeMap[0].planeMax = planeMap[0].planeMin + Vector3(150, 0, 150);
+    planeMap[2].planeMin = planeMap[2].planePos = planeMap[1].planeMin + Vector3(150, 0, 0);
+    planeMap[2].planeMax = planeMap[2].planeMin + Vector3(150, 0, 150);
+    planeMap[3].planeMin = planeMap[3].planePos = planeMap[4].planeMin - Vector3(150, 0, 0);
+    planeMap[3].planeMax = planeMap[3].planeMin + Vector3(150, 0, 150);
+    planeMap[5].planeMin = planeMap[5].planePos = planeMap[4].planeMin + Vector3(150, 0, 0);
+    planeMap[5].planeMax = planeMap[5].planeMin + Vector3(150, 0, 150);
+    planeMap[6].planeMin = planeMap[6].planePos = planeMap[4].planeMin - Vector3(150, 0, 150);
+    planeMap[6].planeMax = planeMap[6].planeMin + Vector3(150, 0, 150);
+    planeMap[7].planeMin = planeMap[7].planePos = planeMap[6].planeMin + Vector3(150, 0, 0);
+    planeMap[7].planeMax = planeMap[7].planeMin + Vector3(150, 0, 150);
+    planeMap[8].planeMin = planeMap[8].planePos = planeMap[7].planeMin + Vector3(150, 0, 0);
+    planeMap[8].planeMax = planeMap[8].planeMin + Vector3(150, 0, 150);
+
+}
+
 void SP2::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

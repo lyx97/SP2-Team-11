@@ -85,6 +85,7 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y);
+    void planeLoader();
     void planeInit();
 
 	unsigned m_vertexArrayID;
@@ -106,7 +107,7 @@ private:
 	map<int,plane> planeMap;
 	plane startingPlane;
     plane currPlane;
-
+    int currPlaneKey;
 	Object* ore;
 
 	Camera camera;
