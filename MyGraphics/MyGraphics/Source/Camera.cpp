@@ -26,19 +26,7 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	right.Normalize();
 	this->up = right.Cross(view).Normalized();
 }
-bool Camera::collision(Vector3& camPos)
-{
-	//sword distance
-	//if (sqrtf(
-		//(Singleton::getInstance()->swordPos.x - camPos.x) * (Singleton::getInstance()->swordPos.x - camPos.x) + 
-		//(Singleton::getInstance()->swordPos.z - camPos.z) * (Singleton::getInstance()->swordPos.z - camPos.z)) < 5) 
-		//return false;
 
-	//gun distance
-	if (sqrtf((-50.f - camPos.x) * (-50.f - camPos.x) + (0.f - camPos.z) * (0.f - camPos.z)) < 5) return false;
-
-	else return true;
-}
 bool bound(Vector3& camPos)
 {
 	for (int i = 0; i < Object::objectVec.size(); i++)
