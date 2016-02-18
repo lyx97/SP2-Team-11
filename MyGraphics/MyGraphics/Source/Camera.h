@@ -20,12 +20,13 @@ public:
 	bool togJump = false;
 	float delay = 4.f;
 	float jumpDelay = 9.f;
+
 	double mousex, mousey;
 
 	Camera();
 	~Camera();
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
-	virtual void Update(double dt, vector<Object*> objectVec);
+	virtual void Update(double dt);
 	virtual void Reset();
 	void EnterShip(Vector3& planePos, double dt);
 	bool collision(Vector3& camPos);

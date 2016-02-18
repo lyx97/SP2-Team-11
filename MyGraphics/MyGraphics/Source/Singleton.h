@@ -1,4 +1,10 @@
 #pragma once
+#include "Vector3.h"
+#include <map>
+#include "Object.h"
+#include "Inventory.h"
+
+using std::map;
 
 class Singleton
 {
@@ -11,6 +17,8 @@ public:
 	}
 	bool pause;
 	bool buttonText;
+	map<Object*, int> objectCount;
+
 private:
 	Singleton(){}
 };

@@ -2,13 +2,15 @@
 
 Hitbox::Hitbox(Vector3 pos, Vector3 size)
 {
-	maxPt.x = pos.x + size.x;
-	maxPt.y = pos.y + size.y;
-	maxPt.z = pos.z + size.z;
+	this->pos = pos;
+	this->size = size;
 
-	minPt.x = -pos.x - size.x;
-	minPt.y = -pos.y - size.y;
-	minPt.z = -pos.z - size.z;
+	maxPt.x = pos.x + size.x / 2;
+	maxPt.y = pos.y + size.y / 2;
+	maxPt.z = pos.z + size.z / 2;
+	minPt.x = pos.x - size.x / 2;
+	minPt.y = pos.y - size.y / 2;
+	minPt.z = pos.z - size.z / 2;
 }
 
 Hitbox::~Hitbox()

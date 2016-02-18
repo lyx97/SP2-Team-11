@@ -39,6 +39,7 @@ class SP2 : public Scene
 		GEO_GUN,
 		GEO_SWORD,
         GEO_HITBOX,
+
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -103,9 +104,10 @@ private:
 	int oreFrequency = 100;
 	std::vector<Vector3> orePos;
 	map<int,plane> planeMap;
+	plane startingPlane;
     plane currPlane;
 
-	Object* test = new Object();
+	Object* ore;
 
 	Camera camera;
 	Light light[10];

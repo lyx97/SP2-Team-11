@@ -4,7 +4,7 @@
 class Hitbox
 {
 public:
-	Hitbox(Vector3 pos = Vector3(0, 0, 0), Vector3 size = Vector3(2, 2, 2));
+	Hitbox(Vector3 pos = Vector3(0, 0, 0), Vector3 size = Vector3(1, 1, 1));
 	~Hitbox();
 
 	bool isTouching(Vector3 camPos);

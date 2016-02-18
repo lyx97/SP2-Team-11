@@ -10,12 +10,7 @@ Inventory::~Inventory()
 {
 }
 
-void Inventory::addObject(Object* add, int amount)
+void Inventory::addObject(Object* object)
 {
-
-}
-
-int Inventory::getAmount()
-{
-	return 0;
+	Singleton::getInstance()->objectCount[object]++;
 }

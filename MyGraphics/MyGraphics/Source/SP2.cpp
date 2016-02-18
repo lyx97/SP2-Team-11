@@ -30,6 +30,9 @@ void SP2::Init()
 	inputDelay = 9.0f;
 	board = false;
 	PlanePos.Set(10, 0, 50);
+	startingPlane.planePos = Vector3(0, 0, 0);
+	startingPlane.planeMin = Vector3(0, 0, 0);
+	startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
 	for (int loop = 0; loop < oreFrequency; loop++)
 	{
@@ -165,12 +168,17 @@ void SP2::Init()
 	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0), TexCoord(1, 1));
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//planet1_lf.tga");
 
-	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
+	meshList[GEO_TEXT] = MeshBuilder::GenerateText("TEXT", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//heh.tga");
 
-	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 1, 1));
-	test->setPos(0, 0, 0);
-	test->setSize(20, 20, 20);
+	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
+
+	for (auto q : orePos)
+	{
+		//cout << q.x << " " << q.y << " " << q.z << endl;
+		ore = new Object(Vector3(q.x, 0, q.z), Vector3(10, 7, 10));
+	}
+ 	cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 }
 
 static float LSPEED = 10.f;
@@ -213,20 +221,29 @@ void SP2::Update(double dt)
         glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
         FPS = std::to_string(toupper(1 / dt));
-        distanceSword = sqrtf((0.f - camera.position.x) * (0.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
+	
+	distanceSword = sqrtf(
+		(Singleton::getInstance()->swordPos.x - camera.position.x) * (Singleton::getInstance()->swordPos.x - camera.position.x) + 
+		(Singleton::getInstance()->swordPos.z - camera.position.z) * (Singleton::getInstance()->swordPos.z - camera.position.z));
         distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
 
         if (distanceSword < 10) collideText = true;
         else if (distanceGun < 10) collideText = true;
         else collideText = false;
 
-
+	for (auto q : Object::objectVec)
+	{
+		if (Application::IsKeyPressed('E') && q->hitbox.isTouching(camera.target))
+		{
+			Inventory::addObject(ore);
+			delete q;
+		}
+	}
 
         if (inputDelay <= 10.0f)
         {
             inputDelay += (float)(1 * dt);
         }
-
 
         if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
         {
@@ -360,11 +377,9 @@ void SP2::Render()
 	for (int i = 0; i < Object::objectVec.size(); i++)
 	{
 		modelStack.PushMatrix();
-		//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(Object::objectVec[i]->pos.x, Object::objectVec[i]->pos.y, Object::objectVec[i]->pos.z);
 		modelStack.Scale(Object::objectVec[i]->size.x, Object::objectVec[i]->size.y, Object::objectVec[i]->size.z);
-		RenderMesh(meshList[GEO_HITBOX], false);
-		//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		//RenderMesh(meshList[GEO_HITBOX], false);
 		modelStack.PopMatrix();
 	}
 
@@ -388,7 +403,8 @@ void SP2::Render()
     std::cout << counter << std::endl;
     cout << planeMap.size() << std::endl;
     std::cout << camera.position << std::endl;
-	for (auto pos : orePos){
+	for (auto pos : orePos)
+	{
 		modelStack.PushMatrix();
 		modelStack.Translate(0 + pos.x, 0, 0 + pos.z);
 		modelStack.Scale(4, 4, 4);
@@ -407,20 +423,6 @@ void SP2::Render()
 	modelStack.Translate(0, -7.5, 0);
 	modelStack.Scale(10, 10, 10);
 	RenderMesh(meshList[GEO_ATAT], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-50, -10, 0);
-	//modelStack.Rotate(180, 1, 0, 0);
-	modelStack.Scale(10, 10, 10);
-	RenderMesh(meshList[GEO_GUN], true);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	//modelStack.Translate(-5, 0, 0);
-	//modelStack.Rotate(-90, 1, 0, 0);
-	//modelStack.Scale(30, 30, 1);
-	RenderMesh(meshList[GEO_SWORD], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -654,8 +656,8 @@ void SP2::planeInit(){
 
 }                                                              
                                                                                                 
-void SP2::Exit()                                                                                
-{                                                                                                
+void SP2::Exit()
+{
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }

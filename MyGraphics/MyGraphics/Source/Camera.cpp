@@ -29,26 +29,31 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 bool Camera::collision(Vector3& camPos)
 {
 	//sword distance
-	if (sqrtf((0.f - camPos.x) * (0.f - camPos.x) + (0.f - camPos.z) * (0.f - camPos.z)) < 5) return false;
+	//if (sqrtf(
+		//(Singleton::getInstance()->swordPos.x - camPos.x) * (Singleton::getInstance()->swordPos.x - camPos.x) + 
+		//(Singleton::getInstance()->swordPos.z - camPos.z) * (Singleton::getInstance()->swordPos.z - camPos.z)) < 5) 
+		//return false;
 
 	//gun distance
-	else if (sqrtf((-50.f - camPos.x) * (-50.f - camPos.x) + (0.f - camPos.z) * (0.f - camPos.z)) < 5) return false;
+	if (sqrtf((-50.f - camPos.x) * (-50.f - camPos.x) + (0.f - camPos.z) * (0.f - camPos.z)) < 5) return false;
 
 	else return true;
 }
 bool bound(Vector3& camPos)
 {
-	Vector3 maxPos(300, 0, 300);
-	Vector3 minPos(-300, 0, -300);
-	if ((maxPos.x > camPos.x && minPos.x < camPos.x) &&
-		(maxPos.z > camPos.z && minPos.z < camPos.z)	)
+	for (int i = 0; i < Object::objectVec.size(); i++)
 	{
-		return true;
+		if ((Object::objectVec[i]->hitbox.maxPt.x > camPos.x) && (Object::objectVec[i]->hitbox.minPt.x < camPos.x) &&
+			(Object::objectVec[i]->hitbox.maxPt.y > camPos.y) && (Object::objectVec[i]->hitbox.minPt.y < camPos.y) &&
+			(Object::objectVec[i]->hitbox.maxPt.z > camPos.z) && (Object::objectVec[i]->hitbox.minPt.z < camPos.z))
+		{
+			return false;
+		}
+		else
+		{
+		}
 	}
-	else
-	{
-		return true;
-	}
+	return true;
 }
 
 bool planeHitbox(Vector3& camPos)
@@ -111,7 +116,7 @@ void Camera::EnterShip(Vector3& planePos, double dt)
 	}
 }
 
-void Camera::Update(double dt, vector<Object*> objectVec)
+void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 200.f;
 	static const float SPRINT_SPEED = 120.f;
@@ -199,7 +204,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 		{
 			boundCheckPos.x += view.x * (float)(CAMERA_SPEED * dt);
 			boundCheckPos.z += view.z * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos) && collision(boundCheckPos))
+			if (bound(boundCheckPos))
 			{
 				if (Application::IsKeyPressed(VK_SHIFT))
 				{
@@ -229,7 +234,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 		{
 			boundCheckPos.x -= view.x * (float)(CAMERA_SPEED * dt);
 			boundCheckPos.z -= view.z * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos) && collision(boundCheckPos))
+			if (bound(boundCheckPos))
 			{
 				if (Application::IsKeyPressed(VK_SHIFT))
 				{
@@ -258,7 +263,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 		else
 		{
 			boundCheckPos += right * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos) && collision(boundCheckPos))
+			if (bound(boundCheckPos))
 			{
 				position += right * (float)(CAMERA_SPEED * dt);
 				target += right * (float)(CAMERA_SPEED * dt);
@@ -275,7 +280,7 @@ void Camera::Update(double dt, vector<Object*> objectVec)
 		else
 		{
 			boundCheckPos -= right * (float)(CAMERA_SPEED * dt);
-			if (bound(boundCheckPos) && collision(boundCheckPos))
+			if (bound(boundCheckPos))
 			{
 				position -= right * (float)(CAMERA_SPEED * dt);
 				target -= right * (float)(CAMERA_SPEED * dt);
