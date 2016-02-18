@@ -29,7 +29,7 @@ struct Light
 	{
 		position.Set(0, 0, 0);
 		color.Set(1, 1, 1);
-		power = 0.8f;
+		power = 1.0f;
 		kC = kL = kQ = 0;
 	}
 };

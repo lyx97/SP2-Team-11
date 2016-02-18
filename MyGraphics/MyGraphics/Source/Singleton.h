@@ -15,6 +15,7 @@ public:
 
 		return &instance;
 	}
+
 	bool pause;
 	bool buttonText;
 	map<Object*, int> objectCount;

@@ -176,9 +176,9 @@ void SP2::Init()
 	for (auto q : orePos)
 	{
 		//cout << q.x << " " << q.y << " " << q.z << endl;
-		ore = new Object(Vector3(q.x, 0, q.z), Vector3(10, 7, 10));
+		ore = new Object(Vector3(q.x, 7, q.z), Vector3(10, 15, 10));
 	}
- 	cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
+ 	//cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 }
 
 static float LSPEED = 10.f;
@@ -221,24 +221,15 @@ void SP2::Update(double dt)
         glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
         FPS = std::to_string(toupper(1 / dt));
-	
-	distanceSword = sqrtf(
-		(Singleton::getInstance()->swordPos.x - camera.position.x) * (Singleton::getInstance()->swordPos.x - camera.position.x) + 
-		(Singleton::getInstance()->swordPos.z - camera.position.z) * (Singleton::getInstance()->swordPos.z - camera.position.z));
-        distanceGun = sqrtf((-50.f - camera.position.x) * (-50.f - camera.position.x) + (0.f - camera.position.z) * (0.f - camera.position.z));
 
-        if (distanceSword < 10) collideText = true;
-        else if (distanceGun < 10) collideText = true;
-        else collideText = false;
-
-	for (auto q : Object::objectVec)
-	{
-		if (Application::IsKeyPressed('E') && q->hitbox.isTouching(camera.target))
+		for (auto q : Object::objectVec)
 		{
-			Inventory::addObject(ore);
-			delete q;
+			if (Application::IsKeyPressed('E') && q->hitbox.isTouching(camera.target))
+			{
+				Inventory::addObject(ore);
+				delete q;
+			}
 		}
-	}
 
         if (inputDelay <= 10.0f)
         {
@@ -257,8 +248,6 @@ void SP2::Update(double dt)
             inputDelay = 0;
             board = true;
         }
-
-
 
         if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
         {
@@ -279,7 +268,7 @@ void SP2::Update(double dt)
         }
         else
         {
-            camera.Update(dt, Object::objectVec);
+            camera.Update(dt);
         }
 
     }
@@ -391,18 +380,17 @@ void SP2::Render()
 	{
         count++;
         
-            modelStack.PushMatrix();
-            modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
-            modelStack.Rotate(-90, 1, 0, 0);
-            modelStack.Scale(150, 150, 1);
-            RenderMesh(meshList[GEO_GLASS], true);
-            modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
+        modelStack.Rotate(-90, 1, 0, 0);
+        modelStack.Scale(150, 150, 1);
+        RenderMesh(meshList[GEO_GLASS], true);
+        modelStack.PopMatrix();
         
 	}
     static int counter = count;
     std::cout << counter << std::endl;
     cout << planeMap.size() << std::endl;
-    std::cout << camera.position << std::endl;
 	for (auto pos : orePos)
 	{
 		modelStack.PushMatrix();
@@ -439,10 +427,12 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "distance sword " + std::to_string(distanceSword), Color(0, 0, 0), 1, 1, 42);
 	RenderTextOnScreen(meshList[GEO_TEXT], "distance gun " + std::to_string(distanceGun), Color(0, 0, 0), 1, 1, 40);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
+	for (auto q : Singleton::getInstance()->objectCount)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
+	}
 	RenderTextOnScreen(meshList[GEO_TEXT], ">0<", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
 
-	if (collideText)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Collide!!!", Color(0, 0, 0), 1, 40, 25);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
 }
