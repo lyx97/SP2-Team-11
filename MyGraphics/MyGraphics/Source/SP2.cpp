@@ -142,7 +142,7 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10));
+	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
 	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
 
 	meshList[GEO_HOUSE2] = MeshBuilder::GenerateCube("WALLS", Color(0.3f, 0.3f, 0.3f));
@@ -188,13 +188,13 @@ std::string FPS;
 
 void SP2::Update(double dt)
 {
-    if (Singleton::getInstance()->pause == true)
-    {
-        if (Application::IsKeyPressed('O'))
-        {
-            Singleton::getInstance()->pause = false;
-        }
-    }
+	if (Singleton::getInstance()->pause == true)
+	{
+		if (Application::IsKeyPressed('O'))
+		{
+			Singleton::getInstance()->pause = false;
+		}
+	}
 	else
 	{
 		for (auto q : Singleton::getInstance()->objectCount)
@@ -252,16 +252,16 @@ void SP2::Update(double dt)
 			}
 		}
 
-        if (inputDelay <= 10.0f)
-        {
-            inputDelay += (float)(1 * dt);
-        }
-        else
-        {
-            camera.Update(dt);
-        }
+		if (inputDelay <= 10.0f)
+		{
+			inputDelay += (float)(1 * dt);
+		}
+		else
+		{
+			camera.Update(dt);
+		}
 		cout << cameraStore << endl;
-    }
+	}
 }
 
 void SP2::RenderMesh(Mesh *mesh, bool enableLight)
@@ -375,13 +375,6 @@ void SP2::Render()
 		RenderMesh(meshList[GEO_GROUND], true);
 		modelStack.PopMatrix();
 	}
-
-	//for (auto q : orePos)
-	//{
-	//	cout << q.x << " " << q.y << " " << q.z << endl;
-	//	ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5));
-	//	cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
-	//}
 
 	for (auto q : Object::objectVec)
 	{
