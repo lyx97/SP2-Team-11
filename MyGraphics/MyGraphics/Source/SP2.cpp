@@ -124,24 +124,10 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_GLASS] = MeshBuilder::GenerateQuad("GLASS", Color(0.3f, 0.3f, 0.3f), TexCoord(10,10));
-    meshList[GEO_GLASS]->textureID = LoadTGA("Image//planet1_land.tga");
-
-
-	meshList[GEO_HOUSE1] = MeshBuilder::GenerateQuad("FLOOR", Color(0.3f, 0.3f, 0.3f), TexCoord(1, 1));
-	meshList[GEO_HOUSE1]->material.kAmbient.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_HOUSE1]->material.kDiffuse.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_HOUSE1]->material.kSpecular.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_HOUSE1]->material.kShininess = 0.5f;
-	meshList[GEO_HOUSE1]->textureID = LoadTGA("Image//floor.tga");
+	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10));
+	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
 
 	meshList[GEO_HOUSE2] = MeshBuilder::GenerateCube("WALLS", Color(0.3f, 0.3f, 0.3f));
-
-	meshList[GEO_ATAT] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//ground_UV.obj");
-	meshList[GEO_ATAT]->textureID = LoadTGA("Image//ground_UV.tga");
-
-	meshList[GEO_PELICAN] = MeshBuilder::GenerateOBJ("PELICAN", "OBJ//air.obj");
-	meshList[GEO_PELICAN]->textureID = LoadTGA("Image//air_UV.tga");
 
 	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("ORE", "OBJ//Ore.obj");
 	meshList[GEO_ORE]->textureID = LoadTGA("Image//TinOre.tga");
@@ -238,36 +224,6 @@ void SP2::Update(double dt)
             inputDelay += (float)(1 * dt);
         }
 
-        if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
-        {
-            camera.target = PlanePos;
-            camera.view = Vector3(1, 0, 0);
-            camera.position = camera.target - camera.view * 100;
-            camera.up = Vector3(0, 1, 0);
-            camera.right = camera.view.Cross(camera.up);
-            camera.right.Normalized();
-
-            inputDelay = 0;
-            board = true;
-        }
-
-        if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
-        {
-            camera.position = PlanePos;
-            camera.view = Vector3(1, 0, 0);
-            camera.target = camera.position + camera.view;
-            camera.up = Vector3(0, 1, 0);
-            camera.right = camera.view.Cross(camera.up);
-            camera.right.Normalized();
-
-            inputDelay = 0;
-            board = false;
-        }
-
-        if (board == true)
-        {
-            camera.EnterShip(PlanePos, dt);
-        }
         else
         {
             camera.Update(dt);
@@ -358,7 +314,7 @@ void SP2::Render()
 	RenderSkybox();
 	modelStack.PopMatrix();
 	//t->r->s
-	RenderMesh(meshList[GEO_AXES], false);
+	//RenderMesh(meshList[GEO_AXES], false);
 
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
@@ -378,14 +334,12 @@ void SP2::Render()
    
     for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
 	{
-        
 		modelStack.PushMatrix();
 		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
         modelStack.Rotate(-90, 1, 0, 0);
         modelStack.Scale(150, 150, 1);
-        RenderMesh(meshList[GEO_GLASS], true);
+		RenderMesh(meshList[GEO_GROUND], true);
         modelStack.PopMatrix();
-        
 	}
 
 	for (auto pos : orePos)
@@ -396,25 +350,7 @@ void SP2::Render()
 		RenderMesh(meshList[GEO_ORE], true);
 		modelStack.PopMatrix();
 	}
-  
-	modelStack.PushMatrix();
-	modelStack.Translate(90, -6.8, 70);
-	modelStack.Rotate(-90, 1, 0, 0);
-	modelStack.Scale(30, 30, 1);
-	RenderMesh(meshList[GEO_HOUSE1], true);
-	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(0, -7.5, 0);
-	modelStack.Scale(10, 10, 10);
-	RenderMesh(meshList[GEO_ATAT], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(PlanePos.x, PlanePos.y, PlanePos.z);
-	modelStack.Scale(10, 10, 10);
-	RenderMesh(meshList[GEO_PELICAN], false);
-	modelStack.PopMatrix();
 	RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
@@ -552,6 +488,7 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+
 void SP2::RenderUI(Mesh* mesh, float size, float x, float y)
 {
 	glDisable(GL_DEPTH_TEST);

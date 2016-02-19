@@ -21,7 +21,7 @@ class SP2 : public Scene
 	{
 		GEO_CUBE = 0,
 		GEO_AXES,
-		GEO_GLASS,
+		GEO_GROUND,
 		GEO_LIGHTBALL,
 		GEO_LEFT,
 		GEO_RIGHT,
