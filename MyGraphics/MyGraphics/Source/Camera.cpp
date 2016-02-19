@@ -44,74 +44,12 @@ bool bound(Vector3& camPos)
 	return true;
 }
 
-bool planeHitbox(Vector3& camPos)
-{
-	Vector3 maxPos(30, 0, 70);
-	Vector3 minPos(-10, 0, 33);
-	if ((camPos.x > minPos.x && camPos.x < maxPos.x) &&
-		(camPos.z > minPos.z && camPos.z < maxPos.z))
-	{
-		return true;
-	}
-	else 
-	{
-		return false;
-	}
-}
-
-bool chopperHitbox(Vector3& camPos)
-{
-	Vector3 maxPos(95, 0, 155);
-	Vector3 minPos(85, 0, 145);
-	if ((camPos.x > minPos.x && camPos.x < maxPos.x) &&
-		(camPos.z > minPos.z && camPos.z < maxPos.z))
-	{
-		return true;
-	}
-	else 
-	{
-		return false;
-	}
-}
-
-void Camera::EnterShip(Vector3& planePos, double dt)
-{	
-	static const float LOOKING_SPEED = 20.f;
-
-	Application::MouseMove(mousex, mousey);
-	float yaw = LOOKING_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
-	float pitch = LOOKING_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
-
-	if (yaw != 0)
-	{
-		Mtx44 rotation;
-		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = rotation * view;
-		position.x = target.x - view.x * 100.f;
-		position.z = target.z - view.z * 100.f;
-		up = rotation * up;
-		right = rotation * right;
-	}
-	
-	if (pitch != 0)
-	{
-		Mtx44 rotation;
-		rotation.SetToRotation(pitch, right.x, right.y, right.z);
-		view = rotation * view;
-		position = target - view * 100.f;
-		up = rotation * up;
-		right = rotation * right;
-	}
-}
-
 void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 200.f;
-	static const float SPRINT_SPEED = 820.f;
+	static const float SPRINT_SPEED = 800.f;
 	static const float LOOKING_SPEED = 20.f;
 	static const float JUMPING_SPEED = 30.f;
-
-	
 
 	Vector3 boundCheckPos = position;
 
@@ -140,7 +78,6 @@ void Camera::Update(double dt)
 		{
 			if (Application::IsKeyPressed(VK_SHIFT))
 			{
-                
 				position += view * (float)(SPRINT_SPEED * dt);
 				target += view * (float)(SPRINT_SPEED * dt);
 			}
@@ -177,7 +114,6 @@ void Camera::Update(double dt)
 	{
 		if (flying == true)
 		{
-
 			position -= view * (float)(CAMERA_SPEED * dt);
 			target -= view * (float)(CAMERA_SPEED * dt);
 		}
@@ -261,8 +197,25 @@ void Camera::Update(double dt)
 			right.Normalize();
 			Mtx44 rotation;
 			rotation.SetToRotation(pitch, right.x, right.y, right.z);
-			view = rotation * view;
-            target = position + view * 5;
+			if (target.y - position.y > 4.0)
+			{
+				if (pitch < 0)
+				{
+					view = rotation * view;
+				}
+			}
+			else if (target.y - position.y < -4.0)
+			{
+				if (pitch > 0)
+				{
+					view = rotation * view;
+				}
+			}
+			else if (target.y - position.y  > -4.0 && target.y - position.y < 4.0)
+			{
+				view = rotation * view;
+			}
+			target = position + view * 5;
 			up = right.Cross(view);
 		}
 		// --------------
@@ -288,7 +241,6 @@ void Camera::Update(double dt)
 			Singleton::getInstance()->buttonText = false;
 		}
 	}
-
 	if (Application::IsKeyPressed('R'))
 	{
 		Reset();

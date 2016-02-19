@@ -108,7 +108,11 @@ private:
 	plane startingPlane;
     plane currPlane;
     int currPlaneKey;
+
+	bool oreReached;
 	Object* ore;
+	Vector3 cameraStore;
+	
     int landMaxX, landMinX, landMaxZ, landMinZ;
 	Camera camera;
 	Light light[10];

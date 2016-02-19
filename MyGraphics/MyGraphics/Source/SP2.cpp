@@ -56,6 +56,8 @@ void SP2::Init()
         orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
     }
 
+    oreReached = false;
+
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
@@ -140,28 +142,16 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10,10));
-    meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
-
-
-	meshList[GEO_HOUSE1] = MeshBuilder::GenerateQuad("FLOOR", Color(0.3f, 0.3f, 0.3f), TexCoord(1, 1));
-	meshList[GEO_HOUSE1]->material.kAmbient.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_HOUSE1]->material.kDiffuse.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_HOUSE1]->material.kSpecular.Set(0.4f, 0.4f, 0.4f);
-	meshList[GEO_HOUSE1]->material.kShininess = 0.5f;
-	meshList[GEO_HOUSE1]->textureID = LoadTGA("Image//floor.tga");
-
+	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10));
+	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
 
 	meshList[GEO_HOUSE2] = MeshBuilder::GenerateCube("WALLS", Color(0.3f, 0.3f, 0.3f));
 
 	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("ORE", "OBJ//Ore.obj");
 	meshList[GEO_ORE]->textureID = LoadTGA("Image//TinOre.tga");
 
-	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//gun3.obj");
-	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
-
-	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//sword.obj");
-	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
+	meshList[GEO_PELICAN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//air.obj");
+	meshList[GEO_PELICAN]->textureID = LoadTGA("Image//air_UV.tga");
 
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
@@ -186,11 +176,10 @@ void SP2::Init()
 
 	for (auto q : orePos)
 	{
-		//cout << q.x << " " << q.y << " " << q.z << endl;
-		ore = new Object(Vector3(q.x, 7, q.z), Vector3(10, 15, 10));
-        cout << q << endl;
+		cout << q.x << " " << q.y << " " << q.z << endl;
+		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5));
+		cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 	}
- 	//cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 }
 
 static float LSPEED = 10.f;
@@ -208,6 +197,24 @@ void SP2::Update(double dt)
     }
 	else
 	{
+		for (auto q : Singleton::getInstance()->objectCount)
+		{
+			if (Singleton::getInstance()->objectCount[ore] >= 4)
+			{
+				oreReached = true;
+			}
+			else
+			{
+				oreReached = false;
+			}
+		}
+		if (!oreReached)
+		{
+			cameraStore = camera.position;
+		}
+		else
+		{
+		}
 		if (Application::IsKeyPressed('1')) //enable back face culling
 			glEnable(GL_CULL_FACE);
 		if (Application::IsKeyPressed('2')) //disable back face culling
@@ -245,56 +252,15 @@ void SP2::Update(double dt)
 			}
 		}
 
-
-	}
-    if (inputDelay <= 10.0f)
-    {
-        inputDelay += (float)(1 * dt);
-    }
-
         if (inputDelay <= 10.0f)
         {
             inputDelay += (float)(1 * dt);
-        }
-
-        if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
-        {
-            camera.target = shipPos;
-            camera.view = Vector3(1, 0, 0);
-            camera.position = camera.target - camera.view * 100;
-            camera.up = Vector3(0, 1, 0);
-            camera.right = camera.view.Cross(camera.up);
-            camera.right.Normalized();
-
-            inputDelay = 0;
-            board = true;
-        }
-
-        if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
-        {
-            camera.position = shipPos;
-            camera.view = Vector3(1, 0, 0);
-            camera.target = camera.position + camera.view;
-            camera.up = Vector3(0, 1, 0);
-            camera.right = camera.view.Cross(camera.up);
-            camera.right.Normalized();
-
-            inputDelay = 0;
-            board = false;
-        }
-
-        if (board == true)
-        {
-            camera.EnterShip(shipPos, dt);
         }
         else
         {
             camera.Update(dt);
         }
-
-    else
-    {
-        camera.Update(dt);
+		cout << cameraStore << endl;
     }
 }
 
@@ -384,44 +350,70 @@ void SP2::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
-	RenderMesh(meshList[GEO_LIGHTBALL], false);
+	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
 	for (int i = 0; i < Object::objectVec.size(); i++)
 	{
 		modelStack.PushMatrix();
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(Object::objectVec[i]->pos.x, Object::objectVec[i]->pos.y, Object::objectVec[i]->pos.z);
 		modelStack.Scale(Object::objectVec[i]->size.x, Object::objectVec[i]->size.y, Object::objectVec[i]->size.z);
 		//RenderMesh(meshList[GEO_HITBOX], false);
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
 
-    map<int, plane>::iterator iter;
-   
-    for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
+	map<int, plane>::iterator iter;
+
+	for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
-        modelStack.Rotate(-90, 1, 0, 0);
-        modelStack.Scale(150, 150, 1);
-        RenderMesh(meshList[GEO_GROUND], true);
-        modelStack.PopMatrix();
-	}
-
-	for (auto pos : orePos)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(pos.x, 0, pos.z);
-		modelStack.Scale(4, 4, 4);
-		RenderMesh(meshList[GEO_ORE], true);
+		modelStack.Rotate(-90, 1, 0, 0);
+		modelStack.Scale(150, 150, 1);
+		RenderMesh(meshList[GEO_GROUND], true);
 		modelStack.PopMatrix();
 	}
-	modelStack.PushMatrix();
-	modelStack.Translate(0, -7.5, 0);
-	modelStack.Scale(10, 10, 10);
-	RenderMesh(meshList[GEO_ATAT], false);
-	modelStack.PopMatrix();
 
+	//for (auto q : orePos)
+	//{
+	//	cout << q.x << " " << q.y << " " << q.z << endl;
+	//	ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5));
+	//	cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
+	//}
+
+	for (auto q : Object::objectVec)
+	{
+		if (ore)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(q->pos.x, 0, q->pos.z);
+			modelStack.Scale(4, 4, 4);
+			RenderMesh(meshList[GEO_ORE], true);
+			modelStack.PopMatrix();
+		}
+	}
+
+	if (oreReached)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(cameraStore.x, cameraStore.y, cameraStore.z);
+		modelStack.Scale(10, 10, 10);
+		RenderMesh(meshList[GEO_PELICAN], true);
+		modelStack.PopMatrix();
+	}
+
+
+	modelStack.PushMatrix();
+	modelStack.Translate(
+		camera.target.x,
+		camera.target.y,
+		camera.target.z
+		);
+	modelStack.Scale(0.1f, 0.1f, 0.1f);
+	//RenderMesh(meshList[GEO_LIGHTBALL], true);
+	modelStack.PopMatrix();
 
 	//RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
@@ -429,8 +421,6 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(0, 0, 0), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(0, 0, 0), 1, 1, 44);
-	//RenderTextOnScreen(meshList[GEO_TEXT], "distance sword " + std::to_string(distanceSword), Color(0, 0, 0), 1, 1, 42);
-	//RenderTextOnScreen(meshList[GEO_TEXT], "distance gun " + std::to_string(distanceGun), Color(0, 0, 0), 1, 1, 40);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
 	for (auto q : Singleton::getInstance()->objectCount)
 	{
