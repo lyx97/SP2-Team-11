@@ -101,15 +101,15 @@ private:
 	float distanceGun;
 	bool collideText = false;
 
-	Vector3 PlanePos;
-	int oreFrequency = 100;
+	Vector3 shipPos;
+	int oreFrequency = 800;
 	std::vector<Vector3> orePos;
 	map<int,plane> planeMap;
 	plane startingPlane;
     plane currPlane;
     int currPlaneKey;
 	Object* ore;
-
+    int landMaxX, landMinX, landMaxZ, landMinZ;
 	Camera camera;
 	Light light[10];
 

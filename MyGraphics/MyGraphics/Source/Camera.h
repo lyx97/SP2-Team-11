@@ -9,7 +9,7 @@ public:
 	Vector3 position;
 	Vector3 target;
 	Vector3 up;
-
+    Vector3 shipPos = Vector3(0,0,0);
 	Vector3 view;
 	Vector3 right;
 
@@ -20,7 +20,6 @@ public:
 	bool togJump = false;
 	float delay = 4.f;
 	float jumpDelay = 9.f;
-
 	double mousex, mousey;
 
 	Camera();

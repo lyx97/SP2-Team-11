@@ -107,7 +107,7 @@ void Camera::EnterShip(Vector3& planePos, double dt)
 void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 200.f;
-	static const float SPRINT_SPEED = 120.f;
+	static const float SPRINT_SPEED = 820.f;
 	static const float LOOKING_SPEED = 20.f;
 	static const float JUMPING_SPEED = 30.f;
 
@@ -134,51 +134,13 @@ void Camera::Update(double dt)
 		delay += (float)(5 * dt);
 	}
 
-	if (position.y > 10)
-	{
-		jumping = true;
-	}
-	else if (position.y < 0)
-	{
-		jumping = false;
-		togJump = false;
-	}
-	if (Application::IsKeyPressed(VK_SPACE) && jumpDelay >= 10.0f && Singleton::getInstance()->pause == false)
-	{
-		if (togJump == false)
-		{
-			togJump = true;
-		}
-		else
-		{
-			togJump = false;
-		}
-		jumpDelay = 0;
-	}
-	else if (jumpDelay < 10.0f)
-	{
-		jumpDelay += (float)(13 * dt);
-	}
-	if (togJump)
-	{
-		if (!jumping)
-		{
-			position.y += (float)(JUMPING_SPEED * dt);
-			target.y += (float)(JUMPING_SPEED * dt);
-		}
-		if (jumping)
-		{
-			position.y -= (float)(JUMPING_SPEED * dt);
-			target.y -= (float)(JUMPING_SPEED * dt);
-		}
-	}
-
 	if (Application::IsKeyPressed('W') && Singleton::getInstance()->pause == false)
 	{
 		if (flying == true)
 		{
 			if (Application::IsKeyPressed(VK_SHIFT))
 			{
+                
 				position += view * (float)(SPRINT_SPEED * dt);
 				target += view * (float)(SPRINT_SPEED * dt);
 			}
@@ -215,6 +177,7 @@ void Camera::Update(double dt)
 	{
 		if (flying == true)
 		{
+
 			position -= view * (float)(CAMERA_SPEED * dt);
 			target -= view * (float)(CAMERA_SPEED * dt);
 		}
@@ -287,7 +250,7 @@ void Camera::Update(double dt)
 			Mtx44 rotation;
 			rotation.SetToRotation(yaw, 0, 1, 0);
 			view = rotation * view;
-			target = position + view;
+			target = position + view * 5;
 			right = rotation * right;
 			up = rotation * up;
 		}
@@ -299,7 +262,7 @@ void Camera::Update(double dt)
 			Mtx44 rotation;
 			rotation.SetToRotation(pitch, right.x, right.y, right.z);
 			view = rotation * view;
-			target = position + view;
+            target = position + view * 5;
 			up = right.Cross(view);
 		}
 		// --------------
@@ -325,6 +288,7 @@ void Camera::Update(double dt)
 			Singleton::getInstance()->buttonText = false;
 		}
 	}
+
 	if (Application::IsKeyPressed('R'))
 	{
 		Reset();

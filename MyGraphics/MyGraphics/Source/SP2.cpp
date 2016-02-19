@@ -29,16 +29,32 @@ void SP2::Init()
 	Singleton::getInstance()->buttonText = false;
 	inputDelay = 9.0f;
 	board = false;
-	PlanePos.Set(10, 0, 50);
+	shipPos.Set(10, 0, 50);
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
-	for (int loop = 0; loop < oreFrequency; loop++)
+	for (int loop = 0; loop < oreFrequency / 4; loop++)
 	{
-		srand(rand() % 100 - 1);
-		orePos.push_back(Vector3(rand() % 800 - 1, 0, rand() % 800 - 1));
+		//srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
 	}
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3(rand() % 4000 + -(-4000), 0, rand() % 4000 + -(-4000)));
+    }
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
+    }
+
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
+    }
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -124,8 +140,17 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
-	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
+	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10,10));
+    meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
+
+
+	meshList[GEO_HOUSE1] = MeshBuilder::GenerateQuad("FLOOR", Color(0.3f, 0.3f, 0.3f), TexCoord(1, 1));
+	meshList[GEO_HOUSE1]->material.kAmbient.Set(0.4f, 0.4f, 0.4f);
+	meshList[GEO_HOUSE1]->material.kDiffuse.Set(0.4f, 0.4f, 0.4f);
+	meshList[GEO_HOUSE1]->material.kSpecular.Set(0.4f, 0.4f, 0.4f);
+	meshList[GEO_HOUSE1]->material.kShininess = 0.5f;
+	meshList[GEO_HOUSE1]->textureID = LoadTGA("Image//floor.tga");
+
 
 	meshList[GEO_HOUSE2] = MeshBuilder::GenerateCube("WALLS", Color(0.3f, 0.3f, 0.3f));
 
@@ -163,6 +188,7 @@ void SP2::Init()
 	{
 		//cout << q.x << " " << q.y << " " << q.z << endl;
 		ore = new Object(Vector3(q.x, 7, q.z), Vector3(10, 15, 10));
+        cout << q << endl;
 	}
  	//cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 }
@@ -219,11 +245,52 @@ void SP2::Update(double dt)
 			}
 		}
 
+
 	}
     if (inputDelay <= 10.0f)
     {
         inputDelay += (float)(1 * dt);
     }
+
+        if (inputDelay <= 10.0f)
+        {
+            inputDelay += (float)(1 * dt);
+        }
+
+        if (Application::IsKeyPressed('E') && planeHitbox(camera.position) == true)
+        {
+            camera.target = shipPos;
+            camera.view = Vector3(1, 0, 0);
+            camera.position = camera.target - camera.view * 100;
+            camera.up = Vector3(0, 1, 0);
+            camera.right = camera.view.Cross(camera.up);
+            camera.right.Normalized();
+
+            inputDelay = 0;
+            board = true;
+        }
+
+        if (Application::IsKeyPressed('E') && board == true && inputDelay >= 10.f)
+        {
+            camera.position = shipPos;
+            camera.view = Vector3(1, 0, 0);
+            camera.target = camera.position + camera.view;
+            camera.up = Vector3(0, 1, 0);
+            camera.right = camera.view.Cross(camera.up);
+            camera.right.Normalized();
+
+            inputDelay = 0;
+            board = false;
+        }
+
+        if (board == true)
+        {
+            camera.EnterShip(shipPos, dt);
+        }
+        else
+        {
+            camera.Update(dt);
+        }
 
     else
     {
@@ -337,27 +404,33 @@ void SP2::Render()
 		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
         modelStack.Rotate(-90, 1, 0, 0);
         modelStack.Scale(150, 150, 1);
-		RenderMesh(meshList[GEO_GROUND], true);
+        RenderMesh(meshList[GEO_GROUND], true);
         modelStack.PopMatrix();
 	}
 
 	for (auto pos : orePos)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(0 + pos.x, 0, 0 + pos.z);
+		modelStack.Translate(pos.x, 0, pos.z);
 		modelStack.Scale(4, 4, 4);
 		RenderMesh(meshList[GEO_ORE], true);
 		modelStack.PopMatrix();
 	}
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -7.5, 0);
+	modelStack.Scale(10, 10, 10);
+	RenderMesh(meshList[GEO_ATAT], false);
+	modelStack.PopMatrix();
 
-	RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
+
+	//RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(0, 0, 0), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(0, 0, 0), 1, 1, 44);
-	RenderTextOnScreen(meshList[GEO_TEXT], "distance sword " + std::to_string(distanceSword), Color(0, 0, 0), 1, 1, 42);
-	RenderTextOnScreen(meshList[GEO_TEXT], "distance gun " + std::to_string(distanceGun), Color(0, 0, 0), 1, 1, 40);
+	//RenderTextOnScreen(meshList[GEO_TEXT], "distance sword " + std::to_string(distanceSword), Color(0, 0, 0), 1, 1, 42);
+	//RenderTextOnScreen(meshList[GEO_TEXT], "distance gun " + std::to_string(distanceGun), Color(0, 0, 0), 1, 1, 40);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
 	for (auto q : Singleton::getInstance()->objectCount)
 	{
@@ -576,6 +649,11 @@ void SP2::planeInit(){
     startingPlane.planeMin = Vector3(150, 0, -450);
     startingPlane.planePos = startingPlane.planeMin;
     planeMap.insert(std::pair<int, plane>(8, startingPlane));
+
+    landMaxX = planeMap[2].planeMax.x;
+    landMinX = planeMap[6].planeMin.x;
+    landMaxZ = planeMap[2].planeMax.z;
+    landMinZ = planeMap[6].planeMin.z;
 
 }                                                              
                                                                           
