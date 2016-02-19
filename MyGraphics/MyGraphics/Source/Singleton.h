@@ -15,12 +15,26 @@ public:
 
 		return &instance;
 	}
+	enum PROGRAM_STATE
+	{
+		PROGRAM_MENU,
+		PROGRAM_GAME,
+		PROGRAM_EXIT,
 
+		PROGRAM_TOTAL
+	};
+
+	PROGRAM_STATE program_state;
+	bool stateCheck;
 	bool pause;
 	bool buttonText;
 	map<Object*, int> objectCount;
 
 private:
-	Singleton(){}
+	Singleton()
+	{
+		program_state = PROGRAM_MENU;
+		stateCheck = false;
+	}
 };
 

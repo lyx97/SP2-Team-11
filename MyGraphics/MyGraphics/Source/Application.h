@@ -1,8 +1,8 @@
 
 #ifndef APPLICATION_H
 #define APPLICATION_H
-#define SCREEN_HEIGHT 1080 / 2
-#define SCREEN_WIDTH 1920 / 2
+#define SCREEN_HEIGHT 1080
+#define SCREEN_WIDTH 1920
 
 #include "timer.h"
 #include "Singleton.h"

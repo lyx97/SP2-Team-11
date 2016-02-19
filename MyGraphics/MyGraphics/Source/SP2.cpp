@@ -124,7 +124,7 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10));
+	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
 	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
 
 	meshList[GEO_HOUSE2] = MeshBuilder::GenerateCube("WALLS", Color(0.3f, 0.3f, 0.3f));
@@ -138,20 +138,20 @@ void SP2::Init()
 	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("ATATWALKER", "OBJ//sword.obj");
 	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
-	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1));
+	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1));
+	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1));
+	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_BACK]->textureID = LoadTGA("Image//planet1_bk.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("TOP", Color(0, 0, 0), TexCoord(1, 1));
+	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("TOP", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_TOP]->textureID = LoadTGA("Image//planet1_up.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("BOTTOM", Color(0, 0, 0), TexCoord(1, 1));
+	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("BOTTOM", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//planet1_dn.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("RIGHT", Color(0, 0, 0), TexCoord(1, 1));
+	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("RIGHT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//planet1_rt.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0), TexCoord(1, 1));
+	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//planet1_lf.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("TEXT", 16, 16);
@@ -180,35 +180,35 @@ void SP2::Update(double dt)
             Singleton::getInstance()->pause = false;
         }
     }
-    else
-    {
-        if (Application::IsKeyPressed('1')) //enable back face culling
-            glEnable(GL_CULL_FACE);
-        if (Application::IsKeyPressed('2')) //disable back face culling
-            glDisable(GL_CULL_FACE);
-        if (Application::IsKeyPressed('3'))
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-        if (Application::IsKeyPressed('4'))
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+	else
+	{
+		if (Application::IsKeyPressed('1')) //enable back face culling
+			glEnable(GL_CULL_FACE);
+		if (Application::IsKeyPressed('2')) //disable back face culling
+			glDisable(GL_CULL_FACE);
+		if (Application::IsKeyPressed('3'))
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+		if (Application::IsKeyPressed('4'))
+			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-        if (Application::IsKeyPressed('P'))
-        {
-            Singleton::getInstance()->pause = true;
-        }
+		if (Application::IsKeyPressed('P'))
+		{
+			Singleton::getInstance()->pause = true;
+		}
 
-        if (Application::IsKeyPressed('Z'))
-            light[0].type = Light::LIGHT_POINT;
-        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-        if (Application::IsKeyPressed('X'))
-            light[0].type = Light::LIGHT_DIRECTIONAL;
-        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-        if (Application::IsKeyPressed('C'))
-            light[0].type = Light::LIGHT_SPOT;
-        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+		if (Application::IsKeyPressed('Z'))
+			light[0].type = Light::LIGHT_POINT;
+		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+		if (Application::IsKeyPressed('X'))
+			light[0].type = Light::LIGHT_DIRECTIONAL;
+		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+		if (Application::IsKeyPressed('C'))
+			light[0].type = Light::LIGHT_SPOT;
+		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
-        FPS = std::to_string(toupper(1 / dt));
+		FPS = std::to_string(toupper(1 / dt));
 
-        planeLoader();
+		planeLoader();
 
 		for (auto q : Object::objectVec)
 		{
@@ -219,16 +219,15 @@ void SP2::Update(double dt)
 			}
 		}
 
-        if (inputDelay <= 10.0f)
-        {
-            inputDelay += (float)(1 * dt);
-        }
+	}
+    if (inputDelay <= 10.0f)
+    {
+        inputDelay += (float)(1 * dt);
+    }
 
-        else
-        {
-            camera.Update(dt);
-        }
-
+    else
+    {
+        camera.Update(dt);
     }
 }
 

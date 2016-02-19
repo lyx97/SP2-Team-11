@@ -64,18 +64,18 @@ Then generate the VBO/IBO and store them in Mesh object
 \return Pointer to mesh storing VBO/IBO of quad
 */
 /******************************************************************************/
-Mesh* MeshBuilder::GenerateQuad(const std::string &meshName, Color color, TexCoord texCoord)
+Mesh* MeshBuilder::GenerateQuad(const std::string &meshName, Color color, TexCoord texCoord, float lengthX, float lengthY)
 {
 	std::vector<Vertex> vertex_buffer_data;
 	std::vector<GLuint> index_buffer_data;
 	Vertex v;
 
-	v.pos.Set(-1.0f, -1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(0, 0);					vertex_buffer_data.push_back(v);
-	v.pos.Set(1.0f, -1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(texCoord.u, 0);			vertex_buffer_data.push_back(v);
-	v.pos.Set(-1.0f, 1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(0, texCoord.v);			vertex_buffer_data.push_back(v);
-	v.pos.Set(1.0f, 1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(texCoord.u, texCoord.v);	vertex_buffer_data.push_back(v);
-	v.pos.Set(-1.0f, 1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(0, texCoord.v);			vertex_buffer_data.push_back(v);
-	v.pos.Set(1.0f, -1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(texCoord.u, 0);			vertex_buffer_data.push_back(v);
+	v.pos.Set(lengthX * -1.0f, lengthY * -1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(0, 0);					vertex_buffer_data.push_back(v);
+	v.pos.Set(lengthX * 1.0f, lengthY * -1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(texCoord.u, 0);			vertex_buffer_data.push_back(v);
+	v.pos.Set(lengthX * -1.0f, lengthY * 1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(0, texCoord.v);			vertex_buffer_data.push_back(v);
+	v.pos.Set(lengthX * 1.0f, lengthY * 1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(texCoord.u, texCoord.v);	vertex_buffer_data.push_back(v);
+	v.pos.Set(lengthX * -1.0f, lengthY * 1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(0, texCoord.v);			vertex_buffer_data.push_back(v);
+	v.pos.Set(lengthX * 1.0f, lengthY * -1.0f, 0.0f);	v.color = color;	v.normal.Set(0, 0, 1);		v.texCoord.Set(texCoord.u, 0);			vertex_buffer_data.push_back(v);
 
 	index_buffer_data.push_back(0);
 	index_buffer_data.push_back(1);
