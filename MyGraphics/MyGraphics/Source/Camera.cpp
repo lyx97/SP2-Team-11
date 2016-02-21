@@ -25,6 +25,7 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	right.y = 0;
 	right.Normalize();
 	this->up = right.Cross(view).Normalized();
+	Singleton::getInstance()->MOUSE_SPEED = 20.f;
 }
 
 bool bound(Vector3& camPos)
@@ -48,7 +49,6 @@ void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 200.f;
 	static const float SPRINT_SPEED = 800.f;
-	static const float LOOKING_SPEED = 20.f;
 	static const float JUMPING_SPEED = 30.f;
 
 	Vector3 boundCheckPos = position;
@@ -178,8 +178,18 @@ void Camera::Update(double dt)
 	if (Singleton::getInstance()->pause == false)
 	{
 		Application::MouseMove(mousex, mousey);
-		float yaw = LOOKING_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
-		float pitch = LOOKING_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
+		float yaw = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
+		float pitch = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
+
+		// mouse speed
+		if (Application::IsKeyPressed(VK_SUBTRACT) && Singleton::getInstance()->MOUSE_SPEED > 1)
+		{
+			Singleton::getInstance()->MOUSE_SPEED--;
+		}
+		if (Application::IsKeyPressed(VK_ADD) && Singleton::getInstance()->MOUSE_SPEED < 50)
+		{
+			Singleton::getInstance()->MOUSE_SPEED++;
+		}
 		// --- YAW ---
 		if (yaw)
 		{

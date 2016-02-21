@@ -29,6 +29,7 @@ public:
 	bool pause;
 	bool buttonText;
 	map<Object*, int> objectCount;
+	float MOUSE_SPEED;
 
 private:
 	Singleton()
