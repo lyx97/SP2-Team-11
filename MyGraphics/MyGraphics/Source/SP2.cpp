@@ -136,7 +136,7 @@ void SP2::Init()
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
 
-	meshList[GEO_CROSSHAIR] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
+	meshList[GEO_CROSSHAIR] = MeshBuilder::GenerateQuad("crosshair", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_CROSSHAIR]->textureID = LoadTGA("Image//crosshair.tga");
 
 	meshList[GEO_HP_BAR_LOW] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
@@ -263,8 +263,17 @@ void SP2::Update(double dt)
 		{
 			if (Application::IsKeyPressed('E') && q->hitbox.isTouching(camera.target))
 			{
-				Inventory::addObject(ore);
-				delete q;
+				if (heldDelay > 2)
+				{
+					Inventory::addObject(ore);
+					heldDelay = 0;
+					delete q;
+				}
+				heldDelay += 1 * dt;
+			}
+			if (!Application::IsKeyPressed('E'))
+			{
+				heldDelay = 0;
 			}
 		}
 
@@ -417,7 +426,6 @@ void SP2::Render()
 		RenderMesh(meshList[GEO_PELICAN], true);
 		modelStack.PopMatrix();
 	}
-
 
 	modelStack.PushMatrix();
 	modelStack.Translate(

@@ -45,6 +45,7 @@ class SP2 : public Scene
 		GEO_BORDER,
         GEO_NPC1,
         GEO_HITBOX,
+
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -99,7 +100,8 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	float inputDelay = 0.0f;
+	float inputDelay = 0.f;
+	float heldDelay = 0.f;
 	bool board;
     int numPlanes = 2;
 	float distanceSword;
