@@ -42,6 +42,7 @@ class SP2 : public Scene
 		GEO_HP_BAR_LOW,
 		GEO_HP_BAR_MID,
 		GEO_HP_BAR_HIGH,
+		GEO_MINING_BAR,
 		GEO_BORDER,
         GEO_NPC1,
         GEO_HITBOX,
@@ -110,6 +111,7 @@ private:
 	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
+	bool miningDisplay = false;
 	std::string FPS;
 
 	Vector3 shipPos;

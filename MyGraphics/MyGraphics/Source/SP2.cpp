@@ -150,6 +150,9 @@ void SP2::Init()
 	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
+	meshList[GEO_MINING_BAR] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_MINING_BAR]->textureID = LoadTGA("Image//miningBar.tga");
+
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
@@ -265,10 +268,14 @@ void SP2::Update(double dt)
 					delete q.first;
 				}
 				heldDelay += 1 * dt;
+
+				miningDisplay = true;
 			}
 			if (!Application::IsKeyPressed('E'))
 			{
 				heldDelay = 0;
+
+				miningDisplay = false;
 			}
 		}
 
@@ -434,6 +441,13 @@ void SP2::Render()
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
 	modelStack.PopMatrix();
+
+	if (miningDisplay && heldDelay >= 0.1)
+	{
+		RenderUI(meshList[GEO_MINING_BAR], 2, 29, 15, heldDelay * 5);
+		RenderUI(meshList[GEO_BORDER], 2, 29, 15, 10);
+	}
+
 
 	if (!hpMid && !hpLow)
 		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10);
