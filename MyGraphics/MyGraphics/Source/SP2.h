@@ -40,6 +40,8 @@ class SP2 : public Scene
 		GEO_SWORD,
 		GEO_CROSSHAIR,
         GEO_HITBOX,
+		GEO_HP_BAR,
+		GEO_BORDER,
 
 		NUM_GEOMETRY,
 	};
@@ -85,7 +87,7 @@ private:
 	void RenderSkybox();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void RenderUI(Mesh* mesh, float size, float x, float y);
+	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
     void planeLoader();
     void planeInit();
 
@@ -101,6 +103,7 @@ private:
 	float distanceSword;
 	float distanceGun;
 	bool collideText = false;
+	int hp = 100;
 
 	Vector3 shipPos;
 	int oreFrequency = 500;

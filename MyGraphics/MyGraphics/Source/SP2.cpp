@@ -139,6 +139,12 @@ void SP2::Init()
 	meshList[GEO_CROSSHAIR] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_CROSSHAIR]->textureID = LoadTGA("Image//crosshair.tga");
 
+	meshList[GEO_HP_BAR] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR]->textureID = LoadTGA("Image//hp.tga");
+
+	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
+
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
@@ -210,6 +216,20 @@ void SP2::Update(double dt)
 		if (Application::IsKeyPressed('P'))
 		{
 			Singleton::getInstance()->pause = true;
+		}
+
+		if (Application::IsKeyPressed('K'))
+		{
+			hp -= 5;
+
+			if (hp <= 0) hp = 0;
+		}
+
+		if (Application::IsKeyPressed('L'))
+		{
+			hp += 5;
+
+			if (hp >= 100) hp = 100;
 		}
 
 		if (Application::IsKeyPressed('Z'))
@@ -391,7 +411,11 @@ void SP2::Render()
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
 	modelStack.PopMatrix();
 
-	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30);
+	RenderUI(meshList[GEO_HP_BAR], 2, 10, 10, hp / 10);
+	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
+	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(1, 0, 0), 2, 5, 10);
+
+	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
@@ -500,8 +524,8 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Scale(size, size, size);
 	modelStack.Translate(x, y, 0);
+	modelStack.Scale(size, size, size);
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
 	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
@@ -526,7 +550,7 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 	glEnable(GL_DEPTH_TEST);
 }
 
-void SP2::RenderUI(Mesh* mesh, float size, float x, float y)
+void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 {
 	glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
@@ -537,8 +561,9 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y)
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Scale(size, size, size);
 	modelStack.Translate(x, y, 1);
+	modelStack.Scale(size, size, size);
+	modelStack.Scale(scaleX, 1, 1);
 	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
 	glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
 	glActiveTexture(GL_TEXTURE0);
