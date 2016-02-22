@@ -38,6 +38,7 @@ class SP2 : public Scene
 		GEO_IMAGES,
 		GEO_GUN,
 		GEO_SWORD,
+		GEO_CROSSHAIR,
         GEO_HITBOX,
 
 		NUM_GEOMETRY,

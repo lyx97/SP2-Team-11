@@ -265,12 +265,18 @@ void MainMenu::mainMenu()
 	//////////////////////////
 	//     START BUTTON     //
 	/////////////////////////
-	if ((1070 > mousex && 835 < mousex) &&
-		(550 > mousey && 490 <mousey))
+
+	if ((1080 * SCREEN_WIDTH / 1920 > mousex && 840 * SCREEN_WIDTH / 1920 < mousex) &&
+		(575 * SCREEN_HEIGHT /1080 > mousey && 505 * SCREEN_HEIGHT / 1080 <mousey))
+
+	//if ((1070 > mousex && 835 < mousex) &&
+	//	(550 > mousey && 490 <mousey))
 	{
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 30);
+			RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 0, 0), 1, 38.5, 30);
 			Singleton::getInstance()->stateCheck = true;
 			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME;
 		}
@@ -291,12 +297,15 @@ void MainMenu::mainMenu()
 	//////////////////////////
 	//     EXIT BUTTON     //
 	/////////////////////////
-	if ((1070 > mousex && 835 < mousex) &&
-		(635 > mousey && 575 <mousey))
+	if ((1080 * SCREEN_WIDTH / 1920 > mousex && 840 * SCREEN_WIDTH / 1920 < mousex) &&
+		(665 * SCREEN_HEIGHT / 1080 > mousey && 595 * SCREEN_HEIGHT / 1080 <mousey))
 	{
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 25);
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 30);
 			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
 		}
 		//MOUSE HOVER

@@ -156,6 +156,9 @@ void SP2::Init()
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
 
+	meshList[GEO_CROSSHAIR] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
+	meshList[GEO_CROSSHAIR]->textureID = LoadTGA("Image//crosshair.tga");
+
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
@@ -408,7 +411,7 @@ void SP2::Render()
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
 	modelStack.PopMatrix();
 
-	//RenderUI(meshList[GEO_IMAGES], 10, 7, 3);
+	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
@@ -419,7 +422,7 @@ void SP2::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
 	}
-	RenderTextOnScreen(meshList[GEO_TEXT], "+", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
+	//RenderTextOnScreen(meshList[GEO_TEXT], "+", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
