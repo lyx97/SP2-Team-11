@@ -1,8 +1,8 @@
 #pragma once
 #include "Hitbox.h"
-#include <vector>
+#include <map>
 
-using std::vector;
+using std::map;
 
 class Object
 {
@@ -12,7 +12,7 @@ public:
 
 	Hitbox hitbox;
 
-	static vector<Object*> objectVec;
+	static map<Object*, int> objectMap;
 
 	Vector3 size;
 	Vector3 pos;

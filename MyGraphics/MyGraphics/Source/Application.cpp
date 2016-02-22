@@ -13,6 +13,7 @@
 #include <iostream>
 #include "MainMenu.h"
 #include "SP2.h"
+#include "SP2Scene2.h"
 
 using std::cout;
 using std::endl;

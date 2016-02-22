@@ -30,11 +30,11 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 
 bool bound(Vector3& camPos)
 {
-	for (int i = 0; i < Object::objectVec.size(); i++)
+	for (auto q : Object::objectMap)
 	{
-		if ((Object::objectVec[i]->hitbox.maxPt.x > camPos.x) && (Object::objectVec[i]->hitbox.minPt.x < camPos.x) &&
-			(Object::objectVec[i]->hitbox.maxPt.y > camPos.y) && (Object::objectVec[i]->hitbox.minPt.y < camPos.y) &&
-			(Object::objectVec[i]->hitbox.maxPt.z > camPos.z) && (Object::objectVec[i]->hitbox.minPt.z < camPos.z))
+		if ((q.first->hitbox.maxPt.x > camPos.x) && (q.first->hitbox.minPt.x < camPos.x) &&
+			(q.first->hitbox.maxPt.y > camPos.y) && (q.first->hitbox.minPt.y < camPos.y) &&
+			(q.first->hitbox.maxPt.z > camPos.z) && (q.first->hitbox.minPt.z < camPos.z))
 		{
 			return false;
 		}

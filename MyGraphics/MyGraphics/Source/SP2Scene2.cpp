@@ -319,17 +319,6 @@ void SP2Scene2::Render()
 	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	for (int i = 0; i < Object::objectVec.size(); i++)
-	{
-		modelStack.PushMatrix();
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		modelStack.Translate(Object::objectVec[i]->pos.x, Object::objectVec[i]->pos.y, Object::objectVec[i]->pos.z);
-		modelStack.Scale(Object::objectVec[i]->size.x, Object::objectVec[i]->size.y, Object::objectVec[i]->size.z);
-		RenderMesh(meshList[GEO_HITBOX], false);
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-		modelStack.PopMatrix();
-	}
-
 	modelStack.PushMatrix();
 	modelStack.Translate(
 		camera.target.x,

@@ -253,16 +253,16 @@ void SP2::Update(double dt)
 		FPS = std::to_string(toupper(1 / dt));
 
 		planeLoader();
-
-		for (auto q : Object::objectVec)
+		cout << heldDelay << endl;
+		for (auto q : Object::objectMap)
 		{
-			if (Application::IsKeyPressed('E') && q->hitbox.isTouching(camera.target))
+			if (Application::IsKeyPressed('E') && q.first->hitbox.isTouching(camera.target))
 			{
 				if (heldDelay > 2)
 				{
 					Inventory::addObject(ore);
 					heldDelay = 0;
-					delete q;
+					delete q.first;
 				}
 				heldDelay += 1 * dt;
 			}
@@ -377,12 +377,12 @@ void SP2::Render()
     RenderMesh(meshList[GEO_NPC1], true);
     modelStack.PopMatrix();
 
-	for (int i = 0; i < Object::objectVec.size(); i++)
+	for (auto q : Object::objectMap)
 	{
 		modelStack.PushMatrix();
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		modelStack.Translate(Object::objectVec[i]->pos.x, Object::objectVec[i]->pos.y, Object::objectVec[i]->pos.z);
-		modelStack.Scale(Object::objectVec[i]->size.x, Object::objectVec[i]->size.y, Object::objectVec[i]->size.z);
+		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
+		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
 		RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
@@ -400,12 +400,12 @@ void SP2::Render()
 		modelStack.PopMatrix();
 	}
 
-	for (int i = 0; i < Object::objectVec.size(); ++i)
+	for (auto q : Object::objectMap)
 	{
 		for (int j = 0; j < orePos.size(); ++j)
 		{
-			if ((Object::objectVec[i]->pos.x == orePos[j].x) &&
-				(Object::objectVec[i]->pos.z == orePos[j].z)) 
+			if ((q.first->pos.x == orePos[j].x) &&
+				(q.first->pos.z == orePos[j].z))
 			{
 				modelStack.PushMatrix();
 				modelStack.Translate(orePos[j].x, 0, orePos[j].z);
