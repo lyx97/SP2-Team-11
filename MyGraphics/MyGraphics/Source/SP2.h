@@ -103,7 +103,7 @@ private:
 	bool collideText = false;
 
 	Vector3 shipPos;
-	int oreFrequency = 800;
+	int oreFrequency = 500;
 	std::vector<Vector3> orePos;
 	map<int,plane> planeMap;
 	plane startingPlane;

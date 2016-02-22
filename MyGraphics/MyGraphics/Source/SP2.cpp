@@ -34,27 +34,7 @@ void SP2::Init()
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
-	for (int loop = 0; loop < oreFrequency / 4; loop++)
-	{
-		//srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
-	}
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3(rand() % 4000 + -(-4000), 0, rand() % 4000 + -(-4000)));
-    }
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
-    }
 
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3(rand() % 4000 + (-4000), 0, rand() % 4000 + (-4000)));
-    }
 
     oreReached = false;
 
@@ -640,6 +620,34 @@ void SP2::planeInit(){
     landMinX = planeMap[6].planeMin.x;
     landMaxZ = planeMap[2].planeMax.z;
     landMinZ = planeMap[6].planeMin.z;
+
+    //for (int loop = 0; loop < oreFrequency; loop++)
+    //{
+    //    srand(rand() % oreFrequency - 1);
+    //    orePos.push_back(Vector3((rand() % landMaxX) + landMinX, 0, (rand() % landMaxZ) + landMinZ));
+    //}
+
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3(rand() % 2000, 0, rand() % 2000));
+    }
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3((rand() % 2000) - 2000, 0, rand() % 2000));
+    }
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3((rand() % 2000) - 2000, 0, (rand() % 2000) - 2000));
+    }
+
+    for (int loop = 0; loop < oreFrequency / 4; loop++)
+    {
+        //srand(rand() % oreFrequency - 1);
+        orePos.push_back(Vector3(rand() % 2000 + 0, 0, (rand() % 2000) - 2000));
+    }
 
 }                                                              
                                                                           
