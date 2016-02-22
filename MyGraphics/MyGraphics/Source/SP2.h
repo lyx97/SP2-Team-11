@@ -42,6 +42,7 @@ class SP2 : public Scene
 		GEO_HP_BAR,
 		GEO_BORDER,
         GEO_NPC1,
+        GEO_HITBOX,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
