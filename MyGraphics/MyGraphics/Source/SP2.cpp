@@ -116,7 +116,7 @@ void SP2::Init()
 	projectionStack.LoadMatrix(projection);
 
 	//Initialize camera settings
-	camera.Init(Vector3(150, 7, 150), Vector3(89, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 7, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("AXES", 500, 500, 500);
 
@@ -402,7 +402,6 @@ void SP2::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
 	}
-	//RenderTextOnScreen(meshList[GEO_TEXT], "+", Color(1.0f, 0, 0), 1, 40, 30);	// crosshair
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);

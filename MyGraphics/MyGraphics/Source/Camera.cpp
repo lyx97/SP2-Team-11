@@ -49,9 +49,24 @@ void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 200.f;
 	static const float SPRINT_SPEED = 800.f;
-	static const float JUMPING_SPEED = 30.f;
-
+	static const float JUMP_SPEED = 80.f;
 	Vector3 boundCheckPos = position;
+
+	if (boundCheckPos.y > 10)
+	{
+		ySpeed += GRAVITY * dt;
+	}
+	else
+	{
+		ySpeed = 0;
+	}
+	position.y -= ySpeed;
+	target.y -= ySpeed;
+
+	if (delay < 5)
+	{
+		delay += (float)(30 * dt);
+	}
 
 	if (Application::IsKeyPressed('T') && delay > 5)
 	{
@@ -67,9 +82,11 @@ void Camera::Update(double dt)
 		}
 		delay = 0;
 	}
-	else if (delay < 5)
+
+	if (Application::IsKeyPressed(VK_SPACE))
 	{
-		delay += (float)(5 * dt);
+		position.y += (float)(JUMP_SPEED * dt);
+		target.y += (float)(JUMP_SPEED * dt);
 	}
 
 	if (Application::IsKeyPressed('W') && Singleton::getInstance()->pause == false)
@@ -182,13 +199,15 @@ void Camera::Update(double dt)
 		float pitch = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
 
 		// mouse speed
-		if (Application::IsKeyPressed(VK_SUBTRACT) && Singleton::getInstance()->MOUSE_SPEED > 1)
+		if (Application::IsKeyPressed(VK_SUBTRACT) && Singleton::getInstance()->MOUSE_SPEED > 1 && delay > 5)
 		{
 			Singleton::getInstance()->MOUSE_SPEED--;
+			delay = 0;
 		}
-		if (Application::IsKeyPressed(VK_ADD) && Singleton::getInstance()->MOUSE_SPEED < 50)
+		if (Application::IsKeyPressed(VK_ADD) && Singleton::getInstance()->MOUSE_SPEED < 50 && delay > 5)
 		{
 			Singleton::getInstance()->MOUSE_SPEED++;
+			delay = 0;
 		}
 		// --- YAW ---
 		if (yaw)

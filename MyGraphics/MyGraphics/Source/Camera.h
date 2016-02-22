@@ -19,7 +19,7 @@ public:
 	bool jumping = false;
 	bool togJump = false;
 	float delay = 4.f;
-	float jumpDelay = 9.f;
+	float ySpeed = 0.f;
 
 	double mousex, mousey;
 
