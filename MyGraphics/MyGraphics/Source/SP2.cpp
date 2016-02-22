@@ -161,6 +161,9 @@ void SP2::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("TEXT", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//heh.tga");
 
+    meshList[GEO_NPC1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_MAIN.obj");
+    meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
+
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
 	for (auto q : orePos)
@@ -355,6 +358,11 @@ void SP2::Render()
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
 	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(5, 5, 5);
+    RenderMesh(meshList[GEO_NPC1], true);
+    modelStack.PopMatrix();
 
 	for (int i = 0; i < Object::objectVec.size(); i++)
 	{
@@ -645,11 +653,6 @@ void SP2::planeInit(){
     landMaxZ = planeMap[2].planeMax.z;
     landMinZ = planeMap[6].planeMin.z;
 
-    //for (int loop = 0; loop < oreFrequency; loop++)
-    //{
-    //    srand(rand() % oreFrequency - 1);
-    //    orePos.push_back(Vector3((rand() % landMaxX) + landMinX, 0, (rand() % landMaxZ) + landMinZ));
-    //}
 
     for (int loop = 0; loop < oreFrequency / 4; loop++)
     {
