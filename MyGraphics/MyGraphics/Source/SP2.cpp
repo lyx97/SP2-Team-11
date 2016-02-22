@@ -35,7 +35,6 @@ void SP2::Init()
 	startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
 
-
     oreReached = false;
 
 	// Set background color to dark blue
@@ -180,10 +179,6 @@ void SP2::Init()
 	}
 }
 
-static float LSPEED = 10.f;
-static float HOVER_SPEED = 10.f;
-std::string FPS;
-
 void SP2::Update(double dt)
 {
 	if (Singleton::getInstance()->pause == true)
@@ -285,7 +280,6 @@ void SP2::Update(double dt)
 		{
 			camera.Update(dt);
 		}
-		cout << cameraStore << endl;
 	}
 }
 
@@ -389,7 +383,7 @@ void SP2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(Object::objectVec[i]->pos.x, Object::objectVec[i]->pos.y, Object::objectVec[i]->pos.z);
 		modelStack.Scale(Object::objectVec[i]->size.x, Object::objectVec[i]->size.y, Object::objectVec[i]->size.z);
-		//RenderMesh(meshList[GEO_HITBOX], false);
+		RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
@@ -406,15 +400,19 @@ void SP2::Render()
 		modelStack.PopMatrix();
 	}
 
-	for (auto q : Object::objectVec)
+	for (int i = 0; i < Object::objectVec.size(); ++i)
 	{
-		if (ore)
+		for (int j = 0; j < orePos.size(); ++j)
 		{
-			modelStack.PushMatrix();
-			modelStack.Translate(q->pos.x, 0, q->pos.z);
-			modelStack.Scale(4, 4, 4);
-			RenderMesh(meshList[GEO_ORE], true);
-			modelStack.PopMatrix();
+			if ((Object::objectVec[i]->pos.x == orePos[j].x) &&
+				(Object::objectVec[i]->pos.z == orePos[j].z)) 
+			{
+				modelStack.PushMatrix();
+				modelStack.Translate(orePos[j].x, 0, orePos[j].z);
+				modelStack.Scale(4, 4, 4);
+				RenderMesh(meshList[GEO_ORE], true);
+				modelStack.PopMatrix();
+			}
 		}
 	}
 

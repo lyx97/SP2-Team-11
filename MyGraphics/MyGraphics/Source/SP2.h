@@ -110,9 +110,10 @@ private:
 	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
+	std::string FPS;
 
 	Vector3 shipPos;
-	int oreFrequency = 500;
+	int oreFrequency = 300;
 	std::vector<Vector3> orePos;
 	map<int,plane> planeMap;
 	plane startingPlane;
