@@ -139,8 +139,14 @@ void SP2::Init()
 	meshList[GEO_CROSSHAIR] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_CROSSHAIR]->textureID = LoadTGA("Image//crosshair.tga");
 
-	meshList[GEO_HP_BAR] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
-	meshList[GEO_HP_BAR]->textureID = LoadTGA("Image//hp.tga");
+	meshList[GEO_HP_BAR_LOW] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR_LOW]->textureID = LoadTGA("Image//hp.tga");
+
+	meshList[GEO_HP_BAR_MID] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR_MID]->textureID = LoadTGA("Image//hp_mid.tga");
+
+	meshList[GEO_HP_BAR_HIGH] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR_HIGH]->textureID = LoadTGA("Image//hp_high.tga");
 
 	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
@@ -225,6 +231,8 @@ void SP2::Update(double dt)
 		{
 			hp -= 5;
 
+			if (hp <= 50) hpMid = true;
+			if (hp <= 25) hpLow = true;
 			if (hp <= 0) hp = 0;
 		}
 
@@ -232,6 +240,8 @@ void SP2::Update(double dt)
 		{
 			hp += 5;
 
+			if (hp >= 50) hpMid = false;
+			if (hp >= 25) hpLow = false;
 			if (hp >= 100) hp = 100;
 		}
 
@@ -419,9 +429,17 @@ void SP2::Render()
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
 	modelStack.PopMatrix();
 
-	RenderUI(meshList[GEO_HP_BAR], 2, 10, 10, hp / 10);
+	if (!hpMid && !hpLow)
+		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10);
+
+	if (hpMid && !hpLow)
+		RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10);
+
+	if (hpMid && hpLow)
+		RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10);
+
 	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
-	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(1, 0, 0), 2, 5, 10);
+	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps

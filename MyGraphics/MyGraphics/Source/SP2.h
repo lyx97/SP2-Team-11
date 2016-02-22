@@ -39,7 +39,9 @@ class SP2 : public Scene
 		GEO_GUN,
 		GEO_SWORD,
 		GEO_CROSSHAIR,
-		GEO_HP_BAR,
+		GEO_HP_BAR_LOW,
+		GEO_HP_BAR_MID,
+		GEO_HP_BAR_HIGH,
 		GEO_BORDER,
         GEO_NPC1,
         GEO_HITBOX,
@@ -104,6 +106,8 @@ private:
 	float distanceGun;
 	bool collideText = false;
 	int hp = 100;
+	bool hpMid = false;
+	bool hpLow = false;
 
 	Vector3 shipPos;
 	int oreFrequency = 500;
