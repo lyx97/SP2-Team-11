@@ -208,10 +208,22 @@ void SP2::Update(double dt)
 		}
 		if (!oreReached)
 		{
-			cameraStore = camera.position;
+			cameraStore = camera.position - Vector3(100, 0, 0);
 		}
 		else
 		{
+		}
+
+		if (sqrtf(
+			(cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) +
+			(cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) +
+			(cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z)) < 30 && oreReached)
+		{
+			if (Application::IsKeyPressed('E'))
+			{
+				Singleton::getInstance()->stateCheck = true;
+				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+			}
 		}
 		if (Application::IsKeyPressed('1')) //enable back face culling
 			glEnable(GL_CULL_FACE);

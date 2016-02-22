@@ -148,6 +148,8 @@ void Application::Run()
 				break;
 			case Singleton::PROGRAM_GAME: scene = new SP2();
 				break;
+			case Singleton::PROGRAM_GAME2: scene = new SP2Scene2();
+				break;
 			}
 			scene->Init();
 		}
