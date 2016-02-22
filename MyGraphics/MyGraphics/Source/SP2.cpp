@@ -180,6 +180,8 @@ void SP2::Init()
 		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5));
 		cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 	}
+	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
+
 }
 
 void SP2::Update(double dt)
@@ -254,22 +256,29 @@ void SP2::Update(double dt)
 		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
 		FPS = std::to_string(toupper(1 / dt));
-
-		planeLoader();
 		cout << heldDelay << endl;
+		planeLoader();
 		for (auto q : Object::objectMap)
 		{
 			if (Application::IsKeyPressed('E') && q.first->hitbox.isTouching(camera.target))
 			{
-				if (heldDelay > 2)
+				for (int i = 0; i < orePos.size(); ++i)
 				{
-					Inventory::addObject(ore);
-					heldDelay = 0;
-					delete q.first;
+					if (orePos[i].x == q.first->pos.x && orePos[i].z == q.first->pos.z)
+					{
+						if (heldDelay > 2)
+						{
+							Inventory::addObject(ore);
+							heldDelay = 0;
+							delete q.first;
+						}
+						heldDelay += 1 * dt;
+					}
+					else {}
 				}
-				heldDelay += 1 * dt;
 
 				miningDisplay = true;
+
 			}
 			if (!Application::IsKeyPressed('E'))
 			{

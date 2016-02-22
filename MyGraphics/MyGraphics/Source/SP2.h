@@ -124,6 +124,7 @@ private:
 
 	bool oreReached;
 	Object* ore;
+	Object* NPC;
 	Vector3 cameraStore;
 	
     int landMaxX, landMinX, landMaxZ, landMinZ;
