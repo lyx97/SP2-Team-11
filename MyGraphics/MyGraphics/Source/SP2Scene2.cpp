@@ -124,8 +124,8 @@ void SP2Scene2::Init()
 	meshList[GEO_PELICAN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//air.obj");
 	meshList[GEO_PELICAN]->textureID = LoadTGA("Image//air_UV.tga");
 
-	meshList[GEO_ROCK] = MeshBuilder::GenerateOBJ("ROCK", "OBJ//rock.obj");
-	meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
+	//meshList[GEO_ROCK] = MeshBuilder::GenerateOBJ("ROCK", "OBJ//rock.obj");
+	//meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
 
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
@@ -323,7 +323,7 @@ void SP2Scene2::Render()
 	modelStack.PopMatrix();
 
 	
-	RenderMesh(meshList[GEO_ROCK], false);
+	//RenderMesh(meshList[GEO_ROCK], false);
 	
 
 	modelStack.PushMatrix();
@@ -334,6 +334,13 @@ void SP2Scene2::Render()
 		);
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -1, 0);
+	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
+	modelStack.Scale(0.3, 0.3, 0.3);
+	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
 
 	if (!hpMid && !hpLow)
