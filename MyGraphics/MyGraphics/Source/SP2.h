@@ -14,6 +14,7 @@
 #include "Object.h"
 
 using std::map;
+using std::vector;
 
 class SP2 : public Scene
 {
@@ -32,8 +33,6 @@ class SP2 : public Scene
 		GEO_ATAT,
 		GEO_PELICAN,
 		GEO_TEXT,
-		GEO_HOUSE1,
-		GEO_HOUSE2,
 		GEO_ORE,
 		GEO_IMAGES,
 		GEO_GUN,
@@ -105,33 +104,35 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	float inputDelay = 0.f;
-	float heldDelay = 0.f;
 	bool board;
-    int numPlanes = 2;
-	float distanceSword;
-	float distanceGun;
-	bool collideText = false;
-	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
 	bool miningDisplay = false;
-	std::string FPS;
+	bool oreReached;
 
-	Vector3 shipPos;
+	float inputDelay = 0.f;
+	float heldDelay = 0.f;
+
+    int numPlanes = 2;
+	int hp = 100;
 	int oreFrequency = 300;
-	std::vector<Vector3> orePos;
+	int currPlaneKey;
+	int landMaxX, landMinX, landMaxZ, landMinZ;
+
+	std::string FPS;
+	Vector3 cameraStore;
+
+	// ores and land generators
+	vector<Vector3> orePos;
 	map<int,plane> planeMap;
 	plane startingPlane;
     plane currPlane;
-    int currPlaneKey;
 
-	bool oreReached;
+	// objects
 	Object* ore;
 	Object* NPC;
-	Vector3 cameraStore;
-	
-    int landMaxX, landMinX, landMaxZ, landMinZ;
+	Object* meleeWeap;
+
 	Camera camera;
 	Light light[10];
 

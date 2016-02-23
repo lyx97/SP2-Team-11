@@ -29,7 +29,6 @@ void SP2::Init()
 	Singleton::getInstance()->buttonText = false;
 	inputDelay = 9.0f;
 	board = false;
-	shipPos.Set(10, 0, 50);
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
@@ -124,8 +123,6 @@ void SP2::Init()
 	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
 	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
 
-	meshList[GEO_HOUSE2] = MeshBuilder::GenerateCube("WALLS", Color(0.3f, 0.3f, 0.3f));
-
 	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("ORE", "OBJ//Ore.obj");
 	meshList[GEO_ORE]->textureID = LoadTGA("Image//TinOre.tga");
 
@@ -181,7 +178,7 @@ void SP2::Init()
 		cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 	}
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
-
+	meleeWeap = new Object(Vector)
 }
 
 void SP2::Update(double dt)
