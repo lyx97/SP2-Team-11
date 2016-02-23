@@ -95,6 +95,7 @@ private:
     void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
     void planeInit(bool reset = false);
     void planeLoader();
+    float distanceBetween(Vector3 from, Vector3 to);
     Camera camera;
     Light light[10];
 
@@ -118,8 +119,11 @@ private:
     int landMaxX, landMinX, landMaxZ, landMinZ;
     int currPlaneKey;
 
+    Object* boss;
     Vector3 bossPos;
-    float lookAtAngle;
+    float bossLookAtAngle;
+
+//    vector<Vector3> treesPos;
 };
 
 #endif

@@ -32,6 +32,7 @@ void SP2::Init()
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
+    srand(time(0));
     planeInit();
 
     oreReached = false;
@@ -721,23 +722,23 @@ void SP2::planeInit(bool reset){
 
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-            //srand(rand() % oreFrequency - 1);
+      
             orePos.push_back(Vector3(rand() % 2000, 0, rand() % 2000));
         }
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-            //srand(rand() % oreFrequency - 1);
+      
             orePos.push_back(Vector3((rand() % 2000) - 2000, 0, rand() % 2000));
         }
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-            //srand(rand() % oreFrequency - 1);
+          
             orePos.push_back(Vector3((rand() % 2000) - 2000, 0, (rand() % 2000) - 2000));
         }
 
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-            //srand(rand() % oreFrequency - 1);
+          
             orePos.push_back(Vector3(rand() % 2000 + 0, 0, (rand() % 2000) - 2000));
         }
     }

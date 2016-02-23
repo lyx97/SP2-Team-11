@@ -29,7 +29,7 @@ void SP2Scene3::Init()
     Singleton::getInstance()->buttonText = false;
     inputDelay = 9.0f;
 
-    bossPos = Vector3(0, 0, 0);
+    bossPos = Vector3(40, 0, 40);
 
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -178,11 +178,14 @@ void SP2Scene3::Init()
     startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
 
+    boss = new Object(bossPos, Vector3(25, 45, 25));
 }
 
 void SP2Scene3::Update(double dt)
 {
+
     planeLoader();
+    boss->pos = bossPos;
     if (Singleton::getInstance()->pause == true)
     {
         if (Application::IsKeyPressed('O'))
@@ -249,6 +252,20 @@ void SP2Scene3::Update(double dt)
             camera.Update(dt);
         }
     }
+
+ /*   if (distanceBetween(bossPos, camera.position) >= 30){*/
+  //      if (bossPos.x <= camera.position.x + 20)
+  //          bossPos.x += (float)(80 * dt);
+
+  //if (bossPos.x >= camera.position.x - 20)
+  //          bossPos.x -= (float)(80 * dt);
+
+  //      if (bossPos.z <= camera.position.z + 20)
+  //          bossPos.z += (float)(80 * dt);
+
+  //  if (bossPos.z >= camera.position.z - 20)
+  //          bossPos.z -= (float)(80 * dt);
+    //}
 }
 
 void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
@@ -344,36 +361,30 @@ void SP2Scene3::Render()
         RenderMesh(meshList[GEO_GROUND], true);
         modelStack.PopMatrix();
     }
-
     modelStack.PushMatrix();
     modelStack.Translate(bossPos.x, bossPos.y, bossPos.x);
+    modelStack.Scale(20, 20, 20);
     modelStack.PushMatrix();
-    modelStack.Scale(10, 10, 10);
     RenderMesh(meshList[GEO_BOSS], true);
     modelStack.PopMatrix();
 
     modelStack.PushMatrix();
-    modelStack.Scale(10, 10, 10);
     RenderMesh(meshList[GEO_BOSS_HAND1], true);
     modelStack.PopMatrix();
 
     modelStack.PushMatrix();
-    modelStack.Scale(10, 10, 10);
     RenderMesh(meshList[GEO_BOSS_HAND2], true);
     modelStack.PopMatrix();
 
     modelStack.PushMatrix();
-    modelStack.Scale(10, 10, 10);
     RenderMesh(meshList[GEO_BOSS_LEG1], true);
     modelStack.PopMatrix();
 
     modelStack.PushMatrix();
-    modelStack.Scale(10, 10, 10);
     RenderMesh(meshList[GEO_BOSS_LEG2], true);
     modelStack.PopMatrix();
-
     modelStack.PopMatrix();
-
+    
     //t->r->s
     //RenderMesh(meshList[GEO_AXES], false);
 
@@ -418,7 +429,7 @@ void SP2Scene3::Render()
     RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
-
+    cout << bossPos << endl;
 }
 
 void SP2Scene3::RenderSkybox()
@@ -732,6 +743,9 @@ void SP2Scene3::planeLoader(){
 
 }
 
+float SP2Scene3::distanceBetween(Vector3 from, Vector3 to){
+    return sqrt((pow(to.x - from.x, 2)) + (pow(to.z - from.z, 2)));
+}
 
 void SP2Scene3::Exit()
 {
