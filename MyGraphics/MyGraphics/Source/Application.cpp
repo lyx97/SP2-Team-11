@@ -14,6 +14,7 @@
 #include "MainMenu.h"
 #include "SP2.h"
 #include "SP2Scene2.h"
+#include "SP2Scene3.h"
 
 using std::cout;
 using std::endl;
@@ -123,7 +124,7 @@ void Application::Init()
 void Application::Run()
 {
 	//Main Loop
-	Scene *scene = new MainMenu();
+	Scene *scene = new SP2Scene3();
 	scene->Init();
 
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this frame
