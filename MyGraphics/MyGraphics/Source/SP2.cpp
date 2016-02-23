@@ -253,7 +253,11 @@ void SP2::Update(double dt)
 			if (hp >= 25) hpLow = false;
 			if (hp >= 100) hp = 100;
 		}
-
+        if (Application::IsKeyPressed('R'))
+        {
+            bool reset = true;
+            planeInit(reset);
+        }
 		if (Application::IsKeyPressed('Z'))
 			light[0].type = Light::LIGHT_POINT;
 		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
@@ -646,92 +650,154 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 	glEnable(GL_DEPTH_TEST);
 }
 
-void SP2::planeInit(){
+void SP2::planeInit(bool reset){
+    if (reset == false){
+        plane startingPlane;
 
-    plane startingPlane; 
-    
-    //Plane[0]                                               
-    startingPlane.planeMax = Vector3(-300, 0, 300);
-    startingPlane.planeMin = Vector3(-450, 0, 150);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(0, startingPlane));
+        //Plane[0]                                               
+        startingPlane.planeMax = Vector3(-300, 0, 300);
+        startingPlane.planeMin = Vector3(-450, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(0, startingPlane));
 
-    //Plane[1]                                               
-    startingPlane.planeMax = Vector3(0, 0, 300);
-    startingPlane.planeMin = Vector3(-150, 0, 150);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(1, startingPlane));
+        //Plane[1]                                               
+        startingPlane.planeMax = Vector3(0, 0, 300);
+        startingPlane.planeMin = Vector3(-150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(1, startingPlane));
 
-    //Plane[2]                                               
-    startingPlane.planeMax = Vector3(300, 0, 300);
-    startingPlane.planeMin = Vector3(150, 0, 150);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(2, startingPlane));
-                                                                                            //    3x3 map grid (for reference)
-    //Plane[3]                                                                          //   *------* *------* *------*
-    startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
-    startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
-    startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
-    planeMap.insert(std::pair<int, plane>(3, startingPlane));                           //   *------* *------* *------*    
-                                                                                        //   |      | |  (p) | |      |    
-    //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
-    startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
-    startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
-    startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
-    planeMap.insert(std::pair<int, plane>(4, startingPlane));                           //   |   6  | |   7  | |  8   |    
-                                                                                        //   *------* *------* *------*    
-    //Plane[5]                                       
-    startingPlane.planeMax = Vector3(300, 0, 0);
-    startingPlane.planeMin = Vector3(150, 0, -150);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(5, startingPlane));
+        //Plane[2]                                               
+        startingPlane.planeMax = Vector3(300, 0, 300);
+        startingPlane.planeMin = Vector3(150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(2, startingPlane));
+        //    3x3 map grid (for reference)
+        //Plane[3]                                                                          //   *------* *------* *------*
+        startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
+        startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
+        planeMap.insert(std::pair<int, plane>(3, startingPlane));                           //   *------* *------* *------*    
+        //   |      | |  (p) | |      |    
+        //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
+        startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
+        startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
+        planeMap.insert(std::pair<int, plane>(4, startingPlane));                           //   |   6  | |   7  | |  8   |    
+        //   *------* *------* *------*    
+        //Plane[5]                                       
+        startingPlane.planeMax = Vector3(300, 0, 0);
+        startingPlane.planeMin = Vector3(150, 0, -150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(5, startingPlane));
 
-    //Plane[6]                                               
-    startingPlane.planeMax = Vector3(-300, 0, -300);
-    startingPlane.planeMin = Vector3(-450, 0, -450);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(6, startingPlane));
+        //Plane[6]                                               
+        startingPlane.planeMax = Vector3(-300, 0, -300);
+        startingPlane.planeMin = Vector3(-450, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(6, startingPlane));
 
-    //Plane[7]                                               
-    startingPlane.planeMax = Vector3(0, 0, -300);
-    startingPlane.planeMin = Vector3(-150, 0, -450);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(7, startingPlane));
+        //Plane[7]                                               
+        startingPlane.planeMax = Vector3(0, 0, -300);
+        startingPlane.planeMin = Vector3(-150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(7, startingPlane));
 
-    //Plane[8]                                               
-    startingPlane.planeMax = Vector3(300, 0, -300);
-    startingPlane.planeMin = Vector3(150, 0, -450);
-    startingPlane.planePos = startingPlane.planeMin;
-    planeMap.insert(std::pair<int, plane>(8, startingPlane));
+        //Plane[8]                                               
+        startingPlane.planeMax = Vector3(300, 0, -300);
+        startingPlane.planeMin = Vector3(150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(8, startingPlane));
 
-    landMaxX = planeMap[2].planeMax.x;
-    landMinX = planeMap[6].planeMin.x;
-    landMaxZ = planeMap[2].planeMax.z;
-    landMinZ = planeMap[6].planeMin.z;
+        landMaxX = planeMap[2].planeMax.x;
+        landMinX = planeMap[6].planeMin.x;
+        landMaxZ = planeMap[2].planeMax.z;
+        landMinZ = planeMap[6].planeMin.z;
 
 
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3(rand() % 2000, 0, rand() % 2000));
+        for (int loop = 0; loop < oreFrequency / 4; loop++)
+        {
+            //srand(rand() % oreFrequency - 1);
+            orePos.push_back(Vector3(rand() % 2000, 0, rand() % 2000));
+        }
+        for (int loop = 0; loop < oreFrequency / 4; loop++)
+        {
+            //srand(rand() % oreFrequency - 1);
+            orePos.push_back(Vector3((rand() % 2000) - 2000, 0, rand() % 2000));
+        }
+        for (int loop = 0; loop < oreFrequency / 4; loop++)
+        {
+            //srand(rand() % oreFrequency - 1);
+            orePos.push_back(Vector3((rand() % 2000) - 2000, 0, (rand() % 2000) - 2000));
+        }
+
+        for (int loop = 0; loop < oreFrequency / 4; loop++)
+        {
+            //srand(rand() % oreFrequency - 1);
+            orePos.push_back(Vector3(rand() % 2000 + 0, 0, (rand() % 2000) - 2000));
+        }
     }
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3((rand() % 2000) - 2000, 0, rand() % 2000));
-    }
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3((rand() % 2000) - 2000, 0, (rand() % 2000) - 2000));
-    }
+    else{
+        plane startingPlane;
 
-    for (int loop = 0; loop < oreFrequency / 4; loop++)
-    {
-        //srand(rand() % oreFrequency - 1);
-        orePos.push_back(Vector3(rand() % 2000 + 0, 0, (rand() % 2000) - 2000));
-    }
+        //Plane[0]                                               
+        startingPlane.planeMax = Vector3(-300, 0, 300);
+        startingPlane.planeMin = Vector3(-450, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[0] = startingPlane;
 
+        //Plane[1]                                               
+        startingPlane.planeMax = Vector3(0, 0, 300);
+        startingPlane.planeMin = Vector3(-150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[1] = startingPlane;
+
+        //Plane[2]                                               
+        startingPlane.planeMax = Vector3(300, 0, 300);
+        startingPlane.planeMin = Vector3(150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[2] = startingPlane;
+                                                                                             //    3x3 map grid (for reference)
+        //Plane[3]                                                                          //   *------* *------* *------*
+        startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
+        startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
+        planeMap[3] = startingPlane;                                                        //   *------* *------* *------*    
+                                                                                            //   |      | |  (p) | |      |    
+        //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
+        startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
+        startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
+        planeMap[4] = startingPlane;                                                        //   |   6  | |   7  | |  8   |    
+                                                                                            //   *------* *------* *------*    
+        //Plane[5]                                       
+        startingPlane.planeMax = Vector3(300, 0, 0);
+        startingPlane.planeMin = Vector3(150, 0, -150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[5] = startingPlane;
+
+        //Plane[6]                                               
+        startingPlane.planeMax = Vector3(-300, 0, -300);
+        startingPlane.planeMin = Vector3(-450, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[6] = startingPlane;
+
+        //Plane[7]                                               
+        startingPlane.planeMax = Vector3(0, 0, -300);
+        startingPlane.planeMin = Vector3(-150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[7] = startingPlane;
+
+        //Plane[8]                                               
+        startingPlane.planeMax = Vector3(300, 0, -300);
+        startingPlane.planeMin = Vector3(150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[8] = startingPlane;
+
+        landMaxX = planeMap[2].planeMax.x;
+        landMinX = planeMap[6].planeMin.x;
+        landMaxZ = planeMap[2].planeMax.z;
+        landMinZ = planeMap[6].planeMin.z;
+    }
 }                                                              
                                                                           
 void SP2::planeLoader(){

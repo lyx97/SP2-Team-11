@@ -8,7 +8,10 @@
 #include "Light.h"
 #include <vector>
 #include "Object.h"
+#include "Plane.h"
+#include <map>
 
+using std::map;
 
 class SP2Scene3 : public Scene
 {
@@ -90,6 +93,8 @@ private:
     void RenderText(Mesh* mesh, std::string text, Color color);
     void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
     void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
+    void planeInit(bool reset = false);
+    void planeLoader();
     Camera camera;
     Light light[10];
 
@@ -106,6 +111,15 @@ private:
     bool hpLow = false;
 
     MS modelStack, viewStack, projectionStack;
+
+    map<int, plane> planeMap;
+    plane startingPlane;
+    plane currPlane;
+    int landMaxX, landMinX, landMaxZ, landMinZ;
+    int currPlaneKey;
+
+    Vector3 bossPos;
+    float lookAtAngle;
 };
 
 #endif

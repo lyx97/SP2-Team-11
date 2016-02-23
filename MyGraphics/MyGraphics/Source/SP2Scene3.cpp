@@ -29,6 +29,8 @@ void SP2Scene3::Init()
     Singleton::getInstance()->buttonText = false;
     inputDelay = 9.0f;
 
+    bossPos = Vector3(0, 0, 0);
+
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
@@ -160,12 +162,27 @@ void SP2Scene3::Init()
 
     meshList[GEO_BOSS] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_MAIN.obj");
     meshList[GEO_BOSS]->textureID = LoadTGA("Image//NPC_Evil.tga");
+    meshList[GEO_BOSS_HAND1] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_HAND1.obj");
+    meshList[GEO_BOSS_HAND1]->textureID = LoadTGA("Image//NPC_Evil.tga");
+    meshList[GEO_BOSS_HAND2] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_HAND2.obj");
+    meshList[GEO_BOSS_HAND2]->textureID = LoadTGA("Image//NPC_Evil.tga");
+    meshList[GEO_BOSS_LEG1] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_LEG1.obj");
+    meshList[GEO_BOSS_LEG1]->textureID = LoadTGA("Image//NPC_Evil.tga");
+    meshList[GEO_BOSS_LEG2] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_LEG2.obj");
+    meshList[GEO_BOSS_LEG2]->textureID = LoadTGA("Image//NPC_Evil.tga");
 
     meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
+
+    startingPlane.planePos = Vector3(0, 0, 0);
+    startingPlane.planeMin = Vector3(0, 0, 0);
+    startingPlane.planeMax = Vector3(300, 0, 300);
+    planeInit();
+
 }
 
 void SP2Scene3::Update(double dt)
 {
+    planeLoader();
     if (Singleton::getInstance()->pause == true)
     {
         if (Application::IsKeyPressed('O'))
@@ -206,7 +223,11 @@ void SP2Scene3::Update(double dt)
             if (hp >= 25) hpLow = false;
             if (hp >= 100) hp = 100;
         }
-
+        if (Application::IsKeyPressed('R'))
+        {
+            bool reset = true;
+            planeInit(reset);
+        }
         if (Application::IsKeyPressed('Z'))
             light[0].type = Light::LIGHT_POINT;
         glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
@@ -312,16 +333,45 @@ void SP2Scene3::Render()
     RenderSkybox();
     modelStack.PopMatrix();
 
+    map<int, plane>::iterator iter;
+
+    for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
+    {
+        modelStack.PushMatrix();
+        modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
+        modelStack.Rotate(-90, 1, 0, 0);
+        modelStack.Scale(150, 150, 1);
+        RenderMesh(meshList[GEO_GROUND], true);
+        modelStack.PopMatrix();
+    }
+
     modelStack.PushMatrix();
-    modelStack.Rotate(-90, 1, 0, 0);
-    modelStack.Rotate(-90, 0, 0, 1);
-    modelStack.Scale(150, 150, 1);
-    RenderMesh(meshList[GEO_GROUND], true);
+    modelStack.Translate(bossPos.x, bossPos.y, bossPos.x);
+    modelStack.PushMatrix();
+    modelStack.Scale(10, 10, 10);
+    RenderMesh(meshList[GEO_BOSS], true);
     modelStack.PopMatrix();
 
     modelStack.PushMatrix();
     modelStack.Scale(10, 10, 10);
-    RenderMesh(meshList[GEO_BOSS], true);
+    RenderMesh(meshList[GEO_BOSS_HAND1], true);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(10, 10, 10);
+    RenderMesh(meshList[GEO_BOSS_HAND2], true);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(10, 10, 10);
+    RenderMesh(meshList[GEO_BOSS_LEG1], true);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(10, 10, 10);
+    RenderMesh(meshList[GEO_BOSS_LEG2], true);
+    modelStack.PopMatrix();
+
     modelStack.PopMatrix();
 
     //t->r->s
@@ -368,6 +418,7 @@ void SP2Scene3::Render()
     RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
+
 }
 
 void SP2Scene3::RenderSkybox()
@@ -520,6 +571,167 @@ void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
     modelStack.PopMatrix();
     glEnable(GL_DEPTH_TEST);
 }
+
+void SP2Scene3::planeInit(bool reset){
+    if (reset == false){
+        plane startingPlane;
+
+        //Plane[0]                                               
+        startingPlane.planeMax = Vector3(-300, 0, 300);
+        startingPlane.planeMin = Vector3(-450, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(0, startingPlane));
+
+        //Plane[1]                                               
+        startingPlane.planeMax = Vector3(0, 0, 300);
+        startingPlane.planeMin = Vector3(-150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(1, startingPlane));
+
+        //Plane[2]                                               
+        startingPlane.planeMax = Vector3(300, 0, 300);
+        startingPlane.planeMin = Vector3(150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(2, startingPlane));
+                                                                                            //    3x3 map grid (for reference)
+        //Plane[3]                                                                          //   *------* *------* *------*
+        startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
+        startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
+        planeMap.insert(std::pair<int, plane>(3, startingPlane));                           //   *------* *------* *------*    
+                                                                                            //   |      | |  (p) | |      |    
+        //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
+        startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
+        startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
+        planeMap.insert(std::pair<int, plane>(4, startingPlane));                           //   |   6  | |   7  | |  8   |    
+                                                                                            //   *------* *------* *------*    
+        //Plane[5]                                       
+        startingPlane.planeMax = Vector3(300, 0, 0);
+        startingPlane.planeMin = Vector3(150, 0, -150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(5, startingPlane));
+
+        //Plane[6]                                               
+        startingPlane.planeMax = Vector3(-300, 0, -300);
+        startingPlane.planeMin = Vector3(-450, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(6, startingPlane));
+
+        //Plane[7]                                               
+        startingPlane.planeMax = Vector3(0, 0, -300);
+        startingPlane.planeMin = Vector3(-150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(7, startingPlane));
+
+        //Plane[8]                                               
+        startingPlane.planeMax = Vector3(300, 0, -300);
+        startingPlane.planeMin = Vector3(150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap.insert(std::pair<int, plane>(8, startingPlane));
+
+        landMaxX = planeMap[2].planeMax.x;
+        landMinX = planeMap[6].planeMin.x;
+        landMaxZ = planeMap[2].planeMax.z;
+        landMinZ = planeMap[6].planeMin.z;
+
+    }
+    else{
+        plane startingPlane;
+
+        //Plane[0]                                               
+        startingPlane.planeMax = Vector3(-300, 0, 300);
+        startingPlane.planeMin = Vector3(-450, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[0] = startingPlane;
+
+        //Plane[1]                                               
+        startingPlane.planeMax = Vector3(0, 0, 300);
+        startingPlane.planeMin = Vector3(-150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[1] = startingPlane;
+
+        //Plane[2]                                               
+        startingPlane.planeMax = Vector3(300, 0, 300);
+        startingPlane.planeMin = Vector3(150, 0, 150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[2] = startingPlane;
+                                                                                            //    3x3 map grid (for reference)
+        //Plane[3]                                                                          //   *------* *------* *------*
+        startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
+        startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
+        planeMap[3] = startingPlane;                                                        //   *------* *------* *------*    
+                                                                                            //   |      | |  (p) | |      |    
+        //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
+        startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
+        startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
+        startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
+        planeMap[4] = startingPlane;                                                        //   |   6  | |   7  | |  8   |    
+                                                                                            //   *------* *------* *------*    
+        //Plane[5]                                       
+        startingPlane.planeMax = Vector3(300, 0, 0);
+        startingPlane.planeMin = Vector3(150, 0, -150);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[5] = startingPlane;
+
+        //Plane[6]                                               
+        startingPlane.planeMax = Vector3(-300, 0, -300);
+        startingPlane.planeMin = Vector3(-450, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[6] = startingPlane;
+
+        //Plane[7]                                               
+        startingPlane.planeMax = Vector3(0, 0, -300);
+        startingPlane.planeMin = Vector3(-150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[7] = startingPlane;
+
+        //Plane[8]                                               
+        startingPlane.planeMax = Vector3(300, 0, -300);
+        startingPlane.planeMin = Vector3(150, 0, -450);
+        startingPlane.planePos = startingPlane.planeMin;
+        planeMap[8] = startingPlane;
+
+        landMaxX = planeMap[2].planeMax.x;
+        landMinX = planeMap[6].planeMin.x;
+        landMaxZ = planeMap[2].planeMax.z;
+        landMinZ = planeMap[6].planeMin.z;
+    }
+}
+
+void SP2Scene3::planeLoader(){
+
+    for (auto iter : planeMap){
+
+        if ((camera.position.x >= iter.second.planeMin.x && camera.position.x <= iter.second.planeMax.x) && (camera.position.z >= iter.second.planeMin.z && camera.position.z <= iter.second.planeMax.z)){
+
+            currPlane = iter.second;
+            currPlaneKey = iter.first;
+        }
+
+    }
+
+    planeMap[4] = planeMap[currPlaneKey];
+    planeMap[1].planeMin = planeMap[1].planePos = planeMap[4].planeMin + Vector3(0, 0, 150);
+    planeMap[1].planeMax = planeMap[1].planeMin + Vector3(150, 0, 150);
+    planeMap[0].planeMin = planeMap[0].planePos = planeMap[1].planeMin - Vector3(150, 0, 0);
+    planeMap[0].planeMax = planeMap[0].planeMin + Vector3(150, 0, 150);
+    planeMap[2].planeMin = planeMap[2].planePos = planeMap[1].planeMin + Vector3(150, 0, 0);
+    planeMap[2].planeMax = planeMap[2].planeMin + Vector3(150, 0, 150);
+    planeMap[3].planeMin = planeMap[3].planePos = planeMap[4].planeMin - Vector3(150, 0, 0);
+    planeMap[3].planeMax = planeMap[3].planeMin + Vector3(150, 0, 150);
+    planeMap[5].planeMin = planeMap[5].planePos = planeMap[4].planeMin + Vector3(150, 0, 0);
+    planeMap[5].planeMax = planeMap[5].planeMin + Vector3(150, 0, 150);
+    planeMap[6].planeMin = planeMap[6].planePos = planeMap[4].planeMin - Vector3(150, 0, 150);
+    planeMap[6].planeMax = planeMap[6].planeMin + Vector3(150, 0, 150);
+    planeMap[7].planeMin = planeMap[7].planePos = planeMap[6].planeMin + Vector3(150, 0, 0);
+    planeMap[7].planeMax = planeMap[7].planeMin + Vector3(150, 0, 150);
+    planeMap[8].planeMin = planeMap[8].planePos = planeMap[7].planeMin + Vector3(150, 0, 0);
+    planeMap[8].planeMax = planeMap[8].planeMin + Vector3(150, 0, 150);
+
+}
+
 
 void SP2Scene3::Exit()
 {

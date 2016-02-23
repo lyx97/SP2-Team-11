@@ -96,7 +96,7 @@ private:
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
     void planeLoader();
-    void planeInit();
+    void planeInit(bool reset = false);
 
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
