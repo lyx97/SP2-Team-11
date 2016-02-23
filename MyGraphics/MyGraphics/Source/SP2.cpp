@@ -28,7 +28,8 @@ void SP2::Init()
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
 	oreReached = false;
-	gotSword = false;
+	gotSword = true;
+	rotateSword = 0;
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
@@ -238,20 +239,30 @@ void SP2::Update(double dt)
 		if (Application::IsKeyPressed('4'))
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-		if (Application::IsKeyPressed(VK_LBUTTON))
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0 && !swordAniDown && !swordAniUp)
 		{
-			if (swing < 120)
+			swordAniDown = true;
+		}
+
+		if (swordAniDown)
+		{
+			rotateSword += (float)(500 * dt);
+			if (rotateSword >= 120)
 			{
-				swing += 500 * dt;
+				swordAniDown = false;
+				swordAniUp = true;
 			}
 		}
-		if (!Application::IsKeyPressed(VK_LBUTTON))
+		if (swordAniUp)
 		{
-			if (swing > 20)
+			rotateSword -= (float)(500 * dt);
+			if (rotateSword <= 20)
 			{
-				swing -= 500 * dt;
+				swordAniDown = false;
+				swordAniUp = false;
 			}
 		}
+
 
 		if (Application::IsKeyPressed('P'))
 		{
@@ -538,12 +549,12 @@ void SP2::Render()
 	if (planeDistance < 30 && oreReached)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
-	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
+	//RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
 	if (gotSword)
 	{
-		RenderUI(meshList[GEO_SWORD], 7, 75, 3, 1, 0, -60, swing, true);
+		RenderUI(meshList[GEO_SWORD], 7, 75, 3, 1, 0, -60, rotateSword, true);
 	}
 
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps

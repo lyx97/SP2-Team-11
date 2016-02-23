@@ -110,6 +110,10 @@ private:
 	bool oreReached;
 	bool gotSword;
 
+	float rotateSword;
+	bool swordAniDown = false;
+	bool swordAniUp = false;
+
 	int planeDistance = 0;
 
 	float inputDelay = 0.f;
