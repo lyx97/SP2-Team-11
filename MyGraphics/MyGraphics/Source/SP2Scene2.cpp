@@ -124,6 +124,9 @@ void SP2Scene2::Init()
 	meshList[GEO_PELICAN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//air.obj");
 	meshList[GEO_PELICAN]->textureID = LoadTGA("Image//air_UV.tga");
 
+	meshList[GEO_ROCK] = MeshBuilder::GenerateOBJ("ROCK", "OBJ//rock.obj");
+	meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
+
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
 
@@ -143,17 +146,17 @@ void SP2Scene2::Init()
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//planet1_ft.tga");
+	meshList[GEO_FRONT]->textureID = LoadTGA("Image//stars_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//planet1_bk.tga");
+	meshList[GEO_BACK]->textureID = LoadTGA("Image//stars_bk.tga");
 	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("TOP", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//planet1_up.tga");
+	meshList[GEO_TOP]->textureID = LoadTGA("Image//stars_up.tga");
 	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("BOTTOM", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//planet1_dn.tga");
+	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//stars_dn.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("RIGHT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//planet1_rt.tga");
+	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//stars_rt.tga");
 	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("LEFT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//planet1_lf.tga");
+	meshList[GEO_LEFT]->textureID = LoadTGA("Image//stars_lf.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("TEXT", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//heh.tga");
@@ -308,7 +311,7 @@ void SP2Scene2::Render()
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
 	modelStack.PushMatrix();
-	modelStack.Translate(camera.position.x, camera.position.y, camera.position.z);
+	//modelStack.Translate(camera.position.x, camera.position.y, camera.position.z);
 	RenderSkybox();
 	modelStack.PopMatrix();
 	//t->r->s
@@ -318,6 +321,10 @@ void SP2Scene2::Render()
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
 	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
+
+	
+	RenderMesh(meshList[GEO_ROCK], false);
+	
 
 	modelStack.PushMatrix();
 	modelStack.Translate(

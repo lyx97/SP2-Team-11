@@ -9,6 +9,7 @@
 #include <vector>
 #include "Object.h"
 
+using std::vector;
 
 class SP2Scene2 : public Scene
 {
@@ -26,6 +27,7 @@ class SP2Scene2 : public Scene
 		GEO_BACK,
 		GEO_ATAT,
 		GEO_PELICAN,
+		GEO_ROCK,
 		GEO_TEXT,
 		GEO_HOUSE1,
 		GEO_HOUSE2,
@@ -100,6 +102,9 @@ private:
 	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
+
+	vector<Vector3> rockpos;
+
 
 	MS modelStack, viewStack, projectionStack;
 };
