@@ -20,6 +20,8 @@ public:
 	bool togJump = false;
 	float delay = 4.f;
 	float ySpeed = 0.f;
+	float yaw;
+	float pitch;
 
 	double mousex, mousey;
 

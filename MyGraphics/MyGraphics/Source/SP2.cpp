@@ -27,15 +27,15 @@ void SP2::Init()
 	// Init VBO here
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
+	oreReached = false;
+	gotSword = false;
 	inputDelay = 9.0f;
-	board = false;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
+	swordPos = Vector3(0, 10, rand() % 30 + 1985);
     srand(time(0));
     planeInit();
-
-    oreReached = false;
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -115,7 +115,7 @@ void SP2::Init()
 	projectionStack.LoadMatrix(projection);
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 7, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 15, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("AXES", 500, 500, 500);
 
@@ -170,6 +170,9 @@ void SP2::Init()
     meshList[GEO_NPC1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_MAIN.obj");
     meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
 
+	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
+	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
+
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
 	for (auto q : orePos)
@@ -179,7 +182,7 @@ void SP2::Init()
 		cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 	}
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
-	//meleeWeap = new Object(Vector)
+	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 }
 
 void SP2::Update(double dt)
@@ -214,6 +217,10 @@ void SP2::Update(double dt)
 		{
 		}
 
+		if (sqrtf(
+			(cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) +
+			(cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) +
+			(cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z)) < 30 && oreReached)		
 		if (planeDistance < 30 && oreReached)
 		{
 			if (Application::IsKeyPressed('E'))
@@ -230,6 +237,21 @@ void SP2::Update(double dt)
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
 		if (Application::IsKeyPressed('4'))
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+
+		if (Application::IsKeyPressed(VK_LBUTTON))
+		{
+			if (swing < 120)
+			{
+				swing += 500 * dt;
+			}
+		}
+		if (!Application::IsKeyPressed(VK_LBUTTON))
+		{
+			if (swing > 20)
+			{
+				swing -= 500 * dt;
+			}
+		}
 
 		if (Application::IsKeyPressed('P'))
 		{
@@ -269,7 +291,7 @@ void SP2::Update(double dt)
 		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
 		FPS = std::to_string(toupper(1 / dt));
-		cout << heldDelay << endl;
+
 		planeLoader();
 		for (auto q : Object::objectMap)
 		{
@@ -289,16 +311,28 @@ void SP2::Update(double dt)
 					}
 					else {}
 				}
-
 				miningDisplay = true;
-
 			}
-			if (!Application::IsKeyPressed('E'))
+		}
+
+		if (Application::IsKeyPressed('E') && sword->hitbox.isTouching(camera.target))
+		{
+			swordPos.y += 1 * dt;
+			if (pickSword > 5)
 			{
-				heldDelay = 0;
-
-				miningDisplay = false;
+				pickSword = 0;
+				gotSword = true;
+				delete sword;
 			}
+			pickSword += 1 * dt;
+		}
+		if (!Application::IsKeyPressed('E'))
+		{
+			heldDelay = 0;
+
+			pickSword = 0;
+			swordPos.y = 5;
+			miningDisplay = false;
 		}
 
 		if (inputDelay <= 10.0f)
@@ -401,11 +435,7 @@ void SP2::Render()
 	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
-    RenderMesh(meshList[GEO_NPC1], true);
-    modelStack.PopMatrix();
-
+	// hitbox outline
 	for (auto q : Object::objectMap)
 	{
 		modelStack.PushMatrix();
@@ -415,6 +445,24 @@ void SP2::Render()
 		RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
+	}
+
+	modelStack.PushMatrix();
+	modelStack.Scale(5, 5, 5);
+	RenderMesh(meshList[GEO_NPC1], true);
+	modelStack.PopMatrix();
+
+	for (auto q : Object::objectMap)
+	{
+		if (q.first->pos.x == swordPos.x && q.first->pos.z == swordPos.z && !gotSword)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(swordPos.x, swordPos.y + 5, swordPos.z);
+			modelStack.Rotate(180, 1, 0, 0);
+			modelStack.Scale(3, 3, 3);
+			RenderMesh(meshList[GEO_SWORD], true);
+			modelStack.PopMatrix();
+		}
 	}
 
 	map<int, plane>::iterator iter;
@@ -466,22 +514,23 @@ void SP2::Render()
 
 	if (miningDisplay && heldDelay >= 0.1)
 	{
-		RenderUI(meshList[GEO_MINING_BAR], 2, 29, 15, heldDelay * 5);
-		RenderUI(meshList[GEO_BORDER], 2, 29, 15, 10);
+		RenderUI(meshList[GEO_MINING_BAR], 2, 29, 15, heldDelay * 5, 0, 0, 0, false);
+		RenderUI(meshList[GEO_BORDER], 2, 29, 15, 10, 0, 0, 0, false);
 	}
 
 
 	if (!hpMid && !hpLow)
-		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10);
+		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10, 0, 0, 0, false);
 
 	if (hpMid && !hpLow)
-		RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10);
+		RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10, 0, 0, 0, false);
 
 	if (hpMid && hpLow)
-		RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10);
+		RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10, 0, 0, 0, false);
 
-	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
+	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
+
 
 	if (oreReached)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Plane Distance : " + std::to_string(planeDistance), Color(1, 0, 0), 2, 20, 42);
@@ -490,6 +539,13 @@ void SP2::Render()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
+
+	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
+	if (gotSword)
+	{
+		RenderUI(meshList[GEO_SWORD], 7, 75, 3, 1, 0, -60, swing, true);
+	}
+
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
@@ -624,11 +680,11 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 	glEnable(GL_DEPTH_TEST);
 }
 
-void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
+void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight)
 {
 	glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
-	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	ortho.SetToOrtho(0, 80, 0, 60, -50, 50); //size of screen UI
 	projectionStack.PushMatrix();
 	projectionStack.LoadMatrix(ortho);
 	viewStack.PushMatrix();
@@ -636,9 +692,19 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(x, y, 1);
+	modelStack.Rotate(rotatex, 1, 0, 0);
+	modelStack.Rotate(rotatey, 0, 1, 0);
+	modelStack.Rotate(rotatez, 0, 0, 1);
 	modelStack.Scale(size, size, size);
 	modelStack.Scale(scaleX, 1, 1);
-	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+	if (enableLight)
+	{
+		glUniform1i(m_parameters[U_LIGHTENABLED], 1);
+	}
+	else
+	{
+		glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+	}
 	glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, mesh->textureID);

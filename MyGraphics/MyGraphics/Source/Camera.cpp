@@ -195,8 +195,8 @@ void Camera::Update(double dt)
 	if (Singleton::getInstance()->pause == false)
 	{
 		Application::MouseMove(mousex, mousey);
-		float yaw = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
-		float pitch = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
+		yaw = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_WIDTH / 2) - mousex);
+		pitch = Singleton::getInstance()->MOUSE_SPEED * dt * static_cast<float>((SCREEN_HEIGHT / 2) - mousey);
 
 		// mouse speed
 		if (Application::IsKeyPressed(VK_SUBTRACT) && Singleton::getInstance()->MOUSE_SPEED > 1 && delay > 5)
@@ -278,7 +278,7 @@ void Camera::Update(double dt)
 
 void Camera::Reset()
 {
-	position.Set(150, 7, 150);
-	target.Set(0, 0, 0);
+	position.Set(0, 15, 0);
+	target.Set(90, 0, 0);
 	up.Set(0, 1, 0);
 }

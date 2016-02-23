@@ -94,7 +94,7 @@ private:
 	void RenderSkybox();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
+	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight);
     void planeLoader();
     void planeInit(bool reset = false);
 
@@ -104,16 +104,18 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	bool board;
 	bool hpMid = false;
 	bool hpLow = false;
 	bool miningDisplay = false;
 	bool oreReached;
+	bool gotSword;
 
 	int planeDistance = 0;
 
 	float inputDelay = 0.f;
 	float heldDelay = 0.f;
+	float pickSword = 0.f;
+	float swing = 20.f;
 
     int numPlanes = 2;
 	int hp = 100;
@@ -122,7 +124,9 @@ private:
 	int landMaxX, landMinX, landMaxZ, landMinZ;
 
 	std::string FPS;
+
 	Vector3 cameraStore;
+	Vector3 swordPos;
 
 	// ores and land generators
 	vector<Vector3> orePos;
@@ -133,7 +137,7 @@ private:
 	// objects
 	Object* ore;
 	Object* NPC;
-	Object* meleeWeap;
+	Object* sword;
 
 	Camera camera;
 	Light light[10];
