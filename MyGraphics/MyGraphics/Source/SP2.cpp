@@ -178,11 +178,13 @@ void SP2::Init()
 		cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 	}
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
-	meleeWeap = new Object(Vector)
+	//meleeWeap = new Object(Vector)
 }
 
 void SP2::Update(double dt)
 {
+	planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
+
 	if (Singleton::getInstance()->pause == true)
 	{
 		if (Application::IsKeyPressed('O'))
@@ -211,10 +213,7 @@ void SP2::Update(double dt)
 		{
 		}
 
-		if (sqrtf(
-			(cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) +
-			(cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) +
-			(cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z)) < 30 && oreReached)
+		if (planeDistance < 30 && oreReached)
 		{
 			if (Application::IsKeyPressed('E'))
 			{
@@ -482,6 +481,12 @@ void SP2::Render()
 
 	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
+
+	if (oreReached)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Plane Distance : " + std::to_string(planeDistance), Color(1, 0, 0), 2, 20, 42);
+
+	if (planeDistance < 30 && oreReached)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps

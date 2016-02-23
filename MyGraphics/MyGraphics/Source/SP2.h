@@ -110,6 +110,8 @@ private:
 	bool miningDisplay = false;
 	bool oreReached;
 
+	int planeDistance = 0;
+
 	float inputDelay = 0.f;
 	float heldDelay = 0.f;
 
