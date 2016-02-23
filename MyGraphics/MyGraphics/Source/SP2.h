@@ -45,6 +45,10 @@ class SP2 : public Scene
 		GEO_MINING_BAR,
 		GEO_BORDER,
         GEO_NPC1,
+        GEO_NPC1_HAND1,
+        GEO_NPC1_HAND2,
+        GEO_NPC1_LEG1,
+        GEO_NPC1_LEG2,
         GEO_HITBOX,
 
 		NUM_GEOMETRY,
