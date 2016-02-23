@@ -28,7 +28,7 @@ void SP2::Init()
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
 	oreReached = false;
-	gotSword = true;
+	gotSword = false;
 	rotateSword = 0;
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
@@ -178,9 +178,9 @@ void SP2::Init()
 
 	for (auto q : orePos)
 	{
-		cout << q.x << " " << q.y << " " << q.z << endl;
+		//cout << q.x << " " << q.y << " " << q.z << endl;
 		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5));
-		cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
+		//cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
 	}
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));

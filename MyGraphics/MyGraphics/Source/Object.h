@@ -14,7 +14,19 @@ public:
 
 	static map<Object*, int> objectMap;
 
+	void setHealth(int health);
+	void setGod();
+	void receiveDmg(int dmg);
+
+	int getHealth();
+
+	bool isDead();
+
 	Vector3 size;
 	Vector3 pos;
+
+private:
+	int health;
+	bool isGod;
 };
 
