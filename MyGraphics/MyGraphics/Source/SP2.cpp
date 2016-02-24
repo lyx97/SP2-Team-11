@@ -28,7 +28,7 @@ void SP2::Init()
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
 	oreReached = false;
-	gotSword = false;
+	gotSword = true;
 	rotateSword = 0;
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
@@ -178,12 +178,10 @@ void SP2::Init()
 
 	for (auto q : orePos)
 	{
-		//cout << q.x << " " << q.y << " " << q.z << endl;
-		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5));
-		//cout << ore->hitbox.minPt << " " << ore->hitbox.maxPt << endl;
+		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5), true);
 	}
-	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
-	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
+	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5), false);
+	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7), true);
 }
 
 void SP2::Update(double dt)
@@ -221,15 +219,46 @@ void SP2::Update(double dt)
 		if (sqrtf(
 			(cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) +
 			(cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) +
-			(cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z)) < 30 && oreReached)		
-		if (planeDistance < 30 && oreReached)
+			(cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z)) < 30 && oreReached)
 		{
-			if (Application::IsKeyPressed('E'))
+			if (planeDistance < 30 && oreReached)
 			{
-				Singleton::getInstance()->stateCheck = true;
-				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+				if (Application::IsKeyPressed('E'))
+				{
+					Singleton::getInstance()->stateCheck = true;
+					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+				}
 			}
 		}
+		if (sqrtf(
+			pow((camera.target.x - NPC->hitbox.pos.x), 2) +
+			pow((camera.target.y - NPC->hitbox.pos.y), 2) +
+			pow((camera.target.z - NPC->hitbox.pos.z), 2)) < 15 && gotSword)
+		{
+			if (Application::IsKeyPressed(VK_LBUTTON))
+			{
+				NPC->receiveDmg(10);
+			}
+		}
+		if (gotSword)
+		{
+
+		}
+		
+		for (auto it = Object::objectMap.begin(); it != Object::objectMap.end();)
+		{
+			if (it->first->isDead())
+			{
+				Object::objectMap.erase(it);
+				it = Object::objectMap.begin();
+			}
+			else
+			{
+				++it;
+			}
+		}
+
+		cout << NPC->getHealth() << endl;
 		if (Application::IsKeyPressed('1')) //enable back face culling
 			glEnable(GL_CULL_FACE);
 		if (Application::IsKeyPressed('2')) //disable back face culling
@@ -239,7 +268,7 @@ void SP2::Update(double dt)
 		if (Application::IsKeyPressed('4'))
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0 && !swordAniDown && !swordAniUp)
+		if (Application::IsKeyPressed(VK_LBUTTON) && !swordAniDown && !swordAniUp)
 		{
 			swordAniDown = true;
 		}
@@ -262,7 +291,6 @@ void SP2::Update(double dt)
 				swordAniUp = false;
 			}
 		}
-
 
 		if (Application::IsKeyPressed('P'))
 		{
@@ -549,13 +577,10 @@ void SP2::Render()
 	if (planeDistance < 30 && oreReached)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
-	//RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
-
-
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
 	if (gotSword)
 	{
-		RenderUI(meshList[GEO_SWORD], 7, 75, 3, 1, 0, -60, rotateSword, true);
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
 	}
 
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
@@ -696,7 +721,7 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float
 {
 	glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
-	ortho.SetToOrtho(0, 80, 0, 60, -50, 50); //size of screen UI
+	ortho.SetToOrtho(0, 80, 0, 60, -100, 100); //size of screen UI
 	projectionStack.PushMatrix();
 	projectionStack.LoadMatrix(ortho);
 	viewStack.PushMatrix();

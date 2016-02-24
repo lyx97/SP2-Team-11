@@ -7,7 +7,7 @@ using std::map;
 class Object
 {
 public:
-	Object(Vector3 pos = Vector3(0, 0, 0), Vector3 scale = Vector3(1, 1, 1));
+	Object(Vector3 pos = Vector3(0, 0, 0), Vector3 scale = Vector3(1, 1, 1), bool godMode = false);
 	~Object();
 
 	Hitbox hitbox;
@@ -15,7 +15,7 @@ public:
 	static map<Object*, int> objectMap;
 
 	void setHealth(int health);
-	void setGod();
+	void setPos(Vector3 pos);
 	void receiveDmg(int dmg);
 
 	int getHealth();
@@ -27,6 +27,6 @@ public:
 
 private:
 	int health;
-	bool isGod;
+	bool godMode;
 };
 

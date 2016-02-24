@@ -109,13 +109,12 @@ private:
 	bool miningDisplay = false;
 	bool oreReached;
 	bool gotSword;
-
-	float rotateSword;
 	bool swordAniDown = false;
 	bool swordAniUp = false;
 
 	int planeDistance = 0;
 
+	float rotateSword;
 	float inputDelay = 0.f;
 	float heldDelay = 0.f;
 	float pickSword = 0.f;

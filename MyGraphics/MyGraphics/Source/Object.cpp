@@ -2,8 +2,9 @@
 
 map<Object*, int> Object::objectMap;
 
-Object::Object(Vector3 pos, Vector3 size):
-hitbox(Hitbox(pos, size))
+Object::Object(Vector3 pos, Vector3 size, bool godMode) :
+hitbox(Hitbox(pos, size)),
+health(100)
 {
 	this->pos = pos;
 	this->size = size;
@@ -19,9 +20,17 @@ void Object::setHealth(int health)
 	this->health = health;
 }
 
+void Object::setPos(Vector3 pos)
+{
+	this->pos = pos;
+}
+
 void Object::receiveDmg(int dmg)
 {
-	if (!isGod)
+	if (godMode)
+	{
+	}
+	else
 	{
 		health -= dmg;
 	}
@@ -42,9 +51,4 @@ bool Object::isDead()
 	{
 		return false;
 	}
-}
-
-void Object::setGod()
-{
-	isGod = true;
 }
