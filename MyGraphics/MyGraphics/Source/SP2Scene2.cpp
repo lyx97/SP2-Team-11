@@ -125,8 +125,8 @@ void SP2Scene2::Init()
 	meshList[GEO_PELICAN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//air.obj");
 	meshList[GEO_PELICAN]->textureID = LoadTGA("Image//air_UV.tga");
 
-	//meshList[GEO_ROCK] = MeshBuilder::GenerateOBJ("ROCK", "OBJ//rock.obj");
-	//meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
+	meshList[GEO_ROCK] = MeshBuilder::GenerateOBJ("ROCK", "OBJ//rock.obj");
+	meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
 
 	meshList[GEO_MOON] = MeshBuilder::GenerateOBJ("MOON", "OBJ//moon.obj");
 	meshList[GEO_MOON]->textureID = LoadTGA("Image//moon2.tga");
@@ -169,6 +169,24 @@ void SP2Scene2::Init()
 	meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
 
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
+
+	for (int loop = 0; loop < rockfreq; loop++)
+	{
+
+		rockpos.push_back(Vector3((rand() % 2000) , (rand() % 30) - 15, (rand() % 4000) - 2000));
+	}
+
+	for (int loop = 0; loop < 100; loop++)
+	{
+
+		rockpos.push_back(Vector3((rand() % 2000), (rand() % 600) - 300, (rand() % 4000) - 2000));
+	}
+	
+
+	for (auto q : rockpos)
+	{
+		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(28, 18, 15));
+	}
 }
 
 void SP2Scene2::Update(double dt)
@@ -190,6 +208,7 @@ void SP2Scene2::Update(double dt)
 	}
 	else
 	{
+		//cout << camera.position << endl;
 		if (Application::IsKeyPressed('1')) //enable back face culling
 			glEnable(GL_CULL_FACE);
 		if (Application::IsKeyPressed('2')) //disable back face culling
@@ -242,6 +261,40 @@ void SP2Scene2::Update(double dt)
 		{
 			camera.Update(dt);
 		}
+	}
+	if (Application::IsKeyPressed('Y'))
+	{
+		momentum = momentum + dt/100;
+		pelicanPos.x += momentum;
+	}
+	else if (momentum > 0)
+	{
+		momentum -= dt/100;
+		pelicanPos.x += momentum;
+	}
+	if (Application::IsKeyPressed('G'))
+	{
+		acceleration = acceleration + dt;
+		rotation =rotation + acceleration;
+		cout << rotation << endl;
+	}
+	else if (Application::IsKeyPressed('J'))
+	{
+		acceleration = acceleration - dt;
+		rotation = rotation + acceleration;
+		cout << rotation << endl;
+	}
+	else if (acceleration >= 0)
+	{
+		acceleration = acceleration - dt;
+		rotation = rotation + acceleration;
+		cout << rotation << endl;
+	}
+	else if (acceleration <= 0)
+	{
+		acceleration = acceleration + dt;
+		rotation = rotation + acceleration;
+		cout << rotation << endl;
 	}
 }
 
@@ -333,11 +386,8 @@ void SP2Scene2::Render()
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
 	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
-
 	
-	//RenderMesh(meshList[GEO_ROCK], false);
 	
-
 	modelStack.PushMatrix();
 	modelStack.Translate(
 		camera.target.x,
@@ -347,6 +397,18 @@ void SP2Scene2::Render()
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
 	modelStack.PopMatrix();
+
+	// hitbox outline
+	for (auto q : Object::objectMap)
+	{
+		modelStack.PushMatrix();
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
+		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
+		RenderMesh(meshList[GEO_HITBOX], false);
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		modelStack.PopMatrix();
+	}
 
 	modelStack.PushMatrix();
 	modelStack.Translate(800, 0, 0);
@@ -359,8 +421,27 @@ void SP2Scene2::Render()
 	modelStack.Translate(0, -1, 0);
 	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
 	modelStack.Scale(0.3, 0.3, 0.3);
+	modelStack.Scale(10, 10, 10);
+	modelStack.Translate(camera.view.x + pelicanPos.x, camera.view.y, camera.view.z);
+	modelStack.Rotate(rotation, 0, 1, 0);
 	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
+
+	for (auto q : Object::objectMap)
+	{
+		for (int j = 0; j < rockpos.size(); ++j)
+		{
+			if ((q.first->pos.x == rockpos[j].x) &&
+				(q.first->pos.z == rockpos[j].z))
+			{
+				modelStack.PushMatrix();
+				modelStack.Translate(rockpos[j].x, rockpos[j].y, rockpos[j].z);
+				modelStack.Scale(5, 5, 5);
+				RenderMesh(meshList[GEO_ROCK], true);
+				modelStack.PopMatrix();
+			}
+		}
+	}
 
 	if (!hpMid && !hpLow)
 		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10);
@@ -390,6 +471,9 @@ void SP2Scene2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(1, 1, 1), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
+
+	
+
 }
 
 void SP2Scene2::RenderSkybox()
@@ -398,45 +482,45 @@ void SP2Scene2::RenderSkybox()
 	modelStack.Scale(0.8f, 0.8f, 0.8f);
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 997.f);
+	modelStack.Translate(0, 0, 2997.f);
 	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
+	modelStack.Scale(3000, 3000, 3000);
 	RenderMesh(meshList[GEO_FRONT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -997.f);
-	modelStack.Scale(1000, 1000, 1000);
+	modelStack.Translate(0, 0, -2997.f);
+	modelStack.Scale(3000, 3000, 3000);
 	RenderMesh(meshList[GEO_BACK], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, -997.f, 0);
+	modelStack.Translate(0, -2997.f, 0);
 	modelStack.Rotate(-90, 1, 0, 0);
 	modelStack.Rotate(-90, 0, 0, 1);
-	modelStack.Scale(1000, 1000, 1000);
+	modelStack.Scale(3000, 3000, 3000);
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 997.f, 0);
+	modelStack.Translate(0, 2997.f, 0);
 	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Scale(1000, 1000, 1000);
+	modelStack.Scale(3000, 3000, 3000);
 	RenderMesh(meshList[GEO_TOP], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-997.f, 0, 0);
+	modelStack.Translate(-2997.f, 0, 0);
 	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
+	modelStack.Scale(3000, 3000, 3000);
 	RenderMesh(meshList[GEO_LEFT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(997.f, 0, 0);
+	modelStack.Translate(2997.f, 0, 0);
 	modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
+	modelStack.Scale(3000, 3000, 3000);
 	RenderMesh(meshList[GEO_RIGHT], false);
 	modelStack.PopMatrix();
 

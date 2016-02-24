@@ -101,12 +101,21 @@ private:
 
 	std::string FPS;
 	float inputDelay = 0.f;
+	float acceleration = 0.f;
+	float momentum = 0.f;
+	float rotation = 0.f;
 	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
 
+	int rockfreq = 300;
+
 	vector<Vector3> rockpos;
 
+	Vector3 pelicanPos;
+
+	Object* rock;
+	Object* pelican;
 
 	MS modelStack, viewStack, projectionStack;
 };

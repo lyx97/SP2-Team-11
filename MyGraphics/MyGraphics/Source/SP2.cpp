@@ -560,6 +560,7 @@ void SP2::Render()
 		modelStack.PopMatrix();
 	}
 
+
 	for (auto q : Object::objectMap)
 	{
 		for (int j = 0; j < orePos.size(); ++j)
