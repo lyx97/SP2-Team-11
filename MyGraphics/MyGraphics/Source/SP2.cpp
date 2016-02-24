@@ -27,8 +27,11 @@ void SP2::Init()
 	// Init VBO here
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
+    spawnRadius = 5000;
+    oreFrequency = 100;
+    treeFrequency = 100;
 	oreReached = false;
-	gotSword = true;
+	gotSword = false;
 	rotateSword = 0;
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
@@ -170,9 +173,24 @@ void SP2::Init()
 
     meshList[GEO_NPC1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_MAIN.obj");
     meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
+    meshList[GEO_NPC1_HAND1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_HAND1.obj");
+    meshList[GEO_NPC1_HAND1]->textureID = LoadTGA("Image//NPC.tga");
+    meshList[GEO_NPC1_HAND2] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_HAND2.obj");
+    meshList[GEO_NPC1_HAND2]->textureID = LoadTGA("Image//NPC.tga");
+    meshList[GEO_NPC1_LEG1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_LEG1.obj");
+    meshList[GEO_NPC1_LEG1]->textureID = LoadTGA("Image//NPC.tga");
+    meshList[GEO_NPC1_LEG2] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_LEG2.obj");
+    meshList[GEO_NPC1_LEG2]->textureID = LoadTGA("Image//NPC.tga");
+
 
 	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
 	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
+    
+    meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree2.obj");
+    meshList[GEO_TREE]->textureID = LoadTGA("Image//tree2.tga");
+
+    meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
+    meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
 
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
@@ -180,8 +198,14 @@ void SP2::Init()
 	{
 		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5), true);
 	}
-	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5), false);
-	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7), true);
+
+    for (auto q : treePos)
+    {
+        tree = new Object(Vector3(q.x, 5, q.z), Vector3(8, 150, 8));
+    }
+	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
+	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
+
 }
 
 void SP2::Update(double dt)
@@ -491,6 +515,26 @@ void SP2::Render()
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
 
+    modelStack.PushMatrix();
+    modelStack.Scale(5, 5, 5);
+    RenderMesh(meshList[GEO_NPC1_HAND1], true);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(5, 5, 5);
+    RenderMesh(meshList[GEO_NPC1_HAND2], true);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(5, 5, 5);
+    RenderMesh(meshList[GEO_NPC1_LEG1], true);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    modelStack.Scale(5, 5, 5);
+    RenderMesh(meshList[GEO_NPC1_LEG2], true);
+    modelStack.PopMatrix();
+
 	for (auto q : Object::objectMap)
 	{
 		if (q.first->pos.x == swordPos.x && q.first->pos.z == swordPos.z && !gotSword)
@@ -523,13 +567,29 @@ void SP2::Render()
 			if ((q.first->pos.x == orePos[j].x) &&
 				(q.first->pos.z == orePos[j].z))
 			{
-				modelStack.PushMatrix();
-				modelStack.Translate(orePos[j].x, 0, orePos[j].z);
-				modelStack.Scale(4, 4, 4);
-				RenderMesh(meshList[GEO_ORE], true);
-				modelStack.PopMatrix();
+                if (orePos[j].x >= camera.position.x - 80 || orePos[j].x <= camera.position.x + 80 || orePos[j].z >= camera.position.z - 80 || orePos[j].z <= camera.position.z + 80){
+                    modelStack.PushMatrix();
+                    modelStack.Translate(orePos[j].x, 0, orePos[j].z);
+                    modelStack.Scale(4, 4, 4);
+                    RenderMesh(meshList[GEO_ORE], true);
+                    modelStack.PopMatrix();
+                }
 			}
 		}
+        for (int j = 0; j < treePos.size(); ++j)
+        {
+            if ((q.first->pos.x == treePos[j].x) &&
+                (q.first->pos.z == treePos[j].z))
+            {
+                if (treePos[j].x >= camera.position.x - 80 || treePos[j].x <= camera.position.x + 80 || treePos[j].z >= camera.position.z - 80 || treePos[j].z <= camera.position.z + 80){
+                    modelStack.PushMatrix();
+                    modelStack.Translate(treePos[j].x, 0, treePos[j].z);
+                    modelStack.Scale(8, 8, 8);
+                    RenderMesh(meshList[GEO_TREE], true);
+                    modelStack.PopMatrix();
+                }
+            }
+        }
 	}
 
 	if (oreReached)
@@ -780,19 +840,19 @@ void SP2::planeInit(bool reset){
         startingPlane.planeMin = Vector3(150, 0, 150);
         startingPlane.planePos = startingPlane.planeMin;
         planeMap.insert(std::pair<int, plane>(2, startingPlane));
-        //    3x3 map grid (for reference)
+                                                                                            //    3x3 map grid (for reference)
         //Plane[3]                                                                          //   *------* *------* *------*
         startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
         startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
         startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
         planeMap.insert(std::pair<int, plane>(3, startingPlane));                           //   *------* *------* *------*    
-        //   |      | |  (p) | |      |    
+                                                                                            //   |      | |  (p) | |      |    
         //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
         startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
         startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
         startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
         planeMap.insert(std::pair<int, plane>(4, startingPlane));                           //   |   6  | |   7  | |  8   |    
-        //   *------* *------* *------*    
+                                                                                            //   *------* *------* *------*    
         //Plane[5]                                       
         startingPlane.planeMax = Vector3(300, 0, 0);
         startingPlane.planeMin = Vector3(150, 0, -150);
@@ -822,27 +882,49 @@ void SP2::planeInit(bool reset){
         landMaxZ = planeMap[2].planeMax.z;
         landMinZ = planeMap[6].planeMin.z;
 
-
+        //Ore spawning
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
       
-            orePos.push_back(Vector3(rand() % 2000, 0, rand() % 2000));
+            orePos.push_back(Vector3(rand() % spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
       
-            orePos.push_back(Vector3((rand() % 2000) - 2000, 0, rand() % 2000));
+            orePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
           
-            orePos.push_back(Vector3((rand() % 2000) - 2000, 0, (rand() % 2000) - 2000));
+            orePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
         }
 
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
           
-            orePos.push_back(Vector3(rand() % 2000 + 0, 0, (rand() % 2000) - 2000));
+            orePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
+        }
+        //Tree spawning
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3(rand() % spawnRadius, 0, rand() % spawnRadius));
+        }
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, rand() % spawnRadius));
+        }
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
+        }
+
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
         }
     }
     else{
@@ -938,6 +1020,7 @@ void SP2::planeLoader(){
     planeMap[7].planeMax = planeMap[7].planeMin + Vector3(150, 0, 150);
     planeMap[8].planeMin = planeMap[8].planePos = planeMap[7].planeMin + Vector3(150, 0, 0);
     planeMap[8].planeMax = planeMap[8].planeMin + Vector3(150, 0, 150);
+
 
 }
 

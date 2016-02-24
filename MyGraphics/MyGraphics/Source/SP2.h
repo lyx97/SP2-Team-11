@@ -48,6 +48,8 @@ class SP2 : public Scene
         GEO_NPC1_HAND2,
         GEO_NPC1_LEG1,
         GEO_NPC1_LEG2,
+        GEO_TREE,
+        GEO_GRASS,
         GEO_HITBOX,
 
 		NUM_GEOMETRY,
@@ -122,9 +124,13 @@ private:
 
     int numPlanes = 2;
 	int hp = 100;
-	int oreFrequency = 300;
-	int currPlaneKey;
+	int oreFrequency;
+    int treeFrequency;
+    int grassFrequency;
+    int currPlaneKey;
 	int landMaxX, landMinX, landMaxZ, landMinZ;
+    int spawnRadius;
+
 
 	std::string FPS;
 
@@ -133,6 +139,8 @@ private:
 
 	// ores and land generators
 	vector<Vector3> orePos;
+    vector<Vector3> treePos;
+    vector<Vector3> grassPos;
 	map<int,plane> planeMap;
 	plane startingPlane;
     plane currPlane;
@@ -141,7 +149,9 @@ private:
 	Object* ore;
 	Object* NPC;
 	Object* sword;
-
+    Object* tree;
+    Object* grass;
+    
 	Camera camera;
 	Light light[10];
 

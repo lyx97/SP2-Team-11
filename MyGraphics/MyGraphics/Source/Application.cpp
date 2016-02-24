@@ -125,7 +125,9 @@ void Application::Run()
 {
 	//Main Loop
 
-	Scene *scene = new SP2Scene2();
+
+	Scene *scene = new SP2();
+
 	scene->Init();
 
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this frame
@@ -152,7 +154,9 @@ void Application::Run()
 				break;
 			case Singleton::PROGRAM_GAME2: scene = new SP2Scene2();
 				break;
+
 			case Singleton::PROGRAM_GAME3: scene = new SP2Scene3();
+
                 break;
 			}
 			scene->Init();
