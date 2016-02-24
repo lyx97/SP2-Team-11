@@ -124,6 +124,7 @@ void Application::Init()
 void Application::Run()
 {
 	//Main Loop
+
 	Scene *scene = new MainMenu();
 	scene->Init();
 
@@ -151,6 +152,8 @@ void Application::Run()
 				break;
 			case Singleton::PROGRAM_GAME2: scene = new SP2Scene2();
 				break;
+            case Singleton::PROGRAM_GAME3: scene = new SP2Scene2();
+                break;
 			}
 			scene->Init();
 		}

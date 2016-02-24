@@ -28,8 +28,8 @@ void SP2Scene3::Init()
     Singleton::getInstance()->pause = false;
     Singleton::getInstance()->buttonText = false;
     inputDelay = 9.0f;
-
-    bossPos = Vector3(40, 0, 40);
+    rotateSword = 0;
+    boss = Boss("Final Boss", 100, Vector3(40, 0, 40));
 
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -171,6 +171,10 @@ void SP2Scene3::Init()
     meshList[GEO_BOSS_LEG2] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_LEG2.obj");
     meshList[GEO_BOSS_LEG2]->textureID = LoadTGA("Image//NPC_Evil.tga");
 
+
+    meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
+    meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
+
     meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
     startingPlane.planePos = Vector3(0, 0, 0);
@@ -178,14 +182,14 @@ void SP2Scene3::Init()
     startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
 
-    boss = new Object(bossPos, Vector3(25, 45, 25));
+    bossObj = new Object(boss.position, Vector3(30, 150, 40));
 }
 
 void SP2Scene3::Update(double dt)
 {
+    
+    planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
 
-    planeLoader();
-    boss->pos = bossPos;
     if (Singleton::getInstance()->pause == true)
     {
         if (Application::IsKeyPressed('O'))
@@ -195,6 +199,9 @@ void SP2Scene3::Update(double dt)
     }
     else
     {
+
+
+      
         if (Application::IsKeyPressed('1')) //enable back face culling
             glEnable(GL_CULL_FACE);
         if (Application::IsKeyPressed('2')) //disable back face culling
@@ -203,6 +210,30 @@ void SP2Scene3::Update(double dt)
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
         if (Application::IsKeyPressed('4'))
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+
+        if ((GetKeyState(VK_LBUTTON) & 0x100) != 0 && !swordAniDown && !swordAniUp)
+        {
+            swordAniDown = true;
+        }
+
+        if (swordAniDown)
+        {
+            rotateSword += (float)(500 * dt);
+            if (rotateSword >= 120)
+            {
+                swordAniDown = false;
+                swordAniUp = true;
+            }
+        }
+        if (swordAniUp)
+        {
+            rotateSword -= (float)(500 * dt);
+            if (rotateSword <= 20)
+            {
+                swordAniDown = false;
+                swordAniUp = false;
+            }
+        }
 
         if (Application::IsKeyPressed('P'))
         {
@@ -243,6 +274,18 @@ void SP2Scene3::Update(double dt)
 
         FPS = std::to_string(toupper(1 / dt));
 
+        planeLoader();
+
+
+        if (!Application::IsKeyPressed('E'))
+        {
+            heldDelay = 0;
+
+            pickSword = 0;
+            swordPos.y = 5;
+            miningDisplay = false;
+        }
+
         if (inputDelay <= 10.0f)
         {
             inputDelay += (float)(1 * dt);
@@ -252,20 +295,29 @@ void SP2Scene3::Update(double dt)
             camera.Update(dt);
         }
     }
+    if ((GetKeyState(VK_LBUTTON) & 0x100) && swordAniDown && distanceBetween(boss.position,camera.position)<10){
+        boss.health -= 10;
+        cout << "ATTACK" << endl;
+    }
 
- /*   if (distanceBetween(bossPos, camera.position) >= 30){*/
-  //      if (bossPos.x <= camera.position.x + 20)
-  //          bossPos.x += (float)(80 * dt);
+   if (distanceBetween(boss.position, camera.position) >= 30){
+    if (boss.position.x <= camera.position.x + 20)
+        boss.position.x += (float)(80 * dt);
 
-  //if (bossPos.x >= camera.position.x - 20)
-  //          bossPos.x -= (float)(80 * dt);
+    if (boss.position.x >= camera.position.x - 20)
+        boss.position.x -= (float)(80 * dt);
 
-  //      if (bossPos.z <= camera.position.z + 20)
-  //          bossPos.z += (float)(80 * dt);
+    if (boss.position.z <= camera.position.z + 20)
+        boss.position.z += (float)(80 * dt);
 
-  //  if (bossPos.z >= camera.position.z - 20)
-  //          bossPos.z -= (float)(80 * dt);
-    //}
+    if (boss.position.z >= camera.position.z - 20)
+         boss.position.z -= (float)(80 * dt);
+    }
+   bossObj->pos = boss.position;
+
+   if (boss.health <= 0){
+       bossObj->objectMap.erase(bossObj);
+   }
 }
 
 void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
@@ -345,6 +397,18 @@ void SP2Scene3::Render()
         Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
         glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
     }
+
+    for (auto q : Object::objectMap)
+    {
+        modelStack.PushMatrix();
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
+        modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
+        RenderMesh(meshList[GEO_HITBOX], false);
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        modelStack.PopMatrix();
+    }
+
     modelStack.PushMatrix();
     modelStack.Translate(camera.position.x, camera.position.y + 80, camera.position.z);
     RenderSkybox();
@@ -361,29 +425,31 @@ void SP2Scene3::Render()
         RenderMesh(meshList[GEO_GROUND], true);
         modelStack.PopMatrix();
     }
-    modelStack.PushMatrix();
-    modelStack.Translate(bossPos.x, bossPos.y, bossPos.x);
-    modelStack.Scale(20, 20, 20);
-    modelStack.PushMatrix();
-    RenderMesh(meshList[GEO_BOSS], true);
-    modelStack.PopMatrix();
+    if (boss.health >= 0){
+        modelStack.PushMatrix();
+        modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
+        modelStack.Scale(20, 20, 20);
+        modelStack.PushMatrix();
+        RenderMesh(meshList[GEO_BOSS], true);
+        modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    RenderMesh(meshList[GEO_BOSS_HAND1], true);
-    modelStack.PopMatrix();
+        modelStack.PushMatrix();
+        RenderMesh(meshList[GEO_BOSS_HAND1], true);
+        modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    RenderMesh(meshList[GEO_BOSS_HAND2], true);
-    modelStack.PopMatrix();
+        modelStack.PushMatrix();
+        RenderMesh(meshList[GEO_BOSS_HAND2], true);
+        modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    RenderMesh(meshList[GEO_BOSS_LEG1], true);
-    modelStack.PopMatrix();
+        modelStack.PushMatrix();
+        RenderMesh(meshList[GEO_BOSS_LEG1], true);
+        modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    RenderMesh(meshList[GEO_BOSS_LEG2], true);
-    modelStack.PopMatrix();
-    modelStack.PopMatrix();
+        modelStack.PushMatrix();
+        RenderMesh(meshList[GEO_BOSS_LEG2], true);
+        modelStack.PopMatrix();
+        modelStack.PopMatrix();
+    }
     
     //t->r->s
     //RenderMesh(meshList[GEO_AXES], false);
@@ -404,18 +470,18 @@ void SP2Scene3::Render()
     modelStack.PopMatrix();
 
     if (!hpMid && !hpLow)
-        RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10);
+        RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10, 0, 0, 0, false);
 
     if (hpMid && !hpLow)
-        RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10);
+        RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10, 0, 0, 0, false);
 
     if (hpMid && hpLow)
-        RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10);
+        RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10, 0, 0, 0, false);
 
-    RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
+    RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
-    RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
+    RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
     RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
     RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
@@ -429,7 +495,13 @@ void SP2Scene3::Render()
     RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
-    cout << bossPos << endl;
+    cout << boss.health << endl;
+
+
+    if (gotSword)
+    {
+        RenderUI(meshList[GEO_SWORD], 7, 75, 3, 1, 0, -60, rotateSword, true);
+    }
 }
 
 void SP2Scene3::RenderSkybox()
@@ -551,11 +623,11 @@ void SP2Scene3::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
     glEnable(GL_DEPTH_TEST);
 }
 
-void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
+void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight)
 {
     glDisable(GL_DEPTH_TEST);
     Mtx44 ortho;
-    ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+    ortho.SetToOrtho(0, 80, 0, 60, -50, 50); //size of screen UI
     projectionStack.PushMatrix();
     projectionStack.LoadMatrix(ortho);
     viewStack.PushMatrix();
@@ -563,9 +635,19 @@ void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
     modelStack.PushMatrix();
     modelStack.LoadIdentity(); //Reset modelStack
     modelStack.Translate(x, y, 1);
+    modelStack.Rotate(rotatex, 1, 0, 0);
+    modelStack.Rotate(rotatey, 0, 1, 0);
+    modelStack.Rotate(rotatez, 0, 0, 1);
     modelStack.Scale(size, size, size);
     modelStack.Scale(scaleX, 1, 1);
-    glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+    if (enableLight)
+    {
+        glUniform1i(m_parameters[U_LIGHTENABLED], 1);
+    }
+    else
+    {
+        glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+    }
     glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, mesh->textureID);

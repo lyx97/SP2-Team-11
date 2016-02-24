@@ -10,6 +10,7 @@
 #include "Object.h"
 #include "Plane.h"
 #include <map>
+#include "Boss.h"
 
 using std::map;
 
@@ -92,7 +93,7 @@ private:
     void RenderSkybox();
     void RenderText(Mesh* mesh, std::string text, Color color);
     void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-    void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
+    void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight);
     void planeInit(bool reset = false);
     void planeLoader();
     float distanceBetween(Vector3 from, Vector3 to);
@@ -105,11 +106,18 @@ private:
     unsigned m_programID;
     unsigned m_parameters[U_TOTAL];
 
+    int planeDistance = 0;
+
     std::string FPS;
     float inputDelay = 0.f;
     int hp = 100;
     bool hpMid = false;
     bool hpLow = false;
+    bool miningDisplay = false;
+    bool gotSword;
+    float heldDelay = 0.f;
+    float pickSword = 0.f;
+    float swing = 20.f;
 
     MS modelStack, viewStack, projectionStack;
 
@@ -119,9 +127,18 @@ private:
     int landMaxX, landMinX, landMaxZ, landMinZ;
     int currPlaneKey;
 
-    Object* boss;
-    Vector3 bossPos;
+    Object* bossObj;
+    Boss boss;
     float bossLookAtAngle;
+
+    Object* sword;
+
+    Vector3 cameraStore;
+    Vector3 swordPos;
+
+    float rotateSword;
+    bool swordAniDown = false;
+    bool swordAniUp = false;
 
 //    vector<Vector3> treesPos;
 };

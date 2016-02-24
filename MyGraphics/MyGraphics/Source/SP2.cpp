@@ -551,6 +551,7 @@ void SP2::Render()
 
 	//RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 
+
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
 	if (gotSword)
 	{
