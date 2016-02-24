@@ -144,6 +144,9 @@ void SP2Scene3::Init()
     meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
     meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
+	meshList[GEO_BOSS_ICON] = MeshBuilder::GenerateQuad("bossIcon", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
+	meshList[GEO_BOSS_ICON]->textureID = LoadTGA("Image//bossIcon.tga");
+
     meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
     meshList[GEO_FRONT]->textureID = LoadTGA("Image//red_ft.tga");
     meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
@@ -295,7 +298,7 @@ void SP2Scene3::Update(double dt)
             camera.Update(dt);
         }
     }
-    if ((GetKeyState(VK_LBUTTON) & 0x100) && swordAniDown && distanceBetween(boss.position,camera.position)<10){
+	if ((GetKeyState(VK_LBUTTON) & 0x100) && swordAniDown && distanceBetween(boss.position, camera.position)<10){
         boss.health -= 10;
         cout << "ATTACK" << endl;
     }
@@ -449,6 +452,10 @@ void SP2Scene3::Render()
         RenderMesh(meshList[GEO_BOSS_LEG2], true);
         modelStack.PopMatrix();
         modelStack.PopMatrix();
+
+		RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
     }
     
     //t->r->s

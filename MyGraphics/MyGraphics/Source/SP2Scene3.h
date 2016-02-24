@@ -46,7 +46,8 @@ class SP2Scene3 : public Scene
         GEO_BOSS_HAND1,
         GEO_BOSS_HAND2,
         GEO_BOSS_LEG1,
-        GEO_BOSS_LEG2,        
+        GEO_BOSS_LEG2,
+		GEO_BOSS_ICON,
         GEO_HITBOX,
 
         NUM_GEOMETRY,

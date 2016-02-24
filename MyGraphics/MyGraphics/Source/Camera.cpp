@@ -83,7 +83,7 @@ void Camera::Update(double dt)
 		delay = 0;
 	}
 
-	if (Application::IsKeyPressed(VK_SPACE))
+	if (Application::IsKeyPressed(VK_SPACE) && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
 		position.y += (float)(JUMP_SPEED * dt);
 		target.y += (float)(JUMP_SPEED * dt);
