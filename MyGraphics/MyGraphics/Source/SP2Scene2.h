@@ -42,7 +42,7 @@ class SP2Scene2 : public Scene
 		GEO_BORDER,
 		GEO_NPC1,
 		GEO_HITBOX,
-
+		GEO_MOON,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -88,6 +88,8 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
+	int moonDistance;
+
 	Camera camera;
 	Light light[10];
 

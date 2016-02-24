@@ -28,6 +28,7 @@ void SP2Scene2::Init()
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
 	inputDelay = 9.0f;
+	moonDistance = 0;
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -107,7 +108,7 @@ void SP2Scene2::Init()
 	projectionStack.LoadMatrix(projection);
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 7, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(-700, 7, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("AXES", 500, 500, 500);
 
@@ -126,6 +127,9 @@ void SP2Scene2::Init()
 
 	//meshList[GEO_ROCK] = MeshBuilder::GenerateOBJ("ROCK", "OBJ//rock.obj");
 	//meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
+
+	meshList[GEO_MOON] = MeshBuilder::GenerateOBJ("MOON", "OBJ//moon.obj");
+	meshList[GEO_MOON]->textureID = LoadTGA("Image//moon.tga");
 
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
@@ -169,6 +173,13 @@ void SP2Scene2::Init()
 
 void SP2Scene2::Update(double dt)
 {
+	moonDistance = sqrtf((800 - camera.position.x) * (800 - camera.position.x) + (0 - camera.position.y) * (0 - camera.position.y) + (0 - camera.position.z) * (0 - camera.position.z));
+	if (moonDistance < 400)
+	{
+		Singleton::getInstance()->stateCheck = true;
+		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
+	}
+
 	if (Singleton::getInstance()->pause == true)
 	{
 		if (Application::IsKeyPressed('O'))
@@ -337,6 +348,13 @@ void SP2Scene2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+	modelStack.Translate(800, 0, 0);
+	//modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
+	modelStack.Scale(300, 300, 300);
+	RenderMesh(meshList[GEO_MOON], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
 	modelStack.Translate(0, -1, 0);
 	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
 	modelStack.Scale(0.3, 0.3, 0.3);
@@ -355,18 +373,20 @@ void SP2Scene2::Render()
 	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
+	RenderTextOnScreen(meshList[GEO_TEXT], "Distance to reach moon : " + std::to_string(moonDistance - 400), Color(1, 0, 0), 2, 15, 42);
+
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
-	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
-	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(0, 0, 0), 1, 1, 46);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(0, 0, 0), 1, 1, 44);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
+	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(1, 1, 1), 1, 1, 50);
+	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(1, 1, 1), 1, 1, 48);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(1, 1, 1), 1, 1, 46);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(1, 1, 1), 1, 1, 44);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(1, 1, 1), 1, 1, 38);
 	for (auto q : Singleton::getInstance()->objectCount)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(1, 1, 1), 1, 1, 36);
 	}
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(1, 1, 1), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
 }
