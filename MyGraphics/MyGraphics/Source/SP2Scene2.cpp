@@ -129,7 +129,7 @@ void SP2Scene2::Init()
 	//meshList[GEO_ROCK]->textureID = LoadTGA("Image//rock.tga");
 
 	meshList[GEO_MOON] = MeshBuilder::GenerateOBJ("MOON", "OBJ//moon.obj");
-	meshList[GEO_MOON]->textureID = LoadTGA("Image//moon.tga");
+	meshList[GEO_MOON]->textureID = LoadTGA("Image//moon2.tga");
 
 	meshList[GEO_IMAGES] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_IMAGES]->textureID = LoadTGA("Image//images.tga");
@@ -176,6 +176,7 @@ void SP2Scene2::Update(double dt)
 	moonDistance = sqrtf((800 - camera.position.x) * (800 - camera.position.x) + (0 - camera.position.y) * (0 - camera.position.y) + (0 - camera.position.z) * (0 - camera.position.z));
 	if (moonDistance < 400)
 	{
+		moonDistance = 400;
 		Singleton::getInstance()->stateCheck = true;
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
 	}
@@ -373,7 +374,7 @@ void SP2Scene2::Render()
 	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10);
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Distance to reach moon : " + std::to_string(moonDistance - 400), Color(1, 0, 0), 2, 15, 42);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Distance to reach 2nd planet : " + std::to_string(moonDistance - 400), Color(1, 0, 0), 1.5, 15, 42);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
