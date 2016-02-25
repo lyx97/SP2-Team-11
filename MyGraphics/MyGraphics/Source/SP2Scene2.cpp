@@ -27,6 +27,7 @@ void SP2Scene2::Init()
 	// Init VBO here
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
+	pelicanPos = Vector3(-700, -3, 0);
 	inputDelay = 9.0f;
 	moonDistance = 0;
 
@@ -184,6 +185,7 @@ void SP2Scene2::Init()
 	{
 		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(28, 18, 15));
 	}
+	pelican = new Object(Vector3(pelicanPos.x, pelicanPos.y, pelicanPos.z), Vector3(55, 15, 25));
 }
 
 void SP2Scene2::Update(double dt)
@@ -263,39 +265,106 @@ void SP2Scene2::Update(double dt)
 			camera.Update(dt);
 		}
 	}
+	pelican->setPos(pelicanPos);
 	if (Application::IsKeyPressed('Y'))
 	{
-		momentum = momentum + dt/100;
-		pelicanPos.x += momentum;
+		if (rotation <= 90 && rotation >= 0)
+		{
+			momentum.x = momentum.x + (dt / 100) * (1 - rotation / 90);
+			pelicanPos.x += momentum.x;
+			momentum.z = momentum.z - (dt / 100) * (rotation / 90);
+			pelicanPos.z += momentum.z;
+	
+
+		}
+		if (rotation >= -90 && rotation <= 0)
+		{
+			momentum.x = momentum.x + (dt / 100) * (1 + (rotation / 90));
+			pelicanPos.x += momentum.x;
+			momentum.z = momentum.z - (dt / 100) * (rotation / 90);
+			pelicanPos.z += momentum.z;
+	
+		}
+		if (rotation > 90)
+		{
+			momentum.x = momentum.x - (dt / 100) * ((rotation - 90) / 90);
+			pelicanPos.x += momentum.x;
+			momentum.z = momentum.z - (dt / 100) * (1 - (rotation - 90) / 90);
+			pelicanPos.z += momentum.z;
+		
+		}
+		if (rotation < -90)
+		{
+			momentum.x = momentum.x + (dt / 100) * ((rotation + 90) / 90);
+			pelicanPos.x += momentum.x;
+			momentum.z = momentum.z - (dt / 100) * ((rotation - 90) / 90);
+			pelicanPos.z += momentum.z;
+		}
+		
 	}
-	else if (momentum > 0)
+	else
 	{
-		momentum -= dt/100;
-		pelicanPos.x += momentum;
+		if (momentum.x > 0.001)
+		{
+			momentum.x -= dt / 100;
+			pelicanPos.x += momentum.x;
+		}
+		else if (momentum.x < -0.001)
+		{
+			momentum.x += dt / 100;
+			pelicanPos.x += momentum.x;
+		}
+		else
+		{
+			momentum.x = 0;
+		}
+
+
+		if (momentum.z > 0.0001)
+		{
+			momentum.z -= dt / 100;
+			pelicanPos.z += momentum.z;
+		}
+		else if (momentum.z < -0.0001)
+		{
+			momentum.z += dt / 100;
+			pelicanPos.z += momentum.z;
+		}
+		else
+		{
+			momentum.z = 0;
+		}
+	}
+	if (rotation >= 180)
+	{
+		rotation = -180;
+	}
+	else if (rotation <= -180)
+	{
+		rotation = 180;
 	}
 	if (Application::IsKeyPressed('G'))
 	{
+		cout << rotation << endl;
 		acceleration = acceleration + dt;
 		rotation =rotation + acceleration;
-		cout << rotation << endl;
 	}
-	else if (Application::IsKeyPressed('J'))
+	else if (acceleration >= 0.05 && Application::IsKeyPressed('J') == false)
 	{
 		acceleration = acceleration - dt;
 		rotation = rotation + acceleration;
-		cout << rotation << endl;
 	}
-	else if (acceleration >= 0)
+	if (Application::IsKeyPressed('J'))
 	{
+		cout << rotation << endl;
 		acceleration = acceleration - dt;
 		rotation = rotation + acceleration;
-		cout << rotation << endl;
 	}
-	else if (acceleration <= 0)
+	
+	else if (acceleration <= -0.05 && Application::IsKeyPressed('G') == false)
 	{
 		acceleration = acceleration + dt;
 		rotation = rotation + acceleration;
-		cout << rotation << endl;
 	}
 }
 
@@ -413,18 +482,14 @@ void SP2Scene2::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(800, 0, 0);
-	//modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
 	modelStack.Scale(300, 300, 300);
 	RenderMesh(meshList[GEO_MOON], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, -1, 0);
-	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
-	modelStack.Scale(0.3, 0.3, 0.3);
-	modelStack.Scale(10, 10, 10);
-	modelStack.Translate(camera.view.x + pelicanPos.x, camera.view.y, camera.view.z);
+	modelStack.Translate(pelicanPos.x, pelicanPos.y, pelicanPos.z);
 	modelStack.Rotate(rotation, 0, 1, 0);
+	modelStack.Scale(10, 10, 10);
 	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
 
