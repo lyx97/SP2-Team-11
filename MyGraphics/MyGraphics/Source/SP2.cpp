@@ -27,7 +27,6 @@ void SP2::Init()
 	// Init VBO here
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
-	Singleton::getInstance()->gotSword = false;
     spawnRadius = 5000;
     oreFrequency = 100;
     treeFrequency = 100;
@@ -38,6 +37,7 @@ void SP2::Init()
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
+	gunPos = Vector3(5, 10, 0);
     srand(time(0));
     planeInit();
 
@@ -113,7 +113,6 @@ void SP2::Init()
 	glUniform1f(m_parameters[U_LIGHT0_COSINNER], light[0].cosInner);
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], light[0].exponent);
 
-
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
@@ -185,6 +184,9 @@ void SP2::Init()
 
 	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
 	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
+
+	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
+	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
     
     meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree2.obj");
     meshList[GEO_TREE]->textureID = LoadTGA("Image//tree2.tga");
@@ -206,12 +208,20 @@ void SP2::Init()
     
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
+	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(5, 5, 5));
 
 	if (Singleton::getInstance()->gotSword)
 	{
 		melee = new Weapon(5);
 	}
-
+	else if (Singleton::getInstance()->gotGun)
+	{
+		ranged = new Weapon(3);
+	}
+	else
+	{
+		fist = new Weapon(1);
+	}
 }
 
 void SP2::Update(double dt)
@@ -229,7 +239,7 @@ void SP2::Update(double dt)
 	{
 		for (auto q : Singleton::getInstance()->objectCount)
 		{
-			if (Singleton::getInstance()->objectCount[ore] >= 4)
+			if (Singleton::getInstance()->objectCount[ore] >= 1)
 			{
 				oreReached = true;
 			}
@@ -257,6 +267,10 @@ void SP2::Update(double dt)
 				{
 					Singleton::getInstance()->stateCheck = true;
 					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+					for (auto q : Object::objectMap)
+					{
+						delete q.first;
+					}
 				}
 			}
 		}
@@ -324,20 +338,20 @@ void SP2::Update(double dt)
 
 		if (Application::IsKeyPressed('K'))
 		{
-			hp -= 5;
+			Singleton::getInstance()->health -= 5;
 
-			if (hp <= 50) hpMid = true;
-			if (hp <= 25) hpLow = true;
-			if (hp <= 0) hp = 0;
+			if (Singleton::getInstance()->health <= 50) hpMid = true;
+			if (Singleton::getInstance()->health <= 25) hpLow = true;
+			if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
 		}
 
 		if (Application::IsKeyPressed('L'))
 		{
-			hp += 5;
+			Singleton::getInstance()->health += 5;
 
-			if (hp >= 50) hpMid = false;
-			if (hp >= 25) hpLow = false;
-			if (hp >= 100) hp = 100;
+			if (Singleton::getInstance()->health >= 50) hpMid = false;
+			if (Singleton::getInstance()->health >= 25) hpLow = false;
+			if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
 		}
         if (Application::IsKeyPressed('R'))
         {
@@ -390,6 +404,8 @@ void SP2::Update(double dt)
 			}
 			pickSword += 1 * dt;
 		}
+
+
 		if (!Application::IsKeyPressed('E'))
 		{
 			heldDelay = 0;
@@ -549,6 +565,19 @@ void SP2::Render()
 		}
 	}
 
+	for (auto q : Object::objectMap)
+	{
+		if (q.first->pos.x == gunPos.x && q.first->pos.z == gunPos.z)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(gunPos.x, gunPos.y + 5, gunPos.z);
+			modelStack.Rotate(90, 1, 0, 0);
+			modelStack.Scale(10, 10, 10);
+			RenderMesh(meshList[GEO_GUN], true);
+			modelStack.PopMatrix();
+		}
+	}
+
 	map<int, plane>::iterator iter;
 
 	for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
@@ -620,13 +649,13 @@ void SP2::Render()
 
 
 	if (!hpMid && !hpLow)
-		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
 
 	if (hpMid && !hpLow)
-		RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
 
 	if (hpMid && hpLow)
-		RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
 
 	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);

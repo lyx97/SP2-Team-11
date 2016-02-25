@@ -30,9 +30,11 @@ public:
 	bool stateCheck;
 	bool pause;
 	bool buttonText;
-	bool gotSword;
+	bool gotSword = false;
+	bool gotGun;
 	map<Object*, int> objectCount;
 	float MOUSE_SPEED;
+	int health = 100;
 
 private:
 	Singleton()

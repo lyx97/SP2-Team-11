@@ -174,7 +174,6 @@ void SP2Scene3::Init()
     meshList[GEO_BOSS_LEG2] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_LEG2.obj");
     meshList[GEO_BOSS_LEG2]->textureID = LoadTGA("Image//NPC_Evil.tga");
 
-
     meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
     meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
@@ -242,20 +241,20 @@ void SP2Scene3::Update(double dt)
 
         if (Application::IsKeyPressed('K'))
         {
-            hp -= 5;
+			Singleton::getInstance()->health -= 5;
 
-            if (hp <= 50) hpMid = true;
-            if (hp <= 25) hpLow = true;
-            if (hp <= 0) hp = 0;
+			if (Singleton::getInstance()->health <= 50) hpMid = true;
+			if (Singleton::getInstance()->health <= 25) hpLow = true;
+			if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
         }
 
         if (Application::IsKeyPressed('L'))
         {
-            hp += 5;
+			Singleton::getInstance()->health += 5;
 
-            if (hp >= 50) hpMid = false;
-            if (hp >= 25) hpLow = false;
-            if (hp >= 100) hp = 100;
+			if (Singleton::getInstance()->health >= 50) hpMid = false;
+			if (Singleton::getInstance()->health >= 25) hpLow = false;
+			if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
         }
         if (Application::IsKeyPressed('R'))
         {
@@ -276,12 +275,12 @@ void SP2Scene3::Update(double dt)
 
         planeLoader();
 
-		if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(bossObj->pos, camera.target) < 30)
+		if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(bossObj->pos, camera.target) < 30 && Singleton::getInstance()->gotSword)
 		{
 			boss.health -= sword->getDamage();
 			cout << "ATTACK" << endl;
 		}
-
+		
 		if (distanceBetween(boss.position, camera.position) >= 30){
 			if (boss.position.x <= camera.position.x + 20)
 				boss.position.x += (float)(80 * dt);
@@ -428,13 +427,13 @@ void SP2Scene3::Render()
     modelStack.PopMatrix();
 
     if (!hpMid && !hpLow)
-        RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, hp / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
 
     if (hpMid && !hpLow)
-        RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, hp / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_MID], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
 
     if (hpMid && hpLow)
-        RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, hp / 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_LOW], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
 
     RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
@@ -454,7 +453,7 @@ void SP2Scene3::Render()
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
     cout << boss.health << endl;
-	if (gotSword)
+	if (Singleton::getInstance()->gotSword)
 	{
 		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
 	}

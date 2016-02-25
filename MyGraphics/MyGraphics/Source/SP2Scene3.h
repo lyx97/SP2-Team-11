@@ -112,11 +112,9 @@ private:
 
     std::string FPS;
     float inputDelay = 0.f;
-    int hp = 100;
     bool hpMid = false;
     bool hpLow = false;
     bool miningDisplay = false;
-    bool gotSword;
     float heldDelay = 0.f;
     float pickSword = 0.f;
     float swing = 20.f;

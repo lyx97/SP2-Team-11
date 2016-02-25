@@ -172,16 +172,13 @@ void SP2Scene2::Init()
 
 	for (int loop = 0; loop < rockfreq; loop++)
 	{
-
 		rockpos.push_back(Vector3((rand() % 2000) , (rand() % 30) - 15, (rand() % 4000) - 2000));
 	}
 
 	for (int loop = 0; loop < 100; loop++)
 	{
-
 		rockpos.push_back(Vector3((rand() % 2000), (rand() % 600) - 300, (rand() % 4000) - 2000));
 	}
-	
 
 	for (auto q : rockpos)
 	{
@@ -197,6 +194,10 @@ void SP2Scene2::Update(double dt)
 		moonDistance = 400;
 		Singleton::getInstance()->stateCheck = true;
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
+		for (auto q : Object::objectMap)
+		{
+			delete q.first;
+		}
 	}
 
 	if (Singleton::getInstance()->pause == true)
@@ -471,9 +472,6 @@ void SP2Scene2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(1, 1, 1), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
-
-	
-
 }
 
 void SP2Scene2::RenderSkybox()

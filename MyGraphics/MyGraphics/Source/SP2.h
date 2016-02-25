@@ -122,7 +122,6 @@ private:
 	float swing = 20.f;
 
     int numPlanes = 2;
-	int hp = 100;
 	int oreFrequency;
     int treeFrequency;
     int grassFrequency;
@@ -135,6 +134,7 @@ private:
 
 	Vector3 cameraStore;
 	Vector3 swordPos;
+	Vector3 gunPos;
 
 	// ores and land generators
 	vector<Vector3> orePos;
@@ -148,11 +148,14 @@ private:
 	Object* ore;
 	Object* NPC;
 	Object* sword;
+	Object* gun;
     Object* tree;
     Object* grass;
 
 	// weapons
 	Weapon* melee;
+	Weapon* ranged;
+	Weapon* fist;
 
 	Camera camera;
 	Light light[10];
