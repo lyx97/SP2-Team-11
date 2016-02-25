@@ -222,6 +222,8 @@ void SP2::Init()
 	{
 		fist = new Weapon(1);
 	}
+
+	Object* test = new Object(Vector3(20, 0, 20), Vector3(40, 40, 40));
 }
 
 void SP2::Update(double dt)
@@ -252,8 +254,10 @@ void SP2::Update(double dt)
 		{
 			cameraStore = camera.position - Vector3(100, 0, 0);
 		}
-		else
+
+		for (auto q : Singleton::getInstance()->objectCount)
 		{
+
 		}
 
 		if (sqrtf(
@@ -405,7 +409,6 @@ void SP2::Update(double dt)
 			pickSword += 1 * dt;
 		}
 
-
 		if (!Application::IsKeyPressed('E'))
 		{
 			heldDelay = 0;
@@ -508,7 +511,7 @@ void SP2::Render()
 	RenderSkybox();
 	modelStack.PopMatrix();
 	//t->r->s
-	//RenderMesh(meshList[GEO_AXES], false);
+	RenderMesh(meshList[GEO_AXES], false);
 
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);

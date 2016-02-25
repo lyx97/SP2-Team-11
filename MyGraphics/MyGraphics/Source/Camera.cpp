@@ -52,17 +52,18 @@ void Camera::Update(double dt)
 	static const float JUMP_SPEED = 80.f;
 	Vector3 boundCheckPos = position;
 
-	if (boundCheckPos.y > 10)
+	ySpeed += GRAVITY * dt;
+	boundCheckPos.y -= ySpeed;
+	if (bound(boundCheckPos))
 	{
-		ySpeed += GRAVITY * dt;
+		position.y -= ySpeed;
+		target.y -= ySpeed;
 	}
 	else
 	{
 		ySpeed = 0;
 	}
-	position.y -= ySpeed;
-	target.y -= ySpeed;
-
+	cout << ySpeed;
 	if (delay < 5)
 	{
 		delay += (float)(30 * dt);
@@ -85,8 +86,8 @@ void Camera::Update(double dt)
 
 	if (Application::IsKeyPressed(VK_SPACE) && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
-		position.y += (float)(JUMP_SPEED * dt);
-		target.y += (float)(JUMP_SPEED * dt);
+			position.y += (float)(JUMP_SPEED * dt);
+			target.y += (float)(JUMP_SPEED * dt);
 	}
 
 	if (Application::IsKeyPressed('W') && Singleton::getInstance()->pause == false)
@@ -106,22 +107,33 @@ void Camera::Update(double dt)
 		}
 		else
 		{
+			boundCheckPos = position;
 			boundCheckPos.x += view.x * (float)(CAMERA_SPEED * dt);
-			boundCheckPos.z += view.z * (float)(CAMERA_SPEED * dt);
 			if (bound(boundCheckPos))
 			{
 				if (Application::IsKeyPressed(VK_SHIFT))
 				{
 					position.x += view.x * (float)(SPRINT_SPEED * dt);
-					position.z += view.z * (float)(SPRINT_SPEED * dt);
 					target.x += view.x * (float)(SPRINT_SPEED * dt);
-					target.z += view.z * (float)(SPRINT_SPEED * dt);
 				}
 				else
 				{
 					position.x += view.x * (float)(CAMERA_SPEED * dt);
-					position.z += view.z * (float)(CAMERA_SPEED * dt);
 					target.x += view.x * (float)(CAMERA_SPEED * dt);
+				}
+			}
+			boundCheckPos = position;
+			boundCheckPos.z += view.z * (float)(CAMERA_SPEED * dt);
+			if (bound(boundCheckPos))
+			{
+				if (Application::IsKeyPressed(VK_SHIFT))
+				{
+					position.z += view.z * (float)(SPRINT_SPEED * dt);
+					target.z += view.z * (float)(SPRINT_SPEED * dt);
+				}
+				else
+				{
+					position.z += view.z * (float)(CAMERA_SPEED * dt);
 					target.z += view.z * (float)(CAMERA_SPEED * dt);
 				}
 			}
@@ -136,22 +148,33 @@ void Camera::Update(double dt)
 		}
 		else
 		{
+			boundCheckPos = position;
 			boundCheckPos.x -= view.x * (float)(CAMERA_SPEED * dt);
-			boundCheckPos.z -= view.z * (float)(CAMERA_SPEED * dt);
 			if (bound(boundCheckPos))
 			{
 				if (Application::IsKeyPressed(VK_SHIFT))
 				{
 					position.x -= view.x * (float)(SPRINT_SPEED * dt);
-					position.z -= view.z * (float)(SPRINT_SPEED * dt);
 					target.x -= view.x * (float)(SPRINT_SPEED * dt);
-					target.z -= view.z * (float)(SPRINT_SPEED * dt);
 				}
 				else
 				{
 					position.x -= view.x * (float)(CAMERA_SPEED * dt);
-					position.z -= view.z * (float)(CAMERA_SPEED * dt);
 					target.x -= view.x * (float)(CAMERA_SPEED * dt);
+				}
+			}
+			boundCheckPos = position;
+			boundCheckPos.z -= view.z * (float)(CAMERA_SPEED * dt);
+			if (bound(boundCheckPos))
+			{
+				if (Application::IsKeyPressed(VK_SHIFT))
+				{
+					position.z -= view.z * (float)(SPRINT_SPEED * dt);
+					target.z -= view.z * (float)(SPRINT_SPEED * dt);
+				}
+				else
+				{
+					position.z -= view.z * (float)(CAMERA_SPEED * dt);
 					target.z -= view.z * (float)(CAMERA_SPEED * dt);
 				}
 			}
@@ -166,6 +189,7 @@ void Camera::Update(double dt)
 		}
 		else
 		{
+			boundCheckPos = position;
 			boundCheckPos += right * (float)(CAMERA_SPEED * dt);
 			if (bound(boundCheckPos))
 			{
@@ -183,6 +207,7 @@ void Camera::Update(double dt)
 		}
 		else
 		{
+			boundCheckPos = position;
 			boundCheckPos -= right * (float)(CAMERA_SPEED * dt);
 			if (bound(boundCheckPos))
 			{

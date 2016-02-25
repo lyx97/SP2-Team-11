@@ -150,7 +150,7 @@ private:
 	Object* sword;
 	Object* gun;
     Object* tree;
-    Object* grass;
+	Object* ground;
 
 	// weapons
 	Weapon* melee;
