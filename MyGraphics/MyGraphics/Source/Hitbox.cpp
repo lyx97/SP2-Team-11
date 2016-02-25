@@ -2,8 +2,7 @@
 
 Hitbox::Hitbox(Vector3 pos, Vector3 size)
 {
-	this->pos = pos;
-	this->size = size;
+	this->pos = pos, this->size = size;
 
 	maxPt.x = pos.x + size.x / 2;
 	maxPt.y = pos.y + size.y / 2;

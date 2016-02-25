@@ -1,7 +1,7 @@
 #pragma once
 #include "Object.h"
 
-class Weapon : public Object
+class Weapon
 {
 public:
 	Weapon(int damage = 0);

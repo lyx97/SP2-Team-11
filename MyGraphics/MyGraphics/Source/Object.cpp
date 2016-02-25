@@ -25,14 +25,14 @@ void Object::setPos(Vector3 pos)
 	this->pos = pos;
 }
 
-void Object::receiveDmg(int dmg)
+void Object::receiveDmg(int damage)
 {
 	if (godMode)
 	{
 	}
 	else
 	{
-		health -= dmg;
+		health -= damage;
 	}
 }
 

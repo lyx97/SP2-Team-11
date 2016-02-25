@@ -1,5 +1,6 @@
 #pragma once
 #include "Hitbox.h"
+#include "Weapon.h"
 #include <map>
 
 using std::map;
@@ -16,7 +17,7 @@ public:
 
 	void setHealth(int health);
 	void setPos(Vector3 pos);
-	void receiveDmg(int dmg);
+	void receiveDmg(int damage);
 
 	int getHealth();
 

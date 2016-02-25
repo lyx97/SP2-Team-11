@@ -110,7 +110,6 @@ private:
 	bool hpLow = false;
 	bool miningDisplay = false;
 	bool oreReached;
-	bool gotSword;
 	bool swordAniDown = false;
 	bool swordAniUp = false;
 
@@ -151,7 +150,10 @@ private:
 	Object* sword;
     Object* tree;
     Object* grass;
-    
+
+	// weapons
+	Weapon* melee;
+
 	Camera camera;
 	Light light[10];
 

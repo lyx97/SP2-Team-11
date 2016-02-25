@@ -29,7 +29,7 @@ void SP2Scene3::Init()
     Singleton::getInstance()->buttonText = false;
     inputDelay = 9.0f;
     rotateSword = 0;
-    boss = Boss("Final Boss", 100, Vector3(40, 0, 40));
+	boss = Boss("Final Boss", 100, Vector3(40, 0, 40));
 
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -186,11 +186,11 @@ void SP2Scene3::Init()
     planeInit();
 
     bossObj = new Object(boss.position, Vector3(30, 150, 40));
+	sword = new Weapon(1);
 }
 
 void SP2Scene3::Update(double dt)
 {
-    
     planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
 
     if (Singleton::getInstance()->pause == true)
@@ -202,9 +202,6 @@ void SP2Scene3::Update(double dt)
     }
     else
     {
-
-
-      
         if (Application::IsKeyPressed('1')) //enable back face culling
             glEnable(GL_CULL_FACE);
         if (Application::IsKeyPressed('2')) //disable back face culling
@@ -279,16 +276,38 @@ void SP2Scene3::Update(double dt)
 
         planeLoader();
 
+		if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(bossObj->pos, camera.target) < 30)
+		{
+			boss.health -= sword->getDamage();
+			cout << "ATTACK" << endl;
+		}
+
+		if (distanceBetween(boss.position, camera.position) >= 30){
+			if (boss.position.x <= camera.position.x + 20)
+				boss.position.x += (float)(80 * dt);
+
+			if (boss.position.x >= camera.position.x - 20)
+				boss.position.x -= (float)(80 * dt);
+
+			if (boss.position.z <= camera.position.z + 20)
+				boss.position.z += (float)(80 * dt);
+
+			if (boss.position.z >= camera.position.z - 20)
+				boss.position.z -= (float)(80 * dt);
+		}
+		bossObj->setPos(boss.position);
+
+		if (boss.health <= 0){
+			bossObj->objectMap.erase(bossObj);
+		}
 
         if (!Application::IsKeyPressed('E'))
         {
             heldDelay = 0;
-
             pickSword = 0;
             swordPos.y = 5;
             miningDisplay = false;
         }
-
         if (inputDelay <= 10.0f)
         {
             inputDelay += (float)(1 * dt);
@@ -297,74 +316,6 @@ void SP2Scene3::Update(double dt)
         {
             camera.Update(dt);
         }
-    }
-	if ((GetKeyState(VK_LBUTTON) & 0x100) && swordAniDown && distanceBetween(boss.position, camera.position)<10){
-        boss.health -= 10;
-        cout << "ATTACK" << endl;
-    }
-
-   if (distanceBetween(boss.position, camera.position) >= 30){
-    if (boss.position.x <= camera.position.x + 20)
-        boss.position.x += (float)(80 * dt);
-
-    if (boss.position.x >= camera.position.x - 20)
-        boss.position.x -= (float)(80 * dt);
-
-    if (boss.position.z <= camera.position.z + 20)
-        boss.position.z += (float)(80 * dt);
-
-    if (boss.position.z >= camera.position.z - 20)
-         boss.position.z -= (float)(80 * dt);
-    }
-   bossObj->pos = boss.position;
-
-   if (boss.health <= 0){
-       bossObj->objectMap.erase(bossObj);
-   }
-}
-
-void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
-{
-    Mtx44 MVP, modelView, modelView_inverse_transpose;
-
-    MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
-    glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
-    modelView = viewStack.Top() * modelStack.Top();
-    glUniformMatrix4fv(m_parameters[U_MODELVIEW], 1, GL_FALSE, &modelView.a[0]);
-
-    if (enableLight)
-    {
-        glUniform1i(m_parameters[U_LIGHTENABLED], 1);
-        modelView_inverse_transpose = modelView.GetInverse().GetTranspose();
-
-        glUniformMatrix4fv(m_parameters[U_MODELVIEW_INVERSE_TRANSPOSE], 1, GL_FALSE, &modelView_inverse_transpose.a[0]);
-
-        //load material
-        glUniform3fv(m_parameters[U_MATERIAL_AMBIENT], 1, &mesh->material.kAmbient.r);
-        glUniform3fv(m_parameters[U_MATERIAL_DIFFUSE], 1, &mesh->material.kDiffuse.r);
-        glUniform3fv(m_parameters[U_MATERIAL_SPECULAR], 1, &mesh->material.kSpecular.r);
-        glUniform1f(m_parameters[U_MATERIAL_SHININESS], mesh->material.kShininess);
-    }
-    else
-    {
-        glUniform1i(m_parameters[U_LIGHTENABLED], 0);
-    }
-
-    if (mesh->textureID > 0)
-    {
-        glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, mesh->textureID);
-        glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
-    }
-    else
-    {
-        glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 0);
-    }
-    mesh->Render(); //this line should only be called once 
-    if (mesh->textureID > 0)
-    {
-        glBindTexture(GL_TEXTURE_2D, 0);
     }
 }
 
@@ -503,12 +454,10 @@ void SP2Scene3::Render()
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
     cout << boss.health << endl;
-
-
-    if (gotSword)
-    {
-        RenderUI(meshList[GEO_SWORD], 7, 75, 3, 1, 0, -60, rotateSword, true);
-    }
+	if (gotSword)
+	{
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
+	}
 }
 
 void SP2Scene3::RenderSkybox()
@@ -561,6 +510,51 @@ void SP2Scene3::RenderSkybox()
 
     modelStack.PopMatrix();
 
+}
+
+void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
+{
+	Mtx44 MVP, modelView, modelView_inverse_transpose;
+
+	MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
+	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
+	modelView = viewStack.Top() * modelStack.Top();
+	glUniformMatrix4fv(m_parameters[U_MODELVIEW], 1, GL_FALSE, &modelView.a[0]);
+
+	if (enableLight)
+	{
+		glUniform1i(m_parameters[U_LIGHTENABLED], 1);
+		modelView_inverse_transpose = modelView.GetInverse().GetTranspose();
+
+		glUniformMatrix4fv(m_parameters[U_MODELVIEW_INVERSE_TRANSPOSE], 1, GL_FALSE, &modelView_inverse_transpose.a[0]);
+
+		//load material
+		glUniform3fv(m_parameters[U_MATERIAL_AMBIENT], 1, &mesh->material.kAmbient.r);
+		glUniform3fv(m_parameters[U_MATERIAL_DIFFUSE], 1, &mesh->material.kDiffuse.r);
+		glUniform3fv(m_parameters[U_MATERIAL_SPECULAR], 1, &mesh->material.kSpecular.r);
+		glUniform1f(m_parameters[U_MATERIAL_SHININESS], mesh->material.kShininess);
+	}
+	else
+	{
+		glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+	}
+
+	if (mesh->textureID > 0)
+	{
+		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, mesh->textureID);
+		glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
+	}
+	else
+	{
+		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 0);
+	}
+	mesh->Render(); //this line should only be called once 
+	if (mesh->textureID > 0)
+	{
+		glBindTexture(GL_TEXTURE_2D, 0);
+	}
 }
 
 void SP2Scene3::RenderText(Mesh* mesh, std::string text, Color color)
@@ -634,7 +628,7 @@ void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX,
 {
     glDisable(GL_DEPTH_TEST);
     Mtx44 ortho;
-    ortho.SetToOrtho(0, 80, 0, 60, -50, 50); //size of screen UI
+    ortho.SetToOrtho(0, 80, 0, 60, -100, 100); //size of screen UI
     projectionStack.PushMatrix();
     projectionStack.LoadMatrix(ortho);
     viewStack.PushMatrix();

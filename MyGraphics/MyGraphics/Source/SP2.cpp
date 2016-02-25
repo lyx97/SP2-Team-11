@@ -27,11 +27,11 @@ void SP2::Init()
 	// Init VBO here
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
+	Singleton::getInstance()->gotSword = false;
     spawnRadius = 5000;
     oreFrequency = 100;
     treeFrequency = 100;
 	oreReached = false;
-	gotSword = false;
 	rotateSword = 0;
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
@@ -203,8 +203,14 @@ void SP2::Init()
     {
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(8, 150, 8));
     }
+    
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
+
+	if (Singleton::getInstance()->gotSword)
+	{
+		melee = new Weapon(5);
+	}
 
 }
 
@@ -255,18 +261,14 @@ void SP2::Update(double dt)
 			}
 		}
 		if (sqrtf(
-			pow((camera.target.x - NPC->hitbox.pos.x), 2) +
-			pow((camera.target.y - NPC->hitbox.pos.y), 2) +
-			pow((camera.target.z - NPC->hitbox.pos.z), 2)) < 15 && gotSword)
+			pow((camera.target.x - NPC->pos.x), 2) +
+			pow((camera.target.y - NPC->pos.y), 2) +
+			pow((camera.target.z - NPC->pos.z), 2)) < 15 && Singleton::getInstance()->gotSword)
 		{
 			if (Application::IsKeyPressed(VK_LBUTTON))
 			{
-				NPC->receiveDmg(10);
+				NPC->receiveDmg(melee->getDamage());
 			}
-		}
-		if (gotSword)
-		{
-
 		}
 		
 		for (auto it = Object::objectMap.begin(); it != Object::objectMap.end();)
@@ -282,7 +284,6 @@ void SP2::Update(double dt)
 			}
 		}
 
-		cout << NPC->getHealth() << endl;
 		if (Application::IsKeyPressed('1')) //enable back face culling
 			glEnable(GL_CULL_FACE);
 		if (Application::IsKeyPressed('2')) //disable back face culling
@@ -384,7 +385,7 @@ void SP2::Update(double dt)
 			if (pickSword > 5)
 			{
 				pickSword = 0;
-				gotSword = true;
+				Singleton::getInstance()->gotSword = true;
 				delete sword;
 			}
 			pickSword += 1 * dt;
@@ -537,7 +538,7 @@ void SP2::Render()
 
 	for (auto q : Object::objectMap)
 	{
-		if (q.first->pos.x == swordPos.x && q.first->pos.z == swordPos.z && !gotSword)
+		if (q.first->pos.x == swordPos.x && q.first->pos.z == swordPos.z && !Singleton::getInstance()->gotSword)
 		{
 			modelStack.PushMatrix();
 			modelStack.Translate(swordPos.x, swordPos.y + 5, swordPos.z);
@@ -559,7 +560,6 @@ void SP2::Render()
 		RenderMesh(meshList[GEO_GROUND], true);
 		modelStack.PopMatrix();
 	}
-
 
 	for (auto q : Object::objectMap)
 	{
@@ -639,7 +639,7 @@ void SP2::Render()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
-	if (gotSword)
+	if (Singleton::getInstance()->gotSword)
 	{
 		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
 	}

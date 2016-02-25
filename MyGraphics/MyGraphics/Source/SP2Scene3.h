@@ -11,6 +11,7 @@
 #include "Plane.h"
 #include <map>
 #include "Boss.h"
+#include "Weapon.h"
 
 using std::map;
 
@@ -132,7 +133,7 @@ private:
     Boss boss;
     float bossLookAtAngle;
 
-    Object* sword;
+	Weapon* sword;
 
     Vector3 cameraStore;
     Vector3 swordPos;

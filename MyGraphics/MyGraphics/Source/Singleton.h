@@ -30,6 +30,7 @@ public:
 	bool stateCheck;
 	bool pause;
 	bool buttonText;
+	bool gotSword;
 	map<Object*, int> objectCount;
 	float MOUSE_SPEED;
 
