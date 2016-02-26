@@ -31,13 +31,13 @@ void SP2::Init()
     oreFrequency = 100;
     treeFrequency = 100;
 	oreReached = false;
-	rotateSword = 0;
+	rotateSword = 30;
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
-	gunPos = Vector3(5, 10, 0);
+	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
     srand(time(0));
     planeInit();
 
@@ -208,7 +208,7 @@ void SP2::Init()
     
 	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
-	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(5, 5, 5));
+	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 
 	if (Singleton::getInstance()->gotSword)
 	{
@@ -241,7 +241,7 @@ void SP2::Update(double dt)
 	{
 		for (auto q : Singleton::getInstance()->objectCount)
 		{
-			if (Singleton::getInstance()->objectCount[ore] >= 1)
+			if (Singleton::getInstance()->objectCount[ore] >= 2)
 			{
 				oreReached = true;
 			}
@@ -278,6 +278,7 @@ void SP2::Update(double dt)
 				}
 			}
 		}
+
 		if (sqrtf(
 			pow((camera.target.x - NPC->pos.x), 2) +
 			pow((camera.target.y - NPC->pos.y), 2) +
@@ -407,6 +408,12 @@ void SP2::Update(double dt)
 				delete sword;
 			}
 			pickSword += 1 * dt;
+		}
+
+		if (gun->hitbox.isTouching(camera.target))
+		{
+			Singleton::getInstance()->gotGun = true;
+			delete gun;
 		}
 
 		if (!Application::IsKeyPressed('E'))
@@ -570,16 +577,22 @@ void SP2::Render()
 
 	for (auto q : Object::objectMap)
 	{
-		if (q.first->pos.x == gunPos.x && q.first->pos.z == gunPos.z)
+		if (q.first == gun && !Singleton::getInstance()->gotGun && !Singleton::getInstance()->gotGun)
 		{
 			modelStack.PushMatrix();
-			modelStack.Translate(gunPos.x, gunPos.y + 5, gunPos.z);
+			modelStack.Translate(gunPos.x, gunPos.y, gunPos.z);
 			modelStack.Rotate(90, 1, 0, 0);
 			modelStack.Scale(10, 10, 10);
 			RenderMesh(meshList[GEO_GUN], true);
 			modelStack.PopMatrix();
 		}
 	}
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 10, 20);
+	modelStack.Scale(10, 10, 10);
+	RenderMesh(meshList[GEO_GUN], true);
+	modelStack.PopMatrix();
 
 	map<int, plane>::iterator iter;
 
@@ -674,6 +687,10 @@ void SP2::Render()
 	if (Singleton::getInstance()->gotSword)
 	{
 		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
+	}
+	if (Singleton::getInstance()->gotGun)
+	{
+		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, 10, true);
 	}
 
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
@@ -821,7 +838,7 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(x, y, 1);
+	modelStack.Translate(x, y, 50);
 	modelStack.Rotate(rotatex, 1, 0, 0);
 	modelStack.Rotate(rotatey, 0, 1, 0);
 	modelStack.Rotate(rotatez, 0, 0, 1);

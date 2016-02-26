@@ -30,8 +30,8 @@ public:
 	bool stateCheck;
 	bool pause;
 	bool buttonText;
-	bool gotSword = false;
-	bool gotGun;
+	bool gotSword = true;
+	bool gotGun = false;
 	map<Object*, int> objectCount;
 	float MOUSE_SPEED;
 	int health = 100;
