@@ -23,6 +23,14 @@ void Object::setHealth(int health)
 void Object::setPos(Vector3 pos)
 {
 	this->pos = pos;
+	hitbox.pos = pos;
+
+	hitbox.maxPt.x = pos.x + size.x / 2;
+	hitbox.maxPt.y = pos.y + size.y / 2;
+	hitbox.maxPt.z = pos.z + size.z / 2;
+	hitbox.minPt.x = pos.x - size.x / 2;
+	hitbox.minPt.y = pos.y - size.y / 2;
+	hitbox.minPt.z = pos.z - size.z / 2;
 }
 
 void Object::receiveDmg(int damage)

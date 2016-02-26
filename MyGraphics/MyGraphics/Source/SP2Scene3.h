@@ -128,6 +128,7 @@ private:
     int currPlaneKey;
 
     Object* bossObj;
+	Object* ground;
     Boss boss;
     float bossLookAtAngle;
 

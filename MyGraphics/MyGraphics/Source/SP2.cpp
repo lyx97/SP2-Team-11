@@ -206,9 +206,10 @@ void SP2::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(8, 150, 8));
     }
     
-	NPC = new Object(Vector3(0, 7, 0), Vector3(5, 10, 5));
+	NPC = new Object(Vector3(0, 7, 0), Vector3(7, 10, 7));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
+	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
 
 	if (Singleton::getInstance()->gotSword)
 	{
@@ -222,8 +223,6 @@ void SP2::Init()
 	{
 		fist = new Weapon(1);
 	}
-
-	Object* test = new Object(Vector3(20, 0, 20), Vector3(40, 40, 40));
 }
 
 void SP2::Update(double dt)
@@ -255,10 +254,7 @@ void SP2::Update(double dt)
 			cameraStore = camera.position - Vector3(100, 0, 0);
 		}
 
-		for (auto q : Singleton::getInstance()->objectCount)
-		{
-
-		}
+		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
 
 		if (sqrtf(
 			(cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) +
@@ -518,7 +514,7 @@ void SP2::Render()
 	RenderSkybox();
 	modelStack.PopMatrix();
 	//t->r->s
-	RenderMesh(meshList[GEO_AXES], false);
+	//RenderMesh(meshList[GEO_AXES], false);
 
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);

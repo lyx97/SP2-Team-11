@@ -186,6 +186,7 @@ void SP2Scene3::Init()
 
     bossObj = new Object(boss.position, Vector3(30, 150, 40));
 	sword = new Weapon(1);
+	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
 }
 
 void SP2Scene3::Update(double dt)
@@ -201,6 +202,8 @@ void SP2Scene3::Update(double dt)
     }
     else
     {
+		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
+
         if (Application::IsKeyPressed('1')) //enable back face culling
             glEnable(GL_CULL_FACE);
         if (Application::IsKeyPressed('2')) //disable back face culling

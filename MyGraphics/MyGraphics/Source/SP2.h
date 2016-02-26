@@ -140,7 +140,7 @@ private:
 	vector<Vector3> orePos;
     vector<Vector3> treePos;
     vector<Vector3> grassPos;
-	map<int,plane> planeMap;
+	map<int, plane> planeMap;
 	plane startingPlane;
     plane currPlane;
 
