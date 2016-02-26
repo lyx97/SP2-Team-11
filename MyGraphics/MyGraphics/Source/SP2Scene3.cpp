@@ -29,7 +29,10 @@ void SP2Scene3::Init()
     Singleton::getInstance()->buttonText = false;
     inputDelay = 9.0f;
     rotateSword = 0;
-	boss = Boss("Final Boss", 100, Vector3(40, 0, 40));
+    treeFrequency = 100;
+    spawnRadius = 5000;
+
+    swordInit();
 
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -184,7 +187,14 @@ void SP2Scene3::Init()
     startingPlane.planeMax = Vector3(300, 0, 300);
     planeInit();
 
-    bossObj = new Object(boss.position, Vector3(30, 150, 40));
+    int i = 0;
+    for (auto q : swordVec)
+    {
+        swordObjVec.push_back(new Object(boss.position + q + Vector3(0, swordOffset, 0), Vector3(20, 80, 20), false));
+        swordObjVec.at(i) = new Object(boss.position + q + Vector3(0, swordOffset, 0), Vector3(20, 80, 20), false);
+        i++;
+    }
+
 	sword = new Weapon(1);
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
 }
@@ -202,6 +212,7 @@ void SP2Scene3::Update(double dt)
     }
     else
     {
+
 		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
 
         if (Application::IsKeyPressed('1')) //enable back face culling
@@ -278,31 +289,50 @@ void SP2Scene3::Update(double dt)
 
         planeLoader();
 
-		if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(bossObj->pos, camera.target) < 30 && Singleton::getInstance()->gotSword)
+        if (distanceBetween(boss.object->pos, camera.target) < 170){
+            if (swordOffset > 7)
+                swordOffset -= (float)(130 * dt);
+            if (swordDrag.x < 30)
+            swordDrag += Vector3(10, 0, 10);
+        }
+        else{
+            if (swordOffset <80)
+                swordOffset += (float)(80 * dt);
+            if (swordDrag.x > 0)
+                swordDrag -= Vector3(1, 0, 1);
+        }
+        if (spinSword < 90)
+        spinSword += 1;
+        else spinSword -= 180;
+        boss.setPos(boss.position);
+        if (boss.health <= 0){
+            boss.object->objectMap.erase(boss.object);
+        }
+		if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30 && Singleton::getInstance()->gotSword)
 		{
 			boss.health -= sword->getDamage();
 			cout << "ATTACK" << endl;
 		}
 		
 		if (distanceBetween(boss.position, camera.position) >= 30){
-			if (boss.position.x <= camera.position.x + 20)
+			if (boss.position.x <= camera.position.x + 50)
 				boss.position.x += (float)(80 * dt);
 
-			if (boss.position.x >= camera.position.x - 20)
+			if (boss.position.x >= camera.position.x - 50)
 				boss.position.x -= (float)(80 * dt);
 
-			if (boss.position.z <= camera.position.z + 20)
+			if (boss.position.z <= camera.position.z + 50)
 				boss.position.z += (float)(80 * dt);
 
-			if (boss.position.z >= camera.position.z - 20)
+			if (boss.position.z >= camera.position.z - 50)
 				boss.position.z -= (float)(80 * dt);
 		}
-		bossObj->setPos(boss.position);
-
-		if (boss.health <= 0){
-			bossObj->objectMap.erase(bossObj);
-		}
-
+        for (auto q : swordObjVec)
+        {
+            
+            q->setPos(q->pos + boss.position + Vector3(0, swordOffset, 0) + swordDrag);
+            //q = Object(q->pos + boss.position + Vector3(0, swordOffset, 0) + swordDrag, Vector3(10, 10, 10), false);
+        }
         if (!Application::IsKeyPressed('E'))
         {
             heldDelay = 0;
@@ -319,6 +349,7 @@ void SP2Scene3::Update(double dt)
             camera.Update(dt);
         }
     }
+
 }
 
 void SP2Scene3::Render()
@@ -360,7 +391,7 @@ void SP2Scene3::Render()
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
         modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-        RenderMesh(meshList[GEO_HITBOX], false);
+       RenderMesh(meshList[GEO_HITBOX], false);
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         modelStack.PopMatrix();
     }
@@ -381,9 +412,17 @@ void SP2Scene3::Render()
         RenderMesh(meshList[GEO_GROUND], true);
         modelStack.PopMatrix();
     }
+
+    if (Singleton::getInstance()->gotSword)
+    {
+        RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
+    }
+
     if (boss.health >= 0){
         modelStack.PushMatrix();
         modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
+        modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
+
         modelStack.Scale(20, 20, 20);
         modelStack.PushMatrix();
         RenderMesh(meshList[GEO_BOSS], true);
@@ -404,11 +443,30 @@ void SP2Scene3::Render()
         modelStack.PushMatrix();
         RenderMesh(meshList[GEO_BOSS_LEG2], true);
         modelStack.PopMatrix();
-        modelStack.PopMatrix();
 
+        modelStack.PopMatrix();
+        
+        
+        modelStack.PushMatrix();
+        modelStack.Translate(swordDrag.x, 0, swordDrag.z);
+        modelStack.Translate(boss.position.x, boss.position.y + swordOffset, boss.position.z);
+        modelStack.Rotate(spinSword, 0, 1, 0);
+        modelStack.Scale(6, 6, 6);
+
+        for (auto q : swordVec)
+        {
+            modelStack.PushMatrix();
+            modelStack.Translate(q.x, q.y, q.z);
+            RenderMesh(meshList[GEO_SWORD], true);
+            modelStack.PopMatrix();
+        }
+
+        modelStack.PopMatrix();
+        
 		RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 10, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
+        cout << angleBetween(boss.position, camera.position) << endl;
     }
     
     //t->r->s
@@ -456,10 +514,7 @@ void SP2Scene3::Render()
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
     cout << boss.health << endl;
-	if (Singleton::getInstance()->gotSword)
-	{
-		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
-	}
+
 }
 
 void SP2Scene3::RenderSkybox()
@@ -689,19 +744,19 @@ void SP2Scene3::planeInit(bool reset){
         startingPlane.planeMin = Vector3(150, 0, 150);
         startingPlane.planePos = startingPlane.planeMin;
         planeMap.insert(std::pair<int, plane>(2, startingPlane));
-                                                                                            //    3x3 map grid (for reference)
+        //    3x3 map grid (for reference)
         //Plane[3]                                                                          //   *------* *------* *------*
         startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
         startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
         startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
         planeMap.insert(std::pair<int, plane>(3, startingPlane));                           //   *------* *------* *------*    
-                                                                                            //   |      | |  (p) | |      |    
+        //   |      | |  (p) | |      |    
         //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
         startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
         startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
         startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
         planeMap.insert(std::pair<int, plane>(4, startingPlane));                           //   |   6  | |   7  | |  8   |    
-                                                                                            //   *------* *------* *------*    
+        //   *------* *------* *------*    
         //Plane[5]                                       
         startingPlane.planeMax = Vector3(300, 0, 0);
         startingPlane.planeMin = Vector3(150, 0, -150);
@@ -726,10 +781,28 @@ void SP2Scene3::planeInit(bool reset){
         startingPlane.planePos = startingPlane.planeMin;
         planeMap.insert(std::pair<int, plane>(8, startingPlane));
 
-        landMaxX = planeMap[2].planeMax.x;
-        landMinX = planeMap[6].planeMin.x;
-        landMaxZ = planeMap[2].planeMax.z;
-        landMinZ = planeMap[6].planeMin.z;
+        //Tree spawning
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3(rand() % spawnRadius, 0, rand() % spawnRadius));
+        }
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, rand() % spawnRadius));
+        }
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
+        }
+
+        for (int loop = 0; loop < treeFrequency / 4; loop++)
+        {
+
+            treePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
+        }
 
     }
     else{
@@ -752,19 +825,19 @@ void SP2Scene3::planeInit(bool reset){
         startingPlane.planeMin = Vector3(150, 0, 150);
         startingPlane.planePos = startingPlane.planeMin;
         planeMap[2] = startingPlane;
-                                                                                            //    3x3 map grid (for reference)
+        //    3x3 map grid (for reference)
         //Plane[3]                                                                          //   *------* *------* *------*
         startingPlane.planeMax = Vector3(-300, 0, 0);                                       //   |      | |      | |      |     
         startingPlane.planeMin = Vector3(-450, 0, -150);                                    //   |  0   | |   1  | |   2  |    
         startingPlane.planePos = startingPlane.planeMin;                                    //   *------* *------* *------*    
         planeMap[3] = startingPlane;                                                        //   *------* *------* *------*    
-                                                                                            //   |      | |  (p) | |      |    
+        //   |      | |  (p) | |      |    
         //Plane[4]                                                                          //   |   3  | |   4  | |   5  |    
         startingPlane.planeMax = Vector3(0, 0, 0);                                          //   *------* *------* *------*    
         startingPlane.planeMin = Vector3(-150, 0, -150);                                    //   *------* *------* *------*    
         startingPlane.planePos = startingPlane.planeMin;                                    //   |      | |      | |      |    
         planeMap[4] = startingPlane;                                                        //   |   6  | |   7  | |  8   |    
-                                                                                            //   *------* *------* *------*    
+        //   *------* *------* *------*    
         //Plane[5]                                       
         startingPlane.planeMax = Vector3(300, 0, 0);
         startingPlane.planeMin = Vector3(150, 0, -150);
@@ -789,10 +862,6 @@ void SP2Scene3::planeInit(bool reset){
         startingPlane.planePos = startingPlane.planeMin;
         planeMap[8] = startingPlane;
 
-        landMaxX = planeMap[2].planeMax.x;
-        landMinX = planeMap[6].planeMin.x;
-        landMaxZ = planeMap[2].planeMax.z;
-        landMinZ = planeMap[6].planeMin.z;
     }
 }
 
@@ -830,6 +899,29 @@ void SP2Scene3::planeLoader(){
 
 float SP2Scene3::distanceBetween(Vector3 from, Vector3 to){
     return sqrt((pow(to.x - from.x, 2)) + (pow(to.z - from.z, 2)));
+}
+
+float SP2Scene3::magnitude(Vector3 &vector){
+    return sqrt((pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)));
+}
+
+float SP2Scene3::angleBetween(Vector3 &vector1, Vector3 &vector2){
+    float theta = Math::RadianToDegree(acos((vector1.Dot(vector2)) / ((magnitude(vector1)) * (magnitude(vector2))))) * 8;
+    if (theta < 0)
+        theta = -theta;
+    return theta;
+}
+
+void SP2Scene3::swordInit()
+{
+    swordVec.push_back(Vector3(0, 0, 20));
+    swordVec.push_back(Vector3(20, 0, 20));
+    swordVec.push_back(Vector3(-20, 0, 20));
+    swordVec.push_back(Vector3(-20, 0, 0));
+    swordVec.push_back(Vector3(20, 0, 0));
+    swordVec.push_back(Vector3(-20, 0, -20));
+    swordVec.push_back(Vector3(0, 0, -20));
+    swordVec.push_back(Vector3(20, 0, -20));
 }
 
 void SP2Scene3::Exit()

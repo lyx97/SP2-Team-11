@@ -25,7 +25,7 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	right.y = 0;
 	right.Normalize();
 	this->up = right.Cross(view).Normalized();
-	Singleton::getInstance()->MOUSE_SPEED = 20.f;
+	Singleton::getInstance()->MOUSE_SPEED = 10.f;
 }
 
 bool bound(Vector3& camPos)

@@ -196,6 +196,7 @@ void SP2Scene2::Update(double dt)
 		moonDistance = 400;
 		Singleton::getInstance()->stateCheck = true;
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
+
 		for (auto q : Object::objectMap)
 		{
 			delete q.first;
@@ -487,7 +488,14 @@ void SP2Scene2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+
 	modelStack.Translate(pelicanPos.x, pelicanPos.y, pelicanPos.z);
+
+	modelStack.Translate(0, -1, 0);
+	//modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
+	modelStack.Scale(0.3, 0.3, 0.3);
+	modelStack.Scale(10, 10, 10);
+	modelStack.Translate(camera.view.x + pelicanPos.x, camera.view.y, camera.view.z);
 	modelStack.Rotate(rotation, 0, 1, 0);
 	modelStack.Scale(10, 10, 10);
 	RenderMesh(meshList[GEO_PELICAN], true);

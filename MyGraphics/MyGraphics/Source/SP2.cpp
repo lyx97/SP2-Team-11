@@ -30,8 +30,13 @@ void SP2::Init()
     spawnRadius = 5000;
     oreFrequency = 100;
     treeFrequency = 100;
+    grassFrequency = 100;
 	oreReached = false;
-	rotateSword = 30;
+
+    srand(time(0));
+    planeInit();
+	rotateSword = 0;
+
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
@@ -40,7 +45,7 @@ void SP2::Init()
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
     srand(time(0));
     planeInit();
-
+    npcPos = Vector3(10, 0, 10);
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
@@ -194,6 +199,7 @@ void SP2::Init()
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
 
+
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
 	for (auto q : orePos)
@@ -205,8 +211,8 @@ void SP2::Init()
     {
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(8, 150, 8));
     }
-    
-	NPC = new Object(Vector3(0, 7, 0), Vector3(7, 10, 7));
+	NPC = new Object(Vector3(npcPos.x, 0, npcPos.z), Vector3(10, 40, 10));
+
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
@@ -267,6 +273,7 @@ void SP2::Update(double dt)
 				{
 					Singleton::getInstance()->stateCheck = true;
 					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+
 					for (auto q : Object::objectMap)
 					{
 						delete q.first;
@@ -532,8 +539,10 @@ void SP2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
+    modelStack.PushMatrix();
+    modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
 
-	modelStack.PushMatrix();
+    modelStack.PushMatrix();
 	modelStack.Scale(5, 5, 5);
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
@@ -556,6 +565,8 @@ void SP2::Render()
     modelStack.PushMatrix();
     modelStack.Scale(5, 5, 5);
     RenderMesh(meshList[GEO_NPC1_LEG2], true);
+    modelStack.PopMatrix();
+
     modelStack.PopMatrix();
 
 	for (auto q : Object::objectMap)
@@ -604,6 +615,7 @@ void SP2::Render()
 
 	for (auto q : Object::objectMap)
 	{
+        //Ore Render
 		for (int j = 0; j < orePos.size(); ++j)
 		{
 			if ((q.first->pos.x == orePos[j].x) &&
@@ -618,6 +630,7 @@ void SP2::Render()
                 }
 			}
 		}
+        //Tree Render
         for (int j = 0; j < treePos.size(); ++j)
         {
             if ((q.first->pos.x == treePos[j].x) &&
@@ -628,6 +641,21 @@ void SP2::Render()
                     modelStack.Translate(treePos[j].x, 0, treePos[j].z);
                     modelStack.Scale(8, 8, 8);
                     RenderMesh(meshList[GEO_TREE], true);
+                    modelStack.PopMatrix();
+                }
+            }
+        }
+        //Grass Render
+        for (int j = 0; j < grassPos.size(); ++j)
+        {
+            if ((q.first->pos.x == grassPos[j].x) &&
+                (q.first->pos.z == grassPos[j].z))
+            {
+                if (grassPos[j].x >= camera.position.x - 80 || grassPos[j].x <= camera.position.x + 80 || grassPos[j].z >= camera.position.z - 80 || grassPos[j].z <= camera.position.z + 80){
+                    modelStack.PushMatrix();
+                    modelStack.Translate(grassPos[j].x, 3, grassPos[j].z);
+                    modelStack.Scale(8, 8, 8);
+                    RenderMesh(meshList[GEO_GRASS], true);
                     modelStack.PopMatrix();
                 }
             }
@@ -972,6 +1000,7 @@ void SP2::planeInit(bool reset){
 
             treePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
         }
+
     }
     else{
         plane startingPlane;

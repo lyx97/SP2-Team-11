@@ -12,8 +12,10 @@
 #include <map>
 #include "Boss.h"
 #include "Weapon.h"
+#include "Bullet.h"
 
 using std::map;
+using std::vector;
 
 class SP2Scene3 : public Scene
 {
@@ -97,8 +99,11 @@ private:
     void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
     void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight);
     void planeInit(bool reset = false);
+    float angleBetween(Vector3 &vector1, Vector3 &vector2);
+    float magnitude(Vector3 &vector);
     void planeLoader();
     float distanceBetween(Vector3 from, Vector3 to);
+    void swordInit();
     Camera camera;
     Light light[10];
 
@@ -126,13 +131,22 @@ private:
     plane currPlane;
     int landMaxX, landMinX, landMaxZ, landMinZ;
     int currPlaneKey;
+    int treeFrequency;
+    vector<Vector3> treePos;
+    int spawnRadius;
+
 
     Object* bossObj;
 	Object* ground;
-    Boss boss;
+    Boss boss = Boss("Final Boss", 100, Vector3(40, 0, 40), Vector3(30, 150, 40));
     float bossLookAtAngle;
 
-	Weapon* sword;
+    vector<Vector3> swordVec;
+    vector<Object*> swordObjVec;
+    Vector3 swordDrag = Vector3(0,0,0);
+    Weapon* sword;
+    float spinSword = 0.f;
+    float swordOffset = 80.f;
 
     Vector3 cameraStore;
     Vector3 swordPos;
@@ -140,6 +154,8 @@ private:
     float rotateSword;
     bool swordAniDown = false;
     bool swordAniUp = false;
+
+//    vector<Bullet> bossBullet;
 
 //    vector<Vector3> treesPos;
 };
