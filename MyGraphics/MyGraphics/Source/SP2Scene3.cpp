@@ -27,10 +27,9 @@ void SP2Scene3::Init()
     // Init VBO here
     Singleton::getInstance()->pause = false;
     Singleton::getInstance()->buttonText = false;
-    inputDelay = 9.0f;
-    rotateSword = 0;
     treeFrequency = 100;
     spawnRadius = 5000;
+    inputDelay = 9.0f;
 
     swordInit();
 
@@ -191,8 +190,7 @@ void SP2Scene3::Init()
     for (auto q : swordVec)
     {
         swordObjVec.push_back(new Object(boss.position + q + Vector3(0, swordOffset, 0), Vector3(20, 80, 20), false));
-        swordObjVec.at(i) = new Object(boss.position + q + Vector3(0, swordOffset, 0), Vector3(20, 80, 20), false);
-        i++;
+
     }
 
 	sword = new Weapon(1);
@@ -228,11 +226,10 @@ void SP2Scene3::Update(double dt)
         {
             swordAniDown = true;
         }
-
         if (swordAniDown)
         {
-            rotateSword += (float)(500 * dt);
-            if (rotateSword >= 120)
+			Singleton::getInstance()->rotateSword += (float)(500 * dt);
+			if (Singleton::getInstance()->rotateSword >= 120)
             {
                 swordAniDown = false;
                 swordAniUp = true;
@@ -240,13 +237,36 @@ void SP2Scene3::Update(double dt)
         }
         if (swordAniUp)
         {
-            rotateSword -= (float)(500 * dt);
-            if (rotateSword <= 20)
+			Singleton::getInstance()->rotateSword -= (float)(500 * dt);
+			if (Singleton::getInstance()->rotateSword <= 20)
             {
                 swordAniDown = false;
                 swordAniUp = false;
             }
         }
+
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp)
+		{
+			Singleton::getInstance()->gunAniDown = true;
+		}
+		if (Singleton::getInstance()->gunAniDown)
+		{
+			Singleton::getInstance()->rotateGun += (float)(500 * dt);
+			if (Singleton::getInstance()->rotateGun >= 50)
+			{
+				Singleton::getInstance()->gunAniDown = false;
+				Singleton::getInstance()->gunAniUp = true;
+			}
+		}
+		if (Singleton::getInstance()->gunAniUp)
+		{
+			Singleton::getInstance()->rotateGun -= (float)(100 * dt);
+			if (Singleton::getInstance()->rotateGun <= 20)
+			{
+				Singleton::getInstance()->gunAniDown = false;
+				Singleton::getInstance()->gunAniUp = false;
+			}
+		}
 
         if (Application::IsKeyPressed('P'))
         {
@@ -415,8 +435,12 @@ void SP2Scene3::Render()
 
     if (Singleton::getInstance()->gotSword)
     {
-        RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
     }
+	if (Singleton::getInstance()->gotGun)
+	{
+		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+	}
 
     if (boss.health >= 0){
         modelStack.PushMatrix();
@@ -510,11 +534,11 @@ void SP2Scene3::Render()
     {
         RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
     }
+
     RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
     cout << boss.health << endl;
-
 }
 
 void SP2Scene3::RenderSkybox()
@@ -784,23 +808,19 @@ void SP2Scene3::planeInit(bool reset){
         //Tree spawning
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3(rand() % spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
         }
 
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
         }
 

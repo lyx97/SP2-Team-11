@@ -110,17 +110,13 @@ private:
 	bool hpLow = false;
 	bool miningDisplay = false;
 	bool oreReached;
-	bool swordAniDown = false;
-	bool swordAniUp = false;
 
-	int planeDistance = 0;
-
-	float rotateSword;
 	float inputDelay = 0.f;
 	float heldDelay = 0.f;
 	float pickSword = 0.f;
 	float swing = 20.f;
 
+	int planeDistance = 0;
     int numPlanes = 2;
 	int oreFrequency;
     int treeFrequency;
@@ -128,7 +124,6 @@ private:
     int currPlaneKey;
 	int landMaxX, landMinX, landMaxZ, landMinZ;
     int spawnRadius;
-
 
 	std::string FPS;
 

@@ -151,7 +151,6 @@ private:
     Vector3 cameraStore;
     Vector3 swordPos;
 
-    float rotateSword;
     bool swordAniDown = false;
     bool swordAniUp = false;
 

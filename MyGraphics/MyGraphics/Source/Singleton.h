@@ -27,14 +27,23 @@ public:
 	};
 
 	PROGRAM_STATE program_state;
+	map<Object*, int> objectCount;
+
 	bool stateCheck;
 	bool pause;
 	bool buttonText;
-	bool gotSword = true;
+	bool gotSword = false;
 	bool gotGun = false;
-	map<Object*, int> objectCount;
+	bool swordAniDown = false;
+	bool swordAniUp = false;
+	bool gunAniDown = false;
+	bool gunAniUp = false;
+
 	float MOUSE_SPEED;
+
 	int health = 100;
+	int rotateSword = 20;
+	int rotateGun = 20;
 
 private:
 	Singleton()

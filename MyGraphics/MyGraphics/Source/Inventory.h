@@ -6,7 +6,7 @@ class Inventory
 {
 public:
 	Inventory();
-	virtual ~Inventory();
+	~Inventory();
 
 	static void addObject(Object* object);
 };

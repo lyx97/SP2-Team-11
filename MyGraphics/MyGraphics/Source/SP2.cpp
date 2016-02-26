@@ -30,12 +30,11 @@ void SP2::Init()
     spawnRadius = 5000;
     oreFrequency = 100;
     treeFrequency = 100;
-    grassFrequency = 100;
+	heldDelay = 0;
 	oreReached = false;
 
     srand(time(0));
     planeInit();
-	rotateSword = 0;
 
 	inputDelay = 9.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
@@ -43,8 +42,6 @@ void SP2::Init()
 	startingPlane.planeMax = Vector3(300, 0, 300);
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
-    srand(time(0));
-    planeInit();
     npcPos = Vector3(10, 0, 10);
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -144,16 +141,16 @@ void SP2::Init()
 	meshList[GEO_CROSSHAIR] = MeshBuilder::GenerateQuad("crosshair", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
 	meshList[GEO_CROSSHAIR]->textureID = LoadTGA("Image//crosshair.tga");
 
-	meshList[GEO_HP_BAR_LOW] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR_LOW] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_HP_BAR_LOW]->textureID = LoadTGA("Image//hp.tga");
 
-	meshList[GEO_HP_BAR_MID] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR_MID] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_HP_BAR_MID]->textureID = LoadTGA("Image//hp_mid.tga");
 
-	meshList[GEO_HP_BAR_HIGH] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_HP_BAR_HIGH] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_HP_BAR_HIGH]->textureID = LoadTGA("Image//hp_high.tga");
 
-	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
+	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
 	meshList[GEO_MINING_BAR] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
@@ -193,8 +190,8 @@ void SP2::Init()
 	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
 	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
     
-    meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree2.obj");
-    meshList[GEO_TREE]->textureID = LoadTGA("Image//tree2.tga");
+    meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
+    meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
 
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
@@ -204,15 +201,15 @@ void SP2::Init()
 
 	for (auto q : orePos)
 	{
-		ore = new Object(Vector3(q.x, 5, q.z), Vector3(5, 10, 5), true);
+		ore = new Object(Vector3(q.x, 5, q.z), Vector3(10, 20, 10), true);
 	}
 
     for (auto q : treePos)
     {
-        tree = new Object(Vector3(q.x, 5, q.z), Vector3(8, 150, 8));
+        tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
-	NPC = new Object(Vector3(npcPos.x, 0, npcPos.z), Vector3(10, 40, 10));
 
+	NPC = new Object(Vector3(npcPos.x, 0, npcPos.z), Vector3(10, 40, 10));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
@@ -244,16 +241,14 @@ void SP2::Update(double dt)
 	}
 	else
 	{
-		for (auto q : Singleton::getInstance()->objectCount)
+
+		if (Singleton::getInstance()->objectCount[ore] >= 2)
 		{
-			if (Singleton::getInstance()->objectCount[ore] >= 2)
-			{
-				oreReached = true;
-			}
-			else
-			{
-				oreReached = false;
-			}
+			oreReached = true;
+		}
+		else
+		{
+			oreReached = false;
 		}
 		if (!oreReached)
 		{
@@ -273,36 +268,11 @@ void SP2::Update(double dt)
 				{
 					Singleton::getInstance()->stateCheck = true;
 					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
-
 					for (auto q : Object::objectMap)
 					{
 						delete q.first;
 					}
 				}
-			}
-		}
-
-		if (sqrtf(
-			pow((camera.target.x - NPC->pos.x), 2) +
-			pow((camera.target.y - NPC->pos.y), 2) +
-			pow((camera.target.z - NPC->pos.z), 2)) < 15 && Singleton::getInstance()->gotSword)
-		{
-			if (Application::IsKeyPressed(VK_LBUTTON))
-			{
-				NPC->receiveDmg(melee->getDamage());
-			}
-		}
-		
-		for (auto it = Object::objectMap.begin(); it != Object::objectMap.end();)
-		{
-			if (it->first->isDead())
-			{
-				Object::objectMap.erase(it);
-				it = Object::objectMap.begin();
-			}
-			else
-			{
-				++it;
 			}
 		}
 
@@ -315,27 +285,49 @@ void SP2::Update(double dt)
 		if (Application::IsKeyPressed('4'))
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-		if (Application::IsKeyPressed(VK_LBUTTON) && !swordAniDown && !swordAniUp)
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp)
 		{
-			swordAniDown = true;
+			Singleton::getInstance()->swordAniDown = true;
 		}
-
-		if (swordAniDown)
+		if (Singleton::getInstance()->swordAniDown)
 		{
-			rotateSword += (float)(500 * dt);
-			if (rotateSword >= 120)
+			Singleton::getInstance()->rotateSword += (float)(500 * dt);
+			if (Singleton::getInstance()->rotateSword >= 120)
 			{
-				swordAniDown = false;
-				swordAniUp = true;
+				Singleton::getInstance()->swordAniDown = false;
+				Singleton::getInstance()->swordAniUp = true;
 			}
 		}
-		if (swordAniUp)
+		if (Singleton::getInstance()->swordAniUp)
 		{
-			rotateSword -= (float)(500 * dt);
-			if (rotateSword <= 20)
+			Singleton::getInstance()->rotateSword -= (float)(500 * dt);
+			if (Singleton::getInstance()->rotateSword <= 20)
 			{
-				swordAniDown = false;
-				swordAniUp = false;
+				Singleton::getInstance()->swordAniDown = false;
+				Singleton::getInstance()->swordAniUp = false;
+			}
+		}
+
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp)
+		{
+			Singleton::getInstance()->gunAniDown = true;
+		}
+		if (Singleton::getInstance()->gunAniDown)
+		{
+			Singleton::getInstance()->rotateGun += (float)(500 * dt);
+			if (Singleton::getInstance()->rotateGun >= 50)
+			{
+				Singleton::getInstance()->gunAniDown = false;
+				Singleton::getInstance()->gunAniUp = true;
+			}
+		}
+		if (Singleton::getInstance()->gunAniUp)
+		{
+			Singleton::getInstance()->rotateGun -= (float)(100 * dt);
+			if (Singleton::getInstance()->rotateGun <= 20)
+			{
+				Singleton::getInstance()->gunAniDown = false;
+				Singleton::getInstance()->gunAniUp = false;
 			}
 		}
 
@@ -379,23 +371,23 @@ void SP2::Update(double dt)
 		FPS = std::to_string(toupper(1 / dt));
 
 		planeLoader();
-		for (auto q : Object::objectMap)
+
+		for (map<Object*, int>::iterator it = Object::objectMap.begin(); it != Object::objectMap.end(); ++it)
 		{
-			if (Application::IsKeyPressed('E') && q.first->hitbox.isTouching(camera.target))
+			for (int i = 0; i < orePos.size(); ++i)
 			{
-				for (int i = 0; i < orePos.size(); ++i)
+				if (orePos[i].x == it->first->pos.x && orePos[i].z == it->first->pos.z)
 				{
-					if (orePos[i].x == q.first->pos.x && orePos[i].z == q.first->pos.z)
+					if (Application::IsKeyPressed('E') && it->first->hitbox.isTouching(camera.target))
 					{
+						heldDelay += 1.f * dt;
 						if (heldDelay > 2)
 						{
 							Inventory::addObject(ore);
 							heldDelay = 0;
-							delete q.first;
+							delete it->first;
 						}
-						heldDelay += 1 * dt;
 					}
-					else {}
 				}
 				miningDisplay = true;
 			}
@@ -404,13 +396,14 @@ void SP2::Update(double dt)
 		if (Application::IsKeyPressed('E') && sword->hitbox.isTouching(camera.target))
 		{
 			swordPos.y += 1 * dt;
+			pickSword += 1 * dt;
 			if (pickSword > 5)
 			{
 				pickSword = 0;
 				Singleton::getInstance()->gotSword = true;
+				Inventory::addObject(sword);
 				delete sword;
 			}
-			pickSword += 1 * dt;
 		}
 
 		if (gun->hitbox.isTouching(camera.target))
@@ -422,7 +415,6 @@ void SP2::Update(double dt)
 		if (!Application::IsKeyPressed('E'))
 		{
 			heldDelay = 0;
-
 			pickSword = 0;
 			swordPos.y = 5;
 			miningDisplay = false;
@@ -595,12 +587,6 @@ void SP2::Render()
 		}
 	}
 
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 10, 20);
-	modelStack.Scale(10, 10, 10);
-	RenderMesh(meshList[GEO_GUN], true);
-	modelStack.PopMatrix();
-
 	map<int, plane>::iterator iter;
 
 	for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
@@ -641,21 +627,6 @@ void SP2::Render()
                     modelStack.Translate(treePos[j].x, 0, treePos[j].z);
                     modelStack.Scale(8, 8, 8);
                     RenderMesh(meshList[GEO_TREE], true);
-                    modelStack.PopMatrix();
-                }
-            }
-        }
-        //Grass Render
-        for (int j = 0; j < grassPos.size(); ++j)
-        {
-            if ((q.first->pos.x == grassPos[j].x) &&
-                (q.first->pos.z == grassPos[j].z))
-            {
-                if (grassPos[j].x >= camera.position.x - 80 || grassPos[j].x <= camera.position.x + 80 || grassPos[j].z >= camera.position.z - 80 || grassPos[j].z <= camera.position.z + 80){
-                    modelStack.PushMatrix();
-                    modelStack.Translate(grassPos[j].x, 3, grassPos[j].z);
-                    modelStack.Scale(8, 8, 8);
-                    RenderMesh(meshList[GEO_GRASS], true);
                     modelStack.PopMatrix();
                 }
             }
@@ -710,11 +681,11 @@ void SP2::Render()
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
 	if (Singleton::getInstance()->gotSword)
 	{
-		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, rotateSword, true);
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
 	}
 	if (Singleton::getInstance()->gotGun)
 	{
-		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, 10, true);
+		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
 	}
 
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
@@ -725,7 +696,10 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
 	for (auto q : Singleton::getInstance()->objectCount)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
+		if (q.first == ore)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
+		}
 	}
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
@@ -956,48 +930,40 @@ void SP2::planeInit(bool reset){
         landMaxZ = planeMap[2].planeMax.z;
         landMinZ = planeMap[6].planeMin.z;
 
-        //Ore spawning
+        //Ore spawning Freq = 4
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-      
             orePos.push_back(Vector3(rand() % spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-      
             orePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-          
             orePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
         }
-
         for (int loop = 0; loop < oreFrequency / 4; loop++)
         {
-          
-            orePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
+            orePos.push_back(Vector3(rand() % spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
         }
+
         //Tree spawning
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3(rand() % spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, rand() % spawnRadius));
         }
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3((rand() % spawnRadius) - spawnRadius, 0, (rand() % spawnRadius) - spawnRadius));
         }
 
         for (int loop = 0; loop < treeFrequency / 4; loop++)
         {
-
             treePos.push_back(Vector3(rand() % spawnRadius + 0, 0, (rand() % spawnRadius) - spawnRadius));
         }
 

@@ -47,7 +47,7 @@ bool bound(Vector3& camPos)
 
 void Camera::Update(double dt)
 {
-	static const float CAMERA_SPEED = 200.f;
+	static const float CAMERA_SPEED = 100.f;
 	static const float SPRINT_SPEED = 800.f;
 	static const float JUMP_SPEED = 80.f;
 	Vector3 boundCheckPos = position;
@@ -63,7 +63,7 @@ void Camera::Update(double dt)
 	{
 		ySpeed = 0;
 	}
-	cout << ySpeed;
+
 	if (delay < 5)
 	{
 		delay += (float)(30 * dt);
@@ -86,8 +86,8 @@ void Camera::Update(double dt)
 
 	if (Application::IsKeyPressed(VK_SPACE) && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
-			position.y += (float)(JUMP_SPEED * dt);
-			target.y += (float)(JUMP_SPEED * dt);
+		position.y += (float)(JUMP_SPEED * dt);
+		target.y += (float)(JUMP_SPEED * dt);
 	}
 
 	if (Application::IsKeyPressed('W') && Singleton::getInstance()->pause == false)
