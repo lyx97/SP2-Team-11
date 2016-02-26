@@ -32,8 +32,8 @@ public:
 	bool stateCheck;
 	bool pause;
 	bool buttonText;
-	bool gotSword = false;
-	bool gotGun = false;
+	bool gotSword = true;
+	bool gotGun = true;
 	bool swordAniDown = false;
 	bool swordAniUp = false;
 	bool gunAniDown = false;

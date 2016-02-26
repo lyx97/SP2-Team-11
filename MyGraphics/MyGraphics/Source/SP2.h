@@ -110,8 +110,9 @@ private:
 	bool hpLow = false;
 	bool miningDisplay = false;
 	bool oreReached;
+	bool switchWeapon = true;
 
-	float inputDelay = 0.f;
+	float inputDelay;
 	float heldDelay = 0.f;
 	float pickSword = 0.f;
 	float swing = 20.f;

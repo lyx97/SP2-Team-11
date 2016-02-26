@@ -36,7 +36,7 @@ void SP2::Init()
     srand(time(0));
     planeInit();
 
-	inputDelay = 9.0f;
+	inputDelay = 10.f;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
@@ -190,8 +190,8 @@ void SP2::Init()
 	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
 	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
     
-    meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
-    meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
+    //meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
+    //meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
 
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
@@ -420,14 +420,11 @@ void SP2::Update(double dt)
 			miningDisplay = false;
 		}
 
-		if (inputDelay <= 10.0f)
+		if (inputDelay <= 10)
 		{
-			inputDelay += (float)(1 * dt);
+			inputDelay += 20 * dt;
 		}
-		else
-		{
-			camera.Update(dt);
-		}
+		camera.Update(dt);
 	}
 }
 
@@ -626,7 +623,7 @@ void SP2::Render()
                     modelStack.PushMatrix();
                     modelStack.Translate(treePos[j].x, 0, treePos[j].z);
                     modelStack.Scale(8, 8, 8);
-                    RenderMesh(meshList[GEO_TREE], true);
+                    //RenderMesh(meshList[GEO_TREE], true);
                     modelStack.PopMatrix();
                 }
             }
@@ -679,6 +676,7 @@ void SP2::Render()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
+
 	if (Singleton::getInstance()->gotSword)
 	{
 		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
@@ -686,6 +684,31 @@ void SP2::Render()
 	if (Singleton::getInstance()->gotGun)
 	{
 		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+	}
+
+	if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
+	{
+		if (inputDelay > 9)
+		{
+			if (Application::IsKeyPressed(VK_RBUTTON) && switchWeapon)
+			{
+				switchWeapon = false;
+				inputDelay = 0;
+			}
+			else if (Application::IsKeyPressed(VK_RBUTTON) && !switchWeapon)
+			{
+				switchWeapon = true;
+				inputDelay = 0;
+			}
+		}
+		if (switchWeapon)
+		{
+			RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+		}
+		else
+		{
+			RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+		}
 	}
 
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
