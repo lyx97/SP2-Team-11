@@ -31,18 +31,22 @@ void SP2::Init()
     oreFrequency = 100;
     treeFrequency = 100;
 	heldDelay = 0;
-	oreReached = false;
 
     srand(time(0));
     planeInit();
 
-	inputDelay = 10.f;
+	mission = 0;
+	message = 0;
+	inputDelay = 0.0f;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
     npcPos = Vector3(10, 0, 10);
+
+	Dialogue("Text//NPC.txt");
+
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
@@ -150,6 +154,9 @@ void SP2::Init()
 	meshList[GEO_HP_BAR_HIGH] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_HP_BAR_HIGH]->textureID = LoadTGA("Image//hp_high.tga");
 
+	meshList[GEO_MESSAGEBOX] = MeshBuilder::GenerateQuad("MESSAGEBOX", Color(1, 1, 1), TexCoord(1, 1), 6, 3);
+	meshList[GEO_MESSAGEBOX]->textureID = LoadTGA("Image//messageBox.tga");
+
 	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
@@ -183,6 +190,22 @@ void SP2::Init()
     meshList[GEO_NPC1_LEG2] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_LEG2.obj");
     meshList[GEO_NPC1_LEG2]->textureID = LoadTGA("Image//NPC.tga");
 
+	meshList[GEO_NPC1_ICON] = MeshBuilder::GenerateQuad("NPC1_icon", Color(1, 1, 1), TexCoord(1, 1), 1, 1);
+	meshList[GEO_NPC1_ICON]->textureID = LoadTGA("Image//NPCicon1.tga");
+
+	meshList[GEO_QUEST] = MeshBuilder::GenerateOBJ("quest", "OBJ//quest.obj");
+	meshList[GEO_QUEST]->textureID = LoadTGA("Image//quest.tga");
+	meshList[GEO_QUEST]->material.kAmbient.Set(1.0f, 1.0f, 0.0f);
+	meshList[GEO_QUEST]->material.kDiffuse.Set(0.6f, 0.6f, 0.6f);
+	meshList[GEO_QUEST]->material.kSpecular.Set(0.7f, 0.7f, 0.7f);
+	meshList[GEO_QUEST]->material.kShininess = 1.f;
+
+	meshList[GEO_HELPER] = MeshBuilder::GenerateOBJ("helper", "OBJ//helper.obj");
+	meshList[GEO_HELPER]->textureID = LoadTGA("Image//helper.tga");
+	meshList[GEO_HELPER]->material.kAmbient.Set(1.0f, 1.0f, 0.0f);
+	meshList[GEO_HELPER]->material.kDiffuse.Set(0.6f, 0.6f, 0.6f);
+	meshList[GEO_HELPER]->material.kSpecular.Set(0.7f, 0.7f, 0.7f);
+	meshList[GEO_HELPER]->material.kShininess = 1.f;
 
 	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
 	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
@@ -209,7 +232,7 @@ void SP2::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 
-	NPC = new Object(Vector3(npcPos.x, 0, npcPos.z), Vector3(10, 40, 10));
+	NPC = new Object(Vector3(npcPos.x, 7, npcPos.z), Vector3(10, 40, 10));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
@@ -226,6 +249,8 @@ void SP2::Init()
 	{
 		fist = new Weapon(1);
 	}
+
+	cameraStore = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
 }
 
 void SP2::Update(double dt)
@@ -241,39 +266,119 @@ void SP2::Update(double dt)
 	}
 	else
 	{
-
-		if (Singleton::getInstance()->objectCount[ore] >= 2)
-		{
-			oreReached = true;
-		}
-		else
-		{
-			oreReached = false;
-		}
-		if (!oreReached)
-		{
-			cameraStore = camera.position - Vector3(100, 0, 0);
-		}
-
+		planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
 		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
 
+		//interaction with NPC
 		if (sqrtf(
-			(cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) +
-			(cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) +
-			(cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z)) < 30 && oreReached)
+			pow((camera.position.x - npcPos.x), 2) +
+			pow((camera.position.y - npcPos.y), 2) +
+			pow((camera.position.z - npcPos.z), 2)) < 15)
 		{
-			if (planeDistance < 30 && oreReached)
+			//cout << inputDelay << endl;
+
+			if (Application::IsKeyPressed('E') && inputDelay >= 1)
 			{
-				if (Application::IsKeyPressed('E'))
+				//NPC dialogue start
+				if (mission < 3)
 				{
-					Singleton::getInstance()->stateCheck = true;
-					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
-					for (auto q : Object::objectMap)
+					mission = 1;
+					message++;
+					inputDelay = 0;
+
+					if (message > 7)
 					{
-						delete q.first;
+						message = 0;
+						inputDelay = 0;
+					}
+				}
+
+				//NPC dialogue after ship repair
+				if (mission == 3)
+				{
+					message--;
+					inputDelay = 0;
+
+					if (message < -4)
+					{
+						mission = 4;
+						message = 0;
+						inputDelay = 0;
+					}
+				}
+
+			}
+		}
+		//interaction with ship
+		else if (planeDistance < 30 && mission != 4)
+		{
+			//message start from 8
+			if (!shipStatus && message == 0)
+				message = 8;
+			if (Application::IsKeyPressed('E') && inputDelay >= 1)
+			{
+				if (message == 8)
+				{
+					//if there's enough ore
+					if (Singleton::getInstance()->objectCount[ore] >= 2)
+					{
+						message = 10;
+						inputDelay = 0;
+						Singleton::getInstance()->objectCount[ore] -= 2;
+						mission = 2;
+						shipStatus = true;
+					}
+					else
+					{
+						message = 9;
+						inputDelay = 0;
+					}
+				}
+				//after the mission is done
+				if (mission == 2 && inputDelay >= 1 && message != 0)
+				{
+					message++;
+					inputDelay = 0;
+
+					if (message > 11)
+					{
+						message = 0;
+						inputDelay = 0;
 					}
 				}
 			}
+		}
+
+		//exiting the ship after mission is done
+		else if (mission == 2 && planeDistance > 30)
+		{
+			message = 12;
+
+			//exit the dialogue
+			if (Application::IsKeyPressed('E') && message == 12 && inputDelay >= 1)
+			{
+				message = 0;
+				inputDelay = 0;
+				mission = 3;
+			}
+		}
+		else if (mission == 4 && planeDistance < 30)
+		{
+			message = 17;
+
+			if (Application::IsKeyPressed('E'))
+			{
+				Singleton::getInstance()->stateCheck = true;
+				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+				/*for (auto q : Object::objectMap)
+				{
+					delete q.first;
+				}*/
+			}
+		}
+		else
+		{
+			message = 0;
 		}
 
 		if (Application::IsKeyPressed('1')) //enable back face culling
@@ -420,11 +525,24 @@ void SP2::Update(double dt)
 			miningDisplay = false;
 		}
 
-		if (inputDelay <= 10)
+		if (inputDelay <= 1.0f)
 		{
-			inputDelay += 20 * dt;
+			inputDelay += (float)(1 * dt);
 		}
 		camera.Update(dt);
+	}
+}
+
+void SP2::Dialogue(string filename)
+{
+	ifstream myfile(filename.c_str());
+	string line;
+
+	while (std::getline(myfile, line))
+	{
+		new_line = line + "\n";
+		cout << new_line;
+		my_arr.push_back(new_line);
 	}
 }
 
@@ -530,31 +648,28 @@ void SP2::Render()
 	}
     modelStack.PushMatrix();
     modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
+	modelStack.Scale(4, 4, 4);
 
-    modelStack.PushMatrix();
-	modelStack.Scale(5, 5, 5);
+
+	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
-    RenderMesh(meshList[GEO_NPC1_HAND1], true);
-    modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_NPC1_HAND1], true);
+	modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
-    RenderMesh(meshList[GEO_NPC1_HAND2], true);
-    modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_NPC1_HAND2], true);
+	modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
-    RenderMesh(meshList[GEO_NPC1_LEG1], true);
-    modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_NPC1_LEG1], true);
+	modelStack.PopMatrix();
 
-    modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
-    RenderMesh(meshList[GEO_NPC1_LEG2], true);
-    modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_NPC1_LEG2], true);
+	modelStack.PopMatrix();
 
     modelStack.PopMatrix();
 
@@ -630,15 +745,6 @@ void SP2::Render()
         }
 	}
 
-	if (oreReached)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(cameraStore.x, cameraStore.y, cameraStore.z);
-		modelStack.Scale(10, 10, 10);
-		RenderMesh(meshList[GEO_PELICAN], true);
-		modelStack.PopMatrix();
-	}
-
 	modelStack.PushMatrix();
 	modelStack.Translate(
 		camera.target.x,
@@ -647,6 +753,12 @@ void SP2::Render()
 		);
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
 	//RenderMesh(meshList[GEO_LIGHTBALL], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(cameraStore.x, cameraStore.y, cameraStore.z);
+	modelStack.Scale(10, 10, 10);
+	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
 
 	if (miningDisplay && heldDelay >= 0.1)
@@ -667,13 +779,6 @@ void SP2::Render()
 
 	RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
-
-
-	if (oreReached)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Plane Distance : " + std::to_string(planeDistance), Color(1, 0, 0), 2, 20, 42);
-
-	if (planeDistance < 30 && oreReached)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to explore other planet", Color(1, 0, 0), 1.5, 15, 20);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
 
@@ -711,12 +816,133 @@ void SP2::Render()
 		}
 	}
 
+	int j = 14;
+	switch (message)
+	{
+
+
+	case 1:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[0], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 2:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[1], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 3:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+
+		for (int i = 2; i <= 3; ++i)
+		{
+			j -= 2;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
+		}
+		break;
+	case 4:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 1, 0), 1.3, 23, 10);
+		break;
+	case 5:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+
+		for (int i = 5; i <= 6; ++i)
+		{
+			j -= 2;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
+		}
+		break;
+	case 6:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+
+		for (int i = 7; i <= 8; ++i)
+		{
+			j -= 2;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
+		}
+		break;
+	case 7:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[9], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 8:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+
+		for (int i = 10; i <= 11; ++i)
+		{
+			j -= 2;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
+		}
+		break;
+	case 9:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[12], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 10:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[13], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 11:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+
+		for (int i = 14; i <= 17; ++i)
+		{
+			j -= 2;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
+		}
+		break;
+	case 12:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[18], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case -1:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[19], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case -2:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[20], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case -3:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[21], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case -4:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[22], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 17:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[23], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	default:
+		break;
+	}
+
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(0, 0, 0), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(0, 0, 0), 1, 1, 44);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
+	RenderTextOnScreen(meshList[GEO_TEXT], "MESSAGE CHECK : " + std::to_string(message), Color(0, 0, 0), 1, 1, 32);
+	RenderTextOnScreen(meshList[GEO_TEXT], "MISSION CHECK : " + std::to_string(mission), Color(0, 0, 0), 1, 1, 30);
 	for (auto q : Singleton::getInstance()->objectCount)
 	{
 		if (q.first == ore)

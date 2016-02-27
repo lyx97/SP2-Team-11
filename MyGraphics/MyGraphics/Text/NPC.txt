@@ -1,0 +1,24 @@
+Ah, you've finally woken up!
+Your ship has crashed but fret not!
+My home planet is full of tin ore 
+for you to use to repair your ship!
+Of course we would have to locate it too.
+Legend speaks of a sword that resides 
+from where the sun rises. 
+Perhaps that might be of use to you 
+in your adventures.
+If it helps, my house faces the north.
+Would you like to repair your ship?
+Cost: 2 Ores
+You need more ores.
+Repair successful
+Now that your ship has been repaired,
+perhaps you might want to gather more 
+ore so that your ship would fare better 
+out there in space?
+I have words with you.
+I need to ask you for a favour. 
+I need your help to get me to my home planet. 
+It's the neighbouring planet. 
+I have no ship of my own to fly there.
+Do you want to travel to other planet?

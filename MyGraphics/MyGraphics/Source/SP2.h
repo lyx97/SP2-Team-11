@@ -2,19 +2,23 @@
 #define SP2_H
 #include <vector>
 #include <list>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <map>
 
 #include "Scene.h"
 #include "Camera.h"
 #include "Mesh.h"
 #include "MatrixStack.h"
 #include "Light.h"
-#include <vector>
-#include <map>
 #include "Plane.h"
 #include "Object.h"
 
 using std::map;
 using std::vector;
+using std::string;
+using std::ifstream;
 
 class SP2 : public Scene
 {
@@ -51,6 +55,10 @@ class SP2 : public Scene
         GEO_TREE,
         GEO_GRASS,
         GEO_HITBOX,
+		GEO_MESSAGEBOX,
+		GEO_NPC1_ICON,
+		GEO_QUEST,
+		GEO_HELPER,
 
 		NUM_GEOMETRY,
 	};
@@ -97,6 +105,7 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight);
+	void Dialogue(string filename);
     void planeLoader();
     void planeInit(bool reset = false);
 
@@ -109,8 +118,8 @@ private:
 	bool hpMid = false;
 	bool hpLow = false;
 	bool miningDisplay = false;
-	bool oreReached;
 	bool switchWeapon = true;
+	bool shipStatus = false;
 
 	float inputDelay;
 	float heldDelay = 0.f;
@@ -125,12 +134,17 @@ private:
     int currPlaneKey;
 	int landMaxX, landMinX, landMaxZ, landMinZ;
     int spawnRadius;
+	int mission;
+	int message;
 
-	std::string FPS;
+	string FPS;
 
 	Vector3 cameraStore;
 	Vector3 swordPos;
 	Vector3 gunPos;
+
+	string new_line;
+	vector<string>my_arr;
 
 	// ores and land generators
 	vector<Vector3> orePos;
