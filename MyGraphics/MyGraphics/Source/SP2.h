@@ -139,7 +139,6 @@ private:
 
 	string FPS;
 
-	Vector3 cameraStore;
 	Vector3 swordPos;
 	Vector3 gunPos;
 
@@ -152,6 +151,7 @@ private:
     vector<Vector3> grassPos;
 
     Vector3 npcPos;
+	Vector3 shipPos;
 	map<int,plane> planeMap;
 
 	plane startingPlane;
@@ -160,6 +160,7 @@ private:
 	// objects
 	Object* ore;
 	Object* NPC;
+	Object* ship;
 	Object* sword;
 	Object* gun;
     Object* tree;

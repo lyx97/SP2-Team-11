@@ -44,7 +44,7 @@ void SP2::Init()
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
     npcPos = Vector3(10, 0, 10);
-
+	shipPos = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
 	Dialogue("Text//NPC.txt");
 
 	// Set background color to dark blue
@@ -231,8 +231,9 @@ void SP2::Init()
     {
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
-
-	NPC = new Object(Vector3(npcPos.x, 7, npcPos.z), Vector3(10, 40, 10));
+	
+	ship = new Object(Vector3(shipPos.x, 7, shipPos.z), Vector3(55, 25, 40));
+	NPC = new Object(Vector3(npcPos.x, 7, npcPos.z), Vector3(10, 15, 10));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
@@ -249,13 +250,11 @@ void SP2::Init()
 	{
 		fist = new Weapon(1);
 	}
-
-	cameraStore = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
 }
 
 void SP2::Update(double dt)
 {
-	planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
+	planeDistance = sqrtf((shipPos.x - camera.position.x) * (shipPos.x - camera.position.x) + (shipPos.y - camera.position.y) * (shipPos.y - camera.position.y) + (shipPos.z - camera.position.z) * (shipPos.z - camera.position.z));
 
 	if (Singleton::getInstance()->pause == true)
 	{
@@ -266,7 +265,6 @@ void SP2::Update(double dt)
 	}
 	else
 	{
-		planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
 		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
 
 		//interaction with NPC
@@ -756,7 +754,7 @@ void SP2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(cameraStore.x, cameraStore.y, cameraStore.z);
+	modelStack.Translate(shipPos.x, shipPos.y, shipPos.z);
 	modelStack.Scale(10, 10, 10);
 	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
@@ -940,6 +938,7 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(0, 0, 0), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(0, 0, 0), 1, 1, 44);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Plane Distance : " + std::to_string(planeDistance), Color(0, 0, 0), 1, 1, 42);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
 	RenderTextOnScreen(meshList[GEO_TEXT], "MESSAGE CHECK : " + std::to_string(message), Color(0, 0, 0), 1, 1, 32);
 	RenderTextOnScreen(meshList[GEO_TEXT], "MISSION CHECK : " + std::to_string(mission), Color(0, 0, 0), 1, 1, 30);
