@@ -434,15 +434,6 @@ void SP2Scene3::Render()
         modelStack.PopMatrix();
     }
 
-    if (Singleton::getInstance()->gotSword)
-    {
-		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-    }
-	if (Singleton::getInstance()->gotGun)
-	{
-		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
-	}
-
     if (boss.health >= 0){
         modelStack.PushMatrix();
         modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
@@ -523,6 +514,15 @@ void SP2Scene3::Render()
 
     RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
+
+	if (Singleton::getInstance()->gotSword)
+	{
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+	}
+	if (Singleton::getInstance()->gotGun)
+	{
+		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+	}
 
     RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps

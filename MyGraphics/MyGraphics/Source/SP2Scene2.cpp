@@ -196,11 +196,7 @@ void SP2Scene2::Update(double dt)
 		moonDistance = 400;
 		Singleton::getInstance()->stateCheck = true;
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
-
-		for (auto q : Object::objectMap)
-		{
-			delete q.first;
-		}
+		Object::objectMap.clear();
 	}
 
 	if (Singleton::getInstance()->pause == true)
