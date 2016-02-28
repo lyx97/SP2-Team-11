@@ -44,18 +44,17 @@ bool Application::IsKeyPressed(unsigned short key)
 
 void Application::MouseMove(double &x, double &y)
 {
-	if (Singleton::getInstance()->pause == false)
-		glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
-	
 	glfwGetCursorPos(m_window, &x, &y);
 	glfwSetCursorPos(m_window, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 }
 
-void Application::MouseUI(double &x, double &y)
+void Application::ShowCursor()
 {
-	if (Singleton::getInstance()->pause == true)
-    glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-	glfwGetCursorPos(m_window, &x, &y);
+	glfwSetInputMode(m_window,GLFW_CURSOR,GLFW_CURSOR_NORMAL);
+}
+void Application::HideCursor()
+{
+	glfwSetInputMode(m_window,GLFW_CURSOR,GLFW_CURSOR_HIDDEN);
 }
 
 void Application::SetMousePosition(double x, double y)
@@ -161,7 +160,7 @@ void Application::Run()
 		//Get and organize events, like keyboard and mouse input, window resizing, etc...
 		glfwPollEvents();
         m_timer.waitUntil(frameTime);       // Frame rate limiter. Limits each frame to a specified time in ms.   
-
+		glfwGetCursorPos(m_window, &Singleton::getInstance()->mousex, &Singleton::getInstance()->mousey);
 		if (Singleton::getInstance()->stateCheck) 
 		{
 			delete scene;

@@ -25,6 +25,7 @@ SP2Scene2::~SP2Scene2()
 void SP2Scene2::Init()
 {
 	// Init VBO here
+	Application::HideCursor();
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
 	pelicanPos = Vector3(-700, -3, 0);
@@ -207,6 +208,7 @@ void SP2Scene2::Update(double dt)
 	{
 		if (Application::IsKeyPressed('O'))
 		{
+			Application::HideCursor();
 			Application::SetMousePosition(0, 0);
 			Singleton::getInstance()->pause = false;
 		}
@@ -226,6 +228,7 @@ void SP2Scene2::Update(double dt)
 		if (Application::IsKeyPressed('P'))
 		{
 			Singleton::getInstance()->pause = true;
+			Application::ShowCursor();
 		}
 
 		if (Application::IsKeyPressed('K'))
@@ -536,8 +539,8 @@ void SP2Scene2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(1, 1, 1), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(1, 1, 1), 1, 1, 48);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(camera.mousex), Color(1, 1, 1), 1, 1, 46);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(camera.mousey), Color(1, 1, 1), 1, 1, 44);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 46);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 44);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(1, 1, 1), 1, 1, 38);
 	for (auto q : Singleton::getInstance()->objectCount)
 	{

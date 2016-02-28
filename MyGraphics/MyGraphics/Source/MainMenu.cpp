@@ -254,20 +254,18 @@ void MainMenu::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 
 void MainMenu::mainMenu()
 {
-	double mousex, mousey;
-	Application::MouseUI(mousex, mousey);
 	RenderUI(meshList[GEO_BACKGROUND], 10, 3, 3);
 	
 	
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(mousex), Color(1, 1, 1), 1, 1, 4);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(mousey), Color(1, 1, 1), 1, 1, 2);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 4);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 2);
 
 	//////////////////////////
 	//     START BUTTON     //
 	/////////////////////////
 
-	if ((1080 * SCREEN_WIDTH / 1920 > mousex && 840 * SCREEN_WIDTH / 1920 < mousex) &&
-		(575 * SCREEN_HEIGHT /1080 > mousey && 505 * SCREEN_HEIGHT / 1080 <mousey))
+	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(575 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 505 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
 
 	//if ((1070 > mousex && 835 < mousex) &&
 	//	(550 > mousey && 490 <mousey))
@@ -297,8 +295,8 @@ void MainMenu::mainMenu()
 	//////////////////////////
 	//     EXIT BUTTON     //
 	/////////////////////////
-	if ((1080 * SCREEN_WIDTH / 1920 > mousex && 840 * SCREEN_WIDTH / 1920 < mousex) &&
-		(665 * SCREEN_HEIGHT / 1080 > mousey && 595 * SCREEN_HEIGHT / 1080 <mousey))
+	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(665 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 595 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
 	{
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)

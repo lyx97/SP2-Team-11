@@ -45,11 +45,17 @@ public:
 	int rotateSword = 20;
 	int rotateGun = 20;
 
+	double mousex;
+	double mousey;
+
 private:
 	Singleton()
 	{
 		program_state = PROGRAM_MENU;
 		stateCheck = false;
+
+		mousex = 400;
+		mousey = 300;
 	}
 };
 
