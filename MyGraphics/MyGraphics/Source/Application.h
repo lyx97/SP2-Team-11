@@ -17,9 +17,10 @@ public:
 	void Run();
 	void Exit();
 	static void MouseMove(double &x, double &y);
-	static void MouseUI(double &x, double &y);
 	static bool IsKeyPressed(unsigned short key);
 	static void SetMousePosition(double x = 0, double y = 0);
+	static void ShowCursor();
+	static void HideCursor();
 private:
 
 	//Declare a window object

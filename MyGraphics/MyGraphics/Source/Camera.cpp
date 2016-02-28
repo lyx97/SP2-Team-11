@@ -90,7 +90,7 @@ void Camera::Update(double dt)
 		target.y += (float)(JUMP_SPEED * dt);
 	}
 
-	if (Application::IsKeyPressed('W') && Singleton::getInstance()->pause == false)
+	if (Application::IsKeyPressed('W'))
 	{
 		if (flying == true)
 		{
@@ -139,7 +139,7 @@ void Camera::Update(double dt)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('S') && Singleton::getInstance()->pause == false)
+	if (Application::IsKeyPressed('S'))
 	{
 		if (flying == true)
 		{
@@ -180,7 +180,7 @@ void Camera::Update(double dt)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('D') && Singleton::getInstance()->pause == false)
+	if (Application::IsKeyPressed('D'))
 	{
 		if (flying == true)
 		{
@@ -198,7 +198,7 @@ void Camera::Update(double dt)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('A') && Singleton::getInstance()->pause == false)
+	if (Application::IsKeyPressed('A'))
 	{
 		if (flying == true)
 		{
@@ -276,24 +276,7 @@ void Camera::Update(double dt)
 	}
 	else
 	{
-		Application::MouseUI(mousex, mousey);
-
-		Vector3 maxPos(1905, 700, 0);
-		Vector3 minPos(1430, 350, 0);
-		if ((maxPos.x > mousex && minPos.x < mousex) &&
-			(maxPos.y > mousey && minPos.y <mousey))
-		{
-			if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
-			{
-				Singleton::getInstance()->buttonText = true;
-			}
-			else
-				Singleton::getInstance()->buttonText = false;
-		}
-		else
-		{
-			Singleton::getInstance()->buttonText = false;
-		}
+		//button press to resume
 	}
 	if (Application::IsKeyPressed('R'))
 	{
