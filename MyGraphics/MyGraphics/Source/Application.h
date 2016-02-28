@@ -19,7 +19,7 @@ public:
 	static void MouseMove(double &x, double &y);
 	static void MouseUI(double &x, double &y);
 	static bool IsKeyPressed(unsigned short key);
-
+	static void SetMousePosition(double x = 0, double y = 0);
 private:
 
 	//Declare a window object

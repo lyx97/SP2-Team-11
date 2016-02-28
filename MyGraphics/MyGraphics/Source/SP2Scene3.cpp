@@ -205,6 +205,7 @@ void SP2Scene3::Update(double dt)
     {
         if (Application::IsKeyPressed('O'))
         {
+			Application::SetMousePosition(0, 0);
             Singleton::getInstance()->pause = false;
         }
     }
