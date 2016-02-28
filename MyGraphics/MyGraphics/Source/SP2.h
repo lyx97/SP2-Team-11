@@ -122,6 +122,7 @@ private:
 	bool shipStatus = false;
 
 	float inputDelay;
+	float weaponDelay;
 	float heldDelay = 0.f;
 	float pickSword = 0.f;
 	float swing = 20.f;

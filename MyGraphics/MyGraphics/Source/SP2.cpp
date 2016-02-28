@@ -39,6 +39,7 @@ void SP2::Init()
 	mission = 0;
 	message = 0;
 	inputDelay = 0.0f;
+	weaponDelay = 10.f;
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
@@ -533,6 +534,10 @@ void SP2::Update(double dt)
 		{
 			inputDelay += (float)(1 * dt);
 		}
+		if (weaponDelay <= 10)
+		{
+			weaponDelay += 20 * dt;
+		}
 		camera.Update(dt);
 	}
 }
@@ -959,7 +964,7 @@ void SP2::Render()
 	}
 	if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
 	{
-		if (inputDelay > 9)
+		if (weaponDelay > 9)
 		{
 			if (Application::IsKeyPressed(VK_RBUTTON) && switchWeapon)
 			{
@@ -967,7 +972,7 @@ void SP2::Render()
 				switchWeapon = false;
 				Singleton::getInstance()->gotSword = false;
 				Singleton::getInstance()->gotGun = true;
-				inputDelay = 0;
+				weaponDelay = 0;
 			}
 			else if (Application::IsKeyPressed(VK_RBUTTON) && !switchWeapon)
 			{
@@ -975,22 +980,19 @@ void SP2::Render()
 				switchWeapon = true;
 				Singleton::getInstance()->gotGun = false;
 				Singleton::getInstance()->gotSword = true;
-				inputDelay = 0;
+				weaponDelay = 0;
 			}
 		}
 	}
-	for (auto q : Singleton::getInstance()->objectCount)
 	if (Singleton::getInstance()->gotSword)
-
 	{
 		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-		cout << "sword" << endl;
 	}
 	if (Singleton::getInstance()->gotGun)
 	{
 		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
-		cout << "gun" << endl;
 	}
+
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
