@@ -879,16 +879,19 @@ void SP2::Render()
 	
 	case 1://Ah, you've finally woken up!
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[0], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case 2://Your ship has crashed but fret not!
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[1], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case 3://My home planet is full of tin ore for you to use to repair your ship!
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
 		for (int i = 2; i <= 3; ++i)
@@ -900,11 +903,13 @@ void SP2::Render()
 	case 4://Of course we would have to locate it too.
 		questText = ". Find ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 1, 0), 1.3, 23, 10);
 		break;
 	case 5://Legend speaks of a sword that resides from where the sun rises. 
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
 		for (int i = 5; i <= 6; ++i)
@@ -915,6 +920,7 @@ void SP2::Render()
 		break;
 	case 6://Perhaps that might be of use to you in your adventures.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
 		for (int i = 7; i <= 8; ++i)
@@ -925,11 +931,13 @@ void SP2::Render()
 		break;
 	case 7://If it helps, my house faces the north.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[9], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case 8://Would you like to repair your ship? Cost: 2 Ores
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
 		for (int i = 10; i <= 11; ++i)
@@ -941,17 +949,20 @@ void SP2::Render()
 	case 9://You need more ores.
 		questText = ". Repair Ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[12], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case 10://Repair successful
 		questText = "";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[13], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case 11://Now that your ship has been repaired,perhaps you might want to gather more ore so that your ship would fare better out there in space?
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
 		for (int i = 14; i <= 17; ++i)
@@ -963,32 +974,38 @@ void SP2::Render()
 	case 12://I have words with you.
 		questText = ". Go to NPC";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[18], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case -1://I need to ask you for a favour.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[19], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case -2://I need your help to get me to my home planet.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[20], Color(1, 1, 0), 1.3, 23, 10);
 		break;
 	case -3://It's the neighbouring planet. 
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[21], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case -4://I have no ship of my own to fly there.
 		questText = ". Go to ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[22], Color(1, 1, 0), 1.5, 23, 10);
 		break;
 	case 17://Do you want to travel to other planet?
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[23], Color(1, 1, 0), 1.5, 23, 10);
 		break;

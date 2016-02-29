@@ -22,3 +22,4 @@ I need your help to get me to my home planet.
 It's the neighbouring planet. 
 I have no ship of my own to fly there.
 Do you want to travel to other planet?
+NEXT [E]
