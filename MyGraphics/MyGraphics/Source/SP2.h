@@ -59,7 +59,7 @@ class SP2 : public Scene
 		GEO_NPC1_ICON,
 		GEO_QUEST,
 		GEO_HELPER,
-
+		GEO_QUESTLIST,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -120,12 +120,14 @@ private:
 	bool miningDisplay = false;
 	bool switchWeapon = true;
 	bool shipStatus = false;
+	bool pressTab = false;
 
 	float inputDelay;
 	float weaponDelay;
 	float heldDelay = 0.f;
 	float pickSword = 0.f;
 	float swing = 20.f;
+	float questTab = 65.f;
 
 	int planeDistance = 0;
     int numPlanes = 2;
@@ -139,7 +141,7 @@ private:
 	int message;
 
 	string FPS;
-
+	string questText;
 	Vector3 swordPos;
 	Vector3 gunPos;
 

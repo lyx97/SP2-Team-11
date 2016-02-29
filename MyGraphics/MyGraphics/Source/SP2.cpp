@@ -159,6 +159,9 @@ void SP2::Init()
 	meshList[GEO_MESSAGEBOX] = MeshBuilder::GenerateQuad("MESSAGEBOX", Color(1, 1, 1), TexCoord(1, 1), 6, 3);
 	meshList[GEO_MESSAGEBOX]->textureID = LoadTGA("Image//messageBox.tga");
 
+	meshList[GEO_QUESTLIST] = MeshBuilder::GenerateQuad("QUESTLIST", Color(1, 1, 1), TexCoord(1, 1), 3, 3);
+	meshList[GEO_QUESTLIST]->textureID = LoadTGA("Image//questList.tga");
+
 	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
@@ -335,9 +338,6 @@ void SP2::Update(double dt)
 						message = 9;
 						inputDelay = 0;
 					}
-					Singleton::getInstance()->stateCheck = true;
-					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
-					Object::objectMap.clear();
 				}
 				//after the mission is done
 				if (mission == 2 && inputDelay >= 1 && message != 0)
@@ -375,10 +375,7 @@ void SP2::Update(double dt)
 			{
 				Singleton::getInstance()->stateCheck = true;
 				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
-				/*for (auto q : Object::objectMap)
-				{
-					delete q.first;
-				}*/
+				Object::objectMap.clear();
 			}
 		}
 		else
@@ -394,7 +391,34 @@ void SP2::Update(double dt)
 			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
 		if (Application::IsKeyPressed('4'))
 			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+		if (Application::IsKeyPressed(VK_TAB) && inputDelay >= 1)
+		{
+			if (!pressTab)
+			{
+				pressTab = true;
+				inputDelay = 0;
+			}
+			else
+			{
+				pressTab = false;
+				inputDelay = 0;
+			}
+		}
+		if (pressTab)
+		{
+			questTab += (float)(40 * dt);
 
+			if (questTab >= 91.8)
+				questTab = 91.8;
+		}
+
+		if (!pressTab)
+		{
+			questTab -= (float)(40 * dt);
+
+			if (questTab <= 65)
+				questTab = 65;
+		}
 		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp)
 		{
 			Singleton::getInstance()->swordAniDown = true;
@@ -778,7 +802,7 @@ void SP2::Render()
 		RenderUI(meshList[GEO_MINING_BAR], 2, 29, 15, heldDelay * 5, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BORDER], 2, 29, 15, 10, 0, 0, 0, false);
 	}
-
+	RenderUI(meshList[GEO_QUESTLIST], 5, questTab, 40, 1, 0, 0, 0, false);
 
 	if (!hpMid && !hpLow)
 		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
@@ -798,17 +822,17 @@ void SP2::Render()
 	switch (message)
 	{
 	
-	case 1:
+	case 1://Ah, you've finally woken up!
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[0], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case 2:
+	case 2://Your ship has crashed but fret not!
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[1], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case 3:
+	case 3://My home planet is full of tin ore for you to use to repair your ship!
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
@@ -818,12 +842,13 @@ void SP2::Render()
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
 		}
 		break;
-	case 4:
+	case 4://Of course we would have to locate it too.
+		questText = ". Find ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 1, 0), 1.3, 23, 10);
 		break;
-	case 5:
+	case 5://Legend speaks of a sword that resides from where the sun rises. 
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
@@ -833,7 +858,7 @@ void SP2::Render()
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
 		}
 		break;
-	case 6:
+	case 6://Perhaps that might be of use to you in your adventures.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
@@ -843,12 +868,12 @@ void SP2::Render()
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
 		}
 		break;
-	case 7:
+	case 7://If it helps, my house faces the north.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[9], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case 8:
+	case 8://Would you like to repair your ship? Cost: 2 Ores
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
@@ -858,17 +883,19 @@ void SP2::Render()
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
 		}
 		break;
-	case 9:
+	case 9://You need more ores.
+		questText = ". Repair Ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[12], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case 10:
+	case 10://Repair successful
+		questText = "";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[13], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case 11:
+	case 11://Now that your ship has been repaired,perhaps you might want to gather more ore so that your ship would fare better out there in space?
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 
@@ -878,32 +905,34 @@ void SP2::Render()
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.5, 23, j);
 		}
 		break;
-	case 12:
+	case 12://I have words with you.
+		questText = ". Go to NPC";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[18], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case -1:
+	case -1://I need to ask you for a favour.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[19], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case -2:
+	case -2://I need your help to get me to my home planet.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[20], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case -3:
+	case -3://It's the neighbouring planet. 
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[21], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case -4:
+	case -4://I have no ship of my own to fly there.
+		questText = ". Go to ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[22], Color(1, 1, 0), 1.5, 23, 10);
 		break;
-	case 17:
+	case 17://Do you want to travel to other planet?
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[23], Color(1, 1, 0), 1.5, 23, 10);
@@ -911,7 +940,7 @@ void SP2::Render()
 	default:
 		break;
 	}
-
+	RenderTextOnScreen(meshList[GEO_TEXT], questText, Color(1, 1, 0), 1, questTab - 5, 45);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
