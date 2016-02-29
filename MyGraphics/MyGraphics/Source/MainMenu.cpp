@@ -62,10 +62,10 @@ void MainMenu::Init()
 	meshList[GEO_BACKGROUND] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 5, 4);
 	meshList[GEO_BACKGROUND]->textureID = LoadTGA("Image//background.tga");
 
-	meshList[GEO_BUTTON] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 5, 2);
+	meshList[GEO_BUTTON] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
 	meshList[GEO_BUTTON]->textureID = LoadTGA("Image//buttonDefault.tga");
 
-	meshList[GEO_BUTTON_HOVER] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 5, 2);
+	meshList[GEO_BUTTON_HOVER] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
 	meshList[GEO_BUTTON_HOVER]->textureID = LoadTGA("Image//buttonHover.tga");
 }
 
@@ -75,11 +75,11 @@ void MainMenu::Update(double dt)
 	{
 	case MainMenu::MENU_MAIN:mainMenu();
 		break;
-	case MainMenu::MENU_INSTRUCTIONS:
+	case MainMenu::MENU_INSTRUCTIONS:instruction();
 		break;
-	case MainMenu::MENU_OPTIONS:
+	case MainMenu::MENU_OPTIONS:options();
 		break;
-	case MainMenu::MENU_CREDITS:
+	case MainMenu::MENU_CREDITS:credits();
 		break;
 	case MainMenu::MENU_EXIT:
 		break;
@@ -93,21 +93,25 @@ void MainMenu::Render()
 
 	modelStack.LoadIdentity();
 
+	RenderUI(meshList[GEO_BACKGROUND], 10, 3, 3);
+
 	switch (state)
 	{
 	case MainMenu::MENU_MAIN:mainMenu();
 		break;
 	case MainMenu::MENU_START:
 		break;
-	case MainMenu::MENU_INSTRUCTIONS:
+	case MainMenu::MENU_INSTRUCTIONS:instruction();
 		break;
-	case MainMenu::MENU_OPTIONS:
+	case MainMenu::MENU_OPTIONS:options();
 		break;
-	case MainMenu::MENU_CREDITS:
+	case MainMenu::MENU_CREDITS:credits();
 		break;
 	case MainMenu::MENU_EXIT:
 		break;
 	}
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 4);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 2);
 }
 
 void MainMenu::RenderMesh(Mesh *mesh, bool enableLight)
@@ -154,7 +158,6 @@ void MainMenu::RenderMesh(Mesh *mesh, bool enableLight)
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 }
-
 void MainMenu::RenderUI(Mesh* mesh, float size, float x, float y)
 {
 	glDisable(GL_DEPTH_TEST);
@@ -211,7 +214,6 @@ void MainMenu::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
-
 void MainMenu::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -226,8 +228,8 @@ void MainMenu::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Scale(size, size, size);
 	modelStack.Translate(x, y, 0);
+	modelStack.Scale(size, size, size);
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
 	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
@@ -251,24 +253,16 @@ void MainMenu::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
-
 void MainMenu::mainMenu()
 {
-	RenderUI(meshList[GEO_BACKGROUND], 10, 3, 3);
-	
-	
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 4);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 2);
-
 	//////////////////////////
 	//     START BUTTON     //
 	/////////////////////////
 
+	RenderTextOnScreen(meshList[GEO_TEXT], "LE SPACE GAME", Color(1, 1, 1), 5, 15, 45);
+
 	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
 		(575 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 505 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
-
-	//if ((1070 > mousex && 835 < mousex) &&
-	//	(550 > mousey && 490 <mousey))
 	{
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
@@ -289,12 +283,12 @@ void MainMenu::mainMenu()
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 30);
-		RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(0, 1, 0), 1, 38.5, 30);
+		RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 1, 1), 1, 38.5, 30);
 	}
 
-	//////////////////////////
-	//     EXIT BUTTON     //
-	/////////////////////////
+	////////////////////////////////
+	//     INSTRUCTION BUTTON     //
+	////////////////////////////////
 	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
 		(665 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 595 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
 	{
@@ -302,22 +296,200 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 25);
-			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 25);
-			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 30);
-			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
+			RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 0, 0), 1, 35.5, 25);
+			state = MENU_INSTRUCTIONS;
 		}
 		//MOUSE HOVER
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 25);
-			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 0, 0), 1, 35.5, 25);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 25);
-		RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(0, 1, 0), 1, 38.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 1, 1), 1, 35.5, 25);
+	}
+	
+	////////////////////////////
+	//     OPTIONS BUTTON     //
+	////////////////////////////
+	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(755 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 685 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 20);
+			RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 0, 0), 1, 37.5, 20);
+			state = MENU_OPTIONS;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 20);
+			RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 0, 0), 1, 37.5, 20);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_BUTTON], 1, 40, 20);
+		RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 1, 1), 1, 37.5, 20);
+	}
+	
+	////////////////////////////
+	//     CREDITS BUTTON     //
+	////////////////////////////
+	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(845 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 775 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 0, 0), 1, 37.5, 15);
+			state = MENU_CREDITS;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 0, 0), 1, 37.5, 15);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_BUTTON], 1, 40, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 1, 1), 1, 37.5, 15);
+	}
+
+	//////////////////////////
+	//     EXIT BUTTON     //
+	/////////////////////////
+	if ((1080 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 840 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(935 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 865 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 10);
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 10);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_BUTTON], 1, 40, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 1, 1), 1, 38.5, 10);
+	}
+}
+void MainMenu::instruction()
+{
+	RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 1, 1), 3, 25, 45);
+
+	//////////////////////////
+	//     BACK BUTTON     //
+	/////////////////////////
+
+	if ((1632 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 1248 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(935 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 865 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 60, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, 59, 10);
+			state = MENU_MAIN;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 60, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, 59, 10);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_BUTTON], 1, 60, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 1, 1), 1, 59, 10);
+	}
+}
+
+void MainMenu::options()
+{
+	RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 1, 1), 3, 30, 45);
+
+	//////////////////////////
+	//     BACK BUTTON     //
+	/////////////////////////
+
+	if ((1632 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 1248 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(935 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 865 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 60, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, 59, 10);
+			state = MENU_MAIN;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 60, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, 59, 10);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_BUTTON], 1, 60, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 1, 1), 1, 59, 10);
+	}
+}
+
+void MainMenu::credits()
+{
+	RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 1, 1), 3, 30, 45);
+
+	//////////////////////////
+	//     BACK BUTTON     //
+	/////////////////////////
+
+	if ((1632 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 1248 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(935 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 865 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 60, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, 59, 10);
+			state = MENU_MAIN;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 60, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, 59, 10);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_BUTTON], 1, 60, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 1, 1), 1, 59, 10);
 	}
 }
 

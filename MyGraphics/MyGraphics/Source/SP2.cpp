@@ -681,29 +681,25 @@ void SP2::Render()
 	}
     modelStack.PushMatrix();
     modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
+	modelStack.Scale(4, 4, 4);
 
 	modelStack.PushMatrix();
-	modelStack.Scale(5, 5, 5);
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
 	RenderMesh(meshList[GEO_NPC1_HAND1], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
 	RenderMesh(meshList[GEO_NPC1_HAND2], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
 	RenderMesh(meshList[GEO_NPC1_LEG1], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-    modelStack.Scale(5, 5, 5);
 	RenderMesh(meshList[GEO_NPC1_LEG2], true);
 	modelStack.PopMatrix();
 
