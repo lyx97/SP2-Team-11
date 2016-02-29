@@ -17,9 +17,8 @@ public:
 
 	static vector<Bullet*> bulletVec;
 
-	Vector3 pos;
-	Vector3 size;
 	Vector3 dir;
+
 
 	int speed;
 };

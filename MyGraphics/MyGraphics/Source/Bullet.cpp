@@ -2,7 +2,7 @@
 
 vector<Bullet*> Bullet::bulletVec;
 
-Bullet::Bullet(Vector3 posit, Vector3 size, Vector3 dir, int speed) :
+Bullet::Bullet(Vector3 pos, Vector3 size, Vector3 dir, int speed) :
 dir(dir),
 speed(speed),
 Object(pos, size)

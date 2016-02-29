@@ -232,7 +232,6 @@ void SP2::Init()
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
 
-
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
 	for (auto q : orePos)
@@ -288,7 +287,6 @@ void SP2::Update(double dt)
 			pow((camera.position.y - npcPos.y), 2) +
 			pow((camera.position.z - npcPos.z), 2)) < 15)
 		{
-			//cout << inputDelay << endl;
 
 			if (Application::IsKeyPressed('E') && inputDelay >= 1)
 			{
@@ -449,15 +447,15 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->swordAniUp = false;
 			}
 		}
+
 		for (auto q : Bullet::bulletVec)
 		{
-			cout << "I: " << q->pos << " ";
-			q->setPos(Vector3(q->pos.x + q->dir.x * 10 * dt, q->pos.y, q->pos.z + q->dir.z * 10 * dt));
-			cout << "A: " << q->pos << endl;
+			q->pos += q->dir * q->speed * dt;
 		}
+
 		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
 		{
-			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view.x, camera.view.y, camera.view.z), 10);
+			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1000);
 			cout << Bullet::bulletVec.size() << endl;
 			Singleton::getInstance()->gunAniDown = true;
 		}
@@ -695,17 +693,18 @@ void SP2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
-    modelStack.PushMatrix();
-    modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
-	modelStack.Scale(4, 4, 4);
 
 	for (auto q : Bullet::bulletVec)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(q->pos.x + camera.target.x + 20, q->pos.y + camera.target.y, q->pos.z + camera.target.z );
-		RenderMesh(meshList[GEO_LIGHTBALL], true);
+		modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
+		RenderMesh(meshList[GEO_LIGHTBALL], false);
 		modelStack.PopMatrix();
 	}
+
+    modelStack.PushMatrix();
+    modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
+	modelStack.Scale(4, 4, 4);
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_NPC1], true);
