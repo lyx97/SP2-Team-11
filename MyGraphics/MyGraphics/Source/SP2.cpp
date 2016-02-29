@@ -47,10 +47,8 @@ void SP2::Init()
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
-	//swordPos = Vector3(0, 10, rand() % 30 + 1985);
-	//gunPos = Vector3(rand() % 30 + 1985, 1, 0);
-	swordPos = Vector3(0, 10, 10);
-	gunPos = Vector3(10, 1, 0);
+	swordPos = Vector3(0, 10, rand() % 30 + 1985);
+	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
 	npcPos = Vector3(10, 0, 10);
 	shipPos = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
 	Dialogue("Text//NPC.txt");
@@ -133,10 +131,14 @@ void SP2::Init()
 
 	//Initialize camera settings
 	camera.Init(Vector3(0, 15, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
+	Application::SetMousePosition(0, 0);
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("AXES", 500, 500, 500);
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
+
+	meshList[GEO_CYLIN] = MeshBuilder::GenerateCylin("FIST", Color(0.3f, 0.3f, 0.3f), 36);
+	meshList[GEO_CIRCLE] = MeshBuilder::GenerateCircle("FIST", Color(1.f, 0.863f, 0.698f), 36);
 
 	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
 	meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet1_land.tga");
@@ -478,6 +480,10 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->gunAniDown = false;
 				Singleton::getInstance()->gunAniUp = false;
 			}
+		}
+		if (Application::IsKeyPressed('T'))
+		{
+			rotateHand -= (float)(100 * dt);
 		}
 		if (Application::IsKeyPressed('P'))
 		{
@@ -830,9 +836,18 @@ void SP2::Render()
 		{
 			RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
 		}
-		if (Singleton::getInstance()->gotGun)
+		else if (Singleton::getInstance()->gotGun)
 		{
 			RenderUI(meshList[GEO_GUN], 120, 70, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+		}
+		else
+		{
+			// right
+			RenderUI(meshList[GEO_CIRCLE], 7, 60, 10, 1, 90, 0, 0, false);
+			RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -rotateHand, false);
+			// left
+			RenderUI(meshList[GEO_CIRCLE], 7, 20, 10, 1, 90, 0, 0, false);
+			RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, rotateHand, false);
 		}
 	}
 
@@ -1148,10 +1163,18 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float
 	{
 		glUniform1i(m_parameters[U_LIGHTENABLED], 0);
 	}
-	glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, mesh->textureID);
-	glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
+
+	if (mesh->textureID > 0)
+	{
+		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, mesh->textureID);
+		glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
+	}
+	else
+	{
+		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 0);
+	}
 
 	Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
 	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);

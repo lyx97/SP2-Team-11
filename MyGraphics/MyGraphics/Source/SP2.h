@@ -61,6 +61,9 @@ class SP2 : public Scene
 		GEO_QUEST,
 		GEO_HELPER,
 		GEO_QUESTLIST,
+		GEO_CYLIN,
+		GEO_CIRCLE,
+
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -129,6 +132,7 @@ private:
 	float pickSword = 0.f;
 	float swing = 20.f;
 	float questTab = 65.f;
+	float rotateHand = 45.f;
 
 	int planeDistance = 0;
     int numPlanes = 2;
