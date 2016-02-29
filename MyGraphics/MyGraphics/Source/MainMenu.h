@@ -26,6 +26,7 @@ class MainMenu : public Scene
 	enum GEO_MENU
 	{
 		GEO_BACKGROUND,
+		GEO_BACKGROUND2,
 		GEO_BUTTON,
 		GEO_BUTTON_HOVER,
 		GEO_TEXT,
@@ -85,12 +86,16 @@ public:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y);
+	void RenderUIwithTranparent(Mesh* mesh, float size, float x, float y);
 
 	void mainMenu();
 	void instruction();
 	void options();
 	void credits();
 	MENU_STATE state;
+
+	bool animation = false;
+	float animationMove = 40;
 };
 
 #endif
