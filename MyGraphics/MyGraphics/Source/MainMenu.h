@@ -2,6 +2,7 @@
 #include "Mesh.h"
 #include "Mtx44.h"
 #include "MatrixStack.h"
+#include "Sound.h"
 
 #include "Light.h"
 #include "Material.h"
@@ -96,6 +97,8 @@ public:
 
 	bool animation = false;
 	float animationMove = 40;
+
+	Sound sound;
 };
 
 #endif

@@ -11,6 +11,9 @@
 #include "Application.h"
 #include "Singleton.h"
 
+using namespace irrklang;
+#pragma comment(lib, "irrKlang.lib")
+
 MainMenu::MainMenu()
 {
 	state = MENU_MAIN;
@@ -22,6 +25,7 @@ MainMenu::~MainMenu()
 
 void MainMenu::Init()
 {
+	sound.playMusic("Music//Music.mp3");
 	glClearColor(1.0f, 0.86f, 0.79f, 0.0f);
 
 	glEnable(GL_DEPTH_TEST);
@@ -316,8 +320,9 @@ void MainMenu::mainMenu()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//Music.mp3");
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 30);
-			RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 0, 0), 1, 38.5, 30);
+			RenderTextOnScreen(meshList[GEO_TEXT], "LOADING", Color(1, 0, 0), 1, 37.5, 30);
 			Singleton::getInstance()->stateCheck = true;
 			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME;
 		}

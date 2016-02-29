@@ -1,10 +1,9 @@
-﻿Build started 2/29/2016 3:54:08 PM.
+﻿Build started 2/29/2016 5:13:20 PM.
      1>Project "C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\MyGraphics\MyGraphics.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\Common\Source" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glfw\include" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp
-         Application.cpp
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\application.cpp(68): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\application.cpp(69): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\MyGraphics\irrKlang-1.5.0\include" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\Common\Source" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glfw\include" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glew\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\MainMenu.cpp
+         MainMenu.cpp
+     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\mainmenu.cpp(219): warning C4244: 'argument' : conversion from 'float' to 'GLenum', possible loss of data
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug" /LIBPATH:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glew\lib" /LIBPATH:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.lib" /MACHINE:X86 Debug\Application.obj
          Debug\Boss.obj
@@ -20,6 +19,7 @@
          Debug\MeshBuilder.obj
          Debug\Object.obj
          Debug\shader.obj
+         Debug\Sound.obj
          Debug\SP2.obj
          Debug\SP2Scene2.obj
          Debug\SP2Scene3.obj
@@ -30,4 +30,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.09
+Time Elapsed 00:00:01.04
