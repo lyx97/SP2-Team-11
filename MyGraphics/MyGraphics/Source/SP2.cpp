@@ -224,8 +224,10 @@ void SP2::Init()
 	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
 	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
     
+
     meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
     meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
+
 
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
@@ -794,6 +796,7 @@ void SP2::Render()
                     modelStack.Scale(8, 8, 8);
                     RenderMesh(meshList[GEO_TREE], true);
                     modelStack.PopMatrix();
+
                 }
             }
         }

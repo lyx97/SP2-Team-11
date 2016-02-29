@@ -31,8 +31,8 @@ void SP2Scene3::Init()
     treeFrequency = 100;
     spawnRadius = 5000;
     inputDelay = 9.0f;
-
-    swordInit();
+    planeInit();
+    swordSet(true);
 
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -112,7 +112,7 @@ void SP2Scene3::Init()
     projectionStack.LoadMatrix(projection);
 
     //Initialize camera settings
-    camera.Init(Vector3(0, 7, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
+    camera.Init(Vector3(0, 20, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
 
     meshList[GEO_AXES] = MeshBuilder::GenerateAxes("AXES", 500, 500, 500);
 
@@ -185,22 +185,25 @@ void SP2Scene3::Init()
     startingPlane.planePos = Vector3(0, 0, 0);
     startingPlane.planeMin = Vector3(0, 0, 0);
     startingPlane.planeMax = Vector3(300, 0, 300);
-    planeInit();
-
-    int i = 0;
-    for (auto q : swordVec)
-    {
-        swordObjVec.push_back(new Object(boss.position + q + Vector3(0, swordOffset, 0), Vector3(20, 80, 20), false));
-
-    }
 
 	sword = new Weapon(1);
-	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
+	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
 }
 
 void SP2Scene3::Update(double dt)
 {
-    planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
+   
+    if (Application::IsKeyPressed('1')) //enable back face culling
+        glEnable(GL_CULL_FACE);
+    if (Application::IsKeyPressed('2')) //disable back face culling
+        glDisable(GL_CULL_FACE);
+    if (Application::IsKeyPressed('3'))
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+    if (Application::IsKeyPressed('4'))
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+
+
+    planeDistance = sqrtf ((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
 
     if (Singleton::getInstance()->pause == true)
     {
@@ -215,15 +218,6 @@ void SP2Scene3::Update(double dt)
     {
 
 		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
-
-        if (Application::IsKeyPressed('1')) //enable back face culling
-            glEnable(GL_CULL_FACE);
-        if (Application::IsKeyPressed('2')) //disable back face culling
-            glDisable(GL_CULL_FACE);
-        if (Application::IsKeyPressed('3'))
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-        if (Application::IsKeyPressed('4'))
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
         if ((GetKeyState(VK_LBUTTON) & 0x100) != 0 && !swordAniDown && !swordAniUp)
         {
@@ -277,23 +271,28 @@ void SP2Scene3::Update(double dt)
             Singleton::getInstance()->pause = true;
         }
 
-        if (Application::IsKeyPressed('K'))
-        {
-			Singleton::getInstance()->health -= 5;
+   //     if (Application::IsKeyPressed('K'))
+   //     {
+			//Singleton::getInstance()->health -= 5;
 
-			if (Singleton::getInstance()->health <= 50) hpMid = true;
-			if (Singleton::getInstance()->health <= 25) hpLow = true;
-			if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
-        }
-
-        if (Application::IsKeyPressed('L'))
+			//if (Singleton::getInstance()->health <= 50) hpMid = true;
+			//if (Singleton::getInstance()->health <= 25) hpLow = true;
+			//if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
+   //     }
+        if (Singleton::getInstance()->health <= 50) hpMid = true;
+        if (Singleton::getInstance()->health <= 25) hpLow = true;
+        if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
+     /*   if (Application::IsKeyPressed('L'))
         {
 			Singleton::getInstance()->health += 5;
 
 			if (Singleton::getInstance()->health >= 50) hpMid = false;
 			if (Singleton::getInstance()->health >= 25) hpLow = false;
 			if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
-        }
+        }*/
+        if (Singleton::getInstance()->health >= 50) hpMid = false;
+        if (Singleton::getInstance()->health >= 25) hpLow = false;
+        if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
         if (Application::IsKeyPressed('R'))
         {
             bool reset = true;
@@ -310,52 +309,64 @@ void SP2Scene3::Update(double dt)
         glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 
         FPS = std::to_string(toupper(1 / dt));
-
+        if (Application::IsKeyPressed('B'))
+            activateBattle = true;
         planeLoader();
+        if (activateBattle){
+            swordSet(false);
 
-        if (distanceBetween(boss.object->pos, camera.target) < 170){
-            if (swordOffset > 7)
-                swordOffset -= (float)(130 * dt);
-            if (swordDrag.x < 30)
-            swordDrag += Vector3(10, 0, 10);
-        }
-        else{
-            if (swordOffset <80)
-                swordOffset += (float)(80 * dt);
-            if (swordDrag.x > 0)
-                swordDrag -= Vector3(1, 0, 1);
-        }
-        if (spinSword < 90)
-        spinSword += 1;
-        else spinSword -= 180;
-        boss.setPos(boss.position);
-        if (boss.health <= 0){
-            boss.object->objectMap.erase(boss.object);
-        }
-		if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30 && Singleton::getInstance()->gotSword)
-		{
-			boss.health -= sword->getDamage();
-			cout << "ATTACK" << endl;
-		}
-		
-		if (distanceBetween(boss.position, camera.position) >= 30){
-			if (boss.position.x <= camera.position.x + 50)
-				boss.position.x += (float)(80 * dt);
+            if (distanceBetween(boss.object->pos, camera.target) < 140){
+                if (swordOffset > 7)
+                    swordOffset -= (float)(130 * dt);
+                if (swordDrag >= 25)
+                    swordDrag -= (float)(80 * dt);
+            }
+            else{
+                if (swordOffset < 80)
+                    swordOffset += (float)(80 * dt);
+                if (swordDrag < 200)
+                    swordDrag += (float)(80 * dt);
+            }
+ 
+            if (spinSword < 90)
+                spinSword += 1;
+            else spinSword -= 180;
+            boss.setPos(boss.position);
+            if (boss.health <= 0){
+                bossDead = true;
+                boss.object->objectMap.erase(boss.object);
+                for (auto q : swordObjVec){
+                    q->objectMap.erase(q);
+                }
+            }
+            for (auto q : swordObjVec){
+                cout << distanceBetween(q->pos, camera.position) << endl;
+                if ((q->hitbox.isTouching(camera.position)) && bossDead == false)
+                    Singleton::getInstance()->health -= 1;
+                if (distanceBetween(q->pos, camera.position) <12 && bossDead == false)
+                    Singleton::getInstance()->health -= 1;
 
-			if (boss.position.x >= camera.position.x - 50)
-				boss.position.x -= (float)(80 * dt);
+            }
 
-			if (boss.position.z <= camera.position.z + 50)
-				boss.position.z += (float)(80 * dt);
+            if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30 && Singleton::getInstance()->gotSword)
+            {
+                boss.health -= sword->getDamage();
 
-			if (boss.position.z >= camera.position.z - 50)
-				boss.position.z -= (float)(80 * dt);
-		}
-        for (auto q : swordObjVec)
-        {
-            
-            q->setPos(q->pos + boss.position + Vector3(0, swordOffset, 0) + swordDrag);
-            //q = Object(q->pos + boss.position + Vector3(0, swordOffset, 0) + swordDrag, Vector3(10, 10, 10), false);
+            }
+
+            if (distanceBetween(boss.position, camera.position) >= 30){
+                if (boss.position.x <= camera.position.x + 50)
+                    boss.position.x += (float)(90 * dt);
+
+                if (boss.position.x >= camera.position.x - 50)
+                    boss.position.x -= (float)(90 * dt);
+
+                if (boss.position.z <= camera.position.z + 50)
+                    boss.position.z += (float)(90 * dt);
+
+                if (boss.position.z >= camera.position.z - 50)
+                    boss.position.z -= (float)(90 * dt);
+            }
         }
         if (!Application::IsKeyPressed('E'))
         {
@@ -415,7 +426,7 @@ void SP2Scene3::Render()
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
         modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-       RenderMesh(meshList[GEO_HITBOX], false);
+     //  RenderMesh(meshList[GEO_HITBOX], false);
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         modelStack.PopMatrix();
     }
@@ -436,6 +447,17 @@ void SP2Scene3::Render()
         RenderMesh(meshList[GEO_GROUND], true);
         modelStack.PopMatrix();
     }
+
+
+    if (Singleton::getInstance()->gotSword = true)
+    {
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+    }
+	if (Singleton::getInstance()->gotGun)
+	{
+		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+	}
+
 
     if (boss.health >= 0){
         modelStack.PushMatrix();
@@ -467,25 +489,32 @@ void SP2Scene3::Render()
         
         
         modelStack.PushMatrix();
-        modelStack.Translate(swordDrag.x, 0, swordDrag.z);
-        modelStack.Translate(boss.position.x, boss.position.y + swordOffset, boss.position.z);
-        modelStack.Rotate(spinSword, 0, 1, 0);
-        modelStack.Scale(6, 6, 6);
-
+       //modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
+       // modelStack.Rotate(spinSword, 0, 1, 0);
+       // modelStack.Translate(-boss.position.x, -boss.position.y, -boss.position.z);
         for (auto q : swordVec)
         {
             modelStack.PushMatrix();
+
             modelStack.Translate(q.x, q.y, q.z);
+            modelStack.Scale(6, 6, 6);
+            modelStack.Rotate(spinSword, 0, 1, 0);
+
             RenderMesh(meshList[GEO_SWORD], true);
             modelStack.PopMatrix();
         }
+        if (Singleton::getInstance()->gotSword)
+        {
+            RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+        }
+
 
         modelStack.PopMatrix();
         
 		RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 10, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
-        cout << angleBetween(boss.position, camera.position) << endl;
+
     }
     
     //t->r->s
@@ -542,7 +571,7 @@ void SP2Scene3::Render()
     RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
     if (Singleton::getInstance()->buttonText == true)
         RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
-    cout << boss.health << endl;
+
 }
 
 void SP2Scene3::RenderSkybox()
@@ -936,16 +965,45 @@ float SP2Scene3::angleBetween(Vector3 &vector1, Vector3 &vector2){
     return theta;
 }
 
-void SP2Scene3::swordInit()
+void SP2Scene3::swordSet(bool init)
 {
-    swordVec.push_back(Vector3(0, 0, 20));
-    swordVec.push_back(Vector3(20, 0, 20));
-    swordVec.push_back(Vector3(-20, 0, 20));
-    swordVec.push_back(Vector3(-20, 0, 0));
-    swordVec.push_back(Vector3(20, 0, 0));
-    swordVec.push_back(Vector3(-20, 0, -20));
-    swordVec.push_back(Vector3(0, 0, -20));
-    swordVec.push_back(Vector3(20, 0, -20));
+    float offset = swordDrag;
+    if (init == true){
+        swordVec.push_back(Vector3(0, 0, offset ) + boss.position);
+        swordVec.push_back(Vector3(offset , 0, offset ) + boss.position);
+        swordVec.push_back(Vector3(-offset , 0, offset ) + boss.position);
+        swordVec.push_back(Vector3(-offset , 0, 0) + boss.position);
+        swordVec.push_back(Vector3(offset , 0, 0) + boss.position);
+        swordVec.push_back(Vector3(-offset , 0, -offset ) + boss.position);
+        swordVec.push_back(Vector3(0, 0, -offset ) + boss.position);
+        swordVec.push_back(Vector3(offset , 0, -offset ) + boss.position);
+        for (auto q : swordVec){
+            swordObjVec.push_back(new Object(q, Vector3(20, 80, 20)));
+        }
+    }
+    else{
+        if (boss.health >= 1){
+            swordVec[0] = Vector3(0, 0, offset) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[1] = Vector3(offset, 0, offset) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[2] = Vector3(-offset, 0, offset) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[3] = Vector3(-offset, 0, 0) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[4] = Vector3(offset, 0, 0) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[5] = Vector3(-offset, 0, -offset) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[6] = Vector3(0, 0, -offset) + boss.position + Vector3(0, swordOffset, 0);
+            swordVec[7] = Vector3(offset, 0, -offset) + boss.position + Vector3(0, swordOffset, 0);
+            int loop = 0;
+            swordRotation.SetToRotation(spinSword, 0, 1, 0);
+            Mtx44 translateBoss;
+            translateBoss.SetToTranslation(boss.position.x, boss.position.y, boss.position.z);
+            Mtx44 negTranslateBoss;
+            negTranslateBoss.SetToTranslation(-boss.position.x, -boss.position.y, -boss.position.z);
+
+            for (auto q : swordObjVec){
+                *q = Object(swordVec[loop], q->size);
+                loop++;
+            }
+        }
+    }
 }
 
 void SP2Scene3::Exit()

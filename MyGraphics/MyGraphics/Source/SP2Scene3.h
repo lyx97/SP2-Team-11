@@ -103,7 +103,7 @@ private:
     float magnitude(Vector3 &vector);
     void planeLoader();
     float distanceBetween(Vector3 from, Vector3 to);
-    void swordInit();
+    void swordSet(bool init = false);
     Camera camera;
     Light light[10];
 
@@ -135,16 +135,18 @@ private:
     vector<Vector3> treePos;
     int spawnRadius;
 
-
+    bool activateBattle = false;
+    bool bossDead = false;
     Object* bossObj;
 	Object* ground;
-    Boss boss = Boss("Final Boss", 100, Vector3(40, 0, 40), Vector3(30, 150, 40));
+    Boss boss = Boss("Final Boss", 100, Vector3(800, 0, 800), Vector3(30, 150, 40));
     float bossLookAtAngle;
 
     vector<Vector3> swordVec;
     vector<Object*> swordObjVec;
-    Vector3 swordDrag = Vector3(0,0,0);
+    float swordDrag = 180;
     Weapon* sword;
+    Mtx44 swordRotation;
     float spinSword = 0.f;
     float swordOffset = 80.f;
 

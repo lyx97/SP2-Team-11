@@ -142,10 +142,12 @@ void Application::Run()
 {
 	//Main Loop
 
-	Scene *scene = new MainMenu();
-	//Scene *scene = new SP2();
-	//Scene *scene = new SP2Scene2();
-	//Scene *scene = new SP2Scene3();
+
+	//Scene *scene = new MainMenu();
+    //Scene *scene = new SP2();
+    //Scene *scene = new SP2Scene2();
+    Scene *scene = new SP2Scene3();
+
 
 	scene->Init();
 
