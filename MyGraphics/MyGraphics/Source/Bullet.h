@@ -17,7 +17,13 @@ public:
 
 	static vector<Bullet*> bulletVec;
 
+
 	Vector3 dir;
+
+	Vector3 position;
+	Vector3 sizeBullet;
+	Vector3 direction;
+
 
 
 	int speed;

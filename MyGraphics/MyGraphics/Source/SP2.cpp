@@ -455,7 +455,9 @@ void SP2::Update(double dt)
 
 		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
 		{
+
 			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1000);
+
 			cout << Bullet::bulletVec.size() << endl;
 			Singleton::getInstance()->gunAniDown = true;
 		}
@@ -762,7 +764,7 @@ void SP2::Render()
 		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
 		modelStack.Rotate(-90, 1, 0, 0);
 		modelStack.Scale(150, 150, 1);
-	//	RenderMesh(meshList[GEO_GROUND], true);
+		RenderMesh(meshList[GEO_GROUND], true);
 		modelStack.PopMatrix();
 	}
 

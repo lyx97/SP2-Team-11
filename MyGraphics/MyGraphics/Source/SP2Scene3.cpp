@@ -340,7 +340,7 @@ void SP2Scene3::Update(double dt)
                 }
             }
             for (auto q : swordObjVec){
-                cout << distanceBetween(q->pos, camera.position) << endl;
+
                 if ((q->hitbox.isTouching(camera.position)) && bossDead == false)
                     Singleton::getInstance()->health -= 1;
                 if (distanceBetween(q->pos, camera.position) <12 && bossDead == false)
@@ -459,7 +459,7 @@ void SP2Scene3::Render()
 	}
 
 
-    if (boss.health >= 0){
+    if (boss.health >= 1){
         modelStack.PushMatrix();
         modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
         modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
@@ -507,11 +507,16 @@ void SP2Scene3::Render()
         {
             RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
         }
-
-
+        if (Singleton::getInstance()->gotGun)
+        {
+            RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+        }
+        cout << boss.health << endl;
         modelStack.PopMatrix();
-        
-		RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 10, 0, 0, 0, false);
+        if (boss.health > 0 && boss.health <= 100)
+            RenderTextOnScreen(meshList[GEO_TEXT], "FINISH HIM", Color(1, 0, 0), 2, 60, 10);
+
+		RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 100, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
 
@@ -547,14 +552,6 @@ void SP2Scene3::Render()
     RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
-	if (Singleton::getInstance()->gotSword)
-	{
-		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-	}
-	if (Singleton::getInstance()->gotGun)
-	{
-		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
-	}
 
     RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps

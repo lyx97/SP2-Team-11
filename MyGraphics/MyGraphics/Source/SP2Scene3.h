@@ -139,7 +139,7 @@ private:
     bool bossDead = false;
     Object* bossObj;
 	Object* ground;
-    Boss boss = Boss("Final Boss", 100, Vector3(800, 0, 800), Vector3(30, 150, 40));
+    Boss boss = Boss("Final Boss", 1000, Vector3(800, 0, 800), Vector3(30, 150, 40));
     float bossLookAtAngle;
 
     vector<Vector3> swordVec;
