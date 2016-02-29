@@ -22,6 +22,10 @@ SP2::~SP2()
 {
 }
 
+float magnitude(Vector3 &vector){
+	return sqrt((pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)));
+}
+
 void SP2::Init()
 {
 	// Init VBO here
@@ -43,9 +47,11 @@ void SP2::Init()
 	startingPlane.planePos = Vector3(0, 0, 0);
 	startingPlane.planeMin = Vector3(0, 0, 0);
 	startingPlane.planeMax = Vector3(300, 0, 300);
-	swordPos = Vector3(0, 10, rand() % 30 + 1985);
-	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
-    npcPos = Vector3(10, 0, 10);
+	//swordPos = Vector3(0, 10, rand() % 30 + 1985);
+	//gunPos = Vector3(rand() % 30 + 1985, 1, 0);
+	swordPos = Vector3(0, 10, 10);
+	gunPos = Vector3(10, 1, 0);
+	npcPos = Vector3(10, 0, 10);
 	shipPos = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
 	Dialogue("Text//NPC.txt");
 
@@ -218,8 +224,8 @@ void SP2::Init()
 	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
 	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
     
-    //meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
-    //meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
+    meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
+    meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
 
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
@@ -441,9 +447,16 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->swordAniUp = false;
 			}
 		}
-
-		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp)
+		for (auto q : Bullet::bulletVec)
 		{
+			cout << "I: " << q->pos << " ";
+			q->setPos(Vector3(q->pos.x + q->dir.x * 10 * dt, q->pos.y, q->pos.z + q->dir.z * 10 * dt));
+			cout << "A: " << q->pos << endl;
+		}
+		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
+		{
+			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view.x, camera.view.y, camera.view.z), 10);
+			cout << Bullet::bulletVec.size() << endl;
 			Singleton::getInstance()->gunAniDown = true;
 		}
 		if (Singleton::getInstance()->gunAniDown)
@@ -464,7 +477,6 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->gunAniUp = false;
 			}
 		}
-
 		if (Application::IsKeyPressed('P'))
 		{
 			Singleton::getInstance()->pause = true;
@@ -536,6 +548,7 @@ void SP2::Update(double dt)
 			{
 				pickSword = 0;
 				Inventory::addObject(sword);
+				Singleton::getInstance()->gotSword = true;
 				delete sword;
 			}
 		}
@@ -543,6 +556,7 @@ void SP2::Update(double dt)
 		if (gun->hitbox.isTouching(camera.target))
 		{
 			Inventory::addObject(gun);
+			Singleton::getInstance()->gotGun = true;
 			delete gun;
 		}
 
@@ -683,6 +697,14 @@ void SP2::Render()
     modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
 	modelStack.Scale(4, 4, 4);
 
+	for (auto q : Bullet::bulletVec)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(q->pos.x + camera.target.x + 20, q->pos.y + camera.target.y, q->pos.z + camera.target.z );
+		RenderMesh(meshList[GEO_LIGHTBALL], true);
+		modelStack.PopMatrix();
+	}
+
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
@@ -739,7 +761,7 @@ void SP2::Render()
 		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
 		modelStack.Rotate(-90, 1, 0, 0);
 		modelStack.Scale(150, 150, 1);
-		RenderMesh(meshList[GEO_GROUND], true);
+	//	RenderMesh(meshList[GEO_GROUND], true);
 		modelStack.PopMatrix();
 	}
 
@@ -770,7 +792,7 @@ void SP2::Render()
                     modelStack.PushMatrix();
                     modelStack.Translate(treePos[j].x, 0, treePos[j].z);
                     modelStack.Scale(8, 8, 8);
-                    //RenderMesh(meshList[GEO_TREE], true);
+                    RenderMesh(meshList[GEO_TREE], true);
                     modelStack.PopMatrix();
                 }
             }
@@ -793,11 +815,29 @@ void SP2::Render()
 	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
 
+	if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
+	{
+		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+		RenderUI(meshList[GEO_GUN], 120, 10, 5, 1, -5, 80, Singleton::getInstance()->rotateGun, true);
+	}
+	else
+	{
+		if (Singleton::getInstance()->gotSword)
+		{
+			RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+		}
+		if (Singleton::getInstance()->gotGun)
+		{
+			RenderUI(meshList[GEO_GUN], 120, 70, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+		}
+	}
+
 	if (miningDisplay && heldDelay >= 0.1)
 	{
 		RenderUI(meshList[GEO_MINING_BAR], 2, 29, 15, heldDelay * 5, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BORDER], 2, 29, 15, 10, 0, 0, 0, false);
 	}
+
 	RenderUI(meshList[GEO_QUESTLIST], 5, questTab, 40, 1, 0, 0, 0, false);
 
 	if (!hpMid && !hpLow)
@@ -946,31 +986,6 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
 	RenderTextOnScreen(meshList[GEO_TEXT], "MESSAGE CHECK : " + std::to_string(message), Color(0, 0, 0), 1, 1, 32);
 	RenderTextOnScreen(meshList[GEO_TEXT], "MISSION CHECK : " + std::to_string(mission), Color(0, 0, 0), 1, 1, 30);
-
-	//if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
-	//{
-	//	if (inputDelay > 9)
-	//	{
-	//		if (Application::IsKeyPressed(VK_RBUTTON) && switchWeapon)
-	//		{
-	//			switchWeapon = false;
-	//			inputDelay = 0;
-	//		}
-	//		else if (Application::IsKeyPressed(VK_RBUTTON) && !switchWeapon)
-	//		{
-	//			switchWeapon = true;
-	//			inputDelay = 0;
-	//		}
-	//	}
-	//	if (switchWeapon)
-	//	{
-	//		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
-	//	}
-	//	else
-	//	{
-	//		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-	//	}
-	//}
 	
 	for (auto q : Singleton::getInstance()->objectCount)
 	{
@@ -978,46 +993,7 @@ void SP2::Render()
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
 		}
-		if (q.first == sword)
-		{
-			Singleton::getInstance()->gotSword = true;
-		}
-		if (q.first == gun)
-		{
-			Singleton::getInstance()->gotGun = true;
-		}
 	}
-	if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
-	{
-		if (weaponDelay > 9)
-		{
-			if (Application::IsKeyPressed(VK_RBUTTON) && switchWeapon)
-			{
-				cout << "got sword" << endl;
-				switchWeapon = false;
-				Singleton::getInstance()->gotSword = false;
-				Singleton::getInstance()->gotGun = true;
-				weaponDelay = 0;
-			}
-			else if (Application::IsKeyPressed(VK_RBUTTON) && !switchWeapon)
-			{
-				cout << "got gun" << endl;
-				switchWeapon = true;
-				Singleton::getInstance()->gotGun = false;
-				Singleton::getInstance()->gotSword = true;
-				weaponDelay = 0;
-			}
-		}
-	}
-	if (Singleton::getInstance()->gotSword)
-	{
-		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-	}
-	if (Singleton::getInstance()->gotGun)
-	{
-		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
-	}
-
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)

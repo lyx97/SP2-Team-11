@@ -1,10 +1,13 @@
 #pragma once
 #include "Vector3.h"
 #include <map>
+#include <vector>
 #include "Object.h"
 #include "Inventory.h"
+#include "Bullet.h"
 
 using std::map;
+using std::vector;
 
 class Singleton
 {

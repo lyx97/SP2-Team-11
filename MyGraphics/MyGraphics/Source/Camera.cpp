@@ -48,8 +48,8 @@ bool bound(Vector3& camPos)
 void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 100.f;
-	static const float SPRINT_SPEED = 800.f;
-	static const float JUMP_SPEED = 80.f;
+	static const float SPRINT_SPEED = 150.f;
+	static const float JUMP_SPEED = 60.f;
 	Vector3 boundCheckPos = position;
 
 	ySpeed += GRAVITY * dt;

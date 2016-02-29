@@ -14,6 +14,7 @@
 #include "Light.h"
 #include "Plane.h"
 #include "Object.h"
+#include "Bullet.h"
 
 using std::map;
 using std::vector;
@@ -173,6 +174,7 @@ private:
 	Weapon* melee;
 	Weapon* ranged;
 	Weapon* fist;
+	Bullet* bullet;
 
 	Camera camera;
 	Light light[10];

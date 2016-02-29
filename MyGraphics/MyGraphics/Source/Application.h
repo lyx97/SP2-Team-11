@@ -3,7 +3,7 @@
 #define APPLICATION_H
 #define SCREEN_HEIGHT 1080/ 2
 #define SCREEN_WIDTH 1920 / 2
-#define GRAVITY 9.8f / 16.f
+#define GRAVITY 5.f
 
 #include "timer.h"
 #include "Singleton.h"
