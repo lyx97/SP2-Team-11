@@ -974,7 +974,7 @@ void SP2::Render()
 	case -2://I need your help to get me to my home planet.
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
-		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[20], Color(1, 1, 0), 1.5, 23, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[20], Color(1, 1, 0), 1.3, 23, 10);
 		break;
 	case -3://It's the neighbouring planet. 
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);

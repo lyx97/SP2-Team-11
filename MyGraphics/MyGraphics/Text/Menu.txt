@@ -1,0 +1,19 @@
+LE SPACE GAME
+START
+LOADING
+INSTRUCTION
+OPTIONS
+CREDITS
+EXIT
+BACK
+'E' to interact
+'P' to pause
+'O' to resume
+'SHIFT' to sprint
+'TAB' to show/ hide quest
+'SPACE' to jump
+Mouse click to attack
+SHAWN
+SHAM
+JIAHAO
+JACOB

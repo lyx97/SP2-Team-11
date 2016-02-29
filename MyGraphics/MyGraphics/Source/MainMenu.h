@@ -1,14 +1,21 @@
+#ifndef MAIN_MENU_H
+#define MAIN_MENU_H
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <vector>
+
 #include "Scene.h"
 #include "Mesh.h"
 #include "Mtx44.h"
 #include "MatrixStack.h"
 #include "Sound.h"
-
 #include "Light.h"
 #include "Material.h"
 
-#ifndef MAIN_MENU_H
-#define MAIN_MENU_H
+using std::string;
+using std::ifstream;
+using std::vector;
 
 class MainMenu : public Scene
 {
@@ -88,6 +95,7 @@ public:
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y);
 	void RenderUIwithTranparent(Mesh* mesh, float size, float x, float y);
+	void textFile(string filename);
 
 	void mainMenu();
 	void instruction();
@@ -99,6 +107,9 @@ public:
 	float animationMove = 40;
 
 	Sound sound;
+
+	string new_line;
+	vector<string>my_arr;
 };
 
 #endif

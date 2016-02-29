@@ -10,7 +10,9 @@
 
 #include "Application.h"
 #include "Singleton.h"
-
+#include <iostream>
+using std::cout;
+using std::endl;
 using namespace irrklang;
 #pragma comment(lib, "irrKlang.lib")
 
@@ -27,6 +29,8 @@ void MainMenu::Init()
 {
 	sound.playMusic("Music//Music.mp3");
 	glClearColor(1.0f, 0.86f, 0.79f, 0.0f);
+
+	textFile("Text//Menu.txt");
 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);
@@ -130,6 +134,19 @@ void MainMenu::Render()
 	}
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 4);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 2);
+}
+
+void MainMenu::textFile(string filename)
+{
+	ifstream myfile(filename.c_str());
+	string line;
+
+	while (std::getline(myfile, line))
+	{
+		new_line = line + "\n";
+		cout << new_line;
+		my_arr.push_back(new_line);
+	}
 }
 
 void MainMenu::RenderMesh(Mesh *mesh, bool enableLight)
@@ -312,7 +329,7 @@ void MainMenu::mainMenu()
 	//////////////////////////
 	//     START BUTTON     //
 	/////////////////////////
-	RenderTextOnScreen(meshList[GEO_TEXT], "LE SPACE GAME", Color(1, 1, 1), 5, 15, 45);
+	RenderTextOnScreen(meshList[GEO_TEXT], my_arr[0], Color(1, 1, 1), 5, 15, 45);
 
 	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
 		(575 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 505 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
@@ -322,7 +339,7 @@ void MainMenu::mainMenu()
 		{
 			sound.stopMusic("Music//Music.mp3");
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 30);
-			RenderTextOnScreen(meshList[GEO_TEXT], "LOADING", Color(1, 0, 0), 1, 37.5, 30);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[2], Color(1, 0, 0), 1, 37.5, 30);
 			Singleton::getInstance()->stateCheck = true;
 			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME;
 		}
@@ -330,14 +347,14 @@ void MainMenu::mainMenu()
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 30);
-			RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 0, 0), 1, 38.5, 30);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[1], Color(1, 0, 0), 1, 38.5, 30);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 30);
-		RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 1, 1), 1, 38.5, 30);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[1], Color(1, 1, 1), 1, 38.5, 30);
 	}
 
 	////////////////////////////////
@@ -350,7 +367,7 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 25);
-			RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 0, 0), 1, 35.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[3], Color(1, 0, 0), 1, 35.5, 25);
 			state = MENU_INSTRUCTIONS;
 			animation = true;
 		}
@@ -358,14 +375,14 @@ void MainMenu::mainMenu()
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 25);
-			RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 0, 0), 1, 35.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[3], Color(1, 0, 0), 1, 35.5, 25);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 25);
-		RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 1, 1), 1, 35.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[3], Color(1, 1, 1), 1, 35.5, 25);
 	}
 
 	////////////////////////////
@@ -378,7 +395,7 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 20);
-			RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 0, 0), 1, 37.5, 20);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 0, 0), 1, 37.5, 20);
 			state = MENU_OPTIONS;
 			animation = true;
 		}
@@ -386,14 +403,14 @@ void MainMenu::mainMenu()
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 20);
-			RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 0, 0), 1, 37.5, 20);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 0, 0), 1, 37.5, 20);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 20);
-		RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 1, 1), 1, 37.5, 20);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 1, 1), 1, 37.5, 20);
 	}
 
 	////////////////////////////
@@ -406,7 +423,7 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 15);
-			RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 0, 0), 1, 37.5, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 0, 0), 1, 37.5, 15);
 			state = MENU_CREDITS;
 			animation = true;
 		}
@@ -414,14 +431,14 @@ void MainMenu::mainMenu()
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 15);
-			RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 0, 0), 1, 37.5, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 0, 0), 1, 37.5, 15);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 15);
-		RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 1, 1), 1, 37.5, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 1, 1), 1, 37.5, 15);
 	}
 
 	//////////////////////////
@@ -434,27 +451,34 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 0, 0), 1, 38.5, 10);
 			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
 		}
 		//MOUSE HOVER
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 0, 0), 1, 38.5, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 0, 0), 1, 38.5, 10);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], "EXIT", Color(1, 1, 1), 1, 38.5, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 1, 1), 1, 38.5, 10);
 	}
 }
 void MainMenu::instruction()
 {
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
-	RenderTextOnScreen(meshList[GEO_TEXT], "INSTRUCTION", Color(1, 1, 1), 3, animationMove - 15, 45);
+	RenderTextOnScreen(meshList[GEO_TEXT], my_arr[3], Color(0, 0, 0), 3, animationMove - 15, 45);
+
+	int j = 35;
+	for (int i = 8; i <= 14; ++i)
+	{
+		j -= 2;
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(0, 0, 0), 1.5, animationMove -17, j);
+	}
 
 	//////////////////////////
 	//     BACK BUTTON     //
@@ -468,7 +492,7 @@ void MainMenu::instruction()
 		{
 			animation = false;
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, animationMove + 19, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 			state = MENU_MAIN;
 
 		}
@@ -476,21 +500,21 @@ void MainMenu::instruction()
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, animationMove + 19, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, animationMove + 20, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 1, 1), 1, animationMove + 19, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
 	}
 }
 
 void MainMenu::options()
 {
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
-	RenderTextOnScreen(meshList[GEO_TEXT], "OPTIONS", Color(1, 1, 1), 3, animationMove - 10, 45);
+	RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(0, 0, 0), 3, animationMove - 10, 45);
 
 	//////////////////////////
 	//     BACK BUTTON     //
@@ -504,28 +528,35 @@ void MainMenu::options()
 		{
 			animation = false;
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, animationMove + 19, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 			state = MENU_MAIN;
 		}
 		//MOUSE HOVER
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, animationMove + 19, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, animationMove + 20, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 1, 1), 1, animationMove + 19, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
 	}
 }
 
 void MainMenu::credits()
 {
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
-	RenderTextOnScreen(meshList[GEO_TEXT], "CREDITS", Color(1, 1, 1), 3, animationMove - 10, 45);
+	RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(0, 0, 0), 3, animationMove - 10, 45);
+
+	int j = 40;
+	for (int i = 15; i <= 18; ++i)
+	{
+		j -= 5;
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(0, 0, 0), 2, animationMove-10, j);
+	}
 
 	//////////////////////////
 	//     BACK BUTTON     //
@@ -539,21 +570,21 @@ void MainMenu::credits()
 		{
 			animation = false;
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, animationMove + 19, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 			state = MENU_MAIN;
 		}
 		//MOUSE HOVER
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 0, 0), 1, animationMove + 19, 10);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, animationMove + 20, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], "BACK", Color(1, 1, 1), 1, animationMove + 19, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
 	}
 }
 
