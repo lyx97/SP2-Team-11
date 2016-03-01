@@ -180,6 +180,12 @@ void SP2Scene3::Init()
     meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
     meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
+    meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
+    meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
+
+    meshList[GEO_BULLET] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//bullet.obj");
+    meshList[GEO_LIGHTBALL]->textureID = LoadTGA("Image//bullet.tga");
+
     meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
     startingPlane.planePos = Vector3(0, 0, 0);
@@ -242,8 +248,38 @@ void SP2Scene3::Update(double dt)
             }
         }
 
-		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp)
+        for (auto q : Object::objectMap){
+        
+            for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
+		    {
+               
+                    (*it)->pos += (*it)->dir * (*it)->speed * dt;
+               
+                if (boss.object->hitbox.isTouching((*it)->pos)){
+                    boss.health -= 0.1f;
+                }
+                if (distanceBetween((*it)->pos, camera.position) > 500){
+
+                    delete *it;   
+                    it = Bullet::bulletVec.erase(it);
+                }
+                //else if (q.first->hitbox.isTouching((*it)->pos)){
+                //    delete *it;
+                //    it = Bullet::bulletVec.erase(it);
+
+                //}
+                else{
+                    it++;
+                }
+
+		    }
+        }
+		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
 		{
+
+            bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 25);
+
+			cout << Bullet::bulletVec.size() << endl;
 			Singleton::getInstance()->gunAniDown = true;
 		}
 		if (Singleton::getInstance()->gunAniDown)
@@ -264,7 +300,6 @@ void SP2Scene3::Update(double dt)
 				Singleton::getInstance()->gunAniUp = false;
 			}
 		}
-
         if (Application::IsKeyPressed('P'))
         {
 			Application::ShowCursor();
@@ -323,7 +358,7 @@ void SP2Scene3::Update(double dt)
             }
             else{
                 if (swordOffset < 80)
-                    swordOffset += (float)(80 * dt);
+                    swordOffset += (float)(120 * dt);
                 if (swordDrag < 200)
                     swordDrag += (float)(80 * dt);
             }
@@ -356,16 +391,16 @@ void SP2Scene3::Update(double dt)
 
             if (distanceBetween(boss.position, camera.position) >= 30){
                 if (boss.position.x <= camera.position.x + 50)
-                    boss.position.x += (float)(90 * dt);
+                    boss.position.x += (float)(150 * dt);
 
                 if (boss.position.x >= camera.position.x - 50)
-                    boss.position.x -= (float)(90 * dt);
+                    boss.position.x -= (float)(150 * dt);
 
                 if (boss.position.z <= camera.position.z + 50)
-                    boss.position.z += (float)(90 * dt);
+                    boss.position.z += (float)(150 * dt);
 
                 if (boss.position.z >= camera.position.z - 50)
-                    boss.position.z -= (float)(90 * dt);
+                    boss.position.z -= (float)(150 * dt);
             }
         }
         if (!Application::IsKeyPressed('E'))
@@ -448,17 +483,6 @@ void SP2Scene3::Render()
         modelStack.PopMatrix();
     }
 
-
-    if (Singleton::getInstance()->gotSword = true)
-    {
-		RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-    }
-	if (Singleton::getInstance()->gotGun)
-	{
-		RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
-	}
-
-
     if (boss.health >= 1){
         modelStack.PushMatrix();
         modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
@@ -487,6 +511,14 @@ void SP2Scene3::Render()
 
         modelStack.PopMatrix();
         
+        for (auto q : Bullet::bulletVec) 
+        {
+            modelStack.PushMatrix();
+            modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
+            modelStack.Rotate(90, 1, 0, 0);
+            RenderMesh(meshList[GEO_LIGHTBALL], false);
+            modelStack.PopMatrix();
+        }
         
         modelStack.PushMatrix();
        //modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
@@ -503,15 +535,25 @@ void SP2Scene3::Render()
             RenderMesh(meshList[GEO_SWORD], true);
             modelStack.PopMatrix();
         }
-        if (Singleton::getInstance()->gotSword)
+        Singleton::getInstance()->gotSword = true;
+        Singleton::getInstance()->gotGun = true;
+        if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
         {
             RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+            RenderUI(meshList[GEO_GUN], 120, 10, 5, 1, -5, 80, Singleton::getInstance()->rotateGun, true);
         }
-        if (Singleton::getInstance()->gotGun)
+        else
         {
-            RenderUI(meshList[GEO_GUN], 100, 65, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+            if (Singleton::getInstance()->gotSword)
+            {
+                RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+            }
+            if (Singleton::getInstance()->gotGun)
+            {
+                RenderUI(meshList[GEO_GUN], 120, 10, 5, 1, -5, 80, Singleton::getInstance()->rotateGun, true);
+            }
         }
-        cout << boss.health << endl;
+        cout << Bullet::bulletVec.size() << endl;
         modelStack.PopMatrix();
         if (boss.health > 0 && boss.health <= 100)
             RenderTextOnScreen(meshList[GEO_TEXT], "FINISH HIM", Color(1, 0, 0), 2, 60, 10);

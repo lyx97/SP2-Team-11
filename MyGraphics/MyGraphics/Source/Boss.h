@@ -16,12 +16,12 @@ public:
     {
     }
 
-    Boss(string name = "BOSS", int health = 100, Vector3 position = Vector3(0, 0, 0), Vector3 size = Vector3(1,1,1));
+    Boss(string name = "BOSS", float health = 100, Vector3 position = Vector3(0, 0, 0), Vector3 size = Vector3(1,1,1));
 
     void setPos(Vector3 &pos);
 
     string name;
-    int health;
+    float health;
     Vector3 position;
     Vector3 size;
     Object* object;

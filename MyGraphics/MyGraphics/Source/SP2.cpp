@@ -21,9 +21,8 @@ SP2::SP2()
 SP2::~SP2()
 {
 }
-
-float magnitude(Vector3 &vector){
-	return sqrt((pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)));
+float distanceBetween(Vector3 from, Vector3 to){
+    return sqrt((pow(to.x - from.x, 2)) + (pow(to.z - from.z, 2)));
 }
 
 void SP2::Init()
@@ -234,6 +233,9 @@ void SP2::Init()
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
 
+    meshList[GEO_BULLET] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//bullet.obj");
+    meshList[GEO_BULLET]->textureID = LoadTGA("Image//bullet.tga");
+
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
 	for (auto q : orePos)
@@ -382,7 +384,7 @@ void SP2::Update(double dt)
 			if (Application::IsKeyPressed('E'))
 			{
 				Singleton::getInstance()->stateCheck = true;
-				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
 				Object::objectMap.clear();
 			}
 		}
@@ -450,19 +452,35 @@ void SP2::Update(double dt)
 			}
 		}
 
-		for (auto q : Bullet::bulletVec)
-		{
-			q->pos += q->dir * q->speed * dt;
-		}
+        for (auto q : Object::objectMap){
 
-		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
-		{
+            for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
+            {
+                if (!(q.first->hitbox.isTouching((*it)->pos))){
+                    (*it)->pos += (*it)->dir * (*it)->speed * dt;
+                }
+                if (distanceBetween((*it)->pos, camera.position) > 500){
+                    delete *it;
+                    it = Bullet::bulletVec.erase(it);
+                }
+                //else if (q.first->hitbox.isTouching((*it)->pos)){
+                //    delete *it;
+                //    it = Bullet::bulletVec.erase(it);
+                //}
+                else{
+                    it++;
+                }
 
-			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1000);
+            }
+        }
+        if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
+        {
 
-			cout << Bullet::bulletVec.size() << endl;
-			Singleton::getInstance()->gunAniDown = true;
-		}
+            bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1);
+
+            cout << Bullet::bulletVec.size() << endl;
+            Singleton::getInstance()->gunAniDown = true;
+        }
 		if (Singleton::getInstance()->gunAniDown)
 		{
 			Singleton::getInstance()->rotateGun += (float)(500 * dt);
@@ -706,7 +724,7 @@ void SP2::Render()
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
-		RenderMesh(meshList[GEO_LIGHTBALL], false);
+		RenderMesh(meshList[GEO_BULLET], false);
 		modelStack.PopMatrix();
 	}
 
@@ -748,7 +766,7 @@ void SP2::Render()
 			modelStack.PopMatrix();
 		}
 	}
-
+    Singleton::getInstance()->gotGun = true;
 	for (auto q : Object::objectMap)
 	{
 		if (q.first == gun && !Singleton::getInstance()->gotGun && !Singleton::getInstance()->gotGun)
@@ -1402,6 +1420,7 @@ void SP2::planeLoader(){
 
 
 }
+
 
 void SP2::Exit()
 {

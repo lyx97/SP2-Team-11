@@ -1,6 +1,6 @@
 #include "Boss.h"
 
-Boss::Boss(string name, int health, Vector3 position, Vector3 size)
+Boss::Boss(string name, float health, Vector3 position, Vector3 size)
 :name(name), health(health), position(position), size(size)
 {
     object = new Object(position, size);

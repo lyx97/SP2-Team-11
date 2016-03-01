@@ -41,6 +41,7 @@ class SP2 : public Scene
 		GEO_ORE,
 		GEO_IMAGES,
 		GEO_GUN,
+        GEO_BULLET,
 		GEO_SWORD,
 		GEO_CROSSHAIR,
 		GEO_HP_BAR_LOW,

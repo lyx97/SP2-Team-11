@@ -39,6 +39,7 @@ class SP2Scene3 : public Scene
         GEO_ORE,
         GEO_IMAGES,
         GEO_GUN,
+        GEO_BULLET,
         GEO_SWORD,
         GEO_CROSSHAIR,
         GEO_HP_BAR_LOW,
@@ -149,6 +150,8 @@ private:
     Mtx44 swordRotation;
     float spinSword = 0.f;
     float swordOffset = 80.f;
+
+    Bullet* bullet;
 
     Vector3 cameraStore;
     Vector3 swordPos;
