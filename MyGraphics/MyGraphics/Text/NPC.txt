@@ -23,3 +23,5 @@ It's the neighbouring planet.
 I have no ship of my own to fly there.
 Do you want to travel to other planet?
 NEXT [E]
+PRESS [E] TO INTERACT
+PRESS [E] TO MINE

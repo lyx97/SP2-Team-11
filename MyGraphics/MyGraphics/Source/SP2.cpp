@@ -271,7 +271,7 @@ void SP2::Init()
 void SP2::Update(double dt)
 {
 	planeDistance = sqrtf((shipPos.x - camera.position.x) * (shipPos.x - camera.position.x) + (shipPos.y - camera.position.y) * (shipPos.y - camera.position.y) + (shipPos.z - camera.position.z) * (shipPos.z - camera.position.z));
-
+	roateQuest += (float)(40 * dt);
 	if (Singleton::getInstance()->pause == true)
 	{
 		if (Application::IsKeyPressed('O'))
@@ -291,7 +291,7 @@ void SP2::Update(double dt)
 			pow((camera.position.y - npcPos.y), 2) +
 			pow((camera.position.z - npcPos.z), 2)) < 15)
 		{
-
+			NPCshowPressE = true;
 			if (Application::IsKeyPressed('E') && inputDelay >= 1)
 			{
 				//NPC dialogue start
@@ -391,6 +391,7 @@ void SP2::Update(double dt)
 		else
 		{
 			message = 0;
+			NPCshowPressE = false;
 		}
 
 		if (Application::IsKeyPressed('1')) //enable back face culling
@@ -876,6 +877,11 @@ void SP2::Render()
 	}
 
 	RenderUI(meshList[GEO_QUESTLIST], 5, questTab, 40, 1, 0, 0, 0, false);
+	if (questText == ". Repair Ship")
+	{
+		RenderUI(meshList[GEO_ORE], 2, questTab - 5, 37, 1, 20, roateQuest, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(Singleton::getInstance()->objectCount[ore]) + " / 2", Color(1, 1, 0), 1, questTab, 39);
+	}
 
 	if (!hpMid && !hpLow)
 		RenderUI(meshList[GEO_HP_BAR_HIGH], 2, 10, 10, Singleton::getInstance()->health / 10, 0, 0, 0, false);
@@ -890,6 +896,10 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
+	if (NPCshowPressE && mission != 4)
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[25], Color(1, 1, 0), 1.5, 25, 15);
+	if (OREshowPressE)
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[26], Color(1, 1, 0), 1.5, 25, 15);
 
 	int j = 14;
 	switch (message)

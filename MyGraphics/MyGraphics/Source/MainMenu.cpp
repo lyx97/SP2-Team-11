@@ -97,13 +97,13 @@ void MainMenu::Update(double dt)
 	}
 	if (!animation)
 	{
-		animationMove += (float)(500 * dt);
+		animationMove += (float)(200 * dt);
 		if (animationMove >= 115)
 			animationMove = 115;
 	}
 	else
 	{
-		animationMove -= (float)(500 * dt);
+		animationMove -= (float)(200 * dt);
 		if (animationMove <= 40)
 			animationMove = 40;
 	}

@@ -125,8 +125,9 @@ private:
 	bool miningDisplay = false;
 	bool switchWeapon = true;
 	bool shipStatus = false;
-	bool pressTab = false;
-
+	bool pressTab = true;
+	bool NPCshowPressE = false;
+	bool OREshowPressE = false;
 	float inputDelay;
 	float weaponDelay;
 	float heldDelay = 0.f;
@@ -134,6 +135,7 @@ private:
 	float swing = 20.f;
 	float questTab = 65.f;
 	float rotateHand = 45.f;
+	float roateQuest = 50.f;
 
 	int planeDistance = 0;
     int numPlanes = 2;
