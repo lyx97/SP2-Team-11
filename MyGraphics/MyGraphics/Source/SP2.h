@@ -127,7 +127,7 @@ private:
 	bool NPCshowPressE = false;
 	bool OREshowPressE = false;
 	bool showDistance = false;
-	bool pressTab = false;
+	bool pressTab = true;
 
 	bool handDown = false;
 	bool handUp = false;

@@ -662,13 +662,9 @@ void SP2Scene3::Render()
             modelStack.PopMatrix();
         }
 
-<<<<<<< Updated upstream
         //cout << Bullet::bulletVec.size() << endl;
         modelStack.PopMatrix();
-    }
-
     
-
     if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
     {
         RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);

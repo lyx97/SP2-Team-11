@@ -448,7 +448,6 @@ void SP2::Update(double dt)
 				shipTab = 65;
 		}
 		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp && Singleton::getInstance()->gotSword)
->>>>>>> Stashed changes
 		{
 			Singleton::getInstance()->swordAniDown = true;
 		}
