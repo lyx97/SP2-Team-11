@@ -7,6 +7,9 @@
 #include "MatrixStack.h"
 #include "Light.h"
 #include <vector>
+#include <string>
+#include <fstream>
+#include <sstream>
 #include "Object.h"
 #include "Plane.h"
 #include <map>
@@ -16,6 +19,8 @@
 
 using std::map;
 using std::vector;
+using std::string;
+using std::ifstream;
 
 class SP2Scene3 : public Scene
 {
@@ -53,6 +58,7 @@ class SP2Scene3 : public Scene
         GEO_BOSS_LEG2,
 		GEO_BOSS_ICON,
         GEO_HITBOX,
+		GEO_MESSAGEBOX,
 
         NUM_GEOMETRY,
     };
@@ -99,6 +105,7 @@ private:
     void RenderText(Mesh* mesh, std::string text, Color color);
     void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
     void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight);
+	void Dialogue(string filename);
     void planeInit(bool reset = false);
     float angleBetween(Vector3 &vector1, Vector3 &vector2);
     float magnitude(Vector3 &vector);
@@ -116,7 +123,10 @@ private:
 
     int planeDistance = 0;
 
-    std::string FPS;
+    string FPS;
+	string new_line;
+	vector<string>my_arr;
+
     float inputDelay = 0.f;
     bool hpMid = false;
     bool hpLow = false;
@@ -124,6 +134,9 @@ private:
     float heldDelay = 0.f;
     float pickSword = 0.f;
     float swing = 20.f;
+
+	bool startDialogue = false;
+	int message;
 
     MS modelStack, viewStack, projectionStack;
 

@@ -24,13 +24,17 @@ SP2Scene3::~SP2Scene3()
 
 void SP2Scene3::Init()
 {
+	startDialogue = true;
+
     // Init VBO here
+	Dialogue("Text//NPC.txt");
 	Application::HideCursor();
     Singleton::getInstance()->pause = false;
     Singleton::getInstance()->buttonText = false;
     treeFrequency = 100;
     spawnRadius = 5000;
-    inputDelay = 9.0f;
+    inputDelay = 0.0f;
+	message = 0;
     planeInit();
     swordSet(true);
 
@@ -177,6 +181,9 @@ void SP2Scene3::Init()
     meshList[GEO_BOSS_LEG2] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_LEG2.obj");
     meshList[GEO_BOSS_LEG2]->textureID = LoadTGA("Image//NPC_Evil.tga");
 
+	meshList[GEO_MESSAGEBOX] = MeshBuilder::GenerateQuad("MESSAGEBOX", Color(1, 1, 1), TexCoord(1, 1), 6, 3);
+	meshList[GEO_MESSAGEBOX]->textureID = LoadTGA("Image//messageBox.tga");
+
     meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
     meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
@@ -208,6 +215,22 @@ void SP2Scene3::Update(double dt)
     if (Application::IsKeyPressed('4'))
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
+
+	if (startDialogue)
+	{
+		if (Application::IsKeyPressed('E') && inputDelay >= 1)
+		{
+			message++;
+			inputDelay = 0;
+
+			if (message > 2)
+			{
+				activateBattle = true;
+				//message = 0;
+				//inputDelay = 0;
+			}
+		}
+	}
 
     planeDistance = sqrtf ((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
 
@@ -410,14 +433,11 @@ void SP2Scene3::Update(double dt)
             swordPos.y = 5;
             miningDisplay = false;
         }
-        if (inputDelay <= 10.0f)
+        if (inputDelay <= 1.0f)
         {
             inputDelay += (float)(1 * dt);
         }
-        else
-        {
-            camera.Update(dt);
-        }
+		camera.Update(dt);
     }
 
 }
@@ -594,6 +614,35 @@ void SP2Scene3::Render()
     RenderUI(meshList[GEO_BORDER], 2, 10, 10, 10, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], "HP: ", Color(0, 1, 0), 2, 5, 10);
 
+	int j = 14;
+	switch (message)
+	{
+	case 0:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
+		RenderUI(meshList[GEO_BOSS_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+
+		for (int i = 27; i <= 28; ++i)
+		{
+			j -= 2;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(1, 1, 0), 1.3, 23, j);
+		}
+		break;
+	case 1:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
+		RenderUI(meshList[GEO_BOSS_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[29], Color(1, 1, 0), 1.5, 23, 10);
+		break;
+	case 2:
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
+		RenderUI(meshList[GEO_BOSS_ICON], 5, 13, 10, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[30], Color(1, 1, 0), 1.3, 23, 10);
+		break;
+	default:
+		break;
+	}
 
     RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1, 0, 0, 0, false);
     RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
@@ -664,7 +713,18 @@ void SP2Scene3::RenderSkybox()
     modelStack.PopMatrix();
 
 }
+void SP2Scene3::Dialogue(string filename)
+{
+	ifstream myfile(filename.c_str());
+	string line;
 
+	while (std::getline(myfile, line))
+	{
+		new_line = line + "\n";
+		cout << new_line;
+		my_arr.push_back(new_line);
+	}
+}
 void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
