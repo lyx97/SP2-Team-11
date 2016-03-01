@@ -117,11 +117,15 @@ void SP2Scene3::Init()
 
     //Initialize camera settings
     camera.Init(Vector3(0, 20, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
+	Application::SetMousePosition(0, 0);
 
     meshList[GEO_AXES] = MeshBuilder::GenerateAxes("AXES", 500, 500, 500);
 
     meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
     meshList[GEO_LIGHTBALL]->textureID = LoadTGA("Image//bullet.tga");
+
+	meshList[GEO_CYLIN] = MeshBuilder::GenerateCylin("FIST", Color(0.3f, 0.3f, 0.3f), 36);
+	meshList[GEO_CIRCLE] = MeshBuilder::GenerateCircle("FIST", Color(1.f, 0.863f, 0.698f), 36);
 
     meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
     meshList[GEO_GROUND]->textureID = LoadTGA("Image//planet2_land.tga");
@@ -193,7 +197,7 @@ void SP2Scene3::Init()
     meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
     meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
-    meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
+    meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//gun3.obj");
     meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
 
     meshList[GEO_BOSS_SWORD] = MeshBuilder::GenerateOBJ("BOSS_SWORD", "OBJ//sword.obj");
@@ -210,7 +214,18 @@ void SP2Scene3::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 
-	sword = new Weapon(1);
+	if (Singleton::getInstance()->gotSword)
+	{
+		melee = new Weapon(5);
+	}
+	else if (Singleton::getInstance()->gotGun)
+	{
+		ranged = new Weapon(3);
+	}
+	else
+	{
+		fist = new Weapon(1);
+	}
 	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
 }
 
@@ -447,9 +462,20 @@ void SP2Scene3::Update(double dt)
 
             }
 
-            if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30 && Singleton::getInstance()->gotSword)
+            if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30)
             {
-                boss.health -= sword->getDamage();
+				if (Singleton::getInstance()->gotSword)
+				{
+					boss.health -= melee->getDamage();
+				}
+				else if (Singleton::getInstance()->gotGun)
+				{
+					boss.health -= ranged->getDamage();
+				}
+				else
+				{
+					boss.health -= fist->getDamage();
+				}
             }
 
             if (distanceBetween(boss.position, camera.position) >= 30){
@@ -636,6 +662,7 @@ void SP2Scene3::Render()
             modelStack.PopMatrix();
         }
 
+<<<<<<< Updated upstream
         //cout << Bullet::bulletVec.size() << endl;
         modelStack.PopMatrix();
     }
@@ -649,22 +676,32 @@ void SP2Scene3::Render()
     }
     else
     {
-        if (Singleton::getInstance()->gotSword)
-        {
-            RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+			if (Singleton::getInstance()->gotSword)
+			{
+				RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+			}
+			else if (Singleton::getInstance()->gotGun)
+			{
+				RenderUI(meshList[GEO_GUN], 120, 70, 5, 1, -5, 100, Singleton::getInstance()->rotateGun, true);
+			}
+			else
+			{
+				// right
+				RenderUI(meshList[GEO_CIRCLE], 7, 60, 10, 1, 90, 0, 0, false);
+				RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -45, false);
+				// left
+				RenderUI(meshList[GEO_CIRCLE], 7, 20, 10, 1, 90, 0, 0, false);
+				RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, 45, false);
+			}
         }
-        if (Singleton::getInstance()->gotGun)
-        {
-            RenderUI(meshList[GEO_GUN], 120, 10, 5, 1, -5, 80, Singleton::getInstance()->rotateGun, true);
-        }
-    }
+        cout << Bullet::bulletVec.size() << endl;
+        modelStack.PopMatrix();
+        if (boss.health > 0 && boss.health <= 100)
+            RenderTextOnScreen(meshList[GEO_TEXT], "FINISH HIM", Color(1, 0, 0), 2, 60, 10);
 
-    if (boss.health > 1){
-        if (boss.health < 100)
-        RenderTextOnScreen(meshList[GEO_TEXT], "FINISH HIM", Color(1, 0, 0), 2, 60, 10);
-        RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 100, 0, 0, 0, false);
-        RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
-        RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
+		RenderUI(meshList[GEO_HP_BAR_LOW], 6, 8, 55, boss.health / 100, 0, 0, 0, false);
+		RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
+		RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
     }
     
     //t->r->s
@@ -945,10 +982,17 @@ void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX,
     {
         glUniform1i(m_parameters[U_LIGHTENABLED], 0);
     }
-    glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, mesh->textureID);
-    glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
+	if (mesh->textureID > 0)
+	{
+		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, mesh->textureID);
+		glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
+	}
+	else
+	{
+		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 0);
+	}
 
     Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
     glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);

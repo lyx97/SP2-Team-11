@@ -41,7 +41,6 @@ class SP2 : public Scene
 		GEO_ORE,
 		GEO_IMAGES,
 		GEO_GUN,
-        GEO_BULLET,
 		GEO_SWORD,
 		GEO_CROSSHAIR,
 		GEO_HP_BAR_LOW,
@@ -125,10 +124,16 @@ private:
 	bool miningDisplay = false;
 	bool switchWeapon = true;
 	bool shipStatus = false;
-	bool pressTab = true;
 	bool NPCshowPressE = false;
 	bool OREshowPressE = false;
 	bool showDistance = false;
+	bool pressTab = false;
+
+	bool handDown = false;
+	bool handUp = false;
+	bool fistDown = false;
+	bool fistUp = false;
+
 	float inputDelay;
 	float weaponDelay;
 	float heldDelay = 0.f;
@@ -138,6 +143,7 @@ private:
 	float shipTab = 65.f;
 	float rotateHand = 45.f;
 	float roateQuest = 50.f;
+	float moveFist = 10.f;
 
 	int planeDistance = 0;
     int numPlanes = 2;

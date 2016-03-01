@@ -21,6 +21,7 @@ SP2::SP2()
 SP2::~SP2()
 {
 }
+
 float distanceBetween(Vector3 from, Vector3 to){
     return sqrt((pow(to.x - from.x, 2)) + (pow(to.z - from.z, 2)));
 }
@@ -236,9 +237,6 @@ void SP2::Init()
     meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
     meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
 
-    meshList[GEO_BULLET] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//bullet.obj");
-    meshList[GEO_BULLET]->textureID = LoadTGA("Image//bullet.tga");
-
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
 	for (auto q : orePos)
@@ -449,7 +447,8 @@ void SP2::Update(double dt)
 			if (shipTab >= 65)
 				shipTab = 65;
 		}
-		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp)
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp && Singleton::getInstance()->gotSword)
+>>>>>>> Stashed changes
 		{
 			Singleton::getInstance()->swordAniDown = true;
 		}
@@ -472,8 +471,8 @@ void SP2::Update(double dt)
 			}
 		}
 
-        for (auto q : Object::objectMap){
-
+        for (auto q : Object::objectMap)
+		{
             for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
             {
                 if (!(q.first->hitbox.isTouching((*it)->pos))){
@@ -483,22 +482,19 @@ void SP2::Update(double dt)
                     delete *it;
                     it = Bullet::bulletVec.erase(it);
                 }
-                //else if (q.first->hitbox.isTouching((*it)->pos)){
-                //    delete *it;
-                //    it = Bullet::bulletVec.erase(it);
-                //}
+                else if (q.first->hitbox.isTouching((*it)->pos)){
+                    delete *it;
+                    it = Bullet::bulletVec.erase(it);
+                }
                 else{
                     it++;
                 }
-
             }
         }
         if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
         {
-
-            bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1);
-
-            cout << Bullet::bulletVec.size() << endl;
+			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1);
+			cout << Bullet::bulletVec.size() << endl;
             Singleton::getInstance()->gunAniDown = true;
         }
 		if (Singleton::getInstance()->gunAniDown)
@@ -519,10 +515,53 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->gunAniUp = false;
 			}
 		}
-		if (Application::IsKeyPressed('T'))
+
+		if (Application::IsKeyPressed(VK_RBUTTON) && !handUp && !handDown)
+		{
+			handDown = true;
+		}
+		if (handDown)
 		{
 			rotateHand -= (float)(100 * dt);
+			if (rotateHand <= 30)
+			{
+				handDown = false;
+				handUp = true;
+			}
 		}
+		if (handUp)
+		{
+			rotateHand += (float)(100 * dt);
+			if (rotateHand >= 45)
+			{
+				handDown = false;
+				handUp = false;
+			}
+		}
+
+		if (Application::IsKeyPressed(VK_RBUTTON) && !fistDown && !fistUp)
+		{
+			fistDown = true;
+		}
+		if (fistDown)
+		{
+			moveFist -= (float)(35 * dt);
+			if (moveFist <= 5)
+			{
+				fistDown = false;
+				fistUp = true;
+			}
+		}
+		if (fistUp)
+		{
+			moveFist += (float)(35 * dt);
+			if (moveFist >= 10)
+			{
+				fistDown = false;
+				fistUp = false;
+			}
+		}
+
 		if (Application::IsKeyPressed('P'))
 		{
 			Singleton::getInstance()->pause = true;
@@ -565,20 +604,20 @@ void SP2::Update(double dt)
 
 		planeLoader();
 
-		for (map<Object*, int>::iterator it = Object::objectMap.begin(); it != Object::objectMap.end(); ++it)
+		for (auto q : Object::objectMap)
 		{
 			for (int i = 0; i < orePos.size(); ++i)
 			{
-				if (orePos[i].x == it->first->pos.x && orePos[i].z == it->first->pos.z)
+				if (orePos[i].x == q.first->pos.x && orePos[i].z == q.first->pos.z)
 				{
-					if (Application::IsKeyPressed('E') && it->first->hitbox.isTouching(camera.target))
+					if (Application::IsKeyPressed('E') && q.first->hitbox.isTouching(camera.target))
 					{
 						heldDelay += 1.f * dt;
 						if (heldDelay > 2)
 						{
 							Inventory::addObject(ore);
 							heldDelay = 0;
-							delete it->first;
+							delete q.first;
 						}
 					}
 				}
@@ -735,7 +774,7 @@ void SP2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
 		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-		RenderMesh(meshList[GEO_HITBOX], false);
+		//RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
@@ -744,7 +783,7 @@ void SP2::Render()
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
-		RenderMesh(meshList[GEO_BULLET], false);
+		RenderMesh(meshList[GEO_LIGHTBALL], false);
 		modelStack.PopMatrix();
 	}
 
@@ -786,7 +825,6 @@ void SP2::Render()
 			modelStack.PopMatrix();
 		}
 	}
-
 	for (auto q : Object::objectMap)
 	{
 		if (q.first == gun && !Singleton::getInstance()->gotGun && !Singleton::getInstance()->gotGun)
@@ -881,10 +919,10 @@ void SP2::Render()
 		else
 		{
 			// right
-			RenderUI(meshList[GEO_CIRCLE], 7, 60, 10, 1, 90, 0, 0, false);
+			RenderUI(meshList[GEO_CIRCLE], 7, 60, moveFist, 1, 90, 0, 0, false);
 			RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -rotateHand, false);
 			// left
-			RenderUI(meshList[GEO_CIRCLE], 7, 20, 10, 1, 90, 0, 0, false);
+			RenderUI(meshList[GEO_CIRCLE], 7, 20, moveFist, 1, 90, 0, 0, false);
 			RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, rotateHand, false);
 		}
 	}
@@ -1231,7 +1269,6 @@ void SP2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float
 	{
 		glUniform1i(m_parameters[U_LIGHTENABLED], 0);
 	}
-
 	if (mesh->textureID > 0)
 	{
 		glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);

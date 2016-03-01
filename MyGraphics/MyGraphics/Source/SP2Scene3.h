@@ -61,6 +61,8 @@ class SP2Scene3 : public Scene
 		GEO_BOSS_ICON,
         GEO_HITBOX,
 		GEO_MESSAGEBOX,
+		GEO_CYLIN,
+		GEO_CIRCLE,
 
         NUM_GEOMETRY,
     };
@@ -161,12 +163,14 @@ private:
     vector<Vector3> swordVec;
     vector<Object*> swordObjVec;
     float swordDrag = 180;
-    Weapon* sword;
     Mtx44 swordRotation;
     float spinSword = 0.f;
     float swordOffset = 80.f;
 
     Bullet* bullet;
+	Weapon* melee;
+	Weapon* ranged;
+	Weapon* fist;
 
     Vector3 cameraStore;
     Vector3 swordPos;

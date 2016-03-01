@@ -15,9 +15,6 @@ public:
 
 	Vector3 boundCheck;
 
-	bool flying = false;
-	bool jumping = false;
-	bool togJump = false;
 	float delay = 4.f;
 	float ySpeed = 0.f;
 	float yaw;
