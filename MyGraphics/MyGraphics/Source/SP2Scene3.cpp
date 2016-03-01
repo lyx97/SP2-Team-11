@@ -475,6 +475,7 @@ void SP2Scene3::Update(double dt)
                 for (auto q : swordObjVec){
                     q->objectMap.erase(q);
                 }
+                Bullet::bossBulletVec.clear();
             }
             for (auto q : swordObjVec){
 
@@ -500,27 +501,27 @@ void SP2Scene3::Update(double dt)
 					boss.health -= fist->getDamage();
 				}
             }
+            if (boss.health > 1){
+                if (distanceBetween(boss.position, camera.position) >= 30){
+                    if (boss.position.x <= camera.position.x + 40)
+                        boss.position.x += (float)(150 * dt);
 
-            if (distanceBetween(boss.position, camera.position) >= 30){
-                if (boss.position.x <= camera.position.x + 40)
-                    boss.position.x += (float)(150 * dt);
+                    if (boss.position.x >= camera.position.x - 40)
+                        boss.position.x -= (float)(150 * dt);
 
-                if (boss.position.x >= camera.position.x - 40)
-                    boss.position.x -= (float)(150 * dt);
+                    if (boss.position.z <= camera.position.z + 40)
+                        boss.position.z += (float)(150 * dt);
 
-                if (boss.position.z <= camera.position.z + 40)
-                    boss.position.z += (float)(150 * dt);
-
-                if (boss.position.z >= camera.position.z - 40)
-                    boss.position.z -= (float)(150 * dt);
+                    if (boss.position.z >= camera.position.z - 40)
+                        boss.position.z -= (float)(150 * dt);
+                }
+                if (rand() % 7 == 0)
+                    bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 25, false);
             }
-            if (rand()%7 == 0)
-            bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 25, false);
-
         }
         //cout << boss.position << "TO" << boss.position- camera.position << endl;
-        Singleton::getInstance()->gotSword = true;
-        //Singleton::getInstance()->gotGun = true;
+
+
 
         if (!Application::IsKeyPressed('E'))
         {
