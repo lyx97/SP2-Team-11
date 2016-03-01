@@ -174,24 +174,28 @@ void SP2Scene2::Init()
 
 	for (int loop = 0; loop < rockfreq; loop++)
 	{
-		rockpos.push_back(Vector3((rand() % 2000) , (rand() % 30) - 15, (rand() % 4000) - 2000));
+		rockpos.push_back(Vector3((rand() % 1000)-500 , (rand() % 30) - 15, (rand() % 3000) - 1500));
 	}
 
 	for (int loop = 0; loop < 100; loop++)
 	{
-		rockpos.push_back(Vector3((rand() % 2000), (rand() % 600) - 300, (rand() % 4000) - 2000));
+		rockpos.push_back(Vector3((rand() % 1000)-500, (rand() % 600) - 300, (rand() % 3000) - 1500));
 	}
 
 	for (auto q : rockpos)
 	{
-		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(28, 18, 15));
+		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(43, 28, 25));
 	}
-	pelican = new Object(Vector3(pelicanPos.x, pelicanPos.y, pelicanPos.z), Vector3(55, 15, 25));
+	
+	
+	
+
+	
 }
 
 void SP2Scene2::Update(double dt)
 {
-	moonDistance = sqrtf((800 - camera.position.x) * (800 - camera.position.x) + (0 - camera.position.y) * (0 - camera.position.y) + (0 - camera.position.z) * (0 - camera.position.z));
+	moonDistance = sqrtf((800 - pelicanPos.x) * (800 - pelicanPos.x) + (0 - pelicanPos.y) * (0 - pelicanPos.y) + (0 - pelicanPos.z) * (0 - pelicanPos.z));
 	if (moonDistance < 400)
 	{
 		moonDistance = 400;
@@ -227,23 +231,24 @@ void SP2Scene2::Update(double dt)
 			Application::ShowCursor();
 		}
 
-		if (Application::IsKeyPressed('K'))
-		{
-			hp -= 5;
 
-			if (hp <= 50) hpMid = true;
-			if (hp <= 25) hpLow = true;
-			if (hp <= 0) hp = 0;
-		}
+		if (hp <= 50) 
+			hpMid = true;
 
-		if (Application::IsKeyPressed('L'))
-		{
-			hp += 5;
+		if (hp <= 25) 
+			hpLow = true;
 
-			if (hp >= 50) hpMid = false;
-			if (hp >= 25) hpLow = false;
-			if (hp >= 100) hp = 100;
-		}
+		if (hp <= 0)
+			hp = 0;
+
+		if (hp >= 50) 
+			hpMid = false;
+
+		if (hp >= 25)
+			hpLow = false;
+
+		if (hp >= 100) 
+			hp = 100;
 
 		if (Application::IsKeyPressed('Z'))
 			light[0].type = Light::LIGHT_POINT;
@@ -265,108 +270,124 @@ void SP2Scene2::Update(double dt)
 		{
 			camera.Update(dt);
 		}
-	}
-	pelican->setPos(pelicanPos);
-	if (Application::IsKeyPressed('Y'))
-	{
-		if (rotation <= 90 && rotation >= 0)
-		{
-			momentum.x = momentum.x + (dt / 100) * (1 - rotation / 90);
-			pelicanPos.x += momentum.x;
-			momentum.z = momentum.z - (dt / 100) * (rotation / 90);
-			pelicanPos.z += momentum.z;
-	
 
-		}
-		if (rotation >= -90 && rotation <= 0)
+		if (Application::IsKeyPressed('W'))
 		{
-			momentum.x = momentum.x + (dt / 100) * (1 + (rotation / 90));
-			pelicanPos.x += momentum.x;
-			momentum.z = momentum.z - (dt / 100) * (rotation / 90);
-			pelicanPos.z += momentum.z;
-	
-		}
-		if (rotation > 90)
-		{
-			momentum.x = momentum.x - (dt / 100) * ((rotation - 90) / 90);
-			pelicanPos.x += momentum.x;
-			momentum.z = momentum.z - (dt / 100) * (1 - (rotation - 90) / 90);
-			pelicanPos.z += momentum.z;
-		
-		}
-		if (rotation < -90)
-		{
-			momentum.x = momentum.x + (dt / 100) * ((rotation + 90) / 90);
-			pelicanPos.x += momentum.x;
-			momentum.z = momentum.z - (dt / 100) * ((rotation - 90) / 90);
-			pelicanPos.z += momentum.z;
-		}
-		
-	}
-	else
-	{
-		if (momentum.x > 0.001)
-		{
-			momentum.x -= dt / 100;
-			pelicanPos.x += momentum.x;
-		}
-		else if (momentum.x < -0.001)
-		{
-			momentum.x += dt / 100;
-			pelicanPos.x += momentum.x;
+			if (rotation <= 90 && rotation >= 0)
+			{
+				momentum.x = momentum.x + (dt / 10) * (1 - rotation / 90);
+				pelicanPos.x += momentum.x;
+				momentum.z = momentum.z - (dt / 10) * (rotation / 90);
+				pelicanPos.z += momentum.z;
+				cout << "turning left" << endl;
+
+			}
+			if (rotation >= -90 && rotation <= 0)
+			{
+				momentum.x = momentum.x + (dt / 10) * (1 + (rotation / 90));
+				pelicanPos.x += momentum.x;
+				momentum.z = momentum.z - (dt / 10) * (rotation / 90);
+				pelicanPos.z += momentum.z;
+
+			}
+			if (rotation > 90)
+			{
+				momentum.x = momentum.x - (dt / 10) * ((rotation - 90) / 90);
+				pelicanPos.x += momentum.x;
+				momentum.z = momentum.z - (dt / 10) * (1 - (rotation - 90) / 90);
+				pelicanPos.z += momentum.z;
+
+			}
+			if (rotation < -90)
+			{
+				momentum.x = momentum.x + (dt / 10) * ((rotation + 90) / 90);
+				pelicanPos.x += momentum.x;
+				momentum.z = momentum.z - (dt / 10) * ((rotation - 90) / 90);
+				pelicanPos.z += momentum.z;
+			}
+
 		}
 		else
 		{
-			momentum.x = 0;
-		}
+			if (momentum.x > 0.001)
+			{
+				momentum.x -= dt / 100;
+				pelicanPos.x += momentum.x;
+			}
+			else if (momentum.x < -0.001)
+			{
+				momentum.x += dt / 100;
+				pelicanPos.x += momentum.x;
+			}
+			else
+			{
+				momentum.x = 0;
+			}
 
 
-		if (momentum.z > 0.0001)
-		{
-			momentum.z -= dt / 100;
-			pelicanPos.z += momentum.z;
+			if (momentum.z > 0.0001)
+			{
+				momentum.z -= dt / 100;
+				pelicanPos.z += momentum.z;
+			}
+			else if (momentum.z < -0.0001)
+			{
+				momentum.z += dt / 100;
+				pelicanPos.z += momentum.z;
+			}
+			else
+			{
+				momentum.z = 0;
+			}
 		}
-		else if (momentum.z < -0.0001)
+		if (rotation >= 180)
 		{
-			momentum.z += dt / 100;
-			pelicanPos.z += momentum.z;
+			rotation = -180;
 		}
-		else
+		else if (rotation <= -180)
 		{
-			momentum.z = 0;
+			rotation = 180;
 		}
-	}
-	if (rotation >= 180)
-	{
-		rotation = -180;
-	}
-	else if (rotation <= -180)
-	{
-		rotation = 180;
-	}
-	if (Application::IsKeyPressed('G'))
-	{
-		cout << rotation << endl;
-		acceleration = acceleration + dt;
-		rotation =rotation + acceleration;
-	}
-	else if (acceleration >= 0.05 && Application::IsKeyPressed('J') == false)
-	{
-		acceleration = acceleration - dt;
-		rotation = rotation + acceleration;
-	}
-	if (Application::IsKeyPressed('J'))
-	{
-		cout << rotation << endl;
-		acceleration = acceleration - dt;
-		rotation = rotation + acceleration;
-	}
+		if (Application::IsKeyPressed('A'))
+		{
+			cout << rotation << endl;
+			acceleration = acceleration + dt;
+			rotation = rotation + acceleration;
+		}
+		else if (acceleration >= 0.05 && Application::IsKeyPressed('A') == false)
+		{
+			acceleration = acceleration - dt;
+			rotation = rotation + acceleration;
+		}
+		if (Application::IsKeyPressed('D'))
+		{
+			cout << rotation << endl;
+			acceleration = acceleration - dt;
+			rotation = rotation + acceleration;
+		}
+
+		else if (acceleration <= -0.05 && Application::IsKeyPressed('D') == false)
+		{
+			acceleration = acceleration + dt;
+			rotation = rotation + acceleration;
+		}
+		for (auto q : Object::objectMap)
+		{
+			if ((q.first->hitbox.maxPt.x > pelicanPos.x) && (q.first->hitbox.minPt.x < pelicanPos.x) &&
+				(q.first->hitbox.maxPt.y > pelicanPos.y) && (q.first->hitbox.minPt.y < pelicanPos.y) &&
+				(q.first->hitbox.maxPt.z > pelicanPos.z) && (q.first->hitbox.minPt.z < pelicanPos.z))
+			{
+				delete q.first;
+				pelicanhit = true;
+			}
+		}
+		if (pelicanhit == true)
+		{
+			hp -= 34;
+			pelicanhit = false;
+		}
+	}	
 	
-	else if (acceleration <= -0.05 && Application::IsKeyPressed('G') == false)
-	{
-		acceleration = acceleration + dt;
-		rotation = rotation + acceleration;
-	}
 }
 
 void SP2Scene2::RenderMesh(Mesh *mesh, bool enableLight)
@@ -488,17 +509,28 @@ void SP2Scene2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-
 	modelStack.Translate(pelicanPos.x, pelicanPos.y, pelicanPos.z);
-
-	modelStack.Translate(0, -1, 0);
-	//modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
-	modelStack.Scale(0.3, 0.3, 0.3);
-	modelStack.Scale(10, 10, 10);
-	modelStack.Translate(camera.view.x + pelicanPos.x, camera.view.y, camera.view.z);
 	modelStack.Rotate(rotation, 0, 1, 0);
 	modelStack.Scale(10, 10, 10);
 	RenderMesh(meshList[GEO_PELICAN], true);
+	if (rotation <= 90 && rotation >= 0)
+	{
+		camera.position.Set(pelicanPos.x - 150 * (1 - rotation / 90), pelicanPos.y + 80, pelicanPos.z + 150 * (rotation / 90));
+	}
+	if (rotation >= -90 && rotation <= 0)
+	{
+		camera.position.Set(pelicanPos.x + 150 * (-1 - rotation / 90), pelicanPos.y + 80, pelicanPos.z + 150 * (rotation / 90));
+	}
+	if (rotation > 90)
+	{
+		camera.position.Set(pelicanPos.x + 150 * ((rotation - 90) / 90), pelicanPos.y + 80, pelicanPos.z + 150 * (1 - (rotation - 90) / 90));
+	}
+	if (rotation < -90)
+	{
+		camera.position.Set(pelicanPos.x - 150 * ((rotation + 90) / 90), pelicanPos.y + 80, pelicanPos.z - 150 * (1 + (rotation + 90) / 90));
+	}
+	camera.target.Set(pelicanPos.x, pelicanPos.y, pelicanPos.z);
+	camera.up.Set(0, 1, 0);
 	modelStack.PopMatrix();
 
 	for (auto q : Object::objectMap)

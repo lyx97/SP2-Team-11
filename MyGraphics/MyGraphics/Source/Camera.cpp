@@ -52,16 +52,19 @@ void Camera::Update(double dt)
 	static const float JUMP_SPEED = 60.f;
 	Vector3 boundCheckPos = position;
 
-	ySpeed += GRAVITY * dt;
-	boundCheckPos.y -= ySpeed;
-	if (bound(boundCheckPos))
+	if (Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
-		position.y -= ySpeed;
-		target.y -= ySpeed;
-	}
-	else
-	{
-		ySpeed = 0;
+		ySpeed += GRAVITY * dt;
+		boundCheckPos.y -= ySpeed;
+		if (bound(boundCheckPos))
+		{
+			position.y -= ySpeed;
+			target.y -= ySpeed;
+		}
+		else
+		{
+			ySpeed = 0;
+		}
 	}
 
 	if (delay < 5)
@@ -90,7 +93,7 @@ void Camera::Update(double dt)
 		target.y += (float)(JUMP_SPEED * dt);
 	}
 
-	if (Application::IsKeyPressed('W'))
+	if (Application::IsKeyPressed('W') && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
 		if (flying == true)
 		{
@@ -139,7 +142,7 @@ void Camera::Update(double dt)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('S'))
+	if (Application::IsKeyPressed('S') && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
 		if (flying == true)
 		{
@@ -180,7 +183,7 @@ void Camera::Update(double dt)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('D'))
+	if (Application::IsKeyPressed('D') && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
 		if (flying == true)
 		{
@@ -198,7 +201,7 @@ void Camera::Update(double dt)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('A'))
+	if (Application::IsKeyPressed('A') && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 	{
 		if (flying == true)
 		{
@@ -235,7 +238,7 @@ void Camera::Update(double dt)
 			delay = 0;
 		}
 		// --- YAW ---
-		if (yaw)
+		if (yaw && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 		{
 			Mtx44 rotation;
 			rotation.SetToRotation(yaw, 0, 1, 0);
@@ -246,7 +249,7 @@ void Camera::Update(double dt)
 		}
 		// -----------
 		// --- PITCH ---
-		if (pitch)
+		if (pitch && Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)
 		{
 			right.Normalize();
 			Mtx44 rotation;

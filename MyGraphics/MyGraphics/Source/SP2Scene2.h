@@ -106,7 +106,7 @@ private:
 	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
-
+	bool pelicanhit = false;
 	int rockfreq = 300;
 
 	vector<Vector3> rockpos;
