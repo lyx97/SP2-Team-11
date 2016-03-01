@@ -255,18 +255,9 @@ void SP2::Init()
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
 
-	if (Singleton::getInstance()->gotSword)
-	{
-		melee = new Weapon(5);
-	}
-	else if (Singleton::getInstance()->gotGun)
-	{
-		ranged = new Weapon(3);
-	}
-	else
-	{
-		fist = new Weapon(1);
-	}
+	melee = new Weapon(5);
+	ranged = new Weapon(3);
+	fist = new Weapon(1);
 }
 
 void SP2::Update(double dt)
@@ -469,7 +460,7 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->swordAniUp = false;
 			}
 		}
-
+		Singleton::getInstance()->gotGun = true;
         for (auto q : Object::objectMap)
 		{
             for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
@@ -478,10 +469,6 @@ void SP2::Update(double dt)
                     (*it)->pos += (*it)->dir * (*it)->speed * dt;
                 }
                 if (distanceBetween((*it)->pos, camera.position) > 500){
-                    delete *it;
-                    it = Bullet::bulletVec.erase(it);
-                }
-                else if (q.first->hitbox.isTouching((*it)->pos)){
                     delete *it;
                     it = Bullet::bulletVec.erase(it);
                 }
@@ -515,49 +502,49 @@ void SP2::Update(double dt)
 			}
 		}
 
-		if (Application::IsKeyPressed(VK_RBUTTON) && !handUp && !handDown)
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->handUp && !Singleton::getInstance()->handDown)
 		{
-			handDown = true;
+			Singleton::getInstance()->handDown = true;
 		}
-		if (handDown)
+		if (Singleton::getInstance()->handDown)
 		{
-			rotateHand -= (float)(100 * dt);
-			if (rotateHand <= 30)
+			Singleton::getInstance()->rotateHand -= (float)(150 * dt);
+			if (Singleton::getInstance()->rotateHand <= 30)
 			{
-				handDown = false;
-				handUp = true;
+				Singleton::getInstance()->handDown = false;
+				Singleton::getInstance()->handUp = true;
 			}
 		}
-		if (handUp)
+		if (Singleton::getInstance()->handUp)
 		{
-			rotateHand += (float)(100 * dt);
-			if (rotateHand >= 45)
+			Singleton::getInstance()->rotateHand += (float)(150 * dt);
+			if (Singleton::getInstance()->rotateHand >= 45)
 			{
-				handDown = false;
-				handUp = false;
+				Singleton::getInstance()->handDown = false;
+				Singleton::getInstance()->handUp = false;
 			}
 		}
 
-		if (Application::IsKeyPressed(VK_RBUTTON) && !fistDown && !fistUp)
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->fistDown && !Singleton::getInstance()->fistUp)
 		{
-			fistDown = true;
+			Singleton::getInstance()->fistDown = true;
 		}
-		if (fistDown)
+		if (Singleton::getInstance()->fistDown)
 		{
-			moveFist -= (float)(35 * dt);
-			if (moveFist <= 5)
+			Singleton::getInstance()->moveFist -= (float)(50 * dt);
+			if (Singleton::getInstance()->moveFist <= 5)
 			{
-				fistDown = false;
-				fistUp = true;
+				Singleton::getInstance()->fistDown = false;
+				Singleton::getInstance()->fistUp = true;
 			}
 		}
-		if (fistUp)
+		if (Singleton::getInstance()->fistUp)
 		{
-			moveFist += (float)(35 * dt);
-			if (moveFist >= 10)
+			Singleton::getInstance()->moveFist += (float)(50 * dt);
+			if (Singleton::getInstance()->moveFist >= 10)
 			{
-				fistDown = false;
-				fistUp = false;
+				Singleton::getInstance()->fistDown = false;
+				Singleton::getInstance()->fistUp = false;
 			}
 		}
 
@@ -773,7 +760,7 @@ void SP2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
 		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-		//RenderMesh(meshList[GEO_HITBOX], false);
+		RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
@@ -782,7 +769,7 @@ void SP2::Render()
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
-		RenderMesh(meshList[GEO_LIGHTBALL], false);
+		//RenderMesh(meshList[GEO_LIGHTBALL], false);
 		modelStack.PopMatrix();
 	}
 
@@ -918,11 +905,11 @@ void SP2::Render()
 		else
 		{
 			// right
-			RenderUI(meshList[GEO_CIRCLE], 7, 60, moveFist, 1, 90, 0, 0, false);
-			RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -rotateHand, false);
+			RenderUI(meshList[GEO_CIRCLE], 7, 60, Singleton::getInstance()->moveFist, 1, 90, 0, 0, false);
+			RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -Singleton::getInstance()->rotateHand, false);
 			// left
-			RenderUI(meshList[GEO_CIRCLE], 7, 20, moveFist, 1, 90, 0, 0, false);
-			RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, rotateHand, false);
+			RenderUI(meshList[GEO_CIRCLE], 7, 20, Singleton::getInstance()->moveFist, 1, 90, 0, 0, false);
+			RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, Singleton::getInstance()->rotateHand, false);
 		}
 	}
 

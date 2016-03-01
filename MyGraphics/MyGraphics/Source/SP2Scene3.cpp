@@ -214,18 +214,11 @@ void SP2Scene3::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 
-	if (Singleton::getInstance()->gotSword)
-	{
-		melee = new Weapon(5);
-	}
-	else if (Singleton::getInstance()->gotGun)
-	{
-		ranged = new Weapon(3);
-	}
-	else
-	{
-		fist = new Weapon(1);
-	}
+
+	melee = new Weapon(99);
+	ranged = new Weapon(3);
+	fist = new Weapon(1);
+
 	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
 }
 
@@ -297,6 +290,52 @@ void SP2Scene3::Update(double dt)
             }
         }
 
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->handUp && !Singleton::getInstance()->handDown)
+		{
+			Singleton::getInstance()->handDown = true;
+		}
+		if (Singleton::getInstance()->handDown)
+		{
+			Singleton::getInstance()->rotateHand -= (float)(150 * dt);
+			if (Singleton::getInstance()->rotateHand <= 30)
+			{
+				Singleton::getInstance()->handDown = false;
+				Singleton::getInstance()->handUp = true;
+			}
+		}
+		if (Singleton::getInstance()->handUp)
+		{
+			Singleton::getInstance()->rotateHand += (float)(150 * dt);
+			if (Singleton::getInstance()->rotateHand >= 45)
+			{
+				Singleton::getInstance()->handDown = false;
+				Singleton::getInstance()->handUp = false;
+			}
+		}
+
+		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->fistDown && !Singleton::getInstance()->fistUp)
+		{
+			Singleton::getInstance()->fistDown = true;
+		}
+		if (Singleton::getInstance()->fistDown)
+		{
+			Singleton::getInstance()->moveFist -= (float)(50 * dt);
+			if (Singleton::getInstance()->moveFist <= 5)
+			{
+				Singleton::getInstance()->fistDown = false;
+				Singleton::getInstance()->fistUp = true;
+			}
+		}
+		if (Singleton::getInstance()->fistUp)
+		{
+			Singleton::getInstance()->moveFist += (float)(50 * dt);
+			if (Singleton::getInstance()->moveFist >= 10)
+			{
+				Singleton::getInstance()->fistDown = false;
+				Singleton::getInstance()->fistUp = false;
+			}
+		}
+
         for (auto q : Object::objectMap){
         
             for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
@@ -358,7 +397,6 @@ void SP2Scene3::Update(double dt)
 
             bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 25);
 
-			//cout << Bullet::bulletVec.size() << endl;
 			Singleton::getInstance()->gunAniDown = true;
 		}
 		if (Singleton::getInstance()->gunAniDown)
@@ -385,25 +423,10 @@ void SP2Scene3::Update(double dt)
             Singleton::getInstance()->pause = true;
         }
 
-   //     if (Application::IsKeyPressed('K'))
-   //     {
-			//Singleton::getInstance()->health -= 5;
-
-			//if (Singleton::getInstance()->health <= 50) hpMid = true;
-			//if (Singleton::getInstance()->health <= 25) hpLow = true;
-			//if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
-   //     }
         if (Singleton::getInstance()->health <= 50) hpMid = true;
         if (Singleton::getInstance()->health <= 25) hpLow = true;
         if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
-     /*   if (Application::IsKeyPressed('L'))
-        {
-			Singleton::getInstance()->health += 5;
 
-			if (Singleton::getInstance()->health >= 50) hpMid = false;
-			if (Singleton::getInstance()->health >= 25) hpLow = false;
-			if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
-        }*/
         if (Singleton::getInstance()->health >= 50) hpMid = false;
         if (Singleton::getInstance()->health >= 25) hpLow = false;
         if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
@@ -457,11 +480,11 @@ void SP2Scene3::Update(double dt)
 
                 if ((q->hitbox.isTouching(camera.position)) && bossDead == false)
                     Singleton::getInstance()->health -= 1;
-                if (distanceBetween(q->pos, camera.position) <12 && bossDead == false)
+                if (distanceBetween(q->pos, camera.position) < 12 && bossDead == false)
                     Singleton::getInstance()->health -= 1;
 
             }
-
+			cout << melee->getDamage() << endl;
             if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30)
             {
 				if (Singleton::getInstance()->gotSword)
@@ -497,7 +520,7 @@ void SP2Scene3::Update(double dt)
         }
         //cout << boss.position << "TO" << boss.position- camera.position << endl;
         Singleton::getInstance()->gotSword = true;
-        Singleton::getInstance()->gotGun = true;
+        //Singleton::getInstance()->gotGun = true;
 
         if (!Application::IsKeyPressed('E'))
         {
@@ -518,9 +541,7 @@ void SP2Scene3::Update(double dt)
             Object::objectMap.clear();
             Singleton::getInstance()->health = 100;
         }
-
     }
-
 }
 
 void SP2Scene3::Render()
@@ -665,13 +686,13 @@ void SP2Scene3::Render()
         //cout << Bullet::bulletVec.size() << endl;
         modelStack.PopMatrix();
     
-    if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
-    {
-        RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
-        RenderUI(meshList[GEO_GUN], 120, 10, 5, 1, -5, 80, Singleton::getInstance()->rotateGun, true);
-    }
-    else
-    {
+		if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
+		{
+			RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
+			RenderUI(meshList[GEO_GUN], 120, 10, 5, 1, -5, 80, Singleton::getInstance()->rotateGun, true);
+		}
+		else
+		{
 			if (Singleton::getInstance()->gotSword)
 			{
 				RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
@@ -683,15 +704,14 @@ void SP2Scene3::Render()
 			else
 			{
 				// right
-				RenderUI(meshList[GEO_CIRCLE], 7, 60, 10, 1, 90, 0, 0, false);
-				RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -45, false);
+				RenderUI(meshList[GEO_CIRCLE], 7, 60, Singleton::getInstance()->moveFist, 1, 90, 0, 0, false);
+				RenderUI(meshList[GEO_CYLIN], 15, 70, 0, 1, 0, 0, -Singleton::getInstance()->rotateHand, false);
 				// left
-				RenderUI(meshList[GEO_CIRCLE], 7, 20, 10, 1, 90, 0, 0, false);
-				RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, 45, false);
+				RenderUI(meshList[GEO_CIRCLE], 7, 20, Singleton::getInstance()->moveFist, 1, 90, 0, 0, false);
+				RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, Singleton::getInstance()->rotateHand, false);
 			}
-        }
-        cout << Bullet::bulletVec.size() << endl;
-        modelStack.PopMatrix();
+		}
+
         if (boss.health > 0 && boss.health <= 100)
             RenderTextOnScreen(meshList[GEO_TEXT], "FINISH HIM", Color(1, 0, 0), 2, 60, 10);
 

@@ -129,10 +129,7 @@ private:
 	bool showDistance = false;
 	bool pressTab = true;
 
-	bool handDown = false;
-	bool handUp = false;
-	bool fistDown = false;
-	bool fistUp = false;
+
 
 	float inputDelay;
 	float weaponDelay;
@@ -141,9 +138,7 @@ private:
 	float swing = 20.f;
 	float questTab = 65.f;
 	float shipTab = 65.f;
-	float rotateHand = 45.f;
 	float roateQuest = 50.f;
-	float moveFist = 10.f;
 
 	int planeDistance = 0;
     int numPlanes = 2;

@@ -41,8 +41,14 @@ public:
 	bool swordAniUp = false;
 	bool gunAniDown = false;
 	bool gunAniUp = false;
+	bool handDown = false;
+	bool handUp = false;
+	bool fistDown = false;
+	bool fistUp = false;
 
 	float MOUSE_SPEED;
+	float rotateHand = 45.f;
+	float moveFist = 10.f;
 
 	int health = 100;
 	int rotateSword = 20;
