@@ -437,7 +437,8 @@ void SP2Scene3::Update(double dt)
         {
             inputDelay += (float)(1 * dt);
         }
-		camera.Update(dt);
+		if (activateBattle)
+			camera.Update(dt);
     }
 
 }
