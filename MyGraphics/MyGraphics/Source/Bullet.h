@@ -9,14 +9,14 @@ using std::vector;
 class Bullet : public Object
 {
 public:
-	Bullet(Vector3 pos = Vector3(0, 0, 0), Vector3 size = Vector3(1, 1, 1), Vector3 dir = Vector3(0, 0, 0), int speed = 1);
+	Bullet(Vector3 pos = Vector3(0, 0, 0), Vector3 size = Vector3(1, 1, 1), Vector3 dir = Vector3(0, 0, 0), int speed = 1, bool player = 1);
 	~Bullet();
 
 	void setPos(Vector3 pos);
 	void setSize(Vector3 size);
 
 	static vector<Bullet*> bulletVec;
-
+    static vector<Bullet*> bossBulletVec;
 
 	Vector3 dir;
 

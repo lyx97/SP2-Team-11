@@ -388,7 +388,7 @@ void SP2::Update(double dt)
 			if (Application::IsKeyPressed('E'))
 			{
 				Singleton::getInstance()->stateCheck = true;
-				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
+				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
 				Object::objectMap.clear();
 			}
 		}
@@ -786,7 +786,7 @@ void SP2::Render()
 			modelStack.PopMatrix();
 		}
 	}
-    Singleton::getInstance()->gotGun = true;
+
 	for (auto q : Object::objectMap)
 	{
 		if (q.first == gun && !Singleton::getInstance()->gotGun && !Singleton::getInstance()->gotGun)

@@ -48,8 +48,8 @@ bool bound(Vector3& camPos)
 void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 100.f;
-	static const float SPRINT_SPEED = 150.f;
-	static const float JUMP_SPEED = 60.f;
+	static const float SPRINT_SPEED = 280.f;
+	static const float JUMP_SPEED = 70.f;
 	Vector3 boundCheckPos = position;
 
 	if (Singleton::getInstance()->program_state != Singleton::PROGRAM_GAME2)

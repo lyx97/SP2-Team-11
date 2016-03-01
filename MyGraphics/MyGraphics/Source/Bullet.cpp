@@ -1,14 +1,20 @@
 #include "Bullet.h"
 
 vector<Bullet*> Bullet::bulletVec;
+vector<Bullet*> Bullet::bossBulletVec;
 
 
-Bullet::Bullet(Vector3 pos, Vector3 size, Vector3 dir, int speed) :
+Bullet::Bullet(Vector3 pos, Vector3 size, Vector3 dir, int speed, bool player) :
 dir(dir),
 speed(speed),
+position(pos),
 Object(pos, size)
 {
-	Bullet::bulletVec.push_back(this);
+    if (player == true)
+        Bullet::bulletVec.push_back(this);
+    else{
+        Bullet::bossBulletVec.push_back(this);
+    }
 }
 
 Bullet::~Bullet()

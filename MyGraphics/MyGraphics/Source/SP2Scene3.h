@@ -42,6 +42,7 @@ class SP2Scene3 : public Scene
         GEO_HOUSE1,
         GEO_HOUSE2,
         GEO_ORE,
+        GEO_TREE,
         GEO_IMAGES,
         GEO_GUN,
         GEO_BULLET,
@@ -51,6 +52,7 @@ class SP2Scene3 : public Scene
         GEO_HP_BAR_MID,
         GEO_HP_BAR_HIGH,
         GEO_BORDER,
+        GEO_BOSS_SWORD,
         GEO_BOSS,
         GEO_BOSS_HAND1,
         GEO_BOSS_HAND2,
@@ -174,7 +176,8 @@ private:
 
 //    vector<Bullet> bossBullet;
 
-//    vector<Vector3> treesPos;
+    vector<Vector3> treesPos;
+    Object* tree;
 };
 
 #endif

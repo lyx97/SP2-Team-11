@@ -2,11 +2,14 @@
 #define BOSS_H
 
 #include <string>
+#include <vector>
 #include <Vector3.h>
 #include "Object.h"
 #include "Weapon.h"
+#include "Bullet.h"
 
 using std::string;
+using std::vector;
 
 class Boss
 {

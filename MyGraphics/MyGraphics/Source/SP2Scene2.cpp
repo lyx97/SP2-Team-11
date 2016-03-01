@@ -186,10 +186,7 @@ void SP2Scene2::Init()
 	{
 		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(43, 28, 25));
 	}
-	
-	
-	
-
+    Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
 	
 }
 
