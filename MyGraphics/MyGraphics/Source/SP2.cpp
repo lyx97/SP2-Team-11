@@ -169,6 +169,9 @@ void SP2::Init()
 	meshList[GEO_QUESTLIST] = MeshBuilder::GenerateQuad("QUESTLIST", Color(1, 1, 1), TexCoord(1, 1), 3, 3);
 	meshList[GEO_QUESTLIST]->textureID = LoadTGA("Image//questList.tga");
 
+	meshList[GEO_SHIPDISTANCETAB] = MeshBuilder::GenerateQuad("SHIPDISTANCE", Color(1, 1, 1), TexCoord(1, 1), 2, 1);
+	meshList[GEO_SHIPDISTANCETAB]->textureID = LoadTGA("Image//shipDistanceTab.tga");
+
 	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("HEALTH", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
@@ -271,6 +274,7 @@ void SP2::Init()
 void SP2::Update(double dt)
 {
 	planeDistance = sqrtf((shipPos.x - camera.position.x) * (shipPos.x - camera.position.x) + (shipPos.y - camera.position.y) * (shipPos.y - camera.position.y) + (shipPos.z - camera.position.z) * (shipPos.z - camera.position.z));
+
 	roateQuest += (float)(40 * dt);
 	if (Singleton::getInstance()->pause == true)
 	{
@@ -429,6 +433,21 @@ void SP2::Update(double dt)
 
 			if (questTab <= 65)
 				questTab = 65;
+		}
+		if (showDistance)
+		{
+			shipTab -= (float)(10 * dt);
+
+			if (shipTab <= 60)
+				shipTab = 60;
+		}
+
+		if (!showDistance)
+		{
+			shipTab += (float)(10 * dt);
+
+			if (shipTab >= 65)
+				shipTab = 65;
 		}
 		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp)
 		{
@@ -877,6 +896,9 @@ void SP2::Render()
 	}
 
 	RenderUI(meshList[GEO_QUESTLIST], 5, questTab, 40, 1, 0, 0, 0, false);
+	RenderUI(meshList[GEO_SHIPDISTANCETAB], 5, 40, shipTab, 2, 0, 0, 0, false);
+	RenderTextOnScreen(meshList[GEO_TEXT], "SHIP DISTANCE : " + std::to_string(planeDistance), Color(1, 1, 1), 1.2, 30, shipTab - 2.5);
+
 	if (questText == ". Repair Ship")
 	{
 		RenderUI(meshList[GEO_ORE], 2, questTab - 5, 37, 1, 20, roateQuest, 0, false);
@@ -929,6 +951,7 @@ void SP2::Render()
 		}
 		break;
 	case 4://Of course we would have to locate it too.
+		showDistance = true;
 		questText = ". Find ship";
 		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);

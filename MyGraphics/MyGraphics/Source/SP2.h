@@ -64,7 +64,7 @@ class SP2 : public Scene
 		GEO_QUESTLIST,
 		GEO_CYLIN,
 		GEO_CIRCLE,
-
+		GEO_SHIPDISTANCETAB,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -128,12 +128,14 @@ private:
 	bool pressTab = true;
 	bool NPCshowPressE = false;
 	bool OREshowPressE = false;
+	bool showDistance = false;
 	float inputDelay;
 	float weaponDelay;
 	float heldDelay = 0.f;
 	float pickSword = 0.f;
 	float swing = 20.f;
 	float questTab = 65.f;
+	float shipTab = 65.f;
 	float rotateHand = 45.f;
 	float roateQuest = 50.f;
 
