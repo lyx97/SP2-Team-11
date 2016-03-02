@@ -40,8 +40,17 @@ void SP2::Init()
     srand(time(0));
     planeInit();
 
-	mission = 0;
-	message = 0;
+	if (Singleton::getInstance()->program_state == Singleton::PROGRAM_GAME2R)
+	{
+		message = 32;
+		mission = 5;
+	}
+	else
+	{
+		message = 0;
+		mission = 0;
+	}
+	
 	inputDelay = 0.0f;
 	weaponDelay = 10.f;
 	startingPlane.planePos = Vector3(0, 0, 0);
@@ -51,6 +60,12 @@ void SP2::Init()
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
 	shipPos = Vector3((rand() % 2000) - 1000, 17, (rand() % 2000) - 1000);
 	shipSize = Vector3(30, 30, 30);
+
+	if (Singleton::getInstance()->stateCheck == Singleton::PROGRAM_GAME2R)
+	{
+		message = 32;
+		mission = 5;
+	}
 
 	Dialogue("Text//NPC.txt");
 
@@ -320,7 +335,7 @@ void SP2::Update(double dt)
 			}
 		}
 		//interaction with ship
-		else if (planeDistance < 100 && mission != 4)
+		else if (planeDistance < 100 && mission != 4 && mission != 6)
 		{
 			//message start from 8
 			if (!shipStatus && message == 0)
@@ -372,7 +387,7 @@ void SP2::Update(double dt)
 				mission = 3;
 			}
 		}
-		else if (mission == 4)
+		else if (mission == 4 || mission == 6)
 		{
 			if (planeDistance < 100)
 			{
@@ -380,7 +395,7 @@ void SP2::Update(double dt)
 
 				if (Application::IsKeyPressed('E'))
 				{
-					Singleton::getInstance()->oreCount = Singleton::getInstance()->objectCount[ore];
+					Singleton::getInstance()->oreCount += Singleton::getInstance()->objectCount[ore];
 					Singleton::getInstance()->stateCheck = true;
 					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
 					Object::objectMap.clear();
@@ -400,6 +415,15 @@ void SP2::Update(double dt)
 				if (NPC2.position.z >= camera.position.z - 40)
 					NPC2.position.z -= (float)(150 * dt);
 			}
+		}
+		else if (mission == 5)
+		{
+			if (Application::IsKeyPressed('E') && message == 32 && inputDelay >= 1)
+			{
+				message = 0;
+				mission = 6;
+			}
+
 		}
 
 		else
@@ -1114,6 +1138,11 @@ void SP2::Render()
 		//RenderUI(meshList[GEO_NPC1_ICON], 5, 13, 10, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[23], Color(1, 1, 0), 1.5, 23, 10);
 		break;
+	case 32://Ship crash
+		RenderUI(meshList[GEO_MESSAGEBOX], 3.6, 40, 10, 1.8, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[24], Color(1, 1, 0), 1.5, 65, 3);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[31], Color(1, 1, 0), 1.5, 22, 13);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[32], Color(1, 1, 0), 1.5, 15, 8);
 	default:
 		break;
 	}
@@ -1132,7 +1161,7 @@ void SP2::Render()
 	{
 		if (q.first == ore)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second + Singleton::getInstance()->oreCount), Color(0, 0, 0), 1, 1, 36);
 		}
 	}
 
