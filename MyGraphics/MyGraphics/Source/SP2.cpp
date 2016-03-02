@@ -485,7 +485,6 @@ void SP2::Update(double dt)
 				Singleton::getInstance()->swordAniUp = false;
 			}
 		}
-		Singleton::getInstance()->gotGun = true;
         for (auto q : Object::objectMap)
 		{
             for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
@@ -628,6 +627,8 @@ void SP2::Update(double dt)
 						heldDelay += 1.f * dt;
 						if (heldDelay > 2)
 						{
+							Singleton::getInstance()->handDown = true;
+							Singleton::getInstance()->fistDown = true;
 							Inventory::addObject(ore);
 							heldDelay = 0;
 							delete q.first;
