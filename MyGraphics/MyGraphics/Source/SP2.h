@@ -15,6 +15,7 @@
 #include "Plane.h"
 #include "Object.h"
 #include "Bullet.h"
+#include "NPC.h"
 
 using std::map;
 using std::vector;
@@ -164,7 +165,7 @@ private:
     vector<Vector3> treePos;
     vector<Vector3> grassPos;
 
-    Vector3 npcPos;
+    //Vector3 npcPos;
 	Vector3 shipPos;
 	map<int,plane> planeMap;
 
@@ -173,12 +174,15 @@ private:
 
 	// objects
 	Object* ore;
-	Object* NPC;
+	//Object* NPC;
 	Object* ship;
 	Object* sword;
 	Object* gun;
     Object* tree;
 	Object* ground;
+
+	NPC_CLASS NPC2 = NPC_CLASS("NPC", 100, Vector3(10, 7, 10), Vector3(10, 15, 10));
+	float bossLookAtAngle;
 
 	// weapons
 	Weapon* melee;

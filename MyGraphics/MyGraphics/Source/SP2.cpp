@@ -49,7 +49,7 @@ void SP2::Init()
 	startingPlane.planeMax = Vector3(300, 0, 300);
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
-	npcPos = Vector3(10, 0, 10);
+	//npcPos = Vector3(10, 0, 10);
 	shipPos = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
 	Dialogue("Text//NPC.txt");
 
@@ -250,7 +250,7 @@ void SP2::Init()
     }
 	
 	ship = new Object(Vector3(shipPos.x, 7, shipPos.z), Vector3(55, 25, 40));
-	NPC = new Object(Vector3(npcPos.x, 7, npcPos.z), Vector3(10, 15, 10));
+	//NPC = new Object(Vector3(npcPos.x, 7, npcPos.z), Vector3(10, 15, 10));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
@@ -278,11 +278,10 @@ void SP2::Update(double dt)
 	{
 		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
 
+		NPC2.setPos(NPC2.position);
+
 		//interaction with NPC
-		if (sqrtf(
-			pow((camera.position.x - npcPos.x), 2) +
-			pow((camera.position.y - npcPos.y), 2) +
-			pow((camera.position.z - npcPos.z), 2)) < 15)
+		if (distanceBetween(NPC2.position, camera.position) < 15)
 		{
 			NPCshowPressE = true;
 			if (Application::IsKeyPressed('E') && inputDelay >= 1)
@@ -370,17 +369,37 @@ void SP2::Update(double dt)
 				mission = 3;
 			}
 		}
-		else if (mission == 4 && planeDistance < 30)
+		else if (mission == 4)
 		{
-			message = 17;
-
-			if (Application::IsKeyPressed('E'))
+			if (planeDistance < 30)
 			{
-				Singleton::getInstance()->stateCheck = true;
-				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
-				Object::objectMap.clear();
+				message = 17;
+
+				if (Application::IsKeyPressed('E'))
+				{
+					Singleton::getInstance()->stateCheck = true;
+					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+					Object::objectMap.clear();
+				}
+			}
+			if (distanceBetween(NPC2.position, camera.position) >= 30)
+			{
+				if (NPC2.position.x <= camera.position.x + 40)
+					NPC2.position.x += (float)(150 * dt);
+
+				if (NPC2.position.x >= camera.position.x - 40)
+					NPC2.position.x -= (float)(150 * dt);
+
+				if (NPC2.position.z <= camera.position.z + 40)
+					NPC2.position.z += (float)(150 * dt);
+
+				if (NPC2.position.z >= camera.position.z - 40)
+					NPC2.position.z -= (float)(150 * dt);
 			}
 		}
+
+		
+
 		else
 		{
 			message = 0;
@@ -774,7 +793,9 @@ void SP2::Render()
 	}
 
     modelStack.PushMatrix();
-    modelStack.Translate(npcPos.x, npcPos.y, npcPos.z);
+	modelStack.Translate(NPC2.position.x, NPC2.position.y, NPC2.position.z);
+	modelStack.Translate(0, -8, 0);
+	//modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
 	modelStack.Scale(4, 4, 4);
 
 	modelStack.PushMatrix();
