@@ -170,6 +170,9 @@ void SP2::Init()
 	meshList[GEO_QUESTLIST] = MeshBuilder::GenerateQuad("QUESTLIST", Color(1, 1, 1), TexCoord(1, 1), 3, 3);
 	meshList[GEO_QUESTLIST]->textureID = LoadTGA("Image//questList.tga");
 
+	meshList[GEO_STATS] = MeshBuilder::GenerateQuad("STATS", Color(1, 1, 1), TexCoord(1, 1), 3, 3);
+	meshList[GEO_STATS]->textureID = LoadTGA("Image//background3.tga");
+
 	meshList[GEO_SHIPDISTANCETAB] = MeshBuilder::GenerateQuad("SHIPDISTANCE", Color(1, 1, 1), TexCoord(1, 1), 2, 1);
 	meshList[GEO_SHIPDISTANCETAB]->textureID = LoadTGA("Image//shipDistanceTab.tga");
 
@@ -255,8 +258,8 @@ void SP2::Init()
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
 
-	melee = new Weapon(5);
-	ranged = new Weapon(3);
+	melee = new Weapon(5 + (Singleton::getInstance()->oreCount * 2));
+	ranged = new Weapon(3 + Singleton::getInstance()->oreCount);
 	fist = new Weapon(1);
 }
 
@@ -1132,6 +1135,18 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
+
+	if (Application::IsKeyPressed('I'))
+	{
+		RenderUI(meshList[GEO_STATS], 5, 40, 30, 1.3, 0, 0, 0, false);
+
+		RenderUI(meshList[GEO_SWORD], 1, 28, 30, 1, 0, roateQuest, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Melee damage: " + std::to_string(melee->getDamage() + (Singleton::getInstance()->objectCount[ore] * 2)), Color(1, 1, 1), 1, 35, 30);
+
+		RenderUI(meshList[GEO_GUN], 10, 28, 25, 1, 0, roateQuest, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Ranged damage: " + std::to_string(ranged->getDamage() + Singleton::getInstance()->objectCount[ore]), Color(1, 1, 1), 1, 35, 25);
+
+	}
 }
 
 void SP2::RenderSkybox()

@@ -62,6 +62,7 @@ class SP2 : public Scene
 		GEO_QUEST,
 		GEO_HELPER,
 		GEO_QUESTLIST,
+		GEO_STATS,
 		GEO_CYLIN,
 		GEO_CIRCLE,
 		GEO_SHIPDISTANCETAB,
@@ -180,7 +181,7 @@ private:
     Object* tree;
 	Object* ground;
 
-	NPC_CLASS NPC2 = NPC_CLASS("NPC", 100, Vector3(10, 7, 10), Vector3(10, 15, 10));
+	NPC_CLASS NPC2 = NPC_CLASS("NPC", 100, Vector3(30, 7, 0), Vector3(10, 15, 10));
 	float bossLookAtAngle;
 
 	// weapons
