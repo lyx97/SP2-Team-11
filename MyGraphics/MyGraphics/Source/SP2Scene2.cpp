@@ -31,9 +31,11 @@ void SP2Scene2::Init()
 	pelicanPos = Vector3(-700, -3, 0);
 	inputDelay = 9.0f;
 	moonDistance = 0;
-	handling = 1;
-	turning = 1;
-	repair = 1;
+	handling = 10 + Singleton::getInstance()->oreCount;
+	turningspeed = 10 + Singleton::getInstance()->oreCount * 2;
+	repair = 10 + Singleton::getInstance()->oreCount;
+	acceleration = 10 + Singleton::getInstance()->oreCount;
+	hp = 10 * repair;
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -174,7 +176,7 @@ void SP2Scene2::Init()
 	meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
 
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
-	
+	srand(time(0));
 	for (int loop = 0; loop < rockfreq; loop++)
 	{
 		rockpos.push_back(Vector3((rand() % 1000)-500 , (rand() % 30) - 15, (rand() % 3000) - 1500));
@@ -186,7 +188,7 @@ void SP2Scene2::Init()
 	}
 	for (auto q : rockpos)
 	{
-		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(43, 28, 25));
+		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(60, 50, 70));
 	}
     Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
 }
@@ -194,7 +196,7 @@ void SP2Scene2::Init()
 void SP2Scene2::Update(double dt)
 {
 	moonDistance = sqrtf((800 - pelicanPos.x) * (800 - pelicanPos.x) + (0 - pelicanPos.y) * (0 - pelicanPos.y) + (0 - pelicanPos.z) * (0 - pelicanPos.z));
-	if (false)//moonDistance < 400)
+	if (moonDistance < 400)
 	{
 		moonDistance = 400;
 		Singleton::getInstance()->stateCheck = true;
@@ -272,38 +274,53 @@ void SP2Scene2::Update(double dt)
 
 		if (Application::IsKeyPressed('W'))
 		{
+			if (momentum.x >= 3)
+			{
+				momentum.x = 3;
+				cout << "max" << endl;
+			}
+			else if(momentum.x <= -3)
+			{
+				momentum.x = -3;
+			}
+			if (momentum.z >= 3)
+			{
+				momentum.z = 3;
+			}
+			else if (momentum.z <= -3)
+			{
+				momentum.z = -3;
+			}
+			
 			if (rotation <= 90 && rotation >= 0)
 			{
-				momentum.x = momentum.x + (handling*dt / 10) + (dt / 2) * (1 - rotation / 90);
+				momentum.x = momentum.x + (handling * dt / 10) + (acceleration*dt/5) * (1 - rotation / 90);
 				pelicanPos.x += momentum.x;
-				momentum.z = momentum.z - (handling*dt / 10) - (dt / 2) * (rotation / 90);
+				momentum.z = momentum.z - (handling * dt / 10) - (acceleration*dt / 5) * (rotation / 90);
 				pelicanPos.z += momentum.z;
-				cout << (handling*dt / 10) << endl;
 
 			}
 			else if (rotation >= -90 && rotation <= 0)
 			{
-				momentum.x = momentum.x + (handling*dt / 10) + (dt / 2) * (1 + (rotation / 90));
+				momentum.x = momentum.x + (handling * dt / 10) + (acceleration*dt / 5) * (1 + (rotation / 90));
 				pelicanPos.x += momentum.x;
-				momentum.z = momentum.z + (handling*dt / 10) - (dt / 2) * (rotation / 90);
+				momentum.z = momentum.z + (handling * dt / 10) - (acceleration*dt / 5) * (rotation / 90);
 				pelicanPos.z += momentum.z;
 
 			}
 			else if (rotation > 90)
 			{
-				momentum.x = momentum.x - (handling*dt / 10) - (dt / 2) * ((rotation - 90) / 90);
+				momentum.x = momentum.x - (handling * dt / 10) - (acceleration*dt / 5) * ((rotation - 90) / 90);
 				pelicanPos.x += momentum.x;
-				momentum.z = momentum.z - (handling*dt / 10) - (dt / 2) * (1 - (rotation - 90) / 90);
+				momentum.z = momentum.z - (handling * dt / 10) - (acceleration*dt / 5) * (1 - (rotation - 90) / 90);
 				pelicanPos.z += momentum.z;
-				cout << (handling*dt / 10) << endl;
 			}
 			else if (rotation < -90)
 			{
-				momentum.x = momentum.x - (handling*dt / 10) + (dt / 2) * ((rotation + 90) / 90);
+				momentum.x = momentum.x - (handling * dt / 10) + (acceleration*dt / 5) * ((rotation + 90) / 90);
 				pelicanPos.x += momentum.x;
-				momentum.z = momentum.z + (handling*dt / 10) + (dt / 2) * (1+(rotation + 90) / 90);
+				momentum.z = momentum.z + (handling * dt / 10) + (acceleration*dt / 5) * (1 + (rotation + 90) / 90);
 				pelicanPos.z += momentum.z;
-				cout << (handling*dt / 10) - (dt / 1) * ((rotation - 90) / 90) << endl;
 			}
 
 		}
@@ -360,67 +377,55 @@ void SP2Scene2::Update(double dt)
 		}
 		if (Application::IsKeyPressed('A'))
 		{
-			acceleration = acceleration + (dt * handling + dt * turning) / 10;
-			rotation = rotation + acceleration;
-			cout << acceleration << endl;
-			if (acceleration > 5)
+			turning = turning + (dt * handling + dt * turningspeed) / 10;
+			rotation = rotation + turning;
+			if (turning > 2)
 			{
-				acceleration = 5;
+				turning = 2;
 			}
 		}
 
 		else if (Application::IsKeyPressed('D'))
 		{
-			cout << rotation << endl;
-			acceleration = acceleration - (dt * handling + dt * turning) / 10;
-			rotation = rotation + acceleration;
-			if (acceleration < -5)
+			turning = turning - (dt * handling + dt * turningspeed) / 10;
+			rotation = rotation + turning;
+			if (turning < -2)
 			{
-				acceleration = -5;
+				turning = -2;
 			}
 		}
 
-		if (acceleration >= 0.05)
+		if (turning >= 0.05)
 		{
-			cout << acceleration << endl;
-			acceleration = acceleration - dt * handling/10;
+			turning = turning - dt * handling/10;
 			if (!Application::IsKeyPressed('A') && !Application::IsKeyPressed('D'))
 			{
-				rotation = rotation + acceleration;
+				rotation = rotation + turning;
 			}
 		}
 
-		else if (acceleration <= -0.05)
+		else if (turning <= -0.05)
 		{
-			acceleration = acceleration + dt * handling/10;
+			turning = turning + dt * handling/10;
 			if (!Application::IsKeyPressed('A') && !Application::IsKeyPressed('D'))
 			{
-				rotation = rotation + acceleration;
+				rotation = rotation + turning;
 			}
 		}
+
 		for (auto q : Object::objectMap)
 		{
-			if ((q.first->hitbox.maxPt.x > pelicanPos.x) && (q.first->hitbox.minPt.x < pelicanPos.x) &&
-				(q.first->hitbox.maxPt.y > pelicanPos.y) && (q.first->hitbox.minPt.y < pelicanPos.y) &&
-				(q.first->hitbox.maxPt.z > pelicanPos.z) && (q.first->hitbox.minPt.z < pelicanPos.z))
+			if (q.first->hitbox.isTouching(pelicanPos))
 			{
+				hp -= 34;
 				delete q.first;
-				pelicanhit = true;
 			}
 		}
-		if (pelicanhit == true)
-		{
-			hp -= 34;
-			pelicanhit = false;
-		}
-		/*if (death == true)
-		{
-			Reset();
-		}*/
+
+		
 		if (Application::IsKeyPressed('L'))
 		{
 			handling += 1;
-			cout << handling << endl;
 		}
 	}
 }
@@ -532,7 +537,7 @@ void SP2Scene2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
 		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-		RenderMesh(meshList[GEO_HITBOX], false);
+		//RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
@@ -781,20 +786,8 @@ void SP2Scene2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 void SP2Scene2::Reset()
 {
 	death = false;
-	/*for (auto q : Object::objectMap)
-	{
-		delete q.first;
-	}*/
-	pelicanPos = Vector3(-700, -3, 0);
-	camera.Init(Vector3(-700, 7, 0), Vector3(90, 0, 0), Vector3(0, 1, 0));
-	hp = 100;
-	rotation = 0;
-	momentum = 0;
+	Object::objectMap.clear();
 	
-	for (auto q: Object::objectMap)
-	{
-		delete q.first;
-	}
 }
 
 void SP2Scene2::Exit()

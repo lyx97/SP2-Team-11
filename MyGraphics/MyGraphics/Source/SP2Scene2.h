@@ -103,7 +103,7 @@ private:
 
 	std::string FPS;
 	float inputDelay = 0.f;
-	float acceleration = 0.f;
+	float turning = 0.f;
 	float rotation = 0.f;
 	bool hpMid = false;
 	bool hpLow = false;
@@ -111,10 +111,11 @@ private:
 	bool death = false;
 	int rockfreq = 300;
 
+	int acceleration;
 	int handling;
-	int turning;
+	int turningspeed;
 	int repair;
-	int hp = 10 * repair;
+	int hp;
 
 
 	vector<Vector3> rockpos;
@@ -123,7 +124,6 @@ private:
 	Vector3 momentum;
 
 	Object* rock;
-	Object* pelican;
 
 	MS modelStack, viewStack, projectionStack;
 };
