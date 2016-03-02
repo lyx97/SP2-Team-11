@@ -151,6 +151,7 @@ private:
     int spawnRadius;
 	int mission;
 	int message;
+	
 
 	string FPS;
 	string questText;

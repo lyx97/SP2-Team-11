@@ -199,6 +199,7 @@ void Camera::Update(double dt)
 		{
 			right.Normalize();
 			Mtx44 rotation;
+
 			rotation.SetToRotation(pitch, right.x, right.y, right.z);
 			if (target.y - position.y > 4.0)
 			{

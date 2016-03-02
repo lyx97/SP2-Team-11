@@ -398,8 +398,6 @@ void SP2::Update(double dt)
 			}
 		}
 
-		
-
 		else
 		{
 			message = 0;

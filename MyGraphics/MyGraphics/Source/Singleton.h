@@ -60,7 +60,7 @@ public:
 private:
 	Singleton()
 	{
-		program_state = PROGRAM_MENU;
+		program_state = PROGRAM_GAME;
 		stateCheck = false;
 
 		mousex = 400;

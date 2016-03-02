@@ -3,6 +3,7 @@
 
 #include "Scene.h"
 #include "Camera.h"
+#include "SP2.h"
 #include "Mesh.h"
 #include "MatrixStack.h"
 #include "Light.h"
@@ -88,6 +89,7 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
+	void Reset();
 	int moonDistance;
 
 	Camera camera;
@@ -103,11 +105,17 @@ private:
 	float inputDelay = 0.f;
 	float acceleration = 0.f;
 	float rotation = 0.f;
-	int hp = 100;
 	bool hpMid = false;
 	bool hpLow = false;
 	bool pelicanhit = false;
+	bool death = false;
 	int rockfreq = 300;
+
+	int handling;
+	int turning;
+	int repair;
+	int hp = 10 * repair;
+
 
 	vector<Vector3> rockpos;
 
