@@ -49,8 +49,9 @@ void SP2::Init()
 	startingPlane.planeMax = Vector3(300, 0, 300);
 	swordPos = Vector3(0, 10, rand() % 30 + 1985);
 	gunPos = Vector3(rand() % 30 + 1985, 1, 0);
-	//npcPos = Vector3(10, 0, 10);
-	shipPos = Vector3((rand() % 2000) - 1000, 7, (rand() % 2000) - 1000);
+	shipPos = Vector3((rand() % 2000) - 1000, 17, (rand() % 2000) - 1000);
+	shipSize = Vector3(30, 30, 30);
+
 	Dialogue("Text//NPC.txt");
 
 	// Set background color to dark blue
@@ -252,8 +253,7 @@ void SP2::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 	
-	ship = new Object(Vector3(shipPos.x, 7, shipPos.z), Vector3(55, 25, 40));
-	//NPC = new Object(Vector3(npcPos.x, 7, npcPos.z), Vector3(10, 15, 10));
+	ship = new Object(Vector3(shipPos.x, 15, shipPos.z), Vector3(shipSize.x * 6, shipSize.y * 2, shipSize.z * 4));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
 	ground = new Object(Vector3(camera.position.x, 7, camera.position.z), Vector3(500, 10, 500));
@@ -320,7 +320,7 @@ void SP2::Update(double dt)
 			}
 		}
 		//interaction with ship
-		else if (planeDistance < 30 && mission != 4)
+		else if (planeDistance < 100 && mission != 4)
 		{
 			//message start from 8
 			if (!shipStatus && message == 0)
@@ -360,7 +360,7 @@ void SP2::Update(double dt)
 		}
 
 		//exiting the ship after mission is done
-		else if (mission == 2 && planeDistance > 30)
+		else if (mission == 2 && planeDistance > 100)
 		{
 			message = 12;
 
@@ -374,7 +374,7 @@ void SP2::Update(double dt)
 		}
 		else if (mission == 4)
 		{
-			if (planeDistance < 30)
+			if (planeDistance < 100)
 			{
 				message = 17;
 
@@ -504,7 +504,7 @@ void SP2::Update(double dt)
         }
         if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
         {
-			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1);
+			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 25);
             Singleton::getInstance()->gunAniDown = true;
         }
 		if (Singleton::getInstance()->gunAniDown)
@@ -597,6 +597,9 @@ void SP2::Update(double dt)
 		}
         if (Application::IsKeyPressed('R'))
         {
+			Object::objectMap.clear();
+			Singleton::getInstance()->stateCheck = true;
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME;
             bool reset = true;
             planeInit(reset);
         }
@@ -793,7 +796,7 @@ void SP2::Render()
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
-		//RenderMesh(meshList[GEO_LIGHTBALL], false);
+		RenderMesh(meshList[GEO_LIGHTBALL], false);
 		modelStack.PopMatrix();
 	}
 
@@ -909,7 +912,7 @@ void SP2::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(shipPos.x, shipPos.y, shipPos.z);
-	modelStack.Scale(10, 10, 10);
+	modelStack.Scale(shipSize.x, shipSize.y, shipSize.z);
 	RenderMesh(meshList[GEO_PELICAN], true);
 	modelStack.PopMatrix();
 
