@@ -13,7 +13,8 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-
+using namespace irrklang;
+#pragma comment(lib, "irrKlang.lib")
 SP2::SP2()
 {
 }
@@ -29,6 +30,7 @@ float distanceBetween(Vector3 from, Vector3 to){
 void SP2::Init()
 {
 	// Init VBO here
+	//sound.playMusic("Music//Music.mp3");
 	Application::HideCursor();
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
@@ -189,6 +191,15 @@ void SP2::Init()
 	meshList[GEO_STATS] = MeshBuilder::GenerateQuad("STATS", Color(1, 1, 1), TexCoord(1, 1), 3, 3);
 	meshList[GEO_STATS]->textureID = LoadTGA("Image//background3.tga");
 
+	meshList[GEO_PAUSE_BG] = MeshBuilder::GenerateQuad("PauseUI", Color(1, 1, 1), TexCoord(1, 1), 3, 4);
+	meshList[GEO_PAUSE_BG]->textureID = LoadTGA("Image//background4.tga");
+
+	meshList[GEO_PAUSE_BUTTONS] = MeshBuilder::GenerateQuad("pauseBotton", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
+	meshList[GEO_PAUSE_BUTTONS]->textureID = LoadTGA("Image//buttonDefault.tga");
+
+	meshList[GEO_PAUSE_BUTTONS_HOVER] = MeshBuilder::GenerateQuad("pauseHover", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
+	meshList[GEO_PAUSE_BUTTONS_HOVER]->textureID = LoadTGA("Image//buttonHover.tga");
+
 	meshList[GEO_SHIPDISTANCETAB] = MeshBuilder::GenerateQuad("SHIPDISTANCE", Color(1, 1, 1), TexCoord(1, 1), 2, 1);
 	meshList[GEO_SHIPDISTANCETAB]->textureID = LoadTGA("Image//shipDistanceTab.tga");
 
@@ -285,6 +296,8 @@ void SP2::Update(double dt)
 	roateQuest += (float)(40 * dt);
 	if (Singleton::getInstance()->pause == true)
 	{
+		pause();
+
 		if (Application::IsKeyPressed('O'))
 		{
 			Application::HideCursor();
@@ -1178,8 +1191,9 @@ void SP2::Render()
 
 		RenderUI(meshList[GEO_GUN], 10, 28, 25, 1, 0, roateQuest, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Ranged damage: " + std::to_string(ranged->getDamage() + Singleton::getInstance()->objectCount[ore]), Color(1, 1, 1), 1, 35, 25);
-
 	}
+	if (Singleton::getInstance()->pause == true)
+		pause();
 }
 
 void SP2::RenderSkybox()
@@ -1547,7 +1561,96 @@ void SP2::planeLoader(){
 
 
 }
+void SP2::pause()
+{
+	RenderUI(meshList[GEO_PAUSE_BG], 5, 40, 30, 1.3, 0, 0, 0, false);
 
+
+	///////////////////////////
+	//     RESUME BUTTON     //
+	//////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(575 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 505 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[33], Color(1, 0, 0), 1, 38, 30);
+			Application::HideCursor();
+			Application::SetMousePosition(0, 0);
+			Singleton::getInstance()->pause = false;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[33], Color(1, 0, 0), 1, 38, 30);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 30, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[33], Color(1, 1, 1), 1, 38, 30);
+	}
+
+	////////////////////////////
+	//     RESTART BUTTON     //
+	////////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(700 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 630 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 23, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 0, 0), 1, 37.5, 23);
+			Singleton::getInstance()->stateCheck = true;
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME;
+			Object::objectMap.clear();
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 23, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 0, 0), 1, 37.5, 23);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 23, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 1, 1), 1, 37.5, 23);
+	}
+	/////////////////////////
+	//     EXIT BUTTON     //
+	/////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(830 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 755 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 16, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 38.5, 16);
+			Object::objectMap.clear();
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 16, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 38.5, 16);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 16, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 1, 1), 1, 38.5, 16);
+	}
+}
 
 void SP2::Exit()
 {

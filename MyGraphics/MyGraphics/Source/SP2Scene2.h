@@ -8,9 +8,15 @@
 #include "MatrixStack.h"
 #include "Light.h"
 #include <vector>
+#include <string>
+#include <fstream>
+#include <sstream>
 #include "Object.h"
+#include "Sound.h"
 
 using std::vector;
+using std::string;
+using std::ifstream;
 
 class SP2Scene2 : public Scene
 {
@@ -44,6 +50,9 @@ class SP2Scene2 : public Scene
 		GEO_NPC1,
 		GEO_HITBOX,
 		GEO_MOON,
+		GEO_PAUSE_BG,
+		GEO_PAUSE_BUTTONS,
+		GEO_PAUSE_BUTTONS_HOVER,
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE
@@ -89,7 +98,9 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX);
+	void Dialogue(string filename);
 	void Reset();
+	void pause();
 	int moonDistance;
 
 	Camera camera;
@@ -101,7 +112,7 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	std::string FPS;
+	string FPS;
 	float inputDelay = 0.f;
 	float turning = 0.f;
 	float rotation = 0.f;
@@ -126,6 +137,11 @@ private:
 	Object* rock;
 
 	MS modelStack, viewStack, projectionStack;
+
+	string new_line;
+	vector<string>my_arr;
+
+	Sound sound;
 };
 
 #endif

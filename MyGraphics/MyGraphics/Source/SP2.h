@@ -16,6 +16,7 @@
 #include "Object.h"
 #include "Bullet.h"
 #include "NPC.h"
+#include "Sound.h"
 
 using std::map;
 using std::vector;
@@ -65,6 +66,9 @@ class SP2 : public Scene
 		GEO_STATS,
 		GEO_CYLIN,
 		GEO_CIRCLE,
+		GEO_PAUSE_BG,
+		GEO_PAUSE_BUTTONS,
+		GEO_PAUSE_BUTTONS_HOVER,
 		GEO_SHIPDISTANCETAB,
 		NUM_GEOMETRY,
 	};
@@ -114,6 +118,7 @@ private:
 	void Dialogue(string filename);
     void planeLoader();
     void planeInit(bool reset = false);
+	void pause();
 
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
@@ -192,6 +197,8 @@ private:
 
 	Camera camera;
 	Light light[10];
+
+	Sound sound;
 
 	MS modelStack, viewStack, projectionStack;
 };

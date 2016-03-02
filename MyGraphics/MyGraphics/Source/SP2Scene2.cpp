@@ -13,6 +13,8 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+using namespace irrklang;
+#pragma comment(lib, "irrKlang.lib")
 
 SP2Scene2::SP2Scene2()
 {
@@ -25,6 +27,8 @@ SP2Scene2::~SP2Scene2()
 void SP2Scene2::Init()
 {
 	// Init VBO here
+
+	sound.playMusic("Music//Music.mp3");
 	Application::HideCursor();
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
@@ -36,6 +40,8 @@ void SP2Scene2::Init()
 	repair = 10 + Singleton::getInstance()->oreCount;
 	acceleration = 10 + Singleton::getInstance()->oreCount;
 	hp = 10 * repair;
+
+	Dialogue("Text//NPC.txt");
 
 	// Set background color to dark blue
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -156,6 +162,15 @@ void SP2Scene2::Init()
 	meshList[GEO_BORDER] = MeshBuilder::GenerateOBJ("ORE", "OBJ//hp.obj");
 	meshList[GEO_BORDER]->textureID = LoadTGA("Image//border.tga");
 
+	meshList[GEO_PAUSE_BG] = MeshBuilder::GenerateQuad("PauseUI", Color(1, 1, 1), TexCoord(1, 1), 3, 4);
+	meshList[GEO_PAUSE_BG]->textureID = LoadTGA("Image//background4.tga");
+
+	meshList[GEO_PAUSE_BUTTONS] = MeshBuilder::GenerateQuad("pauseBotton", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
+	meshList[GEO_PAUSE_BUTTONS]->textureID = LoadTGA("Image//buttonDefault.tga");
+
+	meshList[GEO_PAUSE_BUTTONS_HOVER] = MeshBuilder::GenerateQuad("pauseHover", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
+	meshList[GEO_PAUSE_BUTTONS_HOVER]->textureID = LoadTGA("Image//buttonHover.tga");
+
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("FRONT", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//stars_ft.tga");
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("BACK", Color(0, 0, 0), TexCoord(1, 1), 1, 1);
@@ -210,6 +225,8 @@ void SP2Scene2::Update(double dt)
 	
 	if (Singleton::getInstance()->pause == true)
 	{
+		pause();
+
 		if (Application::IsKeyPressed('O'))
 		{
 			Application::HideCursor();
@@ -433,7 +450,18 @@ void SP2Scene2::Update(double dt)
 		}
 	}
 }
+void SP2Scene2::Dialogue(string filename)
+{
+	ifstream myfile(filename.c_str());
+	string line;
 
+	while (std::getline(myfile, line))
+	{
+		new_line = line + "\n";
+		cout << new_line;
+		my_arr.push_back(new_line);
+	}
+}
 void SP2Scene2::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -634,6 +662,9 @@ void SP2Scene2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(1, 1, 1), 1, 1, 28);
 	if (Singleton::getInstance()->buttonText == true)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
+
+	if (Singleton::getInstance()->pause == true)
+		pause();
 }
 
 void SP2Scene2::RenderSkybox()
@@ -795,7 +826,96 @@ void SP2Scene2::Reset()
 	Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2R;
 
 }
+void SP2Scene2::pause()
+{
+	RenderUI(meshList[GEO_PAUSE_BG], 5, 40, 30, 1.3);
 
+
+	///////////////////////////
+	//     RESUME BUTTON     //
+	//////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(575 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 505 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[33], Color(1, 0, 0), 1, 38, 30);
+			Application::HideCursor();
+			Application::SetMousePosition(0, 0);
+			Singleton::getInstance()->pause = false;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[33], Color(1, 0, 0), 1, 38, 30);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 30, 1);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[33], Color(1, 1, 1), 1, 38, 30);
+	}
+
+	////////////////////////////
+	//     RESTART BUTTON     //
+	////////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(700 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 630 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 23, 1);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 0, 0), 1, 37.5, 23);
+			Singleton::getInstance()->stateCheck = true;
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
+			Object::objectMap.clear();
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 23, 1);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 0, 0), 1, 37.5, 23);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 23, 1);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 1, 1), 1, 37.5, 23);
+	}
+	/////////////////////////
+	//     EXIT BUTTON     //
+	/////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(830 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 755 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 16, 1);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 38.5, 16);
+			Object::objectMap.clear();
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 16, 1);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 38.5, 16);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 16, 1);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 1, 1), 1, 38.5, 16);
+	}
+}
 void SP2Scene2::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

@@ -16,6 +16,7 @@
 #include "Boss.h"
 #include "Weapon.h"
 #include "Bullet.h"
+#include "Sound.h"
 
 using std::map;
 using std::vector;
@@ -61,6 +62,10 @@ class SP2Scene3 : public Scene
 		GEO_BOSS_ICON,
         GEO_HITBOX,
 		GEO_MESSAGEBOX,
+		GEO_STATS,
+		GEO_PAUSE_BG,
+		GEO_PAUSE_BUTTONS,
+		GEO_PAUSE_BUTTONS_HOVER,
 		GEO_CYLIN,
 		GEO_CIRCLE,
 
@@ -116,6 +121,8 @@ private:
     void planeLoader();
     float distanceBetween(Vector3 from, Vector3 to);
     void swordSet(bool init = false);
+	void pause();
+
     Camera camera;
     Light light[10];
 
@@ -166,6 +173,7 @@ private:
     Mtx44 swordRotation;
     float spinSword = 0.f;
     float swordOffset = 80.f;
+	float roateQuest = 50.f;
 
     Bullet* bullet;
 	Weapon* melee;
@@ -182,6 +190,8 @@ private:
 
     vector<Vector3> treesPos;
     Object* tree;
+
+	Sound sound;
 };
 
 #endif

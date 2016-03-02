@@ -13,13 +13,16 @@ public:
 
 	Sound();
 	~Sound();
+	void Init();
 	void playMusic(string Music);
 	void stopMusic(string Music);
-	void playSoundEffect(string Music);
+	void playSoundEffect2D(string Music);
+	void playSoundEffect3D(string Music, irrklang::vec3df pos, irrklang::vec3df TargetPos);
 
 private:
 	irrklang::ISoundEngine* musicEngine;
 	irrklang::ISound* Song;
-	irrklang::ISound* SoundEffect;
+	irrklang::ISound* SoundEffect2D;
+	irrklang::ISoundEngine* SoundEffect3D;
 };
 #endif
