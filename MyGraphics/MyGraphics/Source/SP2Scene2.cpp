@@ -203,6 +203,10 @@ void SP2Scene2::Update(double dt)
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
 		Object::objectMap.clear();
 	}
+	if (death == true)
+	{
+		SP2Scene2::Reset();
+	}
 	
 	if (Singleton::getInstance()->pause == true)
 	{
@@ -787,7 +791,9 @@ void SP2Scene2::Reset()
 {
 	death = false;
 	Object::objectMap.clear();
-	
+	Singleton::getInstance()->stateCheck = true;
+	Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2R;
+
 }
 
 void SP2Scene2::Exit()

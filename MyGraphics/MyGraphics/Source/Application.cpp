@@ -175,6 +175,8 @@ void Application::Run()
 				break;
 			case Singleton::PROGRAM_GAME2: scene = new SP2Scene2();
 				break;
+			case Singleton::PROGRAM_GAME2R: scene = new SP2();
+				break;
 			case Singleton::PROGRAM_GAME3: scene = new SP2Scene3();
                 break;
 			}
