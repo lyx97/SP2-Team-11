@@ -53,6 +53,7 @@ public:
 	int health = 100;
 	int rotateSword = 20;
 	int rotateGun = 20;
+	int oreCount;
 
 	double mousex;
 	double mousey;

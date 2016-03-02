@@ -130,8 +130,6 @@ private:
 	bool showDistance = false;
 	bool pressTab = true;
 
-
-
 	float inputDelay;
 	float weaponDelay;
 	float heldDelay = 0.f;

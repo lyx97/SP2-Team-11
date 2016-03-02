@@ -214,9 +214,8 @@ void SP2Scene3::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 
-
-	melee = new Weapon(99);
-	ranged = new Weapon(3);
+	melee = new Weapon(5 + (Singleton::getInstance()->oreCount * 2));
+	ranged = new Weapon(3 + Singleton::getInstance()->oreCount);
 	fist = new Weapon(1);
 
 	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
@@ -224,7 +223,6 @@ void SP2Scene3::Init()
 
 void SP2Scene3::Update(double dt)
 {
-   
     if (Application::IsKeyPressed('1')) //enable back face culling
         glEnable(GL_CULL_FACE);
     if (Application::IsKeyPressed('2')) //disable back face culling
@@ -234,7 +232,7 @@ void SP2Scene3::Update(double dt)
     if (Application::IsKeyPressed('4'))
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-
+	cout << melee->getDamage() << endl;
 	if (startDialogue)
 	{
 		if (Application::IsKeyPressed('E') && inputDelay >= 1)
@@ -335,14 +333,12 @@ void SP2Scene3::Update(double dt)
 				Singleton::getInstance()->fistUp = false;
 			}
 		}
-
+		Singleton::getInstance()->gotSword = true;
         for (auto q : Object::objectMap){
         
             for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
 		    {
-               
-                    (*it)->pos += (*it)->dir * (*it)->speed * dt;
-               
+                (*it)->pos += (*it)->dir * (*it)->speed * dt;
                 if (boss.object->hitbox.isTouching((*it)->pos)){
                     boss.health -= 0.1f;
                 }
@@ -485,7 +481,6 @@ void SP2Scene3::Update(double dt)
                     Singleton::getInstance()->health -= 1;
 
             }
-			cout << melee->getDamage() << endl;
             if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30)
             {
 				if (Singleton::getInstance()->gotSword)
@@ -519,9 +514,6 @@ void SP2Scene3::Update(double dt)
                     bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 25, false);
             }
         }
-        //cout << boss.position << "TO" << boss.position- camera.position << endl;
-
-
 
         if (!Application::IsKeyPressed('E'))
         {
@@ -684,7 +676,6 @@ void SP2Scene3::Render()
             modelStack.PopMatrix();
         }
 
-        //cout << Bullet::bulletVec.size() << endl;
         modelStack.PopMatrix();
     
 		if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
@@ -788,10 +779,6 @@ void SP2Scene3::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(0, 0, 0), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(Singleton::getInstance()->mousey), Color(0, 0, 0), 1, 1, 44);
     RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
-    for (auto q : Singleton::getInstance()->objectCount)
-    {
-        RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second), Color(0, 0, 0), 1, 1, 36);
-    }
 
     RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
     if (Singleton::getInstance()->buttonText == true)

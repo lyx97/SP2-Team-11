@@ -174,7 +174,7 @@ void SP2Scene2::Init()
 	meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
 
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
-
+	
 	for (int loop = 0; loop < rockfreq; loop++)
 	{
 		rockpos.push_back(Vector3((rand() % 1000)-500 , (rand() % 30) - 15, (rand() % 3000) - 1500));
@@ -182,9 +182,8 @@ void SP2Scene2::Init()
 
 	for (int loop = 0; loop < 100; loop++)
 	{
-		rockpos.push_back(Vector3((rand() % 1000)-500, (rand() % 600) - 300, (rand() % 3000) - 1500));
+		rockpos.push_back(Vector3((rand() % 1000) - 500, (rand() % 600) - 300, (rand() % 3000) - 1500));
 	}
-
 	for (auto q : rockpos)
 	{
 		rock = new Object(Vector3(q.x, q.y, q.z), Vector3(43, 28, 25));

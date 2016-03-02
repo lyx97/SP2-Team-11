@@ -377,6 +377,7 @@ void SP2::Update(double dt)
 
 				if (Application::IsKeyPressed('E'))
 				{
+					Singleton::getInstance()->oreCount = Singleton::getInstance()->objectCount[ore];
 					Singleton::getInstance()->stateCheck = true;
 					Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
 					Object::objectMap.clear();
@@ -404,6 +405,10 @@ void SP2::Update(double dt)
 			NPCshowPressE = false;
 		}
 
+		for (auto q : Singleton::getInstance()->objectCount)
+		{
+			cout << q.second << endl;
+		}
 		if (Application::IsKeyPressed('1')) //enable back face culling
 			glEnable(GL_CULL_FACE);
 		if (Application::IsKeyPressed('2')) //disable back face culling
@@ -497,7 +502,6 @@ void SP2::Update(double dt)
         if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
         {
 			bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 1);
-			cout << Bullet::bulletVec.size() << endl;
             Singleton::getInstance()->gunAniDown = true;
         }
 		if (Singleton::getInstance()->gunAniDown)
