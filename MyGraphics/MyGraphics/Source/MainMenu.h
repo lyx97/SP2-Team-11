@@ -38,7 +38,6 @@ class MainMenu : public Scene
 		MENU_MAIN = 0,
 		MENU_START,
 		MENU_INSTRUCTIONS,
-		MENU_OPTIONS,
 		MENU_CREDITS,
 		MENU_EXIT,
 

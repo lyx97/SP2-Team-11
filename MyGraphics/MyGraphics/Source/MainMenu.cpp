@@ -130,8 +130,6 @@ void MainMenu::Update(double dt)
 		break;
 	case MainMenu::MENU_INSTRUCTIONS:instruction();
 		break;
-	case MainMenu::MENU_OPTIONS:options();
-		break;
 	case MainMenu::MENU_CREDITS:credits();
 		break;
 	case MainMenu::MENU_EXIT:
@@ -175,8 +173,6 @@ void MainMenu::Render()
 	case MainMenu::MENU_START:
 		break;
 	case MainMenu::MENU_INSTRUCTIONS:instruction();
-		break;
-	case MainMenu::MENU_OPTIONS:options();
 		break;
 	case MainMenu::MENU_CREDITS:credits();
 		break;
@@ -510,7 +506,7 @@ void MainMenu::mainMenu()
 	}
 
 	////////////////////////////
-	//     OPTIONS BUTTON     //
+	//     CREDITS BUTTON     //
 	////////////////////////////
 	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
 		(755 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 685 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
@@ -519,27 +515,27 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 20);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 0, 0), 1, 37.5, 20);
-			state = MENU_OPTIONS;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 0, 0), 1, 37.5, 20);
+			state = MENU_CREDITS;
 			animation = true;
 		}
 		//MOUSE HOVER
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 20);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 0, 0), 1, 37.5, 20);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 0, 0), 1, 37.5, 20);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 20);
-		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(1, 1, 1), 1, 37.5, 20);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 1, 1), 1, 37.5, 20);
 	}
 
-	////////////////////////////
-	//     CREDITS BUTTON     //
-	////////////////////////////
+	/////////////////////////
+	//     EXIT BUTTON     //
+	/////////////////////////
 	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
 		(845 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 775 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
 	{
@@ -547,49 +543,21 @@ void MainMenu::mainMenu()
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 15);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 0, 0), 1, 37.5, 15);
-			state = MENU_CREDITS;
-			animation = true;
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 0, 0), 1, 37.5, 15);
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
 		}
 		//MOUSE HOVER
 		else
 		{
 			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 15);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 0, 0), 1, 37.5, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 0, 0), 1, 37.5, 15);
 		}
 	}
 	//DEFAULT
 	else
 	{
 		RenderUI(meshList[GEO_BUTTON], 1, 40, 15);
-		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[5], Color(1, 1, 1), 1, 37.5, 15);
-	}
-
-	//////////////////////////
-	//     EXIT BUTTON     //
-	/////////////////////////
-	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
-		(935 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 865 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
-	{
-		//MOUSE CLICK
-		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
-		{
-			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 0, 0), 1, 38.5, 10);
-			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
-		}
-		//MOUSE HOVER
-		else
-		{
-			RenderUI(meshList[GEO_BUTTON_HOVER], 1, 40, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 0, 0), 1, 38.5, 10);
-		}
-	}
-	//DEFAULT
-	else
-	{
-		RenderUI(meshList[GEO_BUTTON], 1, 40, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 1, 1), 1, 38.5, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 1, 1), 1, 37.5, 15);
 	}
 }
 /******************************************************************************/
@@ -606,10 +574,10 @@ void MainMenu::instruction()
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
 	RenderTextOnScreen(meshList[GEO_TEXT], my_arr[3], Color(0, 0, 0), 3, animationMove - 15, 45);
 
-	int j = 35;
+	int j = 40;
 	for (int i = 8; i <= 14; ++i)
 	{
-		j -= 2;
+		j -= 4;
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[i], Color(0, 0, 0), 1.5, animationMove -17, j);
 	}
 
@@ -628,49 +596,6 @@ void MainMenu::instruction()
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
 			state = MENU_MAIN;
 
-		}
-		//MOUSE HOVER
-		else
-		{
-			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
-		}
-	}
-	//DEFAULT
-	else
-	{
-		RenderUI(meshList[GEO_BUTTON], 1, animationMove + 20, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
-	}
-}
-/******************************************************************************/
-/*!
-\brief
-Render options
-
-\exception None
-\return None
-*/
-/******************************************************************************/
-void MainMenu::options()
-{
-	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
-	RenderTextOnScreen(meshList[GEO_TEXT], my_arr[4], Color(0, 0, 0), 3, animationMove - 10, 45);
-
-	//////////////////////////
-	//     BACK BUTTON     //
-	/////////////////////////
-
-	if ((1632 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 1248 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
-		(935 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 865 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
-	{
-		//MOUSE CLICK
-		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
-		{
-			animation = false;
-			RenderUI(meshList[GEO_BUTTON_HOVER], 1, animationMove + 20, 10);
-			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 0, 0), 1, animationMove + 19, 10);
-			state = MENU_MAIN;
 		}
 		//MOUSE HOVER
 		else
