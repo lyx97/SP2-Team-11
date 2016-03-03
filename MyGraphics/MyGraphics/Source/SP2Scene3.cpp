@@ -274,8 +274,6 @@ void SP2Scene3::Init()
 	melee = new Weapon(5 + (Singleton::getInstance()->oreCount * 2));
 	ranged = new Weapon(3 + Singleton::getInstance()->oreCount);
 	fist = new Weapon(1);
-    Singleton::getInstance()->gotSword = true;
-    Singleton::getInstance()->gotGun = true;
 
 	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
 }
@@ -576,22 +574,25 @@ void SP2Scene3::Update(double dt)
 				}
 				if (boss.health > 1){
 					if (distanceBetween(boss.position, camera.position) >= 30){
-						if (boss.position.x <= camera.position.x + 40)
+						if (boss.position.x <= camera.position.x + 30)
 							boss.position.x += (float)(150 * dt);
 
-						if (boss.position.x >= camera.position.x - 40)
+						if (boss.position.x >= camera.position.x - 30)
 							boss.position.x -= (float)(150 * dt);
 
-						if (boss.position.z <= camera.position.z + 40)
+						if (boss.position.z <= camera.position.z + 30)
 							boss.position.z += (float)(150 * dt);
 
-						if (boss.position.z >= camera.position.z - 40)
+						if (boss.position.z >= camera.position.z - 30)
 							boss.position.z -= (float)(150 * dt);
 					}
 
 				}
 			}
-
+			if (Application::IsKeyPressed(VK_NUMPAD0))
+				Singleton::getInstance()->gotSword = true;
+				if (Application::IsKeyPressed(VK_NUMPAD1))
+					Singleton::getInstance()->gotGun = false;
 			if (!Application::IsKeyPressed('E'))
 			{
 				heldDelay = 0;
@@ -627,145 +628,146 @@ Main rendering
 /******************************************************************************/
 void SP2Scene3::Render()
 {
-    // Render VBO here
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    viewStack.LoadIdentity();
-    viewStack.LookAt(
-        camera.position.x, camera.position.y, camera.position.z,
-        camera.target.x, camera.target.y, camera.target.z,
-        camera.up.x, camera.up.y, camera.up.z
-        );
+	// Render VBO here
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	viewStack.LoadIdentity();
+	viewStack.LookAt(
+		camera.position.x, camera.position.y, camera.position.z,
+		camera.target.x, camera.target.y, camera.target.z,
+		camera.up.x, camera.up.y, camera.up.z
+		);
 
-    Position lightPosition_cameraspace = viewStack.Top() *	light[0].position;
-    glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
+	Position lightPosition_cameraspace = viewStack.Top() *	light[0].position;
+	glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 
-    if (light[0].type == Light::LIGHT_DIRECTIONAL)
-    {
-        Vector3 lightDir(light[0].position.x, light[0].position.y, light[0].position.z);
-        Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
-        glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightDirection_cameraspace.x);
-    }
-    else if (light[0].type == Light::LIGHT_SPOT)
-    {
-        Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
-        glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-        Vector3 spotDirection_cameraspace = viewStack.Top() * light[0].spotDirection;
-        glUniform3fv(m_parameters[U_LIGHT0_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
-    }
-    else
-    {
-        Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
-        glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-    }
+	if (light[0].type == Light::LIGHT_DIRECTIONAL)
+	{
+		Vector3 lightDir(light[0].position.x, light[0].position.y, light[0].position.z);
+		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
+		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightDirection_cameraspace.x);
+	}
+	else if (light[0].type == Light::LIGHT_SPOT)
+	{
+		Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
+		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
+		Vector3 spotDirection_cameraspace = viewStack.Top() * light[0].spotDirection;
+		glUniform3fv(m_parameters[U_LIGHT0_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
+	}
+	else
+	{
+		Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
+		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
+	}
 
-    for (auto q : Object::objectMap)
-    {
-        //Tree Render
-        for (int j = 0; j < treePos.size(); ++j)
-        {
-            if ((q.first->pos.x == treePos[j].x) && (q.first->pos.z == treePos[j].z))
-            {
-                modelStack.PushMatrix();
-                modelStack.Translate(treePos[j].x, 0, treePos[j].z);
-                modelStack.Scale(20, 20, 20);
-                RenderMesh(meshList[GEO_TREE], true);
-                modelStack.PopMatrix();
+	for (auto q : Object::objectMap)
+	{
+		//Tree Render
+		for (int j = 0; j < treePos.size(); ++j)
+		{
+			if ((q.first->pos.x == treePos[j].x) && (q.first->pos.z == treePos[j].z))
+			{
+				modelStack.PushMatrix();
+				modelStack.Translate(treePos[j].x, 0, treePos[j].z);
+				modelStack.Scale(20, 20, 20);
+				RenderMesh(meshList[GEO_TREE], true);
+				modelStack.PopMatrix();
 
-            }
-        }
-    }
-    
+			}
+		}
+	}
 
-    for (auto q : Object::objectMap)
-    {
-        modelStack.PushMatrix();
-      //  glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
-        modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-     //  RenderMesh(meshList[GEO_HITBOX], false);
-      //  glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        modelStack.PopMatrix();
-    }
 
-    modelStack.PushMatrix();
-    modelStack.Translate(camera.position.x, camera.position.y + 80, camera.position.z);
-    RenderSkybox();
-    modelStack.PopMatrix();
+	for (auto q : Object::objectMap)
+	{
+		modelStack.PushMatrix();
+		//  glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
+		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
+		//  RenderMesh(meshList[GEO_HITBOX], false);
+		//  glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+		modelStack.PopMatrix();
+	}
 
-    map<int, plane>::iterator iter;
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.position.x, camera.position.y + 80, camera.position.z);
+	RenderSkybox();
+	modelStack.PopMatrix();
 
-    for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
-    {
-        modelStack.PushMatrix();
-        modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
-        modelStack.Rotate(-90, 1, 0, 0);
-        modelStack.Scale(150, 150, 1);
-        RenderMesh(meshList[GEO_GROUND], true);
-        modelStack.PopMatrix();
-    }
+	map<int, plane>::iterator iter;
 
-    if (boss.health >= 1){
-        modelStack.PushMatrix();
-        modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
-        modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
+	for (iter = planeMap.begin(); iter != planeMap.end(); ++iter)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(iter->second.planePos.x, 0, iter->second.planePos.z);
+		modelStack.Rotate(-90, 1, 0, 0);
+		modelStack.Scale(150, 150, 1);
+		RenderMesh(meshList[GEO_GROUND], true);
+		modelStack.PopMatrix();
+	}
 
-        modelStack.Scale(20, 20, 20);
-        modelStack.PushMatrix();
-        RenderMesh(meshList[GEO_BOSS], true);
-        modelStack.PopMatrix();
+	if (boss.health >= 1){
+		modelStack.PushMatrix();
+		modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
+		modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
 
-        modelStack.PushMatrix();
-        RenderMesh(meshList[GEO_BOSS_HAND1], true);
-        modelStack.PopMatrix();
+		modelStack.Scale(20, 20, 20);
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_BOSS], true);
+		modelStack.PopMatrix();
 
-        modelStack.PushMatrix();
-        RenderMesh(meshList[GEO_BOSS_HAND2], true);
-        modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_BOSS_HAND1], true);
+		modelStack.PopMatrix();
 
-        modelStack.PushMatrix();
-        RenderMesh(meshList[GEO_BOSS_LEG1], true);
-        modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_BOSS_HAND2], true);
+		modelStack.PopMatrix();
 
-        modelStack.PushMatrix();
-        RenderMesh(meshList[GEO_BOSS_LEG2], true);
-        modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_BOSS_LEG1], true);
+		modelStack.PopMatrix();
 
-        modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_BOSS_LEG2], true);
+		modelStack.PopMatrix();
 
-        for (auto q : Bullet::bulletVec)
-        {
-            modelStack.PushMatrix();
-            modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
-            RenderMesh(meshList[GEO_LIGHTBALL], false);
-            modelStack.PopMatrix();
-        }
+		modelStack.PopMatrix();
 
-        for (auto q : Bullet::bossBulletVec)
-        {
-            modelStack.PushMatrix();
-            modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
-            RenderMesh(meshList[GEO_LIGHTBALL], false);
-            modelStack.PopMatrix();
-        }
+		for (auto q : Bullet::bulletVec)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
+			RenderMesh(meshList[GEO_LIGHTBALL], false);
+			modelStack.PopMatrix();
+		}
 
-        modelStack.PushMatrix();
-        //modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
-        // modelStack.Rotate(spinSword, 0, 1, 0);
-        // modelStack.Translate(-boss.position.x, -boss.position.y, -boss.position.z);
-        for (auto q : swordVec)
-        {
-            modelStack.PushMatrix();
+		for (auto q : Bullet::bossBulletVec)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(q->pos.x, q->pos.y, q->pos.z);
+			RenderMesh(meshList[GEO_LIGHTBALL], false);
+			modelStack.PopMatrix();
+		}
 
-            modelStack.Translate(q.x, q.y, q.z);
-            modelStack.Scale(6, 6, 6);
-            modelStack.Rotate(spinSword, 0, 1, 0);
+		modelStack.PushMatrix();
+		//modelStack.Translate(boss.position.x, boss.position.y, boss.position.z);
+		// modelStack.Rotate(spinSword, 0, 1, 0);
+		// modelStack.Translate(-boss.position.x, -boss.position.y, -boss.position.z);
+		for (auto q : swordVec)
+		{
+			modelStack.PushMatrix();
 
-            RenderMesh(meshList[GEO_BOSS_SWORD], true);
-            modelStack.PopMatrix();
-        }
+			modelStack.Translate(q.x, q.y, q.z);
+			modelStack.Scale(6, 6, 6);
+			modelStack.Rotate(spinSword, 0, 1, 0);
 
-        modelStack.PopMatrix();
-    
+			RenderMesh(meshList[GEO_BOSS_SWORD], true);
+			modelStack.PopMatrix();
+		}
+
+		modelStack.PopMatrix();
+	}
+
 		if (Singleton::getInstance()->gotSword && Singleton::getInstance()->gotGun)
 		{
 			RenderUI(meshList[GEO_SWORD], 13, 75, -7, 1, 0, -60, Singleton::getInstance()->rotateSword, true);
@@ -791,7 +793,7 @@ void SP2Scene3::Render()
 				RenderUI(meshList[GEO_CYLIN], 15, 10, 0, 1, 0, 0, Singleton::getInstance()->rotateHand, false);
 			}
 		}
-
+		if (boss.health >= 1){
         if (boss.health > 0 && boss.health <= 100)
             RenderTextOnScreen(meshList[GEO_TEXT], "FINISH HIM", Color(1, 0, 0), 2, 60, 10);
 
@@ -799,9 +801,10 @@ void SP2Scene3::Render()
 		RenderUI(meshList[GEO_BORDER], 6, 8, 55, 10, 0, 0, 0, false);
 		RenderUI(meshList[GEO_BOSS_ICON], 3, 5, 55, 1, 0, 0, 0, false);
     }
+		
     
     //t->r->s
-    //RenderMesh(meshList[GEO_AXES], false);
+    RenderMesh(meshList[GEO_AXES], false);
 
     modelStack.PushMatrix();
     modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
@@ -1419,10 +1422,24 @@ Second vector/end vector to calculate using
 */
 /******************************************************************************/
 float SP2Scene3::angleBetween(Vector3 &vector1, Vector3 &vector2){
-    float theta = Math::RadianToDegree(acos((vector1.Dot(vector2)) / ((magnitude(vector1)) * (magnitude(vector2))))) * 8;
-    if (theta < 0)
-        theta = -theta;
-    return theta;
+    //float theta = Math::RadianToDegree(acos());
+  //  if (theta < 0)
+    //    theta = -theta;
+    //return theta;
+	Vector3 initView(-1, 0, 0);
+	Vector3 endView(vector2 - vector1);
+	if (vector1 != vector2){
+		endView.Normalize();
+	}
+	Vector3 normal(0, 1, 0);
+	float theta = Math::RadianToDegree(acos(initView.Dot(endView)));
+	Vector3 cross = initView.Cross(endView);
+	if (cross.Dot(normal) < 0)
+	{
+		theta *= -1;
+	}
+	std::cout << theta << std::endl;
+	return theta;
 }
 
 /******************************************************************************/
