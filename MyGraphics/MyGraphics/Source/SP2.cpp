@@ -223,7 +223,7 @@ void SP2::Init()
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//planet1_lf.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("TEXT", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//heh.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//font.tga");
 
     meshList[GEO_NPC1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_MAIN.obj");
     meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
@@ -1304,7 +1304,7 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 	for (unsigned i = 0; i < text.length(); ++i)
 	{
 		Mtx44 characterSpacing;
-		characterSpacing.SetToTranslation(i * 1.0f, 0, 0); //1.0f is the spacing of each character, you may change this value
+		characterSpacing.SetToTranslation(i * 0.8f, 0, 0); //1.0f is the spacing of each character, you may change this value
 		Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
 		glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 

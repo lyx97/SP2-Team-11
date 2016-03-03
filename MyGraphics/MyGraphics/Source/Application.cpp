@@ -108,7 +108,7 @@ void Application::Init()
 
 
 	//Create a window and create its OpenGL context
-	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", NULL, NULL);
+	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Le Space Xplorer", NULL, NULL);
 	//m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", glfwGetPrimaryMonitor(), NULL);
 	glfwSetWindowSizeCallback(m_window, resize_callback);
 	
@@ -141,11 +141,11 @@ void Application::Init()
 void Application::Run()
 {
 	//Main Loop
-	//Scene *scene = new MainMenu();
+	
+	Scene *scene = new MainMenu();
     //Scene *scene = new SP2();
     //Scene *scene = new SP2Scene2();
-    Scene *scene = new SP2Scene3();
-
+    //Scene *scene = new SP2Scene3();
 
 	scene->Init();
 

@@ -1,4 +1,4 @@
-LE SPACE GAME
+Le Space Xplorer
 START
 LOADING
 INSTRUCTION
@@ -13,7 +13,7 @@ BACK
 'TAB' to show/ hide quest
 'SPACE' to jump
 Mouse click to attack
-SHAWN
+LEE YU XIAN
 SHAM
 JIAHAO
 JACOB

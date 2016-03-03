@@ -180,7 +180,7 @@ void SP2Scene3::Init()
     meshList[GEO_LEFT]->textureID = LoadTGA("Image//red_lf.tga");
 
     meshList[GEO_TEXT] = MeshBuilder::GenerateText("TEXT", 16, 16);
-    meshList[GEO_TEXT]->textureID = LoadTGA("Image//heh.tga");
+    meshList[GEO_TEXT]->textureID = LoadTGA("Image//font.tga");
 
     meshList[GEO_BOSS] = MeshBuilder::GenerateOBJ("BOSS", "OBJ//NPC1_MAIN.obj");
     meshList[GEO_BOSS]->textureID = LoadTGA("Image//NPC_Evil.tga");
@@ -987,7 +987,7 @@ void SP2Scene3::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
     for (unsigned i = 0; i < text.length(); ++i)
     {
         Mtx44 characterSpacing;
-        characterSpacing.SetToTranslation(i * 1.0f, 0, 0); //1.0f is the spacing of each character, you may change this value
+		characterSpacing.SetToTranslation(i * 0.8f, 0, 0); //1.0f is the spacing of each character, you may change this value
         Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
         glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 
