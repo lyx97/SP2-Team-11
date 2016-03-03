@@ -1,47 +1,148 @@
-﻿Build started 3/3/2016 6:41:18 PM.
-     1>Project "C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\MyGraphics\MyGraphics.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3/3/2016 9:41:22 PM.
+     1>Project "D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\MyGraphics\MyGraphics.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\MyGraphics\irrKlang-1.5.0\include" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\Common\Source" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glfw\include" /I"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glew\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\NPC.cpp Source\SP2Scene3.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\\MyGraphics\irrKlang-1.5.0\include" /I"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\\Common\Source" /I"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\\glfw\include" /I"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\\glew\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SP2.cpp Source\SP2Scene2.cpp Source\SP2Scene3.cpp
          SP2Scene3.cpp
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(321): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(346): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(355): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(414): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(414): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(437): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(437): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(473): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(482): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(517): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(664): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(771): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(772): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(778): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(782): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(822): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(825): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(828): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(837): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(844): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(844): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(848): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(854): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(857): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(871): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(877): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1255): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1259): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1263): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1268): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1488): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1606): warning C4305: 'argument' : truncation from 'double' to 'float'
-         NPC.cpp
-         Application.cpp
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\application.cpp(68): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\sp2-team-11\mygraphics\mygraphics\source\application.cpp(69): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(319): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(344): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(353): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(412): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(412): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(435): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(435): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(471): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(480): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(515): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(665): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(773): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(774): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(780): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(784): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(825): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(828): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(831): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(840): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(847): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(847): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(851): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(857): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(860): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(874): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1252): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1256): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1260): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1265): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1499): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene3.cpp(1618): warning C4305: 'argument' : truncation from 'double' to 'float'
+         SP2Scene2.cpp
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(227): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(230): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(235): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(255): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(329): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(363): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(365): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(372): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(374): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(381): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(383): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(389): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(391): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(399): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(407): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(421): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(429): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(451): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(461): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(471): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(480): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(682): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(697): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(700): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(703): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(709): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2scene2.cpp(941): warning C4305: 'argument' : truncation from 'double' to 'float'
+         SP2.cpp
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(58): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(77): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(78): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(79): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(82): warning C4806: '==' : unsafe operation: no value of type 'bool' promoted to type 'Singleton::PROGRAM_STATE' can equal the given constant
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(310): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(311): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(312): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(497): warning C4305: '=' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(531): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(540): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(552): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(552): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(571): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(580): warning C4244: '-=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(675): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(681): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(687): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(701): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(709): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(723): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(724): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(756): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(957): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(972): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1007): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1008): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1014): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1018): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1039): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1039): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1048): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1051): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1054): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1070): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1076): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1082): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1089): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1095): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1098): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1101): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1108): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1112): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1119): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1123): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1129): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1136): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1141): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1148): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1154): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1161): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1166): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1172): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1178): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1181): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1184): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1191): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1197): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1203): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1219): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1461): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1462): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1463): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1464): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1469): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1473): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1477): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1481): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1487): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1491): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1495): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1500): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1561): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1562): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1563): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1564): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\users\jia hao\desktop\sp2-team-11\mygraphics\mygraphics\source\sp2.cpp(1622): warning C4305: 'argument' : truncation from 'double' to 'float'
          Generating Code...
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug" /LIBPATH:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glew\lib" /LIBPATH:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.lib" /MACHINE:X86 Debug\Application.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\Debug" /LIBPATH:"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\\glew\lib" /LIBPATH:"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.lib" /MACHINE:X86 Debug\Application.obj
          Debug\Boss.obj
          Debug\Bullet.obj
          Debug\Camera.obj
@@ -62,9 +163,9 @@
          Debug\SP2Scene3.obj
          Debug\Utility.obj
          Debug\Weapon.obj
-         MyGraphics.vcxproj -> C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\SP2-Team-11\MyGraphics\MyGraphics\MyGraphics.vcxproj" (Build target(s)).
+         MyGraphics.vcxproj -> D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\Debug\MyGraphics.exe
+     1>Done Building Project "D:\Users\Jia Hao\Desktop\SP2-Team-11\MyGraphics\MyGraphics\MyGraphics.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.37
+Time Elapsed 00:00:02.52

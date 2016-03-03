@@ -118,6 +118,7 @@ private:
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight);
 	void Dialogue(string filename);
+	float angleBetween(Vector3 &vector1, Vector3 &vector2);
     void planeLoader();
     void planeInit(bool reset = false);
 	void pause();

@@ -708,18 +708,12 @@ void SP2Scene2::Render()
 	RenderUI(meshList[GEO_SHIPDISTANCETAB], 5, 40, 60, 2);
 	RenderTextOnScreen(meshList[GEO_TEXT], "DISTANCE LEFT: " + std::to_string(moonDistance - 400), Color(1, 1, 1), 1.2, 30, 57.5);
 
-	//RenderTextOnScreen(meshList[GEO_TEXT], "Distance to reach 2nd planet : " + std::to_string(moonDistance - 400), Color(1, 0, 0), 1.5, 15, 42);
-
 	RenderUI(meshList[GEO_CROSSHAIR], 1, 40, 30, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], FPS + " FPS", Color(0, 1, 0), 1, 1, 1);	// fps
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(1, 1, 1), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(1, 1, 1), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 44);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(1, 1, 1), 1, 1, 38);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(1, 1, 1), 1, 1, 28);
-	if (Singleton::getInstance()->buttonText == true)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
 
 	if (Singleton::getInstance()->pause == true)
 		pause();
@@ -955,6 +949,7 @@ void SP2Scene2::pause()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario2.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 36, 1);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 37, 36);
 			Object::objectMap.clear();

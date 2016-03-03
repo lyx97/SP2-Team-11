@@ -889,6 +889,7 @@ void SP2::Render()
     modelStack.PushMatrix();
     modelStack.Translate(NPC2.position.x, NPC2.position.y, NPC2.position.z);
 	modelStack.Translate(0, -8, 0);
+	modelStack.Rotate(angleBetween(NPC2.position, camera.position), 0, 1, 0);
 	modelStack.Scale(4, 4, 4);
 
 	modelStack.PushMatrix();
@@ -1211,23 +1212,7 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION X: " + std::to_string(camera.position.x), Color(0, 0, 0), 1, 1, 50);
 	RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(0, 0, 0), 1, 1, 46);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(Singleton::getInstance()->mousey), Color(0, 0, 0), 1, 1, 44);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Plane Distance : " + std::to_string(planeDistance), Color(0, 0, 0), 1, 1, 42);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
-	RenderTextOnScreen(meshList[GEO_TEXT], "MESSAGE CHECK : " + std::to_string(message), Color(0, 0, 0), 1, 1, 32);
-	RenderTextOnScreen(meshList[GEO_TEXT], "MISSION CHECK : " + std::to_string(mission), Color(0, 0, 0), 1, 1, 30);
-	
-	for (auto q : Singleton::getInstance()->objectCount)
-	{
-		if (q.first == ore)
-		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Ores: " + std::to_string(q.second + Singleton::getInstance()->oreCount), Color(0, 0, 0), 1, 1, 36);
-		}
-	}
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
-	if (Singleton::getInstance()->buttonText == true)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(Singleton::getInstance()->mousey), Color(0, 0, 0), 1, 1, 44);
 
 	if (Application::IsKeyPressed('I'))
 	{
@@ -1612,6 +1597,26 @@ void SP2::planeLoader(){
 
 
 }
+float SP2::angleBetween(Vector3 &vector1, Vector3 &vector2){
+	//float theta = Math::RadianToDegree(acos());
+	//  if (theta < 0)
+	//    theta = -theta;
+	//return theta;
+	Vector3 initView(-1, 0, 0);
+	Vector3 endView(vector2 - vector1);
+	if (vector1 != vector2){
+		endView.Normalize();
+	}
+	Vector3 normal(0, 1, 0);
+	float theta = Math::RadianToDegree(acos(initView.Dot(endView)));
+	Vector3 cross = initView.Cross(endView);
+	if (cross.Dot(normal) < 0)
+	{
+		theta *= -1;
+	}
+	std::cout << theta << std::endl;
+	return theta;
+}
 void SP2::pause()
 {
 	RenderUI(meshList[GEO_PAUSE_BG], 5, 40, 30, 1.3, 0, 0, 0, false);
@@ -1625,6 +1630,7 @@ void SP2::pause()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario1.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 36, 1, 0, 0, 0, false);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 37, 36);
 			Singleton::getInstance()->stateCheck = true;

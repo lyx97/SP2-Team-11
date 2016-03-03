@@ -869,12 +869,6 @@ void SP2Scene3::Render()
     RenderTextOnScreen(meshList[GEO_TEXT], "POSITION Z: " + std::to_string(camera.position.z), Color(0, 0, 0), 1, 1, 48);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(0, 0, 0), 1, 1, 46);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Z: " + std::to_string(Singleton::getInstance()->mousey), Color(0, 0, 0), 1, 1, 44);
-    RenderTextOnScreen(meshList[GEO_TEXT], "Pause Check" + std::to_string(Singleton::getInstance()->pause), Color(0, 0, 0), 1, 1, 38);
-
-    RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Speed: " + std::to_string(toupper(Singleton::getInstance()->MOUSE_SPEED)), Color(0, 0, 0), 1, 1, 28);
-    if (Singleton::getInstance()->buttonText == true)
-        RenderTextOnScreen(meshList[GEO_TEXT], "Button Click", Color(0, 0, 0), 1, 40, 25);
-
 	if (Application::IsKeyPressed('I'))
 	{
 		RenderUI(meshList[GEO_STATS], 5, 40, 30, 1.3, 0, 0, 0, false);
@@ -1513,6 +1507,7 @@ void SP2Scene3::pause()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario3.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 36, 1, 0, 0, 0, false);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 37, 36);
 			Singleton::getInstance()->stateCheck = true;
