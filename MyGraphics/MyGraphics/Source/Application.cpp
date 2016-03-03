@@ -103,13 +103,13 @@ void Application::Init()
 	glfwWindowHint(GLFW_SAMPLES, 4); //Request 4x antialiasing
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); //Request a specific OpenGL version
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); //Request a specific OpenGL version
-	//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL 
 
 
 	//Create a window and create its OpenGL context
-	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Le Space Xplorer", NULL, NULL);
-	//m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", glfwGetPrimaryMonitor(), NULL);
+	//m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Le Space Xplorer", NULL, NULL);
+	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", glfwGetPrimaryMonitor(), NULL);
 	glfwSetWindowSizeCallback(m_window, resize_callback);
 	
 	//If the window couldn't be created

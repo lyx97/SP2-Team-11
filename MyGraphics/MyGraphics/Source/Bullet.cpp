@@ -4,7 +4,7 @@
 \author Lee Yu Xian
 \author Sri Sham
 \par	email: 155118A\@mymail.nyp.edu.sg
-\par	email: 15#####\@mymail.nyp.edu.sg
+\par	email: 155129R\@mymail.nyp.edu.sg
 \brief
 Class to define the Bullet class
 */

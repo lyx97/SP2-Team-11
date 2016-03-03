@@ -1,3 +1,19 @@
+/****************************************************************************/
+/*!
+\file SP2.cpp
+\author Teo Jia Hao
+\author Sri Sham Haran
+\author Lee Yu Xian
+\author Jacob Yang Shen Ramal
+\par email: kelvinteojiahao\@hotmail.com
+\par email: 155129R\@mymail.nyp.edu.sg
+\par email: 15*****\@mymail.nyp.edu.sg
+\par email: 15*****\@mymail.nyp.edu.sg
+\brief
+Class to define SP2
+*/
+/****************************************************************************/
+
 #include "SP2.h"
 #include "GL\glew.h"
 

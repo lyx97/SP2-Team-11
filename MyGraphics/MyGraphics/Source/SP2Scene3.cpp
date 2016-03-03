@@ -2,9 +2,13 @@
 /*!
 \file SP2Scene3.cpp
 \author Teo Jia Hao
+\author Sri Sham Haran
+\author Lee Yu Xian
 \par email: kelvinteojiahao\@hotmail.com
+\par email: 155129R\@mymail.nyp.edu.sg
+\par email: 15*****\@mymail.nyp.edu.sg
 \brief
-Class to define an SP2Scene3
+Class to define SP2Scene3
 */
 /****************************************************************************/
 #include "SP2Scene3.h"
@@ -1163,6 +1167,18 @@ void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX,
     glEnable(GL_DEPTH_TEST);
 }
 
+/******************************************************************************/
+/*!
+\brief
+Initializes or resets planes/ground quads
+
+\param reset
+Check if method is being used to reset the planes or not
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::planeInit(bool reset){
     if (reset == false){
         plane startingPlane;
@@ -1300,7 +1316,15 @@ void SP2Scene3::planeInit(bool reset){
 
     }
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the position of the plane/ ground quad based on player position
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::planeLoader(){
 
     for (auto iter : planeMap){
@@ -1333,14 +1357,55 @@ void SP2Scene3::planeLoader(){
 
 }
 
+/******************************************************************************/
+/*!
+\brief
+calculate distance from one point to another
+
+\param from
+First vector/intial vector to calculate using
+
+\param to
+Second vector/end vector to calculate using
+
+\exception None
+\return float value of the distance obtained from the vectors that were passed in
+*/
+/******************************************************************************/
+
 float SP2Scene3::distanceBetween(Vector3 from, Vector3 to){
     return sqrt((pow(to.x - from.x, 2)) + (pow(to.z - from.z, 2)));
 }
+/******************************************************************************/
+/*!
+\brief
+calculate magnitude of a vector
 
+\param vector
+Vector to calculate magnitude of
+
+\exception None
+\return float value of the magnitude
+*/
+/******************************************************************************/
 float SP2Scene3::magnitude(Vector3 &vector){
     return sqrt((pow(vector.x, 2) + pow(vector.y, 2) + pow(vector.z, 2)));
 }
+/******************************************************************************/
+/*!
+\brief
+calculate distance from one point to another
 
+\param vector1
+First vector/intial vector to calculate using
+
+\param vector2
+Second vector/end vector to calculate using
+
+\exception None
+\return float value of the angle between the vectors that were passed in
+*/
+/******************************************************************************/
 float SP2Scene3::angleBetween(Vector3 &vector1, Vector3 &vector2){
     float theta = Math::RadianToDegree(acos((vector1.Dot(vector2)) / ((magnitude(vector1)) * (magnitude(vector2))))) * 8;
     if (theta < 0)
@@ -1348,6 +1413,21 @@ float SP2Scene3::angleBetween(Vector3 &vector1, Vector3 &vector2){
     return theta;
 }
 
+/******************************************************************************/
+/*!
+\brief
+Set positions of swords relative to 
+
+\param from
+First vector/intial vector to calculate using
+
+\param to
+Second vector/end vector to calculate using
+
+\exception None
+\return float value of the distance obtained from the vectors that were passed in
+*/
+/******************************************************************************/
 void SP2Scene3::swordSet(bool init)
 {
     float offset = swordDrag;
@@ -1375,11 +1455,6 @@ void SP2Scene3::swordSet(bool init)
             swordVec[6] = Vector3(0, 0, -offset) + boss.position + Vector3(0, swordOffset, 0);
             swordVec[7] = Vector3(offset, 0, -offset) + boss.position + Vector3(0, swordOffset, 0);
             int loop = 0;
-            swordRotation.SetToRotation(spinSword, 0, 1, 0);
-            Mtx44 translateBoss;
-            translateBoss.SetToTranslation(boss.position.x, boss.position.y, boss.position.z);
-            Mtx44 negTranslateBoss;
-            negTranslateBoss.SetToTranslation(-boss.position.x, -boss.position.y, -boss.position.z);
 
             for (auto q : swordObjVec){
                 *q = Object(swordVec[loop], q->size);
