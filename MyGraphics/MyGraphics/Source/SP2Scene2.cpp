@@ -1,3 +1,15 @@
+/****************************************************************************/
+/*!
+\file SP2Scene2.cpp
+\author Jacob Yang Shen
+\author Lee Yu Xian
+\par email: 153488J\@nyp.edu.sg
+\par email: 155118A\@nyp.edu.sg
+\brief
+Second Scene of this project
+*/
+/****************************************************************************/
+
 #include "SP2Scene2.h"
 #include "GL\glew.h"
 
@@ -16,14 +28,32 @@ using std::endl;
 using namespace irrklang;
 #pragma comment(lib, "irrKlang.lib")
 
+/******************************************************************************/
+/*!
+\brief	SP2Scene2 default constructor
+
+/******************************************************************************/
 SP2Scene2::SP2Scene2()
 {
 }
 
+/******************************************************************************/
+/*!
+\brief	SP2Scene2 destructor
+*/
+/******************************************************************************/
 SP2Scene2::~SP2Scene2()
 {
 }
+/******************************************************************************/
+/*!
+\brief
+Initializes for any booleans/strings/floats and meshes
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::Init()
 {
 	// Init VBO here
@@ -210,9 +240,18 @@ void SP2Scene2::Init()
 	}
     Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2;
 }
+/******************************************************************************/
+/*!
+\brief
+Handles all animation and interaction
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::Update(double dt)
 {
+	//check distance between moon and pelican
 	moonDistance = sqrtf((800 - pelicanPos.x) * (800 - pelicanPos.x) + (0 - pelicanPos.y) * (0 - pelicanPos.y) + (0 - pelicanPos.z) * (0 - pelicanPos.z));
 	if (moonDistance < 400)
 	{
@@ -222,6 +261,7 @@ void SP2Scene2::Update(double dt)
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
 		Object::objectMap.clear();
 	}
+	//check for death
 	if (death == true)
 	{
 		SP2Scene2::Reset();
@@ -255,7 +295,7 @@ void SP2Scene2::Update(double dt)
 			Application::ShowCursor();
 		}
 
-
+		// hp check to change UI and death
 		if (hp <= 50)
 			hpMid = true;
 
@@ -297,6 +337,7 @@ void SP2Scene2::Update(double dt)
 			camera.Update(dt);
 		}
 
+		// pelican movement
 		if (Application::IsKeyPressed('W'))
 		{
 			if (momentum.x >= 3)
@@ -316,7 +357,7 @@ void SP2Scene2::Update(double dt)
 			{
 				momentum.z = -3;
 			}
-			
+			// if pelican is facing towards North West
 			if (rotation <= 90 && rotation >= 0)
 			{
 				momentum.x = momentum.x + (handling * dt / 10) + (acceleration*dt/5) * (1 - rotation / 90);
@@ -325,6 +366,7 @@ void SP2Scene2::Update(double dt)
 				pelicanPos.z += momentum.z;
 
 			}
+			// if pelican is facing towards North East
 			else if (rotation >= -90 && rotation <= 0)
 			{
 				momentum.x = momentum.x + (handling * dt / 10) + (acceleration*dt / 5) * (1 + (rotation / 90));
@@ -333,6 +375,7 @@ void SP2Scene2::Update(double dt)
 				pelicanPos.z += momentum.z;
 
 			}
+			// if pelican facing towards South West
 			else if (rotation > 90)
 			{
 				momentum.x = momentum.x - (handling * dt / 10) - (acceleration*dt / 5) * ((rotation - 90) / 90);
@@ -340,6 +383,7 @@ void SP2Scene2::Update(double dt)
 				momentum.z = momentum.z - (handling * dt / 10) - (acceleration*dt / 5) * (1 - (rotation - 90) / 90);
 				pelicanPos.z += momentum.z;
 			}
+			// if pelican facing towards South East
 			else if (rotation < -90)
 			{
 				momentum.x = momentum.x - (handling * dt / 10) + (acceleration*dt / 5) * ((rotation + 90) / 90);
@@ -349,6 +393,7 @@ void SP2Scene2::Update(double dt)
 			}
 
 		}
+		// "friction"
 		if (momentum.x > 0.001)
 		{
 			momentum.x -= dt * handling / 10;
@@ -400,6 +445,7 @@ void SP2Scene2::Update(double dt)
 		{
 			rotation = 180;
 		}
+		// turn left
 		if (Application::IsKeyPressed('A'))
 		{
 			turning = turning + (dt * handling + dt * turningspeed) / 10;
@@ -409,7 +455,7 @@ void SP2Scene2::Update(double dt)
 				turning = 2;
 			}
 		}
-
+		// turn right
 		else if (Application::IsKeyPressed('D'))
 		{
 			turning = turning - (dt * handling + dt * turningspeed) / 10;
@@ -419,7 +465,7 @@ void SP2Scene2::Update(double dt)
 				turning = -2;
 			}
 		}
-
+		// "friction"
 		if (turning >= 0.05)
 		{
 			turning = turning - dt * handling/10;
@@ -437,7 +483,7 @@ void SP2Scene2::Update(double dt)
 				rotation = rotation + turning;
 			}
 		}
-
+		// pelican hits rock
 		for (auto q : Object::objectMap)
 		{
 			if (q.first->hitbox.isTouching(pelicanPos))
@@ -446,14 +492,17 @@ void SP2Scene2::Update(double dt)
 				delete q.first;
 			}
 		}
-
-		
-		if (Application::IsKeyPressed('L'))
-		{
-			handling += 1;
-		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Pushes in the Dialogue into array
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::Dialogue(string filename)
 {
 	ifstream myfile(filename.c_str());
@@ -466,6 +515,15 @@ void SP2Scene2::Dialogue(string filename)
 		my_arr.push_back(new_line);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders mesh
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -511,6 +569,15 @@ void SP2Scene2::RenderMesh(Mesh *mesh, bool enableLight)
 	}
 }
 
+/******************************************************************************/
+/*!
+\brief
+Main rendering
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::Render()
 {
 	// Render VBO here
@@ -606,22 +673,6 @@ void SP2Scene2::Render()
 		camera.position.Set(pelicanPos.x - 150 * ((rotation + 90) / 90), pelicanPos.y + 80, pelicanPos.z - 150 * (1 + (rotation + 90) / 90));
 	}
 	
-	/*if (yawstore <= 90 && yawstore >= 0)
-	{
-		camera.position.Set(pelicanPos.x - 150 * (1 - yawstore / 90), pelicanPos.y + 80, pelicanPos.z + 150 * (yawstore / 90));
-	}
-	if (yawstore >= -90 && yawstore <= 0)
-	{
-		camera.position.Set(pelicanPos.x + 150 * (-1 - yawstore / 90), pelicanPos.y + 80, pelicanPos.z + 150 * (yawstore / 90));
-	}
-	if (yawstore > 90)
-	{
-		camera.position.Set(pelicanPos.x + 150 * ((yawstore - 90) / 90), pelicanPos.y + 80, pelicanPos.z + 150 * (1 - (yawstore - 90) / 90));
-	}
-	if (yawstore < -90)
-	{
-		camera.position.Set(pelicanPos.x - 150 * ((yawstore + 90) / 90), pelicanPos.y + 80, pelicanPos.z - 150 * (1 + (yawstore + 90) / 90));
-	}*/
 	camera.target.Set(pelicanPos.x, pelicanPos.y, pelicanPos.z);
 	camera.up.Set(0, 1, 0);
 	modelStack.PopMatrix();
@@ -674,6 +725,15 @@ void SP2Scene2::Render()
 		pause();
 }
 
+/******************************************************************************/
+/*!
+\brief
+Renders skybox
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::RenderSkybox()
 {
 	modelStack.PushMatrix();
@@ -726,6 +786,15 @@ void SP2Scene2::RenderSkybox()
 
 }
 
+/******************************************************************************/
+/*!
+\brief
+Renders text
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -753,6 +822,15 @@ void SP2Scene2::RenderText(Mesh* mesh, std::string text, Color color)
 	glEnable(GL_DEPTH_TEST);
 }
 
+/******************************************************************************/
+/*!
+\brief
+Renders text on screen
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -793,6 +871,28 @@ void SP2Scene2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
+/******************************************************************************/
+/*!
+\brief
+Renders obj and targa on screen
+
+\param mesh
+Takes in which mesh to render out
+\param size
+Scale of the mesh to render out
+\param x and y
+The position of the mesh
+\param scaleX
+Scale of the mesh
+\param rotatex, rotatey, rotatez
+Rotation of the Mesh
+\param
+Mesh with light
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 {
 	glDisable(GL_DEPTH_TEST);
@@ -824,7 +924,11 @@ void SP2Scene2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
-
+/******************************************************************************/
+/*!
+\brief	Resets the scene back to Scene 1
+*/
+/******************************************************************************/
 void SP2Scene2::Reset()
 {
 	death = false;
@@ -833,6 +937,11 @@ void SP2Scene2::Reset()
 	Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME2R;
 
 }
+/******************************************************************************/
+/*!
+\brief	stops updating
+*/
+/******************************************************************************/
 void SP2Scene2::pause()
 {
 	RenderUI(meshList[GEO_PAUSE_BG], 5, 40, 30, 1.3);
@@ -950,6 +1059,11 @@ void SP2Scene2::pause()
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 1, 1), 1, 38.5, 18);
 	}
 }
+/******************************************************************************/
+/*!
+\brief	Exits the program
+*/
+/******************************************************************************/
 void SP2Scene2::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

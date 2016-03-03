@@ -7,8 +7,8 @@
 \author Jacob Yang Shen Ramal
 \par email: kelvinteojiahao\@hotmail.com
 \par email: 155129R\@mymail.nyp.edu.sg
-\par email: 15*****\@mymail.nyp.edu.sg
-\par email: 15*****\@mymail.nyp.edu.sg
+\par email: 153488J\@mymail.nyp.edu.sg
+\par email: 155118A\@mymail.nyp.edu.sg
 \brief
 Class to define SP2
 */

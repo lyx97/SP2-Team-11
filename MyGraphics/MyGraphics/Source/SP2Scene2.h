@@ -1,3 +1,14 @@
+/****************************************************************************/
+/*!
+\file SP2Scene2.cpp
+\author Jacob Yang Shen
+\author Lee Yu Xian
+\par email: 153488J\@nyp.edu.sg
+\par email: 155118A\@nyp.edu.sg
+\brief
+Second Scene of this project
+*/
+/****************************************************************************/
 #ifndef SP2SCENE2_H
 #define SP2SCENE2_H
 
@@ -18,6 +29,12 @@ using std::vector;
 using std::string;
 using std::ifstream;
 
+/****************************************************************************/
+/*!
+Class SP2Scene2:
+\brief Defines a SP2Scene2 class and its methods
+*/
+/****************************************************************************/
 class SP2Scene2 : public Scene
 {
 	enum GEOMETRY_TYPE

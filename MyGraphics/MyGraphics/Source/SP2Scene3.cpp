@@ -6,7 +6,7 @@
 \author Lee Yu Xian
 \par email: kelvinteojiahao\@hotmail.com
 \par email: 155129R\@mymail.nyp.edu.sg
-\par email: 15*****\@mymail.nyp.edu.sg
+\par email: 155118A\@mymail.nyp.edu.sg
 \brief
 Class to define SP2Scene3
 */
