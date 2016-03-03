@@ -65,10 +65,10 @@ void SP2Scene2::Init()
 	pelicanPos = Vector3(-700, -3, 0);
 	inputDelay = 9.0f;
 	moonDistance = 0;
-	handling = 10 + Singleton::getInstance()->oreCount;
-	turningspeed = 10 + Singleton::getInstance()->oreCount * 2;
-	repair = 10 + Singleton::getInstance()->oreCount;
-	acceleration = 10 + Singleton::getInstance()->oreCount;
+	handling = 1 + Singleton::getInstance()->oreCount;
+	turningspeed = 1 + Singleton::getInstance()->oreCount * 2;
+	repair = 1 + Singleton::getInstance()->oreCount;
+	acceleration = 1 + Singleton::getInstance()->oreCount;
 	hp = 10 * repair;
 
 	Dialogue("Text//NPC.txt");
@@ -223,7 +223,6 @@ void SP2Scene2::Init()
 	meshList[GEO_NPC1] = MeshBuilder::GenerateOBJ("NPC 1", "OBJ//NPC1_MAIN.obj");
 	meshList[GEO_NPC1]->textureID = LoadTGA("Image//NPC.tga");
 
-	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 	srand(time(0));
 	for (int loop = 0; loop < rockfreq; loop++)
 	{
@@ -343,7 +342,6 @@ void SP2Scene2::Update(double dt)
 			if (momentum.x >= 3)
 			{
 				momentum.x = 3;
-				cout << "max" << endl;
 			}
 			else if(momentum.x <= -3)
 			{
@@ -391,7 +389,6 @@ void SP2Scene2::Update(double dt)
 				momentum.z = momentum.z + (handling * dt / 10) + (acceleration*dt / 5) * (1 + (rotation + 90) / 90);
 				pelicanPos.z += momentum.z;
 			}
-
 		}
 		// "friction"
 		if (momentum.x > 0.001)
@@ -414,8 +411,6 @@ void SP2Scene2::Update(double dt)
 		{
 			momentum.x = 0;
 		}
-
-
 		if (momentum.z > 0.0001)
 		{
 			momentum.z -= dt * handling / 10;
@@ -474,7 +469,6 @@ void SP2Scene2::Update(double dt)
 				rotation = rotation + turning;
 			}
 		}
-
 		else if (turning <= -0.05)
 		{
 			turning = turning + dt * handling/10;
@@ -611,39 +605,12 @@ void SP2Scene2::Render()
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
 	modelStack.PushMatrix();
-	//modelStack.Translate(camera.position.x, camera.position.y, camera.position.z);
 	RenderSkybox();
 	modelStack.PopMatrix();
-	//t->r->s
-	//RenderMesh(meshList[GEO_AXES], false);
 
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
-	//RenderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
-	
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(
-		camera.target.x,
-		camera.target.y,
-		camera.target.z
-		);
-	modelStack.Scale(0.1f, 0.1f, 0.1f);
-	//RenderMesh(meshList[GEO_LIGHTBALL], true);
-	modelStack.PopMatrix();
-
-	// hitbox outline
-	for (auto q : Object::objectMap)
-	{
-		modelStack.PushMatrix();
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
-		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-		//RenderMesh(meshList[GEO_HITBOX], false);
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-		modelStack.PopMatrix();
-	}
 
 	modelStack.PushMatrix();
 	modelStack.Translate(800, 0, 0);
