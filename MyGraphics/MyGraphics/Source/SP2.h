@@ -148,6 +148,8 @@ private:
 	float roateQuest = 50.f;
 
 	int planeDistance = 0;
+	int swordDistance = 0;
+	int GunDistance = 0;
     int numPlanes = 2;
 	int oreFrequency;
     int treeFrequency;

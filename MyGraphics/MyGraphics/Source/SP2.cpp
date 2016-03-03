@@ -290,6 +290,8 @@ void SP2::Init()
 void SP2::Update(double dt)
 {
 	planeDistance = sqrtf((shipPos.x - camera.position.x) * (shipPos.x - camera.position.x) + (shipPos.y - camera.position.y) * (shipPos.y - camera.position.y) + (shipPos.z - camera.position.z) * (shipPos.z - camera.position.z));
+	swordDistance = sqrtf((swordPos.x - camera.position.x) * (swordPos.x - camera.position.x) + (swordPos.y - camera.position.y) * (swordPos.y - camera.position.y) + (swordPos.z - camera.position.z) * (swordPos.z - camera.position.z));
+	GunDistance = sqrtf((gunPos.x - camera.position.x) * (gunPos.x - camera.position.x) + (gunPos.y - camera.position.y) * (gunPos.y - camera.position.y) + (gunPos.z - camera.position.z) * (gunPos.z - camera.position.z));
 
 	roateQuest += (float)(40 * dt);
 	if (Singleton::getInstance()->pause == true)
@@ -1193,9 +1195,13 @@ void SP2::Render()
 		RenderUI(meshList[GEO_STATS], 5, 40, 30, 1.3, 0, 0, 0, false);
 
 		RenderUI(meshList[GEO_SWORD], 1, 28, 30, 1, 0, roateQuest, 0, false);
+		if (Singleton::getInstance()->gotSword == false)
+			RenderTextOnScreen(meshList[GEO_TEXT], "Distance: " + std::to_string(swordDistance), Color(1, 1, 1), 1, 35, 32);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Melee damage: " + std::to_string(melee->getDamage() + (Singleton::getInstance()->objectCount[ore] * 2)), Color(1, 1, 1), 1, 35, 30);
 
 		RenderUI(meshList[GEO_GUN], 10, 28, 25, 1, 0, roateQuest, 0, false);
+		if (Singleton::getInstance()->gotGun == false)
+			RenderTextOnScreen(meshList[GEO_TEXT], "Distance: " + std::to_string(GunDistance), Color(1, 1, 1), 1, 35, 27);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Ranged damage: " + std::to_string(ranged->getDamage() + Singleton::getInstance()->objectCount[ore]), Color(1, 1, 1), 1, 35, 25);
 	}
 	if (Singleton::getInstance()->pause == true)
