@@ -501,6 +501,8 @@ void SP2::Update(double dt)
 			if (shipTab >= 65)
 				shipTab = 65;
 		}
+
+
 		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->swordAniDown && !Singleton::getInstance()->swordAniUp && Singleton::getInstance()->gotSword)
 		{
 			sound.playSoundEffect2D("Music//sword.wav");
@@ -670,6 +672,25 @@ void SP2::Update(double dt)
 							Singleton::getInstance()->handDown = true;
 							Singleton::getInstance()->fistDown = true;
 							Inventory::addObject(ore);
+							heldDelay = 0;
+							delete q.first;
+						}
+					}
+				}
+				miningDisplay = true;
+			}
+
+			for (int i = 0; i < treePos.size(); ++i)
+			{
+				if (treePos[i].x == q.first->pos.x && treePos[i].z == q.first->pos.z && Singleton::getInstance()->gotSword == true)
+				{
+					if (Application::IsKeyPressed('E') && q.first->hitbox.isTouching(camera.target))
+					{
+						Singleton::getInstance()->swordAniDown = true;
+
+						heldDelay += 1.f * dt;
+						if (heldDelay > 2)
+						{
 							heldDelay = 0;
 							delete q.first;
 						}
