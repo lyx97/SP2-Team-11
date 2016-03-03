@@ -155,7 +155,7 @@ void SP2::Init()
 
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("LIGHTBALL", Color(1, 1, 1), 10, 20);
 
-	meshList[GEO_CYLIN] = MeshBuilder::GenerateCylin("FIST", Color(0.3f, 0.3f, 0.3f), 36);
+	meshList[GEO_CYLIN] = MeshBuilder::GenerateCylin("FIST", Color(0.5f, 0.8f, 0.8f), 36);
 	meshList[GEO_CIRCLE] = MeshBuilder::GenerateCircle("FIST", Color(1.f, 0.863f, 0.698f), 36);
 
 	meshList[GEO_GROUND] = MeshBuilder::GenerateQuad("GROUND", Color(0.3f, 0.3f, 0.3f), TexCoord(10, 10), 1, 1);
@@ -277,6 +277,8 @@ void SP2::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 	
+	NPC2 = NPC_CLASS("NPC", 100, Vector3(30, 7, 0), Vector3(10, 15, 10));
+
 	ship = new Object(Vector3(shipPos.x, 15, shipPos.z), Vector3(shipSize.x * 6, shipSize.y * 2, shipSize.z * 4));
 	sword = new Object(Vector3(swordPos.x, swordPos.y, swordPos.z), Vector3(7, 20, 7));
 	gun = new Object(Vector3(gunPos.x, gunPos.y, gunPos.z), Vector3(7, 20, 7));
@@ -720,7 +722,8 @@ void SP2::Update(double dt)
 			delete gun;
 		}
 
-		if (!Application::IsKeyPressed('E'))
+
+		if (!Application::IsKeyPressed('E') && !Application::IsKeyPressed(VK_LBUTTON))
 		{
 			heldDelay = 0;
 			pickSword = 0;
@@ -873,7 +876,6 @@ void SP2::Render()
 	modelStack.Scale(4, 4, 4);
 
 	modelStack.PushMatrix();
-	//modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
 

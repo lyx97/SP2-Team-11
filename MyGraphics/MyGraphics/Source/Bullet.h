@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	Inventory.h
+\author Lee Yu Xian & Sri Sham
+\par	
+\brief
+Class to define the Bullet class
+*/
+/******************************************************************************/
 #pragma once
 #include "Vector3.h"
 #include "Object.h"
@@ -5,7 +14,12 @@
 #include <vector>
 
 using std::vector;
-
+/******************************************************************************/
+/*!
+Class Bullet:
+\brief	Defines the bullets and its methods
+*/
+/******************************************************************************/
 class Bullet : public Object
 {
 public:

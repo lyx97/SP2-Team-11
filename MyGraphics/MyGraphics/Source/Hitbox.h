@@ -1,6 +1,20 @@
+/******************************************************************************/
+/*!
+\file	Hitbox.h
+\author Lee Yu Xian
+\par	email: 155118A\@mymail.nyp.edu.sg
+\brief
+Class to define the hitbox class
+*/
+/******************************************************************************/
 #pragma once
 #include "Vector3.h"
-
+/******************************************************************************/
+/*!
+Class Hitbox:
+\brief	Defines the hitboxes and its methods
+*/
+/******************************************************************************/
 class Hitbox
 {
 public:

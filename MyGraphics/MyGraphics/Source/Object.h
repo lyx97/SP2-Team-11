@@ -1,10 +1,24 @@
+/******************************************************************************/
+/*!
+\file	Object.h
+\author Lee Yu Xian
+\par	email: 155118A\@mymail.nyp.edu.sg
+\brief
+Struct to define the object class
+*/
+/******************************************************************************/
 #pragma once
 #include "Hitbox.h"
 #include "Weapon.h"
 #include <map>
 
 using std::map;
-
+/******************************************************************************/
+/*!
+Class Object:
+\brief	Defines an Object and its methods
+*/
+/******************************************************************************/
 class Object
 {
 public:

@@ -190,7 +190,7 @@ private:
     Object* tree;
 	Object* ground;
 
-	NPC_CLASS NPC2 = NPC_CLASS("NPC", 100, Vector3(30, 7, 0), Vector3(10, 15, 10));
+	NPC_CLASS NPC2;
 	float bossLookAtAngle;
 
 	// weapons

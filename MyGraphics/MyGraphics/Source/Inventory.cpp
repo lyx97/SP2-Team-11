@@ -4,7 +4,7 @@
 \author Lee Yu Xian
 \par	email: 155118A\@mymail.nyp.edu.sg
 \brief
-Struct to define the inventory system
+Class to define the inventory system
 */
 /******************************************************************************/
 #include "Inventory.h"
