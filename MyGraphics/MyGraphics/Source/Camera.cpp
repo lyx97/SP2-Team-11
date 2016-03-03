@@ -48,7 +48,7 @@ bool bound(Vector3& camPos)
 void Camera::Update(double dt)
 {
 	static const float CAMERA_SPEED = 100.f;
-	static const float SPRINT_SPEED = 180.f;
+	static const float SPRINT_SPEED = 200.f;
 	static const float JUMP_SPEED = 80.f;
 	
 	Vector3 boundCheckPos = position;

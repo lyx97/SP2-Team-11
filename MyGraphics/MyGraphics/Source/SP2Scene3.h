@@ -191,7 +191,9 @@ private:
     vector<Vector3> treesPos;
     Object* tree;
 
-	Sound sound;
+
+    Sound Sound;
+
 };
 
 #endif

@@ -11,6 +11,8 @@
 
 #include <sstream>
 #include <iostream>
+using namespace irrklang;
+#pragma comment(lib, "irrKlang.lib")
 using std::cout;
 using std::endl;
 using namespace irrklang;
@@ -40,6 +42,8 @@ void SP2Scene3::Init()
 	message = 0;
     planeInit();
     swordSet(true);
+
+    
 
     // Set background color to dark blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -228,9 +232,12 @@ void SP2Scene3::Init()
         tree = new Object(Vector3(q.x, 5, q.z), Vector3(40, 100, 40), true);
     }
 
+
 	melee = new Weapon(5 + (Singleton::getInstance()->oreCount * 2));
 	ranged = new Weapon(3 + Singleton::getInstance()->oreCount);
 	fist = new Weapon(1);
+    Singleton::getInstance()->gotSword = true;
+    Singleton::getInstance()->gotGun = true;
 
 	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
 }
@@ -408,7 +415,7 @@ void SP2Scene3::Update(double dt)
 		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
 		{
 
-            bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 25);
+            bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 8);
 
 			Singleton::getInstance()->gunAniDown = true;
 		}
@@ -476,6 +483,9 @@ void SP2Scene3::Update(double dt)
                     swordOffset += (float)(120 * dt);
                 if (swordDrag < 200)
                     swordDrag += (float)(80 * dt);
+
+                if (rand() % 7 == 0)
+                    bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 8, false);
             }
  
             if (spinSword < 90)
@@ -527,8 +537,7 @@ void SP2Scene3::Update(double dt)
                     if (boss.position.z >= camera.position.z - 40)
                         boss.position.z -= (float)(150 * dt);
                 }
-                if (rand() % 7 == 0)
-                    bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 25, false);
+
             }
         }
 

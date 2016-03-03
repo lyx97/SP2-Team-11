@@ -256,7 +256,7 @@ void SP2::Init()
 	meshList[GEO_SWORD] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//sword.obj");
 	meshList[GEO_SWORD]->textureID = LoadTGA("Image//sword.tga");
 
-	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("SWORD", "OBJ//gun3.obj");
+	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//gun3.obj");
 	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
     
 
@@ -264,8 +264,8 @@ void SP2::Init()
     meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
 
 
-    meshList[GEO_GRASS] = MeshBuilder::GenerateOBJ("GRASS", "OBJ//grassBlock.obj");
-    meshList[GEO_GRASS]->textureID = LoadTGA("Image//grassBlock.tga");
+    meshList[GEO_TENT] = MeshBuilder::GenerateOBJ("TENT", "OBJ//tent.obj");
+    meshList[GEO_TENT]->textureID = LoadTGA("Image//house.tga");
 
 	meshList[GEO_HITBOX] = MeshBuilder::GenerateCube("HITBOX", Color(1, 0, 0));
 
@@ -825,7 +825,7 @@ void SP2::Render()
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 		modelStack.Translate(q.first->pos.x, q.first->pos.y, q.first->pos.z);
 		modelStack.Scale(q.first->size.x, q.first->size.y, q.first->size.z);
-		RenderMesh(meshList[GEO_HITBOX], false);
+		//RenderMesh(meshList[GEO_HITBOX], false);
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		modelStack.PopMatrix();
 	}
@@ -839,12 +839,15 @@ void SP2::Render()
 	}
 
     modelStack.PushMatrix();
-	modelStack.Translate(NPC2.position.x, NPC2.position.y, NPC2.position.z);
+        modelStack.Scale(10, 10, 10);
+    RenderMesh(meshList[GEO_TENT], false);
+    modelStack.PopMatrix();
+
+    modelStack.PushMatrix();
+    	modelStack.Translate(NPC2.position.x, NPC2.position.y, NPC2.position.z);
 	modelStack.Translate(0, -8, 0);
 	//modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
 	modelStack.Scale(4, 4, 4);
-
-	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
 
