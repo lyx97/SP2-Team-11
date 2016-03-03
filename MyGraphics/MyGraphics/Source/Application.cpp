@@ -108,8 +108,8 @@ void Application::Init()
 
 
 	//Create a window and create its OpenGL context
-	//m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Le Space Xplorer", NULL, NULL);
-	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", glfwGetPrimaryMonitor(), NULL);
+	m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Le Space Xplorer", NULL, NULL);
+	//m_window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Computer Graphics Hell Yeah", glfwGetPrimaryMonitor(), NULL);
 	glfwSetWindowSizeCallback(m_window, resize_callback);
 	
 	//If the window couldn't be created

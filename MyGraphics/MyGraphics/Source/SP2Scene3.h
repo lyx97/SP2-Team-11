@@ -80,6 +80,7 @@ class SP2Scene3 : public Scene
 		GEO_PAUSE_BG,
 		GEO_PAUSE_BUTTONS,
 		GEO_PAUSE_BUTTONS_HOVER,
+		GEO_WIN_BG,
 		GEO_CYLIN,
 		GEO_CIRCLE,
 
@@ -136,6 +137,7 @@ private:
     float distanceBetween(Vector3 from, Vector3 to);
     void swordSet(bool init = false);
 	void pause();
+	void win();
 
     Camera camera;
     Light light[10];

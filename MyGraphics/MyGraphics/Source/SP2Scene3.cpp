@@ -231,6 +231,9 @@ void SP2Scene3::Init()
 	meshList[GEO_MESSAGEBOX] = MeshBuilder::GenerateQuad("MESSAGEBOX", Color(1, 1, 1), TexCoord(1, 1), 6, 3);
 	meshList[GEO_MESSAGEBOX]->textureID = LoadTGA("Image//messageBox.tga");
 
+	meshList[GEO_WIN_BG] = MeshBuilder::GenerateQuad("WinUI", Color(1, 1, 1), TexCoord(1, 1), 3, 3);
+	meshList[GEO_WIN_BG]->textureID = LoadTGA("Image//background5.tga");
+
 	meshList[GEO_PAUSE_BG] = MeshBuilder::GenerateQuad("PauseUI", Color(1, 1, 1), TexCoord(1, 1), 3, 4);
 	meshList[GEO_PAUSE_BG]->textureID = LoadTGA("Image//background4.tga");
 
@@ -287,326 +290,331 @@ Handles all animation and interaction
 /******************************************************************************/
 void SP2Scene3::Update(double dt)
 {
-    if (Application::IsKeyPressed('1')) //enable back face culling
-        glEnable(GL_CULL_FACE);
-    if (Application::IsKeyPressed('2')) //disable back face culling
-        glDisable(GL_CULL_FACE);
-    if (Application::IsKeyPressed('3'))
-        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-    if (Application::IsKeyPressed('4'))
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+	if (Application::IsKeyPressed('1')) //enable back face culling
+		glEnable(GL_CULL_FACE);
+	if (Application::IsKeyPressed('2')) //disable back face culling
+		glDisable(GL_CULL_FACE);
+	if (Application::IsKeyPressed('3'))
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+	if (Application::IsKeyPressed('4'))
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 
-	cout << melee->getDamage() << endl;
-	if (startDialogue)
+	if (!bossDead)
 	{
-		if (Application::IsKeyPressed('E') && inputDelay >= 1)
+		cout << melee->getDamage() << endl;
+		if (startDialogue)
 		{
-			message++;
-			inputDelay = 0;
-
-			if (message > 2)
+			if (Application::IsKeyPressed('E') && inputDelay >= 1)
 			{
+				message++;
+				inputDelay = 0;
+
+				if (message > 2)
+				{
+					activateBattle = true;
+					//message = 0;
+					//inputDelay = 0;
+				}
+			}
+		}
+
+		planeDistance = sqrtf((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
+		roateQuest += (float)(40 * dt);
+
+		if (Singleton::getInstance()->pause == true)
+		{
+			pause();
+
+			if (Application::IsKeyPressed('O'))
+			{
+				Application::HideCursor();
+				Application::SetMousePosition(0, 0);
+				Singleton::getInstance()->pause = false;
+			}
+		}
+		else
+		{
+
+			ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
+
+			if ((GetKeyState(VK_LBUTTON) & 0x100) != 0 && !swordAniDown && !swordAniUp)
+			{
+				swordAniDown = true;
+			}
+			if (swordAniDown)
+			{
+				Singleton::getInstance()->rotateSword += (float)(500 * dt);
+				if (Singleton::getInstance()->rotateSword >= 120)
+				{
+					swordAniDown = false;
+					swordAniUp = true;
+				}
+			}
+			if (swordAniUp)
+			{
+				Singleton::getInstance()->rotateSword -= (float)(500 * dt);
+				if (Singleton::getInstance()->rotateSword <= 20)
+				{
+					swordAniDown = false;
+					swordAniUp = false;
+				}
+			}
+
+			if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->handUp && !Singleton::getInstance()->handDown)
+			{
+				Singleton::getInstance()->handDown = true;
+			}
+			if (Singleton::getInstance()->handDown)
+			{
+				Singleton::getInstance()->rotateHand -= (float)(150 * dt);
+				if (Singleton::getInstance()->rotateHand <= 30)
+				{
+					Singleton::getInstance()->handDown = false;
+					Singleton::getInstance()->handUp = true;
+				}
+			}
+			if (Singleton::getInstance()->handUp)
+			{
+				Singleton::getInstance()->rotateHand += (float)(150 * dt);
+				if (Singleton::getInstance()->rotateHand >= 45)
+				{
+					Singleton::getInstance()->handDown = false;
+					Singleton::getInstance()->handUp = false;
+				}
+			}
+
+			if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->fistDown && !Singleton::getInstance()->fistUp)
+			{
+				sound.playSoundEffect2D("Music//sword.wav");
+				Singleton::getInstance()->fistDown = true;
+			}
+			if (Singleton::getInstance()->fistDown)
+			{
+				Singleton::getInstance()->moveFist -= (float)(50 * dt);
+				if (Singleton::getInstance()->moveFist <= 5)
+				{
+					Singleton::getInstance()->fistDown = false;
+					Singleton::getInstance()->fistUp = true;
+				}
+			}
+			if (Singleton::getInstance()->fistUp)
+			{
+				Singleton::getInstance()->moveFist += (float)(50 * dt);
+				if (Singleton::getInstance()->moveFist >= 10)
+				{
+					Singleton::getInstance()->fistDown = false;
+					Singleton::getInstance()->fistUp = false;
+				}
+			}
+			Singleton::getInstance()->gotSword = true;
+			for (auto q : Object::objectMap){
+
+				for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
+				{
+					(*it)->pos += (*it)->dir * (*it)->speed * dt;
+					if (boss.object->hitbox.isTouching((*it)->pos)){
+						boss.health -= 0.1f;
+					}
+					if (distanceBetween((*it)->pos, boss.position) > 200){
+
+						delete *it;
+						it = Bullet::bulletVec.erase(it);
+
+					}
+					//else if (q.first->hitbox.isTouching((*it)->pos)){
+					//    delete *it;
+					//    it = Bullet::bulletVec.erase(it);
+
+					//}
+					else{
+						it++;
+					}
+
+				}
+
+				for (vector<Bullet*>::iterator it = Bullet::bossBulletVec.begin(); it != Bullet::bossBulletVec.end();)
+				{
+					(*it)->pos += (*it)->dir * (*it)->speed * dt;
+					//if (distanceBetween(boss.position, camera.position) < 30){
+					//    Bullet::bossBulletVec.clear();
+
+
+					//}
+					if (distanceBetween((*it)->position, boss.position) > 500){
+
+						delete *it;
+						it = Bullet::bossBulletVec.erase(it);
+
+					}
+
+					else if (distanceBetween((*it)->position, camera.position) < 90){
+
+						Singleton::getInstance()->health -= 1;
+						delete *it;
+						it = Bullet::bossBulletVec.erase(it);
+
+					}
+
+					else{
+						it++;
+					}
+				}
+
+			}
+			if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
+			{
+				sound.playSoundEffect2D("Music//laser.wav");
+				bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 8);
+
+				Singleton::getInstance()->gunAniDown = true;
+			}
+			if (Singleton::getInstance()->gunAniDown)
+			{
+				Singleton::getInstance()->rotateGun += (float)(500 * dt);
+				if (Singleton::getInstance()->rotateGun >= 50)
+				{
+					Singleton::getInstance()->gunAniDown = false;
+					Singleton::getInstance()->gunAniUp = true;
+				}
+			}
+			if (Singleton::getInstance()->gunAniUp)
+			{
+				Singleton::getInstance()->rotateGun -= (float)(100 * dt);
+				if (Singleton::getInstance()->rotateGun <= 20)
+				{
+					Singleton::getInstance()->gunAniDown = false;
+					Singleton::getInstance()->gunAniUp = false;
+				}
+			}
+			if (Application::IsKeyPressed('P'))
+			{
+				Application::ShowCursor();
+				Singleton::getInstance()->pause = true;
+			}
+
+			if (Singleton::getInstance()->health <= 50) hpMid = true;
+			if (Singleton::getInstance()->health <= 25) hpLow = true;
+			if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
+
+			if (Singleton::getInstance()->health >= 50) hpMid = false;
+			if (Singleton::getInstance()->health >= 25) hpLow = false;
+			if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
+			if (Application::IsKeyPressed('R'))
+			{
+				bool reset = true;
+				planeInit(reset);
+			}
+			if (Application::IsKeyPressed('Z'))
+				light[0].type = Light::LIGHT_POINT;
+			glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+			if (Application::IsKeyPressed('X'))
+				light[0].type = Light::LIGHT_DIRECTIONAL;
+			glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+			if (Application::IsKeyPressed('C'))
+				light[0].type = Light::LIGHT_SPOT;
+			glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
+
+			FPS = std::to_string(toupper(1 / dt));
+			if (Application::IsKeyPressed('B'))
 				activateBattle = true;
-				//message = 0;
-				//inputDelay = 0;
+			planeLoader();
+			if (activateBattle){
+				swordSet(false);
+
+				if (distanceBetween(boss.object->pos, camera.target) < 140){
+					if (swordOffset > 7)
+						swordOffset -= (float)(130 * dt);
+					if (swordDrag >= 25)
+						swordDrag -= (float)(80 * dt);
+				}
+				else{
+					if (swordOffset < 80)
+						swordOffset += (float)(120 * dt);
+					if (swordDrag < 200)
+						swordDrag += (float)(80 * dt);
+
+					if (rand() % 7 == 0)
+						bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 8, false);
+				}
+
+				if (spinSword < 90)
+					spinSword += 1;
+				else spinSword -= 180;
+				boss.setPos(boss.position);
+				if (boss.health <= 0)
+				{
+					Application::ShowCursor();
+					bossDead = true;
+					boss.object->objectMap.erase(boss.object);
+					for (auto q : swordObjVec){
+						q->objectMap.erase(q);
+					}
+					Bullet::bossBulletVec.clear();
+				}
+				for (auto q : swordObjVec){
+
+					if ((q->hitbox.isTouching(camera.position)) && bossDead == false)
+						Singleton::getInstance()->health -= 1;
+					if (distanceBetween(q->pos, camera.position) < 12 && bossDead == false)
+						Singleton::getInstance()->health -= 1;
+
+				}
+				if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30)
+				{
+					if (Singleton::getInstance()->gotSword)
+					{
+						boss.health -= melee->getDamage();
+					}
+					else if (Singleton::getInstance()->gotGun)
+					{
+						boss.health -= ranged->getDamage();
+					}
+					else
+					{
+						boss.health -= fist->getDamage();
+					}
+				}
+				if (boss.health > 1){
+					if (distanceBetween(boss.position, camera.position) >= 30){
+						if (boss.position.x <= camera.position.x + 40)
+							boss.position.x += (float)(150 * dt);
+
+						if (boss.position.x >= camera.position.x - 40)
+							boss.position.x -= (float)(150 * dt);
+
+						if (boss.position.z <= camera.position.z + 40)
+							boss.position.z += (float)(150 * dt);
+
+						if (boss.position.z >= camera.position.z - 40)
+							boss.position.z -= (float)(150 * dt);
+					}
+
+				}
+			}
+
+			if (!Application::IsKeyPressed('E'))
+			{
+				heldDelay = 0;
+				pickSword = 0;
+				swordPos.y = 5;
+				miningDisplay = false;
+			}
+			if (inputDelay <= 1.0f)
+			{
+				inputDelay += (float)(1 * dt);
+			}
+			if (activateBattle)
+				camera.Update(dt);
+			if (Singleton::getInstance()->health <= 0)
+			{
+				sound.stopMusic("Music//scenario3.mp3");
+				Singleton::getInstance()->stateCheck = true;
+				Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
+				Object::objectMap.clear();
+				Singleton::getInstance()->health = 100;
 			}
 		}
 	}
-
-    planeDistance = sqrtf ((cameraStore.x - camera.position.x) * (cameraStore.x - camera.position.x) + (cameraStore.y - camera.position.y) * (cameraStore.y - camera.position.y) + (cameraStore.z - camera.position.z) * (cameraStore.z - camera.position.z));
-	roateQuest += (float)(40 * dt);
-
-    if (Singleton::getInstance()->pause == true)
-    {
-		pause();
-
-        if (Application::IsKeyPressed('O'))
-        {
-			Application::HideCursor();
-			Application::SetMousePosition(0, 0);
-            Singleton::getInstance()->pause = false;
-        }
-    }
-    else
-    {
-
-		ground->setPos(Vector3(camera.position.x, 7, camera.position.z));
-
-        if ((GetKeyState(VK_LBUTTON) & 0x100) != 0 && !swordAniDown && !swordAniUp)
-        {
-            swordAniDown = true;
-        }
-        if (swordAniDown)
-        {
-			Singleton::getInstance()->rotateSword += (float)(500 * dt);
-			if (Singleton::getInstance()->rotateSword >= 120)
-            {
-                swordAniDown = false;
-                swordAniUp = true;
-            }
-        }
-        if (swordAniUp)
-        {
-			Singleton::getInstance()->rotateSword -= (float)(500 * dt);
-			if (Singleton::getInstance()->rotateSword <= 20)
-            {
-                swordAniDown = false;
-                swordAniUp = false;
-            }
-        }
-
-		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->handUp && !Singleton::getInstance()->handDown)
-		{
-			Singleton::getInstance()->handDown = true;
-		}
-		if (Singleton::getInstance()->handDown)
-		{
-			Singleton::getInstance()->rotateHand -= (float)(150 * dt);
-			if (Singleton::getInstance()->rotateHand <= 30)
-			{
-				Singleton::getInstance()->handDown = false;
-				Singleton::getInstance()->handUp = true;
-			}
-		}
-		if (Singleton::getInstance()->handUp)
-		{
-			Singleton::getInstance()->rotateHand += (float)(150 * dt);
-			if (Singleton::getInstance()->rotateHand >= 45)
-			{
-				Singleton::getInstance()->handDown = false;
-				Singleton::getInstance()->handUp = false;
-			}
-		}
-
-		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->fistDown && !Singleton::getInstance()->fistUp)
-		{
-			sound.playSoundEffect2D("Music//sword.wav");
-			Singleton::getInstance()->fistDown = true;
-		}
-		if (Singleton::getInstance()->fistDown)
-		{
-			Singleton::getInstance()->moveFist -= (float)(50 * dt);
-			if (Singleton::getInstance()->moveFist <= 5)
-			{
-				Singleton::getInstance()->fistDown = false;
-				Singleton::getInstance()->fistUp = true;
-			}
-		}
-		if (Singleton::getInstance()->fistUp)
-		{
-			Singleton::getInstance()->moveFist += (float)(50 * dt);
-			if (Singleton::getInstance()->moveFist >= 10)
-			{
-				Singleton::getInstance()->fistDown = false;
-				Singleton::getInstance()->fistUp = false;
-			}
-		}
-		Singleton::getInstance()->gotSword = true;
-        for (auto q : Object::objectMap){
-        
-            for (vector<Bullet*>::iterator it = Bullet::bulletVec.begin(); it != Bullet::bulletVec.end();)
-		    {
-                (*it)->pos += (*it)->dir * (*it)->speed * dt;
-                if (boss.object->hitbox.isTouching((*it)->pos)){
-                    boss.health -= 0.1f;
-                }
-                if (distanceBetween((*it)->pos, boss.position) > 200){
-
-                    delete *it;   
-                    it = Bullet::bulletVec.erase(it);
-
-                }
-                //else if (q.first->hitbox.isTouching((*it)->pos)){
-                //    delete *it;
-                //    it = Bullet::bulletVec.erase(it);
-
-                //}
-                else{
-                    it++;
-                }
-
-		    }
-
-                for (vector<Bullet*>::iterator it = Bullet::bossBulletVec.begin(); it != Bullet::bossBulletVec.end();)
-                {
-                    (*it)->pos += (*it)->dir * (*it)->speed * dt;
-                    //if (distanceBetween(boss.position, camera.position) < 30){
-                    //    Bullet::bossBulletVec.clear();
-
-
-                    //}
-                    if (distanceBetween((*it)->position, boss.position) > 500){
-
-                        delete *it;
-                        it = Bullet::bossBulletVec.erase(it);
-
-                    }
-
-                    else if (distanceBetween((*it)->position, camera.position) < 90){
-
-                            Singleton::getInstance()->health -= 1;
-                            delete *it;
-                            it = Bullet::bossBulletVec.erase(it);
-                        
-                    }
-
-                    else{
-                        it++;
-                    }
-                }
-            
-        }
-		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
-		{
-			sound.playSoundEffect2D("Music//laser.wav");
-            bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 8);
-
-			Singleton::getInstance()->gunAniDown = true;
-		}
-		if (Singleton::getInstance()->gunAniDown)
-		{
-			Singleton::getInstance()->rotateGun += (float)(500 * dt);
-			if (Singleton::getInstance()->rotateGun >= 50)
-			{
-				Singleton::getInstance()->gunAniDown = false;
-				Singleton::getInstance()->gunAniUp = true;
-			}
-		}
-		if (Singleton::getInstance()->gunAniUp)
-		{
-			Singleton::getInstance()->rotateGun -= (float)(100 * dt);
-			if (Singleton::getInstance()->rotateGun <= 20)
-			{
-				Singleton::getInstance()->gunAniDown = false;
-				Singleton::getInstance()->gunAniUp = false;
-			}
-		}
-        if (Application::IsKeyPressed('P'))
-        {
-			Application::ShowCursor();
-            Singleton::getInstance()->pause = true;
-        }
-
-        if (Singleton::getInstance()->health <= 50) hpMid = true;
-        if (Singleton::getInstance()->health <= 25) hpLow = true;
-        if (Singleton::getInstance()->health <= 0) Singleton::getInstance()->health = 0;
-
-        if (Singleton::getInstance()->health >= 50) hpMid = false;
-        if (Singleton::getInstance()->health >= 25) hpLow = false;
-        if (Singleton::getInstance()->health >= 100) Singleton::getInstance()->health = 100;
-        if (Application::IsKeyPressed('R'))
-        {
-            bool reset = true;
-            planeInit(reset);
-        }
-        if (Application::IsKeyPressed('Z'))
-            light[0].type = Light::LIGHT_POINT;
-        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-        if (Application::IsKeyPressed('X'))
-            light[0].type = Light::LIGHT_DIRECTIONAL;
-        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-        if (Application::IsKeyPressed('C'))
-            light[0].type = Light::LIGHT_SPOT;
-        glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-
-        FPS = std::to_string(toupper(1 / dt));
-        if (Application::IsKeyPressed('B'))
-            activateBattle = true;
-        planeLoader();
-        if (activateBattle){
-            swordSet(false);
-
-            if (distanceBetween(boss.object->pos, camera.target) < 140){
-                if (swordOffset > 7)
-                    swordOffset -= (float)(130 * dt);
-                if (swordDrag >= 25)
-                    swordDrag -= (float)(80 * dt);
-            }
-            else{
-                if (swordOffset < 80)
-                    swordOffset += (float)(120 * dt);
-                if (swordDrag < 200)
-                    swordDrag += (float)(80 * dt);
-
-                if (rand() % 7 == 0)
-                    bullet = new Bullet(boss.position + Vector3(0, 40, 0), Vector3(1, 1, 1), (camera.position - Vector3(0, 40, 0) - boss.position).Normalized(), 8, false);
-            }
- 
-            if (spinSword < 90)
-                spinSword += 1;
-            else spinSword -= 180;
-            boss.setPos(boss.position);
-            if (boss.health <= 0){
-                bossDead = true;
-                boss.object->objectMap.erase(boss.object);
-                for (auto q : swordObjVec){
-                    q->objectMap.erase(q);
-                }
-                Bullet::bossBulletVec.clear();
-            }
-            for (auto q : swordObjVec){
-
-                if ((q->hitbox.isTouching(camera.position)) && bossDead == false)
-                    Singleton::getInstance()->health -= 1;
-                if (distanceBetween(q->pos, camera.position) < 12 && bossDead == false)
-                    Singleton::getInstance()->health -= 1;
-
-            }
-            if ((GetKeyState(VK_LBUTTON) & 0x100) && distanceBetween(boss.object->pos, camera.target) < 30)
-            {
-				if (Singleton::getInstance()->gotSword)
-				{
-					boss.health -= melee->getDamage();
-				}
-				else if (Singleton::getInstance()->gotGun)
-				{
-					boss.health -= ranged->getDamage();
-				}
-				else
-				{
-					boss.health -= fist->getDamage();
-				}
-            }
-            if (boss.health > 1){
-                if (distanceBetween(boss.position, camera.position) >= 30){
-                    if (boss.position.x <= camera.position.x + 40)
-                        boss.position.x += (float)(150 * dt);
-
-                    if (boss.position.x >= camera.position.x - 40)
-                        boss.position.x -= (float)(150 * dt);
-
-                    if (boss.position.z <= camera.position.z + 40)
-                        boss.position.z += (float)(150 * dt);
-
-                    if (boss.position.z >= camera.position.z - 40)
-                        boss.position.z -= (float)(150 * dt);
-                }
-
-            }
-        }
-
-        if (!Application::IsKeyPressed('E'))
-        {
-            heldDelay = 0;
-            pickSword = 0;
-            swordPos.y = 5;
-            miningDisplay = false;
-        }
-        if (inputDelay <= 1.0f)
-        {
-            inputDelay += (float)(1 * dt);
-        }
-		if (activateBattle)
-			camera.Update(dt);
-        if (Singleton::getInstance()->health <= 0)
-		{
-			sound.stopMusic("Music//scenario3.mp3");
-            Singleton::getInstance()->stateCheck = true;
-            Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
-            Object::objectMap.clear();
-            Singleton::getInstance()->health = 100;
-        }
-    }
 }
 /******************************************************************************/
 /*!
@@ -878,6 +886,10 @@ void SP2Scene3::Render()
 
 	if (Singleton::getInstance()->pause == true)
 		pause();
+	if (bossDead == true)
+	{
+		win();
+	}
 }
 /******************************************************************************/
 /*!
@@ -1587,6 +1599,66 @@ void SP2Scene3::pause()
 	{
 		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 18, 1, 0, 0, 0, false);
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 1, 1), 1, 38.5, 18);
+	}
+}
+void SP2Scene3::win()
+{
+	RenderUI(meshList[GEO_WIN_BG], 5, 40, 35, 1.3, 0, 0, 0, false);
+
+	/////////////////////////////
+	//     MAINMENU BUTTON     //
+	/////////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(468 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 398 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 36, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 37, 36);
+			Singleton::getInstance()->stateCheck = true;
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_MENU;
+			Object::objectMap.clear();
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 36, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 37, 36);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 36, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 1, 1), 1, 37, 36);
+	}
+	/////////////////////////
+	//     EXIT BUTTON     //
+	/////////////////////////
+	if ((1152 * SCREEN_WIDTH / 1920 > Singleton::getInstance()->mousex && 767 * SCREEN_WIDTH / 1920 < Singleton::getInstance()->mousex) &&
+		(575 * SCREEN_HEIGHT / 1080 > Singleton::getInstance()->mousey && 505 * SCREEN_HEIGHT / 1080 <Singleton::getInstance()->mousey))
+	{
+		//MOUSE CLICK
+		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 0, 0), 1, 38.5, 30);
+			Object::objectMap.clear();
+			Singleton::getInstance()->program_state = Singleton::PROGRAM_EXIT;
+		}
+		//MOUSE HOVER
+		else
+		{
+			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1, 0, 0, 0, false);
+			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 0, 0), 1, 38.5, 30);
+		}
+	}
+	//DEFAULT
+	else
+	{
+		RenderUI(meshList[GEO_PAUSE_BUTTONS], 1, 40, 30, 1, 0, 0, 0, false);
+		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 1, 1), 1, 38.5, 30);
 	}
 }
 /******************************************************************************/
