@@ -656,6 +656,7 @@ void SP2::Update(double dt)
 		}
         if (Application::IsKeyPressed('R'))
         {
+			sound.stopMusic("Music//scenario1.mp3");
 			Object::objectMap.clear();
 			Singleton::getInstance()->stateCheck = true;
 			Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME;

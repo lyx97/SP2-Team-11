@@ -1594,6 +1594,7 @@ void SP2Scene3::pause()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario3.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 18, 1, 0, 0, 0, false);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 0, 0), 1, 38.5, 18);
 			Object::objectMap.clear();
@@ -1626,6 +1627,7 @@ void SP2Scene3::win()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario3.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 36, 1, 0, 0, 0, false);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[35], Color(1, 0, 0), 1, 37, 36);
 			Singleton::getInstance()->stateCheck = true;
@@ -1654,6 +1656,7 @@ void SP2Scene3::win()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario3.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 30, 1, 0, 0, 0, false);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 0, 0), 1, 38.5, 30);
 			Object::objectMap.clear();

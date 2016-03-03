@@ -925,6 +925,7 @@ void SP2Scene2::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX)
 /******************************************************************************/
 void SP2Scene2::Reset()
 {
+	sound.stopMusic("Music//scenario2.mp3");
 	death = false;
 	Object::objectMap.clear();
 	Singleton::getInstance()->stateCheck = true;
