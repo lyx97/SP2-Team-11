@@ -28,7 +28,7 @@ void SP2Scene2::Init()
 {
 	// Init VBO here
 
-	sound.playMusic("Music//Music.mp3");
+	sound.playMusic("Music//scenario2.mp3");
 	Application::HideCursor();
 	Singleton::getInstance()->pause = false;
 	Singleton::getInstance()->buttonText = false;
@@ -216,6 +216,7 @@ void SP2Scene2::Update(double dt)
 	moonDistance = sqrtf((800 - pelicanPos.x) * (800 - pelicanPos.x) + (0 - pelicanPos.y) * (0 - pelicanPos.y) + (0 - pelicanPos.z) * (0 - pelicanPos.z));
 	if (moonDistance < 400)
 	{
+		sound.stopMusic("Music//scenario2.mp3");
 		moonDistance = 400;
 		Singleton::getInstance()->stateCheck = true;
 		Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
@@ -901,6 +902,7 @@ void SP2Scene2::pause()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario2.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 24, 1);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 0, 0), 1, 37.5, 24);
 			Singleton::getInstance()->stateCheck = true;

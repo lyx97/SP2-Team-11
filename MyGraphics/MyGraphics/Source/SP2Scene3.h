@@ -192,7 +192,7 @@ private:
     Object* tree;
 
 
-    Sound Sound;
+    Sound sound;
 
 };
 

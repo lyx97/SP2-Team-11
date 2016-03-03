@@ -33,4 +33,5 @@ Your Ship has crashed!
 Collect more Ores to upgrade your ship.
 RESUME
 RESTART
+MAINMENU
 EXIT

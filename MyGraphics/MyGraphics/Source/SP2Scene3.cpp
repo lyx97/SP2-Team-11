@@ -27,7 +27,7 @@ SP2Scene3::~SP2Scene3()
 void SP2Scene3::Init()
 {
 	startDialogue = true;
-	//sound.playMusic("Music//Music.mp3");
+	sound.playMusic("Music//scenario3.mp3");
 
     // Init VBO here
 	Dialogue("Text//NPC.txt");
@@ -335,6 +335,7 @@ void SP2Scene3::Update(double dt)
 
 		if (Application::IsKeyPressed(VK_LBUTTON) && !Singleton::getInstance()->fistDown && !Singleton::getInstance()->fistUp)
 		{
+			sound.playSoundEffect2D("Music//sword.wav");
 			Singleton::getInstance()->fistDown = true;
 		}
 		if (Singleton::getInstance()->fistDown)
@@ -412,7 +413,7 @@ void SP2Scene3::Update(double dt)
         }
 		if (Application::IsKeyPressed(VK_RBUTTON) && !Singleton::getInstance()->gunAniDown && !Singleton::getInstance()->gunAniUp && Singleton::getInstance()->gotGun)
 		{
-
+			sound.playSoundEffect2D("Music//laser.wav");
             bullet = new Bullet(Vector3(camera.target), Vector3(1, 1, 1), Vector3(camera.view), 8);
 
 			Singleton::getInstance()->gunAniDown = true;
@@ -552,7 +553,9 @@ void SP2Scene3::Update(double dt)
         }
 		if (activateBattle)
 			camera.Update(dt);
-        if (Singleton::getInstance()->health <= 0){
+        if (Singleton::getInstance()->health <= 0)
+		{
+			sound.stopMusic("Music//scenario3.mp3");
             Singleton::getInstance()->stateCheck = true;
             Singleton::getInstance()->program_state = Singleton::PROGRAM_GAME3;
             Object::objectMap.clear();
@@ -1343,6 +1346,7 @@ void SP2Scene3::pause()
 		//MOUSE CLICK
 		if ((GetKeyState(VK_LBUTTON) & 0x100) != 0)
 		{
+			sound.stopMusic("Music//scenario3.mp3");
 			RenderUI(meshList[GEO_PAUSE_BUTTONS_HOVER], 1, 40, 24, 1, 0, 0, 0, false);
 			RenderTextOnScreen(meshList[GEO_TEXT], my_arr[34], Color(1, 0, 0), 1, 37.5, 24);
 			Singleton::getInstance()->stateCheck = true;
