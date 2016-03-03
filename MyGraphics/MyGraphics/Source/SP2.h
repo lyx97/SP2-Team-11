@@ -71,6 +71,7 @@ class SP2 : public Scene
 		GEO_PAUSE_BUTTONS_HOVER,
 		GEO_SHIPDISTANCETAB,
         GEO_TENT,
+
 		NUM_GEOMETRY,
 	};
 	enum UNIFORM_TYPE

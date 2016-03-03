@@ -258,11 +258,9 @@ void SP2::Init()
 
 	meshList[GEO_GUN] = MeshBuilder::GenerateOBJ("GUN", "OBJ//gun3.obj");
 	meshList[GEO_GUN]->textureID = LoadTGA("Image//gun3.tga");
-    
 
     meshList[GEO_TREE] = MeshBuilder::GenerateOBJ("TREE", "OBJ//tree.obj");
     meshList[GEO_TREE]->textureID = LoadTGA("Image//tree.tga");
-
 
     meshList[GEO_TENT] = MeshBuilder::GenerateOBJ("TENT", "OBJ//tent.obj");
     meshList[GEO_TENT]->textureID = LoadTGA("Image//house.tga");
@@ -839,15 +837,17 @@ void SP2::Render()
 	}
 
     modelStack.PushMatrix();
-        modelStack.Scale(10, 10, 10);
+	modelStack.Scale(10, 10, 10);
     RenderMesh(meshList[GEO_TENT], false);
     modelStack.PopMatrix();
 
     modelStack.PushMatrix();
-    	modelStack.Translate(NPC2.position.x, NPC2.position.y, NPC2.position.z);
+    modelStack.Translate(NPC2.position.x, NPC2.position.y, NPC2.position.z);
 	modelStack.Translate(0, -8, 0);
-	//modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
 	modelStack.Scale(4, 4, 4);
+
+	modelStack.PushMatrix();
+	//modelStack.Rotate(angleBetween(boss.position, camera.position), 0, 1, 0);
 	RenderMesh(meshList[GEO_NPC1], true);
 	modelStack.PopMatrix();
 
