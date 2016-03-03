@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file NPC.h
+\author Teo Jia Hao
+\par email: kelvinteojiahao\@hotmail.com
+\brief
+Class to define an NPC
+*/
+/****************************************************************************/
 #ifndef NPC_H
 #define NPC_H
 
@@ -9,6 +18,12 @@
 using std::string;
 using std::vector;
 
+/****************************************************************************/
+/*!
+Class NPC_CLASS:
+\brief Defines a NPC class and its methods
+*/
+/****************************************************************************/
 class NPC_CLASS
 {
 public:
@@ -28,4 +43,4 @@ public:
 	Object* object;
 };
 
-#endif /*BOSS_H*/
+#endif /*NPC_H*/

@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file MainMenu.h
+\author Teo Jia Hao
+\par email: kelvinteojiahao\@hotmail.com
+\brief
+Class to define an MainMenu
+*/
+/****************************************************************************/
 #ifndef MAIN_MENU_H
 #define MAIN_MENU_H
 #include <string>
@@ -16,7 +25,12 @@
 using std::string;
 using std::ifstream;
 using std::vector;
-
+/****************************************************************************/
+/*!
+Class MainMenu:
+\brief Defines a MainMenu class and its methods
+*/
+/****************************************************************************/
 class MainMenu : public Scene
 {
 	enum MENU_STATE

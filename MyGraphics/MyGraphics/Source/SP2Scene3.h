@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SP2Scene3.h
+\author Teo Jia Hao
+\par email: kelvinteojiahao\@hotmail.com
+\brief
+Class to define an SP2Scene3
+*/
+/****************************************************************************/
 #ifndef SP2SCENE3_H
 #define SP2SCENE3_H
 
@@ -22,7 +31,12 @@ using std::map;
 using std::vector;
 using std::string;
 using std::ifstream;
-
+/****************************************************************************/
+/*!
+Class SP2Scene3:
+\brief Defines a SP2Scene3 class and its methods
+*/
+/****************************************************************************/
 class SP2Scene3 : public Scene
 {
     enum GEOMETRY_TYPE

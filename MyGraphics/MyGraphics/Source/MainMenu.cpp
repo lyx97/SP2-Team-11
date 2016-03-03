@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file MainMenu.cpp
+\author Teo Jia Hao
+\par email: kelvinteojiahao\@hotmail.com
+\brief
+Class to define an MainMenu
+*/
+/****************************************************************************/
 #include "MainMenu.h"
 #include "GL\glew.h"
 
@@ -15,16 +24,41 @@ using std::cout;
 using std::endl;
 using namespace irrklang;
 #pragma comment(lib, "irrKlang.lib")
+/******************************************************************************/
+/*!
+\brief
+Default constructor
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 MainMenu::MainMenu()
 {
 	state = MENU_MAIN;
 }
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 MainMenu::~MainMenu()
 {
 
 }
+/******************************************************************************/
+/*!
+\brief
+Initializes for MainMenu, any booleans/strings/floats and meshes
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::Init()
 {
 	sound.playMusic("Music//Music.mp3");
@@ -79,7 +113,15 @@ void MainMenu::Init()
 	meshList[GEO_BUTTON_HOVER] = MeshBuilder::GenerateQuad("images", Color(1, 1, 1), TexCoord(1, 1), 8, 2);
 	meshList[GEO_BUTTON_HOVER]->textureID = LoadTGA("Image//buttonHover.tga");
 }
+/******************************************************************************/
+/*!
+\brief
+Handles all switch cases for MainMenu and animation
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::Update(double dt)
 {
 	switch (state)
@@ -108,6 +150,15 @@ void MainMenu::Update(double dt)
 			animationMove = 40;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Main rendering
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::Render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -135,7 +186,15 @@ void MainMenu::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse X: " + std::to_string(Singleton::getInstance()->mousex), Color(1, 1, 1), 1, 1, 4);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse Y: " + std::to_string(Singleton::getInstance()->mousey), Color(1, 1, 1), 1, 1, 2);
 }
+/******************************************************************************/
+/*!
+\brief
+Pushes in the textfile into array
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::textFile(string filename)
 {
 	ifstream myfile(filename.c_str());
@@ -148,7 +207,15 @@ void MainMenu::textFile(string filename)
 		my_arr.push_back(new_line);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders mesh
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -193,6 +260,22 @@ void MainMenu::RenderMesh(Mesh *mesh, bool enableLight)
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders obj and targa on screen
+
+\param mesh
+Takes in which mesh to render out
+\param size
+Scale of the mesh to render out
+\param x and y
+The position of the mesh
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::RenderUI(Mesh* mesh, float size, float x, float y)
 {
 	glDisable(GL_DEPTH_TEST);
@@ -223,6 +306,22 @@ void MainMenu::RenderUI(Mesh* mesh, float size, float x, float y)
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders obj and targa on screen
+
+\param mesh
+Takes in which mesh to render out
+\param size
+Scale of the mesh to render out
+\param x and y
+The position of the mesh
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::RenderUIwithTranparent(Mesh* mesh, float size, float x, float y)
 {
 	glDisable(GL_DEPTH_TEST);
@@ -256,9 +355,16 @@ void MainMenu::RenderUIwithTranparent(Mesh* mesh, float size, float x, float y)
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	glEnable(GL_DEPTH_TEST);
-
-
 }
+/******************************************************************************/
+/*!
+\brief
+Renders text
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -285,6 +391,15 @@ void MainMenu::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders text on screen
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -324,6 +439,15 @@ void MainMenu::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Render mainmenu
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::mainMenu()
 {
 	//////////////////////////
@@ -468,6 +592,15 @@ void MainMenu::mainMenu()
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[6], Color(1, 1, 1), 1, 38.5, 10);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Render instruction
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::instruction()
 {
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
@@ -510,7 +643,15 @@ void MainMenu::instruction()
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Render options
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::options()
 {
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
@@ -545,7 +686,15 @@ void MainMenu::options()
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Render credits
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::credits()
 {
 	RenderUIwithTranparent(meshList[GEO_BACKGROUND2], 10, animationMove, 30);
@@ -587,7 +736,15 @@ void MainMenu::credits()
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[7], Color(1, 1, 1), 1, animationMove + 19, 10);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Exits the scene and delete
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void MainMenu::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

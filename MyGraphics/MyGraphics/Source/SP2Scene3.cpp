@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SP2Scene3.cpp
+\author Teo Jia Hao
+\par email: kelvinteojiahao\@hotmail.com
+\brief
+Class to define an SP2Scene3
+*/
+/****************************************************************************/
 #include "SP2Scene3.h"
 #include "GL\glew.h"
 
@@ -15,15 +24,39 @@ using std::cout;
 using std::endl;
 using namespace irrklang;
 #pragma comment(lib, "irrKlang.lib")
+/******************************************************************************/
+/*!
+\brief
+Default constructor
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 SP2Scene3::SP2Scene3()
 {
 }
+/******************************************************************************/
+/*!
+\brief
+Default destructor
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 SP2Scene3::~SP2Scene3()
 {
 }
+/******************************************************************************/
+/*!
+\brief
+Initializes for any booleans/strings/floats and meshes
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::Init()
 {
 	startDialogue = true;
@@ -239,7 +272,15 @@ void SP2Scene3::Init()
 
 	ground = new Object(Vector3(camera.position.x, 10, camera.position.z), Vector3(500, 10, 500));
 }
+/******************************************************************************/
+/*!
+\brief
+Handles all animation and interaction
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::Update(double dt)
 {
     if (Application::IsKeyPressed('1')) //enable back face culling
@@ -563,7 +604,15 @@ void SP2Scene3::Update(double dt)
         }
     }
 }
+/******************************************************************************/
+/*!
+\brief
+Main rendering
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::Render()
 {
     // Render VBO here
@@ -826,7 +875,15 @@ void SP2Scene3::Render()
 	if (Singleton::getInstance()->pause == true)
 		pause();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders skybox
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::RenderSkybox()
 {
     modelStack.PushMatrix();
@@ -878,6 +935,15 @@ void SP2Scene3::RenderSkybox()
     modelStack.PopMatrix();
 
 }
+/******************************************************************************/
+/*!
+\brief
+Pushes in the Dialogue into array
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::Dialogue(string filename)
 {
 	ifstream myfile(filename.c_str());
@@ -890,6 +956,15 @@ void SP2Scene3::Dialogue(string filename)
 		my_arr.push_back(new_line);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders mesh
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -934,7 +1009,15 @@ void SP2Scene3::RenderMesh(Mesh *mesh, bool enableLight)
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders text
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::RenderText(Mesh* mesh, std::string text, Color color)
 {
     if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -961,7 +1044,15 @@ void SP2Scene3::RenderText(Mesh* mesh, std::string text, Color color)
     glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
     glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders text on screen
 
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
     if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -1001,7 +1092,28 @@ void SP2Scene3::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
     modelStack.PopMatrix();
     glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders obj and targa on screen
 
+\param mesh
+Takes in which mesh to render out
+\param size
+Scale of the mesh to render out
+\param x and y
+The position of the mesh
+\param scaleX
+Scale of the mesh
+\param rotatex, rotatey, rotatez
+Rotation of the Mesh
+\param
+Mesh with light
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::RenderUI(Mesh* mesh, float size, float x, float y, float scaleX, float rotatex, float rotatey, float rotatez, bool enableLight)
 {
     glDisable(GL_DEPTH_TEST);
@@ -1275,7 +1387,15 @@ void SP2Scene3::swordSet(bool init)
             }
         }
     }
-}
+}/******************************************************************************/
+/*!
+\brief
+Render pause
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::pause()
 {
 	RenderUI(meshList[GEO_PAUSE_BG], 5, 40, 30, 1.3, 0, 0, 0, false);
@@ -1394,6 +1514,15 @@ void SP2Scene3::pause()
 		RenderTextOnScreen(meshList[GEO_TEXT], my_arr[36], Color(1, 1, 1), 1, 38.5, 18);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Exits the scene and delete
+
+\exception None
+\return None
+*/
+/******************************************************************************/
 void SP2Scene3::Exit()
 {
     glDeleteVertexArrays(1, &m_vertexArrayID);
