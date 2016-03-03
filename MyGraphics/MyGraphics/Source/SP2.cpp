@@ -62,6 +62,7 @@ void SP2::Init()
 	{
 		message = 32;
 		mission = 5;
+		showDistance = true;
 	}
 	else
 	{
